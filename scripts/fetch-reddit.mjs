@@ -1,68 +1,63 @@
-// Vortex — Reddit content importer
+// Vortex — Reddit content importer via Arctic Shift archive
 // Runs via GitHub Actions every 4 hours
-// Fetches real posts from city subreddits → inserts into Supabase messages
 
 const SUPABASE_URL = process.env.SUPABASE_URL
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY
 
 const CITIES = [
-  { id: 'london',    subs: ['london', 'londonlife', 'AskUK'],          lang: 'en' },
-  { id: 'berlin',    subs: ['berlin', 'germany', 'AskAGerman'],        lang: 'en' },
-  { id: 'sf',        subs: ['sanfrancisco', 'bayarea', 'AskSF'],       lang: 'en' },
-  { id: 'barcelona', subs: ['barcelona', 'spain', 'expats'],           lang: 'en' },
+  { id: 'london',    subs: ['london', 'londonlife', 'CasualUK', 'AskUK'] },
+  { id: 'berlin',    subs: ['berlin', 'germany', 'expats'] },
+  { id: 'sf',        subs: ['sanfrancisco', 'bayarea', 'AskSF'] },
+  { id: 'barcelona', subs: ['barcelona', 'spain', 'expats'] },
 ]
 
 const BLOCK_WORDS = [
   'ukraine', 'russia', 'military', 'killed', 'attack', 'war', 'troops',
-  'missile', 'drone', 'frontline', 'breaking:', 'afu',
-  'promo', 'coupon', 'discount', 'onlyfans', 'follow me',
-  'bitcoin', 'crypto', 'nft', 'invest', 'trading',
-  'retweet', 'subscribe', 'click here', 'link in bio',
-  '[removed]', '[deleted]',
+  'missile', 'drone', 'frontline', 'breaking:', '[removed]', '[deleted]',
+  'promo', 'coupon', 'discount', 'onlyfans', 'bitcoin', 'crypto', 'nft',
+  'subscribe', 'click here', 'link in bio', 'check out my',
 ]
 
 const PERSONAL_WORDS = [
   'i ', "i'", "i'm", 'my ', 'me ', 'we ', 'our ', 'you ', 'your ',
   'today', 'yesterday', 'morning', 'evening', 'night', 'weekend',
   'feels', 'feeling', 'love', 'miss', 'hate', 'enjoy', 'moved',
-  'walking', 'coffee', 'weather', 'city', 'people', 'street', 'neighbor',
-  'amazing', 'beautiful', 'weird', 'strange', 'funny', 'lovely', 'honestly',
-  'always', 'never', 'sometimes', 'actually', 'really', 'living', 'lived',
-  'grew up', 'years ago', 'last week', 'last month', 'noticed', 'surprised',
+  'walking', 'coffee', 'weather', 'city', 'people', 'street',
+  'amazing', 'beautiful', 'weird', 'strange', 'funny', 'honestly',
+  'always', 'never', 'sometimes', 'actually', 'really', 'living',
+  'grew up', 'years ago', 'last week', 'noticed', 'surprised',
 ]
 
-async function fetchSubreddit(sub, sort = 'hot') {
-  const url = `https://www.reddit.com/r/${sub}/${sort}.json?limit=50&t=day`
+async function fetchFromArctic(subreddit) {
+  // Arctic Shift = pushshift alternative, works from datacenter IPs
+  const url = `https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=${subreddit}&limit=100&sort=desc`
   const res = await fetch(url, {
-    headers: {
-      'User-Agent': 'VortexApp/1.0 (content aggregator; contact: hello@vortexapp.io)',
-      'Accept': 'application/json',
-    },
+    headers: { 'User-Agent': 'VortexApp/1.0' }
   })
   if (!res.ok) {
-    console.warn(`  r/${sub} ${sort}: HTTP ${res.status}`)
+    console.warn(`  r/${subreddit}: HTTP ${res.status}`)
     return []
   }
   const data = await res.json()
-  return data?.data?.children ?? []
+  return data?.data ?? []
 }
 
 function extractText(post) {
-  // Prefer self text (text posts), fall back to title
   const selftext = post.selftext?.trim()
   if (selftext && selftext.length > 60 && selftext !== '[removed]' && selftext !== '[deleted]') {
     return selftext
   }
-  return post.title?.trim() ?? ''
+  const title = post.title?.trim() ?? ''
+  return title.length > 60 ? title : ''
 }
 
 function clean(text) {
   return text
-    .replace(/https?:\/\/\S+/g, '')   // URLs
-    .replace(/\*\*([^*]+)\*\*/g, '$1') // bold
-    .replace(/\*([^*]+)\*/g, '$1')     // italic
-    .replace(/^>.*$/gm, '')            // quotes
-    .replace(/#+\s/g, '')              // headings
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/^>.*$/gm, '')
+    .replace(/#+\s/g, '')
     .replace(/\n{3,}/g, '\n\n')
     .replace(/\s+/g, ' ')
     .trim()
@@ -70,20 +65,12 @@ function clean(text) {
 
 function isQuality(text) {
   const lower = text.toLowerCase()
-
   if (BLOCK_WORDS.some(w => lower.includes(w))) return false
-
-  // Enough real words
   const realWords = text.split(/\s+/).filter(w => /^[a-zA-Z]{2,}/.test(w))
   if (realWords.length < 10) return false
-
-  // Personal / observational feel
   if (!PERSONAL_WORDS.some(w => lower.includes(w))) return false
-
-  // No excessive mentions/links remaining
   const atCount = (text.match(/@\w+/g) ?? []).length
   if (atCount > 1) return false
-
   return true
 }
 
@@ -91,18 +78,16 @@ async function importCity(city) {
   const rawTexts = []
 
   for (const sub of city.subs) {
-    for (const sort of ['hot', 'top', 'new']) {
-      try {
-        const posts = await fetchSubreddit(sub, sort)
-        for (const p of posts) {
-          const text = clean(extractText(p.data))
-          if (text) rawTexts.push(text)
-        }
-        // Small delay to be polite
-        await new Promise(r => setTimeout(r, 300))
-      } catch (e) {
-        console.warn(`  r/${sub} ${sort}: ${e.message}`)
+    try {
+      const posts = await fetchFromArctic(sub)
+      console.log(`  r/${sub}: ${posts.length} posts`)
+      for (const p of posts) {
+        const text = clean(extractText(p))
+        if (text) rawTexts.push(text)
       }
+      await new Promise(r => setTimeout(r, 200))
+    } catch (e) {
+      console.warn(`  r/${sub}: ${e.message}`)
     }
   }
 
@@ -111,7 +96,7 @@ async function importCity(city) {
   const rows = rawTexts
     .filter(t => t.length >= 70 && t.length <= 400)
     .filter(t => isQuality(t))
-    .filter((t, i, arr) => arr.indexOf(t) === i) // dedupe
+    .filter((t, i, arr) => arr.indexOf(t) === i)
     .sort(() => Math.random() - 0.5)
     .slice(0, 40)
     .map(content => ({
@@ -127,11 +112,10 @@ async function importCity(city) {
     }))
 
   if (rows.length === 0) {
-    console.log(`[${city.id}] 0 posts after filtering`)
+    console.log(`[${city.id}] 0 posts after filtering (raw: ${rawTexts.length})`)
     return 0
   }
 
-  // Insert via Supabase REST API
   const res = await fetch(`${SUPABASE_URL}/rest/v1/messages`, {
     method: 'POST',
     headers: {
@@ -152,8 +136,7 @@ async function importCity(city) {
   return rows.length
 }
 
-// Main
-console.log('🚀 Vortex Reddit importer started')
+console.log('🚀 Vortex Reddit importer (Arctic Shift) started')
 let total = 0
 for (const city of CITIES) {
   console.log(`\nFetching ${city.id}...`)
