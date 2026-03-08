@@ -5,10 +5,10 @@ const SUPABASE_URL = process.env.SUPABASE_URL
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY
 
 const CITIES = [
-  { id: 'london',    subs: ['london', 'londonlife', 'CasualUK', 'AskUK'] },
-  { id: 'berlin',    subs: ['berlin', 'germany', 'expats'] },
-  { id: 'sf',        subs: ['sanfrancisco', 'bayarea', 'AskSF'] },
-  { id: 'barcelona', subs: ['barcelona', 'expats', 'digitalnomad'] },
+  { id: 'london',    subs: ['london', 'londonlife', 'CasualUK', 'AskUK'], keyword: null },
+  { id: 'berlin',    subs: ['berlin', 'germany', 'AskAGerman'],            keyword: null },
+  { id: 'sf',        subs: ['sanfrancisco', 'bayarea', 'AskSF'],           keyword: null },
+  { id: 'barcelona', subs: ['barcelona', 'expats', 'digitalnomad'],        keyword: 'barcelona' },
 ]
 
 // Common English function words — if text has enough, it's English
@@ -31,9 +31,9 @@ const PERSONAL_WORDS = [
   'grew up', 'years ago', 'last week', 'noticed', 'surprised',
 ]
 
-async function fetchFromArctic(subreddit) {
-  // Arctic Shift = pushshift alternative, works from datacenter IPs
-  const url = `https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=${subreddit}&limit=100&sort=desc`
+async function fetchFromArctic(subreddit, keyword = null) {
+  let url = `https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=${subreddit}&limit=100&sort=desc`
+  if (keyword) url += `&q=${encodeURIComponent(keyword)}`
   const res = await fetch(url, {
     headers: { 'User-Agent': 'VortexApp/1.0' }
   })
@@ -89,7 +89,7 @@ async function importCity(city) {
 
   for (const sub of city.subs) {
     try {
-      const posts = await fetchFromArctic(sub)
+      const posts = await fetchFromArctic(sub, city.keyword)
       console.log(`  r/${sub}: ${posts.length} posts`)
       for (const p of posts) {
         const text = clean(extractText(p))
