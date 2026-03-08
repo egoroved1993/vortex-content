@@ -8,8 +8,11 @@ const CITIES = [
   { id: 'london',    subs: ['london', 'londonlife', 'CasualUK', 'AskUK'] },
   { id: 'berlin',    subs: ['berlin', 'germany', 'expats'] },
   { id: 'sf',        subs: ['sanfrancisco', 'bayarea', 'AskSF'] },
-  { id: 'barcelona', subs: ['barcelona', 'spain', 'expats'] },
+  { id: 'barcelona', subs: ['barcelona', 'expats', 'digitalnomad'] },
 ]
+
+// Common English function words — if text has enough, it's English
+const EN_WORDS = ['the ', ' and ', ' is ', ' in ', ' it ', ' was ', ' for ', ' you ', ' are ', ' that ']
 
 const BLOCK_WORDS = [
   'ukraine', 'russia', 'military', 'killed', 'attack', 'war', 'troops',
@@ -63,8 +66,15 @@ function clean(text) {
     .trim()
 }
 
+function isEnglish(text) {
+  const lower = ' ' + text.toLowerCase() + ' '
+  const hits = EN_WORDS.filter(w => lower.includes(w)).length
+  return hits >= 3
+}
+
 function isQuality(text) {
   const lower = text.toLowerCase()
+  if (!isEnglish(text)) return false
   if (BLOCK_WORDS.some(w => lower.includes(w))) return false
   const realWords = text.split(/\s+/).filter(w => /^[a-zA-Z]{2,}/.test(w))
   if (realWords.length < 10) return false
