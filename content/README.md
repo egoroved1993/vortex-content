@@ -192,6 +192,8 @@ Then convert those snippets into rewrite jobs:
 node github-actions/scripts/build-public-snippet-jobs.mjs --input github-actions/content/public-human-comments.json --out github-actions/content/public-human-snippet-jobs.json --limit 200
 ```
 
+`public-human-comments.json` also acts as the committed fallback corpus for automation when live Reddit fetching returns no usable rows.
+
 Then run the normal generation/validation flow on that job file:
 
 ```bash
