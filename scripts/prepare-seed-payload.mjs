@@ -30,7 +30,6 @@ for (const candidate of candidates) {
   }
 
   selected.push({
-    id: candidate.id,
     city_id: candidate.cityId,
     content: candidate.content,
     detected_language: candidate.detected_language ?? "en",
