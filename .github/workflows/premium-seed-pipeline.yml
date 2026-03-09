@@ -1,0 +1,123 @@
+name: Premium Seed Pipeline
+
+on:
+  schedule:
+    - cron: "0 17 * * 2"
+    - cron: "0 17 * * 5"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Total premium job count before generation"
+        required: false
+        default: "60"
+      upload:
+        description: "Upload approved payload to Supabase"
+        type: boolean
+        required: false
+        default: false
+      mix:
+        description: "Comma-separated source families"
+        required: false
+        default: "launch,public,review,forum,signals"
+      city_focus:
+        description: "Optional city focus"
+        required: false
+        default: ""
+
+concurrency:
+  group: premium-seed-pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+
+    env:
+      MODEL_PROVIDER: openai
+      MODEL_NAME: gpt-4o
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      MODEL_COST_GPT_4O_INPUT_PER_1M_USD: "2.5"
+      MODEL_COST_GPT_4O_OUTPUT_PER_1M_USD: "10"
+      MODEL_COST_GPT_4O_MINI_INPUT_PER_1M_USD: "0.15"
+      MODEL_COST_GPT_4O_MINI_OUTPUT_PER_1M_USD: "0.6"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Resolve run configuration
+        id: cfg
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "count=60" >> "$GITHUB_OUTPUT"
+            echo "upload=true" >> "$GITHUB_OUTPUT"
+            echo "mix=launch,public,review,forum,signals" >> "$GITHUB_OUTPUT"
+            echo "city_focus=" >> "$GITHUB_OUTPUT"
+            echo "seed=premium-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+          else
+            echo "count=${{ inputs.count || '60' }}" >> "$GITHUB_OUTPUT"
+            echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
+            echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals' }}" >> "$GITHUB_OUTPUT"
+            echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
+            echo "seed=premium-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Refresh public comment corpus
+        continue-on-error: true
+        run: node scripts/fetch-reddit-comments.mjs --per-city 80 --out content/public-human-comments.json
+
+      - name: Show source corpus sizes
+        run: |
+          node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
+
+      - name: Run premium seed pipeline
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARGS=(
+            --count "${{ steps.cfg.outputs.count }}"
+            --seed "${{ steps.cfg.outputs.seed }}"
+            --mix "${{ steps.cfg.outputs.mix }}"
+            --public-input content/public-human-comments.json
+            --review-input content/place-review-snippets.json
+            --forum-input content/forum-snippets.json
+            --signals-input content/city-signals.json
+          )
+
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+
+          if [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
+            ARGS+=( --upload )
+          fi
+
+          node scripts/run-seed-pipeline.mjs "${ARGS[@]}"
+
+      - name: Upload pipeline artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: premium-seed-pipeline-${{ github.run_id }}
+          path: |
+            content/pipeline-jobs.json
+            content/pipeline-jobs.launch.json
+            content/pipeline-jobs.public.json
+            content/pipeline-jobs.review.json
+            content/pipeline-jobs.forum.json
+            content/pipeline-jobs.signals.json
+            content/pipeline-candidates.json
+            content/pipeline-candidates.report.json
+            content/pipeline-payload.json
+          if-no-files-found: warn

@@ -19,6 +19,18 @@ const BLOCK_WORDS = [
   'missile', 'drone', 'frontline', 'breaking:', '[removed]', '[deleted]',
   'promo', 'coupon', 'discount', 'onlyfans', 'bitcoin', 'crypto', 'nft',
   'subscribe', 'click here', 'link in bio', 'check out my',
+  'proud to announce', 'visual stories', 'programme of', 'conferences and meetups',
+  'affiliate', 'sponsored', 'paid partnership', 'use code ',
+]
+
+// Phrases that signal pure advice-seeking / Q&A (not observations)
+const ADVICE_STARTS = [
+  'best ', 'looking for ', 'need advice', 'need help', 'help with ',
+  'can someone ', 'does anyone know', 'has anyone tried', 'where can i find',
+  'where do i ', 'how do i ', 'what is the best', 'anyone know where',
+  'anyone recommend', 'recommendations for', 'recommend a ', 'recommend me ',
+  'anyone have a', 'is there a good', 'what are the best', 'which is better',
+  'how much does', 'how much is', 'is it worth',
 ]
 
 const PERSONAL_WORDS = [
@@ -56,7 +68,9 @@ function extractText(post) {
 
 function clean(text) {
   return text
-    .replace(/https?:\/\/\S+/g, '')
+    .replace(/https?:\/\/\S+/g, '')           // remove URLs
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')  // markdown links → just text
+    .replace(/\]\([^)]*\)/g, '')              // leftover ](url) artifacts
     .replace(/\*\*([^*]+)\*\*/g, '$1')
     .replace(/\*([^*]+)\*/g, '$1')
     .replace(/^>.*$/gm, '')
@@ -72,10 +86,23 @@ function isEnglish(text) {
   return hits >= 3
 }
 
+// Returns false if the text is purely seeking advice/info with no personal observation
+function isObservation(text) {
+  const lower = text.toLowerCase().trim()
+  if (ADVICE_STARTS.some(p => lower.startsWith(p))) return false
+  // Still has unresolved markdown artifacts
+  if (text.includes('](')) return false
+  // All sentences are questions — no declarative content
+  const sentences = text.split(/(?<=[.!?])\s+/).filter(s => s.length > 8)
+  if (sentences.length > 0 && sentences.every(s => s.trim().endsWith('?'))) return false
+  return true
+}
+
 function isQuality(text) {
   const lower = text.toLowerCase()
   if (!isEnglish(text)) return false
   if (BLOCK_WORDS.some(w => lower.includes(w))) return false
+  if (!isObservation(text)) return false
   const realWords = text.split(/\s+/).filter(w => /^[a-zA-Z]{2,}/.test(w))
   if (realWords.length < 10) return false
   if (!PERSONAL_WORDS.some(w => lower.includes(w))) return false

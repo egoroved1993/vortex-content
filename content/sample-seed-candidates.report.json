@@ -1,0 +1,261 @@
+{
+  "summary": {
+    "total": 8,
+    "passed": 1,
+    "failed": 7,
+    "averageScores": {
+      "mindprint": 3.38,
+      "cityness": 4.5,
+      "stickiness": 2.75,
+      "ambiguity": 2.38
+    },
+    "topIssues": {
+      "missing_city_anchor": 1,
+      "low_detail": 1,
+      "weak_mindprint": 2,
+      "generic_city_copy": 1,
+      "low_stickiness": 5,
+      "overpolished": 1
+    },
+    "reviewerBuckets": {
+      "reject": 7,
+      "strong_candidate": 1
+    }
+  },
+  "report": [
+    {
+      "id": "candidate_0001",
+      "cityId": "london",
+      "topicId": "cost_of_living",
+      "readReason": "confession",
+      "content": "caught myself feeling relieved that my coffee was only 4.10 this morning and then had to sit with what 'only' means in london now",
+      "scores": {
+        "mindprint": 5,
+        "cityness": 3,
+        "stickiness": 4,
+        "ambiguity": 1
+      },
+      "signals": {
+        "firstPerson": true,
+        "dialogue": true,
+        "detail": true,
+        "anchor": false,
+        "hook": true,
+        "conflict": false,
+        "tenderness": false
+      },
+      "humanSignals": 3,
+      "aiSignals": 0,
+      "issues": [
+        "missing_city_anchor"
+      ],
+      "passed": false,
+      "reviewerBucket": "reject"
+    },
+    {
+      "id": "candidate_0002",
+      "cityId": "berlin",
+      "topicId": "language_barrier",
+      "readReason": "confession",
+      "content": "i still rehearse one sentence before the post office every time and then the woman behind the glass asks me something completely different",
+      "scores": {
+        "mindprint": 4,
+        "cityness": 5,
+        "stickiness": 5,
+        "ambiguity": 2
+      },
+      "signals": {
+        "firstPerson": true,
+        "dialogue": false,
+        "detail": true,
+        "anchor": true,
+        "hook": true,
+        "conflict": true,
+        "tenderness": false
+      },
+      "humanSignals": 2,
+      "aiSignals": 0,
+      "issues": [],
+      "passed": false,
+      "reviewerBucket": "reject"
+    },
+    {
+      "id": "candidate_0003",
+      "cityId": "sf",
+      "topicId": "neighborhood_vibe",
+      "readReason": "resentment",
+      "content": "this city feels cinematic and full of possibility in a way that is hard to explain",
+      "scores": {
+        "mindprint": 1,
+        "cityness": 3,
+        "stickiness": 1,
+        "ambiguity": 4
+      },
+      "signals": {
+        "firstPerson": false,
+        "dialogue": false,
+        "detail": false,
+        "anchor": true,
+        "hook": false,
+        "conflict": false,
+        "tenderness": false
+      },
+      "humanSignals": 0,
+      "aiSignals": 0,
+      "issues": [
+        "low_detail",
+        "weak_mindprint",
+        "generic_city_copy",
+        "low_stickiness"
+      ],
+      "passed": false,
+      "reviewerBucket": "reject"
+    },
+    {
+      "id": "candidate_0004",
+      "cityId": "barcelona",
+      "topicId": "tourist_vs_local",
+      "readReason": "weird_observation",
+      "content": "someone stopped dead in the bike lane in gracia to film a doorway and three locals swerved around him without even looking annoyed, which felt like its own civic skill",
+      "scores": {
+        "mindprint": 2,
+        "cityness": 5,
+        "stickiness": 2,
+        "ambiguity": 3
+      },
+      "signals": {
+        "firstPerson": false,
+        "dialogue": false,
+        "detail": true,
+        "anchor": true,
+        "hook": false,
+        "conflict": false,
+        "tenderness": false
+      },
+      "humanSignals": 1,
+      "aiSignals": 0,
+      "issues": [
+        "weak_mindprint",
+        "low_stickiness"
+      ],
+      "passed": false,
+      "reviewerBucket": "reject"
+    },
+    {
+      "id": "candidate_0005",
+      "cityId": "berlin",
+      "topicId": "food_moment",
+      "readReason": "tenderness",
+      "content": "the guy at the spati handed me the coldest bottle from the back fridge without me asking and i swear it fixed my mood more than the beer itself",
+      "scores": {
+        "mindprint": 3,
+        "cityness": 5,
+        "stickiness": 2,
+        "ambiguity": 2
+      },
+      "signals": {
+        "firstPerson": true,
+        "dialogue": false,
+        "detail": true,
+        "anchor": true,
+        "hook": false,
+        "conflict": false,
+        "tenderness": false
+      },
+      "humanSignals": 2,
+      "aiSignals": 0,
+      "issues": [
+        "low_stickiness"
+      ],
+      "passed": false,
+      "reviewerBucket": "reject"
+    },
+    {
+      "id": "candidate_0006",
+      "cityId": "london",
+      "topicId": "overheard",
+      "readReason": "overheard_truth",
+      "content": "\"i am not angry i am just freezing\" on the victoria line and somehow that sounded more honest than half the couples i know",
+      "scores": {
+        "mindprint": 5,
+        "cityness": 5,
+        "stickiness": 4,
+        "ambiguity": 4
+      },
+      "signals": {
+        "firstPerson": true,
+        "dialogue": true,
+        "detail": true,
+        "anchor": true,
+        "hook": true,
+        "conflict": false,
+        "tenderness": false
+      },
+      "humanSignals": 3,
+      "aiSignals": 2,
+      "issues": [
+        "overpolished"
+      ],
+      "passed": true,
+      "reviewerBucket": "strong_candidate"
+    },
+    {
+      "id": "candidate_0007",
+      "cityId": "sf",
+      "topicId": "work_stress",
+      "readReason": "resentment",
+      "content": "by 9:12 i had three calendar invites, one 'quick question' in slack, and a notification reminding me to breathe. deeply unserious city",
+      "scores": {
+        "mindprint": 4,
+        "cityness": 5,
+        "stickiness": 2,
+        "ambiguity": 1
+      },
+      "signals": {
+        "firstPerson": true,
+        "dialogue": true,
+        "detail": true,
+        "anchor": true,
+        "hook": false,
+        "conflict": false,
+        "tenderness": false
+      },
+      "humanSignals": 3,
+      "aiSignals": 0,
+      "issues": [
+        "low_stickiness"
+      ],
+      "passed": false,
+      "reviewerBucket": "reject"
+    },
+    {
+      "id": "candidate_0008",
+      "cityId": "barcelona",
+      "topicId": "morning_ritual",
+      "readReason": "identity_signal",
+      "content": "same tiny coffee at the bar, same old man already arguing about football, same five minutes where i almost believe i live here properly",
+      "scores": {
+        "mindprint": 3,
+        "cityness": 5,
+        "stickiness": 2,
+        "ambiguity": 2
+      },
+      "signals": {
+        "firstPerson": true,
+        "dialogue": false,
+        "detail": true,
+        "anchor": true,
+        "hook": false,
+        "conflict": false,
+        "tenderness": false
+      },
+      "humanSignals": 2,
+      "aiSignals": 0,
+      "issues": [
+        "low_stickiness"
+      ],
+      "passed": false,
+      "reviewerBucket": "reject"
+    }
+  ]
+}
