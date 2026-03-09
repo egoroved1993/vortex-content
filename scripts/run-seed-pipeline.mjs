@@ -9,6 +9,7 @@ const count = args.count ?? 40;
 const seed = args.seed ?? "launch-pipeline";
 const mock = Boolean(args.mock);
 const upload = Boolean(args.upload);
+const model = args.model ?? null;
 const cityFocus = args["city-focus"] ?? null;
 const mix = parseMix(args.mix ?? "launch");
 const jobsPerSignalSnapshot = Number(args["signal-jobs-per-snapshot"] ?? 3);
@@ -34,6 +35,7 @@ runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   candidatesPath,
   "--concurrency",
   "2",
+  ...(model ? ["--model", model] : []),
   ...(mock ? ["--mock"] : []),
 ]);
 

@@ -67,6 +67,11 @@ for (const city of CITY_SOURCES) {
   allRows.push(...filtered);
 }
 
+if (allRows.length === 0) {
+  console.log("\nFetch returned 0 snippets — keeping existing file to preserve fallback corpus.");
+  process.exit(0);
+}
+
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, `${JSON.stringify(allRows, null, 2)}\n`);
 
