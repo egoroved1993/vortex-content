@@ -31,6 +31,10 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Fetch city news
+        working-directory: github-actions
+        run: node scripts/fetch-city-news.mjs
+
       - name: Build city pulse
         working-directory: github-actions
         run: node scripts/build-city-pulse.mjs
@@ -59,7 +63,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add github-actions/content/city-pulse.latest.json
+          git add github-actions/content/city-pulse.latest.json github-actions/content/news-snippets.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

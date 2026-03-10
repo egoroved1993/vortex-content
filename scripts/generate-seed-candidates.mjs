@@ -12,11 +12,15 @@ function loadCityPulse() {
     const raw = JSON.parse(fs.readFileSync(pulsePath, "utf8"));
     const map = {};
     for (const row of raw.rows ?? []) {
+      // Extract news headlines from news-family drivers
+      const newsDrivers = (row.drivers ?? []).filter((d) => d.source_family === "news");
+      const otherDrivers = (row.drivers ?? []).filter((d) => d.source_family !== "news");
       map[row.city_id] = {
         moodLabel: row.mood_label,
         moodSummary: row.mood_summary,
         themes: (row.metadata?.dominant_themes ?? []).slice(0, 3),
-        drivers: (row.drivers ?? []).slice(0, 2).map((d) => d.excerpt?.slice(0, 120)),
+        drivers: otherDrivers.slice(0, 3).map((d) => d.excerpt?.slice(0, 120)),
+        newsHeadlines: newsDrivers.slice(0, 5).map((d) => d.excerpt?.slice(0, 140)).filter(Boolean),
       };
     }
     return map;
@@ -133,7 +137,10 @@ function buildSystemPrompt(job) {
     const themes = pulse.themes.join(", ");
     base += `\n\nCity context for ${job.cityId} right now: mood is ${pulse.moodLabel}. Dominant themes in the city today: ${themes}.`;
     if (pulse.moodSummary) base += ` ${pulse.moodSummary}`;
-    if (pulse.drivers?.length) {
+    if (pulse.newsHeadlines?.length) {
+      base += `\n\nReal news happening in ${job.cityId} today:\n${pulse.newsHeadlines.map((h) => `- ${h}`).join("\n")}`;
+      base += "\n\nThe message you generate should feel like it was written by someone who lives in this news context. Don't mention headlines directly — let them bleed into the texture: the frustration, the small detail, the overheard thing.";
+    } else if (pulse.drivers?.length) {
       base += `\n\nReal voices from the city today (use as texture, do NOT copy):\n${pulse.drivers.filter(Boolean).map((d) => `- "${d}"`).join("\n")}`;
     }
     base += "\n\nLet these themes subtly ground the message — make it feel like it was written today, not any day.";

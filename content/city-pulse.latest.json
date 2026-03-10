@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-03-10T10:31:23.516Z",
+    "capturedAt": "2026-03-10T15:31:08.294Z",
     "sourceFiles": {
       "public": "/Users/worldfamousnobody/Vortex/github-actions/content/public-human-comments.json",
       "review": "/Users/worldfamousnobody/Vortex/github-actions/content/place-review-snippets.json",
@@ -9,22 +9,22 @@
       "news": "/Users/worldfamousnobody/Vortex/github-actions/content/news-snippets.json",
       "social": "/Users/worldfamousnobody/Vortex/github-actions/content/social-snippets.json"
     },
-    "totalItems": 89
+    "totalItems": 113
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-10T10:31:23.516Z",
-      "mood_score": 0.438,
+      "captured_at": "2026-03-10T15:31:08.294Z",
+      "mood_score": 0.46,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around routine, money, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
         "review": 2,
         "forum": 2,
         "signals": 1,
-        "news": 2,
+        "news": 8,
         "social": 2
       },
       "languages": [
@@ -46,13 +46,6 @@
           "excerpt": "Cold rain leaning sideways and making every bus window look dirtier than usual.. Victoria line platform packed early and one Overground train cancelled without explanation.. Pret l"
         },
         {
-          "source_family": "news",
-          "source_origin": "local_news",
-          "language": "en",
-          "valence": -1,
-          "excerpt": "Severe delays hit the Victoria line again before 8 a.m.. Commuters reported packed platforms, damp coats, and the usual quiet rage of people pretending this was not going to decide"
-        },
-        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
@@ -65,22 +58,29 @@
           "language": "en",
           "valence": -0.575,
           "excerpt": "my theory is that you can tell how long someone has lived here by how little they react when the tube says severe delays"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "curated_public_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "excerpt": "the weird thing about london is people will apologise for touching your sleeve on the overground and then send you a rent increase like it's weather"
         }
       ],
       "metadata": {
-        "source_item_count": 22,
-        "average_valence": -0.182,
+        "source_item_count": 28,
+        "average_valence": -0.119,
         "dominant_themes": [
+          "general",
           "routine",
-          "money",
           "transit"
         ]
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-10T10:31:23.516Z",
-      "mood_score": 0.454,
+      "captured_at": "2026-03-10T15:31:08.294Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, language, routine.",
       "dominant_sentiment": "neutral",
@@ -89,7 +89,7 @@
         "review": 2,
         "forum": 2,
         "signals": 1,
-        "news": 2,
+        "news": 8,
         "social": 2
       },
       "languages": [
@@ -126,16 +126,16 @@
           "excerpt": "the best version of sunday closure is when the whole city goes quiet enough that the spati fridge suddenly sounds philosophical"
         },
         {
-          "source_family": "signals",
-          "source_origin": "manual_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "excerpt": "Dry cold with sharp sun that makes everyone overdress wrong.. Ringbahn delays stacking and one tram full of people holding bouquets like they forgot a shared deadline.. Cafe tables"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "excerpt": "Miete runter oder Filiale zu – Galeria droht erneut mit Standortschließungen - WELT. <a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxPNmUwV0tzcXowQUx3cGJHZmRaX3FLVnQ2T"
         }
       ],
       "metadata": {
-        "source_item_count": 22,
-        "average_valence": -0.134,
+        "source_item_count": 28,
+        "average_valence": -0.127,
         "dominant_themes": [
           "general",
           "language",
@@ -145,30 +145,23 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-10T10:31:23.516Z",
-      "mood_score": 0.468,
+      "captured_at": "2026-03-10T15:31:08.294Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around routine, money, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around routine, transit, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
         "review": 2,
         "forum": 2,
         "signals": 1,
-        "news": 2,
+        "news": 8,
         "social": 2
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "local_news",
-          "language": "en",
-          "valence": -1,
-          "excerpt": "Muni escalator outages pile up again downtown. Morning commuters kept rerouting through stalled escalators and crowded stairs while transit staff warned of another rough week for d"
-        },
         {
           "source_family": "public",
           "source_origin": "curated_public_fallback",
@@ -196,31 +189,38 @@
           "language": "en",
           "valence": 0.5,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "curated_public_fallback",
+          "language": "en",
+          "valence": 0,
+          "excerpt": "the weird thing about sf is everyone says they want community and then schedules friendship like a dentist appointment three weeks out"
         }
       ],
       "metadata": {
-        "source_item_count": 22,
-        "average_valence": -0.093,
+        "source_item_count": 28,
+        "average_valence": -0.046,
         "dominant_themes": [
           "routine",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ]
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-10T10:31:23.516Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-03-10T15:31:08.294Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
         "review": 2,
         "forum": 2,
         "signals": 1,
-        "news": 2,
+        "news": 8,
         "social": 3
       },
       "languages": [
@@ -267,12 +267,12 @@
         }
       ],
       "metadata": {
-        "source_item_count": 23,
-        "average_valence": -0.053,
+        "source_item_count": 29,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ]
       }
     }
