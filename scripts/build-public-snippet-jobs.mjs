@@ -15,6 +15,7 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
+import { normalizeSourceLanguage } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "public-human-comments.json");
@@ -23,7 +24,9 @@ const limit = Number(args.limit ?? 200);
 const seed = args.seed ?? "public-human-snippets";
 const rand = createSeededRandom(seed);
 
-const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand).slice(0, limit);
+const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
+  .filter((snippet) => !looksForumAdviceSnippet(snippet.body))
+  .slice(0, limit);
 const jobs = snippets.map((snippet, index) => {
   const lane = snippet.laneHint ?? "micro_moment";
   const readReason = snippet.readReasonHint && readReasons[snippet.readReasonHint] ? snippet.readReasonHint : "identity_signal";
@@ -32,9 +35,9 @@ const jobs = snippets.map((snippet, index) => {
   const topic = getTopic(topicId);
   const sourceProfile = pickWeighted(
     [
-      { id: "ambiguous", weight: 0.5 },
-      { id: "human_like", weight: 0.35 },
-      { id: "slightly_too_clean", weight: 0.15 },
+      { id: "ambiguous", weight: 0.48 },
+      { id: "human_like", weight: 0.46 },
+      { id: "slightly_too_clean", weight: 0.06 },
     ],
     rand
   ).id;
@@ -79,8 +82,10 @@ const jobs = snippets.map((snippet, index) => {
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
+    rawSnippetLanguage: normalizeSourceLanguage(snippet.language ?? snippet.sourceLanguage ?? "en"),
     rawSnippetSourceOrigin: snippet.sourceOrigin,
     rawSnippetSubreddit: snippet.subreddit,
+    transformationMode: "minimal_intervention_salvage",
   };
 
   return {
@@ -110,18 +115,18 @@ console.log(
 function buildSnippetRewritePrompt(job) {
   const laneInstructions = job.lane === "mind_post"
     ? [
-        "This source snippet already contains a strong public angle.",
-        "Preserve the voice, thesis, and social bite.",
-        "Do not smooth away the personality.",
+        "This source snippet already contains a real public angle.",
+        "Preserve the voice, the order of thought, and the social bite.",
+        "Do not improve it into a cleaner or smarter post.",
       ]
     : [
         "This source snippet already contains a lived city moment.",
-        "Preserve the voice and human weirdness.",
+        "Preserve the voice, odd priorities, and human weirdness.",
         "Do not turn it into generic urban prose.",
       ];
 
   return [
-    "Rewrite a raw public text snippet into a Vortex message.",
+    "Salvage a raw public text snippet into a Vortex message with minimal intervention.",
     `City: ${job.cityName}.`,
     `Topic: ${job.topicLabel}.`,
     `Read reason: ${job.readReasonLabel}.`,
@@ -132,13 +137,48 @@ function buildSnippetRewritePrompt(job) {
     `Tone target: ${tones[job.tone].guidance}`,
     `Texture target: ${job.textureGuidance}`,
     `City anchor: ${job.cityAnchor}`,
+    `Source language: ${job.rawSnippetLanguage}`,
     `Raw source snippet: ${job.rawSnippet}`,
     ...laneInstructions,
-    "Shorten or compress if needed, but keep at least one non-generic specific detail.",
+    "Default move: keep the original context and wording as intact as possible.",
+    "Preserve the source language unless you only need to remove platform scaffolding.",
+    "You may only remove platform scaffolding, usernames, explicit reply framing, and obvious filler.",
+    "Do not add new city markers, new symbolism, or a smarter conclusion that was not already in the snippet.",
+    "Do not swap the speaker's strange priorities for tidier ones.",
+    "If the snippet already works as one anonymous message, change almost nothing.",
+    "Shorten only if needed for length, and preserve the weirdest concrete detail.",
     "Remove explicit Reddit/forum framing.",
     "Make it feel like a single anonymous message, not a comment reply.",
+    "Do not preserve advice-seeking or neighborhood recommendation framing from the source.",
+    "Do not write as if asking strangers what they think about an area, apartment, or move.",
+    "Do not stack multiple iconic city stereotypes into one short message.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
+}
+
+function looksForumAdviceSnippet(body) {
+  const lower = body.toLowerCase();
+  const adviceFragments = [
+    "would appreciate hearing",
+    "would love to hear",
+    "any recommendations",
+    "any advice",
+    "what's it like",
+    "what is it like",
+    "general sentiment",
+    "would you recommend",
+    "thinking of moving",
+    "just moved to",
+    "looking at an apartment",
+    "close to the ",
+    "seems close to the ",
+  ];
+
+  const asksForInput =
+    /\b(anyone|people)\b/.test(lower) &&
+    /\b(recommend|advice|thoughts|opinions|experience)\b/.test(lower);
+
+  return adviceFragments.some((fragment) => lower.includes(fragment)) || asksForInput;
 }
 
 function inferTopic(snippet) {

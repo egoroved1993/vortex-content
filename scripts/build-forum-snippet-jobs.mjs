@@ -13,7 +13,7 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "forum-snippets.json");
@@ -35,9 +35,9 @@ const jobs = snippets.map((snippet, index) => {
   const topic = getTopic(topicId);
   const sourceProfile = pickWeighted(
     [
-      { id: "ambiguous", weight: 0.5 },
-      { id: "human_like", weight: 0.35 },
-      { id: "slightly_too_clean", weight: 0.15 },
+      { id: "ambiguous", weight: 0.48 },
+      { id: "human_like", weight: 0.46 },
+      { id: "slightly_too_clean", weight: 0.06 },
     ],
     rand
   ).id;
@@ -84,10 +84,12 @@ const jobs = snippets.map((snippet, index) => {
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
+    rawSnippetLanguage: snippet.language,
     rawSnippetSourceOrigin: snippet.sourceOrigin,
     rawSnippetBoardName: snippet.boardName,
     rawSnippetThreadTitle: snippet.threadTitle,
     rawSnippetNeighborhood: snippet.neighborhood,
+    transformationMode: "minimal_intervention_salvage",
   };
 
   return {
@@ -123,6 +125,7 @@ function normalizeSnippet(raw) {
     threadTitle: cleanText(raw.threadTitle ?? raw.title ?? ""),
     neighborhood: cleanText(raw.neighborhood ?? ""),
     sourceOrigin: cleanText(raw.sourceOrigin ?? "forum_snippet"),
+    language: normalizeSourceLanguage(raw.language ?? raw.sourceLanguage ?? "en"),
   };
 }
 
@@ -212,17 +215,17 @@ function buildForumRewritePrompt(job) {
   const laneInstructions = job.lane === "mind_post"
     ? [
         "This forum snippet already contains a compact social angle or local theory.",
-        "Preserve the speaker's hierarchy-reading, petty logic, or complaint structure.",
+        "Preserve the speaker's hierarchy-reading, petty logic, complaint structure, and weird priorities.",
         "Do not smooth it into neutral city commentary.",
       ]
     : [
         "This forum snippet already contains one lived local moment or repeated neighborhood pattern.",
-        "Preserve the human awkwardness and street-level specificity.",
+        "Preserve the human awkwardness, street-level specificity, and context the speaker assumes is obvious.",
         "Do not turn it into generic urban atmosphere.",
       ];
 
   return [
-    "Rewrite a local forum or neighborhood-board snippet into a Vortex message.",
+    "Salvage a local forum or neighborhood-board snippet into a Vortex message with minimal intervention.",
     `City: ${job.cityName}.`,
     `Topic: ${job.topicLabel}.`,
     `Read reason: ${job.readReasonLabel}.`,
@@ -234,8 +237,15 @@ function buildForumRewritePrompt(job) {
     `Tone target: ${tones[job.tone].guidance}`,
     `Texture target: ${job.textureGuidance}`,
     `City anchor: ${job.cityAnchor}`,
+    `Source language: ${job.rawSnippetLanguage}`,
     `Raw forum snippet: ${job.rawSnippet}`,
     ...laneInstructions,
+    "Default move: keep the original context and wording as intact as possible.",
+    "Preserve the source language unless the only edits are removing forum scaffolding.",
+    "Only remove forum scaffolding, reply-language, usernames, and obvious thread-noise.",
+    "Do not rewrite the text into a tidier or more audience-aware post.",
+    "Do not add a clean thesis or better ending than the source already had.",
+    "If the snippet already works as one anonymous message, change almost nothing.",
     "Remove explicit forum framing, reply language, usernames, and advice-thread phrasing.",
     "Keep one concrete local detail that implies the speaker really belongs in that context.",
     "Write it as one anonymous message people would read for the voice, not for practical help.",

@@ -1,6 +1,6 @@
 # Seed Pipeline
 
-This folder holds launch-seeding artifacts for Vortex.
+This folder holds the content operating system for Vortex: mixed-source seeding, multilingual salvage, and city pulse snapshots built from the current urban context.
 
 ## Scripts
 
@@ -16,6 +16,10 @@ This folder holds launch-seeding artifacts for Vortex.
   Converts local forum or neighborhood-board snippets into Vortex rewrite jobs that keep local politics, complaint structure, and block-level social texture.
 - `github-actions/scripts/build-signal-conditioned-jobs.mjs`
   Converts city-condition snapshots into Vortex jobs so generation can feel tied to today's weather, transit, crowd pressure, and local event context.
+- `github-actions/scripts/build-news-snippet-jobs.mjs`
+  Converts current city-news snippets into Vortex jobs without turning them into article copy.
+- `github-actions/scripts/build-social-snippet-jobs.mjs`
+  Converts short social posts into Vortex jobs with minimal intervention so live context survives the rewrite.
 - `github-actions/scripts/generate-seed-candidates.mjs`
   Calls a model provider or mock generator to turn jobs into candidate messages.
 - `github-actions/scripts/validate-seed-candidates.mjs`
@@ -24,8 +28,12 @@ This folder holds launch-seeding artifacts for Vortex.
   Filters approved candidates and maps them to Supabase `messages` rows.
 - `github-actions/scripts/upload-seed-payload.mjs`
   Uploads approved rows to Supabase.
+- `github-actions/scripts/build-city-pulse.mjs`
+  Aggregates public, review, forum, signals, news, and social inputs into one latest city-mood snapshot per city.
+- `github-actions/scripts/upload-city-pulse-payload.mjs`
+  Uploads the latest city pulse rows to Supabase.
 - `github-actions/scripts/run-seed-pipeline.mjs`
-  End-to-end runner for build -> generate -> validate -> prepare -> upload/dry-run.
+  End-to-end runner for build -> generate -> validate -> prepare -> city pulse -> upload/dry-run.
 
 ## Typical flow
 
@@ -122,6 +130,8 @@ Available source families:
 - `review`
 - `forum`
 - `signals`
+- `news`
+- `social`
 
 Example:
 
@@ -129,11 +139,13 @@ Example:
 node github-actions/scripts/run-seed-pipeline.mjs \
   --count 120 \
   --seed launch-mixed-v1 \
-  --mix launch,public,review,forum,signals \
+  --mix launch,public,review,forum,signals,news,social \
   --public-input github-actions/content/public-human-comments.json \
   --review-input github-actions/content/place-review-snippets.json \
   --forum-input github-actions/content/forum-snippets.json \
-  --signals-input github-actions/content/city-signals.json
+  --signals-input github-actions/content/city-signals.json \
+  --news-input github-actions/content/news-snippets.json \
+  --social-input github-actions/content/social-snippets.json
 ```
 
 Notes:
@@ -145,6 +157,8 @@ Notes:
   - `--review-count`
   - `--forum-count`
   - `--signal-count`
+  - `--news-count`
+  - `--social-count`
 - For signals you can also control:
   - `--signal-jobs-per-snapshot`
 
@@ -154,11 +168,13 @@ For a local mock dry run with the sample corpora in this repo:
 node github-actions/scripts/run-seed-pipeline.mjs \
   --count 36 \
   --seed launch-mixed-sample \
-  --mix launch,public,review,forum,signals \
+  --mix launch,public,review,forum,signals,news,social \
   --public-input github-actions/content/sample-public-human-comments.json \
   --review-input github-actions/content/sample-place-review-snippets.json \
   --forum-input github-actions/content/sample-forum-snippets.json \
   --signals-input github-actions/content/sample-city-signals.json \
+  --news-input github-actions/content/news-snippets.json \
+  --social-input github-actions/content/social-snippets.json \
   --mock
 ```
 
@@ -177,6 +193,42 @@ Required secrets for live runs:
 - `OPENAI_API_KEY`
 - `SUPABASE_URL`
 - `SUPABASE_SERVICE_KEY`
+
+## Multilingual Context
+
+All source builders now support `language` / `sourceLanguage` on input snippets and pass that language through to the salvage prompt. The generator is instructed to preserve the original language unless it is only removing platform scaffolding.
+
+This lets one city carry parallel lives:
+- locals posting in their own language
+- immigrants talking across the gap
+- tourists and residents reacting to the same place differently
+
+The app can still translate to the device language through the existing translation flow.
+
+## City Pulse
+
+`build-city-pulse.mjs` creates `city-pulse.latest.json` from:
+- `public-human-comments.json`
+- `place-review-snippets.json`
+- `forum-snippets.json`
+- `city-signals.json`
+- `news-snippets.json`
+- `social-snippets.json`
+
+Example:
+
+```bash
+node github-actions/scripts/build-city-pulse.mjs \
+  --out github-actions/content/city-pulse.latest.json \
+  --public-input github-actions/content/public-human-comments.json \
+  --review-input github-actions/content/place-review-snippets.json \
+  --forum-input github-actions/content/forum-snippets.json \
+  --signals-input github-actions/content/city-signals.json \
+  --news-input github-actions/content/news-snippets.json \
+  --social-input github-actions/content/social-snippets.json
+```
+
+`run-seed-pipeline.mjs` now builds this artifact automatically and can upload it with `--upload-city-pulse`.
 
 ## Public Voice Expansion
 
@@ -323,4 +375,7 @@ node github-actions/scripts/validate-seed-candidates.mjs --input github-actions/
 - The place-review path is useful because reviews often hide strong `taste signals`: petty resentment, tiny loyalty, status reading, and local heuristics.
 - The forum path is useful because it produces `local social logic`: unwritten rules, block-level resentment, overheard truths, and neighborhood status reads.
 - The city-signal path is useful because it makes synthetic content feel more `today-shaped` without turning it into news copy or weather summaries.
+- The news path is useful because it injects current civic pressure and local stakes without requiring the final message to sound like journalism.
+- The social path is useful because it preserves sticky, current context that already feels human before the model touches it.
+- `city-pulse.latest.json` is the bridge between content operations and the in-app mood blob: it reflects the city's current emotional weather from all available sources, not just message sentiment.
 - The validator is heuristic. It is meant to kill weak obvious copy, not replace human editorial taste.

@@ -198,7 +198,7 @@ function normalizeModelJson(job, rawText, { usage = null } = {}) {
     why_ai: String(parsed.why_ai ?? "").trim(),
     read_value_hook: String(parsed.read_value_hook ?? "").trim(),
     sentiment: normalizeSentiment(parsed.sentiment),
-    detected_language: String(parsed.detected_language ?? parsed.detectedLanguage ?? "en").trim() || "en",
+    detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? "en"),
     rawModelResponse: rawText,
     usage,
   };
@@ -273,6 +273,41 @@ function readJobs(filePath) {
 function normalizeSentiment(value) {
   const sentiment = String(value ?? "neutral").toLowerCase();
   return ["positive", "neutral", "negative"].includes(sentiment) ? sentiment : "neutral";
+}
+
+function normalizeDetectedLanguage(value) {
+  const raw = String(value ?? "en").trim().toLowerCase();
+  if (!raw) return "en";
+
+  const aliases = {
+    english: "en",
+    eng: "en",
+    spanish: "es",
+    espanol: "es",
+    español: "es",
+    catalan: "ca",
+    català: "ca",
+    catalan: "ca",
+    german: "de",
+    deutsch: "de",
+    french: "fr",
+    français: "fr",
+    frenchcanadian: "fr",
+    portuguese: "pt",
+    português: "pt",
+    italian: "it",
+    russian: "ru",
+    russianlanguage: "ru",
+    ukrainian: "uk",
+  };
+
+  const compact = raw.replace(/[\s_-]+/g, "");
+  if (aliases[compact]) return aliases[compact];
+
+  if (/^[a-z]{2}$/.test(raw)) return raw;
+  if (/^[a-z]{2}-[a-z]{2}$/.test(raw)) return raw.slice(0, 2);
+
+  return "en";
 }
 
 function countBy(items, getKey) {

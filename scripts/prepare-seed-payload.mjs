@@ -8,7 +8,7 @@ const reportPath = args.report ? path.resolve(process.cwd(), args.report) : null
 const outputPath = args.out ? path.resolve(process.cwd(), args.out) : replaceExtension(candidatesPath, ".payload.json");
 const expiresHours = Number(args["expires-hours"] ?? 48);
 const minScore = Number(args["min-score"] ?? 3);
-const includeReviewerBuckets = String(args["reviewer-buckets"] ?? "strong_candidate,ship_now,needs_human_edit")
+const includeReviewerBuckets = String(args["reviewer-buckets"] ?? "strong_candidate,ship_now")
   .split(",")
   .map((value) => value.trim())
   .filter(Boolean);
@@ -32,7 +32,7 @@ for (const candidate of candidates) {
   selected.push({
     city_id: candidate.cityId,
     content: candidate.content,
-    detected_language: candidate.detected_language ?? "en",
+    detected_language: normalizeDetectedLanguage(candidate.detected_language),
     source: candidate.gameSource,
     sentiment: candidate.sentiment ?? "neutral",
     type: "text",
@@ -85,6 +85,39 @@ function shouldInclude(candidate, review, minAllowedScore, allowedBuckets) {
   }
 
   return { include: true, reason: "approved" };
+}
+
+function normalizeDetectedLanguage(value) {
+  const raw = String(value ?? "en").trim().toLowerCase();
+  if (!raw) return "en";
+
+  const aliases = {
+    english: "en",
+    eng: "en",
+    spanish: "es",
+    espanol: "es",
+    español: "es",
+    catalan: "ca",
+    català: "ca",
+    catalan: "ca",
+    german: "de",
+    deutsch: "de",
+    french: "fr",
+    français: "fr",
+    portuguese: "pt",
+    português: "pt",
+    italian: "it",
+    russian: "ru",
+    ukrainian: "uk",
+  };
+
+  const compact = raw.replace(/[\s_-]+/g, "");
+  if (aliases[compact]) return aliases[compact];
+
+  if (/^[a-z]{2}$/.test(raw)) return raw;
+  if (/^[a-z]{2}-[a-z]{2}$/.test(raw)) return raw.slice(0, 2);
+
+  return "en";
 }
 
 function readJson(filePath) {

@@ -18,6 +18,7 @@ const jobsPath = args.jobs ? path.resolve(process.cwd(), args.jobs) : resolvePro
 const candidatesPath = args.candidates ? path.resolve(process.cwd(), args.candidates) : resolveProjectPath("content", "pipeline-candidates.json");
 const reportPath = args.report ? path.resolve(process.cwd(), args.report) : resolveProjectPath("content", "pipeline-candidates.report.json");
 const payloadPath = args.payload ? path.resolve(process.cwd(), args.payload) : resolveProjectPath("content", "pipeline-payload.json");
+const cityPulsePath = args["city-pulse-out"] ? path.resolve(process.cwd(), args["city-pulse-out"]) : resolveProjectPath("content", "city-pulse.latest.json");
 const sourceConfig = buildSourceConfig(args, count, mix, jobsPerSignalSnapshot);
 
 buildMixedJobsCorpus({
@@ -55,15 +56,37 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   payloadPath,
 ]);
 
+runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
+  "--out",
+  cityPulsePath,
+  ...(args["public-input"] ? ["--public-input", path.resolve(process.cwd(), args["public-input"])] : []),
+  ...(args["review-input"] ? ["--review-input", path.resolve(process.cwd(), args["review-input"])] : []),
+  ...(args["forum-input"] ? ["--forum-input", path.resolve(process.cwd(), args["forum-input"])] : []),
+  ...(args["signals-input"] ? ["--signals-input", path.resolve(process.cwd(), args["signals-input"])] : []),
+  ...(args["news-input"] ? ["--news-input", path.resolve(process.cwd(), args["news-input"])] : []),
+  ...(args["social-input"] ? ["--social-input", path.resolve(process.cwd(), args["social-input"])] : []),
+]);
+
 if (upload) {
   runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
     "--input",
     payloadPath,
   ]);
+  if (Boolean(args["upload-city-pulse"])) {
+    runNode(path.join(projectRoot, "scripts", "upload-city-pulse-payload.mjs"), [
+      "--input",
+      cityPulsePath,
+    ]);
+  }
 } else {
   runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
     "--input",
     payloadPath,
+    "--dry-run",
+  ]);
+  runNode(path.join(projectRoot, "scripts", "upload-city-pulse-payload.mjs"), [
+    "--input",
+    cityPulsePath,
     "--dry-run",
   ]);
 }
@@ -117,6 +140,8 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
     review: args["review-count"],
     forum: args["forum-count"],
     signals: args["signal-count"],
+    news: args["news-count"],
+    social: args["social-count"],
   });
 
   const baseJobsPath = args.jobs ? path.resolve(process.cwd(), args.jobs) : resolveProjectPath("content", "pipeline-jobs.json");
@@ -199,16 +224,48 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
         `${seed}:signals`,
       ],
     },
+    news: {
+      targetCount: allocations.news ?? 0,
+      script: path.join(projectRoot, "scripts", "build-news-snippet-jobs.mjs"),
+      outPath: perSourcePath("news"),
+      args: (seed) => [
+        "--input",
+        args["news-input"] ? path.resolve(process.cwd(), args["news-input"]) : resolveProjectPath("content", "news-snippets.json"),
+        "--out",
+        perSourcePath("news"),
+        "--limit",
+        String(allocations.news ?? 0),
+        "--seed",
+        `${seed}:news`,
+      ],
+    },
+    social: {
+      targetCount: allocations.social ?? 0,
+      script: path.join(projectRoot, "scripts", "build-social-snippet-jobs.mjs"),
+      outPath: perSourcePath("social"),
+      args: (seed) => [
+        "--input",
+        args["social-input"] ? path.resolve(process.cwd(), args["social-input"]) : resolveProjectPath("content", "social-snippets.json"),
+        "--out",
+        perSourcePath("social"),
+        "--limit",
+        String(allocations.social ?? 0),
+        "--seed",
+        `${seed}:social`,
+      ],
+    },
   };
 }
 
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
-    launch: 0.46,
+    launch: 0.24,
     public: 0.2,
-    review: 0.14,
-    forum: 0.1,
+    review: 0.16,
+    forum: 0.14,
     signals: 0.1,
+    news: 0.08,
+    social: 0.08,
   };
   const counts = {};
   let remaining = Number(totalCount);
@@ -246,7 +303,7 @@ function replaceExtension(filePath, suffixExtension) {
 }
 
 function parseMix(raw) {
-  const allowed = new Set(["launch", "public", "review", "forum", "signals"]);
+  const allowed = new Set(["launch", "public", "review", "forum", "signals", "news", "social"]);
   const values = String(raw)
     .split(",")
     .map((value) => value.trim())

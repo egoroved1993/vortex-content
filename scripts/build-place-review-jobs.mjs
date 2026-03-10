@@ -14,7 +14,7 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "place-review-snippets.json");
@@ -36,9 +36,9 @@ const jobs = snippets.map((snippet, index) => {
   const topic = getTopic(topicId);
   const sourceProfile = pickWeighted(
     [
-      { id: "ambiguous", weight: 0.45 },
-      { id: "human_like", weight: 0.4 },
-      { id: "slightly_too_clean", weight: 0.15 },
+      { id: "ambiguous", weight: 0.48 },
+      { id: "human_like", weight: 0.46 },
+      { id: "slightly_too_clean", weight: 0.06 },
     ],
     rand
   ).id;
@@ -85,11 +85,13 @@ const jobs = snippets.map((snippet, index) => {
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
+    rawSnippetLanguage: snippet.language,
     rawSnippetSourceOrigin: snippet.sourceOrigin,
     rawSnippetPlaceName: snippet.placeName,
     rawSnippetPlaceType: snippet.placeType,
     rawSnippetNeighborhood: snippet.neighborhood,
     rawSnippetRating: snippet.rating,
+    transformationMode: "minimal_intervention_salvage",
   };
 
   return {
@@ -125,6 +127,7 @@ function normalizeSnippet(raw) {
     placeType: cleanText(raw.placeType ?? raw.placeCategory ?? ""),
     neighborhood: cleanText(raw.neighborhood ?? ""),
     sourceOrigin: cleanText(raw.sourceOrigin ?? "place_review"),
+    language: normalizeSourceLanguage(raw.language ?? raw.sourceLanguage ?? "en"),
   };
 }
 
@@ -212,17 +215,17 @@ function buildReviewRewritePrompt(job) {
   const laneInstructions = job.lane === "mind_post"
     ? [
         "This review snippet contains a taste judgment or mini social theory.",
-        "Preserve the speaker's angle, not the platform-review format.",
+        "Preserve the speaker's angle, original priorities, and blind spots.",
         "Let it feel like an anonymous post someone would read for the voice, not the recommendation.",
       ]
     : [
         "This review snippet contains a lived city ritual or place-specific detail.",
-        "Preserve the human weirdness and local texture.",
+        "Preserve the human weirdness, local texture, and accidental specificity.",
         "Do not turn it into polished travel copy.",
       ];
 
   return [
-    "Rewrite a short place-review snippet into a Vortex message.",
+    "Salvage a short place-review snippet into a Vortex message with minimal intervention.",
     `City: ${job.cityName}.`,
     `Topic: ${job.topicLabel}.`,
     `Read reason: ${job.readReasonLabel}.`,
@@ -234,8 +237,15 @@ function buildReviewRewritePrompt(job) {
     `Tone target: ${tones[job.tone].guidance}`,
     `Texture target: ${job.textureGuidance}`,
     `City anchor: ${job.cityAnchor}`,
+    `Source language: ${job.rawSnippetLanguage}`,
     `Raw review snippet: ${job.rawSnippet}`,
     ...laneInstructions,
+    "Default move: keep the original context and wording as intact as possible.",
+    "Preserve the source language unless the only changes are removing review-platform scaffolding.",
+    "Only remove review-platform scaffolding, star-rating language, explicit recommendation framing, and obvious filler.",
+    "Do not invent a smarter take than the review already contains.",
+    "Do not replace concrete context with generic 'city' writing.",
+    "If the snippet already works as one anonymous message, change almost nothing.",
     "Remove explicit star-rating language, platform-review clichés, and direct recommendation framing.",
     "If the place name feels too branded, generalize it into a local reference while keeping the texture.",
     "Keep at least one concrete non-generic detail that makes the place feel real.",

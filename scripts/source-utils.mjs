@@ -63,6 +63,22 @@ export function cleanText(text) {
     .trim();
 }
 
+export function normalizeSourceLanguage(value, fallback = "en") {
+  const lower = String(value ?? "")
+    .trim()
+    .toLowerCase();
+
+  if (!lower) return fallback;
+  if (["en", "eng", "english"].includes(lower)) return "en";
+  if (["es", "spa", "spanish", "español", "espanol"].includes(lower)) return "es";
+  if (["ca", "cat", "catalan", "català", "catala"].includes(lower)) return "ca";
+  if (["de", "deu", "german", "deutsch"].includes(lower)) return "de";
+  if (["ru", "rus", "russian", "русский"].includes(lower)) return "ru";
+  if (["fr", "fra", "french", "français", "francais"].includes(lower)) return "fr";
+  if (/^[a-z]{2}$/.test(lower)) return lower;
+  return fallback;
+}
+
 export function isEnglish(text) {
   const lower = ` ${text.toLowerCase()} `;
   const hits = EN_WORDS.filter((word) => lower.includes(word)).length;

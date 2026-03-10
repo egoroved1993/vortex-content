@@ -50,9 +50,9 @@ for (const snapshot of snapshots) {
     ).id;
     const sourceProfile = pickWeighted(
       [
-        { id: "ambiguous", weight: 0.45 },
-        { id: "human_like", weight: 0.35 },
-        { id: "slightly_too_clean", weight: 0.2 },
+        { id: "ambiguous", weight: 0.46 },
+        { id: "human_like", weight: 0.46 },
+        { id: "slightly_too_clean", weight: 0.08 },
       ],
       rand
     ).id;
@@ -144,8 +144,9 @@ function normalizeSnapshot(raw) {
 }
 
 function pickFocus(snapshot, randFn) {
+  const weatherWeight = snapshot.cityId === "sf" ? 0.35 : 1.2;
   const candidates = [
-    { id: "weather", label: "Weather", text: snapshot.weather, weight: snapshot.weather ? 1.2 : 0 },
+    { id: "weather", label: "Weather", text: snapshot.weather, weight: snapshot.weather ? weatherWeight : 0 },
     { id: "transit", label: "Transit", text: snapshot.transit, weight: snapshot.transit ? 1.2 : 0 },
     { id: "social_pattern", label: "Social Pattern", text: snapshot.socialPattern, weight: snapshot.socialPattern ? 1.35 : 0 },
     { id: "local_event", label: "Local Event", text: snapshot.localEvent, weight: snapshot.localEvent ? 1.1 : 0 },
@@ -163,6 +164,15 @@ function pickFocus(snapshot, randFn) {
 function inferLane(snapshot, focus, randFn) {
   const text = `${focus.text} ${snapshot.pressurePoint} ${snapshot.socialPattern}`.toLowerCase();
   if (/\b(the real sign|you can tell|everyone is|nobody is|the weird thing|proves|means that)\b/.test(text)) return "mind_post";
+  if (focus.id === "weather") {
+    return pickWeighted(
+      [
+        { id: "micro_moment", weight: 0.8 },
+        { id: "mind_post", weight: 0.2 },
+      ],
+      randFn
+    ).id;
+  }
   if (focus.id === "pressure_point" || focus.id === "social_pattern") {
     return pickWeighted(
       [
@@ -313,6 +323,9 @@ function buildSignalPrompt(job) {
     "The message must feel like it could only have been written under these city conditions today.",
     "Do not list all the signals. Use one or two of them to pressure the thought.",
     "Do not sound like a city newsletter, event blurb, or weather report.",
+    "Do not personify fog, weather, traffic, or infrastructure.",
+    "No lyrical atmosphere, reflective fog philosophy, or poetic weather metaphors.",
+    "If the signal is weather, keep it behavioral and concrete: what people wore, delayed, spilled, avoided, or complained about.",
     `This seed will be stored in the game as source="${job.gameSource}". Do not mention that fact, but keep the authorship debatable.`,
     "CRITICAL: The content field must be 60-240 characters. Do not exceed 240 characters. One to three sentences max.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
