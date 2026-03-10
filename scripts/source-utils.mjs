@@ -1,8 +1,28 @@
 export const CITY_SOURCES = [
-  { id: "london", subs: ["london", "londonlife", "CasualUK", "AskUK"], keyword: null },
-  { id: "berlin", subs: ["berlin", "germany", "AskAGerman"], keyword: null },
-  { id: "sf", subs: ["sanfrancisco", "bayarea", "AskSF"], keyword: null },
-  { id: "barcelona", subs: ["barcelona", "expats", "digitalnomad", "solotravel"], keyword: null },
+  {
+    id: "london",
+    subs: ["london", "londonlife", "CasualUK", "AskUK"],
+    keyword: null,
+    cityWords: ["london", "tube", "underground", "overground", "victoria line", "hackney", "shoreditch", "peckham", "brixton", "islington", "canary wharf", "soho", "camden", "oyster card", "nhs", "pret", "spoons", "borough market", "zone 1", "zone 2", "paddington", "waterloo", "king's cross", "liverpool street", "clapham", "streatham", "lewisham", "dalston", "stoke newington", "walthamstow"],
+  },
+  {
+    id: "berlin",
+    subs: ["berlin", "germany", "AskAGerman"],
+    keyword: null,
+    cityWords: ["berlin", "u-bahn", "s-bahn", "ringbahn", "ubahn", "sbahn", "mitte", "prenzlauer", "kreuzberg", "neukölln", "neukoelln", "tempelhofer", "currywurst", "döner", "doner", "späti", "spati", "kiez", "kotti", "friedrichshain", "charlottenburg", "alexanderplatz", "bvg", "wannsee", "schöneberg", "tiergarten", "moabit", "lichtenberg", "pankow", "wedding"],
+  },
+  {
+    id: "sf",
+    subs: ["sanfrancisco", "bayarea", "AskSF"],
+    keyword: null,
+    cityWords: ["san francisco", " sf ", "bart", "muni", "mission district", "castro", "haight", "soma", "tenderloin", "oakland", "bay area", "berkeley", "caltrain", "tech bros", "marina", "sunset district", "richmond district", "noe valley", "potrero", "dogpatch", "bernal", "daly city", "silicon valley", "pacific heights", "cole valley"],
+  },
+  {
+    id: "barcelona",
+    subs: ["barcelona", "expats", "digitalnomad", "solotravel"],
+    keyword: null,
+    cityWords: ["barcelona", "barri gòtic", "gràcia", "eixample", "el raval", "poblenou", "barcelonès", "sants", "montjuïc", "sagrada", "passeig de gràcia", "rambla", "platja", "badalona", "sitges", "catalan", "català", "rodalies", "fgc", "tmb", "l'hospitalet"],
+  },
 ];
 
 const EN_WORDS = ["the ", " and ", " is ", " in ", " it ", " was ", " for ", " you ", " are ", " that "];
@@ -14,6 +34,17 @@ const BLOCK_WORDS = [
   "subscribe", "click here", "link in bio", "check out my",
   "proud to announce", "visual stories", "programme of", "conferences and meetups",
   "affiliate", "sponsored", "paid partnership", "use code ",
+  // UI/platform artifacts
+  "show more", "read more", "see more", "load more", "view more",
+  "video link", "video:", "watch now", "tap to", "swipe up",
+  "here are ", "examples from the video",
+  // Survey/recruitment spam
+  "nursing student", "health education activity", "interview a foreigner",
+  "fill out", "fill in", "survey", "questionnaire", "sign up",
+  "are you aged", "are you between", "looking for participants",
+  // Website/link artifacts
+  "this website is", "visit our", "follow us", "dm us", "dm me",
+  "www.", "http", ".com", ".net", ".org", ".io",
 ];
 
 const ADVICE_STARTS = [
@@ -106,6 +137,12 @@ export function hasMindpostSignal(text) {
 
 export function hasCityTexture(text) {
   return /(\d|€|\$|£|queue|rent|coffee|tram|bus|train|metro|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|post office|bike lane|station|platform)/i.test(text);
+}
+
+export function hasCityConnection(text, citySource) {
+  if (!citySource?.cityWords?.length) return true; // no filter defined → pass
+  const lower = text.toLowerCase();
+  return citySource.cityWords.some((word) => lower.includes(word.toLowerCase()));
 }
 
 export function isHighSignalPublicText(text, { allowMindpost = true } = {}) {

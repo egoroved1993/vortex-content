@@ -1,0 +1,68 @@
+name: Update City Pulse
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 13:00 UTC daily — 1h before mixed seed pipeline
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: "Upload pulse to Supabase"
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: update-city-pulse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build city pulse
+        working-directory: github-actions
+        run: node scripts/build-city-pulse.mjs
+
+      - name: Show pulse summary
+        working-directory: github-actions
+        run: |
+          echo "=== city-pulse.latest.json ==="
+          node -e "
+            const d = JSON.parse(require('fs').readFileSync('content/city-pulse.latest.json','utf8'));
+            for (const r of d.rows) {
+              console.log(r.city_id, r.mood_label, r.mood_score.toFixed(3), r.metadata.dominant_themes.join(', '));
+            }
+          "
+
+      - name: Upload to Supabase
+        if: ${{ github.event_name == 'schedule' || inputs.upload == true }}
+        working-directory: github-actions
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: node scripts/upload-city-pulse-payload.mjs
+
+      - name: Commit updated pulse
+        if: ${{ github.event_name == 'schedule' || inputs.upload == true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-actions/content/city-pulse.latest.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update city pulse $(date -u +%Y-%m-%d)"
+            git push
+          fi

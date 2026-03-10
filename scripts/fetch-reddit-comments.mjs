@@ -8,6 +8,7 @@ import {
   guessLaneFromSnippet,
   detectReadReasonFromSnippet,
   hasCityTexture,
+  hasCityConnection,
   hasMindpostSignal,
   isHighSignalPublicText,
   sleep,
@@ -53,6 +54,7 @@ for (const city of CITY_SOURCES) {
       .filter((row) => row.body.length >= 40 && row.body.length <= 420)
       .filter((row) => isHighSignalPublicText(row.body))
       .filter((row) => hasCityTexture(row.body) || hasMindpostSignal(row.body))
+      .filter((row) => hasCityConnection(row.body, city))
       .map((row) => ({
         ...row,
         laneHint: guessLaneFromSnippet(row.body),

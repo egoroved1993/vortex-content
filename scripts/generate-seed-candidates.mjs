@@ -3,6 +3,28 @@ import path from "node:path";
 import { createSeededRandom } from "./seed-config.mjs";
 import { resolveProjectPath } from "./path-utils.mjs";
 
+// Load city pulse data for grounding generation in current city mood/themes
+const cityPulseMap = loadCityPulse();
+
+function loadCityPulse() {
+  try {
+    const pulsePath = resolveProjectPath("content", "city-pulse.latest.json");
+    const raw = JSON.parse(fs.readFileSync(pulsePath, "utf8"));
+    const map = {};
+    for (const row of raw.rows ?? []) {
+      map[row.city_id] = {
+        moodLabel: row.mood_label,
+        moodSummary: row.mood_summary,
+        themes: (row.metadata?.dominant_themes ?? []).slice(0, 3),
+        drivers: (row.drivers ?? []).slice(0, 2).map((d) => d.excerpt?.slice(0, 120)),
+      };
+    }
+    return map;
+  } catch {
+    return {};
+  }
+}
+
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "launch-seed-jobs.sample.json");
 const outputPath = path.resolve(process.cwd(), args.out ?? replaceExtension(inputPath, ".candidates.json"));
@@ -104,6 +126,21 @@ async function fetchWithRetry(fn, maxRetries = 5) {
   }
 }
 
+function buildSystemPrompt(job) {
+  const pulse = cityPulseMap[job.cityId];
+  let base = "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
+  if (pulse) {
+    const themes = pulse.themes.join(", ");
+    base += `\n\nCity context for ${job.cityId} right now: mood is ${pulse.moodLabel}. Dominant themes in the city today: ${themes}.`;
+    if (pulse.moodSummary) base += ` ${pulse.moodSummary}`;
+    if (pulse.drivers?.length) {
+      base += `\n\nReal voices from the city today (use as texture, do NOT copy):\n${pulse.drivers.filter(Boolean).map((d) => `- "${d}"`).join("\n")}`;
+    }
+    base += "\n\nLet these themes subtly ground the message — make it feel like it was written today, not any day.";
+  }
+  return base;
+}
+
 async function generateWithOpenAI(job, modelName) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("OPENAI_API_KEY is required for provider=openai");
@@ -123,8 +160,7 @@ async function generateWithOpenAI(job, modelName) {
         messages: [
           {
             role: "system",
-            content:
-              "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.",
+            content: buildSystemPrompt(job),
           },
           { role: "user", content: job.prompt },
         ],
@@ -158,8 +194,7 @@ async function generateWithAnthropic(job, modelName) {
       model: modelName,
       max_tokens: 350,
       temperature: 0.9,
-      system:
-        "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.",
+      system: buildSystemPrompt(job),
       messages: [{ role: "user", content: job.prompt }],
     }),
   });
