@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vortex Dashboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, sans-serif; background: #0d0d0d; color: #e8e8e8; padding: 24px; }
+  h1 { font-size: 22px; font-weight: 700; color: #a855f7; margin-bottom: 4px; }
+  .ts { font-size: 12px; color: #666; margin-bottom: 28px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .card { background: #1a1a1a; border-radius: 12px; padding: 16px; }
+  .card .label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .card .val { font-size: 28px; font-weight: 700; color: #fff; }
+  .card .sub { font-size: 12px; color: #a855f7; margin-top: 2px; }
+  h2 { font-size: 14px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
+  table { width: 100%; border-collapse: collapse; background: #1a1a1a; border-radius: 12px; overflow: hidden; margin-bottom: 32px; font-size: 13px; }
+  th { background: #222; padding: 10px 12px; text-align: left; font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: .05em; }
+  td { padding: 10px 12px; border-top: 1px solid #2a2a2a; }
+  td small { color: #666; }
+  .ret-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+  .ret-card { background: #1a1a1a; border-radius: 12px; padding: 16px; text-align: center; }
+  .ret-card .day { font-size: 11px; color: #888; text-transform: uppercase; margin-bottom: 6px; }
+  .ret-card .pct { font-size: 32px; font-weight: 700; color: #a855f7; }
+  .ret-card small { font-size: 12px; color: #555; }
+  .note { font-size: 11px; color: #555; margin-bottom: 28px; }
+  #auth { display: flex; gap: 12px; align-items: center; margin-bottom: 24px; }
+  #auth input { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 8px 12px; color: #e8e8e8; font-size: 14px; flex: 1; }
+  #auth button { background: #a855f7; border: none; border-radius: 8px; padding: 8px 16px; color: #fff; font-size: 14px; cursor: pointer; }
+  #error { color: #f87171; font-size: 13px; margin-bottom: 16px; }
+  #content { display: none; }
+</style>
+</head>
+<body>
+
+<h1>Vortex Analytics</h1>
+
+<div id="auth">
+  <input type="password" id="token" placeholder="Dashboard token" />
+  <button onclick="load()">Open</button>
+</div>
+<div id="error"></div>
+<p class="ts" id="ts"></p>
+
+<div id="content">
+  <div class="grid" id="cards"></div>
+  <h2>By City</h2>
+  <table id="city-table">
+    <tr>
+      <th>City</th>
+      <th>Messages (total/+24h)</th>
+      <th>Human (total/+24h)</th>
+      <th>Opened (total/+24h)</th>
+      <th>Skipped (total/+24h)</th>
+      <th>Correct (total/+24h)</th>
+      <th>Incorrect (total/+24h)</th>
+      <th>Chats (total/+24h)</th>
+    </tr>
+  </table>
+  <h2>Retention (by guessing)</h2>
+  <div class="ret-grid" id="ret-grid"></div>
+  <p class="note">* Session time not available — no session tracking yet.</p>
+</div>
+
+<script>
+const API = 'https://ludnwrrwsvrqlpdfphmy.supabase.co/functions/v1/dashboard';
+const CITIES = ['barcelona', 'berlin', 'london', 'sf'];
+
+function find(arr, city) { return arr.find(r => r.city_id === city) || {}; }
+function n(v) { return Number(v) || 0; }
+
+async function load() {
+  const token = document.getElementById('token').value.trim();
+  if (!token) return;
+  localStorage.setItem('vx_dash_token', token);
+  await fetchData(token);
+}
+
+async function fetchData(token) {
+  document.getElementById('error').textContent = '';
+  try {
+    const res = await fetch(`${API}?token=${encodeURIComponent(token)}`);
+    if (res.status === 401) { document.getElementById('error').textContent = 'Wrong token'; return; }
+    const d = await res.json();
+    render(d);
+    document.getElementById('auth').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    const ts = new Date(d.generated_at).toISOString().replace('T',' ').slice(0,19) + ' UTC';
+    document.getElementById('ts').textContent = `Updated: ${ts} · auto-refresh 60s`;
+    setTimeout(() => fetchData(token), 60000);
+  } catch(e) {
+    document.getElementById('error').textContent = 'Error: ' + e.message;
+  }
+}
+
+function render(d) {
+  const msgs = d.messages, g = d.guesses, sng = d.seen_no_guess, ch = d.chats, ret = d.retention;
+  const reg = d.registrations, au = d.active_users;
+
+  const totalMsgs = msgs.reduce((s,r) => s+n(r.total_messages), 0);
+  const totalHuman = msgs.reduce((s,r) => s+n(r.human_total), 0);
+  const totalMsgs24 = msgs.reduce((s,r) => s+n(r.messages_24h), 0);
+  const totalHuman24 = msgs.reduce((s,r) => s+n(r.human_24h), 0);
+  const totalOpened = g.reduce((s,r) => s+n(r.opened_total), 0);
+  const totalOpened24 = g.reduce((s,r) => s+n(r.opened_24h), 0);
+  const totalCorrect = g.reduce((s,r) => s+n(r.correct_total), 0);
+  const totalSNG = sng.reduce((s,r) => s+n(r.seen_no_guess_total), 0);
+  const totalSNG24 = sng.reduce((s,r) => s+n(r.seen_no_guess_24h), 0);
+  const totalChats = ch.reduce((s,r) => s+n(r.chats_total), 0);
+  const totalChats24 = ch.reduce((s,r) => s+n(r.chats_24h), 0);
+  const acc = totalOpened > 0 ? Math.round(totalCorrect*100/totalOpened) : 0;
+
+  const cards = [
+    ['Registrations', reg.total, `+${reg.last_24h} last 24h`],
+    ['Active 24h', au.active_users_24h, 'guessed or wrote'],
+    ['Messages total', totalMsgs, `+${totalMsgs24} last 24h`],
+    ['From humans', totalHuman, `+${totalHuman24} last 24h`],
+    ['Opened from jelly', totalOpened, `+${totalOpened24} last 24h`],
+    ['Correct guesses', totalCorrect, `${acc}% accuracy`],
+    ['Skipped', totalSNG, `+${totalSNG24} last 24h`],
+    ['Chats', totalChats, `+${totalChats24} last 24h`],
+  ];
+
+  document.getElementById('cards').innerHTML = cards.map(([label, val, sub]) =>
+    `<div class="card"><div class="label">${label}</div><div class="val">${val}</div><div class="sub">${sub}</div></div>`
+  ).join('');
+
+  const table = document.getElementById('city-table');
+  // Remove old rows
+  while (table.rows.length > 1) table.deleteRow(1);
+  for (const city of CITIES) {
+    const m = find(msgs, city), gg = find(g, city), s = find(sng, city), c = find(ch, city);
+    const tr = table.insertRow();
+    tr.innerHTML = `
+      <td><b>${city}</b></td>
+      <td>${n(m.total_messages)} <small>(+${n(m.messages_24h)})</small></td>
+      <td>${n(m.human_total)} <small>(+${n(m.human_24h)})</small></td>
+      <td>${n(gg.opened_total)} <small>(+${n(gg.opened_24h)})</small></td>
+      <td>${n(s.seen_no_guess_total)} <small>(+${n(s.seen_no_guess_24h)})</small></td>
+      <td>${n(gg.correct_total)} <small>(+${n(gg.correct_24h)})</small></td>
+      <td>${n(gg.incorrect_total)} <small>(+${n(gg.incorrect_24h)})</small></td>
+      <td>${n(c.chats_total)} <small>(+${n(c.chats_24h)})</small></td>`;
+  }
+
+  const days = [['D3','Day 3'],['D5','Day 5'],['D7','Day 7']];
+  document.getElementById('ret-grid').innerHTML = days.map(([key, label]) => {
+    const r = ret.find(x => x.day === key) || {};
+    return `<div class="ret-card"><div class="day">${label}</div><div class="pct">${r.retention_pct ?? 0}%</div><small>${r.retained ?? 0} / ${r.cohort_size ?? 0}</small></div>`;
+  }).join('');
+}
+
+// Auto-login if token saved
+const saved = localStorage.getItem('vx_dash_token');
+if (saved) {
+  document.getElementById('token').value = saved;
+  fetchData(saved);
+}
+</script>
+</body>
+</html>
