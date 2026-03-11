@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { allKnownCityAnchors, cities, createSeededRandom } from "./seed-config.mjs";
+import { resolveProjectPath } from "./path-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input
@@ -13,6 +14,8 @@ const outputPath = args.out
 const candidates = readCandidates(inputPath);
 const cityAnchors = allKnownCityAnchors().map((anchor) => anchor.toLowerCase());
 const cityAnchorTokens = buildCityAnchorTokens();
+const pulseContext = loadPulseContext();
+const worldContext = loadWorldContext();
 const rand = createSeededRandom(`validator:${inputPath}`);
 const report = candidates.map((candidate, index) => scoreCandidate(candidate, index, cityAnchors, rand));
 const summary = summarize(report);
@@ -42,6 +45,9 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   const sentences = splitSentences(content);
   const words = contentLower.split(/\s+/).filter(Boolean);
   const anchorsForCity = candidate.cityId ? cityAnchorTokens[candidate.cityId] ?? [] : [];
+  const currentContext = mergeContext(candidate.cityId);
+  const contextOverlap = countOverlap(words, currentContext.tokens);
+  const newsContextOverlap = countOverlap(words, currentContext.newsTokens);
 
   const isMindPost = candidate.lane === "mind_post";
   const signals = {
@@ -57,6 +63,9 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
     mindPostContrast: isMindPost && /\b(but|except|until|though|whereas|despite|instead|rather|unless|yet)\b/i.test(content),
     conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|teure|teuer|chaos|задерж|шум|дорого|турист)/i.test(content),
     tenderness: /(remembered|kind|calm|gentle|helped|shared|smiled|warmer|softer|wink|quietly|still here|still going|small kindness)/i.test(content),
+    freshnessMarker: /(today|tonight|this morning|this afternoon|right now|still|again|otra mañana|hoy|ahora|esta mañana|encara|avui|heute|jetzt|сегодня|сейчас|опять|до сих пор)/i.test(content),
+    liveContext: contextOverlap > 0,
+    newsCycleFit: newsContextOverlap > 0,
   };
 
   const stickySignal = signals.hook || signals.conflict || signals.tenderness || signals.mindPostThesis || signals.mindPostContrast;
@@ -83,6 +92,8 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   if (stagedObservation) issues.push("staged_observation");
   if (atmosphericPoetry) issues.push("atmospheric_poetry");
   if (!stickySignal) issues.push("low_stickiness");
+  if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
+  if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
   if (issues.includes("too_long")) issues.push("blocked_by_length");
 
   const humanSignals = [
@@ -118,11 +129,25 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
       (!looksGeneric(contentLower) ? 1 : 0)
   );
   const ambiguity = clampScore(1 + Math.max(0, 3 - Math.abs(humanSignals - aiSignals)) + (humanSignals > 0 && aiSignals > 0 ? 1 : 0));
+  const freshness = clampScore(
+    1 +
+      (signals.freshnessMarker ? 1 : 0) +
+      Math.min(2, contextOverlap) +
+      (currentContext.themes.some((theme) => contentLower.includes(theme)) ? 1 : 0)
+  );
+  const newsFit = clampScore(
+    1 +
+      Math.min(2, newsContextOverlap) +
+      (currentContext.newsTokens.length > 0 && newsContextOverlap > 0 ? 1 : 0) +
+      (/(strike|delay|rent|housing|tourism|tourists|weather|startup|founder|waymo|muni|tube|bart|metro|election|council|fare|fog|barça|giants)/i.test(content) ? 1 : 0)
+  );
 
   const passed =
     mindprint >= 3 &&
     stickiness >= 3 &&
     ambiguity >= 3 &&
+    (!requiresFreshContext(candidate) || freshness >= 3) &&
+    (!requiresNewsFit(candidate) || newsFit >= 3) &&
     !issues.includes("generic_city_copy") &&
     !issues.includes("essay_like") &&
     !issues.includes("forum_advice_framing") &&
@@ -130,6 +155,8 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
     !issues.includes("crafted_payoff") &&
     !issues.includes("staged_observation") &&
     !issues.includes("atmospheric_poetry") &&
+    !issues.includes("low_freshness") &&
+    !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long");
 
   return {
@@ -138,13 +165,13 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
     topicId: candidate.topicId ?? null,
     readReason: candidate.readReason ?? null,
     content,
-    scores: { mindprint, cityness, stickiness, ambiguity },
+    scores: { mindprint, cityness, stickiness, ambiguity, freshness, news_fit: newsFit },
     signals,
     humanSignals,
     aiSignals,
     issues,
     passed,
-    reviewerBucket: pickReviewerBucket(randFn, passed, ambiguity),
+    reviewerBucket: pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit),
   };
 }
 
@@ -422,10 +449,105 @@ function buildCityAnchorTokens() {
   );
 }
 
-function pickReviewerBucket(randFn, passed, ambiguity) {
+function loadPulseContext() {
+  const pulsePath = resolveProjectPath("content", "city-pulse.latest.json");
+  if (!fs.existsSync(pulsePath)) return {};
+
+  try {
+    const payload = JSON.parse(fs.readFileSync(pulsePath, "utf8"));
+    return Object.fromEntries(
+      (payload.rows ?? []).map((row) => {
+        const driverText = (row.drivers ?? []).map((driver) => driver.excerpt ?? "").join(" ");
+        const newsText = (row.drivers ?? [])
+          .filter((driver) => driver.source_family === "news" || driver.source_family === "world")
+          .map((driver) => driver.excerpt ?? "")
+          .join(" ");
+        const themeText = [row.mood_summary ?? "", ...(row.metadata?.dominant_themes ?? [])].join(" ");
+        return [
+          row.city_id,
+          {
+            themes: (row.metadata?.dominant_themes ?? []).map((theme) => String(theme).toLowerCase()),
+            tokens: extractContextTokens(`${driverText} ${themeText}`),
+            newsTokens: extractContextTokens(newsText),
+          },
+        ];
+      })
+    );
+  } catch {
+    return {};
+  }
+}
+
+function loadWorldContext() {
+  const trendsPath = resolveProjectPath("content", "world-trends.json");
+  if (!fs.existsSync(trendsPath)) return {};
+
+  try {
+    const trends = JSON.parse(fs.readFileSync(trendsPath, "utf8"));
+    const accumulator = {};
+    for (const cityId of ["london", "berlin", "sf", "barcelona"]) {
+      const cityText = trends
+        .map((entry) => [entry.theme, ...(entry.phraseFragments ?? []), entry.bridgeAngles?.[cityId] ?? ""].join(" "))
+        .join(" ");
+      accumulator[cityId] = extractContextTokens(cityText);
+    }
+    return accumulator;
+  } catch {
+    return {};
+  }
+}
+
+function mergeContext(cityId) {
+  const pulse = pulseContext[cityId] ?? { themes: [], tokens: [], newsTokens: [] };
+  const world = worldContext[cityId] ?? [];
+  return {
+    themes: pulse.themes ?? [],
+    tokens: Array.from(new Set([...(pulse.tokens ?? []), ...world])),
+    newsTokens: Array.from(new Set([...(pulse.newsTokens ?? []), ...world])),
+  };
+}
+
+function extractContextTokens(text) {
+  const stop = new Set([
+    "about", "after", "again", "against", "around", "because", "before", "being", "between", "could", "every", "feels",
+    "first", "from", "have", "into", "just", "like", "more", "most", "much", "only", "people", "right", "still",
+    "than", "that", "their", "them", "there", "these", "they", "this", "today", "very", "what", "when", "which",
+    "with", "would", "city", "local", "today", "mixed", "feels", "around",
+  ]);
+
+  return Array.from(
+    new Set(
+      String(text ?? "")
+        .toLowerCase()
+        .split(/[^a-z0-9äöüßáéíóúñç]+/i)
+        .map((token) => token.trim())
+        .filter((token) => token.length >= 4 || /^[a-z]\d$/i.test(token))
+        .filter((token) => !stop.has(token))
+    )
+  );
+}
+
+function countOverlap(words, contextTokens) {
+  if (!contextTokens.length) return 0;
+  const context = new Set(contextTokens);
+  return Array.from(new Set(words.map((word) => word.replace(/[^a-z0-9äöüßáéíóúñç]+/gi, ""))))
+    .filter((word) => word.length >= 4 || /^[a-z]\d$/i.test(word))
+    .filter((word) => context.has(word))
+    .length;
+}
+
+function requiresFreshContext(candidate) {
+  return ["news", "social", "world", "bridge", "signals"].includes(candidate.sourceFamily);
+}
+
+function requiresNewsFit(candidate) {
+  return ["news", "social", "world", "bridge"].includes(candidate.sourceFamily);
+}
+
+function pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit) {
   if (!passed) return "reject";
-  if (ambiguity >= 4 && randFn() > 0.5) return "ship_now";
-  if (ambiguity >= 4) return "strong_candidate";
+  if (ambiguity >= 4 && freshness >= 4 && newsFit >= 3 && randFn() > 0.35) return "ship_now";
+  if (ambiguity >= 4 && freshness >= 3) return "strong_candidate";
   return "needs_human_edit";
 }
 
@@ -449,9 +571,11 @@ function averageScores(report) {
       accumulator.cityness += entry.scores.cityness;
       accumulator.stickiness += entry.scores.stickiness;
       accumulator.ambiguity += entry.scores.ambiguity;
+      accumulator.freshness += entry.scores.freshness ?? 0;
+      accumulator.news_fit += entry.scores.news_fit ?? 0;
       return accumulator;
     },
-    { mindprint: 0, cityness: 0, stickiness: 0, ambiguity: 0 }
+    { mindprint: 0, cityness: 0, stickiness: 0, ambiguity: 0, freshness: 0, news_fit: 0 }
   );
   const divisor = Math.max(report.length, 1);
   return {
@@ -459,6 +583,8 @@ function averageScores(report) {
     cityness: round2(totals.cityness / divisor),
     stickiness: round2(totals.stickiness / divisor),
     ambiguity: round2(totals.ambiguity / divisor),
+    freshness: round2(totals.freshness / divisor),
+    news_fit: round2(totals.news_fit / divisor),
   };
 }
 

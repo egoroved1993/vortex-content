@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
-import { normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, looksSyntheticPlaceholder, normalizeSourceLanguage } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "city-pulse.latest.json");
@@ -14,6 +14,7 @@ const sourceFiles = {
   signals: args["signals-input"] ? path.resolve(process.cwd(), args["signals-input"]) : resolveProjectPath("content", "city-signals.json"),
   news: args["news-input"] ? path.resolve(process.cwd(), args["news-input"]) : resolveProjectPath("content", "news-snippets.json"),
   social: args["social-input"] ? path.resolve(process.cwd(), args["social-input"]) : resolveProjectPath("content", "social-snippets.json"),
+  world: args["world-input"] ? path.resolve(process.cwd(), args["world-input"]) : resolveProjectPath("content", "world-trends.json"),
 };
 
 const items = [
@@ -23,6 +24,7 @@ const items = [
   ...readSignals(sourceFiles.signals),
   ...readNews(sourceFiles.news),
   ...readSocial(sourceFiles.social),
+  ...readWorld(sourceFiles.world),
 ];
 
 const byCity = groupBy(items, (item) => item.cityId);
@@ -49,7 +51,7 @@ function readPublic(filePath) {
     sourceFamily: "public",
     sourceOrigin: entry.sourceOrigin ?? "public",
     language: normalizeSourceLanguage(entry.language ?? entry.sourceLanguage ?? "en"),
-    text: String(entry.body ?? "").trim(),
+    text: cleanText(entry.body ?? ""),
     observedAt: entry.postedAt ?? entry.observedAt ?? "today",
   }));
 }
@@ -60,7 +62,7 @@ function readReview(filePath) {
     sourceFamily: "review",
     sourceOrigin: entry.sourceOrigin ?? "review",
     language: normalizeSourceLanguage(entry.language ?? entry.sourceLanguage ?? "en"),
-    text: [entry.placeType, entry.neighborhood, entry.body].filter(Boolean).join(". "),
+    text: cleanText([entry.placeType, entry.neighborhood, entry.body].filter(Boolean).join(". ")),
     observedAt: entry.postedAt ?? entry.observedAt ?? "today",
   }));
 }
@@ -71,7 +73,7 @@ function readForum(filePath) {
     sourceFamily: "forum",
     sourceOrigin: entry.sourceOrigin ?? "forum",
     language: normalizeSourceLanguage(entry.language ?? entry.sourceLanguage ?? "en"),
-    text: [entry.threadTitle, entry.neighborhood, entry.body].filter(Boolean).join(". "),
+    text: cleanText([entry.threadTitle, entry.neighborhood, entry.body].filter(Boolean).join(". ")),
     observedAt: entry.postedAt ?? entry.observedAt ?? "today",
   }));
 }
@@ -82,11 +84,13 @@ function readSignals(filePath) {
     sourceFamily: "signals",
     sourceOrigin: entry.sourceOrigin ?? "signals",
     language: normalizeSourceLanguage(entry.language ?? entry.sourceLanguage ?? "en"),
-    text: [entry.weather, entry.transit, entry.socialPattern, entry.localEvent, entry.pressurePoint, entry.softDetail]
-      .filter(Boolean)
-      .join(". "),
+    text: cleanText(
+      [entry.weather, entry.transit, entry.socialPattern, entry.localEvent, entry.pressurePoint, entry.softDetail]
+        .filter(Boolean)
+        .join(". ")
+    ),
     observedAt: entry.observedAt ?? "today",
-  }));
+  })).filter((entry) => entry.text.length > 0 && !looksSyntheticPlaceholder(entry.text));
 }
 
 function readNews(filePath) {
@@ -95,9 +99,9 @@ function readNews(filePath) {
     sourceFamily: "news",
     sourceOrigin: entry.sourceOrigin ?? "news",
     language: normalizeSourceLanguage(entry.language ?? entry.sourceLanguage ?? "en"),
-    text: [entry.headline, entry.body].filter(Boolean).join(". "),
+    text: buildNewsText(entry),
     observedAt: entry.publishedAt ?? "today",
-  }));
+  })).filter((entry) => entry.text.length > 0);
 }
 
 function readSocial(filePath) {
@@ -106,9 +110,26 @@ function readSocial(filePath) {
     sourceFamily: "social",
     sourceOrigin: entry.sourceOrigin ?? "social",
     language: normalizeSourceLanguage(entry.language ?? entry.sourceLanguage ?? "en"),
-    text: String(entry.body ?? "").trim(),
+    text: cleanText(entry.body ?? ""),
     observedAt: entry.postedAt ?? "today",
-  }));
+  })).filter((entry) => entry.text.length > 0 && !looksSyntheticPlaceholder(entry.text));
+}
+
+function readWorld(filePath) {
+  return safeReadJson(filePath).flatMap((entry) =>
+    ["london", "berlin", "sf", "barcelona"].flatMap((cityId) => {
+      const bridgeAngle = cleanText(entry.bridgeAngles?.[cityId] ?? "");
+      if (!bridgeAngle) return [];
+      return [{
+        cityId,
+        sourceFamily: "world",
+        sourceOrigin: entry.sourceOrigin ?? "world",
+        language: normalizeSourceLanguage(entry.language ?? "en"),
+        text: cleanText([entry.theme, ...(entry.phraseFragments ?? []).slice(0, 2), bridgeAngle].filter(Boolean).join(". ")),
+        observedAt: entry.capturedAt ?? "today",
+      }];
+    })
+  );
 }
 
 function buildPulseRow(cityId, items, snapshotTime) {
@@ -116,20 +137,22 @@ function buildPulseRow(cityId, items, snapshotTime) {
     .map((item) => ({
       ...item,
       sourceWeight: sourceWeight(item.sourceFamily),
+      recencyWeight: scoreRecency(item.observedAt, snapshotTime),
       valence: scoreValence(item.text),
       themes: detectThemes(item.text),
     }))
     .map((item) => ({
       ...item,
-      weightedValence: item.valence * item.sourceWeight,
+      totalWeight: round3(item.sourceWeight * item.recencyWeight),
+      weightedValence: item.valence * item.sourceWeight * item.recencyWeight,
     }));
 
-  const totalWeight = scored.reduce((sum, item) => sum + item.sourceWeight, 0) || 1;
+  const totalWeight = scored.reduce((sum, item) => sum + item.totalWeight, 0) || 1;
   const average = scored.reduce((sum, item) => sum + item.weightedValence, 0) / totalWeight;
   const moodScore = clamp(0.5 + average * 0.34, 0.05, 0.95);
   const moodLabel = labelForMood(moodScore);
   const dominantSentiment = moodScore < 0.42 ? "negative" : moodScore > 0.58 ? "positive" : "neutral";
-  const themeCounts = countBy(scored.flatMap((item) => item.themes), (theme) => theme);
+  const themeCounts = countWeighted(scored.flatMap((item) => item.themes.map((theme) => ({ theme, weight: item.totalWeight }))), (entry) => entry.theme, (entry) => entry.weight);
   const topThemes = Object.entries(themeCounts)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 3)
@@ -143,15 +166,17 @@ function buildPulseRow(cityId, items, snapshotTime) {
       source_origin: item.sourceOrigin,
       language: item.language,
       valence: round3(item.valence),
+      recency_weight: round3(item.recencyWeight),
       excerpt: item.text.slice(0, 180),
     }));
+  const freshnessScore = round3(scored.reduce((sum, item) => sum + item.recencyWeight, 0) / Math.max(scored.length, 1));
 
   return {
     city_id: cityId,
     captured_at: snapshotTime,
     mood_score: round3(moodScore),
     mood_label: moodLabel,
-    mood_summary: buildMoodSummary(moodScore, topThemes),
+    mood_summary: buildMoodSummary(moodScore, topThemes, freshnessScore),
     dominant_sentiment: dominantSentiment,
     source_counts: countBy(scored, (item) => item.sourceFamily),
     languages: Array.from(new Set(scored.map((item) => item.language))).sort(),
@@ -160,6 +185,7 @@ function buildPulseRow(cityId, items, snapshotTime) {
       source_item_count: scored.length,
       average_valence: round3(average),
       dominant_themes: topThemes,
+      freshness_score: freshnessScore,
     },
   };
 }
@@ -167,17 +193,19 @@ function buildPulseRow(cityId, items, snapshotTime) {
 function sourceWeight(sourceFamily) {
   switch (sourceFamily) {
     case "social":
-      return 1.05;
+      return 1.12;
     case "public":
       return 1.0;
     case "forum":
       return 0.95;
     case "review":
+      return 0.84;
+    case "world":
+      return 0.9;
+    case "news":
       return 0.88;
     case "signals":
-      return 0.82;
-    case "news":
-      return 0.78;
+      return 0.68;
     default:
       return 0.75;
   }
@@ -217,7 +245,7 @@ function detectThemes(text) {
   return themes.length > 0 ? themes : ["general"];
 }
 
-function buildMoodSummary(score, themes) {
+function buildMoodSummary(score, themes, freshnessScore) {
   const moodLead =
     score < 0.28 ? "The city feels bruised." :
     score < 0.42 ? "The city feels strained." :
@@ -225,7 +253,8 @@ function buildMoodSummary(score, themes) {
     score < 0.72 ? "The city feels open." :
     "The city feels buoyant.";
   const themeTail = themes.length > 0 ? ` Right now the pressure is mostly around ${themes.join(", ")}.` : "";
-  return `${moodLead}${themeTail}`;
+  const freshnessTail = freshnessScore >= 0.92 ? " The signal is very current." : freshnessScore >= 0.8 ? " The signal still feels live today." : "";
+  return `${moodLead}${themeTail}${freshnessTail}`;
 }
 
 function labelForMood(score) {
@@ -251,6 +280,60 @@ function safeReadJson(filePath) {
   if (!fs.existsSync(filePath)) return [];
   const raw = fs.readFileSync(filePath, "utf8").trim();
   return raw ? JSON.parse(raw) : [];
+}
+
+function buildNewsText(entry) {
+  const headline = cleanText(entry.headline ?? "");
+  const publisher = cleanText(entry.publisher ?? "");
+  let body = cleanText(entry.body ?? "");
+  if (publisher) {
+    const publisherPattern = new RegExp(`\\b${escapeRegExp(publisher)}\\b`, "ig");
+    body = body.replace(publisherPattern, " ").trim();
+  }
+  const normalizedHeadline = normalizeComparable(headline);
+  const normalizedBody = normalizeComparable(body);
+  if (!body || !normalizedBody || normalizedBody === normalizedHeadline || normalizedBody.startsWith(normalizedHeadline)) {
+    body = "";
+  }
+  return [headline, body].filter(Boolean).join(". ").trim();
+}
+
+function normalizeComparable(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9äöüßáéíóúñç ]+/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function scoreRecency(observedAt, snapshotTime) {
+  const raw = String(observedAt ?? "").trim().toLowerCase();
+  if (!raw) return 0.68;
+  if (raw.includes("today") || raw.includes("this morning") || raw.includes("this afternoon") || raw.includes("tonight")) return 1.04;
+  if (raw.includes("yesterday")) return 0.82;
+
+  const observed = Date.parse(observedAt);
+  const captured = Date.parse(snapshotTime);
+  if (Number.isNaN(observed) || Number.isNaN(captured)) return 0.72;
+
+  const hours = Math.max(0, (captured - observed) / (1000 * 60 * 60));
+  if (hours <= 8) return 1.08;
+  if (hours <= 24) return 1.0;
+  if (hours <= 48) return 0.88;
+  if (hours <= 96) return 0.72;
+  return 0.56;
+}
+
+function countWeighted(items, getKey, getWeight) {
+  return items.reduce((accumulator, item) => {
+    const key = getKey(item);
+    accumulator[key] = round3((accumulator[key] ?? 0) + getWeight(item));
+    return accumulator;
+  }, {});
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function groupBy(items, getKey) {

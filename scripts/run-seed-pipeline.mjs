@@ -29,6 +29,18 @@ buildMixedJobsCorpus({
   sourceConfig,
 });
 
+runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
+  "--out",
+  cityPulsePath,
+  ...(args["public-input"] ? ["--public-input", path.resolve(process.cwd(), args["public-input"])] : []),
+  ...(args["review-input"] ? ["--review-input", path.resolve(process.cwd(), args["review-input"])] : []),
+  ...(args["forum-input"] ? ["--forum-input", path.resolve(process.cwd(), args["forum-input"])] : []),
+  ...(args["signals-input"] ? ["--signals-input", path.resolve(process.cwd(), args["signals-input"])] : []),
+  ...(args["news-input"] ? ["--news-input", path.resolve(process.cwd(), args["news-input"])] : []),
+  ...(args["social-input"] ? ["--social-input", path.resolve(process.cwd(), args["social-input"])] : []),
+  ...(args["world-input"] ? ["--world-input", path.resolve(process.cwd(), args["world-input"])] : []),
+]);
+
 runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   "--input",
   jobsPath,
@@ -58,17 +70,6 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   reportPath,
   "--out",
   payloadPath,
-]);
-
-runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
-  "--out",
-  cityPulsePath,
-  ...(args["public-input"] ? ["--public-input", path.resolve(process.cwd(), args["public-input"])] : []),
-  ...(args["review-input"] ? ["--review-input", path.resolve(process.cwd(), args["review-input"])] : []),
-  ...(args["forum-input"] ? ["--forum-input", path.resolve(process.cwd(), args["forum-input"])] : []),
-  ...(args["signals-input"] ? ["--signals-input", path.resolve(process.cwd(), args["signals-input"])] : []),
-  ...(args["news-input"] ? ["--news-input", path.resolve(process.cwd(), args["news-input"])] : []),
-  ...(args["social-input"] ? ["--social-input", path.resolve(process.cwd(), args["social-input"])] : []),
 ]);
 
 if (upload) {
@@ -295,15 +296,15 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
-    launch: 0.2,
+    launch: 0.08,
     public: 0.18,
-    review: 0.15,
-    forum: 0.12,
-    signals: 0.09,
-    news: 0.08,
-    social: 0.08,
+    review: 0.12,
+    forum: 0.14,
+    signals: 0.05,
+    news: 0.16,
+    social: 0.15,
     world: 0.05,
-    bridge: 0.05,
+    bridge: 0.07,
   };
   const counts = {};
   let remaining = Number(totalCount);

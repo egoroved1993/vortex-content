@@ -78,6 +78,15 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-reddit-comments.mjs --per-city 80 --out content/public-human-comments.json
 
+      - name: Refresh city news
+        continue-on-error: true
+        run: node scripts/fetch-city-news.mjs --out content/news-snippets.json
+
+      - name: Refresh city social from X
+        if: env.XAI_API_KEY != ''
+        continue-on-error: true
+        run: node scripts/refresh-social-snippets.mjs --out content/social-snippets.json
+
       - name: Refresh world trends from X
         if: env.XAI_API_KEY != ''
         continue-on-error: true

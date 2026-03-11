@@ -13,7 +13,7 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, looksSyntheticPlaceholder, normalizeSourceLanguage } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "social-snippets.json");
@@ -25,7 +25,8 @@ const rand = createSeededRandom(seed);
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
   .slice(0, limit)
   .map(normalizeSnippet)
-  .filter((snippet) => snippet.body.length > 0);
+  .filter((snippet) => snippet.body.length > 0)
+  .filter((snippet) => !looksSyntheticPlaceholder(snippet.body));
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);

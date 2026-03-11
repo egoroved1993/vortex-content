@@ -152,6 +152,9 @@ async function fetchWithRetry(fn, maxRetries = 5) {
 function buildSystemPrompt(job, providerHint = null) {
   const pulse = cityPulseMap[job.cityId];
   let base = "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
+  if (["news", "social", "world", "bridge"].includes(job.sourceFamily)) {
+    base += "\n\nThis message must feel metabolized from today's context in that city, not like timeless city vibe copy.";
+  }
   if (pulse) {
     const themes = pulse.themes.join(", ");
     base += `\n\nCity context for ${job.cityId} right now: mood is ${pulse.moodLabel}. Dominant themes in the city today: ${themes}.`;
@@ -289,11 +292,19 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
   return {
     id: job.id,
     cityId: job.cityId,
+    cityName: job.cityName ?? null,
     topicId: job.topicId,
     readReason: job.readReason,
     lane: job.lane,
     formatId: job.formatId,
     gameSource: job.gameSource,
+    sourceFamily: job.sourceFamily ?? null,
+    sourceOrigin: job.rawSnippetSourceOrigin ?? null,
+    rawSnippetLanguage: job.rawSnippetLanguage ?? null,
+    rawSnippetPlatform: job.rawSnippetPlatform ?? null,
+    rawSnippetPostedAt: job.rawSnippetPostedAt ?? job.rawSnippetPublishedAt ?? null,
+    cityAnchor: job.cityAnchor ?? null,
+    transformationMode: job.transformationMode ?? null,
     sourceProfile: job.sourceProfile,
     tone: job.tone,
     content: String(parsed.content ?? "").trim(),

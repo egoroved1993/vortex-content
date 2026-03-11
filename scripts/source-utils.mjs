@@ -19,9 +19,9 @@ export const CITY_SOURCES = [
   },
   {
     id: "barcelona",
-    subs: ["barcelona", "expats", "digitalnomad", "solotravel"],
-    keyword: null,
-    cityWords: ["barcelona", "barri gòtic", "gràcia", "eixample", "el raval", "poblenou", "barcelonès", "sants", "montjuïc", "sagrada", "passeig de gràcia", "rambla", "platja", "badalona", "sitges", "catalan", "català", "rodalies", "fgc", "tmb", "l'hospitalet"],
+    subs: ["barcelona", "barcelonaexpats", "SpainExpats", "digitalnomad"],
+    keyword: "barcelona",
+    cityWords: ["barcelona", "bcn", "gothic quarter", "barri gòtic", "gràcia", "gracia", "eixample", "el raval", "raval", "poblenou", "sants", "montjuïc", "montjuic", "sagrada", "passeig de gràcia", "rambla", "barceloneta", "el born", "poble sec", "lesseps", "rodalies", "fgc", "tmb", "boqueria", "parc güell", "guell", "tibidabo", "catalan", "català"],
   },
 ];
 
@@ -82,6 +82,13 @@ const DIRECT_MINDPOST_MARKERS = [
 
 export function cleanText(text) {
   return String(text ?? "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
     .replace(/https?:\/\/\S+/g, "")
     .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
     .replace(/\]\([^)]*\)/g, "")
@@ -92,6 +99,18 @@ export function cleanText(text) {
     .replace(/\n{3,}/g, "\n\n")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+export function looksSyntheticPlaceholder(text) {
+  const lower = String(text ?? "").trim().toLowerCase();
+  if (!lower) return false;
+  return (
+    /mock (social post|forum observation|city signal)/.test(lower) ||
+    lower.includes("short. lowercase. something specific.") ||
+    lower.includes("something specific a local would say.") ||
+    lower.includes("typical") && lower.includes("weather doing something unpredictable") ||
+    lower.includes("the thing everyone is quietly annoyed about but not saying")
+  );
 }
 
 export function normalizeSourceLanguage(value, fallback = "en") {

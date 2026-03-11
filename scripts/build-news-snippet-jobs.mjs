@@ -121,11 +121,23 @@ console.log(
 );
 
 function normalizeSnippet(raw) {
+  const headline = cleanText(raw.headline ?? raw.title ?? "");
+  const publisher = cleanText(raw.publisher ?? raw.outlet ?? "");
+  let body = cleanText(raw.body ?? raw.summary ?? raw.snippet ?? "");
+  if (publisher) {
+    body = body.replace(new RegExp(`\\b${escapeRegExp(publisher)}\\b`, "ig"), " ").trim();
+  }
+  const headlineComparable = comparable(headline);
+  const bodyComparable = comparable(body);
+  if (!body || !bodyComparable || bodyComparable === headlineComparable || bodyComparable.startsWith(headlineComparable)) {
+    body = "";
+  }
+
   return {
     ...raw,
-    headline: cleanText(raw.headline ?? raw.title ?? ""),
-    body: cleanText(raw.body ?? raw.summary ?? raw.snippet ?? ""),
-    publisher: cleanText(raw.publisher ?? raw.outlet ?? ""),
+    headline,
+    body,
+    publisher,
     sourceOrigin: cleanText(raw.sourceOrigin ?? "news_snippet"),
     publishedAt: cleanText(raw.publishedAt ?? raw.observedAt ?? ""),
     language: normalizeSourceLanguage(raw.language ?? raw.sourceLanguage ?? "en"),
@@ -245,6 +257,18 @@ function countBy(items, getKey) {
     accumulator[key] = (accumulator[key] ?? 0) + 1;
     return accumulator;
   }, {});
+}
+
+function comparable(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9äöüßáéíóúñç ]+/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function parseArgs(argv) {

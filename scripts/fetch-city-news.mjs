@@ -128,10 +128,10 @@ function parseRssItems(xml) {
   while ((match = itemPattern.exec(xml)) !== null) {
     const block = match[1];
     const title = extractTag(block, "title");
-    const description = stripHtml(extractTag(block, "description") ?? "");
+    const description = normalizeDescription(title, extractTag(block, "description") ?? "", extractTag(block, "source") ?? "");
     const pubDate = extractTag(block, "pubDate");
     const source = extractTag(block, "source");
-    if (title) {
+    if (title && !looksLowSignalHeadline(title)) {
       items.push({ title: stripHtml(title), description, pubDate, source });
     }
   }
@@ -154,6 +154,43 @@ function stripHtml(text) {
     .replace(/&#39;/g, "'")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function normalizeDescription(title, description, source) {
+  const cleanedTitle = stripHtml(title ?? "");
+  const cleanedSource = stripHtml(source ?? "");
+  let cleanedDescription = stripHtml(description ?? "");
+  if (cleanedSource) {
+    const sourcePattern = new RegExp(`\\b${escapeRegExp(cleanedSource)}\\b`, "ig");
+    cleanedDescription = cleanedDescription.replace(sourcePattern, " ").trim();
+  }
+  const comparableTitle = comparable(cleanedTitle);
+  const comparableDescription = comparable(cleanedDescription);
+  if (!comparableDescription || comparableDescription === comparableTitle || comparableDescription.startsWith(comparableTitle)) {
+    return "";
+  }
+  return cleanedDescription;
+}
+
+function looksLowSignalHeadline(title) {
+  const lower = stripHtml(title ?? "").toLowerCase();
+  return [
+    "news, views, pictures, video",
+    "interactive map:",
+    "who controls my local council",
+  ].some((fragment) => lower.includes(fragment));
+}
+
+function comparable(value) {
+  return stripHtml(value ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9äöüßáéíóúñç ]+/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function sleep(ms) {

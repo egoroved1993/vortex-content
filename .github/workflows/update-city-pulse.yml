@@ -34,8 +34,25 @@ jobs:
       - name: Fetch city news
         run: node scripts/fetch-city-news.mjs
 
+      - name: Refresh city social from X
+        if: ${{ secrets.XAI_API_KEY != '' }}
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: node scripts/refresh-social-snippets.mjs
+
+      - name: Refresh world trends from X
+        if: ${{ secrets.XAI_API_KEY != '' }}
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: node scripts/refresh-world-trends.mjs
+
+      - name: Refresh static corpora
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/refresh-static-corpora.mjs --skip-social
+
       - name: Build city pulse
-        run: node scripts/build-city-pulse.mjs
+        run: node scripts/build-city-pulse.mjs --world-input content/world-trends.json
 
       - name: Show pulse summary
         run: |
@@ -63,7 +80,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/city-pulse.latest.json content/news-snippets.json
+          git add content/city-pulse.latest.json content/news-snippets.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
