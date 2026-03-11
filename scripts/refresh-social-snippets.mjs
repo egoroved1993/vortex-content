@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
-import { cleanText, normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, looksSyntheticPlaceholder, normalizeSourceLanguage } from "./source-utils.mjs";
 
 const CITY_CONFIGS = [
   {
@@ -244,6 +244,7 @@ function mergeByCity(existing, fresh, keepPerCity) {
     const cityId = item.cityId;
     const body = cleanText(item.body ?? "");
     if (!cityId || !body) continue;
+    if (looksSyntheticPlaceholder(body)) continue;
     const key = `${cityId}:${body.toLowerCase()}`;
     if (seen.has(key)) continue;
     if ((countByCity[cityId] ?? 0) >= keepPerCity) continue;

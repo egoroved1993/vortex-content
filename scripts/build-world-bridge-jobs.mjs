@@ -197,6 +197,7 @@ function buildBridgePrompt(job, trend, bridgeAngle) {
     "Do not explain the trend or summarize discourse.",
     "Focus on one city-sized moment that silently contains the world trend.",
     "Do not sound literary or like an essay about the times.",
+    "No rhetorical questions, no neat closing sentence, no mini-essay polish.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
 }

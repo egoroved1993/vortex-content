@@ -84,7 +84,36 @@ function shouldInclude(candidate, review, minAllowedScore, allowedBuckets) {
     return { include: false, reason: `reviewer_bucket:${review.reviewerBucket}` };
   }
 
+  const blockedIssues = new Set([
+    "essay_like",
+    "overpolished",
+    "too_long",
+    "blocked_by_length",
+    "generic_city_copy",
+    "instruction_leakage",
+    "article_voice",
+    "detached_from_news_cycle",
+    "low_freshness",
+  ]);
+  const issueHit = (review.issues ?? []).find((issue) => blockedIssues.has(issue));
+  if (issueHit) {
+    return { include: false, reason: `blocked_issue:${issueHit}` };
+  }
+
+  if (requiresLiveContext(candidate.sourceFamily)) {
+    if ((scores.freshness ?? 0) < minAllowedScore) {
+      return { include: false, reason: "freshness_below_threshold" };
+    }
+    if ((scores.news_fit ?? 0) < minAllowedScore) {
+      return { include: false, reason: "news_fit_below_threshold" };
+    }
+  }
+
   return { include: true, reason: "approved" };
+}
+
+function requiresLiveContext(sourceFamily) {
+  return ["news", "social", "world", "bridge", "signals"].includes(sourceFamily);
 }
 
 function normalizeDetectedLanguage(value) {

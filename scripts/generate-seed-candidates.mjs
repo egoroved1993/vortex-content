@@ -155,6 +155,27 @@ function buildSystemPrompt(job, providerHint = null) {
   if (["news", "social", "world", "bridge"].includes(job.sourceFamily)) {
     base += "\n\nThis message must feel metabolized from today's context in that city, not like timeless city vibe copy.";
   }
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    base +=
+      "\n\nFor this source family you are a minimally invasive editor, not an author." +
+      "\nPreserve 85-100% of the source wording whenever possible." +
+      "\nPrefer zero edits beyond removing platform scaffolding, obvious filler, or one redundant phrase." +
+      "\nDo not add a new question, metaphor, thesis, punchline, summary ending, or second thought." +
+      "\nIf you introduce a sentence that is not already implied by the source, you failed.";
+  } else if (job.sourceFamily === "news") {
+    base +=
+      "\n\nFor news snippets, convert article pressure into one resident-sized consequence." +
+      "\nDo not sound like a reporter, newsletter, explainer, or headline writer." +
+      "\nNo rhetorical questions. No moral. No polished landing sentence.";
+  } else if (["world", "bridge", "signals"].includes(job.sourceFamily)) {
+    base +=
+      "\n\nUse world/signal context only as pressure on routine, friction, or one overheard-feeling moment." +
+      "\nDo not let the text drift into commentary, discourse summary, or trend explanation.";
+  } else if (job.sourceFamily === "launch") {
+    base +=
+      "\n\nLaunch seeds are the most synthetic family, so resist polished writing hard." +
+      "\nNo rhetorical questions, no clever final sentence, no mini-essay cadence.";
+  }
   if (pulse) {
     const themes = pulse.themes.join(", ");
     base += `\n\nCity context for ${job.cityId} right now: mood is ${pulse.moodLabel}. Dominant themes in the city today: ${themes}.`;
@@ -177,6 +198,7 @@ function buildSystemPrompt(job, providerHint = null) {
 async function generateWithOpenAI(job, modelName) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("OPENAI_API_KEY is required for provider=openai");
+  const profile = generationProfile(job, "openai");
 
   return fetchWithRetry(async () => {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -187,8 +209,8 @@ async function generateWithOpenAI(job, modelName) {
       },
       body: JSON.stringify({
         model: modelName,
-        temperature: 0.9,
-        max_tokens: 350,
+        temperature: profile.temperature,
+        max_tokens: profile.maxTokens,
         response_format: { type: "json_object" },
         messages: [
           {
@@ -215,6 +237,7 @@ async function generateWithOpenAI(job, modelName) {
 async function generateWithXAI(job, modelName) {
   const apiKey = process.env.XAI_API_KEY;
   if (!apiKey) throw new Error("XAI_API_KEY is required for provider=xai");
+  const profile = generationProfile(job, "xai");
 
   return fetchWithRetry(async () => {
     const response = await fetch("https://api.x.ai/v1/chat/completions", {
@@ -225,8 +248,8 @@ async function generateWithXAI(job, modelName) {
       },
       body: JSON.stringify({
         model: modelName,
-        temperature: 0.95,
-        max_tokens: 350,
+        temperature: profile.temperature,
+        max_tokens: profile.maxTokens,
         messages: [
           {
             role: "system",
@@ -253,6 +276,7 @@ async function generateWithXAI(job, modelName) {
 async function generateWithAnthropic(job, modelName) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY is required for provider=anthropic");
+  const profile = generationProfile(job, "anthropic");
 
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
@@ -263,8 +287,8 @@ async function generateWithAnthropic(job, modelName) {
     },
     body: JSON.stringify({
       model: modelName,
-      max_tokens: 350,
-      temperature: 0.9,
+      max_tokens: profile.maxTokens,
+      temperature: profile.temperature,
       system: buildSystemPrompt(job, "anthropic"),
       messages: [{ role: "user", content: job.prompt }],
     }),
@@ -289,6 +313,8 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     parsed = { content: rawText };
   }
 
+  const sanitizedContent = sanitizeGeneratedContent(job, parsed.content);
+
   return {
     id: job.id,
     cityId: job.cityId,
@@ -307,12 +333,15 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     transformationMode: job.transformationMode ?? null,
     sourceProfile: job.sourceProfile,
     tone: job.tone,
-    content: String(parsed.content ?? "").trim(),
-    why_human: String(parsed.why_human ?? "").trim(),
-    why_ai: String(parsed.why_ai ?? "").trim(),
-    read_value_hook: String(parsed.read_value_hook ?? "").trim(),
+    content: sanitizedContent,
+    why_human: sanitizeReasonField(parsed.why_human, "specific local detail and emotional self-exposure"),
+    why_ai: sanitizeReasonField(parsed.why_ai, "compressed structure and slightly too clean framing"),
+    read_value_hook: sanitizeReasonField(
+      parsed.read_value_hook,
+      job.lane === "mind_post" ? "clear angle with social diagnosis" : "lived scene with one sticky detail"
+    ),
     sentiment: normalizeSentiment(parsed.sentiment),
-    detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? "en"),
+    detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? job.rawSnippetLanguage ?? "en"),
     rawModelResponse: rawText,
     usage,
     systemFingerprint,
@@ -321,15 +350,8 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
 
 function buildMockCandidate(job, index) {
   const rand = createSeededRandom(`mock:${job.id}:${index}`);
-  const openings = job.lane === "mind_post" ? mindPostOpenings : microMomentOpenings;
-  const first = openings[Math.floor(rand() * openings.length)];
-  const middle = [
-    job.cityAnchor,
-    job.angle.replace(/^The speaker /, "").replace(/\.$/, "").toLowerCase(),
-    job.moment.replace(/^The speaker /, "").replace(/\.$/, "").toLowerCase(),
-  ];
-  const ending = mockEndings[Math.floor(rand() * mockEndings.length)];
-  const content = `${first} ${composeMiddle(middle, rand)} ${ending}`.replace(/\s+/g, " ").trim();
+  const base = buildFallbackContent(job);
+  const content = addSmallMockVariation(base, job, rand);
 
   return {
     ...job,
@@ -344,6 +366,389 @@ function buildMockCandidate(job, index) {
     generatedAt: new Date().toISOString(),
     usage: null,
   };
+}
+
+function sanitizeGeneratedContent(job, value) {
+  const cleaned = cleanGeneratedText(value);
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    return sanitizeMinimalSalvageContent(job, cleaned);
+  }
+  if (job.sourceFamily === "news") {
+    return sanitizeNewsContent(job, cleaned);
+  }
+
+  if (!cleaned || looksPromptLeaked(cleaned)) return buildFallbackContent(job);
+
+  const bounded = enforceCharacterLimit(
+    stripSyntheticLanding(cleanGeneratedText(cleaned)),
+    job.lane === "mind_post" ? 220 : 180
+  );
+  if (bounded.length >= 45 && !looksTooComposed(bounded)) return bounded;
+
+  return buildFallbackContent(job);
+}
+
+function sanitizeReasonField(value, fallback) {
+  const cleaned = cleanGeneratedText(value);
+  if (!cleaned || looksPromptLeaked(cleaned)) return fallback;
+  return enforceCharacterLimit(cleaned, 120);
+}
+
+function buildFallbackContent(job) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const sourceText = cleanSourceFallback(job);
+
+  if (sourceText) {
+    return enforceCharacterLimit(stripSyntheticLanding(sourceText), maxChars);
+  }
+
+  const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+  if (job.lane === "mind_post") {
+    return enforceCharacterLimit(
+      `my current theory is ${anchor} tells you more about this city than the people who keep explaining it.`,
+      maxChars
+    );
+  }
+
+  return enforceCharacterLimit(
+    `saw this today near ${anchor} and everyone around it looked like they were already halfway through the same argument.`,
+    maxChars
+  );
+}
+
+function cleanSourceFallback(job) {
+  const rawParts = [];
+
+  if (job.sourceFamily === "news") {
+    rawParts.push(job.rawSnippetBody ?? "");
+    rawParts.push(job.rawSnippet ?? "");
+    rawParts.push(job.rawSnippetHeadline ?? "");
+  } else {
+    rawParts.push(job.rawSnippet ?? "");
+    rawParts.push(job.rawSnippetHeadline ?? "");
+  }
+
+  const combined = rawParts
+    .map((part) => cleanGeneratedText(part))
+    .find((part) => part.length >= 20);
+
+  if (!combined) return "";
+
+  const withoutLead = stripInstructionyLead(combined, job);
+  const withoutHeadline = job.sourceFamily === "news"
+    ? stripNewsHeadlinePrefix(withoutLead, job.rawSnippetHeadline)
+    : withoutLead;
+
+  return withoutHeadline;
+}
+
+function sanitizeMinimalSalvageContent(job, candidateText) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
+  if (!candidateText || looksPromptLeaked(candidateText)) {
+    return sourceCandidate || buildFallbackContent(job);
+  }
+
+  const modelCandidate = sanitizeSourceLikeText(candidateText, maxChars);
+  if (!sourceCandidate) {
+    return modelCandidate || buildFallbackContent(job);
+  }
+  if (!modelCandidate) return sourceCandidate;
+  if (!hasEnoughSourceOverlap(modelCandidate, sourceCandidate)) return sourceCandidate;
+  if (looksTooComposed(modelCandidate)) return sourceCandidate;
+  if (modelCandidate.length > sourceCandidate.length + 24) return sourceCandidate;
+  if (countSentences(modelCandidate) > Math.max(2, countSentences(sourceCandidate))) return sourceCandidate;
+
+  return modelCandidate.length + 8 < sourceCandidate.length ? modelCandidate : sourceCandidate;
+}
+
+function sanitizeNewsContent(job, candidateText) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
+  if (!candidateText || looksPromptLeaked(candidateText)) {
+    return buildNewsFallbackContent(job, sourceCandidate);
+  }
+
+  const bounded = sanitizeSourceLikeText(candidateText, maxChars);
+  if (!bounded) return buildNewsFallbackContent(job, sourceCandidate);
+  if (looksArticleish(bounded) || looksTooComposed(bounded)) return buildNewsFallbackContent(job, sourceCandidate);
+  if (!hasHumanTrace(bounded) && !hasEnoughSourceOverlap(bounded, sourceCandidate)) {
+    return buildNewsFallbackContent(job, sourceCandidate);
+  }
+
+  return bounded;
+}
+
+function sanitizeSourceLikeText(text, maxChars) {
+  const cleaned = stripSyntheticLanding(cleanGeneratedText(text));
+  if (!cleaned) return "";
+  const bounded = enforceCharacterLimit(cleaned, maxChars);
+  return bounded.length >= 24 ? bounded : "";
+}
+
+function buildNewsFallbackContent(job, sourceCandidate) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const headline = cleanGeneratedText(job.rawSnippetHeadline ?? "");
+  const body = cleanGeneratedText(job.rawSnippetBody ?? job.rawSnippet ?? "");
+  const source = sourceCandidate || sanitizeSourceLikeText(body || headline, maxChars);
+  const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+  const lower = `${headline} ${body}`.toLowerCase();
+
+  if (/\b(strike|delays?|closure|cancelled|service|platform|tube|muni|bart|u-bahn|ringbahn|tram|metro)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `another ${anchor} morning where the platform already looks defeated before the delay notice finishes loading.`,
+      maxChars
+    );
+  }
+  if (/\b(rent|housing|homes|build-to-rent|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `every housing story here eventually lands in the same place: you look around ${anchor} and start recalculating who this city is still for.`,
+      maxChars
+    );
+  }
+  if (/\b(touris|visitor|hotel|cruise|suitcase)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `the tourism story never stays abstract once you're trying to get past another suitcase jam near ${anchor}.`,
+      maxChars
+    );
+  }
+  if (/\b(weather|rain|flood|fog|heat|cold|storm)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `weather here just means the route around ${anchor} gets more annoying than it needed to be and everyone acts like that is normal.`,
+      maxChars
+    );
+  }
+  if (source && hasHumanTrace(source) && !looksArticleish(source)) {
+    return source;
+  }
+  if (source) {
+    return enforceCharacterLimit(source, maxChars);
+  }
+
+  return buildFallbackContent(job);
+}
+
+function cleanGeneratedText(value) {
+  return String(value ?? "")
+    .replace(/^["'`]+|["'`]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function looksPromptLeaked(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  if (!lower) return false;
+
+  const directPatterns = [
+    "preserve the original",
+    "turn the review into",
+    "return only json",
+    "raw source snippet",
+    "raw review snippet",
+    "raw forum snippet",
+    "raw social post",
+    "source lane:",
+    "game source label:",
+    "source profile target:",
+    "texture target:",
+    "tone target:",
+    "city anchor:",
+    "default move:",
+    "this source snippet",
+    "this review snippet",
+    "this forum snippet",
+    "mind-post format:",
+    "mind-post shape:",
+    "write one short anonymous city message",
+  ];
+
+  const hitCount = directPatterns.filter((pattern) => lower.includes(pattern)).length;
+  if (hitCount >= 1) return true;
+
+  const leakedStructure =
+    /\bwhile (starts|contrasts|turn|is reacting|is thinking|a place review|the annoyance proves)\b/.test(lower) ||
+    /\bkeep the result debatable\b/.test(lower) ||
+    /\bdo not (improve|turn|replace|rewrite|invent)\b/.test(lower);
+
+  return leakedStructure;
+}
+
+function isMinimalSalvageFamily(sourceFamily) {
+  return ["public", "review", "forum", "social"].includes(sourceFamily);
+}
+
+function generationProfile(job, providerName) {
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    return {
+      temperature: providerName === "xai" ? 0.28 : 0.2,
+      maxTokens: 180,
+    };
+  }
+
+  if (job.sourceFamily === "news") {
+    return {
+      temperature: providerName === "xai" ? 0.4 : 0.35,
+      maxTokens: 220,
+    };
+  }
+
+  if (["world", "bridge", "signals"].includes(job.sourceFamily)) {
+    return {
+      temperature: providerName === "xai" ? 0.55 : 0.45,
+      maxTokens: 230,
+    };
+  }
+
+  return {
+    temperature: providerName === "xai" ? 0.72 : 0.62,
+    maxTokens: 250,
+  };
+}
+
+function stripInstructionyLead(text, job) {
+  let cleaned = cleanGeneratedText(text);
+  const cityName = cleanGeneratedText(job.cityName ?? "");
+  const cityAnchor = cleanGeneratedText(job.cityAnchor ?? "");
+
+  const removablePrefixes = [
+    cityName,
+    cityAnchor,
+    `City: ${cityName}`,
+    `Topic: ${job.topicLabel ?? ""}`,
+    `Read reason: ${job.readReasonLabel ?? ""}`,
+  ].filter(Boolean);
+
+  for (const prefix of removablePrefixes) {
+    if (cleaned.toLowerCase().startsWith(prefix.toLowerCase())) {
+      cleaned = cleaned.slice(prefix.length).replace(/^[,:.\-\s]+/, "");
+    }
+  }
+
+  return cleaned;
+}
+
+function stripNewsHeadlinePrefix(text, headline) {
+  const cleaned = cleanGeneratedText(text);
+  const cleanedHeadline = cleanGeneratedText(headline);
+  if (!cleanedHeadline) return cleaned;
+
+  const lowerText = cleaned.toLowerCase();
+  const lowerHeadline = cleanedHeadline.toLowerCase();
+  if (!lowerText.startsWith(lowerHeadline)) return cleaned;
+
+  return cleaned.slice(cleanedHeadline.length).replace(/^[\s:;,.!-]+/, "").trim() || cleanedHeadline;
+}
+
+function stripSyntheticLanding(text) {
+  let cleaned = cleanGeneratedText(text);
+  if (!cleaned) return "";
+
+  const closers = [
+    "what a mess.",
+    "i guess.",
+    "just another tuesday.",
+    "just another day.",
+    "isn't it?",
+    "you know?",
+    "for good?",
+  ];
+
+  for (const closer of closers) {
+    if (cleaned.toLowerCase().endsWith(closer)) {
+      cleaned = cleaned.slice(0, -closer.length).trim();
+    }
+  }
+
+  const sentences = splitSentences(cleaned);
+  if (sentences.length >= 2) {
+    const last = sentences[sentences.length - 1].toLowerCase();
+    if (
+      /\?$/.test(last) ||
+      /(what does it mean|what a mess|i guess|just another|it'?s funny,? isn'?t it|ever notice|but is this|can'?t even enjoy)/.test(last)
+    ) {
+      sentences.pop();
+      cleaned = sentences.join(" ").trim();
+    }
+  }
+
+  return cleaned;
+}
+
+function looksTooComposed(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  if (!lower) return false;
+  return (
+    countSentences(lower) >= 3 ||
+    /(there'?s something about|it'?s funny,? isn'?t it|what does it mean|what a mess|just another tuesday|just another day|poof|can'?t help but|fading rituals|constantly shifts)/.test(lower)
+  );
+}
+
+function looksArticleish(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  return /(what you need to know|according to|officials|residents face|commuters face|announced|published|council|mayor|exact dates|urge caution)/.test(lower);
+}
+
+function hasHumanTrace(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  return /\b(i|my|me|we|our)\b/.test(lower) || /["'“”]/.test(text) || /\b(said|heard|looked like|guy next to me|woman at|people were)\b/.test(lower);
+}
+
+function hasEnoughSourceOverlap(candidate, source) {
+  const candidateTokens = tokenSet(candidate);
+  const sourceTokens = tokenSet(source);
+  if (candidateTokens.size === 0 || sourceTokens.size === 0) return false;
+  let overlap = 0;
+  for (const token of candidateTokens) {
+    if (sourceTokens.has(token)) overlap += 1;
+  }
+  return overlap / Math.max(1, Math.min(candidateTokens.size, sourceTokens.size)) >= 0.35;
+}
+
+function tokenSet(text) {
+  return new Set(
+    cleanGeneratedText(text)
+      .toLowerCase()
+      .split(/[^a-z0-9äöüßáéíóúñç]+/i)
+      .map((token) => token.trim())
+      .filter((token) => token.length >= 4 || /^[a-z]\d$/i.test(token))
+  );
+}
+
+function countSentences(text) {
+  return splitSentences(text).length;
+}
+
+function splitSentences(text) {
+  return cleanGeneratedText(text)
+    .split(/(?<=[.!?])\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function enforceCharacterLimit(text, maxChars) {
+  const cleaned = cleanGeneratedText(text);
+  if (cleaned.length <= maxChars) return cleaned;
+
+  const sentenceBound = cleaned.slice(0, maxChars).match(/^(.+[.!?])(?:\s|$)/);
+  if (sentenceBound?.[1] && sentenceBound[1].length >= 45) return sentenceBound[1].trim();
+
+  const lastSpace = cleaned.lastIndexOf(" ", maxChars - 1);
+  const slicePoint = lastSpace >= 45 ? lastSpace : maxChars;
+  return cleaned.slice(0, slicePoint).replace(/[,:;\-]+$/g, "").trim();
+}
+
+function normalizeAnchor(value) {
+  return cleanGeneratedText(value).replace(/\b(this city|street-level detail)\b/gi, "this block") || "this block";
+}
+
+function addSmallMockVariation(base, job, rand) {
+  const content = cleanGeneratedText(base);
+  if (!content) return buildFallbackContent(job);
+  if (content.length < 70) return content;
+  if (rand() < 0.5) return content;
+
+  const punctuation = content.endsWith(".") ? "" : ".";
+  return `${content}${punctuation}`;
 }
 
 function composeMiddle(parts, rand) {

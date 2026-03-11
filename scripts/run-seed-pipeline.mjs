@@ -296,15 +296,15 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
-    launch: 0.06,
+    launch: 0.01,
     public: 0.2,
-    review: 0.13,
-    forum: 0.14,
-    signals: 0.05,
-    news: 0.04,
-    social: 0.19,
-    world: 0.08,
-    bridge: 0.11,
+    review: 0.12,
+    forum: 0.2,
+    signals: 0.03,
+    news: 0.14,
+    social: 0.23,
+    world: 0.03,
+    bridge: 0.04,
   };
   const counts = {};
   let remaining = Number(totalCount);

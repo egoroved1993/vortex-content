@@ -888,6 +888,7 @@ export function buildPrompt(job) {
     "Do not end with a tidy thesis, moral, metaphor, or reveal that explains the scene too well.",
     "Prefer a messier stop over a clever final sentence.",
     "Do not write urban poetry, postcard copy, or a polished mini-essay.",
+    "No rhetorical questions and no clean little moral at the end.",
     "Avoid generic closers and avoid resolving the thought too perfectly.",
     "Make it plausible that a smart user could argue both human and AI.",
     "CRITICAL: The content field must be 60–240 characters. Do not exceed 240 characters. One to three sentences max.",

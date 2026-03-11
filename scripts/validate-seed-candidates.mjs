@@ -76,6 +76,8 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   const stagedObservation = looksStagedObservation(contentLower);
   const atmosphericPoetry = looksAtmosphericPoetry(contentLower);
   const performativeSnark = looksPerformativeSnark(contentLower);
+  const instructionLeakage = looksInstructionLeakage(contentLower);
+  const articleVoice = looksArticleVoice(contentLower);
 
   const issues = [];
   if (!content) issues.push("empty_content");
@@ -93,6 +95,8 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   if (stagedObservation) issues.push("staged_observation");
   if (atmosphericPoetry) issues.push("atmospheric_poetry");
   if (performativeSnark) issues.push("performative_snark");
+  if (instructionLeakage) issues.push("instruction_leakage");
+  if (articleVoice) issues.push("article_voice");
   if (!stickySignal) issues.push("low_stickiness");
   if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
   if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
@@ -158,6 +162,8 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
     !issues.includes("staged_observation") &&
     !issues.includes("atmospheric_poetry") &&
     !issues.includes("performative_snark") &&
+    !issues.includes("instruction_leakage") &&
+    !issues.includes("article_voice") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long");
@@ -451,6 +457,62 @@ function looksPerformativeSnark(contentLower) {
     /(coffee|muni|bart|laptop|startup|line|tourists|cafe)/.test(contentLower);
 
   return fragments.some((fragment) => contentLower.includes(fragment)) || tweeConstruction;
+}
+
+function looksInstructionLeakage(contentLower) {
+  const fragments = [
+    "preserve the original",
+    "turn the review into",
+    "return only json",
+    "raw source snippet",
+    "raw review snippet",
+    "raw forum snippet",
+    "raw social post",
+    "source lane:",
+    "game source label:",
+    "source profile target:",
+    "texture target:",
+    "city anchor:",
+    "default move:",
+    "this source snippet",
+    "this review snippet",
+    "this forum snippet",
+    "mind-post format:",
+    "mind-post shape:",
+  ];
+
+  if (fragments.some((fragment) => contentLower.includes(fragment))) return true;
+
+  return (
+    /\bwhile (starts|contrasts|turn|is reacting|is thinking|a place review|the annoyance proves)\b/.test(contentLower) ||
+    /\bkeep the result debatable\b/.test(contentLower) ||
+    /\bdo not (improve|turn|replace|rewrite|invent)\b/.test(contentLower)
+  );
+}
+
+function looksArticleVoice(contentLower) {
+  const fragments = [
+    "what you need to know",
+    "according to",
+    "could make history",
+    "first look at plans",
+    "urges caution",
+    "exact dates",
+    "announced by",
+    "published at",
+    "reported that",
+    "residents face",
+    "commuters face",
+    "the council says",
+    "the mayor says",
+    "officials said",
+  ];
+
+  const headlineyStructure =
+    /(news|headline|article|publisher|bbc|bloomberg|chronicle|standard|tagesspiegel)/.test(contentLower) &&
+    /(today|this week|announced|reported|published)/.test(contentLower);
+
+  return fragments.some((fragment) => contentLower.includes(fragment)) || headlineyStructure;
 }
 
 function buildCityAnchorTokens() {
