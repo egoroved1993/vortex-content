@@ -2,7 +2,7 @@ name: Update City Pulse
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC daily — 1h before mixed seed pipeline
+    - cron: "0 13 * * *"   # 13:00 UTC daily
   workflow_dispatch:
     inputs:
       upload:
@@ -32,27 +32,27 @@ jobs:
           node-version: "20"
 
       - name: Fetch city news
-        working-directory: github-actions
         run: node scripts/fetch-city-news.mjs
 
       - name: Build city pulse
-        working-directory: github-actions
         run: node scripts/build-city-pulse.mjs
 
       - name: Show pulse summary
-        working-directory: github-actions
         run: |
           echo "=== city-pulse.latest.json ==="
-          node -e "
-            const d = JSON.parse(require('fs').readFileSync('content/city-pulse.latest.json','utf8'));
-            for (const r of d.rows) {
-              console.log(r.city_id, r.mood_label, r.mood_score.toFixed(3), r.metadata.dominant_themes.join(', '));
-            }
+          cat content/city-pulse.latest.json | node -e "
+            const chunks = [];
+            process.stdin.on('data', d => chunks.push(d));
+            process.stdin.on('end', () => {
+              const d = JSON.parse(chunks.join(''));
+              for (const r of d.rows) {
+                console.log(r.city_id, r.mood_label, r.mood_score.toFixed(3));
+              }
+            });
           "
 
       - name: Upload to Supabase
         if: ${{ github.event_name == 'schedule' || inputs.upload == true }}
-        working-directory: github-actions
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
@@ -63,7 +63,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add github-actions/content/city-pulse.latest.json github-actions/content/news-snippets.json
+          git add content/city-pulse.latest.json content/news-snippets.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
