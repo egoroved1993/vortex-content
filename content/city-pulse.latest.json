@@ -1,23 +1,23 @@
 {
   "meta": {
-    "capturedAt": "2026-03-10T15:31:08.294Z",
+    "capturedAt": "2026-03-11T15:03:46.868Z",
     "sourceFiles": {
-      "public": "/Users/worldfamousnobody/Vortex/github-actions/content/public-human-comments.json",
-      "review": "/Users/worldfamousnobody/Vortex/github-actions/content/place-review-snippets.json",
-      "forum": "/Users/worldfamousnobody/Vortex/github-actions/content/forum-snippets.json",
-      "signals": "/Users/worldfamousnobody/Vortex/github-actions/content/city-signals.json",
-      "news": "/Users/worldfamousnobody/Vortex/github-actions/content/news-snippets.json",
-      "social": "/Users/worldfamousnobody/Vortex/github-actions/content/social-snippets.json"
+      "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
+      "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
+      "forum": "/home/runner/work/vortex-content/vortex-content/content/forum-snippets.json",
+      "signals": "/home/runner/work/vortex-content/vortex-content/content/city-signals.json",
+      "news": "/home/runner/work/vortex-content/vortex-content/content/news-snippets.json",
+      "social": "/home/runner/work/vortex-content/vortex-content/content/social-snippets.json"
     },
     "totalItems": 113
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-10T15:31:08.294Z",
-      "mood_score": 0.46,
+      "captured_at": "2026-03-11T15:03:46.868Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, money, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -46,6 +46,13 @@
           "excerpt": "Cold rain leaning sideways and making every bus window look dirtier than usual.. Victoria line platform packed early and one Overground train cancelled without explanation.. Pret l"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "excerpt": "London Tube strikes: What you need to know - BBC. <ol><li><a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9TaDcxVG9wUFJXMlp4bUhTOU1WLXFlN2pzdnJLeW5sMTVMNnIwNUNHbkVmN0Vk"
+        },
+        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
@@ -58,29 +65,22 @@
           "language": "en",
           "valence": -0.575,
           "excerpt": "my theory is that you can tell how long someone has lived here by how little they react when the tube says severe delays"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "excerpt": "the weird thing about london is people will apologise for touching your sleeve on the overground and then send you a rent increase like it's weather"
         }
       ],
       "metadata": {
         "source_item_count": 28,
-        "average_valence": -0.119,
+        "average_valence": -0.149,
         "dominant_themes": [
-          "general",
-          "routine",
-          "transit"
+          "transit",
+          "money",
+          "routine"
         ]
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-10T15:31:08.294Z",
-      "mood_score": 0.457,
+      "captured_at": "2026-03-11T15:03:46.868Z",
+      "mood_score": 0.463,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, language, routine.",
       "dominant_sentiment": "neutral",
@@ -126,16 +126,16 @@
           "excerpt": "the best version of sunday closure is when the whole city goes quiet enough that the spati fridge suddenly sounds philosophical"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "excerpt": "Miete runter oder Filiale zu – Galeria droht erneut mit Standortschließungen - WELT. <a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxPNmUwV0tzcXowQUx3cGJHZmRaX3FLVnQ2T"
+          "source_family": "signals",
+          "source_origin": "manual_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "excerpt": "Dry cold with sharp sun that makes everyone overdress wrong.. Ringbahn delays stacking and one tram full of people holding bouquets like they forgot a shared deadline.. Cafe tables"
         }
       ],
       "metadata": {
         "source_item_count": 28,
-        "average_valence": -0.127,
+        "average_valence": -0.11,
         "dominant_themes": [
           "general",
           "language",
@@ -145,7 +145,7 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-10T15:31:08.294Z",
+      "captured_at": "2026-03-11T15:03:46.868Z",
       "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around routine, transit, money.",
@@ -210,7 +210,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-10T15:31:08.294Z",
+      "captured_at": "2026-03-11T15:03:46.868Z",
       "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
