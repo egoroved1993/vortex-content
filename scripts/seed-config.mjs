@@ -287,6 +287,7 @@ export const cities = [
     ],
     topicAnchors: {
       commute_thought: ["victoria line", "overground delays", "tube platform heat"],
+      cost_of_living: ["zone 2 flat share", "rent jumping on the same street", "price of coffee before work"],
       food_moment: ["pret queue", "greasy spoon", "brick lane bagel place"],
       neighborhood_vibe: ["hackney side street", "peckham rooftop", "islington high street"],
       local_secret: ["shortcut through the estate", "back way into the park", "the cheap lunch counter under the office block"],
@@ -314,6 +315,7 @@ export const cities = [
     ],
     topicAnchors: {
       commute_thought: ["u8 smell", "ringbahn delay", "tram stop in the cold"],
+      cost_of_living: ["rent discourse in a once-cheap block", "wg kitchen math", "spati price shock"],
       food_moment: ["doner line", "spati beer", "bakery closed on sunday"],
       neighborhood_vibe: ["neukolln pavement", "friedrichshain courtyard", "prenzlauer berg stroller zone"],
       local_secret: ["which spati actually stocks decent wine", "park corner after dark", "quiet canal route"],
@@ -368,6 +370,7 @@ export const cities = [
     ],
     topicAnchors: {
       commute_thought: ["metro line 3 heat", "scooter noise before coffee", "walking uphill with shopping bags"],
+      cost_of_living: ["airbnb staircase politics", "price jump on the same block", "lloguer math before coffee"],
       food_moment: ["menu del dia", "vermut hour", "tiny coffee at the bar"],
       neighborhood_vibe: ["gracia square at dusk", "raval balcony scene", "barceloneta in off-season"],
       local_secret: ["which bakery still feels real", "the side street where the noise drops", "when the market queue is actually short"],

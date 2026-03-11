@@ -16,6 +16,10 @@ const minNewsFit = Number(args["min-news-fit"] ?? 4);
 const minCompositeScore = Number(args["min-composite-score"] ?? 4);
 const maxPerCity = Number(args["max-per-city"] ?? 1);
 const maxTotal = Number(args["max-total"] ?? 8);
+const allowedFamilies = String(args["allowed-families"] ?? "")
+  .split(",")
+  .map((value) => value.trim())
+  .filter(Boolean);
 const includeReviewerBuckets = String(args["reviewer-buckets"] ?? "strong_candidate,ship_now")
   .split(",")
   .map((value) => value.trim())
@@ -40,6 +44,7 @@ for (const candidate of candidates) {
     minFreshness,
     minNewsFit,
     minCompositeScore,
+    allowedFamilies,
     includeReviewerBuckets,
   });
   if (!decision.include) {
@@ -105,6 +110,10 @@ console.log(`Wrote payload to ${outputPath}`);
 function shouldInclude(candidate, review, options) {
   if (!candidate.content || candidate.content.trim().length < 20) {
     return { include: false, reason: "empty_or_too_short" };
+  }
+
+  if (options.allowedFamilies.length > 0 && !options.allowedFamilies.includes(candidate.sourceFamily ?? "")) {
+    return { include: false, reason: `family_not_allowed:${candidate.sourceFamily ?? "unknown"}` };
   }
 
   if (!review) {

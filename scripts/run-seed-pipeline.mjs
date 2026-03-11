@@ -76,6 +76,8 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "4",
   "--min-composite-score",
   "4",
+  "--allowed-families",
+  "news,social,world,bridge,signals",
   "--max-per-city",
   "1",
   "--max-total",
