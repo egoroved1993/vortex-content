@@ -23,9 +23,15 @@ const seed = args.seed ?? "news-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
-  .slice(0, limit)
   .map(normalizeSnippet)
-  .filter((snippet) => snippet.body.length > 0 || snippet.headline.length > 0);
+  .filter((snippet) => snippet.body.length > 0 || snippet.headline.length > 0)
+  .map((snippet) => ({
+    ...snippet,
+    sourceSignalScore: scoreNewsSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.sourceSignalScore >= 4)
+  .sort((left, right) => compareBySignal(left, right, rand))
+  .slice(0, limit);
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
@@ -256,6 +262,56 @@ function buildNewsRewritePrompt(job) {
     "Make it feel like one anonymous person living inside this city context today.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
+}
+
+function scoreNewsSnippet(snippet) {
+  const combined = `${snippet.headline} ${snippet.body}`.trim().toLowerCase();
+  const recencyHours = hoursSince(snippet.publishedAt);
+  const dailyLifeSignal = /\b(strike|delay|fare|rent|housing|lloguers|alquiler|miete|tourist|tourism|airbnb|weather|flood|heat|fog|mural|metro|bus|tube|u-bahn|ubahn|muni|bart|station|platform|crowd|queue|service|closure|late|packed|bridge|commute)\b/i.test(combined);
+  const localSpecificity = /\b(victoria line|u8|ringbahn|muni|bart|tmb|rodalies|metro de barcelona|elsenbrücke|elsenbrucke|neukölln|neukolln|san francisco|london|berlin|barcelona|superblock|gracia|raval)\b/i.test(combined);
+  const humanConsequence = /\b(residents|commuters|tenants|locals|neighbors|crowd|late|packed|fare|rent|suitcase|queue|platform)\b/i.test(combined);
+  const hardNews = /\b(stabbing|suspect|court documents|without mercy|killed|murder|assault|victim|police|crime)\b/i.test(combined);
+  const abstractInstitutional = /\b(council|senator|stiftung|future vision|new date|announced|published|according to|officials|foundation|report|study|strategy|zukunftsbild)\b/i.test(combined);
+
+  let score = 0;
+
+  if (Number.isFinite(recencyHours)) {
+    if (recencyHours <= 36) score += 3;
+    else if (recencyHours <= 72) score += 2;
+    else if (recencyHours <= 120) score += 1;
+    else score -= 3;
+  }
+
+  if (snippet.body) score += 1;
+  if (dailyLifeSignal) score += 3;
+  if (localSpecificity) score += 1;
+  if (humanConsequence) score += 1;
+
+  if (!snippet.body) score -= 1;
+  if (hardNews) score -= 5;
+  if (abstractInstitutional && !dailyLifeSignal) score -= 3;
+  if (/\b(viral video series|campaign of its own|could make history|what you need to know)\b/i.test(combined)) score -= 2;
+
+  return score;
+}
+
+function hoursSince(value) {
+  const publishedAt = Date.parse(String(value ?? ""));
+  if (!Number.isFinite(publishedAt)) return Number.NaN;
+  return (Date.now() - publishedAt) / (1000 * 60 * 60);
+}
+
+function compareBySignal(left, right, randFn) {
+  const scoreDelta = (right.sourceSignalScore ?? 0) - (left.sourceSignalScore ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftTime = Date.parse(String(left.publishedAt ?? ""));
+  const rightTime = Date.parse(String(right.publishedAt ?? ""));
+  if (Number.isFinite(leftTime) && Number.isFinite(rightTime) && rightTime !== leftTime) {
+    return rightTime - leftTime;
+  }
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {

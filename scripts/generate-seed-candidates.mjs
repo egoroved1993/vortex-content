@@ -106,6 +106,32 @@ console.log(
 );
 
 async function generateCandidate(job, { provider: activeProvider, model: activeModel }) {
+  const initial = await generateCandidateOnce(job, { provider: activeProvider, model: activeModel });
+  const variants = [initial];
+  const assessment = assessCandidateQuality(job, initial.content);
+
+  if (shouldAttemptRepair(job, assessment)) {
+    const repaired = await generateRepairCandidate(job, { provider: activeProvider, model: activeModel }, initial.content, assessment);
+    if (repaired?.content) {
+      variants.push(repaired);
+    }
+  }
+
+  const localRepairs = buildLocalRepairVariants(job, initial.content);
+  variants.push(
+    ...localRepairs.map((content, index) => ({
+      ...initial,
+      content,
+      rawModelResponse: initial.rawModelResponse,
+      repairStrategy: `local_${index + 1}`,
+      usage: null,
+    }))
+  );
+
+  return pickBestGeneratedVariant(job, variants);
+}
+
+async function generateCandidateOnce(job, { provider: activeProvider, model: activeModel }) {
   if (activeProvider === "anthropic") {
     return generateWithAnthropic(job, activeModel);
   }
@@ -113,6 +139,16 @@ async function generateCandidate(job, { provider: activeProvider, model: activeM
     return generateWithXAI(job, activeModel);
   }
   return generateWithOpenAI(job, activeModel);
+}
+
+async function generateRepairCandidate(job, { provider: activeProvider, model: activeModel }, weakDraft, assessment) {
+  if (activeProvider === "anthropic") {
+    return generateRepairWithAnthropic(job, activeModel, weakDraft, assessment);
+  }
+  if (activeProvider === "xai") {
+    return generateRepairWithXAI(job, activeModel, weakDraft, assessment);
+  }
+  return generateRepairWithOpenAI(job, activeModel, weakDraft, assessment);
 }
 
 function resolveTargetModel(job, { provider: defaultProvider, model: defaultModel, laneProviderOverrides: providerOverrides, laneModelOverrides: modelOverrides }) {
@@ -305,6 +341,119 @@ async function generateWithAnthropic(job, modelName) {
   });
 }
 
+async function generateRepairWithOpenAI(job, modelName, weakDraft, assessment) {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) throw new Error("OPENAI_API_KEY is required for provider=openai");
+
+  return fetchWithRetry(async () => {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: modelName,
+        temperature: 0.22,
+        max_tokens: job.lane === "mind_post" ? 220 : 180,
+        response_format: { type: "json_object" },
+        messages: [
+          {
+            role: "system",
+            content: buildRepairSystemPrompt(job, assessment, "openai"),
+          },
+          {
+            role: "user",
+            content: buildRepairUserPrompt(job, weakDraft, assessment),
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`OpenAI error ${response.status}: ${await response.text()}`);
+    }
+
+    const payload = await response.json();
+    const text = payload.choices?.[0]?.message?.content?.trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeOpenAIUsage(payload.usage),
+    });
+  });
+}
+
+async function generateRepairWithXAI(job, modelName, weakDraft, assessment) {
+  const apiKey = process.env.XAI_API_KEY;
+  if (!apiKey) throw new Error("XAI_API_KEY is required for provider=xai");
+
+  return fetchWithRetry(async () => {
+    const response = await fetch("https://api.x.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: modelName,
+        temperature: 0.28,
+        max_tokens: job.lane === "mind_post" ? 220 : 180,
+        messages: [
+          {
+            role: "system",
+            content: buildRepairSystemPrompt(job, assessment, "xai"),
+          },
+          {
+            role: "user",
+            content: buildRepairUserPrompt(job, weakDraft, assessment),
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`xAI error ${response.status}: ${await response.text()}`);
+    }
+
+    const payload = await response.json();
+    const text = payload.choices?.[0]?.message?.content?.trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeXAIUsage(payload.usage),
+      systemFingerprint: payload.system_fingerprint ?? null,
+    });
+  });
+}
+
+async function generateRepairWithAnthropic(job, modelName, weakDraft, assessment) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error("ANTHROPIC_API_KEY is required for provider=anthropic");
+
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: modelName,
+      max_tokens: job.lane === "mind_post" ? 220 : 180,
+      temperature: 0.2,
+      system: buildRepairSystemPrompt(job, assessment, "anthropic"),
+      messages: [{ role: "user", content: buildRepairUserPrompt(job, weakDraft, assessment) }],
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Anthropic error ${response.status}: ${await response.text()}`);
+  }
+
+  const payload = await response.json();
+  const text = payload.content?.map((part) => part.text ?? "").join("").trim();
+  return normalizeModelJson(job, text, {
+    usage: normalizeAnthropicUsage(payload.usage),
+  });
+}
+
 function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = null } = {}) {
   let parsed;
   try {
@@ -346,6 +495,68 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     usage,
     systemFingerprint,
   };
+}
+
+function buildRepairSystemPrompt(job, assessment, providerHint = null) {
+  let base = "You repair weak anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
+  base += "\nFix the draft without making it sound polished, literary, or article-like.";
+  base += "\nKeep the same scene, same source pressure, and same local detail.";
+  base += "\nThe repaired version must stay under 2 sentences and under the lane character cap.";
+  base += "\nNo rhetorical questions, no moral, no tidy ending, no metaphor.";
+
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    base += "\nFor salvage families, keep at least 70% of the source wording when possible.";
+    base += "\nDo not invent a cleaner thought than the source already implied.";
+  }
+
+  if (job.sourceFamily === "news") {
+    base += "\nFor news, convert the source into one resident-sized consequence.";
+    base += "\nUse at least one exact token or phrase from the source snippet.";
+    base += "\nDo not sound like a reporter, headline writer, or civic explainer.";
+  }
+
+  if (["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
+    base += "\nThis must feel written today inside the live city context, not like timeless city commentary.";
+  }
+
+  if (providerHint === "xai") {
+    base += "\nPrefer bluntness over polish. Mild mess is better than synthetic cleverness.";
+  }
+
+  if (assessment.missing.length > 0) {
+    base += `\nMissing signals to repair: ${assessment.missing.join(", ")}.`;
+  }
+
+  return base;
+}
+
+function buildRepairUserPrompt(job, weakDraft, assessment) {
+  const sourceText = cleanSourceFallback(job);
+  const pulse = cityPulseMap[job.cityId] ?? null;
+  const context = [];
+
+  if (pulse?.newsHeadlines?.length) {
+    context.push(`Live headlines today:\n${pulse.newsHeadlines.map((headline) => `- ${headline}`).join("\n")}`);
+  }
+  if (pulse?.drivers?.length) {
+    context.push(`Live city texture:\n${pulse.drivers.filter(Boolean).map((driver) => `- ${driver}`).join("\n")}`);
+  }
+
+  return [
+    `City: ${job.cityName ?? job.cityId}`,
+    `Source family: ${job.sourceFamily ?? "unknown"}`,
+    `Lane: ${job.lane}`,
+    `City anchor: ${job.cityAnchor ?? "none"}`,
+    `Source language: ${job.rawSnippetLanguage ?? "en"}`,
+    `Raw source: ${sourceText || "(empty)"}`,
+    `Weak draft: ${cleanGeneratedText(weakDraft) || "(empty)"}`,
+    `Missing signals: ${assessment.missing.join(", ") || "none"}`,
+    ...context,
+    "Repair the weak draft so it still sounds like the same speaker or same scene, but now includes the missing signals naturally.",
+    "If you need to choose, prioritize: first-person or overheard trace, city anchor, today/this morning marker, concrete local detail, one sticky hook or conflict.",
+    "Preserve the source language unless the source itself is already mixed or broken.",
+    "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
+  ].join("\n\n");
 }
 
 function buildMockCandidate(job, index) {
@@ -529,9 +740,35 @@ function buildNewsFallbackContent(job, sourceCandidate) {
 }
 
 function cleanGeneratedText(value) {
-  return String(value ?? "")
-    .replace(/^["'`]+|["'`]+$/g, "")
+  return unwrapEmbeddedJsonText(
+    String(value ?? "")
+      .replace(/^["'`]+|["'`]+$/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+
+function unwrapEmbeddedJsonText(value) {
+  const cleaned = String(value ?? "").trim();
+  if (!cleaned.startsWith("{")) return cleaned;
+
+  try {
+    const parsed = JSON.parse(cleaned);
+    if (typeof parsed?.content === "string") {
+      return String(parsed.content).trim();
+    }
+  } catch {
+    // fall through to regex extraction
+  }
+
+  const match = cleaned.match(/"content"\s*:\s*"([^]+?)"\s*(?:,|})/i);
+  if (!match?.[1]) return cleaned;
+
+  return match[1]
+    .replace(/\\"/g, '"')
+    .replace(/\\n/g, " ")
     .replace(/\s+/g, " ")
+    .replace(/^["'`]+|["'`]+$/g, "")
     .trim();
 }
 
@@ -672,6 +909,235 @@ function stripSyntheticLanding(text) {
   }
 
   return cleaned;
+}
+
+function assessCandidateQuality(job, text) {
+  const candidate = cleanGeneratedText(text);
+  const lower = candidate.toLowerCase();
+  const sourceText = cleanSourceFallback(job);
+  const missing = [];
+  let score = 0;
+
+  const firstPerson = /\b(i|i'm|i’m|i've|i’ve|my|me|we|our|yo|mi|mis|mio|mía|ich|mir|mein|meine|wir|em|meu|meva|nosaltres)\b/i.test(candidate);
+  const dialogue = /[“”"'`]/.test(candidate) || /\b(said|heard|dijo|hat gesagt)\b/i.test(lower);
+  const detail = /(\d|€|\$|£|platform|queue|rent|coffee|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|fog|startup|bakery|victoria line|u8|ringbahn|tmb|rodalies|l3|pret|gracia|raval)/i.test(candidate);
+  const anchor = hasAnchorSignal(job, candidate);
+  const hook = /(still|again|somehow|keep|caught myself|pretend|i swear|can't believe|cannot believe|every single time|otra mañana|avui|heute|wieder)/i.test(lower);
+  const freshness = /(today|this morning|tonight|right now|again|hoy|ahora|esta mañana|avui|heute|jetzt|wieder)/i.test(lower);
+  const liveOverlap = countSharedTokens(candidate, sourceText) >= 2;
+  const newsFit = countSharedTokens(candidate, `${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`) >= 2;
+
+  if (candidate.length >= 45 && candidate.length <= (job.lane === "mind_post" ? 220 : 180)) score += 2;
+  if (firstPerson || dialogue) score += 3;
+  if (detail) score += 2;
+  if (anchor) score += 2;
+  if (hook) score += 2;
+  if (["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
+    if (freshness) score += 2;
+    if (!freshness) missing.push("freshness_marker");
+  }
+  if (["news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
+    if (newsFit || liveOverlap) score += 2;
+    if (!newsFit && !liveOverlap) missing.push("news_cycle_overlap");
+  }
+  if (!(firstPerson || dialogue)) missing.push("first_person_or_overheard_trace");
+  if (!detail) missing.push("concrete_detail");
+  if (!anchor) missing.push("city_anchor");
+  if (!hook) missing.push("sticky_hook");
+  if (looksArticleish(candidate)) missing.push("article_voice");
+  if (looksTooComposed(candidate)) missing.push("overcomposed");
+
+  score -= looksTooComposed(candidate) ? 2 : 0;
+  score -= looksArticleish(candidate) ? 2 : 0;
+  score -= candidate.length < 45 ? 2 : 0;
+
+  return {
+    score,
+    missing: Array.from(new Set(missing)),
+    signals: { firstPerson, dialogue, detail, anchor, hook, freshness, liveOverlap, newsFit },
+  };
+}
+
+function shouldAttemptRepair(job, assessment) {
+  if (assessment.score >= 11 && assessment.missing.length === 0) return false;
+  if (job.sourceFamily === "launch") return false;
+  return assessment.missing.some((signal) =>
+    ["first_person_or_overheard_trace", "city_anchor", "freshness_marker", "news_cycle_overlap", "sticky_hook"].includes(signal)
+  );
+}
+
+function buildLocalRepairVariants(job, text) {
+  const sourceText = cleanSourceFallback(job);
+  const basis = sourceText || cleanGeneratedText(text);
+  const variants = [];
+
+  const anchored = buildFreshAnchoredRepair(job, basis);
+  if (anchored) variants.push(anchored);
+
+  const overheard = buildOverheardRepair(job, basis);
+  if (overheard) variants.push(overheard);
+
+  if (job.sourceFamily === "news") {
+    const resident = buildResidentNewsRepair(job, basis);
+    if (resident) variants.push(resident);
+  }
+
+  return Array.from(new Set(variants.filter(Boolean)));
+}
+
+function buildFreshAnchoredRepair(job, text) {
+  let candidate = cleanGeneratedText(text);
+  if (!candidate) return "";
+
+  if (!hasAnchorSignal(job, candidate)) {
+    candidate = injectAnchor(job, candidate);
+  }
+  if (["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily) && !/(today|this morning|tonight|right now|again|hoy|avui|heute)/i.test(candidate)) {
+    candidate = `${freshnessPrefixFor(job)} ${candidate}`.trim();
+  }
+
+  return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 180);
+}
+
+function buildOverheardRepair(job, text) {
+  const candidate = cleanGeneratedText(text).replace(/[.!?]+$/g, "").trim();
+  if (!candidate) return "";
+  if (/\b(i|i'm|i’m|i've|i’ve|my|me|we|our|yo|mi|ich|em)\b/i.test(candidate) || /[“”"'`]/.test(candidate)) return "";
+
+  const prefix = overheardPrefixFor(job);
+  return enforceCharacterLimit(`${prefix}"${candidate}"`, job.lane === "mind_post" ? 220 : 180);
+}
+
+function buildResidentNewsRepair(job, text) {
+  const lower = `${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
+  const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+  const prefix = freshnessPrefixFor(job);
+
+  if (/\b(strike|delay|service|platform|tube|muni|bart|u-bahn|ubahn|ringbahn|tram|metro|bus|fare)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} on ${anchor} i got to the platform and the delay mood was already there before the board caught up.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (/\b(rent|housing|lloguer|lloguers|alquiler|miete|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i caught myself doing the rent math again and hating how normal that feels.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (/\b(touris|visitor|hotel|suitcase|cruise)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} you can tell it's another tourism day because the suitcase traffic starts before coffee.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (/\b(mural|8m|festival|artist|concert|gallery)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} in the metro i watched more people stop for the new mural than for the actual platform flow and everyone was still late.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  return "";
+}
+
+function pickBestGeneratedVariant(job, variants) {
+  const usable = variants.filter((variant) => cleanGeneratedText(variant?.content).length >= 24);
+  const ranked = usable
+    .map((variant) => ({
+      variant,
+      assessment: assessCandidateQuality(job, variant.content),
+    }))
+    .sort((left, right) => right.assessment.score - left.assessment.score);
+
+  const best = ranked[0]?.variant ?? usable[0] ?? variants[0];
+  const mergedUsage = usable.map((variant) => variant.usage).reduce(sumUsageRecords, null);
+
+  return {
+    ...best,
+    usage: mergedUsage,
+    repairAttempts: Math.max(0, usable.length - 1),
+  };
+}
+
+function sumUsageRecords(left, right) {
+  if (!left) return right ?? null;
+  if (!right) return left;
+
+  return {
+    input_tokens: Number(left.input_tokens ?? 0) + Number(right.input_tokens ?? 0),
+    output_tokens: Number(left.output_tokens ?? 0) + Number(right.output_tokens ?? 0),
+    total_tokens: Number(left.total_tokens ?? 0) + Number(right.total_tokens ?? 0),
+    reasoning_tokens: Number(left.reasoning_tokens ?? 0) + Number(right.reasoning_tokens ?? 0),
+  };
+}
+
+function hasAnchorSignal(job, text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  const anchor = cleanGeneratedText(job.cityAnchor ?? "").toLowerCase();
+  const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "").toLowerCase();
+
+  return Boolean(
+    (anchor && lower.includes(anchor)) ||
+      (cityName && lower.includes(cityName)) ||
+      /(london|berlin|barcelona|san francisco|victoria line|ringbahn|u8|muni|bart|metro|tmb|rodalies)/.test(lower)
+  );
+}
+
+function injectAnchor(job, text) {
+  const candidate = cleanGeneratedText(text);
+  if (!candidate) return "";
+  const anchor = cleanGeneratedText(job.cityAnchor ?? "");
+  const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "");
+
+  if (job.rawSnippetLanguage === "en") {
+    const place = anchor || cityName || "this block";
+    return `on ${place} ${candidate}`.replace(/\s+/g, " ").trim();
+  }
+
+  return `${candidate} ${cityName || anchor}`.replace(/\s+/g, " ").trim();
+}
+
+function freshnessPrefixFor(job) {
+  switch (job.rawSnippetLanguage) {
+    case "de":
+      return "heute";
+    case "es":
+      return "hoy";
+    case "ca":
+      return "avui";
+    default:
+      return "this morning";
+  }
+}
+
+function overheardPrefixFor(job) {
+  const anchor = cleanGeneratedText(job.cityAnchor ?? job.cityName ?? "this block");
+  switch (job.rawSnippetLanguage) {
+    case "de":
+      return `heute in ${job.cityName ?? "Berlin"} hat jemand gesagt: `;
+    case "es":
+      return `hoy en ${job.cityName ?? "la ciudad"} escuché: `;
+    case "ca":
+      return `avui a ${job.cityName ?? "la ciutat"} he sentit: `;
+    default:
+      return `${freshnessPrefixFor(job)} on ${anchor} i heard someone say `;
+  }
+}
+
+function countSharedTokens(left, right) {
+  const leftTokens = tokenSet(left);
+  const rightTokens = tokenSet(right);
+  if (leftTokens.size === 0 || rightTokens.size === 0) return 0;
+
+  let overlap = 0;
+  for (const token of leftTokens) {
+    if (rightTokens.has(token)) overlap += 1;
+  }
+  return overlap;
 }
 
 function looksTooComposed(text) {
