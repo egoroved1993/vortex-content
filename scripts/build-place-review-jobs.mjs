@@ -15,6 +15,7 @@ import {
   tones,
 } from "./seed-config.mjs";
 import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
+import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "place-review-snippets.json");
@@ -24,9 +25,15 @@ const seed = args.seed ?? "place-review-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
-  .slice(0, limit)
   .map(normalizeSnippet)
-  .filter((snippet) => snippet.body.length > 0);
+  .filter((snippet) => snippet.body.length > 0)
+  .map((snippet) => ({
+    ...snippet,
+    liveAlignment: scoreReviewSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.liveAlignment.score >= 2)
+  .sort((left, right) => compareByLiveAlignment(left, right, rand))
+  .slice(0, limit);
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
@@ -264,6 +271,34 @@ function buildPlaceContext(job) {
   if (job.rawSnippetRating) bits.push(`rating: ${job.rawSnippetRating}/5`);
   if (job.rawSnippetSourceOrigin) bits.push(`source: ${job.rawSnippetSourceOrigin}`);
   return bits.join(", ");
+}
+
+function scoreReviewSnippet(snippet) {
+  const combined = `${snippet.body} ${snippet.placeType} ${snippet.placeName} ${snippet.neighborhood}`.trim();
+  const lower = combined.toLowerCase();
+  const context = mergeContext(snippet.cityId);
+  const tokens = extractContextTokens(combined);
+  const contextOverlap = countOverlap(tokens, context.tokens);
+  const newsOverlap = countOverlap(tokens, context.newsTokens);
+  const strongJudgment = snippet.rating <= 2 || /\b(overpriced|queue|rent|tourist|late|crowded|six dollar|4\.20|5\.|founder|startup)\b/i.test(lower);
+  const localTexture = Boolean(snippet.neighborhood || snippet.placeType || snippet.placeName);
+
+  return {
+    score: contextOverlap * 2 + newsOverlap * 3 + (strongJudgment ? 1.5 : 0) + (localTexture ? 1 : 0),
+    contextOverlap,
+    newsOverlap,
+  };
+}
+
+function compareByLiveAlignment(left, right, randFn) {
+  const scoreDelta = (right.liveAlignment?.score ?? 0) - (left.liveAlignment?.score ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftRating = Number(left.rating ?? 0);
+  const rightRating = Number(right.rating ?? 0);
+  if (leftRating !== rightRating) return leftRating - rightRating;
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {

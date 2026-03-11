@@ -14,6 +14,7 @@ import {
   tones,
 } from "./seed-config.mjs";
 import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
+import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "forum-snippets.json");
@@ -23,9 +24,15 @@ const seed = args.seed ?? "forum-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
-  .slice(0, limit)
   .map(normalizeSnippet)
-  .filter((snippet) => snippet.body.length > 0);
+  .filter((snippet) => snippet.body.length > 0)
+  .map((snippet) => ({
+    ...snippet,
+    liveAlignment: scoreForumSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.liveAlignment.score >= 2)
+  .sort((left, right) => compareByLiveAlignment(left, right, rand))
+  .slice(0, limit);
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
@@ -263,6 +270,36 @@ function buildForumContext(job) {
   if (job.rawSnippetNeighborhood) bits.push(`neighborhood: ${job.rawSnippetNeighborhood}`);
   if (job.rawSnippetSourceOrigin) bits.push(`source: ${job.rawSnippetSourceOrigin}`);
   return bits.join(", ");
+}
+
+function scoreForumSnippet(snippet) {
+  const combined = `${snippet.body} ${snippet.threadTitle} ${snippet.neighborhood}`.trim();
+  const lower = combined.toLowerCase();
+  const context = mergeContext(snippet.cityId);
+  const tokens = extractContextTokens(combined);
+  const contextOverlap = countOverlap(tokens, context.tokens);
+  const newsOverlap = countOverlap(tokens, context.newsTokens);
+  const firstPerson = /\b(i|i'm|i’m|my|me|we|our)\b/i.test(snippet.body);
+  const dialogue = /["“”]/.test(snippet.body) || /\b(i heard|someone said|he said|she said)\b/i.test(lower);
+  const anchor = snippet.neighborhood || (context.themes ?? []).some((theme) => lower.includes(theme));
+  const liveLexiconHit = /\b(delay|rent|tourist|suitcase|coffee|weather|fare|queue|crowd|late|heat|metro|tube|bart|muni|airbnb|startup|football)\b/i.test(lower);
+
+  return {
+    score: contextOverlap * 2 + newsOverlap * 3 + (firstPerson ? 1.5 : 0) + (dialogue ? 1.5 : 0) + (anchor ? 1 : 0) + (liveLexiconHit ? 1 : 0),
+    contextOverlap,
+    newsOverlap,
+  };
+}
+
+function compareByLiveAlignment(left, right, randFn) {
+  const scoreDelta = (right.liveAlignment?.score ?? 0) - (left.liveAlignment?.score ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftLength = left.body.length;
+  const rightLength = right.body.length;
+  if (rightLength !== leftLength) return rightLength - leftLength;
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {

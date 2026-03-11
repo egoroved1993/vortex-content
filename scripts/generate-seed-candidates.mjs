@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createSeededRandom } from "./seed-config.mjs";
 import { resolveProjectPath } from "./path-utils.mjs";
+import { scoreCandidate } from "./validate-seed-candidates.mjs";
 
 // Load city pulse data for grounding generation in current city mood/themes
 const cityPulseMap = loadCityPulse();
@@ -912,49 +913,30 @@ function stripSyntheticLanding(text) {
 }
 
 function assessCandidateQuality(job, text) {
-  const candidate = cleanGeneratedText(text);
-  const lower = candidate.toLowerCase();
-  const sourceText = cleanSourceFallback(job);
-  const missing = [];
-  let score = 0;
+  const review = scoreCandidate(
+    {
+      ...job,
+      content: cleanGeneratedText(text),
+    },
+    0
+  );
 
-  const firstPerson = /\b(i|i'm|i’m|i've|i’ve|my|me|we|our|yo|mi|mis|mio|mía|ich|mir|mein|meine|wir|em|meu|meva|nosaltres)\b/i.test(candidate);
-  const dialogue = /[“”"'`]/.test(candidate) || /\b(said|heard|dijo|hat gesagt)\b/i.test(lower);
-  const detail = /(\d|€|\$|£|platform|queue|rent|coffee|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|fog|startup|bakery|victoria line|u8|ringbahn|tmb|rodalies|l3|pret|gracia|raval)/i.test(candidate);
-  const anchor = hasAnchorSignal(job, candidate);
-  const hook = /(still|again|somehow|keep|caught myself|pretend|i swear|can't believe|cannot believe|every single time|otra mañana|avui|heute|wieder)/i.test(lower);
-  const freshness = /(today|this morning|tonight|right now|again|hoy|ahora|esta mañana|avui|heute|jetzt|wieder)/i.test(lower);
-  const liveOverlap = countSharedTokens(candidate, sourceText) >= 2;
-  const newsFit = countSharedTokens(candidate, `${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`) >= 2;
-
-  if (candidate.length >= 45 && candidate.length <= (job.lane === "mind_post" ? 220 : 180)) score += 2;
-  if (firstPerson || dialogue) score += 3;
-  if (detail) score += 2;
-  if (anchor) score += 2;
-  if (hook) score += 2;
-  if (["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
-    if (freshness) score += 2;
-    if (!freshness) missing.push("freshness_marker");
-  }
-  if (["news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
-    if (newsFit || liveOverlap) score += 2;
-    if (!newsFit && !liveOverlap) missing.push("news_cycle_overlap");
-  }
-  if (!(firstPerson || dialogue)) missing.push("first_person_or_overheard_trace");
-  if (!detail) missing.push("concrete_detail");
-  if (!anchor) missing.push("city_anchor");
-  if (!hook) missing.push("sticky_hook");
-  if (looksArticleish(candidate)) missing.push("article_voice");
-  if (looksTooComposed(candidate)) missing.push("overcomposed");
-
-  score -= looksTooComposed(candidate) ? 2 : 0;
-  score -= looksArticleish(candidate) ? 2 : 0;
-  score -= candidate.length < 45 ? 2 : 0;
+  const missing = mapIssuesToRepairs(job, review.issues, review.signals);
+  const score =
+    (review.passed ? 10 : 0) +
+    review.scores.mindprint * 2 +
+    review.scores.cityness * 1.3 +
+    review.scores.stickiness * 2 +
+    review.scores.ambiguity * 1.8 +
+    review.scores.freshness * 1.6 +
+    review.scores.news_fit * 1.9 -
+    review.issues.reduce((total, issue) => total + issuePenalty(issue), 0);
 
   return {
     score,
-    missing: Array.from(new Set(missing)),
-    signals: { firstPerson, dialogue, detail, anchor, hook, freshness, liveOverlap, newsFit },
+    missing,
+    signals: review.signals,
+    review,
   };
 }
 
@@ -1051,7 +1033,12 @@ function pickBestGeneratedVariant(job, variants) {
       variant,
       assessment: assessCandidateQuality(job, variant.content),
     }))
-    .sort((left, right) => right.assessment.score - left.assessment.score);
+    .sort((left, right) => {
+      if (left.assessment.review.passed !== right.assessment.review.passed) {
+        return Number(right.assessment.review.passed) - Number(left.assessment.review.passed);
+      }
+      return right.assessment.score - left.assessment.score;
+    });
 
   const best = ranked[0]?.variant ?? usable[0] ?? variants[0];
   const mergedUsage = usable.map((variant) => variant.usage).reduce(sumUsageRecords, null);
@@ -1138,6 +1125,47 @@ function countSharedTokens(left, right) {
     if (rightTokens.has(token)) overlap += 1;
   }
   return overlap;
+}
+
+function mapIssuesToRepairs(job, issues, signals) {
+  const missing = [];
+
+  if (issues.includes("weak_mindprint") && !signals.dialogue) missing.push("first_person_or_overheard_trace");
+  if (issues.includes("missing_city_anchor")) missing.push("city_anchor");
+  if (issues.includes("low_freshness")) missing.push("freshness_marker");
+  if (issues.includes("detached_from_news_cycle")) missing.push("news_cycle_overlap");
+  if (issues.includes("low_stickiness")) missing.push("sticky_hook");
+  if (issues.includes("low_detail")) missing.push("concrete_detail");
+  if (issues.includes("article_voice")) missing.push("article_voice");
+  if (issues.includes("overpolished") || issues.includes("essay_like")) missing.push("overcomposed");
+
+  if (!signals.firstPerson && !signals.dialogue) missing.push("first_person_or_overheard_trace");
+  if (!signals.anchor) missing.push("city_anchor");
+  if (!signals.freshnessMarker && ["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
+    missing.push("freshness_marker");
+  }
+
+  return Array.from(new Set(missing));
+}
+
+function issuePenalty(issue) {
+  const penalties = {
+    overpolished: 2.2,
+    essay_like: 3.2,
+    article_voice: 3.2,
+    detached_from_news_cycle: 3.4,
+    low_freshness: 2.8,
+    low_stickiness: 2.2,
+    weak_mindprint: 2.4,
+    low_detail: 1.8,
+    missing_city_anchor: 2.4,
+    generic_city_copy: 3.5,
+    instruction_leakage: 6,
+    too_long: 4,
+    blocked_by_length: 4,
+  };
+
+  return penalties[issue] ?? 1;
 }
 
 function looksTooComposed(text) {

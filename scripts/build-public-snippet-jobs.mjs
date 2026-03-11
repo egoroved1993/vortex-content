@@ -16,6 +16,7 @@ import {
   tones,
 } from "./seed-config.mjs";
 import { normalizeSourceLanguage } from "./source-utils.mjs";
+import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "public-human-comments.json");
@@ -26,6 +27,12 @@ const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
   .filter((snippet) => !looksForumAdviceSnippet(snippet.body))
+  .map((snippet) => ({
+    ...snippet,
+    liveAlignment: scorePublicSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.liveAlignment.score >= 2)
+  .sort((left, right) => compareByLiveAlignment(left, right, rand))
   .slice(0, limit);
 const jobs = snippets.map((snippet, index) => {
   const lane = snippet.laneHint ?? "micro_moment";
@@ -236,6 +243,37 @@ function formatWeight(formatId, text) {
   if (formatId === "delayed_realization" && /\b(it took me|realized)\b/.test(lower)) return 5;
   if (formatId === "overheard_analysis" && (/"|'/.test(text) || /\bsaid\b/.test(lower))) return 5;
   return 1;
+}
+
+function scorePublicSnippet(snippet) {
+  const body = String(snippet.body ?? "").trim();
+  const lower = body.toLowerCase();
+  const context = mergeContext(snippet.cityId);
+  const tokens = extractContextTokens(body);
+  const contextOverlap = countOverlap(tokens, context.tokens);
+  const newsOverlap = countOverlap(tokens, context.newsTokens);
+  const sourceScore = Number(snippet.score ?? 0) / 10;
+  const themeHit = (context.themes ?? []).some((theme) => lower.includes(theme));
+  const liveLexiconHit = /\b(delay|rent|strike|tourist|suitcase|coffee|weather|fare|platform|queue|crowd|late|heat|metro|tube|bart|muni|airbnb|startup)\b/i.test(lower);
+  const freshnessMarker = /(today|this morning|tonight|right now|still|again|hoy|heute|avui)/i.test(body);
+
+  return {
+    score: sourceScore + contextOverlap * 2 + newsOverlap * 3 + (themeHit ? 1 : 0) + (liveLexiconHit ? 1 : 0) + (freshnessMarker ? 1 : 0),
+    contextOverlap,
+    newsOverlap,
+    sourceScore,
+  };
+}
+
+function compareByLiveAlignment(left, right, randFn) {
+  const scoreDelta = (right.liveAlignment?.score ?? 0) - (left.liveAlignment?.score ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftRaw = Number(left.score ?? 0);
+  const rightRaw = Number(right.score ?? 0);
+  if (rightRaw !== leftRaw) return rightRaw - leftRaw;
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {

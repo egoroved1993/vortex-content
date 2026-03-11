@@ -19,16 +19,6 @@ const candidatesPath = args.candidates ? path.resolve(process.cwd(), args.candid
 const reportPath = args.report ? path.resolve(process.cwd(), args.report) : resolveProjectPath("content", "pipeline-candidates.report.json");
 const payloadPath = args.payload ? path.resolve(process.cwd(), args.payload) : resolveProjectPath("content", "pipeline-payload.json");
 const cityPulsePath = args["city-pulse-out"] ? path.resolve(process.cwd(), args["city-pulse-out"]) : resolveProjectPath("content", "city-pulse.latest.json");
-const sourceConfig = buildSourceConfig(args, count, mix, jobsPerSignalSnapshot);
-
-buildMixedJobsCorpus({
-  mix,
-  seed,
-  cityFocus,
-  jobsPath,
-  sourceConfig,
-});
-
 runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
   "--out",
   cityPulsePath,
@@ -40,6 +30,16 @@ runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
   ...(args["social-input"] ? ["--social-input", path.resolve(process.cwd(), args["social-input"])] : []),
   ...(args["world-input"] ? ["--world-input", path.resolve(process.cwd(), args["world-input"])] : []),
 ]);
+
+const sourceConfig = buildSourceConfig(args, count, mix, jobsPerSignalSnapshot);
+
+buildMixedJobsCorpus({
+  mix,
+  seed,
+  cityFocus,
+  jobsPath,
+  sourceConfig,
+});
 
 runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   "--input",
@@ -297,14 +297,14 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
     launch: 0,
-    public: 0.22,
-    review: 0.13,
-    forum: 0.2,
+    public: 0.1,
+    review: 0.05,
+    forum: 0.07,
     signals: 0.02,
-    news: 0.16,
-    social: 0.22,
-    world: 0.02,
-    bridge: 0.03,
+    news: 0.28,
+    social: 0.28,
+    world: 0.07,
+    bridge: 0.13,
   };
   const counts = {};
   let remaining = Number(totalCount);

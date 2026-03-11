@@ -1,33 +1,37 @@
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { allKnownCityAnchors, cities, createSeededRandom } from "./seed-config.mjs";
 import { resolveProjectPath } from "./path-utils.mjs";
 
-const args = parseArgs(process.argv.slice(2));
-const inputPath = args.input
-  ? path.resolve(process.cwd(), args.input)
-  : path.resolve(process.cwd(), "github-actions/content/sample-seed-candidates.json");
-const outputPath = args.out
-  ? path.resolve(process.cwd(), args.out)
-  : path.resolve(process.cwd(), replaceExtension(inputPath, ".report.json"));
-
-const candidates = readCandidates(inputPath);
 const cityAnchors = allKnownCityAnchors().map((anchor) => anchor.toLowerCase());
 const cityAnchorTokens = buildCityAnchorTokens();
 const pulseContext = loadPulseContext();
 const worldContext = loadWorldContext();
-const rand = createSeededRandom(`validator:${inputPath}`);
-const report = candidates.map((candidate, index) => scoreCandidate(candidate, index, cityAnchors, rand));
-const summary = summarize(report);
 
-fs.writeFileSync(outputPath, `${JSON.stringify({ summary, report }, null, 2)}\n`);
+if (isDirectExecution()) {
+  const args = parseArgs(process.argv.slice(2));
+  const inputPath = args.input
+    ? path.resolve(process.cwd(), args.input)
+    : path.resolve(process.cwd(), "github-actions/content/sample-seed-candidates.json");
+  const outputPath = args.out
+    ? path.resolve(process.cwd(), args.out)
+    : path.resolve(process.cwd(), replaceExtension(inputPath, ".report.json"));
 
-console.log(`Validated ${report.length} candidates from ${inputPath}`);
-console.log(`Wrote report to ${outputPath}`);
-console.log(JSON.stringify(summary, null, 2));
+  const candidates = readCandidates(inputPath);
+  const rand = createSeededRandom(`validator:${inputPath}`);
+  const report = candidates.map((candidate, index) => scoreCandidate(candidate, index, cityAnchors, rand));
+  const summary = summarize(report);
 
-if (args["fail-on-error"] && summary.failed > 0) {
-  process.exit(1);
+  fs.writeFileSync(outputPath, `${JSON.stringify({ summary, report }, null, 2)}\n`);
+
+  console.log(`Validated ${report.length} candidates from ${inputPath}`);
+  console.log(`Wrote report to ${outputPath}`);
+  console.log(JSON.stringify(summary, null, 2));
+
+  if (args["fail-on-error"] && summary.failed > 0) {
+    process.exit(1);
+  }
 }
 
 function readCandidates(filePath) {
@@ -39,7 +43,7 @@ function readCandidates(filePath) {
   return JSON.parse(raw);
 }
 
-function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
+export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnchors, randFn = () => 0.5) {
   const content = String(candidate.content ?? "").trim();
   const contentLower = content.toLowerCase();
   const sentences = splitSentences(content);
@@ -580,7 +584,7 @@ function loadWorldContext() {
   }
 }
 
-function mergeContext(cityId) {
+export function mergeContext(cityId) {
   const pulse = pulseContext[cityId] ?? { themes: [], tokens: [], newsTokens: [] };
   const world = worldContext[cityId] ?? [];
   return {
@@ -590,7 +594,7 @@ function mergeContext(cityId) {
   };
 }
 
-function extractContextTokens(text) {
+export function extractContextTokens(text) {
   const stop = new Set([
     "about", "after", "again", "against", "around", "because", "before", "being", "between", "could", "every", "feels",
     "first", "from", "have", "into", "just", "like", "more", "most", "much", "only", "people", "right", "still",
@@ -610,7 +614,7 @@ function extractContextTokens(text) {
   );
 }
 
-function countOverlap(words, contextTokens) {
+export function countOverlap(words, contextTokens) {
   if (!contextTokens.length) return 0;
   const context = new Set(contextTokens);
   return Array.from(new Set(words.map((word) => word.replace(/[^a-z0-9äöüßáéíóúñç]+/gi, ""))))
@@ -634,7 +638,7 @@ function pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit) {
   return "needs_human_edit";
 }
 
-function summarize(report) {
+export function summarize(report) {
   const summary = {
     total: report.length,
     passed: report.filter((entry) => entry.passed).length,
@@ -722,4 +726,9 @@ function parseArgs(argv) {
     index += 1;
   }
   return parsed;
+}
+
+function isDirectExecution() {
+  if (!process.argv[1]) return false;
+  return import.meta.url === pathToFileURL(process.argv[1]).href;
 }
