@@ -39,6 +39,7 @@ jobs:
       MODEL_PROVIDER: openai
       MODEL_NAME: gpt-4o
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       MODEL_COST_GPT_4O_INPUT_PER_1M_USD: "2.5"
@@ -99,6 +100,10 @@ jobs:
 
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
             ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+
+          if [ -n "${XAI_API_KEY:-}" ]; then
+            ARGS+=( --mind-post-provider xai --mind-post-model grok-3-fast )
           fi
 
           if [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then

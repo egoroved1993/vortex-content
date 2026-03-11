@@ -76,6 +76,13 @@ export ANTHROPIC_INPUT_COST_PER_1M_USD="..."
 export ANTHROPIC_OUTPUT_COST_PER_1M_USD="..."
 ```
 
+For xAI / Grok:
+
+```bash
+export XAI_INPUT_COST_PER_1M_USD="..."
+export XAI_OUTPUT_COST_PER_1M_USD="..."
+```
+
 For local dry runs without a provider:
 
 ```bash
@@ -148,6 +155,23 @@ node github-actions/scripts/run-seed-pipeline.mjs \
   --social-input github-actions/content/social-snippets.json
 ```
 
+To keep the main volume on OpenAI but route only `mind_post` jobs through Grok:
+
+```bash
+export MODEL_PROVIDER=openai
+export MODEL_NAME=gpt-4o-mini
+export XAI_API_KEY="..."
+
+node github-actions/scripts/run-seed-pipeline.mjs \
+  --count 120 \
+  --seed launch-mixed-grok-v1 \
+  --mix launch,public,review,forum,signals,news,social \
+  --mind-post-provider xai \
+  --mind-post-model grok-3-fast
+```
+
+This keeps `micro_moment` on the default provider and sends only `mind_post` through Grok as a rougher voice lane.
+
 Notes:
 - `--count` is the total desired mixed job count before generation and validation.
 - If you do not pass per-source counts, the runner allocates the total count across included sources with built-in default weights.
@@ -187,10 +211,12 @@ There are GitHub Actions workflows for the standalone `github-actions` repo:
 - [premium-seed-pipeline.yml](/Users/worldfamousnobody/Vortex/github-actions/.github/workflows/premium-seed-pipeline.yml)
 - schedule: `Tuesday 17:00 UTC` and `Friday 17:00 UTC`
 - schedule default model: `gpt-4o`
+- if `XAI_API_KEY` is present, scheduled premium runs route `mind_post` jobs through `grok-3-fast`
 - purpose: smaller premium refill of harder, stronger content
 
 Required secrets for live runs:
 - `OPENAI_API_KEY`
+- `XAI_API_KEY` if using Grok lanes
 - `SUPABASE_URL`
 - `SUPABASE_SERVICE_KEY`
 

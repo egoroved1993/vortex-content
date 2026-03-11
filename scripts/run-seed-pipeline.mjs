@@ -37,6 +37,10 @@ runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   "--concurrency",
   "2",
   ...(model ? ["--model", model] : []),
+  ...(args["mind-post-provider"] ? ["--mind-post-provider", args["mind-post-provider"]] : []),
+  ...(args["mind-post-model"] ? ["--mind-post-model", args["mind-post-model"]] : []),
+  ...(args["micro-moment-provider"] ? ["--micro-moment-provider", args["micro-moment-provider"]] : []),
+  ...(args["micro-moment-model"] ? ["--micro-moment-model", args["micro-moment-model"]] : []),
   ...(mock ? ["--mock"] : []),
 ]);
 

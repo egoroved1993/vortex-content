@@ -33,10 +33,15 @@ const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "launch-seed-jobs.sample.json");
 const outputPath = path.resolve(process.cwd(), args.out ?? replaceExtension(inputPath, ".candidates.json"));
 const provider = args.provider ?? process.env.MODEL_PROVIDER ?? inferProvider();
-const model =
-  args.model ??
-  process.env.MODEL_NAME ??
-  (provider === "anthropic" ? "claude-3-5-haiku-latest" : "gpt-4o-mini");
+const model = args.model ?? process.env.MODEL_NAME ?? defaultModelForProvider(provider);
+const laneProviderOverrides = {
+  mind_post: args["mind-post-provider"] ?? process.env.MIND_POST_PROVIDER ?? null,
+  micro_moment: args["micro-moment-provider"] ?? process.env.MICRO_MOMENT_PROVIDER ?? null,
+};
+const laneModelOverrides = {
+  mind_post: args["mind-post-model"] ?? process.env.MIND_POST_MODEL ?? null,
+  micro_moment: args["micro-moment-model"] ?? process.env.MICRO_MOMENT_MODEL ?? null,
+};
 const concurrency = Number(args.concurrency ?? 4);
 const limit = args.limit ? Number(args.limit) : undefined;
 const useMock = Boolean(args.mock);
@@ -68,12 +73,13 @@ const mockEndings = [
 const jobs = readJobs(inputPath).slice(0, limit ?? Number.POSITIVE_INFINITY);
 const candidates = await runWithConcurrency(jobs, concurrency, async (job, index) => {
   if (useMock) return buildMockCandidate(job, index);
-  const generated = await generateCandidate(job, { provider, model });
+  const target = resolveTargetModel(job, { provider, model, laneProviderOverrides, laneModelOverrides });
+  const generated = await generateCandidate(job, target);
   return {
     ...job,
     ...generated,
-    modelProvider: provider,
-    modelName: model,
+    modelProvider: target.provider,
+    modelName: target.model,
     generatedAt: new Date().toISOString(),
   };
 });
@@ -103,7 +109,20 @@ async function generateCandidate(job, { provider: activeProvider, model: activeM
   if (activeProvider === "anthropic") {
     return generateWithAnthropic(job, activeModel);
   }
+  if (activeProvider === "xai") {
+    return generateWithXAI(job, activeModel);
+  }
   return generateWithOpenAI(job, activeModel);
+}
+
+function resolveTargetModel(job, { provider: defaultProvider, model: defaultModel, laneProviderOverrides: providerOverrides, laneModelOverrides: modelOverrides }) {
+  const laneProvider = providerOverrides[job.lane] ?? null;
+  const resolvedProvider = laneProvider ?? defaultProvider;
+  const laneModel = modelOverrides[job.lane] ?? null;
+  return {
+    provider: resolvedProvider,
+    model: laneModel ?? (laneProvider ? defaultModelForProvider(resolvedProvider) : defaultModel),
+  };
 }
 
 async function sleep(ms) {
@@ -130,7 +149,7 @@ async function fetchWithRetry(fn, maxRetries = 5) {
   }
 }
 
-function buildSystemPrompt(job) {
+function buildSystemPrompt(job, providerHint = null) {
   const pulse = cityPulseMap[job.cityId];
   let base = "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
   if (pulse) {
@@ -144,6 +163,10 @@ function buildSystemPrompt(job) {
       base += `\n\nReal voices from the city today (use as texture, do NOT copy):\n${pulse.drivers.filter(Boolean).map((d) => `- "${d}"`).join("\n")}`;
     }
     base += "\n\nLet these themes subtly ground the message — make it feel like it was written today, not any day.";
+  }
+  if (providerHint === "xai" && job.lane === "mind_post") {
+    base +=
+      "\n\nVoice constraint for this generation: prefer bluntness over polish. Mild profanity is allowed only if it feels native to the thought. Do not perform edge. Do not turn the message into a stand-up bit, a TED talk, or a neatly finished take.";
   }
   return base;
 }
@@ -167,7 +190,7 @@ async function generateWithOpenAI(job, modelName) {
         messages: [
           {
             role: "system",
-            content: buildSystemPrompt(job),
+            content: buildSystemPrompt(job, "openai"),
           },
           { role: "user", content: job.prompt },
         ],
@@ -182,6 +205,44 @@ async function generateWithOpenAI(job, modelName) {
     const text = payload.choices?.[0]?.message?.content?.trim();
     return normalizeModelJson(job, text, {
       usage: normalizeOpenAIUsage(payload.usage),
+    });
+  });
+}
+
+async function generateWithXAI(job, modelName) {
+  const apiKey = process.env.XAI_API_KEY;
+  if (!apiKey) throw new Error("XAI_API_KEY is required for provider=xai");
+
+  return fetchWithRetry(async () => {
+    const response = await fetch("https://api.x.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: modelName,
+        temperature: 0.95,
+        max_tokens: 350,
+        messages: [
+          {
+            role: "system",
+            content: buildSystemPrompt(job, "xai"),
+          },
+          { role: "user", content: job.prompt },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`xAI error ${response.status}: ${await response.text()}`);
+    }
+
+    const payload = await response.json();
+    const text = payload.choices?.[0]?.message?.content?.trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeXAIUsage(payload.usage),
+      systemFingerprint: payload.system_fingerprint ?? null,
     });
   });
 }
@@ -201,7 +262,7 @@ async function generateWithAnthropic(job, modelName) {
       model: modelName,
       max_tokens: 350,
       temperature: 0.9,
-      system: buildSystemPrompt(job),
+      system: buildSystemPrompt(job, "anthropic"),
       messages: [{ role: "user", content: job.prompt }],
     }),
   });
@@ -217,7 +278,7 @@ async function generateWithAnthropic(job, modelName) {
   });
 }
 
-function normalizeModelJson(job, rawText, { usage = null } = {}) {
+function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = null } = {}) {
   let parsed;
   try {
     parsed = JSON.parse(rawText);
@@ -243,6 +304,7 @@ function normalizeModelJson(job, rawText, { usage = null } = {}) {
     detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? "en"),
     rawModelResponse: rawText,
     usage,
+    systemFingerprint,
   };
 }
 
@@ -361,8 +423,15 @@ function countBy(items, getKey) {
 }
 
 function inferProvider() {
+  if (process.env.XAI_API_KEY && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY) return "xai";
   if (process.env.ANTHROPIC_API_KEY) return "anthropic";
   return "openai";
+}
+
+function defaultModelForProvider(activeProvider) {
+  if (activeProvider === "anthropic") return "claude-3-5-haiku-latest";
+  if (activeProvider === "xai") return "grok-3-fast";
+  return "gpt-4o-mini";
 }
 
 function normalizeOpenAIUsage(usage) {
@@ -382,6 +451,16 @@ function normalizeAnthropicUsage(usage) {
     input_tokens: inputTokens,
     output_tokens: outputTokens,
     total_tokens: inputTokens + outputTokens,
+  };
+}
+
+function normalizeXAIUsage(usage) {
+  if (!usage) return null;
+  return {
+    input_tokens: Number(usage.prompt_tokens ?? 0),
+    output_tokens: Number(usage.completion_tokens ?? 0),
+    total_tokens: Number(usage.total_tokens ?? 0),
+    reasoning_tokens: Number(usage.reasoning_tokens ?? usage.completion_tokens_details?.reasoning_tokens ?? 0),
   };
 }
 
@@ -432,7 +511,7 @@ function summarizeUsage(candidates, { provider, model, useMock }) {
 }
 
 function resolveModelRates({ provider, model }) {
-  const envPrefix = provider === "anthropic" ? "ANTHROPIC" : "OPENAI";
+  const envPrefix = provider === "anthropic" ? "ANTHROPIC" : provider === "xai" ? "XAI" : "OPENAI";
   const specificModelKey = normalizeModelEnvKey(model);
 
   const inputSpecific = parseRate(process.env[`MODEL_COST_${specificModelKey}_INPUT_PER_1M_USD`]);
