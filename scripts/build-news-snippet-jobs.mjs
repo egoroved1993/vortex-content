@@ -13,7 +13,7 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, inferRelevantAnchor, normalizeSourceLanguage } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "news-snippets.json");
@@ -88,7 +88,7 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildAngle(snippet, lane, format),
     moment: buildMoment(snippet),
-    cityAnchor: inferAnchor(snippet, city),
+    cityAnchor: inferAnchor(snippet, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet,
@@ -98,6 +98,7 @@ const jobs = snippets.map((snippet, index) => {
     rawSnippetSourceOrigin: snippet.sourceOrigin,
     rawSnippetPublisher: snippet.publisher,
     rawSnippetPublishedAt: snippet.publishedAt,
+    liveEventClue: buildLiveEventClue(snippet),
     transformationMode: "minimal_intervention_salvage",
   };
 
@@ -192,13 +193,12 @@ function buildMoment(snippet) {
   return `This should feel plausibly written ${when}, by someone living inside the consequence rather than reporting it.`;
 }
 
-function inferAnchor(snippet, city) {
-  const lower = `${snippet.headline} ${snippet.body}`.toLowerCase();
-  const anchors = [
-    ...(city?.defaultAnchors ?? []),
-    ...Object.values(city?.topicAnchors ?? {}).flat(),
-  ];
-  return anchors.find((anchor) => lower.includes(anchor.toLowerCase())) ?? anchors[0] ?? "street-level detail";
+function inferAnchor(snippet, city, topicId) {
+  return inferRelevantAnchor({
+    text: `${snippet.headline} ${snippet.body}`,
+    city,
+    topicId,
+  });
 }
 
 function toneWeight(toneId, snippet) {
@@ -246,11 +246,14 @@ function buildNewsRewritePrompt(job) {
     `Publisher: ${job.rawSnippetPublisher || "unknown"}`,
     ...(job.rawSnippetPublishedAt ? [`Published at: ${job.rawSnippetPublishedAt}`] : []),
     `Source language: ${job.rawSnippetLanguage}`,
+    `Active event clue: ${job.liveEventClue}`,
     `Raw source snippet: ${job.rawSnippet}`,
     ...laneInstructions,
     "Treat the article only as background pressure. The message itself must feel like one resident metabolizing one consequence.",
     "Default move: keep only the people-sized consequence and throw away the article voice.",
     "Prefer one concrete consequence over a full rewrite.",
+    "Keep at least one specific event noun, place, or pressure from the source in the final message.",
+    "Stay inside the same active story. Do not switch to some other plausible city grievance.",
     "No rhetorical questions, no moral, no tidy ending, no article-summary sentence.",
     "Only remove headline/article scaffolding, outlet voice, explanatory filler, and summary transitions.",
     "Preserve the source language unless the only edits are removing journalistic framing.",
@@ -262,6 +265,13 @@ function buildNewsRewritePrompt(job) {
     "Make it feel like one anonymous person living inside this city context today.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
+}
+
+function buildLiveEventClue(snippet) {
+  const parts = [snippet.headline, snippet.body].filter(Boolean);
+  const combined = parts.join(". ").replace(/\s+/g, " ").trim();
+  if (!combined) return "none";
+  return combined.slice(0, 160);
 }
 
 function scoreNewsSnippet(snippet) {

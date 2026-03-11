@@ -205,16 +205,23 @@ function looksGeneric(contentLower) {
 }
 
 function looksTooPolished(sentences, words, contentLower) {
+  const groundedFirstPerson =
+    /\b(i|i'm|i’m|i've|i’ve|my|me|we|our)\b/.test(contentLower) &&
+    /(\d|€|\$|£|queue|platform|rent|coffee|tram|bus|train|metro|tube|bart|muni|pub|barista|landlord|roommate|station|suitcase|delay|strike|line|fog)/i.test(contentLower);
+
   if (sentences.length === 2) {
     const first = wordCount(sentences[0]);
     const second = wordCount(sentences[1]);
-    if (first >= 8 && first <= 18 && Math.abs(first - second) <= 2) {
+    if (!groundedFirstPerson && first >= 8 && first <= 18 && Math.abs(first - second) <= 2) {
       return true;
     }
   }
 
+  const polishedConnector = /(at least|meanwhile|almost makes|in a way|as if|as though)/i.test(contentLower);
+  const vagueConnector = /\bsomehow\b/i.test(contentLower) && !groundedFirstPerson;
+
   return (
-    /(at least|meanwhile|somehow|almost makes|in a way|as if|as though)/i.test(contentLower) &&
+    (polishedConnector || vagueConnector) &&
     words.length >= 20 &&
     !/[?!]/.test(contentLower)
   );

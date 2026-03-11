@@ -667,6 +667,7 @@ function sanitizeMinimalSalvageContent(job, candidateText) {
   }
   if (!modelCandidate) return sourceCandidate;
   if (!hasEnoughSourceOverlap(modelCandidate, sourceCandidate)) return sourceCandidate;
+  if (hasUnbalancedQuote(modelCandidate)) return sourceCandidate;
   if (looksTooComposed(modelCandidate)) return sourceCandidate;
   if (modelCandidate.length > sourceCandidate.length + 24) return sourceCandidate;
   if (countSentences(modelCandidate) > Math.max(2, countSentences(sourceCandidate))) return sourceCandidate;
@@ -683,7 +684,11 @@ function sanitizeNewsContent(job, candidateText) {
 
   const bounded = sanitizeSourceLikeText(candidateText, maxChars);
   if (!bounded) return buildNewsFallbackContent(job, sourceCandidate);
+  if (hasUnbalancedQuote(bounded)) return buildNewsFallbackContent(job, sourceCandidate);
   if (looksArticleish(bounded) || looksTooComposed(bounded)) return buildNewsFallbackContent(job, sourceCandidate);
+  if (!hasNewsSourceTrace(job, bounded) && !hasEnoughSourceOverlap(bounded, sourceCandidate)) {
+    return buildNewsFallbackContent(job, sourceCandidate);
+  }
   if (!hasHumanTrace(bounded) && !hasEnoughSourceOverlap(bounded, sourceCandidate)) {
     return buildNewsFallbackContent(job, sourceCandidate);
   }
@@ -959,6 +964,9 @@ function buildLocalRepairVariants(job, text) {
   const overheard = buildOverheardRepair(job, basis);
   if (overheard) variants.push(overheard);
 
+  const firstPerson = buildLiveFirstPersonRepair(job, basis);
+  if (firstPerson) variants.push(firstPerson);
+
   if (job.sourceFamily === "news") {
     const resident = buildResidentNewsRepair(job, basis);
     if (resident) variants.push(resident);
@@ -984,41 +992,63 @@ function buildFreshAnchoredRepair(job, text) {
 function buildOverheardRepair(job, text) {
   const candidate = cleanGeneratedText(text).replace(/[.!?]+$/g, "").trim();
   if (!candidate) return "";
-  if (/\b(i|i'm|i’m|i've|i’ve|my|me|we|our|yo|mi|ich|em)\b/i.test(candidate) || /[“”"'`]/.test(candidate)) return "";
+  if (/\b(i|i'm|i’m|i've|i’ve|my|me|we|our|yo|mi|ich|em)\b/i.test(candidate) || /[“”"]/u.test(candidate)) return "";
+  if (!sourceHasDialogue(job)) return "";
 
   const prefix = overheardPrefixFor(job);
   return enforceCharacterLimit(`${prefix}"${candidate}"`, job.lane === "mind_post" ? 220 : 180);
+}
+
+function buildLiveFirstPersonRepair(job, text) {
+  if (!["news", "world", "bridge", "signals"].includes(job.sourceFamily)) return "";
+
+  let candidate = cleanGeneratedText(text).replace(/^[,.\s]+/, "").trim();
+  if (!candidate) return "";
+  if (hasHumanTrace(candidate)) return "";
+  if (hasUnbalancedQuote(candidate)) return "";
+
+  const prefix = firstPersonPrefixFor(job);
+  candidate = `${prefix} ${candidate}`.replace(/\s+/g, " ").trim();
+  return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 180);
 }
 
 function buildResidentNewsRepair(job, text) {
   const lower = `${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
   const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
   const prefix = freshnessPrefixFor(job);
+  const eventPhrase = inferNewsEventPhrase(job);
 
   if (/\b(strike|delay|service|platform|tube|muni|bart|u-bahn|ubahn|ringbahn|tram|metro|bus|fare)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `${prefix} on ${anchor} i got to the platform and the delay mood was already there before the board caught up.`,
+      `${prefix} at ${anchor} i got there and the ${eventPhrase || "delay"} mood was already there before the board caught up.`,
       job.lane === "mind_post" ? 220 : 180
     );
   }
 
   if (/\b(rent|housing|lloguer|lloguers|alquiler|miete|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `${prefix} near ${anchor} i caught myself doing the rent math again and hating how normal that feels.`,
+      `${prefix} near ${anchor} i read another ${eventPhrase || "housing"} story and immediately started doing the rent math again.`,
       job.lane === "mind_post" ? 220 : 180
     );
   }
 
   if (/\b(touris|visitor|hotel|suitcase|cruise)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `${prefix} near ${anchor} you can tell it's another tourism day because the suitcase traffic starts before coffee.`,
+      `${prefix} near ${anchor} i knew the ${eventPhrase || "tourism"} thing was real when the suitcase traffic started before coffee.`,
       job.lane === "mind_post" ? 220 : 180
     );
   }
 
   if (/\b(mural|8m|festival|artist|concert|gallery)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `${prefix} in the metro i watched more people stop for the new mural than for the actual platform flow and everyone was still late.`,
+      `${prefix} in the metro i watched more people stop for the ${eventPhrase || "new mural"} than for the actual platform flow and everyone was still late.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (eventPhrase) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i read the ${eventPhrase} update and hated how quickly it already felt like my block.`,
       job.lane === "mind_post" ? 220 : 180
     );
   }
@@ -1074,6 +1104,11 @@ function hasAnchorSignal(job, text) {
   );
 }
 
+function sourceHasDialogue(job) {
+  const raw = `${job.rawSnippet ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`;
+  return /["“”]/.test(raw) || /\b(i heard|someone said|he said|she said|dijo|hat gesagt)\b/i.test(raw);
+}
+
 function injectAnchor(job, text) {
   const candidate = cleanGeneratedText(text);
   if (!candidate) return "";
@@ -1112,6 +1147,20 @@ function overheardPrefixFor(job) {
       return `avui a ${job.cityName ?? "la ciutat"} he sentit: `;
     default:
       return `${freshnessPrefixFor(job)} on ${anchor} i heard someone say `;
+  }
+}
+
+function firstPersonPrefixFor(job) {
+  const anchor = cleanGeneratedText(job.cityAnchor ?? job.cityName ?? "this block");
+  switch (job.rawSnippetLanguage) {
+    case "de":
+      return `heute bei ${anchor} habe ich gemerkt,`;
+    case "es":
+      return `hoy por ${anchor} me pasó que`;
+    case "ca":
+      return `avui per ${anchor} m'ha passat que`;
+    default:
+      return `${freshnessPrefixFor(job)} near ${anchor} i noticed`;
   }
 }
 
@@ -1180,6 +1229,68 @@ function looksTooComposed(text) {
 function looksArticleish(text) {
   const lower = cleanGeneratedText(text).toLowerCase();
   return /(what you need to know|according to|officials|residents face|commuters face|announced|published|council|mayor|exact dates|urge caution)/.test(lower);
+}
+
+function inferNewsEventPhrase(job) {
+  const lower = `${job.liveEventClue ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
+  const phrasePatterns = [
+    /victoria line/,
+    /tube strikes?/,
+    /croydon tram/,
+    /ringbahn/,
+    /u-?bahn/,
+    /muni(?: metro)?/,
+    /bart/,
+    /rodalies/,
+    /tmb/,
+    /airbnb/,
+    /housing/,
+    /rent/,
+    /touris\w+/,
+    /suitcase traffic/,
+    /cruise/,
+    /weather/,
+    /fog/,
+    /heat/,
+    /storm/,
+    /bridge/,
+    /fare/,
+    /delay/,
+    /strike/,
+    /platform/,
+  ];
+
+  for (const pattern of phrasePatterns) {
+    const match = lower.match(pattern);
+    if (match?.[0]) return match[0];
+  }
+
+  const cleaned = cleanGeneratedText(job.liveEventClue ?? job.rawSnippetHeadline ?? "");
+  if (!cleaned) return "";
+  return cleaned.slice(0, 40).toLowerCase();
+}
+
+function hasNewsSourceTrace(job, text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  if (!lower) return false;
+
+  const eventPhrase = inferNewsEventPhrase(job);
+  if (eventPhrase && lower.includes(eventPhrase)) return true;
+
+  const sourceTokens = tokenSet(`${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`);
+  const candidateTokens = tokenSet(lower);
+  let overlap = 0;
+  for (const token of sourceTokens) {
+    if (candidateTokens.has(token)) overlap += 1;
+    if (overlap >= 2) return true;
+  }
+
+  return false;
+}
+
+function hasUnbalancedQuote(text) {
+  const quoteCount = (cleanGeneratedText(text).match(/["“”]/g) ?? []).length;
+  return quoteCount === 1;
 }
 
 function hasHumanTrace(text) {

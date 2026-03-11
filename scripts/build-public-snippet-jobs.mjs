@@ -3,7 +3,6 @@ import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
 import {
   buildPrompt,
-  cities,
   createSeededRandom,
   getCompatibleTextures,
   getCity,
@@ -15,13 +14,14 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { normalizeSourceLanguage } from "./source-utils.mjs";
+import { inferRelevantAnchor, normalizeSourceLanguage } from "./source-utils.mjs";
 import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "public-human-comments.json");
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "public-human-snippet-jobs.json");
 const limit = Number(args.limit ?? 200);
+const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 4);
 const seed = args.seed ?? "public-human-snippets";
 const rand = createSeededRandom(seed);
 
@@ -31,7 +31,7 @@ const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
     ...snippet,
     liveAlignment: scorePublicSnippet(snippet),
   }))
-  .filter((snippet) => snippet.liveAlignment.score >= 2)
+  .filter((snippet) => snippet.liveAlignment.score >= minLiveAlignmentScore)
   .sort((left, right) => compareByLiveAlignment(left, right, rand))
   .slice(0, limit);
 const jobs = snippets.map((snippet, index) => {
@@ -85,7 +85,7 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildSnippetAngle(snippet, lane, format),
     moment: buildMomentFromSnippet(snippet),
-    cityAnchor: inferAnchor(snippet.body, city),
+    cityAnchor: inferAnchor(snippet.body, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
@@ -218,13 +218,12 @@ function buildMomentFromSnippet(snippet) {
     : "The speaker is reacting to one city moment that stuck to them.";
 }
 
-function inferAnchor(body, city) {
-  const lower = body.toLowerCase();
-  const anchors = [
-    ...(city?.defaultAnchors ?? []),
-    ...Object.values(city?.topicAnchors ?? {}).flat(),
-  ];
-  return anchors.find((anchor) => lower.includes(anchor.toLowerCase())) ?? anchors[0] ?? cities.find((entry) => entry.id === city?.id)?.defaultAnchors?.[0] ?? "street-level detail";
+function inferAnchor(body, city, topicId) {
+  return inferRelevantAnchor({
+    text: body,
+    city,
+    topicId,
+  });
 }
 
 function toneWeight(toneId, text) {

@@ -70,6 +70,16 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   reportPath,
   "--out",
   payloadPath,
+  "--min-ambiguity",
+  "4",
+  "--min-news-fit",
+  "4",
+  "--min-composite-score",
+  "4",
+  "--max-per-city",
+  "1",
+  "--max-total",
+  "8",
 ]);
 
 if (upload) {
