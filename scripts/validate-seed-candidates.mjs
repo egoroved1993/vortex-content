@@ -75,6 +75,7 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   const craftedPayoff = looksCraftedPayoff(contentLower, sentences);
   const stagedObservation = looksStagedObservation(contentLower);
   const atmosphericPoetry = looksAtmosphericPoetry(contentLower);
+  const performativeSnark = looksPerformativeSnark(contentLower);
 
   const issues = [];
   if (!content) issues.push("empty_content");
@@ -91,6 +92,7 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   if (craftedPayoff) issues.push("crafted_payoff");
   if (stagedObservation) issues.push("staged_observation");
   if (atmosphericPoetry) issues.push("atmospheric_poetry");
+  if (performativeSnark) issues.push("performative_snark");
   if (!stickySignal) issues.push("low_stickiness");
   if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
   if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
@@ -155,6 +157,7 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
     !issues.includes("crafted_payoff") &&
     !issues.includes("staged_observation") &&
     !issues.includes("atmospheric_poetry") &&
+    !issues.includes("performative_snark") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long");
@@ -432,6 +435,24 @@ function looksAtmosphericPoetry(contentLower) {
   return fragments.some((fragment) => contentLower.includes(fragment)) || weatherMetaphor;
 }
 
+function looksPerformativeSnark(contentLower) {
+  const fragments = [
+    "spiritually overcaffeinated",
+    "cosplay moving to",
+    "like life rafts",
+    "performance art",
+    "exact energy of a place",
+    "owed him rent",
+    "personally betrayed by software",
+  ];
+
+  const tweeConstruction =
+    /(spiritually|cosplay|energy of a place|life rafts|owed .* rent|performance art)/.test(contentLower) &&
+    /(coffee|muni|bart|laptop|startup|line|tourists|cafe)/.test(contentLower);
+
+  return fragments.some((fragment) => contentLower.includes(fragment)) || tweeConstruction;
+}
+
 function buildCityAnchorTokens() {
   return Object.fromEntries(
     cities.map((city) => {
@@ -541,7 +562,7 @@ function requiresFreshContext(candidate) {
 }
 
 function requiresNewsFit(candidate) {
-  return ["news", "social", "world", "bridge"].includes(candidate.sourceFamily);
+  return ["news", "world", "bridge"].includes(candidate.sourceFamily);
 }
 
 function pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit) {

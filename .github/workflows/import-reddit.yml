@@ -10,6 +10,8 @@ on:
 jobs:
   import:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
@@ -21,7 +23,24 @@ jobs:
           node-version: '20'
 
       - name: Fetch Reddit & import to Supabase
+        working-directory: github-actions
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: node scripts/fetch-reddit.mjs
+
+      - name: Refresh human comments corpus
+        working-directory: github-actions
+        run: node scripts/fetch-reddit-comments.mjs
+
+      - name: Commit updated corpus
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-actions/content/public-human-comments.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: refresh human comments corpus $(date -u +%Y-%m-%d)"
+            git push
+          fi

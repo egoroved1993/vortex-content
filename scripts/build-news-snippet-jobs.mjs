@@ -35,9 +35,9 @@ const jobs = snippets.map((snippet, index) => {
   const topic = getTopic(topicId);
   const sourceProfile = pickWeighted(
     [
-      { id: "ambiguous", weight: 0.44 },
-      { id: "human_like", weight: 0.42 },
-      { id: "slightly_too_clean", weight: 0.14 },
+      { id: "ambiguous", weight: 0.38 },
+      { id: "human_like", weight: 0.56 },
+      { id: "slightly_too_clean", weight: 0.06 },
     ],
     rand
   ).id;
@@ -51,8 +51,8 @@ const jobs = snippets.map((snippet, index) => {
     : null;
   const gameSource = pickWeighted(
     [
-      { id: "human", weight: 0.45 },
-      { id: "ai", weight: 0.55 },
+      { id: "human", weight: 0.58 },
+      { id: "ai", weight: 0.42 },
     ],
     rand
   ).id;
@@ -241,11 +241,15 @@ function buildNewsRewritePrompt(job) {
     `Source language: ${job.rawSnippetLanguage}`,
     `Raw source snippet: ${job.rawSnippet}`,
     ...laneInstructions,
-    "Default move: keep the source context and wording as intact as possible.",
+    "Treat the article only as background pressure. The message itself must feel like one resident metabolizing one consequence.",
+    "Default move: keep only the people-sized consequence and throw away the article voice.",
     "Only remove headline/article scaffolding, outlet voice, explanatory filler, and summary transitions.",
     "Preserve the source language unless the only edits are removing journalistic framing.",
+    "Use first person or one overheard line unless the source already implies a stronger human stance.",
+    "Keep it shorter than the source. Micro-moment: max 180 chars. Mind-post: max 220 chars.",
     "Do not invent a bigger theory than the source already implies.",
     "Do not sound like a reporter, newsletter, civic explainer, or policy thread.",
+    "Do not use metaphors, civic-summary language, or 'just another day' framing.",
     "Make it feel like one anonymous person living inside this city context today.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");

@@ -8,7 +8,7 @@ const CITIES = [
   { id: 'london',    subs: ['london', 'londonlife', 'CasualUK', 'AskUK'], keyword: null },
   { id: 'berlin',    subs: ['berlin', 'germany', 'AskAGerman'],            keyword: null },
   { id: 'sf',        subs: ['sanfrancisco', 'bayarea', 'AskSF'],           keyword: null },
-  { id: 'barcelona', subs: ['barcelona', 'expats', 'digitalnomad', 'solotravel'], keyword: null },
+  { id: 'barcelona', subs: ['barcelona', 'barcelonaexpats', 'SpainExpats', 'digitalnomad'], keyword: 'barcelona' },
 ]
 
 // Common English function words — if text has enough, it's English
