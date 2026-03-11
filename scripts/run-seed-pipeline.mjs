@@ -146,6 +146,8 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
     signals: args["signal-count"],
     news: args["news-count"],
     social: args["social-count"],
+    world: args["world-count"],
+    bridge: args["bridge-count"],
   });
 
   const baseJobsPath = args.jobs ? path.resolve(process.cwd(), args.jobs) : resolveProjectPath("content", "pipeline-jobs.json");
@@ -258,18 +260,50 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
         `${seed}:social`,
       ],
     },
+    world: {
+      targetCount: allocations.world ?? 0,
+      script: path.join(projectRoot, "scripts", "build-world-trend-jobs.mjs"),
+      outPath: perSourcePath("world"),
+      args: (seed) => [
+        "--input",
+        args["world-input"] ? path.resolve(process.cwd(), args["world-input"]) : resolveProjectPath("content", "world-trends.json"),
+        "--out",
+        perSourcePath("world"),
+        "--limit",
+        String(allocations.world ?? 0),
+        "--seed",
+        `${seed}:world`,
+      ],
+    },
+    bridge: {
+      targetCount: allocations.bridge ?? 0,
+      script: path.join(projectRoot, "scripts", "build-world-bridge-jobs.mjs"),
+      outPath: perSourcePath("bridge"),
+      args: (seed) => [
+        "--input",
+        args["world-input"] ? path.resolve(process.cwd(), args["world-input"]) : resolveProjectPath("content", "world-trends.json"),
+        "--out",
+        perSourcePath("bridge"),
+        "--limit",
+        String(allocations.bridge ?? 0),
+        "--seed",
+        `${seed}:bridge`,
+      ],
+    },
   };
 }
 
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
-    launch: 0.24,
-    public: 0.2,
-    review: 0.16,
-    forum: 0.14,
-    signals: 0.1,
+    launch: 0.2,
+    public: 0.18,
+    review: 0.15,
+    forum: 0.12,
+    signals: 0.09,
     news: 0.08,
     social: 0.08,
+    world: 0.05,
+    bridge: 0.05,
   };
   const counts = {};
   let remaining = Number(totalCount);
@@ -307,7 +341,7 @@ function replaceExtension(filePath, suffixExtension) {
 }
 
 function parseMix(raw) {
-  const allowed = new Set(["launch", "public", "review", "forum", "signals", "news", "social"]);
+  const allowed = new Set(["launch", "public", "review", "forum", "signals", "news", "social", "world", "bridge"]);
   const values = String(raw)
     .split(",")
     .map((value) => value.trim())

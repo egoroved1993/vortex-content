@@ -20,6 +20,12 @@ This folder holds the content operating system for Vortex: mixed-source seeding,
   Converts current city-news snippets into Vortex jobs without turning them into article copy.
 - `github-actions/scripts/build-social-snippet-jobs.mjs`
   Converts short social posts into Vortex jobs with minimal intervention so live context survives the rewrite.
+- `github-actions/scripts/refresh-world-trends.mjs`
+  Uses Grok + X search to collect the world's hottest live discussions into a structured digest for Vortex.
+- `github-actions/scripts/build-world-trend-jobs.mjs`
+  Converts world-trend digest items into city-feed `mind_post` jobs where global conversation leaks into local life.
+- `github-actions/scripts/build-world-bridge-jobs.mjs`
+  Converts world-trend digest items into `micro_moment` jobs where a global topic shows up inside one city-sized scene.
 - `github-actions/scripts/generate-seed-candidates.mjs`
   Calls a model provider or mock generator to turn jobs into candidate messages.
 - `github-actions/scripts/validate-seed-candidates.mjs`
@@ -139,6 +145,8 @@ Available source families:
 - `signals`
 - `news`
 - `social`
+- `world`
+- `bridge`
 
 Example:
 
@@ -152,7 +160,8 @@ node github-actions/scripts/run-seed-pipeline.mjs \
   --forum-input github-actions/content/forum-snippets.json \
   --signals-input github-actions/content/city-signals.json \
   --news-input github-actions/content/news-snippets.json \
-  --social-input github-actions/content/social-snippets.json
+  --social-input github-actions/content/social-snippets.json \
+  --world-input github-actions/content/world-trends.json
 ```
 
 To keep the main volume on OpenAI but route only `mind_post` jobs through Grok:
@@ -183,6 +192,8 @@ Notes:
   - `--signal-count`
   - `--news-count`
   - `--social-count`
+  - `--world-count`
+  - `--bridge-count`
 - For signals you can also control:
   - `--signal-jobs-per-snapshot`
 
@@ -199,6 +210,7 @@ node github-actions/scripts/run-seed-pipeline.mjs \
   --signals-input github-actions/content/sample-city-signals.json \
   --news-input github-actions/content/news-snippets.json \
   --social-input github-actions/content/social-snippets.json \
+  --world-input github-actions/content/world-trends.json \
   --mock
 ```
 
@@ -206,6 +218,7 @@ There are GitHub Actions workflows for the standalone `github-actions` repo:
 - [mixed-seed-pipeline.yml](/Users/worldfamousnobody/Vortex/github-actions/.github/workflows/mixed-seed-pipeline.yml)
 - schedule: `14:00 UTC` and `22:00 UTC`
 - schedule default model: `gpt-4o-mini`
+- if `XAI_API_KEY` is present, workflows refresh `world-trends.json` from live X context before running
 - purpose: daily freshness and cheap volume
 - manual dispatch supports overriding `count`, `model`, `upload`, `mix`, and `city_focus`
 - [premium-seed-pipeline.yml](/Users/worldfamousnobody/Vortex/github-actions/.github/workflows/premium-seed-pipeline.yml)
@@ -219,6 +232,21 @@ Required secrets for live runs:
 - `XAI_API_KEY` if using Grok lanes
 - `SUPABASE_URL`
 - `SUPABASE_SERVICE_KEY`
+
+## World Layer
+
+`world-trends.json` is the committed fallback corpus for the global-over-city layer. In live mode, `refresh-world-trends.mjs` can replace it with a fresh Grok/X digest.
+
+This layer is meant to create a controlled amount of FOMO:
+- `world` jobs are short `mind_post` reactions where today's global conversation leaks into one city's headspace
+- `bridge` jobs are `micro_moment` scenes where the world trend becomes visible in local daily life
+
+The product rule is:
+- city stays primary
+- world stays secondary
+- bridge is the connective tissue
+
+So `world + bridge` should be a thin overlayer, not the majority of the feed.
 
 ## Multilingual Context
 

@@ -63,13 +63,13 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "count=60" >> "$GITHUB_OUTPUT"
             echo "upload=true" >> "$GITHUB_OUTPUT"
-            echo "mix=launch,public,review,forum,signals,news,social" >> "$GITHUB_OUTPUT"
+            echo "mix=launch,public,review,forum,signals,news,social,world,bridge" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
             echo "seed=premium-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
           else
             echo "count=${{ inputs.count || '60' }}" >> "$GITHUB_OUTPUT"
             echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
-            echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social' }}" >> "$GITHUB_OUTPUT"
+            echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social,world,bridge' }}" >> "$GITHUB_OUTPUT"
             echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
             echo "seed=premium-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
           fi
@@ -78,9 +78,14 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-reddit-comments.mjs --per-city 80 --out content/public-human-comments.json
 
+      - name: Refresh world trends from X
+        if: env.XAI_API_KEY != ''
+        continue-on-error: true
+        run: node scripts/refresh-world-trends.mjs --out content/world-trends.json
+
       - name: Show source corpus sizes
         run: |
-          node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json','content/news-snippets.json','content/social-snippets.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
+          node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json','content/news-snippets.json','content/social-snippets.json','content/world-trends.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
 
       - name: Run premium seed pipeline
         shell: bash
@@ -96,6 +101,7 @@ jobs:
             --signals-input content/city-signals.json
             --news-input content/news-snippets.json
             --social-input content/social-snippets.json
+            --world-input content/world-trends.json
           )
 
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
@@ -126,6 +132,8 @@ jobs:
             content/pipeline-jobs.signals.json
             content/pipeline-jobs.news.json
             content/pipeline-jobs.social.json
+            content/pipeline-jobs.world.json
+            content/pipeline-jobs.bridge.json
             content/pipeline-candidates.json
             content/pipeline-candidates.report.json
             content/pipeline-payload.json
