@@ -161,7 +161,7 @@ function buildSystemPrompt(job, providerHint = null) {
     if (pulse.moodSummary) base += ` ${pulse.moodSummary}`;
     if (pulse.newsHeadlines?.length) {
       base += `\n\nReal news happening in ${job.cityId} today:\n${pulse.newsHeadlines.map((h) => `- ${h}`).join("\n")}`;
-      base += "\n\nThe message you generate should feel like it was written by someone who lives in this news context. Don't mention headlines directly — let them bleed into the texture: the frustration, the small detail, the overheard thing.";
+      base += "\n\nCRITICAL: the message MUST feel written by someone reacting to this news context today. You can reference specific events, consequences, or feelings caused by these headlines — but write it as a personal observation, not a news summary. A message that could have been written any week fails this requirement.";
     } else if (pulse.drivers?.length) {
       base += `\n\nReal voices from the city today (use as texture, do NOT copy):\n${pulse.drivers.filter(Boolean).map((d) => `- "${d}"`).join("\n")}`;
     }
@@ -590,3 +590,4 @@ function parseArgs(argv) {
   }
   return parsed;
 }
+
