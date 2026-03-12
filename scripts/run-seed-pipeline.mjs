@@ -84,11 +84,19 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "8",
 ]);
 
+const payload = readJson(payloadPath);
+const payloadRows = Array.isArray(payload.rows) ? payload.rows : [];
+
 if (upload) {
-  runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
-    "--input",
-    payloadPath,
-  ]);
+  if (payloadRows.length > 0) {
+    runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), []);
+    runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
+      "--input",
+      payloadPath,
+    ]);
+  } else {
+    console.warn("Prepared payload is empty; keeping current generated feed in place and skipping upload");
+  }
   if (Boolean(args["upload-city-pulse"])) {
     runNode(path.join(projectRoot, "scripts", "upload-city-pulse-payload.mjs"), [
       "--input",
@@ -149,6 +157,7 @@ function runNode(scriptPath, scriptArgs) {
     process.exit(result.status ?? 1);
   }
 }
+
 
 function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
   const allocations = allocateCounts(totalCount, selectedSources, {
