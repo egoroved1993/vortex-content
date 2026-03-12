@@ -500,15 +500,26 @@ function looksClonedTemplate(contentLower) {
 }
 
 function looksOffTopicSports(contentLower, cityId) {
-  // Teams not local to the city
-  const nonLocalTeams = {
-    london:    /(ravens|kobe|bam adebayo|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys|muni|bart)/i,
-    barcelona: /(ravens|kobe|bam adebayo|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys|\bnfl\b)/i,
-    berlin:    /(ravens|kobe|bam adebayo|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys|\bnfl\b|\bnba\b)/i,
-    sf:        /(ravens|kobe|bam adebayo|celtics|heat|bulls|knicks|patriots|cowboys)/i,
+  // Local sports context per city — references to these are always fine
+  const localSports = {
+    sf:        /(warriors|giants|49ers|niners|a's|athletics|sharks|golden state|chase center|oracle park|levi's)/i,
+    london:    /(arsenal|chelsea|tottenham|spurs|west ham|palace|fulham|premier league|wembley|lords|twickenham|nfl london|nfl game|at wembley)/i,
+    barcelona: /(barça|barca|barçelona|espanyol|la liga|camp nou|nou camp|tennis|padel|rafa|nadal|pedri|lewandowski|gavi|fcb|primera)/i,
+    berlin:    /(hertha|union berlin|alba berlin|bundesliga|bvb|dortmund|werder|bundesliga|dfb|dfv)/i,
   };
-  const pattern = nonLocalTeams[cityId];
-  if (pattern && pattern.test(contentLower)) return true;
+
+  // US-only teams/athletes with no meaningful connection to European cities
+  const clearlyUsOnly = /(new england patriots|dallas cowboys|green bay packers|kansas city chiefs|buffalo bills|denver broncos|chicago bulls|boston celtics|miami heat|new york knicks|bam adebayo|jayson tatum)/i;
+
+  const localPattern = localSports[cityId];
+
+  // If it mentions something locally relevant, it's fine
+  if (localPattern && localPattern.test(contentLower)) return false;
+
+  // Block clearly US-only references in European cities
+  const europeanCities = ["london", "barcelona", "berlin"];
+  if (europeanCities.includes(cityId) && clearlyUsOnly.test(contentLower)) return true;
+
   return false;
 }
 
