@@ -549,6 +549,7 @@ function buildRepairUserPrompt(job, weakDraft, assessment) {
     `Lane: ${job.lane}`,
     `City anchor: ${job.cityAnchor ?? "none"}`,
     `Source language: ${job.rawSnippetLanguage ?? "en"}`,
+    ...(job.sourceFamily === "news" ? [`Event phrase to preserve: ${inferNewsEventPhrase(job) || "none"}`] : []),
     `Raw source: ${sourceText || "(empty)"}`,
     `Weak draft: ${cleanGeneratedText(weakDraft) || "(empty)"}`,
     `Missing signals: ${assessment.missing.join(", ") || "none"}`,
@@ -710,36 +711,44 @@ function buildNewsFallbackContent(job, sourceCandidate) {
   const source = sourceCandidate || sanitizeSourceLikeText(body || headline, maxChars);
   const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
   const lower = `${headline} ${body}`.toLowerCase();
+  const eventPhrase = spokenNewsEventPhrase(job);
+  const prefix = freshnessPrefixFor(job);
 
   if (/\b(strike|delays?|closure|cancelled|service|platform|tube|muni|bart|u-bahn|ringbahn|tram|metro)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `another ${anchor} morning where the platform already looks defeated before the delay notice finishes loading.`,
+      `${prefix} at ${anchor} the ${eventPhrase || "delay"} mood was already there before the board caught up.`,
       maxChars
     );
   }
   if (/\b(rent|housing|homes|build-to-rent|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `every housing story here eventually lands in the same place: you look around ${anchor} and start recalculating who this city is still for.`,
+      `${prefix} near ${anchor} the ${eventPhrase || "housing"} update had me doing the rent math again.`,
       maxChars
     );
   }
   if (/\b(touris|visitor|hotel|cruise|suitcase)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `the tourism story never stays abstract once you're trying to get past another suitcase jam near ${anchor}.`,
+      `${prefix} near ${anchor} the ${eventPhrase || "tourism"} thing was already visible in the suitcase traffic.`,
       maxChars
     );
   }
   if (/\b(weather|rain|flood|fog|heat|cold|storm)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `weather here just means the route around ${anchor} gets more annoying than it needed to be and everyone acts like that is normal.`,
+      `${prefix} near ${anchor} the ${eventPhrase || "weather"} update was already written on everyone's face.`,
       maxChars
     );
   }
   if (source && hasHumanTrace(source) && !looksArticleish(source)) {
     return source;
   }
-  if (source) {
+  if (source && !looksArticleish(source) && hasNewsSourceTrace(job, source)) {
     return enforceCharacterLimit(source, maxChars);
+  }
+  if (eventPhrase) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} the ${eventPhrase} update already felt like my block.`,
+      maxChars
+    );
   }
 
   return buildFallbackContent(job);
@@ -1016,7 +1025,7 @@ function buildResidentNewsRepair(job, text) {
   const lower = `${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
   const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
   const prefix = freshnessPrefixFor(job);
-  const eventPhrase = inferNewsEventPhrase(job);
+  const eventPhrase = spokenNewsEventPhrase(job);
 
   if (/\b(strike|delay|service|platform|tube|muni|bart|u-bahn|ubahn|ringbahn|tram|metro|bus|fare)\b/.test(lower)) {
     return enforceCharacterLimit(
@@ -1027,7 +1036,7 @@ function buildResidentNewsRepair(job, text) {
 
   if (/\b(rent|housing|lloguer|lloguers|alquiler|miete|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
     return enforceCharacterLimit(
-      `${prefix} near ${anchor} i read another ${eventPhrase || "housing"} story and immediately started doing the rent math again.`,
+      `${prefix} near ${anchor} the ${eventPhrase || "housing"} update had me doing the rent math again.`,
       job.lane === "mind_post" ? 220 : 180
     );
   }
@@ -1048,7 +1057,7 @@ function buildResidentNewsRepair(job, text) {
 
   if (eventPhrase) {
     return enforceCharacterLimit(
-      `${prefix} near ${anchor} i read the ${eventPhrase} update and hated how quickly it already felt like my block.`,
+      `${prefix} near ${anchor} the ${eventPhrase} update already felt like my block.`,
       job.lane === "mind_post" ? 220 : 180
     );
   }
@@ -1232,17 +1241,26 @@ function looksArticleish(text) {
 }
 
 function inferNewsEventPhrase(job) {
+  const explicit = cleanGeneratedText(job.eventPhrase ?? "");
+  if (explicit) return explicit;
+
   const lower = `${job.liveEventClue ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
   const phrasePatterns = [
+    /(\d[\d,.-]*-home [a-z ]+pipeline)/,
+    /(dream home[^.]{0,40}four apartments)/,
+    /(railyard[^.]{0,40}thousands of homes)/,
+    /(azizification[^.]{0,25}housing)/,
     /victoria line/,
     /tube strikes?/,
-    /croydon tram/,
+    /(croydon tram[^.]{0,30}cars on track)/,
     /ringbahn/,
     /u-?bahn/,
+    /(muni(?: metro)?[^.]{0,24}floppy disks)/,
     /muni(?: metro)?/,
     /bart/,
     /rodalies/,
     /tmb/,
+    /(habitatge i lloguers)/,
     /airbnb/,
     /housing/,
     /rent/,
@@ -1274,8 +1292,16 @@ function hasNewsSourceTrace(job, text) {
   const lower = cleanGeneratedText(text).toLowerCase();
   if (!lower) return false;
 
-  const eventPhrase = inferNewsEventPhrase(job);
+  const eventPhrase = cleanGeneratedText(inferNewsEventPhrase(job)).toLowerCase();
   if (eventPhrase && lower.includes(eventPhrase)) return true;
+
+  const eventTokens = newsEventTokens(job);
+  if (eventTokens.length > 0) {
+    const candidateTokens = tokenSet(lower);
+    const matchedEventTokens = eventTokens.filter((token) => candidateTokens.has(token));
+    if (matchedEventTokens.length >= 1) return true;
+    return false;
+  }
 
   const sourceTokens = tokenSet(`${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`);
   const candidateTokens = tokenSet(lower);
@@ -1291,6 +1317,36 @@ function hasNewsSourceTrace(job, text) {
 function hasUnbalancedQuote(text) {
   const quoteCount = (cleanGeneratedText(text).match(/["“”]/g) ?? []).length;
   return quoteCount === 1;
+}
+
+function spokenNewsEventPhrase(job) {
+  const eventPhrase = cleanGeneratedText(inferNewsEventPhrase(job));
+  if (!eventPhrase) return "";
+
+  return eventPhrase
+    .replace(/^news\s*-\s*/i, "")
+    .replace(/\b(london|berlin|barcelona|san francisco)\b/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .replace(/^[\s:,-]+|[\s:,-]+$/g, "")
+    .slice(0, 64);
+}
+
+function newsEventTokens(job) {
+  const stop = new Set([
+    "this", "that", "with", "from", "into", "over", "under", "after", "before", "again", "story", "update",
+    "local", "today", "city", "london", "berlin", "barcelona", "francisco", "san", "news", "current",
+  ]);
+
+  return Array.from(
+    new Set(
+      spokenNewsEventPhrase(job)
+        .toLowerCase()
+        .split(/[^a-z0-9äöüßáéíóúñç]+/i)
+        .map((token) => token.trim())
+        .filter((token) => token.length >= 4 || /^\d/.test(token))
+        .filter((token) => !stop.has(token))
+    )
+  );
 }
 
 function hasHumanTrace(text) {
