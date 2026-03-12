@@ -1,4 +1,4 @@
-name: Import Reddit Posts
+name: Refresh Public Human Corpus
 
 on:
   schedule:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  import:
+  refresh:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,13 +21,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Fetch Reddit & import to Supabase
-        working-directory: github-actions
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: node scripts/fetch-reddit.mjs
 
       - name: Refresh human comments corpus
         working-directory: github-actions
