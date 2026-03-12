@@ -56,6 +56,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const isMindPost = candidate.lane === "mind_post";
   const signals = {
     firstPerson: /\b(i|i’m|i'd|i’ve|me|my|mine|we|our|yo|me|mi|mis|mio|mía|nosotros|nuestra|jo|em|mi|meu|meva|nosaltres|ich|mir|mein|meine|wir|я|мне|меня|мой|моя|мы)\b/i.test(content),
+    implicitFirstPerson: /^[\s"'“”]*(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost)\b/i.test(content),
     dialogue: /[“’””]/.test(content) || /\bsaid\b/i.test(content),
     detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|каталан|каталан|барселон|шум|miete|l3)/i.test(content),
     anchor:
@@ -63,6 +64,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
       anchorsForCity.some((token) => contentLower.includes(token)) ||
       /(барселон|берлин|лондон|сан[- ]?франц|san francisco|barcelona|berlin|london)/i.test(content),
     hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|до сих пор|каждый раз|wieder|immer noch)/i.test(content),
+    pettySpecificity: /(had to|ended up|checked (the )?(board|app) twice|before coffee|before work|rent math|rent tab|wrong jacket|three suitcases|same rent|walk back out|queue and half of us|got trapped in it|suitcase slalom|suitcase traffic|step around|swerved around|sidestep|two wrong outfits|platform displays|red digital signage|temporary politics|one normal errand|detour)/i.test(content),
+    performativeFrame: /^(people say|people talk about|nothing says|the weird thing about|the thing about|the only way to stay sane|my rule is|the real sign|nothing exposes a person faster|everyone in here is either)\b/i.test(content),
     mindPostThesis: isMindPost && /(turns out|realized|realize|the truth|the thing is|the problem|the real|the only|actually|everyone|always|never|every time|rule is|theory|pattern|reveals|proves|signals|means that|more than|less than|better than|worse than|the best|the worst)/i.test(content),
     mindPostContrast: isMindPost && /\b(but|except|until|though|whereas|despite|instead|rather|unless|yet)\b/i.test(content),
     conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|teure|teuer|chaos|задерж|шум|дорого|турист)/i.test(content),
@@ -72,7 +75,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     newsCycleFit: newsContextOverlap > 0,
   };
 
-  const stickySignal = signals.hook || signals.conflict || signals.tenderness || signals.mindPostThesis || signals.mindPostContrast;
+  const stickySignal =
+    signals.hook || signals.pettySpecificity || signals.conflict || signals.tenderness || signals.mindPostThesis || signals.mindPostContrast;
   const essayLike = looksEssayLike(contentLower, sentences, words);
   const forumAdviceFraming = looksForumAdviceFraming(contentLower);
   const stereotypeBundle = hasIconicCityBundle(contentLower, candidate.cityId);
@@ -88,7 +92,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (content.length < 45) issues.push("too_short");
   if (content.length > 280) issues.push("too_long");
   if (!signals.detail) issues.push("low_detail");
-  if (!signals.firstPerson && !signals.dialogue) issues.push("weak_mindprint");
+  if (!signals.firstPerson && !signals.implicitFirstPerson && !signals.dialogue) issues.push("weak_mindprint");
   if (!signals.anchor) issues.push("missing_city_anchor");
   if (looksGeneric(contentLower)) issues.push("generic_city_copy");
   if (looksTooPolished(sentences, words, contentLower)) issues.push("overpolished");
@@ -99,6 +103,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (stagedObservation) issues.push("staged_observation");
   if (atmosphericPoetry) issues.push("atmospheric_poetry");
   if (performativeSnark) issues.push("performative_snark");
+  if (signals.performativeFrame) issues.push("performative_frame");
   if (instructionLeakage) issues.push("instruction_leakage");
   if (articleVoice) issues.push("article_voice");
   if (!stickySignal) issues.push("low_stickiness");
@@ -108,8 +113,10 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
 
   const humanSignals = [
     signals.firstPerson,
+    signals.implicitFirstPerson,
     signals.dialogue,
     signals.detail,
+    signals.pettySpecificity,
     /(maybe|honestly|weirdly|literally|kind of|sort of)/i.test(content),
     /[?!]/.test(content),
   ].filter(Boolean).length;
@@ -117,28 +124,38 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const aiSignals = [
     looksTooPolished(sentences, words, contentLower),
     essayLike,
+    signals.performativeFrame,
     /(at least|somehow|silver lining|there is something about|in this city|the kind of place|it feels like)/i.test(content),
     sentences.length === 2 && Math.abs(wordCount(sentences[0]) - wordCount(sentences[1])) <= 3,
   ].filter(Boolean).length;
 
   const mindprint = clampScore(
     1 +
-      (signals.firstPerson ? 1 : 0) +
+      (signals.firstPerson ? 2 : 0) +
+      (signals.implicitFirstPerson ? 1 : 0) +
       (signals.dialogue ? 1 : 0) +
       (signals.detail ? 1 : 0) +
-      (signals.hook ? 1 : 0)
+      (signals.hook ? 1 : 0) +
+      (signals.pettySpecificity ? 1 : 0) -
+      (signals.performativeFrame ? 1 : 0)
   );
   const cityness = clampScore(1 + (signals.anchor ? 2 : 0) + (signals.detail ? 1 : 0) + (!looksGeneric(contentLower) ? 1 : 0));
   const stickiness = clampScore(
     1 +
       (signals.hook ? 2 : 0) +
+      (signals.pettySpecificity ? 1 : 0) +
       (signals.conflict ? 1 : 0) +
       (signals.tenderness ? 1 : 0) +
       (signals.mindPostThesis ? 1 : 0) +
       (signals.mindPostContrast ? 1 : 0) +
       (!looksGeneric(contentLower) ? 1 : 0)
   );
-  const ambiguity = clampScore(1 + Math.max(0, 3 - Math.abs(humanSignals - aiSignals)) + (humanSignals > 0 && aiSignals > 0 ? 1 : 0));
+  const ambiguity = clampScore(
+    1 +
+      Math.min(3, humanSignals) +
+      (humanSignals >= 2 && aiSignals >= 1 ? 1 : 0) -
+      (aiSignals >= humanSignals + 2 ? 1 : 0)
+  );
   const freshness = clampScore(
     1 +
       (signals.freshnessMarker ? 1 : 0) +
@@ -166,11 +183,13 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("staged_observation") &&
     !issues.includes("atmospheric_poetry") &&
     !issues.includes("performative_snark") &&
+    !issues.includes("performative_frame") &&
     !issues.includes("instruction_leakage") &&
     !issues.includes("article_voice") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
-    !issues.includes("too_long");
+    !issues.includes("too_long") &&
+    !issues.includes("weak_mindprint");
 
   return {
     id: candidate.id ?? `candidate_${String(index + 1).padStart(4, "0")}`,
