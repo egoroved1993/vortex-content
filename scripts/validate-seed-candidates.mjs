@@ -92,6 +92,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const performativeSnark = looksPerformativeSnark(contentLower);
   const clonedTemplate = looksClonedTemplate(contentLower);
   const offTopicSports = looksOffTopicSports(contentLower, candidate.cityId);
+  const repetitiveAnchor = looksRepetitiveAnchor(contentLower, candidate.cityId);
   const instructionLeakage = looksInstructionLeakage(contentLower);
   const articleVoice = looksArticleVoice(contentLower);
 
@@ -113,6 +114,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (performativeSnark) issues.push("performative_snark");
   if (clonedTemplate) issues.push("cloned_template");
   if (offTopicSports) issues.push("off_topic_sports");
+  if (repetitiveAnchor) issues.push("repetitive_anchor");
   if (signals.performativeFrame) issues.push("performative_frame");
   if (instructionLeakage) issues.push("instruction_leakage");
   if (articleVoice) issues.push("article_voice");
@@ -195,6 +197,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("performative_snark") &&
     !issues.includes("cloned_template") &&
     !issues.includes("off_topic_sports") &&
+    !issues.includes("repetitive_anchor") &&
     !issues.includes("performative_frame") &&
     !issues.includes("instruction_leakage") &&
     !issues.includes("article_voice") &&
@@ -497,10 +500,21 @@ function looksClonedTemplate(contentLower) {
 }
 
 function looksOffTopicSports(contentLower, cityId) {
-  // NBA/NFL teams are irrelevant for European cities
-  const usTeams = /(ravens|kobe|bam adebayo|lebron|curry|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys)/i;
-  const europeanCities = ["london", "barcelona", "berlin"];
-  if (europeanCities.includes(cityId) && usTeams.test(contentLower)) return true;
+  // Teams not local to the city
+  const nonLocalTeams = {
+    london:    /(ravens|kobe|bam adebayo|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys|muni|bart)/i,
+    barcelona: /(ravens|kobe|bam adebayo|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys|\bnfl\b)/i,
+    berlin:    /(ravens|kobe|bam adebayo|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys|\bnfl\b|\bnba\b)/i,
+    sf:        /(ravens|kobe|bam adebayo|celtics|heat|bulls|knicks|patriots|cowboys)/i,
+  };
+  const pattern = nonLocalTeams[cityId];
+  if (pattern && pattern.test(contentLower)) return true;
+  return false;
+}
+
+function looksRepetitiveAnchor(contentLower, cityId) {
+  // "superblock corner" is used as a lazy template anchor for Barcelona
+  if (cityId === "barcelona" && contentLower.includes("superblock corner")) return true;
   return false;
 }
 
