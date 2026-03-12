@@ -90,6 +90,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const stagedObservation = looksStagedObservation(contentLower);
   const atmosphericPoetry = looksAtmosphericPoetry(contentLower);
   const performativeSnark = looksPerformativeSnark(contentLower);
+  const clonedTemplate = looksClonedTemplate(contentLower);
+  const offTopicSports = looksOffTopicSports(contentLower, candidate.cityId);
   const instructionLeakage = looksInstructionLeakage(contentLower);
   const articleVoice = looksArticleVoice(contentLower);
 
@@ -109,6 +111,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (stagedObservation) issues.push("staged_observation");
   if (atmosphericPoetry) issues.push("atmospheric_poetry");
   if (performativeSnark) issues.push("performative_snark");
+  if (clonedTemplate) issues.push("cloned_template");
+  if (offTopicSports) issues.push("off_topic_sports");
   if (signals.performativeFrame) issues.push("performative_frame");
   if (instructionLeakage) issues.push("instruction_leakage");
   if (articleVoice) issues.push("article_voice");
@@ -189,6 +193,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("staged_observation") &&
     !issues.includes("atmospheric_poetry") &&
     !issues.includes("performative_snark") &&
+    !issues.includes("cloned_template") &&
+    !issues.includes("off_topic_sports") &&
     !issues.includes("performative_frame") &&
     !issues.includes("instruction_leakage") &&
     !issues.includes("article_voice") &&
@@ -475,6 +481,27 @@ function looksAtmosphericPoetry(contentLower) {
     /(hesitation|seminar|orbits|satellites|exhales|teaches|patience)/.test(contentLower);
 
   return fragments.some((fragment) => contentLower.includes(fragment)) || weatherMetaphor;
+}
+
+function looksClonedTemplate(contentLower) {
+  // Detects repeated structural templates that produce near-identical messages
+  const templates = [
+    "i checked the board twice and still ended up late because the delay",
+    "i heard another ai conversation before coffee and immediately",
+    "this morning at",
+  ];
+  // The "checked the board twice" template is very specific
+  if (contentLower.includes("checked the board twice and still ended up late")) return true;
+  if (contentLower.includes("i heard another ai conversation before coffee")) return true;
+  return false;
+}
+
+function looksOffTopicSports(contentLower, cityId) {
+  // NBA/NFL teams are irrelevant for European cities
+  const usTeams = /(ravens|kobe|bam adebayo|lebron|curry|lakers|celtics|warriors|heat|bulls|knicks|patriots|chiefs|49ers|cowboys)/i;
+  const europeanCities = ["london", "barcelona", "berlin"];
+  if (europeanCities.includes(cityId) && usTeams.test(contentLower)) return true;
+  return false;
 }
 
 function looksPerformativeSnark(contentLower) {
@@ -764,3 +791,4 @@ function isDirectExecution() {
   if (!process.argv[1]) return false;
   return import.meta.url === pathToFileURL(process.argv[1]).href;
 }
+
