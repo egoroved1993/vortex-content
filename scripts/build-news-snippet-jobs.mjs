@@ -13,19 +13,29 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, inferRelevantAnchor, normalizeSourceLanguage } from "./source-utils.mjs";
+import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "news-snippets.json");
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "news-snippet-jobs.json");
 const limit = Number(args.limit ?? 200);
+const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 8);
 const seed = args.seed ?? "news-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
-  .slice(0, limit)
   .map(normalizeSnippet)
-  .filter((snippet) => snippet.body.length > 0 || snippet.headline.length > 0);
+  .filter((snippet) => snippet.body.length > 0 || snippet.headline.length > 0)
+  .map((snippet) => ({
+    ...snippet,
+    sourceSignalScore: scoreNewsSnippet(snippet),
+    liveAlignment: scoreNewsSnippetLiveAlignment(snippet),
+  }))
+  .filter((snippet) => snippet.sourceSignalScore >= 4)
+  .filter((snippet) => snippet.liveAlignment.score >= minLiveAlignmentScore)
+  .sort((left, right) => compareBySignal(left, right, rand))
+  .slice(0, limit);
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
@@ -82,15 +92,18 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildAngle(snippet, lane, format),
     moment: buildMoment(snippet),
-    cityAnchor: inferAnchor(snippet, city),
+    cityAnchor: inferAnchor(snippet, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet,
+    rawSnippetBody: snippet.body,
     rawSnippetHeadline: snippet.headline,
     rawSnippetLanguage: snippet.language,
     rawSnippetSourceOrigin: snippet.sourceOrigin,
     rawSnippetPublisher: snippet.publisher,
     rawSnippetPublishedAt: snippet.publishedAt,
+    liveEventClue: buildLiveEventClue(snippet),
+    eventPhrase: extractEventPhrase(snippet),
     transformationMode: "minimal_intervention_salvage",
   };
 
@@ -161,8 +174,8 @@ function inferReadReason(snippet) {
 
 function inferTopic(snippet) {
   const lower = `${snippet.headline} ${snippet.body}`.toLowerCase();
-  if (/\b(train|bart|muni|tube|u-bahn|ubahn|tram|metro|station|platform|bus)\b/.test(lower)) return "commute_thought";
-  if (/\b(rent|lease|housing|apartment|flat|eviction|sublet)\b/.test(lower)) return "cost_of_living";
+  if (/\b(train|bahn|s-bahn|sbahn|ersatzbus|bart|muni|tube|u-bahn|ubahn|tram|metro|station|platform|bus)\b/.test(lower)) return "commute_thought";
+  if (/\b(rent|lease|housing|habitatge|lloguer|lloguers|alquiler|miete|home|homes|apartment|apartments|flat|eviction|sublet|development pipeline|railyard)\b/.test(lower)) return "cost_of_living";
   if (/\b(cafe|coffee|bakery|restaurant|bar|food|burrito|menu)\b/.test(lower)) return "food_moment";
   if (/\b(tourists|airbnb|visitors|cruise|hotel)\b/.test(lower)) return "tourist_vs_local";
   if (/\b(gallery|mural|artist|festival|screening|concert)\b/.test(lower)) return "street_art";
@@ -185,13 +198,12 @@ function buildMoment(snippet) {
   return `This should feel plausibly written ${when}, by someone living inside the consequence rather than reporting it.`;
 }
 
-function inferAnchor(snippet, city) {
-  const lower = `${snippet.headline} ${snippet.body}`.toLowerCase();
-  const anchors = [
-    ...(city?.defaultAnchors ?? []),
-    ...Object.values(city?.topicAnchors ?? {}).flat(),
-  ];
-  return anchors.find((anchor) => lower.includes(anchor.toLowerCase())) ?? anchors[0] ?? "street-level detail";
+function inferAnchor(snippet, city, topicId) {
+  return inferRelevantAnchor({
+    text: `${snippet.headline} ${snippet.body}`,
+    city,
+    topicId,
+  });
 }
 
 function toneWeight(toneId, snippet) {
@@ -239,10 +251,16 @@ function buildNewsRewritePrompt(job) {
     `Publisher: ${job.rawSnippetPublisher || "unknown"}`,
     ...(job.rawSnippetPublishedAt ? [`Published at: ${job.rawSnippetPublishedAt}`] : []),
     `Source language: ${job.rawSnippetLanguage}`,
+    `Event phrase to preserve: ${job.eventPhrase}`,
+    `Active event clue: ${job.liveEventClue}`,
     `Raw source snippet: ${job.rawSnippet}`,
     ...laneInstructions,
     "Treat the article only as background pressure. The message itself must feel like one resident metabolizing one consequence.",
     "Default move: keep only the people-sized consequence and throw away the article voice.",
+    "Prefer one concrete consequence over a full rewrite.",
+    "Keep at least one specific event noun, place, or pressure from the source in the final message.",
+    "Stay inside the same active story. Do not switch to some other plausible city grievance.",
+    "No rhetorical questions, no moral, no tidy ending, no article-summary sentence.",
     "Only remove headline/article scaffolding, outlet voice, explanatory filler, and summary transitions.",
     "Preserve the source language unless the only edits are removing journalistic framing.",
     "Use first person or one overheard line unless the source already implies a stronger human stance.",
@@ -253,6 +271,130 @@ function buildNewsRewritePrompt(job) {
     "Make it feel like one anonymous person living inside this city context today.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
+}
+
+function buildLiveEventClue(snippet) {
+  const parts = [snippet.headline, snippet.body].filter(Boolean);
+  const combined = parts.join(". ").replace(/\s+/g, " ").trim();
+  if (!combined) return "none";
+  return combined.slice(0, 160);
+}
+
+function extractEventPhrase(snippet) {
+  const combined = cleanText([snippet.headline, snippet.body].filter(Boolean).join(" "));
+  const lower = combined.toLowerCase();
+  const specialPatterns = [
+    /(\d[\d,.-]*-home [a-z ]+pipeline)/i,
+    /(build-to-rent plans)/i,
+    /(\d[\d,.-]* new homes)/i,
+    /(dream home[^.]{0,40}four apartments)/i,
+    /(railyard[^.]{0,40}thousands of homes)/i,
+    /(azizification[^.]{0,25}housing)/i,
+    /(tube strikes?)/i,
+    /(croydon tram[^.]{0,30}cars on track)/i,
+    /(muni metro[^.]{0,20}floppy disks)/i,
+    /(short-term rental bylaw)/i,
+    /(ersatzbusbetreiber)/i,
+    /(habitatge i lloguers)/i,
+    /(lloguers?)/i,
+    /(heat wave)/i,
+    /(fog)/i,
+  ];
+
+  for (const pattern of specialPatterns) {
+    const match = combined.match(pattern);
+    if (match?.[1]) return cleanText(match[1]).slice(0, 80);
+  }
+
+  const segments = combined
+    .split(/\s+-\s+/)
+    .map((segment) => cleanText(segment))
+    .filter(Boolean)
+    .filter((segment) => segment.length >= 8 && segment.length <= 90);
+
+  const best = segments
+    .map((segment) => ({
+      segment,
+      score:
+        (/\d/.test(segment) ? 2 : 0) +
+        (/\b(strike|delay|housing|home|homes|apartments|rent|lloguer|miete|airbnb|tram|tube|muni|bart|rodalies|tmb|heat|fog|touris|cruise|platform)\b/i.test(segment) ? 2 : 0) +
+        (/\b(council|officials|published|according to|report|study)\b/i.test(segment) ? -2 : 0),
+    }))
+    .sort((left, right) => right.score - left.score)[0]?.segment;
+
+  if (best) return best;
+
+  return cleanText(snippet.headline || snippet.body || "current local story").slice(0, 80);
+}
+
+function scoreNewsSnippet(snippet) {
+  const combined = `${snippet.headline} ${snippet.body}`.trim().toLowerCase();
+  const recencyHours = hoursSince(snippet.publishedAt);
+  const dailyLifeSignal = /\b(strike|delay|fare|rent|housing|lloguers|alquiler|miete|tourist|tourism|airbnb|weather|flood|heat|fog|mural|metro|bus|tube|u-bahn|ubahn|muni|bart|station|platform|crowd|queue|service|closure|late|packed|bridge|commute)\b/i.test(combined);
+  const localSpecificity = /\b(victoria line|u8|ringbahn|muni|bart|tmb|rodalies|metro de barcelona|elsenbrücke|elsenbrucke|neukölln|neukolln|san francisco|london|berlin|barcelona|superblock|gracia|raval)\b/i.test(combined);
+  const humanConsequence = /\b(residents|commuters|tenants|locals|neighbors|crowd|late|packed|fare|rent|suitcase|queue|platform)\b/i.test(combined);
+  const hardNews = /\b(stabbing|suspect|court documents|without mercy|killed|murder|assault|victim|police|crime)\b/i.test(combined);
+  const abstractInstitutional = /\b(council|senator|stiftung|future vision|new date|announced|published|according to|officials|foundation|report|study|strategy|zukunftsbild)\b/i.test(combined);
+
+  let score = 0;
+
+  if (Number.isFinite(recencyHours)) {
+    if (recencyHours <= 36) score += 3;
+    else if (recencyHours <= 72) score += 2;
+    else if (recencyHours <= 120) score += 1;
+    else score -= 3;
+  }
+
+  if (snippet.body) score += 1;
+  if (dailyLifeSignal) score += 3;
+  if (localSpecificity) score += 1;
+  if (humanConsequence) score += 1;
+
+  if (!snippet.body) score -= 1;
+  if (hardNews) score -= 5;
+  if (abstractInstitutional && !dailyLifeSignal) score -= 3;
+  if (/\b(viral video series|campaign of its own|could make history|what you need to know)\b/i.test(combined)) score -= 2;
+
+  return score;
+}
+
+function scoreNewsSnippetLiveAlignment(snippet) {
+  const combined = `${snippet.headline} ${snippet.body}`.trim();
+  const lower = combined.toLowerCase();
+  const context = mergeContext(snippet.cityId);
+  const tokens = extractContextTokens(combined);
+  const contextOverlap = countOverlap(tokens, context.tokens);
+  const newsOverlap = countOverlap(tokens, context.newsTokens);
+  const eventSpecificity = /\b(victoria line|tube strikes?|croydon tram|ringbahn|u-?bahn|muni|bart|rodalies|tmb|airbnb|lloguer|miete|52,?000-home|railyard|dream home|apartments|fare|delay|heat wave|fog|tram network)\b/i.test(lower);
+  const peopleConsequence = /\b(commuters|residents|locals|tenants|neighbors|queue|crowd|late|packed|rent math|fare|platform|suitcase)\b/i.test(lower);
+
+  return {
+    score: (snippet.sourceSignalScore ?? 0) + contextOverlap * 2 + newsOverlap * 4 + (eventSpecificity ? 2 : 0) + (peopleConsequence ? 1 : 0),
+    contextOverlap,
+    newsOverlap,
+  };
+}
+
+function hoursSince(value) {
+  const publishedAt = Date.parse(String(value ?? ""));
+  if (!Number.isFinite(publishedAt)) return Number.NaN;
+  return (Date.now() - publishedAt) / (1000 * 60 * 60);
+}
+
+function compareBySignal(left, right, randFn) {
+  const liveDelta = (right.liveAlignment?.score ?? 0) - (left.liveAlignment?.score ?? 0);
+  if (liveDelta !== 0) return liveDelta;
+
+  const scoreDelta = (right.sourceSignalScore ?? 0) - (left.sourceSignalScore ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftTime = Date.parse(String(left.publishedAt ?? ""));
+  const rightTime = Date.parse(String(right.publishedAt ?? ""));
+  if (Number.isFinite(leftTime) && Number.isFinite(rightTime) && rightTime !== leftTime) {
+    return rightTime - leftTime;
+  }
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {

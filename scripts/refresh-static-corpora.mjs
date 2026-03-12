@@ -9,6 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
+import { cleanText, looksSyntheticPlaceholder } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const useMock = Boolean(args.mock);
@@ -224,35 +225,102 @@ async function callOpenAI(systemPrompt, userPrompt, maxTokens) {
 // ─── Mock Generators ──────────────────────────────────────────────────────────
 
 function mockCitySignal(city) {
+  const fixtures = {
+    london: {
+      weather: "Cold drizzle keeps switching between umbrella weather and pretending it is not.",
+      transit: "Victoria line crowd already looks like everyone had to renegotiate their morning before 9.",
+      socialPattern: "People are walking fast but stopping hard at every crossing like patience has become a rationed utility.",
+      localEvent: "Tube strike chatter is back in every coffee queue whether people want it or not.",
+      pressurePoint: "The mood turns sour the second a commute starts sounding optional only for people with money.",
+      softDetail: "Wet wool and burnt espresso are doing the whole high street by themselves.",
+    },
+    berlin: {
+      weather: "Dry cold and sharp light, the kind that makes everyone dress for a different city.",
+      transit: "Ringbahn delays have people checking the board with the specific calm of repeated disappointment.",
+      socialPattern: "Cafe tables filled early with laptops, bouquets, and people acting less committed than they clearly are.",
+      localEvent: "Housing arguments keep leaking into unrelated conversations like the city has only one group chat.",
+      pressurePoint: "Anything newly polished is getting read as a rent increase in disguise.",
+      softDetail: "The späti fridge hum feels louder whenever the street goes briefly quiet.",
+    },
+    sf: {
+      weather: "Fog held on too long and then vanished fast enough to make everyone's layers look defensive.",
+      transit: "Muni timing feels advisory again, which is enough to tilt the mood before lunch.",
+      socialPattern: "People keep taking calls outdoors like their apartments charge by emotional volume.",
+      localEvent: "Transit and housing news are mixing into one running complaint about whether this city still works for normal routines.",
+      pressurePoint: "Every small errand feels one price jump away from becoming a joke people are tired of making.",
+      softDetail: "A bakery door keeps opening to cold air and toasted sugar in the same breath.",
+    },
+    barcelona: {
+      weather: "Mild sun on paper, damp platform heat in practice.",
+      transit: "The L3 is back to making strangers negotiate personal space with their jackets first.",
+      socialPattern: "Switches between Catalan, Spanish, and English are happening faster the moment money enters the sentence.",
+      localEvent: "Tourism friction is sitting under everyday chat even when people start from something trivial.",
+      pressurePoint: "Residents sound most tense when a normal neighborhood noise starts feeling like hospitality infrastructure.",
+      softDetail: "Suitcase wheels arrive half a block before the people dragging them.",
+    },
+  };
+
   return {
     observedAt: "09:30 local time",
     sourceOrigin: "auto_city_snapshot",
-    weather: `Typical ${city.name} weather doing something unpredictable.`,
-    transit: "Transit running with the usual ambient tension.",
-    socialPattern: "People moving like they have somewhere to be but aren't sure it matters.",
-    localEvent: "Something happening tonight that half the city knows about.",
-    pressurePoint: "The thing everyone is quietly annoyed about but not saying.",
-    softDetail: "A small sound or smell that only someone who lives here would notice.",
+    ...(fixtures[city.id] ?? fixtures.london),
   };
 }
 
 function mockForumSnippet(city, variant) {
+  const fixtures = {
+    london: [
+      { neighborhood: "Hackney", body: "the real london luxury is catching an overground that arrives before you've finished resenting it" },
+      { neighborhood: "Peckham", body: "every third conversation in the pub is just two people comparing which rent increase got explained to them most politely" },
+    ],
+    berlin: [
+      { neighborhood: "Neukölln", body: "you can tell a cafe is new here if the chairs look temporary but the prices sound permanent" },
+      { neighborhood: "Kreuzberg", body: "ringbahn delay and suddenly the whole platform starts acting like lateness is a political identity" },
+    ],
+    sf: [
+      { neighborhood: "Mission", body: "the muni app keeps giving times with the confidence of a guy who is never taking muni" },
+      { neighborhood: "Outer Sunset", body: "people here will say let's hang soon and then hand you a calendar like they're prescribing antibiotics" },
+    ],
+    barcelona: [
+      { neighborhood: "Raval", body: "otra mañana de maletas y luego todavía te piden que no leas turismo en cada ruido raro" },
+      { neighborhood: "Gràcia", body: "the neighborhood still feels local right up until the third brunch line starts speaking in logistics" },
+    ],
+  };
+  const selected = fixtures[city.id]?.[variant % 2] ?? fixtures.london[variant % 2];
   return {
     sourceOrigin: "local_forum",
     boardName: `${city.name} locals`,
     threadTitle: "Things you notice after living here",
-    neighborhood: city.name,
-    body: `Mock forum observation #${variant + 1} for ${city.name}. Something specific a local would say.`,
+    neighborhood: selected.neighborhood,
+    body: selected.body,
   };
 }
 
 function mockSocialSnippet(city, variant) {
+  const fixtures = {
+    london: [
+      "victoria line delay hit at the exact point where everyone had already decided not to be dramatic about it",
+      "paid 4.80 for a sad little coffee and still had the london reflex of thinking alright fair enough",
+    ],
+    berlin: [
+      "ringbahn said delay and the whole platform immediately started dressing it up as personality",
+      "new cafe on my block has six chairs and the exact confidence of somewhere that will explain itself to you",
+    ],
+    sf: [
+      "muni app said 4 min and then emotionally meant whenever",
+      "the coffee place by work added a gratitude shot and i can't decide if sf is joking anymore",
+    ],
+    barcelona: [
+      "otra mañana escuchando maletas por el raval como si el barrio tuviera check-in",
+      "a la l3 todos hacemos ver que no sudamos y la mentira dura dos paradas",
+    ],
+  };
   return {
     sourceOrigin: "threads_post",
     platform: "threads",
     postedAt: `today 0${8 + variant}:30 local`,
-    language: "en",
-    body: `mock social post #${variant + 1} from ${city.name}. short. lowercase. something specific.`,
+    language: city.id === "barcelona" && variant === 0 ? "es" : "en",
+    body: fixtures[city.id]?.[variant % 2] ?? fixtures.london[variant % 2],
   };
 }
 
@@ -268,6 +336,7 @@ function mergeCorpus(existing, fresh, getCity, keepPerCity) {
 
   // New first
   for (const item of fresh) {
+    if (isSyntheticCorpusItem(item)) continue;
     const city = getCity(item);
     countByCity[city] = (countByCity[city] ?? 0) + 1;
     if (countByCity[city] <= keepPerCity) result.push(item);
@@ -276,6 +345,7 @@ function mergeCorpus(existing, fresh, getCity, keepPerCity) {
   // Fill with existing (skip cities already at cap)
   const tempCount = { ...countByCity };
   for (const item of existing) {
+    if (isSyntheticCorpusItem(item)) continue;
     const city = getCity(item);
     const current = tempCount[city] ?? 0;
     if (current < keepPerCity) {
@@ -285,6 +355,19 @@ function mergeCorpus(existing, fresh, getCity, keepPerCity) {
   }
 
   return result;
+}
+
+function isSyntheticCorpusItem(item) {
+  const bodyLike = cleanText([
+    item?.body,
+    item?.weather,
+    item?.transit,
+    item?.socialPattern,
+    item?.localEvent,
+    item?.pressurePoint,
+    item?.softDetail,
+  ].filter(Boolean).join(" "));
+  return looksSyntheticPlaceholder(bodyLike);
 }
 
 // ─── Utilities ────────────────────────────────────────────────────────────────

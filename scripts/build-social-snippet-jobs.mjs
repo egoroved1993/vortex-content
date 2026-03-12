@@ -13,7 +13,7 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, looksSyntheticPlaceholder, normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, inferRelevantAnchor, looksSyntheticPlaceholder, normalizeSourceLanguage } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "social-snippets.json");
@@ -23,10 +23,16 @@ const seed = args.seed ?? "social-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
-  .slice(0, limit)
   .map(normalizeSnippet)
   .filter((snippet) => snippet.body.length > 0)
-  .filter((snippet) => !looksSyntheticPlaceholder(snippet.body));
+  .filter((snippet) => !looksSyntheticPlaceholder(snippet.body))
+  .map((snippet) => ({
+    ...snippet,
+    sourceSignalScore: scoreSocialSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.sourceSignalScore >= 4)
+  .sort((left, right) => compareBySignal(left, right, rand))
+  .slice(0, limit);
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
@@ -81,7 +87,7 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildAngle(snippet, lane, format),
     moment: buildMoment(snippet),
-    cityAnchor: inferAnchor(snippet, city),
+    cityAnchor: inferAnchor(snippet, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
@@ -167,13 +173,12 @@ function buildMoment(snippet) {
   return `This should feel plausibly posted ${when}, with no rewrite energy showing through.`;
 }
 
-function inferAnchor(snippet, city) {
-  const lower = snippet.body.toLowerCase();
-  const anchors = [
-    ...(city?.defaultAnchors ?? []),
-    ...Object.values(city?.topicAnchors ?? {}).flat(),
-  ];
-  return anchors.find((anchor) => lower.includes(anchor.toLowerCase())) ?? anchors[0] ?? "street-level detail";
+function inferAnchor(snippet, city, topicId) {
+  return inferRelevantAnchor({
+    text: snippet.body,
+    city,
+    topicId,
+  });
 }
 
 function toneWeight(toneId, snippet) {
@@ -224,12 +229,67 @@ function buildSocialRewritePrompt(job) {
     `Raw social post: ${job.rawSnippet}`,
     ...laneInstructions,
     "Default move: keep the wording and context as intact as possible.",
+    "Prefer zero edits if the post already works.",
+    "Keep 85-100% of the source wording unless platform noise forces a cut.",
+    "Do not add a rhetorical question, metaphor, explanation, or cleaner final sentence.",
     "Only remove handles, links, hashtags, obvious platform scaffolding, and thread glue.",
     "Preserve the source language unless the only edits are removing platform noise.",
     "Do not improve the post into a better piece of writing.",
     "If it already works as one anonymous message, change almost nothing.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
+}
+
+function scoreSocialSnippet(snippet) {
+  const lower = snippet.body.toLowerCase();
+  let score = 0;
+
+  if (snippet.body.length >= 45) score += 2;
+  if (snippet.body.length >= 80) score += 1;
+  if (/\b(i|i'm|i’m|i've|i’ve|my|me|we|our|yo|mi|mis|mio|mía|ich|mir|mein|meine|wir|em|meu|meva|nosaltres)\b/i.test(snippet.body)) score += 3;
+  if (/[“”"'`]/.test(snippet.body) || /\b(said|heard|dijo|me dijo|hat gesagt)\b/i.test(lower)) score += 2;
+  if (/\b(today|this morning|tonight|right now|again|hoy|ahora|esta mañana|avui|a primera hora|heute|jetzt|wieder)\b/i.test(lower)) score += 1;
+  if (/\d/.test(snippet.body)) score += 1;
+  if (/\b(delay|late|verspätung|crowded|packed|rent|expensive|ugly|ignored|ignore|stuck|missed|heat|hate|ridiculous|horrible|chaos|annoying|tela|impossible|deixen|tanquen|nimbys)\b/i.test(lower)) score += 2;
+  if (/\b(bart|muni|tube|u-bahn|ubahn|ringbahn|bus|metro|victoria line|van ness|wuhletal|pret|gracia|raval|neukölln|neukolln|pacheights|sf|san francisco|london|berlin|barcelona|tmb|rodalies)\b/i.test(lower)) score += 2;
+
+  if (snippet.body.length < 38) score -= 3;
+  if (looksLowSignalQuestion(lower)) score -= 2;
+  if (looksHeadlineLikeSocial(lower)) score -= 3;
+  if (looksHardNewsSocial(lower)) score -= 5;
+  if (!/[“”"'`]/.test(snippet.body) && !/\b(i|i'm|i’m|my|me|we|our|yo|mi|ich|em)\b/i.test(lower) && !/\d/.test(snippet.body)) score -= 1;
+
+  return score;
+}
+
+function looksLowSignalQuestion(lower) {
+  return /[?]$/.test(lower) && /^\s*(do|does|did|can|could|would|is|are|why|what|where|when|who)\b/.test(lower);
+}
+
+function looksHeadlineLikeSocial(lower) {
+  return /\b(new numbers|reported|according to|court documents|shows|featured in|campaign of its own|announced|publisher|breaking|verheerendes bild|zahlen zeigen)\b/i.test(lower);
+}
+
+function looksHardNewsSocial(lower) {
+  return /\b(killed|stabbing|suspect|court documents|without mercy|murder|war|troops|election|senator|minister)\b/i.test(lower);
+}
+
+function compareBySignal(left, right, randFn) {
+  const scoreDelta = (right.sourceSignalScore ?? 0) - (left.sourceSignalScore ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftTime = parseTimestamp(left.postedAt);
+  const rightTime = parseTimestamp(right.postedAt);
+  if (Number.isFinite(leftTime) && Number.isFinite(rightTime) && rightTime !== leftTime) {
+    return rightTime - leftTime;
+  }
+
+  return randFn() > 0.5 ? 1 : -1;
+}
+
+function parseTimestamp(value) {
+  const time = Date.parse(String(value ?? ""));
+  return Number.isFinite(time) ? time : Number.NaN;
 }
 
 function countBy(items, getKey) {

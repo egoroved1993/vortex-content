@@ -325,6 +325,7 @@ function buildSignalPrompt(job) {
     "Do not sound like a city newsletter, event blurb, or weather report.",
     "Do not personify fog, weather, traffic, or infrastructure.",
     "No lyrical atmosphere, reflective fog philosophy, or poetic weather metaphors.",
+    "No rhetorical questions, no cute last line, no tidy conclusion, no mini-essay cadence.",
     "If the signal is weather, keep it behavioral and concrete: what people wore, delayed, spilled, avoided, or complained about.",
     `This seed will be stored in the game as source="${job.gameSource}". Do not mention that fact, but keep the authorship debatable.`,
     "CRITICAL: The content field must be 60-240 characters. Do not exceed 240 characters. One to three sentences max.",

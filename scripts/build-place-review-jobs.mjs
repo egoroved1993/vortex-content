@@ -2,7 +2,6 @@ import fs from "node:fs";
 import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
 import {
-  cities,
   createSeededRandom,
   getCompatibleTextures,
   getCity,
@@ -14,19 +13,27 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, inferRelevantAnchor, normalizeSourceLanguage } from "./source-utils.mjs";
+import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "place-review-snippets.json");
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "place-review-jobs.json");
 const limit = Number(args.limit ?? 200);
+const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 4);
 const seed = args.seed ?? "place-review-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
-  .slice(0, limit)
   .map(normalizeSnippet)
-  .filter((snippet) => snippet.body.length > 0);
+  .filter((snippet) => snippet.body.length > 0)
+  .map((snippet) => ({
+    ...snippet,
+    liveAlignment: scoreReviewSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.liveAlignment.score >= minLiveAlignmentScore)
+  .sort((left, right) => compareByLiveAlignment(left, right, rand))
+  .slice(0, limit);
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
@@ -81,7 +88,7 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildAngle(snippet, lane, format),
     moment: buildMoment(snippet),
-    cityAnchor: inferAnchor(snippet, city),
+    cityAnchor: inferAnchor(snippet, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
@@ -179,17 +186,13 @@ function buildMoment(snippet) {
   return "A place review accidentally reveals a personal ritual, local trick, or opinion about the city around it.";
 }
 
-function inferAnchor(snippet, city) {
-  const lower = `${snippet.body} ${snippet.placeName} ${snippet.neighborhood}`.toLowerCase();
-  const directAnchors = [snippet.neighborhood, snippet.placeName]
-    .map((value) => value.trim())
-    .filter(Boolean);
-  if (directAnchors.length > 0) return directAnchors[0];
-  const anchors = [
-    ...(city?.defaultAnchors ?? []),
-    ...Object.values(city?.topicAnchors ?? {}).flat(),
-  ];
-  return anchors.find((anchor) => lower.includes(anchor.toLowerCase())) ?? anchors[0] ?? "street-level detail";
+function inferAnchor(snippet, city, topicId) {
+  return inferRelevantAnchor({
+    text: `${snippet.body} ${snippet.placeName} ${snippet.neighborhood}`,
+    city,
+    topicId,
+    directAnchors: [snippet.neighborhood, snippet.placeName],
+  });
 }
 
 function toneWeight(toneId, snippet) {
@@ -241,6 +244,9 @@ function buildReviewRewritePrompt(job) {
     `Raw review snippet: ${job.rawSnippet}`,
     ...laneInstructions,
     "Default move: keep the original context and wording as intact as possible.",
+    "Prefer zero edits if the snippet already works.",
+    "Keep 85-100% of the source wording unless review-platform scaffolding forces a cut.",
+    "Do not add a rhetorical question, metaphor, explanation, or cleaner final sentence.",
     "Preserve the source language unless the only changes are removing review-platform scaffolding.",
     "Only remove review-platform scaffolding, star-rating language, explicit recommendation framing, and obvious filler.",
     "Do not invent a smarter take than the review already contains.",
@@ -261,6 +267,34 @@ function buildPlaceContext(job) {
   if (job.rawSnippetRating) bits.push(`rating: ${job.rawSnippetRating}/5`);
   if (job.rawSnippetSourceOrigin) bits.push(`source: ${job.rawSnippetSourceOrigin}`);
   return bits.join(", ");
+}
+
+function scoreReviewSnippet(snippet) {
+  const combined = `${snippet.body} ${snippet.placeType} ${snippet.placeName} ${snippet.neighborhood}`.trim();
+  const lower = combined.toLowerCase();
+  const context = mergeContext(snippet.cityId);
+  const tokens = extractContextTokens(combined);
+  const contextOverlap = countOverlap(tokens, context.tokens);
+  const newsOverlap = countOverlap(tokens, context.newsTokens);
+  const strongJudgment = snippet.rating <= 2 || /\b(overpriced|queue|rent|tourist|late|crowded|six dollar|4\.20|5\.|founder|startup)\b/i.test(lower);
+  const localTexture = Boolean(snippet.neighborhood || snippet.placeType || snippet.placeName);
+
+  return {
+    score: contextOverlap * 2 + newsOverlap * 3 + (strongJudgment ? 1.5 : 0) + (localTexture ? 1 : 0),
+    contextOverlap,
+    newsOverlap,
+  };
+}
+
+function compareByLiveAlignment(left, right, randFn) {
+  const scoreDelta = (right.liveAlignment?.score ?? 0) - (left.liveAlignment?.score ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftRating = Number(left.rating ?? 0);
+  const rightRating = Number(right.rating ?? 0);
+  if (leftRating !== rightRating) return leftRating - rightRating;
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {

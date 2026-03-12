@@ -236,6 +236,7 @@ function buildWorldPrompt(job, trend, bridgeAngle) {
     "Do not sound like a commentator, trend report, or newsletter.",
     "This should feel like one person in this city briefly revealing how a world-level conversation got into their head today.",
     "Keep it short, personal, and slightly underexplained.",
+    "No rhetorical questions, no neat closing sentence, no mini-essay polish.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
 }

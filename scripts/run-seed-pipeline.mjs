@@ -19,16 +19,6 @@ const candidatesPath = args.candidates ? path.resolve(process.cwd(), args.candid
 const reportPath = args.report ? path.resolve(process.cwd(), args.report) : resolveProjectPath("content", "pipeline-candidates.report.json");
 const payloadPath = args.payload ? path.resolve(process.cwd(), args.payload) : resolveProjectPath("content", "pipeline-payload.json");
 const cityPulsePath = args["city-pulse-out"] ? path.resolve(process.cwd(), args["city-pulse-out"]) : resolveProjectPath("content", "city-pulse.latest.json");
-const sourceConfig = buildSourceConfig(args, count, mix, jobsPerSignalSnapshot);
-
-buildMixedJobsCorpus({
-  mix,
-  seed,
-  cityFocus,
-  jobsPath,
-  sourceConfig,
-});
-
 runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
   "--out",
   cityPulsePath,
@@ -40,6 +30,16 @@ runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
   ...(args["social-input"] ? ["--social-input", path.resolve(process.cwd(), args["social-input"])] : []),
   ...(args["world-input"] ? ["--world-input", path.resolve(process.cwd(), args["world-input"])] : []),
 ]);
+
+const sourceConfig = buildSourceConfig(args, count, mix, jobsPerSignalSnapshot);
+
+buildMixedJobsCorpus({
+  mix,
+  seed,
+  cityFocus,
+  jobsPath,
+  sourceConfig,
+});
 
 runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   "--input",
@@ -70,6 +70,18 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   reportPath,
   "--out",
   payloadPath,
+  "--min-ambiguity",
+  "4",
+  "--min-news-fit",
+  "4",
+  "--min-composite-score",
+  "4",
+  "--allowed-families",
+  "public,news,social,world,bridge,signals",
+  "--max-per-city",
+  "1",
+  "--max-total",
+  "8",
 ]);
 
 if (upload) {
@@ -296,15 +308,15 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
-    launch: 0.06,
-    public: 0.2,
-    review: 0.13,
-    forum: 0.14,
-    signals: 0.05,
-    news: 0.04,
-    social: 0.19,
-    world: 0.08,
-    bridge: 0.11,
+    launch: 0,
+    public: 0.14,
+    review: 0.04,
+    forum: 0.06,
+    signals: 0.02,
+    news: 0.3,
+    social: 0.16,
+    world: 0.12,
+    bridge: 0.16,
   };
   const counts = {};
   let remaining = Number(totalCount);

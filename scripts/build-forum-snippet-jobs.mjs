@@ -13,19 +13,27 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, normalizeSourceLanguage } from "./source-utils.mjs";
+import { cleanText, detectReadReasonFromSnippet, guessLaneFromSnippet, inferRelevantAnchor, normalizeSourceLanguage } from "./source-utils.mjs";
+import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "forum-snippets.json");
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "forum-snippet-jobs.json");
 const limit = Number(args.limit ?? 200);
+const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 4);
 const seed = args.seed ?? "forum-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
-  .slice(0, limit)
   .map(normalizeSnippet)
-  .filter((snippet) => snippet.body.length > 0);
+  .filter((snippet) => snippet.body.length > 0)
+  .map((snippet) => ({
+    ...snippet,
+    liveAlignment: scoreForumSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.liveAlignment.score >= minLiveAlignmentScore)
+  .sort((left, right) => compareByLiveAlignment(left, right, rand))
+  .slice(0, limit);
 
 const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
@@ -80,7 +88,7 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildAngle(snippet, lane, format),
     moment: buildMoment(snippet),
-    cityAnchor: inferAnchor(snippet, city),
+    cityAnchor: inferAnchor(snippet, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
@@ -178,18 +186,13 @@ function buildMoment(snippet) {
   return "The speaker is reacting to a neighborhood pattern as if everyone local should already understand the context.";
 }
 
-function inferAnchor(snippet, city) {
-  const lower = `${snippet.body} ${snippet.threadTitle} ${snippet.neighborhood}`.toLowerCase();
-  const directAnchors = [snippet.neighborhood, snippet.threadTitle]
-    .map((value) => value.trim())
-    .filter(Boolean)
-    .filter((value) => value.length <= 40);
-  if (directAnchors.length > 0) return directAnchors[0];
-  const anchors = [
-    ...(city?.defaultAnchors ?? []),
-    ...Object.values(city?.topicAnchors ?? {}).flat(),
-  ];
-  return anchors.find((anchor) => lower.includes(anchor.toLowerCase())) ?? anchors[0] ?? "street-level detail";
+function inferAnchor(snippet, city, topicId) {
+  return inferRelevantAnchor({
+    text: `${snippet.body} ${snippet.threadTitle} ${snippet.neighborhood}`,
+    city,
+    topicId,
+    directAnchors: [snippet.neighborhood, snippet.threadTitle],
+  });
 }
 
 function toneWeight(toneId, snippet) {
@@ -241,6 +244,9 @@ function buildForumRewritePrompt(job) {
     `Raw forum snippet: ${job.rawSnippet}`,
     ...laneInstructions,
     "Default move: keep the original context and wording as intact as possible.",
+    "Prefer zero edits if the snippet already works.",
+    "Keep 85-100% of the source wording unless forum scaffolding forces a cut.",
+    "Do not add a rhetorical question, metaphor, explanation, or cleaner final sentence.",
     "Preserve the source language unless the only edits are removing forum scaffolding.",
     "Only remove forum scaffolding, reply-language, usernames, and obvious thread-noise.",
     "Do not rewrite the text into a tidier or more audience-aware post.",
@@ -260,6 +266,36 @@ function buildForumContext(job) {
   if (job.rawSnippetNeighborhood) bits.push(`neighborhood: ${job.rawSnippetNeighborhood}`);
   if (job.rawSnippetSourceOrigin) bits.push(`source: ${job.rawSnippetSourceOrigin}`);
   return bits.join(", ");
+}
+
+function scoreForumSnippet(snippet) {
+  const combined = `${snippet.body} ${snippet.threadTitle} ${snippet.neighborhood}`.trim();
+  const lower = combined.toLowerCase();
+  const context = mergeContext(snippet.cityId);
+  const tokens = extractContextTokens(combined);
+  const contextOverlap = countOverlap(tokens, context.tokens);
+  const newsOverlap = countOverlap(tokens, context.newsTokens);
+  const firstPerson = /\b(i|i'm|i’m|my|me|we|our)\b/i.test(snippet.body);
+  const dialogue = /["“”]/.test(snippet.body) || /\b(i heard|someone said|he said|she said)\b/i.test(lower);
+  const anchor = snippet.neighborhood || (context.themes ?? []).some((theme) => lower.includes(theme));
+  const liveLexiconHit = /\b(delay|rent|tourist|suitcase|coffee|weather|fare|queue|crowd|late|heat|metro|tube|bart|muni|airbnb|startup|football)\b/i.test(lower);
+
+  return {
+    score: contextOverlap * 2 + newsOverlap * 3 + (firstPerson ? 1.5 : 0) + (dialogue ? 1.5 : 0) + (anchor ? 1 : 0) + (liveLexiconHit ? 1 : 0),
+    contextOverlap,
+    newsOverlap,
+  };
+}
+
+function compareByLiveAlignment(left, right, randFn) {
+  const scoreDelta = (right.liveAlignment?.score ?? 0) - (left.liveAlignment?.score ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftLength = left.body.length;
+  const rightLength = right.body.length;
+  if (rightLength !== leftLength) return rightLength - leftLength;
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {

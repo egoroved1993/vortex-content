@@ -207,6 +207,30 @@ export function dedupeTexts(items, getText = (item) => item.text) {
   });
 }
 
+export function inferRelevantAnchor({ text, city, topicId = null, directAnchors = [], fallback = "street-level detail" }) {
+  const lower = cleanText(text).toLowerCase();
+  const direct = directAnchors
+    .map((value) => cleanText(value))
+    .filter(Boolean)
+    .filter((value) => value.length <= 48);
+  if (direct.length > 0) return direct[0];
+
+  const topicAnchors = Array.from(new Set(topicId ? city?.topicAnchors?.[topicId] ?? [] : []));
+  const defaultAnchors = Array.from(new Set(city?.defaultAnchors ?? []));
+  const allAnchors = Array.from(new Set([...topicAnchors, ...defaultAnchors, ...Object.values(city?.topicAnchors ?? {}).flat()]));
+
+  const matchedTopicAnchor = topicAnchors.find((anchor) => lower.includes(anchor.toLowerCase()));
+  if (matchedTopicAnchor) return matchedTopicAnchor;
+
+  const matchedDefaultAnchor = defaultAnchors.find((anchor) => lower.includes(anchor.toLowerCase()));
+  if (matchedDefaultAnchor) return matchedDefaultAnchor;
+
+  const matchedAnyAnchor = allAnchors.find((anchor) => lower.includes(anchor.toLowerCase()));
+  if (matchedAnyAnchor) return matchedAnyAnchor;
+
+  return topicAnchors[0] ?? defaultAnchors[0] ?? fallback;
+}
+
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }

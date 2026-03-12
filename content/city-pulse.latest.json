@@ -1,23 +1,24 @@
 {
   "meta": {
-    "capturedAt": "2026-03-11T15:03:46.868Z",
+    "capturedAt": "2026-03-11T20:17:12.687Z",
     "sourceFiles": {
-      "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
-      "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
-      "forum": "/home/runner/work/vortex-content/vortex-content/content/forum-snippets.json",
-      "signals": "/home/runner/work/vortex-content/vortex-content/content/city-signals.json",
-      "news": "/home/runner/work/vortex-content/vortex-content/content/news-snippets.json",
-      "social": "/home/runner/work/vortex-content/vortex-content/content/social-snippets.json"
+      "public": "/Users/worldfamousnobody/Vortex/github-actions/content/public-human-comments.json",
+      "review": "/Users/worldfamousnobody/Vortex/github-actions/content/place-review-snippets.json",
+      "forum": "/Users/worldfamousnobody/Vortex/github-actions/content/forum-snippets.json",
+      "signals": "/Users/worldfamousnobody/Vortex/github-actions/content/city-signals.json",
+      "news": "/Users/worldfamousnobody/Vortex/github-actions/content/news-snippets.json",
+      "social": "/Users/worldfamousnobody/Vortex/github-actions/content/social-snippets.json",
+      "world": "/Users/worldfamousnobody/Vortex/github-actions/content/world-trends.json"
     },
-    "totalItems": 113
+    "totalItems": 132
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-11T15:03:46.868Z",
+      "captured_at": "2026-03-11T20:17:12.687Z",
       "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, money, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around money, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -25,7 +26,8 @@
         "forum": 2,
         "signals": 1,
         "news": 8,
-        "social": 2
+        "social": 2,
+        "world": 5
       },
       "languages": [
         "en"
@@ -36,27 +38,23 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -1,
+          "recency_weight": 1.04,
           "excerpt": "the only way to stay sane here is to treat every overground delay like a personal insult you are too tired to process properly"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "manual_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "excerpt": "Cold rain leaning sideways and making every bus window look dirtier than usual.. Victoria line platform packed early and one Overground train cancelled without explanation.. Pret l"
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
-          "excerpt": "London Tube strikes: What you need to know - BBC. <ol><li><a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9TaDcxVG9wUFJXMlp4bUhTOU1WLXFlN2pzdnJLeW5sMTVMNnIwNUNHbkVmN0Vk"
+          "recency_weight": 1.08,
+          "excerpt": "London Tube strikes: What you need to know - BBC. London Tube strikes: What you need to know   Tube strikes announced by RMT with passengers facing six days of chaos London Evening"
         },
         {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
@@ -64,25 +62,35 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "my theory is that you can tell how long someone has lived here by how little they react when the tube says severe delays"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "curated_public_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "the weird thing about london is people will apologise for touching your sleeve on the overground and then send you a rent increase like it's weather"
         }
       ],
       "metadata": {
-        "source_item_count": 28,
-        "average_valence": -0.149,
+        "source_item_count": 33,
+        "average_valence": -0.15,
         "dominant_themes": [
-          "transit",
           "money",
+          "transit",
           "routine"
-        ]
+        ],
+        "freshness_score": 0.998
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-11T15:03:46.868Z",
-      "mood_score": 0.463,
+      "captured_at": "2026-03-11T20:17:12.687Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, language, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, language. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -90,7 +98,8 @@
         "forum": 2,
         "signals": 1,
         "news": 8,
-        "social": 2
+        "social": 2,
+        "world": 5
       },
       "languages": [
         "de",
@@ -102,6 +111,7 @@
           "source_origin": "x_post",
           "language": "de",
           "valence": -1,
+          "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
@@ -109,6 +119,7 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "ringbahn delay this morning and one entire carriage somehow looked dressed for three different emotional climates at once"
         },
         {
@@ -116,6 +127,7 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "nothing says berlin rent discourse like a new cafe where the stools look temporary but the prices sound permanent"
         },
         {
@@ -123,32 +135,35 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "the best version of sunday closure is when the whole city goes quiet enough that the spati fridge suddenly sounds philosophical"
         },
         {
-          "source_family": "signals",
-          "source_origin": "manual_city_snapshot",
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
           "language": "en",
-          "valence": -0.075,
-          "excerpt": "Dry cold with sharp sun that makes everyone overdress wrong.. Ringbahn delays stacking and one tram full of people holding bouquets like they forgot a shared deadline.. Cafe tables"
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
         }
       ],
       "metadata": {
-        "source_item_count": 28,
-        "average_valence": -0.11,
+        "source_item_count": 33,
+        "average_valence": -0.137,
         "dominant_themes": [
           "general",
-          "language",
-          "routine"
-        ]
+          "routine",
+          "language"
+        ],
+        "freshness_score": 0.985
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-11T15:03:46.868Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-03-11T20:17:12.687Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around routine, transit, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around routine, transit, work. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -156,7 +171,8 @@
         "forum": 2,
         "signals": 1,
         "news": 8,
-        "social": 2
+        "social": 2,
+        "world": 5
       },
       "languages": [
         "en"
@@ -167,6 +183,7 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "muni delay this morning and the guy next to me kept refreshing his startup dashboard like the train personally owed his seed round something"
         },
         {
@@ -174,46 +191,51 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "people talk about sf like the fog makes everything poetic. mostly it just gives you two wrong outfits and one expensive coffee decision before noon"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "manual_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "excerpt": "Fog stayed late and then lifted just enough to make everyone overdress for the wrong microclimate.. Muni ghost arrivals and a stalled escalator pushing people into an ugly patience"
         },
         {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
+          "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "excerpt": "the weird thing about sf is everyone says they want community and then schedules friendship like a dentist appointment three weeks out"
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Fog held on too long and then vanished fast enough to make everyone's layers look defensive.. Muni timing feels advisory again, which is enough to tilt the mood before lunch.. Peop"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 1,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. there is a very local "
         }
       ],
       "metadata": {
-        "source_item_count": 28,
-        "average_valence": -0.046,
+        "source_item_count": 33,
+        "average_valence": -0.037,
         "dominant_themes": [
           "routine",
           "transit",
-          "money"
-        ]
+          "work"
+        ],
+        "freshness_score": 0.968
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-11T15:03:46.868Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-03-11T20:17:12.687Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -221,20 +243,29 @@
         "forum": 2,
         "signals": 1,
         "news": 8,
-        "social": 3
+        "social": 2,
+        "world": 5
       },
       "languages": [
         "ca",
         "en",
-        "es",
-        "ru"
+        "es"
       ],
       "drivers": [
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "es",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
@@ -242,38 +273,35 @@
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "people say barcelona is effortless but half the city runs on carefully managed lateness and pretending the rent conversation can wait another month"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Mild sun on paper, damp platform heat in practice.. The L3 is back to making strangers negotiate personal space with their jackets first.. Switches between Catalan, Spanish, and En"
+        },
+        {
           "source_family": "public",
           "source_origin": "curated_public_fallback",
           "language": "en",
           "valence": 0,
+          "recency_weight": 1.04,
           "excerpt": "someone stopped in the bike lane in gracia to film a doorway and three locals swerved around him like silent mutual contempt is just another transport layer here"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": 0,
-          "excerpt": "the real sign a brunch place is not for locals isn't the menu, it's whether anyone inside looks remotely rushed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": 0,
-          "excerpt": "same tiny coffee, same old man already arguing about football, same five minutes where i can pretend i belong before i have to translate the day again"
         }
       ],
       "metadata": {
-        "source_item_count": 29,
-        "average_valence": -0.044,
+        "source_item_count": 33,
+        "average_valence": -0.081,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
-        ]
+        ],
+        "freshness_score": 0.973
       }
     }
   ]

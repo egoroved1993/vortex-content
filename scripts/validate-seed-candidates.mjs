@@ -1,33 +1,37 @@
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { allKnownCityAnchors, cities, createSeededRandom } from "./seed-config.mjs";
 import { resolveProjectPath } from "./path-utils.mjs";
 
-const args = parseArgs(process.argv.slice(2));
-const inputPath = args.input
-  ? path.resolve(process.cwd(), args.input)
-  : path.resolve(process.cwd(), "github-actions/content/sample-seed-candidates.json");
-const outputPath = args.out
-  ? path.resolve(process.cwd(), args.out)
-  : path.resolve(process.cwd(), replaceExtension(inputPath, ".report.json"));
-
-const candidates = readCandidates(inputPath);
 const cityAnchors = allKnownCityAnchors().map((anchor) => anchor.toLowerCase());
 const cityAnchorTokens = buildCityAnchorTokens();
 const pulseContext = loadPulseContext();
 const worldContext = loadWorldContext();
-const rand = createSeededRandom(`validator:${inputPath}`);
-const report = candidates.map((candidate, index) => scoreCandidate(candidate, index, cityAnchors, rand));
-const summary = summarize(report);
 
-fs.writeFileSync(outputPath, `${JSON.stringify({ summary, report }, null, 2)}\n`);
+if (isDirectExecution()) {
+  const args = parseArgs(process.argv.slice(2));
+  const inputPath = args.input
+    ? path.resolve(process.cwd(), args.input)
+    : path.resolve(process.cwd(), "github-actions/content/sample-seed-candidates.json");
+  const outputPath = args.out
+    ? path.resolve(process.cwd(), args.out)
+    : path.resolve(process.cwd(), replaceExtension(inputPath, ".report.json"));
 
-console.log(`Validated ${report.length} candidates from ${inputPath}`);
-console.log(`Wrote report to ${outputPath}`);
-console.log(JSON.stringify(summary, null, 2));
+  const candidates = readCandidates(inputPath);
+  const rand = createSeededRandom(`validator:${inputPath}`);
+  const report = candidates.map((candidate, index) => scoreCandidate(candidate, index, cityAnchors, rand));
+  const summary = summarize(report);
 
-if (args["fail-on-error"] && summary.failed > 0) {
-  process.exit(1);
+  fs.writeFileSync(outputPath, `${JSON.stringify({ summary, report }, null, 2)}\n`);
+
+  console.log(`Validated ${report.length} candidates from ${inputPath}`);
+  console.log(`Wrote report to ${outputPath}`);
+  console.log(JSON.stringify(summary, null, 2));
+
+  if (args["fail-on-error"] && summary.failed > 0) {
+    process.exit(1);
+  }
 }
 
 function readCandidates(filePath) {
@@ -39,7 +43,7 @@ function readCandidates(filePath) {
   return JSON.parse(raw);
 }
 
-function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
+export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnchors, randFn = () => 0.5) {
   const content = String(candidate.content ?? "").trim();
   const contentLower = content.toLowerCase();
   const sentences = splitSentences(content);
@@ -52,6 +56,10 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   const isMindPost = candidate.lane === "mind_post";
   const signals = {
     firstPerson: /\b(i|i’m|i'd|i’ve|me|my|mine|we|our|yo|me|mi|mis|mio|mía|nosotros|nuestra|jo|em|mi|meu|meva|nosaltres|ich|mir|mein|meine|wir|я|мне|меня|мой|моя|мы)\b/i.test(content),
+    implicitFirstPerson:
+      /^[\s"'“”]*(?:(?:this morning|this afternoon|today|tonight|hoy|avui|heute)[,\s]+)?(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost|waiting|waited|caught|catching)\b/i.test(
+        content
+      ),
     dialogue: /[“’””]/.test(content) || /\bsaid\b/i.test(content),
     detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|каталан|каталан|барселон|шум|miete|l3)/i.test(content),
     anchor:
@@ -59,6 +67,11 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
       anchorsForCity.some((token) => contentLower.includes(token)) ||
       /(барселон|берлин|лондон|сан[- ]?франц|san francisco|barcelona|berlin|london)/i.test(content),
     hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|до сих пор|каждый раз|wieder|immer noch)/i.test(content),
+    pettySpecificity:
+      /(had to|ended up|checked (the )?(board|app) twice|before coffee|before work|rent math|rent tab|wrong jacket|three suitcases|same rent|walk back out|queue and half of us|got trapped in it|suitcase slalom|suitcase traffic|step around|swerved around|sidestep|two wrong outfits|platform displays|red digital signage|temporary politics|one normal errand|detour|missed the (bus|train|tram|tube)|important appointment|over an hour early|three scheduled times|stuck dodging|waiting ages|turn at the caf[eé]|clock tick past|two minutes late|train just left|group chat|second six dollar coffee|twelve minutes to be ignored)/i.test(
+        content
+      ),
+    performativeFrame: /^(people say|people talk about|nothing says|the weird thing about|the thing about|the only way to stay sane|my rule is|the real sign|nothing exposes a person faster|everyone in here is either)\b/i.test(content),
     mindPostThesis: isMindPost && /(turns out|realized|realize|the truth|the thing is|the problem|the real|the only|actually|everyone|always|never|every time|rule is|theory|pattern|reveals|proves|signals|means that|more than|less than|better than|worse than|the best|the worst)/i.test(content),
     mindPostContrast: isMindPost && /\b(but|except|until|though|whereas|despite|instead|rather|unless|yet)\b/i.test(content),
     conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|teure|teuer|chaos|задерж|шум|дорого|турист)/i.test(content),
@@ -68,7 +81,8 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
     newsCycleFit: newsContextOverlap > 0,
   };
 
-  const stickySignal = signals.hook || signals.conflict || signals.tenderness || signals.mindPostThesis || signals.mindPostContrast;
+  const stickySignal =
+    signals.hook || signals.pettySpecificity || signals.conflict || signals.tenderness || signals.mindPostThesis || signals.mindPostContrast;
   const essayLike = looksEssayLike(contentLower, sentences, words);
   const forumAdviceFraming = looksForumAdviceFraming(contentLower);
   const stereotypeBundle = hasIconicCityBundle(contentLower, candidate.cityId);
@@ -76,13 +90,15 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   const stagedObservation = looksStagedObservation(contentLower);
   const atmosphericPoetry = looksAtmosphericPoetry(contentLower);
   const performativeSnark = looksPerformativeSnark(contentLower);
+  const instructionLeakage = looksInstructionLeakage(contentLower);
+  const articleVoice = looksArticleVoice(contentLower);
 
   const issues = [];
   if (!content) issues.push("empty_content");
   if (content.length < 45) issues.push("too_short");
   if (content.length > 280) issues.push("too_long");
   if (!signals.detail) issues.push("low_detail");
-  if (!signals.firstPerson && !signals.dialogue) issues.push("weak_mindprint");
+  if (!signals.firstPerson && !signals.implicitFirstPerson && !signals.dialogue) issues.push("weak_mindprint");
   if (!signals.anchor) issues.push("missing_city_anchor");
   if (looksGeneric(contentLower)) issues.push("generic_city_copy");
   if (looksTooPolished(sentences, words, contentLower)) issues.push("overpolished");
@@ -93,6 +109,9 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   if (stagedObservation) issues.push("staged_observation");
   if (atmosphericPoetry) issues.push("atmospheric_poetry");
   if (performativeSnark) issues.push("performative_snark");
+  if (signals.performativeFrame) issues.push("performative_frame");
+  if (instructionLeakage) issues.push("instruction_leakage");
+  if (articleVoice) issues.push("article_voice");
   if (!stickySignal) issues.push("low_stickiness");
   if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
   if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
@@ -100,8 +119,10 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
 
   const humanSignals = [
     signals.firstPerson,
+    signals.implicitFirstPerson,
     signals.dialogue,
     signals.detail,
+    signals.pettySpecificity,
     /(maybe|honestly|weirdly|literally|kind of|sort of)/i.test(content),
     /[?!]/.test(content),
   ].filter(Boolean).length;
@@ -109,28 +130,38 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
   const aiSignals = [
     looksTooPolished(sentences, words, contentLower),
     essayLike,
+    signals.performativeFrame,
     /(at least|somehow|silver lining|there is something about|in this city|the kind of place|it feels like)/i.test(content),
     sentences.length === 2 && Math.abs(wordCount(sentences[0]) - wordCount(sentences[1])) <= 3,
   ].filter(Boolean).length;
 
   const mindprint = clampScore(
     1 +
-      (signals.firstPerson ? 1 : 0) +
+      (signals.firstPerson ? 2 : 0) +
+      (signals.implicitFirstPerson ? 1 : 0) +
       (signals.dialogue ? 1 : 0) +
       (signals.detail ? 1 : 0) +
-      (signals.hook ? 1 : 0)
+      (signals.hook ? 1 : 0) +
+      (signals.pettySpecificity ? 1 : 0) -
+      (signals.performativeFrame ? 1 : 0)
   );
   const cityness = clampScore(1 + (signals.anchor ? 2 : 0) + (signals.detail ? 1 : 0) + (!looksGeneric(contentLower) ? 1 : 0));
   const stickiness = clampScore(
     1 +
       (signals.hook ? 2 : 0) +
+      (signals.pettySpecificity ? 1 : 0) +
       (signals.conflict ? 1 : 0) +
       (signals.tenderness ? 1 : 0) +
       (signals.mindPostThesis ? 1 : 0) +
       (signals.mindPostContrast ? 1 : 0) +
       (!looksGeneric(contentLower) ? 1 : 0)
   );
-  const ambiguity = clampScore(1 + Math.max(0, 3 - Math.abs(humanSignals - aiSignals)) + (humanSignals > 0 && aiSignals > 0 ? 1 : 0));
+  const ambiguity = clampScore(
+    1 +
+      Math.min(3, humanSignals) +
+      (humanSignals >= 2 && aiSignals >= 1 ? 1 : 0) -
+      (aiSignals >= humanSignals + 2 ? 1 : 0)
+  );
   const freshness = clampScore(
     1 +
       (signals.freshnessMarker ? 1 : 0) +
@@ -158,9 +189,13 @@ function scoreCandidate(candidate, index, cityAnchorsLower, randFn) {
     !issues.includes("staged_observation") &&
     !issues.includes("atmospheric_poetry") &&
     !issues.includes("performative_snark") &&
+    !issues.includes("performative_frame") &&
+    !issues.includes("instruction_leakage") &&
+    !issues.includes("article_voice") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
-    !issues.includes("too_long");
+    !issues.includes("too_long") &&
+    !issues.includes("weak_mindprint");
 
   return {
     id: candidate.id ?? `candidate_${String(index + 1).padStart(4, "0")}`,
@@ -195,16 +230,23 @@ function looksGeneric(contentLower) {
 }
 
 function looksTooPolished(sentences, words, contentLower) {
+  const groundedFirstPerson =
+    /\b(i|i'm|i’m|i've|i’ve|my|me|we|our)\b/.test(contentLower) &&
+    /(\d|€|\$|£|queue|platform|rent|coffee|tram|bus|train|metro|tube|bart|muni|pub|barista|landlord|roommate|station|suitcase|delay|strike|line|fog)/i.test(contentLower);
+
   if (sentences.length === 2) {
     const first = wordCount(sentences[0]);
     const second = wordCount(sentences[1]);
-    if (first >= 8 && first <= 18 && Math.abs(first - second) <= 2) {
+    if (!groundedFirstPerson && first >= 8 && first <= 18 && Math.abs(first - second) <= 2) {
       return true;
     }
   }
 
+  const polishedConnector = /(at least|meanwhile|almost makes|in a way|as if|as though)/i.test(contentLower);
+  const vagueConnector = /\bsomehow\b/i.test(contentLower) && !groundedFirstPerson;
+
   return (
-    /(at least|meanwhile|somehow|almost makes|in a way|as if|as though)/i.test(contentLower) &&
+    (polishedConnector || vagueConnector) &&
     words.length >= 20 &&
     !/[?!]/.test(contentLower)
   );
@@ -453,6 +495,62 @@ function looksPerformativeSnark(contentLower) {
   return fragments.some((fragment) => contentLower.includes(fragment)) || tweeConstruction;
 }
 
+function looksInstructionLeakage(contentLower) {
+  const fragments = [
+    "preserve the original",
+    "turn the review into",
+    "return only json",
+    "raw source snippet",
+    "raw review snippet",
+    "raw forum snippet",
+    "raw social post",
+    "source lane:",
+    "game source label:",
+    "source profile target:",
+    "texture target:",
+    "city anchor:",
+    "default move:",
+    "this source snippet",
+    "this review snippet",
+    "this forum snippet",
+    "mind-post format:",
+    "mind-post shape:",
+  ];
+
+  if (fragments.some((fragment) => contentLower.includes(fragment))) return true;
+
+  return (
+    /\bwhile (starts|contrasts|turn|is reacting|is thinking|a place review|the annoyance proves)\b/.test(contentLower) ||
+    /\bkeep the result debatable\b/.test(contentLower) ||
+    /\bdo not (improve|turn|replace|rewrite|invent)\b/.test(contentLower)
+  );
+}
+
+function looksArticleVoice(contentLower) {
+  const fragments = [
+    "what you need to know",
+    "according to",
+    "could make history",
+    "first look at plans",
+    "urges caution",
+    "exact dates",
+    "announced by",
+    "published at",
+    "reported that",
+    "residents face",
+    "commuters face",
+    "the council says",
+    "the mayor says",
+    "officials said",
+  ];
+
+  const headlineyStructure =
+    /(news|headline|article|publisher|bbc|bloomberg|chronicle|standard|tagesspiegel)/.test(contentLower) &&
+    /(today|this week|announced|reported|published)/.test(contentLower);
+
+  return fragments.some((fragment) => contentLower.includes(fragment)) || headlineyStructure;
+}
+
 function buildCityAnchorTokens() {
   return Object.fromEntries(
     cities.map((city) => {
@@ -518,7 +616,7 @@ function loadWorldContext() {
   }
 }
 
-function mergeContext(cityId) {
+export function mergeContext(cityId) {
   const pulse = pulseContext[cityId] ?? { themes: [], tokens: [], newsTokens: [] };
   const world = worldContext[cityId] ?? [];
   return {
@@ -528,7 +626,7 @@ function mergeContext(cityId) {
   };
 }
 
-function extractContextTokens(text) {
+export function extractContextTokens(text) {
   const stop = new Set([
     "about", "after", "again", "against", "around", "because", "before", "being", "between", "could", "every", "feels",
     "first", "from", "have", "into", "just", "like", "more", "most", "much", "only", "people", "right", "still",
@@ -548,7 +646,7 @@ function extractContextTokens(text) {
   );
 }
 
-function countOverlap(words, contextTokens) {
+export function countOverlap(words, contextTokens) {
   if (!contextTokens.length) return 0;
   const context = new Set(contextTokens);
   return Array.from(new Set(words.map((word) => word.replace(/[^a-z0-9äöüßáéíóúñç]+/gi, ""))))
@@ -572,7 +670,7 @@ function pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit) {
   return "needs_human_edit";
 }
 
-function summarize(report) {
+export function summarize(report) {
   const summary = {
     total: report.length,
     passed: report.filter((entry) => entry.passed).length,
@@ -660,4 +758,9 @@ function parseArgs(argv) {
     index += 1;
   }
   return parsed;
+}
+
+function isDirectExecution() {
+  if (!process.argv[1]) return false;
+  return import.meta.url === pathToFileURL(process.argv[1]).href;
 }

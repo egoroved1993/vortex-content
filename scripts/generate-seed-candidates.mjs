@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createSeededRandom } from "./seed-config.mjs";
 import { resolveProjectPath } from "./path-utils.mjs";
+import { scoreCandidate } from "./validate-seed-candidates.mjs";
 
 // Load city pulse data for grounding generation in current city mood/themes
 const cityPulseMap = loadCityPulse();
@@ -106,6 +107,32 @@ console.log(
 );
 
 async function generateCandidate(job, { provider: activeProvider, model: activeModel }) {
+  const initial = await generateCandidateOnce(job, { provider: activeProvider, model: activeModel });
+  const variants = [initial];
+  const assessment = assessCandidateQuality(job, initial.content);
+
+  if (shouldAttemptRepair(job, assessment)) {
+    const repaired = await generateRepairCandidate(job, { provider: activeProvider, model: activeModel }, initial.content, assessment);
+    if (repaired?.content) {
+      variants.push(repaired);
+    }
+  }
+
+  const localRepairs = buildLocalRepairVariants(job, initial.content);
+  variants.push(
+    ...localRepairs.map((content, index) => ({
+      ...initial,
+      content,
+      rawModelResponse: initial.rawModelResponse,
+      repairStrategy: `local_${index + 1}`,
+      usage: null,
+    }))
+  );
+
+  return pickBestGeneratedVariant(job, variants);
+}
+
+async function generateCandidateOnce(job, { provider: activeProvider, model: activeModel }) {
   if (activeProvider === "anthropic") {
     return generateWithAnthropic(job, activeModel);
   }
@@ -113,6 +140,16 @@ async function generateCandidate(job, { provider: activeProvider, model: activeM
     return generateWithXAI(job, activeModel);
   }
   return generateWithOpenAI(job, activeModel);
+}
+
+async function generateRepairCandidate(job, { provider: activeProvider, model: activeModel }, weakDraft, assessment) {
+  if (activeProvider === "anthropic") {
+    return generateRepairWithAnthropic(job, activeModel, weakDraft, assessment);
+  }
+  if (activeProvider === "xai") {
+    return generateRepairWithXAI(job, activeModel, weakDraft, assessment);
+  }
+  return generateRepairWithOpenAI(job, activeModel, weakDraft, assessment);
 }
 
 function resolveTargetModel(job, { provider: defaultProvider, model: defaultModel, laneProviderOverrides: providerOverrides, laneModelOverrides: modelOverrides }) {
@@ -155,6 +192,27 @@ function buildSystemPrompt(job, providerHint = null) {
   if (["news", "social", "world", "bridge"].includes(job.sourceFamily)) {
     base += "\n\nThis message must feel metabolized from today's context in that city, not like timeless city vibe copy.";
   }
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    base +=
+      "\n\nFor this source family you are a minimally invasive editor, not an author." +
+      "\nPreserve 85-100% of the source wording whenever possible." +
+      "\nPrefer zero edits beyond removing platform scaffolding, obvious filler, or one redundant phrase." +
+      "\nDo not add a new question, metaphor, thesis, punchline, summary ending, or second thought." +
+      "\nIf you introduce a sentence that is not already implied by the source, you failed.";
+  } else if (job.sourceFamily === "news") {
+    base +=
+      "\n\nFor news snippets, convert article pressure into one resident-sized consequence." +
+      "\nDo not sound like a reporter, newsletter, explainer, or headline writer." +
+      "\nNo rhetorical questions. No moral. No polished landing sentence.";
+  } else if (["world", "bridge", "signals"].includes(job.sourceFamily)) {
+    base +=
+      "\n\nUse world/signal context only as pressure on routine, friction, or one overheard-feeling moment." +
+      "\nDo not let the text drift into commentary, discourse summary, or trend explanation.";
+  } else if (job.sourceFamily === "launch") {
+    base +=
+      "\n\nLaunch seeds are the most synthetic family, so resist polished writing hard." +
+      "\nNo rhetorical questions, no clever final sentence, no mini-essay cadence.";
+  }
   if (pulse) {
     const themes = pulse.themes.join(", ");
     base += `\n\nCity context for ${job.cityId} right now: mood is ${pulse.moodLabel}. Dominant themes in the city today: ${themes}.`;
@@ -177,6 +235,7 @@ function buildSystemPrompt(job, providerHint = null) {
 async function generateWithOpenAI(job, modelName) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("OPENAI_API_KEY is required for provider=openai");
+  const profile = generationProfile(job, "openai");
 
   return fetchWithRetry(async () => {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -187,8 +246,8 @@ async function generateWithOpenAI(job, modelName) {
       },
       body: JSON.stringify({
         model: modelName,
-        temperature: 0.9,
-        max_tokens: 350,
+        temperature: profile.temperature,
+        max_tokens: profile.maxTokens,
         response_format: { type: "json_object" },
         messages: [
           {
@@ -215,6 +274,7 @@ async function generateWithOpenAI(job, modelName) {
 async function generateWithXAI(job, modelName) {
   const apiKey = process.env.XAI_API_KEY;
   if (!apiKey) throw new Error("XAI_API_KEY is required for provider=xai");
+  const profile = generationProfile(job, "xai");
 
   return fetchWithRetry(async () => {
     const response = await fetch("https://api.x.ai/v1/chat/completions", {
@@ -225,8 +285,8 @@ async function generateWithXAI(job, modelName) {
       },
       body: JSON.stringify({
         model: modelName,
-        temperature: 0.95,
-        max_tokens: 350,
+        temperature: profile.temperature,
+        max_tokens: profile.maxTokens,
         messages: [
           {
             role: "system",
@@ -253,6 +313,7 @@ async function generateWithXAI(job, modelName) {
 async function generateWithAnthropic(job, modelName) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY is required for provider=anthropic");
+  const profile = generationProfile(job, "anthropic");
 
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
@@ -263,10 +324,123 @@ async function generateWithAnthropic(job, modelName) {
     },
     body: JSON.stringify({
       model: modelName,
-      max_tokens: 350,
-      temperature: 0.9,
+      max_tokens: profile.maxTokens,
+      temperature: profile.temperature,
       system: buildSystemPrompt(job, "anthropic"),
       messages: [{ role: "user", content: job.prompt }],
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Anthropic error ${response.status}: ${await response.text()}`);
+  }
+
+  const payload = await response.json();
+  const text = payload.content?.map((part) => part.text ?? "").join("").trim();
+  return normalizeModelJson(job, text, {
+    usage: normalizeAnthropicUsage(payload.usage),
+  });
+}
+
+async function generateRepairWithOpenAI(job, modelName, weakDraft, assessment) {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) throw new Error("OPENAI_API_KEY is required for provider=openai");
+
+  return fetchWithRetry(async () => {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: modelName,
+        temperature: 0.22,
+        max_tokens: job.lane === "mind_post" ? 220 : 180,
+        response_format: { type: "json_object" },
+        messages: [
+          {
+            role: "system",
+            content: buildRepairSystemPrompt(job, assessment, "openai"),
+          },
+          {
+            role: "user",
+            content: buildRepairUserPrompt(job, weakDraft, assessment),
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`OpenAI error ${response.status}: ${await response.text()}`);
+    }
+
+    const payload = await response.json();
+    const text = payload.choices?.[0]?.message?.content?.trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeOpenAIUsage(payload.usage),
+    });
+  });
+}
+
+async function generateRepairWithXAI(job, modelName, weakDraft, assessment) {
+  const apiKey = process.env.XAI_API_KEY;
+  if (!apiKey) throw new Error("XAI_API_KEY is required for provider=xai");
+
+  return fetchWithRetry(async () => {
+    const response = await fetch("https://api.x.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: modelName,
+        temperature: 0.28,
+        max_tokens: job.lane === "mind_post" ? 220 : 180,
+        messages: [
+          {
+            role: "system",
+            content: buildRepairSystemPrompt(job, assessment, "xai"),
+          },
+          {
+            role: "user",
+            content: buildRepairUserPrompt(job, weakDraft, assessment),
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`xAI error ${response.status}: ${await response.text()}`);
+    }
+
+    const payload = await response.json();
+    const text = payload.choices?.[0]?.message?.content?.trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeXAIUsage(payload.usage),
+      systemFingerprint: payload.system_fingerprint ?? null,
+    });
+  });
+}
+
+async function generateRepairWithAnthropic(job, modelName, weakDraft, assessment) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error("ANTHROPIC_API_KEY is required for provider=anthropic");
+
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: modelName,
+      max_tokens: job.lane === "mind_post" ? 220 : 180,
+      temperature: 0.2,
+      system: buildRepairSystemPrompt(job, assessment, "anthropic"),
+      messages: [{ role: "user", content: buildRepairUserPrompt(job, weakDraft, assessment) }],
     }),
   });
 
@@ -289,6 +463,8 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     parsed = { content: rawText };
   }
 
+  const sanitizedContent = sanitizeGeneratedContent(job, parsed.content);
+
   return {
     id: job.id,
     cityId: job.cityId,
@@ -307,29 +483,92 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     transformationMode: job.transformationMode ?? null,
     sourceProfile: job.sourceProfile,
     tone: job.tone,
-    content: String(parsed.content ?? "").trim(),
-    why_human: String(parsed.why_human ?? "").trim(),
-    why_ai: String(parsed.why_ai ?? "").trim(),
-    read_value_hook: String(parsed.read_value_hook ?? "").trim(),
+    content: sanitizedContent,
+    why_human: sanitizeReasonField(parsed.why_human, "specific local detail and emotional self-exposure"),
+    why_ai: sanitizeReasonField(parsed.why_ai, "compressed structure and slightly too clean framing"),
+    read_value_hook: sanitizeReasonField(
+      parsed.read_value_hook,
+      job.lane === "mind_post" ? "clear angle with social diagnosis" : "lived scene with one sticky detail"
+    ),
     sentiment: normalizeSentiment(parsed.sentiment),
-    detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? "en"),
+    detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? job.rawSnippetLanguage ?? "en"),
     rawModelResponse: rawText,
     usage,
     systemFingerprint,
   };
 }
 
+function buildRepairSystemPrompt(job, assessment, providerHint = null) {
+  let base = "You repair weak anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
+  base += "\nFix the draft without making it sound polished, literary, or article-like.";
+  base += "\nKeep the same scene, same source pressure, and same local detail.";
+  base += "\nThe repaired version must stay under 2 sentences and under the lane character cap.";
+  base += "\nNo rhetorical questions, no moral, no tidy ending, no metaphor.";
+  base += "\nPrefer one petty inconvenience, small complaint, or embarrassing local reaction over a thesis about the city.";
+  base += "\nAvoid opener patterns like 'people say', 'nothing says', 'the weird thing about', 'my rule is', or 'the only way to stay sane'.";
+
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    base += "\nFor salvage families, keep at least 70% of the source wording when possible.";
+    base += "\nDo not invent a cleaner thought than the source already implied.";
+  }
+
+  if (job.sourceFamily === "news") {
+    base += "\nFor news, convert the source into one resident-sized consequence.";
+    base += "\nUse at least one exact token or phrase from the source snippet.";
+    base += "\nDo not sound like a reporter, headline writer, or civic explainer.";
+  }
+
+  if (["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
+    base += "\nThis must feel written today inside the live city context, not like timeless city commentary.";
+  }
+
+  if (providerHint === "xai") {
+    base += "\nPrefer bluntness over polish. Mild mess is better than synthetic cleverness.";
+  }
+
+  if (assessment.missing.length > 0) {
+    base += `\nMissing signals to repair: ${assessment.missing.join(", ")}.`;
+  }
+
+  return base;
+}
+
+function buildRepairUserPrompt(job, weakDraft, assessment) {
+  const sourceText = cleanSourceFallback(job);
+  const pulse = cityPulseMap[job.cityId] ?? null;
+  const context = [];
+
+  if (pulse?.newsHeadlines?.length) {
+    context.push(`Live headlines today:\n${pulse.newsHeadlines.map((headline) => `- ${headline}`).join("\n")}`);
+  }
+  if (pulse?.drivers?.length) {
+    context.push(`Live city texture:\n${pulse.drivers.filter(Boolean).map((driver) => `- ${driver}`).join("\n")}`);
+  }
+
+  return [
+    `City: ${job.cityName ?? job.cityId}`,
+    `Source family: ${job.sourceFamily ?? "unknown"}`,
+    `Lane: ${job.lane}`,
+    `City anchor: ${job.cityAnchor ?? "none"}`,
+    `Source language: ${job.rawSnippetLanguage ?? "en"}`,
+    ...(job.sourceFamily === "news" ? [`Event phrase to preserve: ${inferNewsEventPhrase(job) || "none"}`] : []),
+    `Raw source: ${sourceText || "(empty)"}`,
+    `Weak draft: ${cleanGeneratedText(weakDraft) || "(empty)"}`,
+    `Missing signals: ${assessment.missing.join(", ") || "none"}`,
+    ...context,
+    "Repair the weak draft so it still sounds like the same speaker or same scene, but now includes the missing signals naturally.",
+    "If you need to choose, prioritize: first-person or overheard trace, city anchor, today/this morning marker, concrete local detail, one sticky hook or conflict.",
+    "Best shape: one tiny inconvenience plus one human reaction.",
+    "Bad shape: city thesis, proverb, slogan, or clean dunk line.",
+    "Preserve the source language unless the source itself is already mixed or broken.",
+    "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
+  ].join("\n\n");
+}
+
 function buildMockCandidate(job, index) {
   const rand = createSeededRandom(`mock:${job.id}:${index}`);
-  const openings = job.lane === "mind_post" ? mindPostOpenings : microMomentOpenings;
-  const first = openings[Math.floor(rand() * openings.length)];
-  const middle = [
-    job.cityAnchor,
-    job.angle.replace(/^The speaker /, "").replace(/\.$/, "").toLowerCase(),
-    job.moment.replace(/^The speaker /, "").replace(/\.$/, "").toLowerCase(),
-  ];
-  const ending = mockEndings[Math.floor(rand() * mockEndings.length)];
-  const content = `${first} ${composeMiddle(middle, rand)} ${ending}`.replace(/\s+/g, " ").trim();
+  const base = buildFallbackContent(job);
+  const content = addSmallMockVariation(base, job, rand);
 
   return {
     ...job,
@@ -344,6 +583,918 @@ function buildMockCandidate(job, index) {
     generatedAt: new Date().toISOString(),
     usage: null,
   };
+}
+
+function sanitizeGeneratedContent(job, value) {
+  const cleaned = cleanGeneratedText(value);
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    return sanitizeMinimalSalvageContent(job, cleaned);
+  }
+  if (job.sourceFamily === "news") {
+    return sanitizeNewsContent(job, cleaned);
+  }
+
+  if (!cleaned || looksPromptLeaked(cleaned)) return buildFallbackContent(job);
+
+  const bounded = enforceCharacterLimit(
+    stripSyntheticLanding(cleanGeneratedText(cleaned)),
+    job.lane === "mind_post" ? 220 : 180
+  );
+  if (bounded.length >= 45 && !looksTooComposed(bounded) && !hasSyntheticThesisOpener(bounded)) return bounded;
+
+  return buildFallbackContent(job);
+}
+
+function sanitizeReasonField(value, fallback) {
+  const cleaned = cleanGeneratedText(value);
+  if (!cleaned || looksPromptLeaked(cleaned)) return fallback;
+  return enforceCharacterLimit(cleaned, 120);
+}
+
+function buildFallbackContent(job) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const sourceText = cleanSourceFallback(job);
+
+  if (sourceText) {
+    return enforceCharacterLimit(stripSyntheticLanding(sourceText), maxChars);
+  }
+
+  const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+  if (job.lane === "mind_post") {
+    return enforceCharacterLimit(
+      `my current theory is ${anchor} tells you more about this city than the people who keep explaining it.`,
+      maxChars
+    );
+  }
+
+  return enforceCharacterLimit(
+    `saw this today near ${anchor} and everyone around it looked like they were already halfway through the same argument.`,
+    maxChars
+  );
+}
+
+function cleanSourceFallback(job) {
+  const rawParts = [];
+
+  if (job.sourceFamily === "news") {
+    rawParts.push(job.rawSnippetBody ?? "");
+    rawParts.push(job.rawSnippet ?? "");
+    rawParts.push(job.rawSnippetHeadline ?? "");
+  } else {
+    rawParts.push(job.rawSnippet ?? "");
+    rawParts.push(job.rawSnippetHeadline ?? "");
+  }
+
+  const combined = rawParts
+    .map((part) => cleanGeneratedText(part))
+    .find((part) => part.length >= 20);
+
+  if (!combined) return "";
+
+  const withoutLead = stripInstructionyLead(combined, job);
+  const withoutHeadline = job.sourceFamily === "news"
+    ? stripNewsHeadlinePrefix(withoutLead, job.rawSnippetHeadline)
+    : withoutLead;
+
+  return withoutHeadline;
+}
+
+function sanitizeMinimalSalvageContent(job, candidateText) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
+  if (!candidateText || looksPromptLeaked(candidateText)) {
+    return sourceCandidate || buildFallbackContent(job);
+  }
+
+  const modelCandidate = sanitizeSourceLikeText(candidateText, maxChars);
+  if (!sourceCandidate) {
+    return modelCandidate || buildFallbackContent(job);
+  }
+  if (!modelCandidate) return sourceCandidate;
+  if (!hasEnoughSourceOverlap(modelCandidate, sourceCandidate)) return sourceCandidate;
+  if (hasUnbalancedQuote(modelCandidate)) return sourceCandidate;
+  if (looksTooComposed(modelCandidate)) return sourceCandidate;
+  if (modelCandidate.length > sourceCandidate.length + 24) return sourceCandidate;
+  if (countSentences(modelCandidate) > Math.max(2, countSentences(sourceCandidate))) return sourceCandidate;
+
+  return modelCandidate.length + 8 < sourceCandidate.length ? modelCandidate : sourceCandidate;
+}
+
+function sanitizeNewsContent(job, candidateText) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
+  if (!candidateText || looksPromptLeaked(candidateText)) {
+    return buildNewsFallbackContent(job, sourceCandidate);
+  }
+
+  const bounded = sanitizeSourceLikeText(candidateText, maxChars);
+  if (!bounded) return buildNewsFallbackContent(job, sourceCandidate);
+  if (hasUnbalancedQuote(bounded)) return buildNewsFallbackContent(job, sourceCandidate);
+  if (hasSyntheticThesisOpener(bounded)) return buildNewsFallbackContent(job, sourceCandidate);
+  if (looksArticleish(bounded) || looksTooComposed(bounded)) return buildNewsFallbackContent(job, sourceCandidate);
+  if (!hasNewsSourceTrace(job, bounded) && !hasEnoughSourceOverlap(bounded, sourceCandidate)) {
+    return buildNewsFallbackContent(job, sourceCandidate);
+  }
+  if (!hasHumanTrace(bounded) && !hasEnoughSourceOverlap(bounded, sourceCandidate)) {
+    return buildNewsFallbackContent(job, sourceCandidate);
+  }
+
+  return bounded;
+}
+
+function sanitizeSourceLikeText(text, maxChars) {
+  const cleaned = stripSyntheticLanding(cleanGeneratedText(text));
+  if (!cleaned) return "";
+  const bounded = enforceCharacterLimit(cleaned, maxChars);
+  return bounded.length >= 24 ? bounded : "";
+}
+
+function buildNewsFallbackContent(job, sourceCandidate) {
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const headline = cleanGeneratedText(job.rawSnippetHeadline ?? "");
+  const body = cleanGeneratedText(job.rawSnippetBody ?? job.rawSnippet ?? "");
+  const source = sourceCandidate || sanitizeSourceLikeText(body || headline, maxChars);
+  const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+  const lower = `${headline} ${body}`.toLowerCase();
+  const eventPhrase = spokenNewsEventPhrase(job);
+  const prefix = freshnessPrefixFor(job);
+
+  if (/\b(strike|delays?|closure|cancelled|service|platform|tube|muni|bart|u-bahn|ringbahn|tram|metro)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} at ${anchor} i checked the board twice and still ended up late because the ${eventPhrase || "delay"} thing had already spread down the platform.`,
+      maxChars
+    );
+  }
+  if (/\b(rent|housing|homes|build-to-rent|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} the ${eventPhrase || "housing"} update had me reopening the same rent tab before coffee.`,
+      maxChars
+    );
+  }
+  if (/\b(touris|visitor|hotel|cruise|suitcase)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i had to do the suitcase slalom again because the ${eventPhrase || "tourism"} thing was already running the pavement.`,
+      maxChars
+    );
+  }
+  if (/\b(weather|rain|flood|fog|heat|cold|storm)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} the ${eventPhrase || "weather"} thing made me wear the wrong jacket and miss the useful train.`,
+      maxChars
+    );
+  }
+  if (source && hasHumanTrace(source) && !looksArticleish(source)) {
+    return source;
+  }
+  if (source && !looksArticleish(source) && hasNewsSourceTrace(job, source)) {
+    return enforceCharacterLimit(source, maxChars);
+  }
+  if (eventPhrase) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i had one normal errand and the ${eventPhrase} thing still turned it into a detour.`,
+      maxChars
+    );
+  }
+
+  return buildFallbackContent(job);
+}
+
+function cleanGeneratedText(value) {
+  return unwrapEmbeddedJsonText(
+    String(value ?? "")
+      .replace(/^["'`]+|["'`]+$/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+
+function unwrapEmbeddedJsonText(value) {
+  const cleaned = String(value ?? "").trim();
+  if (!cleaned.startsWith("{")) return cleaned;
+
+  try {
+    const parsed = JSON.parse(cleaned);
+    if (typeof parsed?.content === "string") {
+      return String(parsed.content).trim();
+    }
+  } catch {
+    // fall through to regex extraction
+  }
+
+  const match = cleaned.match(/"content"\s*:\s*"([^]+?)"\s*(?:,|})/i);
+  if (!match?.[1]) return cleaned;
+
+  return match[1]
+    .replace(/\\"/g, '"')
+    .replace(/\\n/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/^["'`]+|["'`]+$/g, "")
+    .trim();
+}
+
+function looksPromptLeaked(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  if (!lower) return false;
+
+  const directPatterns = [
+    "preserve the original",
+    "turn the review into",
+    "return only json",
+    "raw source snippet",
+    "raw review snippet",
+    "raw forum snippet",
+    "raw social post",
+    "source lane:",
+    "game source label:",
+    "source profile target:",
+    "texture target:",
+    "tone target:",
+    "city anchor:",
+    "default move:",
+    "this source snippet",
+    "this review snippet",
+    "this forum snippet",
+    "mind-post format:",
+    "mind-post shape:",
+    "write one short anonymous city message",
+  ];
+
+  const hitCount = directPatterns.filter((pattern) => lower.includes(pattern)).length;
+  if (hitCount >= 1) return true;
+
+  const leakedStructure =
+    /\bwhile (starts|contrasts|turn|is reacting|is thinking|a place review|the annoyance proves)\b/.test(lower) ||
+    /\bkeep the result debatable\b/.test(lower) ||
+    /\bdo not (improve|turn|replace|rewrite|invent)\b/.test(lower);
+
+  return leakedStructure;
+}
+
+function isMinimalSalvageFamily(sourceFamily) {
+  return ["public", "review", "forum", "social"].includes(sourceFamily);
+}
+
+function generationProfile(job, providerName) {
+  if (isMinimalSalvageFamily(job.sourceFamily)) {
+    return {
+      temperature: providerName === "xai" ? 0.28 : 0.2,
+      maxTokens: 180,
+    };
+  }
+
+  if (job.sourceFamily === "news") {
+    return {
+      temperature: providerName === "xai" ? 0.4 : 0.35,
+      maxTokens: 220,
+    };
+  }
+
+  if (["world", "bridge", "signals"].includes(job.sourceFamily)) {
+    return {
+      temperature: providerName === "xai" ? 0.55 : 0.45,
+      maxTokens: 230,
+    };
+  }
+
+  return {
+    temperature: providerName === "xai" ? 0.72 : 0.62,
+    maxTokens: 250,
+  };
+}
+
+function stripInstructionyLead(text, job) {
+  let cleaned = cleanGeneratedText(text);
+  const cityName = cleanGeneratedText(job.cityName ?? "");
+  const cityAnchor = cleanGeneratedText(job.cityAnchor ?? "");
+
+  const removablePrefixes = [
+    cityName,
+    cityAnchor,
+    `City: ${cityName}`,
+    `Topic: ${job.topicLabel ?? ""}`,
+    `Read reason: ${job.readReasonLabel ?? ""}`,
+  ].filter(Boolean);
+
+  for (const prefix of removablePrefixes) {
+    if (cleaned.toLowerCase().startsWith(prefix.toLowerCase())) {
+      cleaned = cleaned.slice(prefix.length).replace(/^[,:.\-\s]+/, "");
+    }
+  }
+
+  return cleaned;
+}
+
+function stripNewsHeadlinePrefix(text, headline) {
+  const cleaned = cleanGeneratedText(text);
+  const cleanedHeadline = cleanGeneratedText(headline);
+  if (!cleanedHeadline) return cleaned;
+
+  const lowerText = cleaned.toLowerCase();
+  const lowerHeadline = cleanedHeadline.toLowerCase();
+  if (!lowerText.startsWith(lowerHeadline)) return cleaned;
+
+  return cleaned.slice(cleanedHeadline.length).replace(/^[\s:;,.!-]+/, "").trim() || cleanedHeadline;
+}
+
+function stripSyntheticLanding(text) {
+  let cleaned = cleanGeneratedText(text);
+  if (!cleaned) return "";
+
+  const closers = [
+    "what a mess.",
+    "i guess.",
+    "just another tuesday.",
+    "just another day.",
+    "isn't it?",
+    "you know?",
+    "for good?",
+  ];
+
+  for (const closer of closers) {
+    if (cleaned.toLowerCase().endsWith(closer)) {
+      cleaned = cleaned.slice(0, -closer.length).trim();
+    }
+  }
+
+  const sentences = splitSentences(cleaned);
+  if (sentences.length >= 2) {
+    const last = sentences[sentences.length - 1].toLowerCase();
+    if (
+      /\?$/.test(last) ||
+      /(what does it mean|what a mess|i guess|just another|it'?s funny,? isn'?t it|ever notice|but is this|can'?t even enjoy)/.test(last)
+    ) {
+      sentences.pop();
+      cleaned = sentences.join(" ").trim();
+    }
+  }
+
+  return cleaned;
+}
+
+function assessCandidateQuality(job, text) {
+  const review = scoreCandidate(
+    {
+      ...job,
+      content: cleanGeneratedText(text),
+    },
+    0
+  );
+
+  const missing = mapIssuesToRepairs(job, review.issues, review.signals);
+  const score =
+    (review.passed ? 10 : 0) +
+    review.scores.mindprint * 2 +
+    review.scores.cityness * 1.3 +
+    review.scores.stickiness * 2 +
+    review.scores.ambiguity * 1.8 +
+    review.scores.freshness * 1.6 +
+    review.scores.news_fit * 1.9 -
+    review.issues.reduce((total, issue) => total + issuePenalty(issue), 0);
+
+  return {
+    score,
+    missing,
+    signals: review.signals,
+    review,
+  };
+}
+
+function shouldAttemptRepair(job, assessment) {
+  if (assessment.score >= 11 && assessment.missing.length === 0) return false;
+  if (job.sourceFamily === "launch") return false;
+  return assessment.missing.some((signal) =>
+    ["first_person_or_overheard_trace", "city_anchor", "freshness_marker", "news_cycle_overlap", "sticky_hook"].includes(signal)
+  );
+}
+
+function buildLocalRepairVariants(job, text) {
+  const sourceText = cleanSourceFallback(job);
+  const basis = sourceText || cleanGeneratedText(text);
+  const variants = [];
+
+  const anchored = buildFreshAnchoredRepair(job, basis);
+  if (anchored) variants.push(anchored);
+
+  const overheard = buildOverheardRepair(job, basis);
+  if (overheard) variants.push(overheard);
+
+  const firstPerson = buildLiveFirstPersonRepair(job, basis);
+  if (firstPerson) variants.push(firstPerson);
+
+  const petty = buildPettyLocalRepair(job, basis);
+  if (petty) variants.push(petty);
+
+  if (job.sourceFamily === "news") {
+    const resident = buildResidentNewsRepair(job, basis);
+    if (resident) variants.push(resident);
+  }
+
+  return Array.from(new Set(variants.filter(Boolean)));
+}
+
+function buildFreshAnchoredRepair(job, text) {
+  let candidate = cleanGeneratedText(text);
+  if (!candidate) return "";
+
+  if (!hasAnchorSignal(job, candidate)) {
+    candidate = injectAnchor(job, candidate);
+  }
+  if (["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily) && !/(today|this morning|tonight|right now|again|hoy|avui|heute)/i.test(candidate)) {
+    candidate = `${freshnessPrefixFor(job)} ${candidate}`.trim();
+  }
+
+  return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 180);
+}
+
+function buildOverheardRepair(job, text) {
+  const candidate = cleanGeneratedText(text).replace(/[.!?]+$/g, "").trim();
+  if (!candidate) return "";
+  if (/\b(i|i'm|i’m|i've|i’ve|my|me|we|our|yo|mi|ich|em)\b/i.test(candidate) || /[“”"]/u.test(candidate)) return "";
+  if (!sourceHasDialogue(job)) return "";
+
+  const prefix = overheardPrefixFor(job);
+  return enforceCharacterLimit(`${prefix}"${candidate}"`, job.lane === "mind_post" ? 220 : 180);
+}
+
+function buildLiveFirstPersonRepair(job, text) {
+  if (!["news", "world", "bridge", "signals"].includes(job.sourceFamily)) return "";
+
+  let candidate = cleanGeneratedText(text).replace(/^[,.\s]+/, "").trim();
+  if (!candidate) return "";
+  if (hasHumanTrace(candidate)) return "";
+  if (hasUnbalancedQuote(candidate)) return "";
+  if (hasSyntheticThesisOpener(candidate)) return "";
+
+  const prefix = firstPersonPrefixFor(job);
+  candidate = `${prefix} ${candidate}`.replace(/\s+/g, " ").trim();
+  return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 180);
+}
+
+function buildPettyLocalRepair(job, text) {
+  if (!["news", "world", "bridge", "signals"].includes(job.sourceFamily)) return "";
+
+  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+  const prefix = freshnessPrefixFor(job);
+  const lower = `${cleanGeneratedText(text)} ${job.liveEventClue ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
+  const eventPhrase = spokenNewsEventPhrase(job);
+
+  if (/\b(strike|delay|service|platform|tube|muni|bart|u-bahn|ubahn|ringbahn|tram|metro|bus|fare)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} at ${anchor} i checked the board twice and still ended up late because the ${eventPhrase || "delay"} thing had already spread down the platform.`,
+      maxChars
+    );
+  }
+
+  if (/\b(rent|housing|lloguer|lloguers|alquiler|miete|lease|apartment|flat|eviction|airbnb|homes)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} the ${eventPhrase || "housing"} update had me reopening the same rent tab before coffee.`,
+      maxChars
+    );
+  }
+
+  if (/\b(touris|visitor|hotel|suitcase|cruise)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i had to do the suitcase slalom again because the ${eventPhrase || "tourism"} thing was already running the pavement.`,
+      maxChars
+    );
+  }
+
+  if (/\b(ai|startup|founder|vc|robotaxi|driverless|waymo|tech)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i heard another ${eventPhrase || "ai"} conversation before coffee and immediately wanted to walk back out.`,
+      maxChars
+    );
+  }
+
+  if (/\b(election|senator|vote|gop|act|bill|musk|trump|government|policy|council)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} someone dragged the ${eventPhrase || "politics"} thing into the coffee queue and half of us got trapped in it.`,
+      maxChars
+    );
+  }
+
+  if (/\b(weather|rain|flood|fog|heat|cold|storm)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} the ${eventPhrase || "weather"} thing made me wear the wrong jacket and miss the useful train.`,
+      maxChars
+    );
+  }
+
+  if (eventPhrase) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i had one normal errand and the ${eventPhrase} thing still turned it into a detour.`,
+      maxChars
+    );
+  }
+
+  return "";
+}
+
+function buildResidentNewsRepair(job, text) {
+  const lower = `${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
+  const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+  const prefix = freshnessPrefixFor(job);
+  const eventPhrase = spokenNewsEventPhrase(job);
+
+  if (/\b(strike|delay|service|platform|tube|muni|bart|u-bahn|ubahn|ringbahn|tram|metro|bus|fare)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} at ${anchor} i checked the board twice and still ended up late because the ${eventPhrase || "delay"} thing had already spread down the platform.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (/\b(rent|housing|lloguer|lloguers|alquiler|miete|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} the ${eventPhrase || "housing"} update had me reopening the same rent tab before coffee.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (/\b(touris|visitor|hotel|suitcase|cruise)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i had to do the suitcase slalom again because the ${eventPhrase || "tourism"} thing was already running the pavement.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (/\b(mural|8m|festival|artist|concert|gallery)\b/.test(lower)) {
+    return enforceCharacterLimit(
+      `${prefix} in the metro i watched more people stop for the ${eventPhrase || "new mural"} than for the actual platform flow and everyone was still late.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  if (eventPhrase) {
+    return enforceCharacterLimit(
+      `${prefix} near ${anchor} i had one normal errand and the ${eventPhrase} thing still turned it into a detour.`,
+      job.lane === "mind_post" ? 220 : 180
+    );
+  }
+
+  return "";
+}
+
+function pickBestGeneratedVariant(job, variants) {
+  const usable = variants.filter((variant) => cleanGeneratedText(variant?.content).length >= 24);
+  const ranked = usable
+    .map((variant) => ({
+      variant,
+      assessment: assessCandidateQuality(job, variant.content),
+    }))
+    .sort((left, right) => {
+      if (left.assessment.review.passed !== right.assessment.review.passed) {
+        return Number(right.assessment.review.passed) - Number(left.assessment.review.passed);
+      }
+      return right.assessment.score - left.assessment.score;
+    });
+
+  const best = ranked[0]?.variant ?? usable[0] ?? variants[0];
+  const mergedUsage = usable.map((variant) => variant.usage).reduce(sumUsageRecords, null);
+
+  return {
+    ...best,
+    usage: mergedUsage,
+    repairAttempts: Math.max(0, usable.length - 1),
+  };
+}
+
+function sumUsageRecords(left, right) {
+  if (!left) return right ?? null;
+  if (!right) return left;
+
+  return {
+    input_tokens: Number(left.input_tokens ?? 0) + Number(right.input_tokens ?? 0),
+    output_tokens: Number(left.output_tokens ?? 0) + Number(right.output_tokens ?? 0),
+    total_tokens: Number(left.total_tokens ?? 0) + Number(right.total_tokens ?? 0),
+    reasoning_tokens: Number(left.reasoning_tokens ?? 0) + Number(right.reasoning_tokens ?? 0),
+  };
+}
+
+function hasAnchorSignal(job, text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  const anchor = cleanGeneratedText(job.cityAnchor ?? "").toLowerCase();
+  const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "").toLowerCase();
+
+  return Boolean(
+    (anchor && lower.includes(anchor)) ||
+      (cityName && lower.includes(cityName)) ||
+      /(london|berlin|barcelona|san francisco|victoria line|ringbahn|u8|muni|bart|metro|tmb|rodalies)/.test(lower)
+  );
+}
+
+function sourceHasDialogue(job) {
+  const raw = `${job.rawSnippet ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`;
+  return /["“”]/.test(raw) || /\b(i heard|someone said|he said|she said|dijo|hat gesagt)\b/i.test(raw);
+}
+
+function injectAnchor(job, text) {
+  const candidate = cleanGeneratedText(text);
+  if (!candidate) return "";
+  const anchor = cleanGeneratedText(job.cityAnchor ?? "");
+  const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "");
+
+  if (job.rawSnippetLanguage === "en") {
+    const place = anchor || cityName || "this block";
+    return `on ${place} ${candidate}`.replace(/\s+/g, " ").trim();
+  }
+
+  return `${candidate} ${cityName || anchor}`.replace(/\s+/g, " ").trim();
+}
+
+function freshnessPrefixFor(job) {
+  switch (job.rawSnippetLanguage) {
+    case "de":
+      return "heute";
+    case "es":
+      return "hoy";
+    case "ca":
+      return "avui";
+    default:
+      return "this morning";
+  }
+}
+
+function overheardPrefixFor(job) {
+  const anchor = cleanGeneratedText(job.cityAnchor ?? job.cityName ?? "this block");
+  switch (job.rawSnippetLanguage) {
+    case "de":
+      return `heute in ${job.cityName ?? "Berlin"} hat jemand gesagt: `;
+    case "es":
+      return `hoy en ${job.cityName ?? "la ciudad"} escuché: `;
+    case "ca":
+      return `avui a ${job.cityName ?? "la ciutat"} he sentit: `;
+    default:
+      return `${freshnessPrefixFor(job)} on ${anchor} i heard someone say `;
+  }
+}
+
+function firstPersonPrefixFor(job) {
+  const anchor = cleanGeneratedText(job.cityAnchor ?? job.cityName ?? "this block");
+  switch (job.rawSnippetLanguage) {
+    case "de":
+      return `heute bei ${anchor} habe ich gemerkt,`;
+    case "es":
+      return `hoy por ${anchor} me pasó que`;
+    case "ca":
+      return `avui per ${anchor} m'ha passat que`;
+    default:
+      return `${freshnessPrefixFor(job)} near ${anchor} i noticed`;
+  }
+}
+
+function countSharedTokens(left, right) {
+  const leftTokens = tokenSet(left);
+  const rightTokens = tokenSet(right);
+  if (leftTokens.size === 0 || rightTokens.size === 0) return 0;
+
+  let overlap = 0;
+  for (const token of leftTokens) {
+    if (rightTokens.has(token)) overlap += 1;
+  }
+  return overlap;
+}
+
+function mapIssuesToRepairs(job, issues, signals) {
+  const missing = [];
+
+  if (issues.includes("weak_mindprint") && !signals.dialogue) missing.push("first_person_or_overheard_trace");
+  if (issues.includes("missing_city_anchor")) missing.push("city_anchor");
+  if (issues.includes("low_freshness")) missing.push("freshness_marker");
+  if (issues.includes("detached_from_news_cycle")) missing.push("news_cycle_overlap");
+  if (issues.includes("low_stickiness")) missing.push("sticky_hook");
+  if (issues.includes("low_detail")) missing.push("concrete_detail");
+  if (issues.includes("article_voice")) missing.push("article_voice");
+  if (issues.includes("overpolished") || issues.includes("essay_like")) missing.push("overcomposed");
+  if (issues.includes("performative_frame")) missing.push("first_person_or_overheard_trace");
+
+  if (!signals.firstPerson && !signals.implicitFirstPerson && !signals.dialogue) missing.push("first_person_or_overheard_trace");
+  if (!signals.anchor) missing.push("city_anchor");
+  if (!signals.freshnessMarker && ["social", "news", "world", "bridge", "signals"].includes(job.sourceFamily)) {
+    missing.push("freshness_marker");
+  }
+
+  return Array.from(new Set(missing));
+}
+
+function issuePenalty(issue) {
+  const penalties = {
+    overpolished: 2.2,
+    essay_like: 3.2,
+    article_voice: 3.2,
+    detached_from_news_cycle: 3.4,
+    low_freshness: 2.8,
+    low_stickiness: 2.2,
+    weak_mindprint: 2.4,
+    low_detail: 1.8,
+    missing_city_anchor: 2.4,
+    generic_city_copy: 3.5,
+    performative_frame: 2.8,
+    instruction_leakage: 6,
+    too_long: 4,
+    blocked_by_length: 4,
+  };
+
+  return penalties[issue] ?? 1;
+}
+
+function looksTooComposed(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  if (!lower) return false;
+  return (
+    countSentences(lower) >= 3 ||
+    /(there'?s something about|it'?s funny,? isn'?t it|what does it mean|what a mess|just another tuesday|just another day|poof|can'?t help but|fading rituals|constantly shifts)/.test(lower) ||
+    hasSyntheticThesisOpener(lower)
+  );
+}
+
+function looksArticleish(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  return /(what you need to know|according to|officials|residents face|commuters face|announced|published|council|mayor|exact dates|urge caution)/.test(lower);
+}
+
+function hasSyntheticThesisOpener(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  return /^(people say|people talk about|nothing says|the weird thing about|the thing about|the only way to stay sane|my rule is|the real sign|nothing exposes a person faster|everyone in here is either)\b/.test(
+    lower
+  );
+}
+
+function inferNewsEventPhrase(job) {
+  const explicit = cleanGeneratedText(job.eventPhrase ?? "");
+  if (explicit) return explicit;
+
+  const lower = `${job.liveEventClue ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();
+  const phrasePatterns = [
+    /(\d[\d,.-]*-home [a-z ]+pipeline)/,
+    /(dream home[^.]{0,40}four apartments)/,
+    /(railyard[^.]{0,40}thousands of homes)/,
+    /(azizification[^.]{0,25}housing)/,
+    /victoria line/,
+    /tube strikes?/,
+    /(croydon tram[^.]{0,30}cars on track)/,
+    /ringbahn/,
+    /u-?bahn/,
+    /(muni(?: metro)?[^.]{0,24}floppy disks)/,
+    /muni(?: metro)?/,
+    /bart/,
+    /rodalies/,
+    /tmb/,
+    /(habitatge i lloguers)/,
+    /airbnb/,
+    /housing/,
+    /rent/,
+    /touris\w+/,
+    /suitcase traffic/,
+    /cruise/,
+    /weather/,
+    /fog/,
+    /heat/,
+    /storm/,
+    /bridge/,
+    /fare/,
+    /delay/,
+    /strike/,
+    /platform/,
+  ];
+
+  for (const pattern of phrasePatterns) {
+    const match = lower.match(pattern);
+    if (match?.[0]) return match[0];
+  }
+
+  const cleaned = cleanGeneratedText(job.liveEventClue ?? job.rawSnippetHeadline ?? "");
+  if (!cleaned) return "";
+  return cleaned.slice(0, 40).toLowerCase();
+}
+
+function hasNewsSourceTrace(job, text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  if (!lower) return false;
+
+  const eventPhrase = cleanGeneratedText(inferNewsEventPhrase(job)).toLowerCase();
+  if (eventPhrase && lower.includes(eventPhrase)) return true;
+
+  const eventTokens = newsEventTokens(job);
+  if (eventTokens.length > 0) {
+    const candidateTokens = tokenSet(lower);
+    const matchedEventTokens = eventTokens.filter((token) => candidateTokens.has(token));
+    if (matchedEventTokens.length >= 1) return true;
+    return false;
+  }
+
+  const sourceTokens = tokenSet(`${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`);
+  const candidateTokens = tokenSet(lower);
+  let overlap = 0;
+  for (const token of sourceTokens) {
+    if (candidateTokens.has(token)) overlap += 1;
+    if (overlap >= 2) return true;
+  }
+
+  return false;
+}
+
+function hasUnbalancedQuote(text) {
+  const quoteCount = (cleanGeneratedText(text).match(/["“”]/g) ?? []).length;
+  return quoteCount === 1;
+}
+
+function spokenNewsEventPhrase(job) {
+  const eventPhrase = cleanGeneratedText(inferNewsEventPhrase(job));
+  if (!eventPhrase) return "";
+
+  return eventPhrase
+    .replace(/^news\s*-\s*/i, "")
+    .replace(/\b(london|berlin|barcelona|san francisco)\b/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .replace(/^[\s:,-]+|[\s:,-]+$/g, "")
+    .slice(0, 64);
+}
+
+function newsEventTokens(job) {
+  const stop = new Set([
+    "this", "that", "with", "from", "into", "over", "under", "after", "before", "again", "story", "update",
+    "local", "today", "city", "london", "berlin", "barcelona", "francisco", "san", "news", "current",
+  ]);
+
+  return Array.from(
+    new Set(
+      spokenNewsEventPhrase(job)
+        .toLowerCase()
+        .split(/[^a-z0-9äöüßáéíóúñç]+/i)
+        .map((token) => token.trim())
+        .filter((token) => token.length >= 4 || /^\d/.test(token))
+        .filter((token) => !stop.has(token))
+    )
+  );
+}
+
+function hasHumanTrace(text) {
+  const lower = cleanGeneratedText(text).toLowerCase();
+  return (
+    /\b(i|my|me|we|our)\b/.test(lower) ||
+    /^[\s"'“”]*(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did)\b/.test(lower) ||
+    /["'“”]/.test(text) ||
+    /\b(said|heard|looked like|guy next to me|woman at|people were)\b/.test(lower)
+  );
+}
+
+function hasEnoughSourceOverlap(candidate, source) {
+  const candidateTokens = tokenSet(candidate);
+  const sourceTokens = tokenSet(source);
+  if (candidateTokens.size === 0 || sourceTokens.size === 0) return false;
+  let overlap = 0;
+  for (const token of candidateTokens) {
+    if (sourceTokens.has(token)) overlap += 1;
+  }
+  return overlap / Math.max(1, Math.min(candidateTokens.size, sourceTokens.size)) >= 0.35;
+}
+
+function tokenSet(text) {
+  return new Set(
+    cleanGeneratedText(text)
+      .toLowerCase()
+      .split(/[^a-z0-9äöüßáéíóúñç]+/i)
+      .map((token) => token.trim())
+      .filter((token) => token.length >= 4 || /^[a-z]\d$/i.test(token))
+  );
+}
+
+function countSentences(text) {
+  return splitSentences(text).length;
+}
+
+function splitSentences(text) {
+  return cleanGeneratedText(text)
+    .split(/(?<=[.!?])\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function enforceCharacterLimit(text, maxChars) {
+  const cleaned = cleanGeneratedText(text);
+  if (cleaned.length <= maxChars) return cleaned;
+
+  const sentenceBound = cleaned.slice(0, maxChars).match(/^(.+[.!?])(?:\s|$)/);
+  if (sentenceBound?.[1] && sentenceBound[1].length >= 45) return sentenceBound[1].trim();
+
+  const lastSpace = cleaned.lastIndexOf(" ", maxChars - 1);
+  const slicePoint = lastSpace >= 45 ? lastSpace : maxChars;
+  return cleaned.slice(0, slicePoint).replace(/[,:;\-]+$/g, "").trim();
+}
+
+function normalizeAnchor(value) {
+  return cleanGeneratedText(value).replace(/\b(this city|street-level detail)\b/gi, "this block") || "this block";
+}
+
+function addSmallMockVariation(base, job, rand) {
+  const content = cleanGeneratedText(base);
+  if (!content) return buildFallbackContent(job);
+  if (content.length < 70) return content;
+  if (rand() < 0.5) return content;
+
+  const punctuation = content.endsWith(".") ? "" : ".";
+  return `${content}${punctuation}`;
 }
 
 function composeMiddle(parts, rand) {

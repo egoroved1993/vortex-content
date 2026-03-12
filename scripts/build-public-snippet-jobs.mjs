@@ -3,7 +3,6 @@ import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
 import {
   buildPrompt,
-  cities,
   createSeededRandom,
   getCompatibleTextures,
   getCity,
@@ -15,17 +14,25 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { normalizeSourceLanguage } from "./source-utils.mjs";
+import { inferRelevantAnchor, normalizeSourceLanguage } from "./source-utils.mjs";
+import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "public-human-comments.json");
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "public-human-snippet-jobs.json");
 const limit = Number(args.limit ?? 200);
+const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 4);
 const seed = args.seed ?? "public-human-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
   .filter((snippet) => !looksForumAdviceSnippet(snippet.body))
+  .map((snippet) => ({
+    ...snippet,
+    liveAlignment: scorePublicSnippet(snippet),
+  }))
+  .filter((snippet) => snippet.liveAlignment.score >= minLiveAlignmentScore)
+  .sort((left, right) => compareByLiveAlignment(left, right, rand))
   .slice(0, limit);
 const jobs = snippets.map((snippet, index) => {
   const lane = snippet.laneHint ?? "micro_moment";
@@ -78,7 +85,7 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildSnippetAngle(snippet, lane, format),
     moment: buildMomentFromSnippet(snippet),
-    cityAnchor: inferAnchor(snippet.body, city),
+    cityAnchor: inferAnchor(snippet.body, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: snippet.body,
@@ -141,6 +148,9 @@ function buildSnippetRewritePrompt(job) {
     `Raw source snippet: ${job.rawSnippet}`,
     ...laneInstructions,
     "Default move: keep the original context and wording as intact as possible.",
+    "Prefer zero edits if the snippet already works.",
+    "Keep 85-100% of the source wording unless platform scaffolding forces a cut.",
+    "Do not add a rhetorical question, metaphor, explanation, or cleaner final sentence.",
     "Preserve the source language unless you only need to remove platform scaffolding.",
     "You may only remove platform scaffolding, usernames, explicit reply framing, and obvious filler.",
     "Do not add new city markers, new symbolism, or a smarter conclusion that was not already in the snippet.",
@@ -208,13 +218,12 @@ function buildMomentFromSnippet(snippet) {
     : "The speaker is reacting to one city moment that stuck to them.";
 }
 
-function inferAnchor(body, city) {
-  const lower = body.toLowerCase();
-  const anchors = [
-    ...(city?.defaultAnchors ?? []),
-    ...Object.values(city?.topicAnchors ?? {}).flat(),
-  ];
-  return anchors.find((anchor) => lower.includes(anchor.toLowerCase())) ?? anchors[0] ?? cities.find((entry) => entry.id === city?.id)?.defaultAnchors?.[0] ?? "street-level detail";
+function inferAnchor(body, city, topicId) {
+  return inferRelevantAnchor({
+    text: body,
+    city,
+    topicId,
+  });
 }
 
 function toneWeight(toneId, text) {
@@ -233,6 +242,37 @@ function formatWeight(formatId, text) {
   if (formatId === "delayed_realization" && /\b(it took me|realized)\b/.test(lower)) return 5;
   if (formatId === "overheard_analysis" && (/"|'/.test(text) || /\bsaid\b/.test(lower))) return 5;
   return 1;
+}
+
+function scorePublicSnippet(snippet) {
+  const body = String(snippet.body ?? "").trim();
+  const lower = body.toLowerCase();
+  const context = mergeContext(snippet.cityId);
+  const tokens = extractContextTokens(body);
+  const contextOverlap = countOverlap(tokens, context.tokens);
+  const newsOverlap = countOverlap(tokens, context.newsTokens);
+  const sourceScore = Number(snippet.score ?? 0) / 10;
+  const themeHit = (context.themes ?? []).some((theme) => lower.includes(theme));
+  const liveLexiconHit = /\b(delay|rent|strike|tourist|suitcase|coffee|weather|fare|platform|queue|crowd|late|heat|metro|tube|bart|muni|airbnb|startup)\b/i.test(lower);
+  const freshnessMarker = /(today|this morning|tonight|right now|still|again|hoy|heute|avui)/i.test(body);
+
+  return {
+    score: sourceScore + contextOverlap * 2 + newsOverlap * 3 + (themeHit ? 1 : 0) + (liveLexiconHit ? 1 : 0) + (freshnessMarker ? 1 : 0),
+    contextOverlap,
+    newsOverlap,
+    sourceScore,
+  };
+}
+
+function compareByLiveAlignment(left, right, randFn) {
+  const scoreDelta = (right.liveAlignment?.score ?? 0) - (left.liveAlignment?.score ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+
+  const leftRaw = Number(left.score ?? 0);
+  const rightRaw = Number(right.score ?? 0);
+  if (rightRaw !== leftRaw) return rightRaw - leftRaw;
+
+  return randFn() > 0.5 ? 1 : -1;
 }
 
 function countBy(items, getKey) {
