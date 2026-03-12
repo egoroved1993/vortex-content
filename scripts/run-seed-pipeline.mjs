@@ -77,7 +77,7 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "--min-composite-score",
   "4",
   "--allowed-families",
-  "news,social,world,bridge,signals",
+  "public,news,social,world,bridge,signals",
   "--max-per-city",
   "1",
   "--max-total",
@@ -309,14 +309,14 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
     launch: 0,
-    public: 0.1,
-    review: 0.05,
-    forum: 0.07,
+    public: 0.14,
+    review: 0.04,
+    forum: 0.06,
     signals: 0.02,
-    news: 0.28,
-    social: 0.28,
-    world: 0.07,
-    bridge: 0.13,
+    news: 0.3,
+    social: 0.16,
+    world: 0.12,
+    bridge: 0.16,
   };
   const counts = {};
   let remaining = Number(totalCount);

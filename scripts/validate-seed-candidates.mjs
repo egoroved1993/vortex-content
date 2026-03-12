@@ -56,7 +56,10 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const isMindPost = candidate.lane === "mind_post";
   const signals = {
     firstPerson: /\b(i|i’m|i'd|i’ve|me|my|mine|we|our|yo|me|mi|mis|mio|mía|nosotros|nuestra|jo|em|mi|meu|meva|nosaltres|ich|mir|mein|meine|wir|я|мне|меня|мой|моя|мы)\b/i.test(content),
-    implicitFirstPerson: /^[\s"'“”]*(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost)\b/i.test(content),
+    implicitFirstPerson:
+      /^[\s"'“”]*(?:(?:this morning|this afternoon|today|tonight|hoy|avui|heute)[,\s]+)?(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost|waiting|waited|caught|catching)\b/i.test(
+        content
+      ),
     dialogue: /[“’””]/.test(content) || /\bsaid\b/i.test(content),
     detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|каталан|каталан|барселон|шум|miete|l3)/i.test(content),
     anchor:
@@ -64,7 +67,10 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
       anchorsForCity.some((token) => contentLower.includes(token)) ||
       /(барселон|берлин|лондон|сан[- ]?франц|san francisco|barcelona|berlin|london)/i.test(content),
     hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|до сих пор|каждый раз|wieder|immer noch)/i.test(content),
-    pettySpecificity: /(had to|ended up|checked (the )?(board|app) twice|before coffee|before work|rent math|rent tab|wrong jacket|three suitcases|same rent|walk back out|queue and half of us|got trapped in it|suitcase slalom|suitcase traffic|step around|swerved around|sidestep|two wrong outfits|platform displays|red digital signage|temporary politics|one normal errand|detour)/i.test(content),
+    pettySpecificity:
+      /(had to|ended up|checked (the )?(board|app) twice|before coffee|before work|rent math|rent tab|wrong jacket|three suitcases|same rent|walk back out|queue and half of us|got trapped in it|suitcase slalom|suitcase traffic|step around|swerved around|sidestep|two wrong outfits|platform displays|red digital signage|temporary politics|one normal errand|detour|missed the (bus|train|tram|tube)|important appointment|over an hour early|three scheduled times|stuck dodging|waiting ages|turn at the caf[eé]|clock tick past|two minutes late|train just left|group chat|second six dollar coffee|twelve minutes to be ignored)/i.test(
+        content
+      ),
     performativeFrame: /^(people say|people talk about|nothing says|the weird thing about|the thing about|the only way to stay sane|my rule is|the real sign|nothing exposes a person faster|everyone in here is either)\b/i.test(content),
     mindPostThesis: isMindPost && /(turns out|realized|realize|the truth|the thing is|the problem|the real|the only|actually|everyone|always|never|every time|rule is|theory|pattern|reveals|proves|signals|means that|more than|less than|better than|worse than|the best|the worst)/i.test(content),
     mindPostContrast: isMindPost && /\b(but|except|until|though|whereas|despite|instead|rather|unless|yet)\b/i.test(content),
