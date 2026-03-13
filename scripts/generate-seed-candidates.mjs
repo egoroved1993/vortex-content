@@ -733,7 +733,9 @@ function buildNewsFallbackContent(job, sourceCandidate) {
   const source = sourceCandidate || sanitizeSourceLikeText(body || headline, maxChars);
   const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
   const lower = `${headline} ${body}`.toLowerCase();
-  const eventPhrase = spokenNewsEventPhrase(job);
+  const rawEventPhrase = spokenNewsEventPhrase(job);
+  // Reject long phrases that are raw headlines rather than short spoken phrases
+  const eventPhrase = rawEventPhrase.split(/\s+/).length <= 5 ? rawEventPhrase : "";
   const prefix = freshnessPrefixFor(job);
 
   if (/\b(strike|delays?|closure|cancelled|service|platform|tube|muni|bart|u-bahn|ringbahn|tram|metro)\b/.test(lower)) {

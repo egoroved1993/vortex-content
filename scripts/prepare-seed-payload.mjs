@@ -61,7 +61,11 @@ for (const candidate of candidates) {
   });
 }
 
+const TRANSIT_TOPICS = new Set(["commute_thought"]);
+const maxTransitPerCity = 2;
+
 const cityCounts = new Map();
+const transitCounts = new Map();
 for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal * 4)) {
   const cityId = entry.candidate.cityId ?? "unknown";
   if ((cityCounts.get(cityId) ?? 0) >= maxPerCity) {
@@ -71,6 +75,14 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
   if (selected.length >= maxTotal) {
     rejected.push({ id: entry.candidate.id, reason: "max_total_reached" });
     continue;
+  }
+  if (TRANSIT_TOPICS.has(entry.candidate.topicId)) {
+    const key = `${cityId}:transit`;
+    if ((transitCounts.get(key) ?? 0) >= maxTransitPerCity) {
+      rejected.push({ id: entry.candidate.id, reason: "transit_cap_reached" });
+      continue;
+    }
+    transitCounts.set(key, (transitCounts.get(key) ?? 0) + 1);
   }
 
   cityCounts.set(cityId, (cityCounts.get(cityId) ?? 0) + 1);
