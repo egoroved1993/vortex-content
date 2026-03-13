@@ -67,6 +67,7 @@ const maxTransitPerCity = 2;
 
 const cityCounts = new Map();
 const transitCounts = new Map();
+const seenContent = new Set();
 for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal * 4)) {
   const cityId = entry.candidate.cityId ?? "unknown";
   if ((cityCounts.get(cityId) ?? 0) >= maxPerCity) {
@@ -78,6 +79,11 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
     continue;
   }
   const content = entry.candidate.content ?? "";
+  const contentKey = content.trim().toLowerCase().slice(0, 60);
+  if (seenContent.has(contentKey)) {
+    rejected.push({ id: entry.candidate.id, reason: "duplicate_content" });
+    continue;
+  }
   if (HEADLINE_INJECTION_RE.test(content)) {
     rejected.push({ id: entry.candidate.id, reason: "headline_injection" });
     continue;
@@ -91,6 +97,7 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
     transitCounts.set(key, (transitCounts.get(key) ?? 0) + 1);
   }
 
+  seenContent.add(contentKey);
   cityCounts.set(cityId, (cityCounts.get(cityId) ?? 0) + 1);
   selected.push({
     city_id: entry.candidate.cityId,
