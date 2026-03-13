@@ -185,7 +185,26 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
       (/(strike|delay|rent|housing|tourism|tourists|weather|startup|founder|waymo|muni|tube|bart|metro|election|council|fare|fog|barça|giants)/i.test(content) ? 1 : 0)
   );
 
+  const hardBlocks = [
+    "generic_city_copy", "essay_like", "forum_advice_framing", "stereotype_bundle",
+    "crafted_payoff", "staged_observation", "atmospheric_poetry", "performative_snark",
+    "raw_headline_injection", "off_city_place", "cloned_template", "off_topic_sports",
+    "repetitive_anchor", "instruction_leakage", "article_voice", "too_long",
+  ];
+  const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
+
+  // Social-family posts are real tweets: lower thresholds if fresh and city-specific
+  const passedAsSocial =
+    candidate.sourceFamily === "social" &&
+    mindprint >= 3 &&
+    stickiness >= 2 &&
+    ambiguity >= 2 &&
+    freshness >= 3 &&
+    cityness >= 3 &&
+    !hasHardBlock;
+
   const passed =
+    passedAsSocial || (
     mindprint >= 3 &&
     stickiness >= 3 &&
     ambiguity >= 3 &&
@@ -210,7 +229,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long") &&
-    !issues.includes("weak_mindprint");
+    !issues.includes("weak_mindprint"));
 
   return {
     id: candidate.id ?? `candidate_${String(index + 1).padStart(4, "0")}`,
