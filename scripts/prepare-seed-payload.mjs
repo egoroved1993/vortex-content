@@ -61,7 +61,8 @@ for (const candidate of candidates) {
   });
 }
 
-const TRANSIT_TOPICS = new Set(["commute_thought"]);
+const TRANSIT_RE = /\b(tube|overground|victoria line|elizabeth line|u-bahn|u8|ringbahn|s-bahn|muni|bart|metro|l3|tmb|rodalies|tram|platform|delay|delayed)\b/i;
+const HEADLINE_INJECTION_RE = /\b(this morning|heute|hoy|avui)\b.{0,40}\bthe\b\s+[A-Z][a-z]*(?:\s+[A-Z][a-z]*){2,}/;
 const maxTransitPerCity = 2;
 
 const cityCounts = new Map();
@@ -76,7 +77,12 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
     rejected.push({ id: entry.candidate.id, reason: "max_total_reached" });
     continue;
   }
-  if (TRANSIT_TOPICS.has(entry.candidate.topicId)) {
+  const content = entry.candidate.content ?? "";
+  if (HEADLINE_INJECTION_RE.test(content)) {
+    rejected.push({ id: entry.candidate.id, reason: "headline_injection" });
+    continue;
+  }
+  if (TRANSIT_RE.test(content)) {
     const key = `${cityId}:transit`;
     if ((transitCounts.get(key) ?? 0) >= maxTransitPerCity) {
       rejected.push({ id: entry.candidate.id, reason: "transit_cap_reached" });
