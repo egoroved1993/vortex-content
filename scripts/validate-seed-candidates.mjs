@@ -90,6 +90,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const stagedObservation = looksStagedObservation(contentLower);
   const atmosphericPoetry = looksAtmosphericPoetry(contentLower);
   const performativeSnark = looksPerformativeSnark(contentLower);
+  const rawHeadline = looksRawHeadlineInjection(content);
+  const offCityPlace = mentionsOffCityPlace(content, candidate.cityId);
   const clonedTemplate = looksClonedTemplate(contentLower);
   const offTopicSports = looksOffTopicSports(contentLower, candidate.cityId);
   const repetitiveAnchor = looksRepetitiveAnchor(contentLower, candidate.cityId);
@@ -112,6 +114,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (stagedObservation) issues.push("staged_observation");
   if (atmosphericPoetry) issues.push("atmospheric_poetry");
   if (performativeSnark) issues.push("performative_snark");
+  if (rawHeadline) issues.push("raw_headline_injection");
+  if (offCityPlace) issues.push("off_city_place");
   if (clonedTemplate) issues.push("cloned_template");
   if (offTopicSports) issues.push("off_topic_sports");
   if (repetitiveAnchor) issues.push("repetitive_anchor");
@@ -195,6 +199,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("staged_observation") &&
     !issues.includes("atmospheric_poetry") &&
     !issues.includes("performative_snark") &&
+    !issues.includes("raw_headline_injection") &&
+    !issues.includes("off_city_place") &&
     !issues.includes("cloned_template") &&
     !issues.includes("off_topic_sports") &&
     !issues.includes("repetitive_anchor") &&
@@ -484,6 +490,27 @@ function looksAtmosphericPoetry(contentLower) {
     /(hesitation|seminar|orbits|satellites|exhales|teaches|patience)/.test(contentLower);
 
   return fragments.some((fragment) => contentLower.includes(fragment)) || weatherMetaphor;
+}
+
+function looksRawHeadlineInjection(content) {
+  // Artifact template: headline fragment inserted verbatim
+  if (/\bthing still turned it into\b/i.test(content)) return true;
+  // 5+ consecutive Title-Cased words = likely pasted headline
+  if (/(?:[A-Z][a-z]+ ){5,}/.test(content)) return true;
+  return false;
+}
+
+function mentionsOffCityPlace(content, cityId) {
+  const offCityPatterns = {
+    london:    /\b(Sheffield|Manchester|Birmingham|Leeds|Liverpool|Glasgow|Edinburgh|Bristol|Newcastle|Cardiff)\b/,
+    barcelona: /\b(Madrid|Valencia|Bilbao|Seville|Sevilla|Zaragoza|Málaga|Malaga)\b/,
+    berlin:    /\b(Munich|München|Hamburg|Frankfurt|Cologne|Köln|Stuttgart|Düsseldorf|Leipzig)\b/,
+    sf:        /\b(Los Angeles|\bLA\b|Chicago|New York|NYC|Seattle|Portland|Denver|Austin)\b/,
+  };
+  const pattern = offCityPatterns[cityId];
+  if (!pattern) return false;
+  const firstHalf = content.slice(0, Math.floor(content.length / 2) + 30);
+  return pattern.test(firstHalf);
 }
 
 function looksClonedTemplate(contentLower) {
