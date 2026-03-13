@@ -198,11 +198,12 @@ function buildSystemPrompt(job, providerHint = null) {
   }
   if (job.sourceFamily === "social" && providerHint === "xai") {
     base +=
-      "\n\nThis source is a real post from someone in this city today. Your job: strip platform scaffolding, compress it to its sharpest form, keep the speaker's exact priorities and rough edges." +
-      "\nKeep the source language. If it is Russian, Catalan, German, Spanish — stay in that language." +
-      "\nDo NOT translate, clean up, or make it smarter than the source." +
-      "\nMild profanity is allowed if the source implies it. Do not add profanity that isn't already in the spirit of the source." +
-      "\nNo metaphors. No thesis. No landing sentence. No added insight." +
+      "\n\nThis source is a real post from someone in this city today. IGNORE the 'minimal intervention' and '85-100% wording' instructions in the user prompt — those are for a different model." +
+      "\nYour job: read the tweet, extract its emotional or factual core, and write a NEW short first-person city post that captures what that person was actually feeling." +
+      "\nWrite in the same language as the source. If it is Catalan, German, Spanish — stay in that language." +
+      "\nBe blunt. Use one concrete detail from the source. Complete thought, not a fragment." +
+      "\nMild profanity is allowed if it fits the mood. Do not fake edge." +
+      "\nNo metaphors. No thesis. No tidy ending." +
       "\nThe result should feel like someone typed it on a phone on the way to work.";
   } else if (isMinimalSalvageFamily(job.sourceFamily)) {
     base +=
