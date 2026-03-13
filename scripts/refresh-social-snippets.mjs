@@ -30,6 +30,25 @@ const CITY_CONFIGS = [
   },
 ];
 
+const CITY_TOPIC_VARIETY = {
+  london: {
+    required: "Arsenal/Chelsea/Spurs matchday reaction, pub culture or after-work drinks, startup or finance office life, NHS or council frustration, gentrification (new bar replacing old spot), Tube/Overground drama, dating app culture, weather sarcasm, overheard on the bus or at a market, something weird or funny on the street",
+    styleHints: "London dry wit is welcome. Class-conscious observations. Mild profanity if it fits.",
+  },
+  berlin: {
+    required: "club or nightlife scene, späti culture (late beer, random encounter), Kiez/neighborhood politics, WG kitchen or flatshare drama, startup or tech life, anti-gentrification rant, BVG delay or S-Bahn frustration, expat vs local tension, something absurd or uniquely Berlin",
+    styleHints: "Mix of English and German is fine. Bluntness fits. Occasional cynicism.",
+  },
+  sf: {
+    required: "Waymo or autonomous car encounter, startup office or AI industry life, BART/Muni failure, Mission burrito or coffee, rent math or roommate situation, tech bro behavior, fog or microclimate, Dolores Park scene, political frustration or city policy, something absurd about city life",
+    styleHints: "Sharp SF voice. Can be sarcastic about tech culture. Occasional profanity fine.",
+  },
+  barcelona: {
+    required: "padel court booking or padel culture, vermut or bar terrace life, Barça match reaction, tourist rage (suitcases, Airbnbs, guiris), Catalan vs Spanish language moment, rent or Airbnb staircase politics, beach or Barceloneta in off-season, nightlife starting too late, local neighborhood gossip, something funny or absurd",
+    styleHints: "Mix of Spanish, Catalan, English is authentic. Casual, warm but can get irritated.",
+  },
+};
+
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "social-snippets.json");
 const model = args.model ?? process.env.CITY_SOCIAL_MODEL ?? "grok-4-1-fast-reasoning";
@@ -117,25 +136,6 @@ async function fetchCitySocial(city, { model, countPerCity, fromDate, toDate, ap
   const parsed = JSON.parse(extractJson(outputText));
   return normalizeSnippets(parsed, city, countPerCity);
 }
-
-const CITY_TOPIC_VARIETY = {
-  london: {
-    required: "Arsenal/Chelsea/Spurs matchday reaction, pub culture or after-work drinks, startup or finance office life, NHS or council frustration, gentrification (new bar replacing old spot), Tube/Overground drama, dating app culture, weather sarcasm, overheard on the bus or at a market, something weird or funny on the street",
-    styleHints: "London dry wit is welcome. Class-conscious observations. Mild profanity if it fits.",
-  },
-  berlin: {
-    required: "club or nightlife scene, späti culture (late beer, random encounter), Kiez/neighborhood politics, WG kitchen or flatshare drama, startup or tech life, anti-gentrification rant, BVG delay or S-Bahn frustration, expat vs local tension, something absurd or uniquely Berlin",
-    styleHints: "Mix of English and German is fine. Bluntness fits. Occasional cynicism.",
-  },
-  sf: {
-    required: "Waymo or autonomous car encounter, startup office or AI industry life, BART/Muni failure, Mission burrito or coffee, rent math or roommate situation, tech bro behavior, fog or microclimate, Dolores Park scene, political frustration or city policy, something absurd about city life",
-    styleHints: "Sharp SF voice. Can be sarcastic about tech culture. Occasional profanity fine.",
-  },
-  barcelona: {
-    required: "padel court booking or padel culture, vermut or bar terrace life, Barça match reaction, tourist rage (suitcases, Airbnbs, guiris), Catalan vs Spanish language moment, rent or Airbnb staircase politics, beach or Barceloneta in off-season, nightlife starting too late, local neighborhood gossip, something funny or absurd",
-    styleHints: "Mix of Spanish, Catalan, English is authentic. Casual, warm but can get irritated.",
-  },
-};
 
 function buildPrompt(city, countPerCity) {
   const variety = CITY_TOPIC_VARIETY[city.cityId] ?? {
