@@ -43,6 +43,9 @@ const laneModelOverrides = {
   mind_post: args["mind-post-model"] ?? process.env.MIND_POST_MODEL ?? null,
   micro_moment: args["micro-moment-model"] ?? process.env.MICRO_MOMENT_MODEL ?? null,
 };
+const familyProviderOverrides = {
+  social: args["social-provider"] ?? process.env.SOCIAL_PROVIDER ?? null,
+};
 const concurrency = Number(args.concurrency ?? 4);
 const limit = args.limit ? Number(args.limit) : undefined;
 const useMock = Boolean(args.mock);
@@ -74,7 +77,7 @@ const mockEndings = [
 const jobs = readJobs(inputPath).slice(0, limit ?? Number.POSITIVE_INFINITY);
 const candidates = await runWithConcurrency(jobs, concurrency, async (job, index) => {
   if (useMock) return buildMockCandidate(job, index);
-  const target = resolveTargetModel(job, { provider, model, laneProviderOverrides, laneModelOverrides });
+  const target = resolveTargetModel(job, { provider, model, laneProviderOverrides, laneModelOverrides, familyProviderOverrides });
   const generated = await generateCandidate(job, target);
   return {
     ...job,
@@ -152,13 +155,14 @@ async function generateRepairCandidate(job, { provider: activeProvider, model: a
   return generateRepairWithOpenAI(job, activeModel, weakDraft, assessment);
 }
 
-function resolveTargetModel(job, { provider: defaultProvider, model: defaultModel, laneProviderOverrides: providerOverrides, laneModelOverrides: modelOverrides }) {
+function resolveTargetModel(job, { provider: defaultProvider, model: defaultModel, laneProviderOverrides: providerOverrides, laneModelOverrides: modelOverrides, familyProviderOverrides: familyOverrides = {} }) {
   const laneProvider = providerOverrides[job.lane] ?? null;
-  const resolvedProvider = laneProvider ?? defaultProvider;
+  const familyProvider = familyOverrides[job.sourceFamily] ?? null;
+  const resolvedProvider = laneProvider ?? familyProvider ?? defaultProvider;
   const laneModel = modelOverrides[job.lane] ?? null;
   return {
     provider: resolvedProvider,
-    model: laneModel ?? (laneProvider ? defaultModelForProvider(resolvedProvider) : defaultModel),
+    model: laneModel ?? ((laneProvider || familyProvider) ? defaultModelForProvider(resolvedProvider) : defaultModel),
   };
 }
 
@@ -225,7 +229,19 @@ function buildSystemPrompt(job, providerHint = null) {
     }
     base += "\n\nLet these themes subtly ground the message — make it feel like it was written today, not any day.";
   }
-  if (providerHint === "xai" && job.lane === "mind_post") {
+  // Inject persona voice for non-salvage families where model is authoring, not editing
+  if (job.personaId && job.personaLabel && job.personaGuidance && !isMinimalSalvageFamily(job.sourceFamily)) {
+    base += `\n\nVoice persona: write as ${job.personaLabel}. ${job.personaGuidance}`;
+  }
+
+  if (job.sourceFamily === "social" && providerHint === "xai") {
+    base +=
+      "\n\nThis source is a real post from someone in this city today. IGNORE the 'minimal intervention' and '85-100% wording' instructions in the user prompt — those are for a different model." +
+      "\nYour job: read the post, extract its emotional or factual core, and write a NEW short first-person city post that captures the same energy — but sounds like a real person, not an AI summary." +
+      "\nBe blunt. Use one concrete detail from the source. Complete thought, not a fragment." +
+      "\nMild profanity is allowed if it fits the mood. Twitter rawness is fine. Avoid polish and literary flourish." +
+      "\nMax 200 chars. Return JSON.";
+  } else if (providerHint === "xai" && job.lane === "mind_post") {
     base +=
       "\n\nVoice constraint for this generation: prefer bluntness over polish. Mild profanity is allowed only if it feels native to the thought. Do not perform edge. Do not turn the message into a stand-up bit, a TED talk, or a neatly finished take.";
   }

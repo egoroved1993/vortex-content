@@ -37,7 +37,17 @@ const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
   .sort((left, right) => compareBySignal(left, right, rand))
   .slice(0, limit);
 
-const jobs = snippets.map((snippet, index) => {
+// Cap commute_thought at 25% per city to prevent transit topic domination
+const commuteCapPerCity = Math.max(1, Math.ceil(snippets.length * 0.25 / 4));
+const commuteCountByCity = {};
+const snippetsCapped = snippets.filter((snippet) => {
+  const topic = inferTopic(snippet);
+  if (topic !== "commute_thought") return true;
+  commuteCountByCity[snippet.cityId] = (commuteCountByCity[snippet.cityId] ?? 0) + 1;
+  return commuteCountByCity[snippet.cityId] <= commuteCapPerCity;
+});
+
+const jobs = snippetsCapped.map((snippet, index) => {
   const city = getCity(snippet.cityId);
   const lane = inferLane(snippet);
   const readReason = inferReadReason(snippet);

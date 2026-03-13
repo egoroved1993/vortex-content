@@ -53,6 +53,8 @@ runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   ...(args["mind-post-model"] ? ["--mind-post-model", args["mind-post-model"]] : []),
   ...(args["micro-moment-provider"] ? ["--micro-moment-provider", args["micro-moment-provider"]] : []),
   ...(args["micro-moment-model"] ? ["--micro-moment-model", args["micro-moment-model"]] : []),
+  "--social-provider",
+  "xai",
   ...(mock ? ["--mock"] : []),
 ]);
 
@@ -79,9 +81,9 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "--allowed-families",
   "public,news,social,world,bridge,signals",
   "--max-per-city",
-  "1",
+  "3",
   "--max-total",
-  "8",
+  "15",
 ]);
 
 const payload = readJson(payloadPath);
