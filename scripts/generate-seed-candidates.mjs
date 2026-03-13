@@ -43,6 +43,9 @@ const laneModelOverrides = {
   mind_post: args["mind-post-model"] ?? process.env.MIND_POST_MODEL ?? null,
   micro_moment: args["micro-moment-model"] ?? process.env.MICRO_MOMENT_MODEL ?? null,
 };
+const familyProviderOverrides = {
+  social: args["social-provider"] ?? process.env.SOCIAL_PROVIDER ?? null,
+};
 const concurrency = Number(args.concurrency ?? 4);
 const limit = args.limit ? Number(args.limit) : undefined;
 const useMock = Boolean(args.mock);
@@ -74,7 +77,7 @@ const mockEndings = [
 const jobs = readJobs(inputPath).slice(0, limit ?? Number.POSITIVE_INFINITY);
 const candidates = await runWithConcurrency(jobs, concurrency, async (job, index) => {
   if (useMock) return buildMockCandidate(job, index);
-  const target = resolveTargetModel(job, { provider, model, laneProviderOverrides, laneModelOverrides });
+  const target = resolveTargetModel(job, { provider, model, laneProviderOverrides, laneModelOverrides, familyProviderOverrides });
   const generated = await generateCandidate(job, target);
   return {
     ...job,
@@ -152,13 +155,14 @@ async function generateRepairCandidate(job, { provider: activeProvider, model: a
   return generateRepairWithOpenAI(job, activeModel, weakDraft, assessment);
 }
 
-function resolveTargetModel(job, { provider: defaultProvider, model: defaultModel, laneProviderOverrides: providerOverrides, laneModelOverrides: modelOverrides }) {
+function resolveTargetModel(job, { provider: defaultProvider, model: defaultModel, laneProviderOverrides: providerOverrides, laneModelOverrides: modelOverrides, familyProviderOverrides: familyOverrides = {} }) {
   const laneProvider = providerOverrides[job.lane] ?? null;
-  const resolvedProvider = laneProvider ?? defaultProvider;
+  const familyProvider = familyOverrides[job.sourceFamily] ?? null;
+  const resolvedProvider = laneProvider ?? familyProvider ?? defaultProvider;
   const laneModel = modelOverrides[job.lane] ?? null;
   return {
     provider: resolvedProvider,
-    model: laneModel ?? (laneProvider ? defaultModelForProvider(resolvedProvider) : defaultModel),
+    model: laneModel ?? ((laneProvider || familyProvider) ? defaultModelForProvider(resolvedProvider) : defaultModel),
   };
 }
 
@@ -192,7 +196,15 @@ function buildSystemPrompt(job, providerHint = null) {
   if (["news", "social", "world", "bridge"].includes(job.sourceFamily)) {
     base += "\n\nThis message must feel metabolized from today's context in that city, not like timeless city vibe copy.";
   }
-  if (isMinimalSalvageFamily(job.sourceFamily)) {
+  if (job.sourceFamily === "social" && providerHint === "xai") {
+    base +=
+      "\n\nThis source is a real post from someone in this city today. Your job: strip platform scaffolding, compress it to its sharpest form, keep the speaker's exact priorities and rough edges." +
+      "\nKeep the source language. If it is Russian, Catalan, German, Spanish — stay in that language." +
+      "\nDo NOT translate, clean up, or make it smarter than the source." +
+      "\nMild profanity is allowed if the source implies it. Do not add profanity that isn't already in the spirit of the source." +
+      "\nNo metaphors. No thesis. No landing sentence. No added insight." +
+      "\nThe result should feel like someone typed it on a phone on the way to work.";
+  } else if (isMinimalSalvageFamily(job.sourceFamily)) {
     base +=
       "\n\nFor this source family you are a minimally invasive editor, not an author." +
       "\nPreserve 85-100% of the source wording whenever possible." +
@@ -225,7 +237,7 @@ function buildSystemPrompt(job, providerHint = null) {
     }
     base += "\n\nLet these themes subtly ground the message — make it feel like it was written today, not any day.";
   }
-  if (providerHint === "xai" && job.lane === "mind_post") {
+  if (providerHint === "xai" && job.lane === "mind_post" && job.sourceFamily !== "social") {
     base +=
       "\n\nVoice constraint for this generation: prefer bluntness over polish. Mild profanity is allowed only if it feels native to the thought. Do not perform edge. Do not turn the message into a stand-up bit, a TED talk, or a neatly finished take.";
   }
@@ -1741,4 +1753,5 @@ function parseArgs(argv) {
   }
   return parsed;
 }
+
 
