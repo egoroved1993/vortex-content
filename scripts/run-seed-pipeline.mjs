@@ -81,9 +81,9 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "--allowed-families",
   "public,news,social,world,bridge,signals",
   "--max-per-city",
-  "1",
+  "3",
   "--max-total",
-  "8",
+  "15",
 ]);
 
 const payload = readJson(payloadPath);

@@ -238,6 +238,10 @@ function buildSystemPrompt(job, providerHint = null) {
     }
     base += "\n\nLet these themes subtly ground the message — make it feel like it was written today, not any day.";
   }
+  // Inject persona voice for non-salvage families where model is authoring, not editing
+  if (job.personaId && job.personaLabel && job.personaGuidance && !isMinimalSalvageFamily(job.sourceFamily)) {
+    base += `\n\nVoice persona: write as ${job.personaLabel}. ${job.personaGuidance}`;
+  }
   if (providerHint === "xai" && job.lane === "mind_post" && job.sourceFamily !== "social") {
     base +=
       "\n\nVoice constraint for this generation: prefer bluntness over polish. Mild profanity is allowed only if it feels native to the thought. Do not perform edge. Do not turn the message into a stand-up bit, a TED talk, or a neatly finished take.";

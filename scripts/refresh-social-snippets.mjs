@@ -33,7 +33,7 @@ const CITY_CONFIGS = [
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "social-snippets.json");
 const model = args.model ?? process.env.CITY_SOCIAL_MODEL ?? "grok-4-1-fast-reasoning";
-const countPerCity = Number(args["count-per-city"] ?? 6);
+const countPerCity = Number(args["count-per-city"] ?? 15);
 const useMock = Boolean(args.mock);
 const apiKey = process.env.XAI_API_KEY;
 
@@ -118,12 +118,48 @@ async function fetchCitySocial(city, { model, countPerCity, fromDate, toDate, ap
   return normalizeSnippets(parsed, city, countPerCity);
 }
 
+const CITY_TOPIC_VARIETY = {
+  london: {
+    required: "Arsenal/Chelsea/Spurs matchday reaction, pub culture or after-work drinks, startup or finance office life, NHS or council frustration, gentrification (new bar replacing old spot), Tube/Overground drama, dating app culture, weather sarcasm, overheard on the bus or at a market, something weird or funny on the street",
+    styleHints: "London dry wit is welcome. Class-conscious observations. Mild profanity if it fits.",
+  },
+  berlin: {
+    required: "club or nightlife scene, späti culture (late beer, random encounter), Kiez/neighborhood politics, WG kitchen or flatshare drama, startup or tech life, anti-gentrification rant, BVG delay or S-Bahn frustration, expat vs local tension, something absurd or uniquely Berlin",
+    styleHints: "Mix of English and German is fine. Bluntness fits. Occasional cynicism.",
+  },
+  sf: {
+    required: "Waymo or autonomous car encounter, startup office or AI industry life, BART/Muni failure, Mission burrito or coffee, rent math or roommate situation, tech bro behavior, fog or microclimate, Dolores Park scene, political frustration or city policy, something absurd about city life",
+    styleHints: "Sharp SF voice. Can be sarcastic about tech culture. Occasional profanity fine.",
+  },
+  barcelona: {
+    required: "padel court booking or padel culture, vermut or bar terrace life, Barça match reaction, tourist rage (suitcases, Airbnbs, guiris), Catalan vs Spanish language moment, rent or Airbnb staircase politics, beach or Barceloneta in off-season, nightlife starting too late, local neighborhood gossip, something funny or absurd",
+    styleHints: "Mix of Spanish, Catalan, English is authentic. Casual, warm but can get irritated.",
+  },
+};
+
 function buildPrompt(city, countPerCity) {
+  const variety = CITY_TOPIC_VARIETY[city.cityId] ?? {
+    required: "transit, food, local culture, humor, sports, work, nightlife",
+    styleHints: "Authentic local voice.",
+  };
+
   return [
     `City: ${city.cityName}.`,
-    `Return ${countPerCity} short local social snippets from the last ~30 hours that feel like real X posts from people in or around ${city.cityName}.`,
-    `Use these local anchors only as search guidance if useful: ${city.localAnchors.join(", ")}.`,
-    `Language mix hint: ${city.languageHint}.`,
+    `Return ${countPerCity} diverse social snippets from the last ~30 hours. These must feel like real X posts from people in or around ${city.cityName}.`,
+    "",
+    `REQUIRED TOPIC COVERAGE — spread across all of these:`,
+    variety.required + ".",
+    "",
+    "HARD LIMITS on repetition:",
+    "- At most 2 snippets about transit/transport",
+    "- At most 2 snippets about housing/rent",
+    "- At least 2 snippets that are funny, ironic, or absurd",
+    "- At least 1 sports-related (local teams or sport culture)",
+    "- At least 1 food, bar, or nightlife moment",
+    "- At least 1 work or tech complaint",
+    "",
+    `Style hint: ${variety.styleHints}`,
+    `Language mix: ${city.languageHint}.`,
     "",
     "Output a JSON array. Each item must have exactly these keys:",
     "- cityId",
@@ -144,7 +180,7 @@ function buildPrompt(city, countPerCity) {
     "- do not make it smarter or more literary than the source",
     "- body length: 55 to 200 chars",
     "- keep the source language if that post was clearly not in English",
-    "- at least one snippet should feel mundane and one should feel irritated",
+    "- mild profanity is fine if authentic to the source",
     "- avoid generic city-vibe text and avoid news-headline rewriting",
     "- no markdown, no commentary, no code fences",
   ].join("\n");
