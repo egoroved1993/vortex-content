@@ -4,7 +4,7 @@ import { resolveProjectPath } from "./path-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "world-trends.json");
-const model = args.model ?? process.env.WORLD_TRENDS_MODEL ?? "grok-4-1-fast-reasoning";
+const model = args.model ?? process.env.WORLD_TRENDS_MODEL ?? "grok-3-fast";
 const maxItems = Number(args.count ?? 6);
 const apiKey = process.env.XAI_API_KEY;
 
