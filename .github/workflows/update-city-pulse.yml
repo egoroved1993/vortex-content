@@ -2,7 +2,7 @@ name: Update City Pulse
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC daily
+    - cron: "0 * * * *"    # every hour
   workflow_dispatch:
     inputs:
       upload:
