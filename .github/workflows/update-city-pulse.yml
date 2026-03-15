@@ -22,6 +22,9 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,15 +38,11 @@ jobs:
         run: node scripts/fetch-city-news.mjs
 
       - name: Refresh city social from X
-        if: ${{ secrets.XAI_API_KEY != '' }}
-        env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        if: env.XAI_API_KEY != ''
         run: node scripts/refresh-social-snippets.mjs
 
       - name: Refresh world trends from X
-        if: ${{ secrets.XAI_API_KEY != '' }}
-        env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        if: env.XAI_API_KEY != ''
         run: node scripts/refresh-world-trends.mjs
 
       - name: Refresh static corpora
