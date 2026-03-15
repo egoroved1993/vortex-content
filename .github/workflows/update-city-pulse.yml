@@ -43,6 +43,7 @@ jobs:
 
       - name: Refresh world trends from X
         if: env.XAI_API_KEY != ''
+        continue-on-error: true
         run: node scripts/refresh-world-trends.mjs
 
       - name: Refresh static corpora

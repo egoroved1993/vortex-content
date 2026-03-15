@@ -51,7 +51,7 @@ const CITY_TOPIC_VARIETY = {
 
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "social-snippets.json");
-const model = args.model ?? process.env.CITY_SOCIAL_MODEL ?? "grok-3-fast";
+const model = args.model ?? process.env.CITY_SOCIAL_MODEL ?? "grok-4-1-mini";
 const countPerCity = Number(args["count-per-city"] ?? 15);
 const useMock = Boolean(args.mock);
 const apiKey = process.env.XAI_API_KEY;
