@@ -28,15 +28,15 @@ for (let index = 0; index < rows.length; index += chunkSize) {
     ...row,
     created_at: randomTimeToday(),
   }));
-  const response = await fetch(`${supabaseUrl}/rest/v1/messages`, {
+  // Use RPC so that created_at override is respected (PostgREST ignores it on direct POST)
+  const response = await fetch(`${supabaseUrl}/rest/v1/rpc/bulk_insert_messages`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       apikey: supabaseServiceKey,
       Authorization: `Bearer ${supabaseServiceKey}`,
-      Prefer: "return=minimal",
     },
-    body: JSON.stringify(chunk),
+    body: JSON.stringify({ rows: chunk }),
   });
 
   if (!response.ok) {
