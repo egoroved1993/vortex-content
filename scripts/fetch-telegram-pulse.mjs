@@ -132,7 +132,7 @@ async function scrapeChat(client, source, cutoff) {
       sourceOrigin: "telegram_group",
       platform: "telegram",
       postedAt: msgDate.toISOString(),
-      language: normalizeSourceLanguage(source.language),
+      language: normalizeSourceLanguage(detectLanguage(body, source.language)),
       body,
       capturedAt: new Date().toISOString(),
     });
@@ -165,6 +165,12 @@ async function resolveEntity(client, titleHint) {
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
+
+function detectLanguage(text, fallback) {
+  if (/[а-яёА-ЯЁ]/.test(text)) return "ru";
+  if (/[àáâãäåæçèéêëìíîïðñòóôõöùúûüý]/i.test(text)) return "es";
+  return fallback;
+}
 
 function safeReadJson(filePath) {
   if (!fs.existsSync(filePath)) return [];
