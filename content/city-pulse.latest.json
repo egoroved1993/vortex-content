@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-03-18T22:39:01.476Z",
+    "capturedAt": "2026-03-18T23:37:06.368Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -10,13 +10,13 @@
       "social": "/home/runner/work/vortex-content/vortex-content/content/social-snippets.json",
       "world": "/home/runner/work/vortex-content/vortex-content/content/world-trends.json"
     },
-    "totalItems": 140
+    "totalItems": 247
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-18T22:39:01.476Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-03-18T23:37:06.368Z",
+      "mood_score": 0.463,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -76,18 +76,18 @@
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.124,
+        "average_valence": -0.108,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.934
+        "freshness_score": 0.937
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-18T22:39:01.476Z",
+      "captured_at": "2026-03-18T23:37:06.368Z",
       "mood_score": 0.46,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, language. The signal still feels live today.",
@@ -160,10 +160,10 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-18T22:39:01.476Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-03-18T23:37:06.368Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, general, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, routine, work. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -206,9 +206,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a brilliant blue, the sun hot on the pavement, while a cool breeze occasionally whispers through the alleyways.. Muni is crowded with a mix of frustrated commuters and t"
+          "excerpt": "The afternoon sun breaks through a stubborn veil of fog, casting a warm glow over the streets and making the bay shimmer like a jewel.. The Muni stations are bustling, with a palpa"
         },
         {
           "source_family": "world",
@@ -221,21 +221,21 @@
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.035,
+        "average_valence": -0.018,
         "dominant_themes": [
           "transit",
-          "general",
-          "routine"
+          "routine",
+          "work"
         ],
-        "freshness_score": 0.93
+        "freshness_score": 0.933
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-18T22:39:01.476Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-03-18T23:37:06.368Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -243,15 +243,40 @@
         "forum": 4,
         "signals": 1,
         "news": 8,
-        "social": 2,
+        "social": 109,
         "world": 5
       },
       "languages": [
         "ca",
         "en",
-        "es"
+        "es",
+        "ru"
       ],
       "drivers": [
+        {
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Типа коммуникации, свет и вода это параметры пригодности сдаваемого в аренду жилья Сдавать непригодное для жизни помещение нельзя Соответственно когда это выходит из строя хозяин о"
+        },
+        {
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Ребята. Подруга просит проконсультировать! Ей предлагают в аренду студию , но не оформленная в жилое. В договоре такой пункт. Риэлтор настаивает что это все стандартные правила и «"
+        },
+        {
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Ужас, а если есть поломка то может кто посоветует куда обратится? А то моему айпэду очень плохо"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -261,47 +286,23 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "people say barcelona is effortless but half the city runs on carefully managed lateness and pretending the rent conversation can wait another month"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sun bakes the pavement, creating a shimmering haze that dances above the streets of Eixample.. With L2 services back to normal, commuters exhale in relief, but the vibe is stil"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "someone stopped in the bike lane in gracia to film a doorway and three locals swerved around him like silent mutual contempt is just another transport layer here"
+          "recency_weight": 1,
+          "excerpt": "Я тоже уже списываюсь с агентами, нашими! И они просят три номины и испанский контракт. Блин, рябят, когда у меня будет три номины, я пойду к испанцам и не стану платить 10% годово"
         }
       ],
       "metadata": {
-        "source_item_count": 35,
-        "average_valence": -0.049,
+        "source_item_count": 142,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
-          "tourism"
+          "routine"
         ],
-        "freshness_score": 0.939
+        "freshness_score": 1.009
       }
     }
   ]
