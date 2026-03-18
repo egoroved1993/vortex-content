@@ -72,9 +72,9 @@ async function main() {
   const client = new TelegramClient(session, API_ID, API_HASH, {
     connectionRetries: 3,
     requestRetries: 3,
-    // Suppress verbose GramJS logs
-    baseLogger: { levels: [], log: () => {} },
   });
+  // Suppress verbose GramJS logs
+  client.setLogLevel("none");
 
   await client.connect();
   console.log("Connected to Telegram (work account)");
