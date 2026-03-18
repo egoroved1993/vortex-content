@@ -24,6 +24,9 @@ jobs:
 
     env:
       XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+      TG_WORK_API_ID: ${{ secrets.TG_WORK_API_ID }}
+      TG_WORK_API_HASH: ${{ secrets.TG_WORK_API_HASH }}
+      TG_WORK_SESSION: ${{ secrets.TG_WORK_SESSION }}
 
     steps:
       - name: Checkout
@@ -33,9 +36,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
+          cache-dependency-path: package.json
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Fetch city news
         run: node scripts/fetch-city-news.mjs
+
+      - name: Fetch Telegram group pulse
+        if: env.TG_WORK_SESSION != ''
+        continue-on-error: true
+        run: node scripts/fetch-telegram-pulse.mjs
 
       - name: Refresh city social from X
         if: env.XAI_API_KEY != ''
