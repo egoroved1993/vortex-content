@@ -59,7 +59,7 @@ const spreadResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/randomize_recent_
     apikey: supabaseServiceKey,
     Authorization: `Bearer ${supabaseServiceKey}`,
   },
-  body: JSON.stringify({ window_minutes: 10 }),
+  body: JSON.stringify({ window_minutes: 180 }),
 });
 
 if (!spreadResponse.ok) {
