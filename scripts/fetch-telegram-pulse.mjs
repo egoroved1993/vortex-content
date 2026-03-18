@@ -40,11 +40,22 @@ if (!SESSION_STRING) {
 }
 
 // Chats to scrape.  Add more entries here as new city chats are onboarded.
+// Public channels can use their @username directly; private groups are matched by title in dialogs.
 const TELEGRAM_SOURCES = [
   {
     cityId: "barcelona",
-    title: "Guiri en BCN",   // matched against dialog titles (case-insensitive, substring)
+    title: "Guiri en BCN",   // private group — matched by title in dialogs
     language: "es",
+  },
+  {
+    cityId: "barcelona",
+    username: "ensalada",    // public channel t.me/ensalada
+    language: "es",
+  },
+  {
+    cityId: "berlin",
+    username: "genau",       // public channel t.me/genau
+    language: "de",
   },
 ];
 
@@ -72,12 +83,13 @@ async function main() {
   const freshSnippets = [];
 
   for (const source of TELEGRAM_SOURCES) {
+    const label = source.username ?? source.title;
     try {
       const snippets = await scrapeChat(client, source, cutoff);
-      console.log(`[${source.cityId}] "${source.title}" → ${snippets.length} snippets`);
+      console.log(`[${source.cityId}] "${label}" → ${snippets.length} snippets`);
       freshSnippets.push(...snippets);
     } catch (err) {
-      console.warn(`[${source.cityId}] Skipped "${source.title}": ${err.message}`);
+      console.warn(`[${source.cityId}] Skipped "${label}": ${err.message}`);
     }
   }
 
@@ -105,7 +117,7 @@ async function main() {
 // ── Scraper ───────────────────────────────────────────────────────────────────
 
 async function scrapeChat(client, source, cutoff) {
-  const entity = await resolveEntity(client, source.title);
+  const entity = await resolveEntity(client, source);
   const messages = await client.getMessages(entity, { limit: MAX_MESSAGES_PER_CHAT });
 
   const snippets = [];
@@ -141,24 +153,28 @@ async function scrapeChat(client, source, cutoff) {
   return snippets;
 }
 
-async function resolveEntity(client, titleHint) {
-  // 1. Try direct lookup (works for public groups / usernames)
+async function resolveEntity(client, source) {
+  // Public channel by @username
+  if (source.username) {
+    return await client.getEntity(source.username);
+  }
+
+  // Private group: try direct title lookup first, then search dialogs
   try {
-    return await client.getEntity(titleHint);
+    return await client.getEntity(source.title);
   } catch {
     // continue to dialog search
   }
 
-  // 2. Search through the account's dialogs (needed for private groups)
   const dialogs = await client.getDialogs({ limit: 300 });
-  const hint = titleHint.toLowerCase();
+  const hint = source.title.toLowerCase();
   const match = dialogs.find((d) => {
     const t = (d.title ?? "").toLowerCase();
     return t.includes(hint) || hint.includes(t);
   });
 
   if (!match) {
-    throw new Error(`Chat "${titleHint}" not found in dialogs (checked ${dialogs.length} chats)`);
+    throw new Error(`Chat "${source.title}" not found in dialogs (checked ${dialogs.length} chats)`);
   }
 
   return match.entity;
