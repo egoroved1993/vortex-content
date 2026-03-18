@@ -45,17 +45,17 @@ const TELEGRAM_SOURCES = [
   {
     cityId: "barcelona",
     title: "Guiri en BCN",   // private group — matched by title in dialogs
-    language: "es",
+    language: "ru",
   },
   {
     cityId: "barcelona",
     username: "ensalada",    // public channel t.me/ensalada
-    language: "es",
+    language: "ru",
   },
   {
     cityId: "berlin",
     username: "genau",       // public channel t.me/genau
-    language: "de",
+    language: "ru",
   },
 ];
 
