@@ -48,13 +48,14 @@ if (newSnippets.length === 0) {
 
 // Build rows for bulk_insert_messages
 const rows = newSnippets.map((s) => ({
-  city_id:       s.cityId,
-  content:       s.body.trim(),
-  source:        "human",
-  sentiment:     "neutral",
-  author_id:     null,
-  author_number: null,
-  created_at:    randomTimeToday(),
+  city_id:           s.cityId,
+  content:           s.body.trim(),
+  source:            "human",
+  sentiment:         "neutral",
+  detected_language: s.language ?? "ru",
+  author_id:         null,
+  author_number:     null,
+  created_at:        randomTimeToday(),
 }));
 
 // Upload in chunks of 50
