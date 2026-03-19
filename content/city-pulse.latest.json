@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-03-19T02:49:49.199Z",
+    "capturedAt": "2026-03-19T05:01:30.410Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,10 +15,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-19T02:49:49.199Z",
-      "mood_score": 0.463,
+      "captured_at": "2026-03-19T05:01:30.410Z",
+      "mood_score": 0.461,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, general, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -40,14 +40,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "the only way to stay sane here is to treat every overground delay like a personal insult you are too tired to process properly"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "Tube strike: TfL chief hopeful peace talks with RMT will avert next week's walkout - London Evening Standard. Tube strike: TfL chief hopeful peace talks with RMT will avert next we"
         },
         {
           "source_family": "social",
@@ -72,25 +64,33 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "the weird thing about london is people will apologise for touching your sleeve on the overground and then send you a rent increase like it's weather"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "curated_public_fallback",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "paid 4.20 for coffee before work and had that disgusting flash of relief like i had somehow beaten london this morning"
         }
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.11,
+        "average_valence": -0.115,
         "dominant_themes": [
-          "transit",
           "general",
+          "transit",
           "routine"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.919
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-19T02:49:49.199Z",
-      "mood_score": 0.463,
+      "captured_at": "2026-03-19T05:01:30.410Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, language. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, language. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -115,6 +115,14 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -1,
+          "recency_weight": 0.88,
+          "excerpt": "Am Abend geht das Chaos los: Tiergartentunnel und zwei Autobahnen in Berlin dicht - Berliner Kurier. Am Abend geht das Chaos los: Tiergartentunnel und zwei Autobahnen in Berlin dic"
+        },
+        {
           "source_family": "public",
           "source_origin": "curated_public_fallback",
           "language": "en",
@@ -137,31 +145,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "the best version of sunday closure is when the whole city goes quiet enough that the spati fridge suddenly sounds philosophical"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. The moment I watched the old Turkish baker switch from German to Turkish with a customer, and everyone just smiled like it wa"
         }
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.11,
+        "average_valence": -0.124,
         "dominant_themes": [
           "general",
           "routine",
           "language"
         ],
-        "freshness_score": 0.913
+        "freshness_score": 0.929
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-19T02:49:49.199Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-03-19T05:01:30.410Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, general, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -178,6 +178,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Mission District. Saw a guy serenading the 14 bus passengers with a ukulele last week. Perfectly in tune with the chaos of the traffic jam. Only"
+        },
         {
           "source_family": "public",
           "source_origin": "curated_public_fallback",
@@ -209,19 +217,11 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A hazy mist clings to the Golden Gate, softening the colors of the bay into a muted palette of blues and grays.. The Muni cars are packed today, with commuters discussing the upcom"
         }
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.053,
+        "average_valence": -0.085,
         "dominant_themes": [
           "transit",
           "general",
@@ -232,8 +232,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-19T02:49:49.199Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-03-19T05:01:30.410Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -296,13 +296,13 @@
       ],
       "metadata": {
         "source_item_count": 142,
-        "average_valence": -0.041,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.999
+        "freshness_score": 0.996
       }
     }
   ]
