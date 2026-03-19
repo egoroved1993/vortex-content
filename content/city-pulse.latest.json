@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-03-19T05:01:30.410Z",
+    "capturedAt": "2026-03-19T07:07:22.492Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,10 +15,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-19T05:01:30.410Z",
-      "mood_score": 0.461,
+      "captured_at": "2026-03-19T07:07:22.492Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -40,6 +40,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "the only way to stay sane here is to treat every overground delay like a personal insult you are too tired to process properly"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1,
+          "excerpt": "Tube strike: TfL chief hopeful peace talks with RMT will avert next week's walkout - London Evening Standard. Tube strike: TfL chief hopeful peace talks with RMT will avert next we"
         },
         {
           "source_family": "social",
@@ -64,31 +72,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "the weird thing about london is people will apologise for touching your sleeve on the overground and then send you a rent increase like it's weather"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "paid 4.20 for coffee before work and had that disgusting flash of relief like i had somehow beaten london this morning"
         }
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.115,
+        "average_valence": -0.141,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.919
+        "freshness_score": 0.926
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-19T05:01:30.410Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-03-19T07:07:22.492Z",
+      "mood_score": 0.464,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, language. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -115,14 +115,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "Am Abend geht das Chaos los: Tiergartentunnel und zwei Autobahnen in Berlin dicht - Berliner Kurier. Am Abend geht das Chaos los: Tiergartentunnel und zwei Autobahnen in Berlin dic"
-        },
-        {
           "source_family": "public",
           "source_origin": "curated_public_fallback",
           "language": "en",
@@ -145,25 +137,33 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "the best version of sunday closure is when the whole city goes quiet enough that the spati fridge suddenly sounds philosophical"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
         }
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.124,
+        "average_valence": -0.106,
         "dominant_themes": [
           "general",
           "routine",
           "language"
         ],
-        "freshness_score": 0.929
+        "freshness_score": 0.934
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-19T05:01:30.410Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-03-19T07:07:22.492Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, general, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, routine, work. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -206,9 +206,9 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Mission. Just the other day, I saw a group of tourists try to board a packed 48 bus while a guy in a full cow costume got off. Classic San Franc"
+          "excerpt": "Muni moments that define this city. Mission District. Caught a Muni bus yesterday with a full mariachi band on board. Everyone just smiled and clapped along. Only in the Mission, r"
         },
         {
           "source_family": "review",
@@ -221,21 +221,21 @@
       ],
       "metadata": {
         "source_item_count": 35,
-        "average_valence": -0.085,
+        "average_valence": -0.051,
         "dominant_themes": [
           "transit",
-          "general",
-          "routine"
+          "routine",
+          "work"
         ],
         "freshness_score": 0.933
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-19T05:01:30.410Z",
+      "captured_at": "2026-03-19T07:07:22.492Z",
       "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -255,10 +255,18 @@
       "drivers": [
         {
           "source_family": "social",
+          "source_origin": "x_post",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
+        },
+        {
+          "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "Типа коммуникации, свет и вода это параметры пригодности сдаваемого в аренду жилья Сдавать непригодное для жизни помещение нельзя Соответственно когда это выходит из строя хозяин о"
         },
         {
@@ -266,16 +274,8 @@
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "Ребята. Подруга просит проконсультировать! Ей предлагают в аренду студию , но не оформленная в жилое. В договоре такой пункт. Риэлтор настаивает что это все стандартные правила и «"
-        },
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
           "source_family": "social",
@@ -296,13 +296,13 @@
       ],
       "metadata": {
         "source_item_count": 142,
-        "average_valence": -0.034,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "money"
         ],
-        "freshness_score": 0.996
+        "freshness_score": 0.983
       }
     }
   ]
