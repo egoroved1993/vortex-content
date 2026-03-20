@@ -99,6 +99,10 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
 
   seenContent.add(contentKey);
   cityCounts.set(cityId, (cityCounts.get(cityId) ?? 0) + 1);
+
+  const links = entry.candidate.links ?? null;
+  const payloadData = links && links.length > 0 ? { links } : null;
+
   selected.push({
     city_id: entry.candidate.cityId,
     content: entry.candidate.content,
@@ -109,6 +113,7 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
     author_id: null,
     author_number: null,
     expires_at: expiresAt,
+    ...(payloadData ? { payload: payloadData } : {}),
   });
 }
 

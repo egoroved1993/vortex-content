@@ -45,6 +45,20 @@ jobs:
       - name: Fetch city news
         run: node scripts/fetch-city-news.mjs
 
+      - name: Fetch city places from Foursquare + Google
+        continue-on-error: true
+        env:
+          FOURSQUARE_API_KEY: ${{ secrets.FOURSQUARE_API_KEY }}
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: node scripts/fetch-city-places.mjs
+
+      - name: Fetch city events from Eventbrite
+        if: env.EVENTBRITE_API_KEY != ''
+        continue-on-error: true
+        env:
+          EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
+        run: node scripts/fetch-city-events.mjs
+
       - name: Fetch Telegram group pulse
         if: env.TG_WORK_SESSION != ''
         continue-on-error: true
@@ -94,6 +108,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/upload-telegram-messages.mjs
 
       - name: Commit updated pulse
@@ -101,7 +116,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/city-pulse.latest.json content/news-snippets.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json content/telegram-uploaded-hashes.json
+          git add content/city-pulse.latest.json content/news-snippets.json content/events-snippets.json content/fetched-places.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json content/telegram-uploaded-hashes.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

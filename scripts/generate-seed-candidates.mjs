@@ -7,6 +7,65 @@ import { scoreCandidate } from "./validate-seed-candidates.mjs";
 // Load city pulse data for grounding generation in current city mood/themes
 const cityPulseMap = loadCityPulse();
 
+// Load Eventbrite events for link injection
+const cityEventsMap = loadCityEvents();
+
+// Daily emotional tone arc — seeded by date so all jobs share the same distribution per run
+const TODAY_DATE = new Date().toISOString().slice(0, 10);
+
+const TONE_SPECS = [
+  {
+    id: "rant",
+    label: "frustrated/irritated",
+    guidance:
+      "Write as someone with a small but real daily grievance. Petty. Specific. Not a manifesto — just one concrete thing that went wrong today.",
+  },
+  {
+    id: "warm",
+    label: "warm/nostalgic",
+    guidance:
+      "Write as someone who noticed something quietly good — a small ritual, a familiar face, a moment that still works. Understated, not sentimental.",
+  },
+  {
+    id: "dry",
+    label: "dry/ironic",
+    guidance:
+      "Write as someone who spotted the city's absurdity and is recording it flatly. No punchline. Just the observation, left hanging.",
+  },
+  {
+    id: "melancholic",
+    label: "melancholic",
+    guidance:
+      "Write as someone who felt something changing or disappearing. Not dramatic — a quiet shift they noticed and didn't have words for.",
+  },
+  {
+    id: "curious",
+    label: "curious/wondering",
+    guidance:
+      "Write as someone who noticed something unexpected and sat with it instead of explaining it. The detail is the whole point.",
+  },
+];
+
+function getDailyToneWeights() {
+  const rand = createSeededRandom(`daily-tone:${TODAY_DATE}`);
+  const weights = TONE_SPECS.map(() => 0.4 + rand() * 2.6);
+  const total = weights.reduce((sum, weight) => sum + weight, 0);
+  return weights.map((weight) => weight / total);
+}
+
+const DAILY_TONE_WEIGHTS = getDailyToneWeights();
+
+function pickDailyToneForJob(job) {
+  const rand = createSeededRandom(`job-tone:${TODAY_DATE}:${job.id}`);
+  const roll = rand();
+  let cumulative = 0;
+  for (let index = 0; index < TONE_SPECS.length; index++) {
+    cumulative += DAILY_TONE_WEIGHTS[index];
+    if (roll < cumulative) return TONE_SPECS[index];
+  }
+  return TONE_SPECS[TONE_SPECS.length - 1];
+}
+
 function loadCityPulse() {
   try {
     const pulsePath = resolveProjectPath("content", "city-pulse.latest.json");
@@ -23,6 +82,21 @@ function loadCityPulse() {
         drivers: otherDrivers.slice(0, 3).map((d) => d.excerpt?.slice(0, 120)),
         newsHeadlines: newsDrivers.slice(0, 5).map((d) => d.excerpt?.slice(0, 140)).filter(Boolean),
       };
+    }
+    return map;
+  } catch {
+    return {};
+  }
+}
+
+function loadCityEvents() {
+  try {
+    const eventsPath = resolveProjectPath("content", "events-snippets.json");
+    const raw = JSON.parse(fs.readFileSync(eventsPath, "utf8"));
+    const map = {};
+    for (const event of raw) {
+      if (!map[event.cityId]) map[event.cityId] = [];
+      map[event.cityId].push(event);
     }
     return map;
   } catch {
@@ -256,7 +330,46 @@ function buildSystemPrompt(job, providerHint = null) {
     base +=
       "\n\nVoice constraint for this generation: prefer bluntness over polish. Mild profanity is allowed only if it feels native to the thought. Do not perform edge. Do not turn the message into a stand-up bit, a TED talk, or a neatly finished take.";
   }
+
+  // Inject Eventbrite events for this city — offer one relevant event as an optional link hook
+  const cityEvents = cityEventsMap[job.cityId] ?? [];
+  if (cityEvents.length > 0 && !isMinimalSalvageFamily(job.sourceFamily)) {
+    // Pick the event most relevant to the job or just the first one if nothing matches
+    const event = pickRelevantEvent(job, cityEvents);
+    if (event) {
+      base += `\n\nReal upcoming event in this city: "${event.name}" ${event.venueName ? `at ${event.venueName}` : ""}${event.neighborhood ? ` (${event.neighborhood})` : ""}${event.startLocal ? ` on ${event.startLocal.slice(0, 10)}` : ""}.`;
+      base += `\nEvent link: ${event.url}`;
+      base +=
+        "\n\nIf your message naturally references this event or a similar event, include the link in your JSON output as: \"links\": [{\"type\": \"web\", \"url\": \"<event_url>\", \"label\": \"<event name short>\"}]." +
+        "\nOnly include the link if the message ACTUALLY references this event. Do not force it. If the message is about something else entirely, output \"links\": [].";
+    }
+  }
+
+  // Daily emotional arc — assigns each message a tone seeded by date+jobId so the day's
+  // distribution is random but consistent across parallel runs. Skipped for salvage families
+  // where preserving source wording takes precedence.
+  if (!isMinimalSalvageFamily(job.sourceFamily)) {
+    const assignedTone = pickDailyToneForJob(job);
+    base += `\n\nEmotional register for this message: ${assignedTone.guidance}`;
+    base += "\nThis is a nudge, not a cage — if the source material clearly points another direction, follow the source.";
+  }
+
   return base;
+}
+
+function pickRelevantEvent(job, events) {
+  if (!events.length) return null;
+  // Try to find an event matching the job's lane/tone keywords
+  const jobText = `${job.rawSnippet ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.cityAnchor ?? ""} ${job.lane ?? ""}`.toLowerCase();
+  const scored = events.map((event) => {
+    const eventText = `${event.name} ${event.categoryName} ${event.venueName} ${event.neighborhood}`.toLowerCase();
+    const tokens = eventText.split(/\W+/).filter((t) => t.length >= 4);
+    const overlap = tokens.filter((t) => jobText.includes(t)).length;
+    return { event, overlap };
+  });
+  scored.sort((a, b) => b.overlap - a.overlap);
+  // Return best match if any token overlap, otherwise first event
+  return scored[0]?.event ?? events[0];
 }
 
 function getModelPersonaVoice(providerHint, modelName) {
@@ -573,6 +686,7 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     ),
     sentiment: normalizeSentiment(parsed.sentiment),
     detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? job.rawSnippetLanguage ?? "en"),
+    links: normalizeLinks(parsed.links) ?? normalizeLinks(job.links ?? null),
     rawModelResponse: rawText,
     usage,
     systemFingerprint,
@@ -1622,6 +1736,25 @@ function readJobs(filePath) {
 function normalizeSentiment(value) {
   const sentiment = String(value ?? "neutral").toLowerCase();
   return ["positive", "neutral", "negative"].includes(sentiment) ? sentiment : "neutral";
+}
+
+function normalizeLinks(value) {
+  if (!Array.isArray(value) || value.length === 0) return null;
+  const validTypes = new Set(["web", "instagram", "maps"]);
+  const cleaned = value
+    .filter((link) => {
+      if (typeof link !== "object" || !link) return false;
+      const url = String(link.url ?? "").trim();
+      if (!url.startsWith("http")) return false;
+      if (url.length > 512) return false;
+      return true;
+    })
+    .map((link) => ({
+      type: validTypes.has(link.type) ? link.type : "web",
+      url: String(link.url).trim(),
+      label: link.label ? String(link.label).slice(0, 80).trim() : null,
+    }));
+  return cleaned.length > 0 ? cleaned : null;
 }
 
 function normalizeDetectedLanguage(value) {
