@@ -142,7 +142,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add --ignore-missing content/city-pulse.latest.json content/news-snippets.json content/events-snippets.json content/fetched-places.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json content/telegram-uploaded-hashes.json content/ra-berlin-events.json content/google-trends.json content/transport-signals.json content/weather-signals.json content/sports-signals.json
+          git add content/city-pulse.latest.json content/news-snippets.json content/fetched-places.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json content/telegram-uploaded-hashes.json || true
+          git add content/ra-berlin-events.json content/google-trends.json content/transport-signals.json content/weather-signals.json content/sports-signals.json content/events-snippets.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
