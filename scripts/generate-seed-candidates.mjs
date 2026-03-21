@@ -375,7 +375,9 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   // Daily emotional arc — assigns each message a tone seeded by date+jobId so the day's
   // distribution is random but consistent across parallel runs. Skipped for salvage families
   // where preserving source wording takes precedence.
-  if (!isMinimalSalvageFamily(job.sourceFamily)) {
+  // Skip daily tone when a strong model persona is active — persona owns the voice fully
+  const hasStrongPersona = !isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "social" && !!getModelPersonaVoice(providerHint, effectiveModel);
+  if (!isMinimalSalvageFamily(job.sourceFamily) && !hasStrongPersona) {
     const assignedTone = pickDailyToneForJob(job);
     base += `\n\nEmotional register for this message: ${assignedTone.guidance}`;
     base += "\nThis is a nudge, not a cage — if the source material clearly points another direction, follow the source.";
