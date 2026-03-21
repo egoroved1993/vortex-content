@@ -11,9 +11,9 @@ on:
         required: false
         default: "240"
       model:
-        description: "Model to use (e.g. grok-3-fast, gpt-4o-mini)"
+        description: "Model to use (e.g. gpt-4o-mini, grok-3-fast, claude-3-5-haiku-latest)"
         required: false
-        default: "grok-3-fast"
+        default: "gpt-4o-mini"
       upload:
         description: "Upload approved payload to Supabase"
         type: boolean
@@ -85,9 +85,19 @@ jobs:
             echo "city_focus=" >> "$GITHUB_OUTPUT"
             echo "seed=mixed-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
           else
-            echo "provider=xai" >> "$GITHUB_OUTPUT"
+            MANUAL_MODEL="${{ inputs.model || 'gpt-4o-mini' }}"
+            if [[ "$MANUAL_MODEL" == gpt-* ]]; then
+              MANUAL_PROVIDER=openai
+            elif [[ "$MANUAL_MODEL" == grok-* ]]; then
+              MANUAL_PROVIDER=xai
+            elif [[ "$MANUAL_MODEL" == claude-* ]]; then
+              MANUAL_PROVIDER=anthropic
+            else
+              MANUAL_PROVIDER=openai
+            fi
+            echo "provider=${MANUAL_PROVIDER}" >> "$GITHUB_OUTPUT"
             echo "count=${{ inputs.count || '240' }}" >> "$GITHUB_OUTPUT"
-            echo "model=${{ inputs.model || 'grok-3-fast' }}" >> "$GITHUB_OUTPUT"
+            echo "model=${MANUAL_MODEL}" >> "$GITHUB_OUTPUT"
             echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
             echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social,world,bridge' }}" >> "$GITHUB_OUTPUT"
             echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
