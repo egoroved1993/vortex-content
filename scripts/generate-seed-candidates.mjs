@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { createSeededRandom } from "./seed-config.mjs";
+import { createSeededRandom, cities } from "./seed-config.mjs";
 import { resolveProjectPath } from "./path-utils.mjs";
 import { scoreCandidate } from "./validate-seed-candidates.mjs";
 
@@ -379,6 +379,14 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
     const assignedTone = pickDailyToneForJob(job);
     base += `\n\nEmotional register for this message: ${assignedTone.guidance}`;
     base += "\nThis is a nudge, not a cage — if the source material clearly points another direction, follow the source.";
+  }
+
+  // Inject city language guidance (includes currency)
+  if (job.cityId) {
+    const cityConfig = cities.find((c) => c.id === job.cityId);
+    if (cityConfig?.languageGuidance) {
+      base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${cityConfig.languageGuidance}`;
+    }
   }
 
   // Universal anti-pattern rules — applied to ALL families.

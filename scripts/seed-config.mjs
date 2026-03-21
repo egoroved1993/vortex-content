@@ -274,7 +274,7 @@ export const cities = [
   {
     id: "london",
     name: "London",
-    languageGuidance: "Write in casual contemporary English with mild London dryness. No fake cockney.",
+    languageGuidance: "Write in casual contemporary English with mild London dryness. No fake cockney. Currency: GBP — use £ and p (pounds/pence), never dollars or euros.",
     defaultAnchors: [
       "victoria line platform",
       "zone 2 flat share",
@@ -305,7 +305,7 @@ export const cities = [
   {
     id: "berlin",
     name: "Berlin",
-    languageGuidance: "Write in English that feels local to Berlin expat/local life. A little bluntness is okay. No cliches about techno unless earned.",
+    languageGuidance: "Write in English that feels local to Berlin expat/local life. A little bluntness is okay. No cliches about techno unless earned. Currency: EUR — use € (euros), never dollars or pounds.",
     defaultAnchors: [
       "u8 platform",
       "spati fridge",
@@ -336,7 +336,7 @@ export const cities = [
   {
     id: "sf",
     name: "San Francisco",
-    languageGuidance: "Write in modern American English. Avoid startup parody unless the scene really supports it.",
+    languageGuidance: "Write in modern American English. Avoid startup parody unless the scene really supports it. Currency: USD — use $ and cents (dollars), never euros or pounds.",
     defaultAnchors: [
       "muni delay",
       "fog pushing into the sunset",
@@ -366,7 +366,7 @@ export const cities = [
   {
     id: "barcelona",
     name: "Barcelona",
-    languageGuidance: "Write in casual English that can lightly reflect multilingual city life. A small Catalan or Spanish detail is okay if natural.",
+    languageGuidance: "Write in casual English that can lightly reflect multilingual city life. A small Catalan or Spanish detail is okay if natural. Currency: EUR — use € (euros), never dollars or pounds. Never say 'bucks'.",
     defaultAnchors: [
       "superblock corner",
       "metro line 3",
