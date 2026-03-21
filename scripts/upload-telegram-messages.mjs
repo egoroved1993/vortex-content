@@ -150,7 +150,7 @@ Rate each 1-10:
 1-2 = spam, ad, promotion, emoji-only, meaningless
 
 Short messages can score 10 if they feel genuinely human and standalone.
-Return ONLY: {"scores": [<int>, ...]} in the same order as input.`,
+Return JSON: {"scores": [<int>, ...]} in the same order as input.`,
       `Score these ${batch.length} messages:\n\n${numbered}`,
       200
     );
