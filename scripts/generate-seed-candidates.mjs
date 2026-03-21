@@ -72,15 +72,25 @@ function loadCityPulse() {
     const raw = JSON.parse(fs.readFileSync(pulsePath, "utf8"));
     const map = {};
     for (const row of raw.rows ?? []) {
-      // Extract news headlines from news-family drivers
-      const newsDrivers = (row.drivers ?? []).filter((d) => d.source_family === "news");
-      const otherDrivers = (row.drivers ?? []).filter((d) => d.source_family !== "news");
+      // Extract drivers by family for targeted injection
+      const newsDrivers      = (row.drivers ?? []).filter((d) => d.source_family === "news");
+      const nightlifeDrivers = (row.drivers ?? []).filter((d) => d.source_family === "nightlife");
+      const transportDrivers = (row.drivers ?? []).filter((d) => d.source_family === "transport");
+      const weatherDrivers   = (row.drivers ?? []).filter((d) => d.source_family === "weather");
+      const sportsDrivers    = (row.drivers ?? []).filter((d) => d.source_family === "sports");
+      const otherDrivers     = (row.drivers ?? []).filter((d) =>
+        !["news","nightlife","transport","weather","sports"].includes(d.source_family)
+      );
       map[row.city_id] = {
         moodLabel: row.mood_label,
         moodSummary: row.mood_summary,
         themes: (row.metadata?.dominant_themes ?? []).slice(0, 3),
         drivers: otherDrivers.slice(0, 3).map((d) => d.excerpt?.slice(0, 120)),
-        newsHeadlines: newsDrivers.slice(0, 5).map((d) => d.excerpt?.slice(0, 140)).filter(Boolean),
+        newsHeadlines:     newsDrivers.slice(0, 5).map((d) => d.excerpt?.slice(0, 140)).filter(Boolean),
+        nightlifeEvents:   nightlifeDrivers.slice(0, 4).map((d) => d.excerpt?.slice(0, 140)).filter(Boolean),
+        transportAlerts:   transportDrivers.slice(0, 3).map((d) => d.excerpt?.slice(0, 140)).filter(Boolean),
+        weatherSummary:    weatherDrivers.slice(0, 1).map((d) => d.excerpt?.slice(0, 120)).filter(Boolean)[0] ?? null,
+        sportsResults:     sportsDrivers.slice(0, 3).map((d) => d.excerpt?.slice(0, 140)).filter(Boolean),
       };
     }
     return map;
@@ -267,13 +277,14 @@ async function fetchWithRetry(fn, maxRetries = 5) {
   }
 }
 
-function buildSystemPrompt(job, providerHint = null) {
+function buildSystemPrompt(job, providerHint = null, activeModel = null) {
+  const effectiveModel = activeModel ?? model;
   const pulse = cityPulseMap[job.cityId];
   let base = "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
 
-  // Inject model persona early — before all other constraints — so voice anchors the generation
-  if (!job.personaId && !isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "social") {
-    const modelPersona = getModelPersonaVoice(providerHint, model);
+  // Inject model persona early — always fire for non-salvage families so the voice anchors generation
+  if (!isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "social") {
+    const modelPersona = getModelPersonaVoice(providerHint, effectiveModel);
     if (modelPersona) base += `\n\n${modelPersona}`;
   }
 
@@ -320,11 +331,27 @@ function buildSystemPrompt(job, providerHint = null) {
     } else if (pulse.drivers?.length) {
       base += `\n\nReal voices from the city today (use as texture, do NOT copy):\n${pulse.drivers.filter(Boolean).map((d) => `- "${d}"`).join("\n")}`;
     }
+    if (pulse.nightlifeEvents?.length && job.cityId === "berlin") {
+      base += `\n\nBerlin nightlife this week (Resident Advisor):\n${pulse.nightlifeEvents.map((e) => `- ${e}`).join("\n")}`;
+      base += "\nUse these only as ambient texture — venue names, artist names, the fact that these events exist. Do not write a promo, review, or recommendation. A message that sounds like a flyer fails.";
+    }
+    if (pulse.transportAlerts?.length) {
+      base += `\n\nLive transit disruptions today:\n${pulse.transportAlerts.map((a) => `- ${a}`).join("\n")}`;
+      base += "\nHigh priority signal — if the message has any transit angle, it must acknowledge today's actual disruption, not a generic delay.";
+    }
+    if (pulse.weatherSummary) {
+      base += `\n\nWeather today: ${pulse.weatherSummary}`;
+      base += "\nLet this subtly color the message if relevant — don't force it, but don't ignore a heat wave or 5th consecutive rainy day.";
+    }
+    if (pulse.sportsResults?.length) {
+      base += `\n\nLocal sports results/fixtures:\n${pulse.sportsResults.map((r) => `- ${r}`).join("\n")}`;
+      base += "\nUse as optional ambient signal — a loss last night, an upcoming derby. Only reference if the message would naturally go there.";
+    }
     base += "\n\nLet these themes subtly ground the message — make it feel like it was written today, not any day.";
   }
-  // Inject persona voice for non-salvage families where model is authoring, not editing
+  // Seed-config persona: adds role specifics on top of the model voice character
   if (job.personaId && job.personaLabel && job.personaGuidance && !isMinimalSalvageFamily(job.sourceFamily)) {
-    base += `\n\nVoice persona: write as ${job.personaLabel}. ${job.personaGuidance}`;
+    base += `\n\nRole specifics for this message: the speaker is a ${job.personaLabel.toLowerCase()}. ${job.personaGuidance}`;
   }
   if (providerHint === "xai" && job.lane === "mind_post" && job.sourceFamily !== "social") {
     base +=
@@ -353,6 +380,17 @@ function buildSystemPrompt(job, providerHint = null) {
     base += `\n\nEmotional register for this message: ${assignedTone.guidance}`;
     base += "\nThis is a nudge, not a cage — if the source material clearly points another direction, follow the source.";
   }
+
+  // Universal anti-pattern rules — applied to ALL families.
+  // These are the most common AI-detection signals found in real output analysis.
+  base += "\n\nHARD RULES — violating any of these makes the message unusable:";
+  base += "\n- No rhetorical questions. ('do we all just...', 'anybody else...', 'ever notice how...' — all banned.)";
+  base += "\n- No two-part structure of the form 'X, but Y' or 'not X, just Y' as a closing move. One complete thought only.";
+  base += "\n- No emojis of any kind.";
+  base += "\n- No promo-style announcements with exact times ('this Friday at 8pm', 'starts at 11am', 'free entry').";
+  base += "\n- No 'Dating in [place] feels like...' openings or any sentence that starts with a generalization about a neighborhood's social scene.";
+  base += "\n- No polished metaphors that sound writerly ('the city felt like a paused film', 'traded fog for algorithms'). Observations only, no literary framing.";
+  base += "\n- Do not start with 'I feel like', 'Sometimes I', 'There was a time'.";
 
   return base;
 }
@@ -446,7 +484,7 @@ async function generateWithOpenAI(job, modelName) {
         messages: [
           {
             role: "system",
-            content: buildSystemPrompt(job, "openai"),
+            content: buildSystemPrompt(job, "openai", modelName),
           },
           { role: "user", content: job.prompt },
         ],
@@ -484,7 +522,7 @@ async function generateWithXAI(job, modelName) {
         messages: [
           {
             role: "system",
-            content: buildSystemPrompt(job, "xai"),
+            content: buildSystemPrompt(job, "xai", modelName),
           },
           { role: "user", content: job.prompt },
         ],
@@ -520,7 +558,7 @@ async function generateWithAnthropic(job, modelName) {
       model: modelName,
       max_tokens: profile.maxTokens,
       temperature: profile.temperature,
-      system: buildSystemPrompt(job, "anthropic"),
+      system: buildSystemPrompt(job, "anthropic", modelName),
       messages: [{ role: "user", content: job.prompt }],
     }),
   });
@@ -555,7 +593,7 @@ async function generateRepairWithOpenAI(job, modelName, weakDraft, assessment) {
         messages: [
           {
             role: "system",
-            content: buildRepairSystemPrompt(job, assessment, "openai"),
+            content: buildRepairSystemPrompt(job, assessment, "openai", modelName),
           },
           {
             role: "user",
@@ -595,7 +633,7 @@ async function generateRepairWithXAI(job, modelName, weakDraft, assessment) {
         messages: [
           {
             role: "system",
-            content: buildRepairSystemPrompt(job, assessment, "xai"),
+            content: buildRepairSystemPrompt(job, assessment, "xai", modelName),
           },
           {
             role: "user",
@@ -633,7 +671,7 @@ async function generateRepairWithAnthropic(job, modelName, weakDraft, assessment
       model: modelName,
       max_tokens: job.lane === "mind_post" ? 220 : 180,
       temperature: 0.2,
-      system: buildRepairSystemPrompt(job, assessment, "anthropic"),
+      system: buildRepairSystemPrompt(job, assessment, "anthropic", modelName),
       messages: [{ role: "user", content: buildRepairUserPrompt(job, weakDraft, assessment) }],
     }),
   });
@@ -693,7 +731,8 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
   };
 }
 
-function buildRepairSystemPrompt(job, assessment, providerHint = null) {
+function buildRepairSystemPrompt(job, assessment, providerHint = null, activeModel = null) {
+  const effectiveModel = activeModel ?? model;
   let base = "You repair weak anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
   base += "\nFix the draft without making it sound polished, literary, or article-like.";
   base += "\nKeep the same scene, same source pressure, and same local detail.";

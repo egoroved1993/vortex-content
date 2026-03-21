@@ -193,6 +193,9 @@ function inferTopic(snippet) {
   if (/\b(weather|fog|rain|heat|cold|wind)\b/.test(lower)) return "weather_mood";
   if (/\b(language|translation|catalan|spanish|german|english)\b/.test(lower)) return "language_barrier";
   if (/\b(office|remote|startup|workers|layoff|slack)\b/.test(lower)) return "work_stress";
+  if (/\b(ai|chatgpt|gpt|llm|artificial intelligence|algorithm|generated|automation)\b/.test(lower)) return "ai_anxiety";
+  if (/\b(reportedly|rumoured|sources say|unconfirmed|planning to close|may close|could close)\b/.test(lower)) return "city_rumor";
+  if (/\b(council|mayor|vote|policy|election|protest|strike|government|senator|minister)\b/.test(lower)) return "political_frustration";
   return "neighborhood_vibe";
 }
 
@@ -246,8 +249,11 @@ function buildNewsRewritePrompt(job) {
         "Do not turn it into a civic summary.",
       ];
 
+  const today = new Date().toISOString().slice(0, 10);
+
   return [
     "Salvage a city-news snippet into a Vortex message with minimal intervention.",
+    `Today's date: ${today}. Use this to calibrate how recent the event is and whether to use present or past tense.`,
     `City: ${job.cityName}.`,
     `Topic: ${job.topicLabel}.`,
     `Read reason: ${job.readReasonLabel}.`,

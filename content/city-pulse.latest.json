@@ -1,22 +1,27 @@
 {
   "meta": {
-    "capturedAt": "2026-03-20T14:51:55.396Z",
+    "capturedAt": "2026-03-21T10:15:11.594Z",
     "sourceFiles": {
-      "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
-      "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
-      "forum": "/home/runner/work/vortex-content/vortex-content/content/forum-snippets.json",
-      "signals": "/home/runner/work/vortex-content/vortex-content/content/city-signals.json",
-      "news": "/home/runner/work/vortex-content/vortex-content/content/news-snippets.json",
-      "social": "/home/runner/work/vortex-content/vortex-content/content/social-snippets.json",
-      "world": "/home/runner/work/vortex-content/vortex-content/content/world-trends.json"
+      "public": "/Users/worldfamousnobody/Vortex/github-actions/content/public-human-comments.json",
+      "review": "/Users/worldfamousnobody/Vortex/github-actions/content/place-review-snippets.json",
+      "forum": "/Users/worldfamousnobody/Vortex/github-actions/content/forum-snippets.json",
+      "signals": "/Users/worldfamousnobody/Vortex/github-actions/content/city-signals.json",
+      "news": "/Users/worldfamousnobody/Vortex/github-actions/content/news-snippets.json",
+      "social": "/Users/worldfamousnobody/Vortex/github-actions/content/social-snippets.json",
+      "world": "/Users/worldfamousnobody/Vortex/github-actions/content/world-trends.json",
+      "nightlife": "/Users/worldfamousnobody/Vortex/github-actions/content/ra-berlin-events.json",
+      "trends": "/Users/worldfamousnobody/Vortex/github-actions/content/google-trends.json",
+      "transport": "/Users/worldfamousnobody/Vortex/github-actions/content/transport-signals.json",
+      "weather": "/Users/worldfamousnobody/Vortex/github-actions/content/weather-signals.json",
+      "sports": "/Users/worldfamousnobody/Vortex/github-actions/content/sports-signals.json"
     },
-    "totalItems": 231
+    "totalItems": 275
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-20T14:51:55.396Z",
-      "mood_score": 0.459,
+      "captured_at": "2026-03-21T10:15:11.594Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -27,7 +32,10 @@
         "signals": 1,
         "news": 8,
         "social": 2,
-        "world": 5
+        "world": 5,
+        "trends": 8,
+        "transport": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -42,14 +50,6 @@
           "excerpt": "the only way to stay sane here is to treat every overground delay like a personal insult you are too tired to process properly"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "Tube strikes in March called off as RMT negotiates - BBC. Tube strikes in March called off as RMT negotiates London bus workers could strike on same days as Tube drivers, union war"
-        },
-        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
@@ -58,40 +58,48 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "my theory is that you can tell how long someone has lived here by how little they react when the tube says severe delays"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Saturday 21 March, no service between Whitechapel and Shenfield. The limited ELIZABETH LINE services to/"
         },
         {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "the weird thing about london is people will apologise for touching your sleeve on the overground and then send you a rent increase like it's weather"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Liberty: Planned Closure LIBERTY LINE: Saturday 21 and Sunday 22 March, no service between Romford and Upminster. Use local London Buses routes 1"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 21 and Sunday 22 March, no service between Cockfosters and Uxbridge (including Friday and Satu"
         }
       ],
       "metadata": {
-        "source_item_count": 35,
-        "average_valence": -0.122,
+        "source_item_count": 52,
+        "average_valence": -0.166,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.925
+        "freshness_score": 0.956
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-20T14:51:55.396Z",
-      "mood_score": 0.462,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, language. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-03-21T10:15:11.594Z",
+      "mood_score": 0.367,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, language. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 13,
         "review": 2,
@@ -99,7 +107,9 @@
         "signals": 1,
         "news": 8,
         "social": 2,
-        "world": 5
+        "world": 5,
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "de",
@@ -148,23 +158,23 @@
         }
       ],
       "metadata": {
-        "source_item_count": 35,
-        "average_valence": -0.113,
+        "source_item_count": 44,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "routine",
           "language"
         ],
-        "freshness_score": 0.944
+        "freshness_score": 0.952
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-20T14:51:55.396Z",
-      "mood_score": 0.477,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, general, routine. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-03-21T10:15:11.594Z",
+      "mood_score": 0.281,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 13,
         "review": 2,
@@ -172,7 +182,9 @@
         "signals": 1,
         "news": 8,
         "social": 2,
-        "world": 5
+        "world": 5,
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -220,19 +232,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 35,
-        "average_valence": -0.067,
+        "source_item_count": 44,
+        "average_valence": -0.056,
         "dominant_themes": [
-          "transit",
           "general",
+          "transit",
           "routine"
         ],
-        "freshness_score": 0.923
+        "freshness_score": 0.945
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-20T14:51:55.396Z",
+      "captured_at": "2026-03-21T10:15:11.594Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
@@ -244,7 +256,9 @@
         "signals": 1,
         "news": 8,
         "social": 93,
-        "world": 5
+        "world": 5,
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -262,11 +276,19 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
+          "source_family": "public",
+          "source_origin": "curated_public_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "people say barcelona is effortless but half the city runs on carefully managed lateness and pretending the rent conversation can wait another month"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
-          "recency_weight": 1,
+          "recency_weight": 0.88,
           "excerpt": "А мы вот и сами не очень хотели наличку, тк вроде переводом как-то безопаснее для самих арендаторов (нас)"
         },
         {
@@ -274,16 +296,8 @@
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
-          "recency_weight": 1,
+          "recency_weight": 0.88,
           "excerpt": "\"они\" это ТБС или арендодатель?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "people say barcelona is effortless but half the city runs on carefully managed lateness and pretending the rent conversation can wait another month"
         },
         {
           "source_family": "world",
@@ -295,14 +309,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 126,
+        "source_item_count": 135,
         "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 1.018
+        "freshness_score": 0.938
       }
     }
   ]

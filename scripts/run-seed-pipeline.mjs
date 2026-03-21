@@ -73,17 +73,17 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "--out",
   payloadPath,
   "--min-ambiguity",
-  "3",
+  "2",
   "--min-news-fit",
   "1",
   "--min-composite-score",
-  "3",
+  "2",
   "--allowed-families",
   "launch,public,news,social,world,bridge,signals,review,forum",
   "--max-per-city",
-  "5",
+  "10",
   "--max-total",
-  "25",
+  "50",
 ]);
 
 const payload = readJson(payloadPath);

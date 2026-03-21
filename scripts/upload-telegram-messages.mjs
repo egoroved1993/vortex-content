@@ -1,13 +1,16 @@
 /**
  * upload-telegram-messages.mjs
  *
- * Inserts fresh Telegram snippets from content/social-snippets.json into
- * Supabase as source=human messages.  Keeps a local hash-set to avoid
- * re-uploading the same messages across runs.
+ * Takes fresh Telegram snippets from content/social-snippets.json,
+ * scores each via OpenAI (1-10), then:
+ *   score >= 8  → upload as source=human (direct quote, authentic)
+ *   score 5-7   → rewrite via AI to preserve essence, upload as source=ai
+ *   score < 5   → discard (but still mark as seen so we skip next run)
  *
  * Required env vars:
  *   SUPABASE_URL
  *   SUPABASE_SERVICE_KEY
+ *   OPENAI_API_KEY
  */
 
 import fs from "node:fs";
@@ -16,9 +19,13 @@ import { resolveProjectPath } from "./path-utils.mjs";
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
+const openaiApiKey = process.env.OPENAI_API_KEY;
 
 if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error("SUPABASE_URL and SUPABASE_SERVICE_KEY are required");
+}
+if (!openaiApiKey) {
+  throw new Error("OPENAI_API_KEY is required for scoring");
 }
 
 const snippetsPath = resolveProjectPath("content", "social-snippets.json");
@@ -33,11 +40,7 @@ if (tgSnippets.length === 0) {
 }
 
 const seenHashes = new Set(safeReadJson(seenPath));
-
-const newSnippets = tgSnippets.filter((s) => {
-  const hash = contentHash(s.body);
-  return !seenHashes.has(hash);
-});
+const newSnippets = tgSnippets.filter((s) => !seenHashes.has(contentHash(s.body)));
 
 console.log(`Telegram snippets: ${tgSnippets.length} total, ${newSnippets.length} new`);
 
@@ -46,23 +49,63 @@ if (newSnippets.length === 0) {
   process.exit(0);
 }
 
-// Build rows for bulk_insert_messages
-const rows = newSnippets.map((s) => ({
+// ── Step 1: Score all new snippets via OpenAI ────────────────────────────────
+
+console.log("Scoring snippets via OpenAI...");
+const scores = await scoreSnippets(newSnippets);
+
+const humanSnippets  = [];
+const toRewrite = [];
+
+for (let i = 0; i < newSnippets.length; i++) {
+  const score = scores[i] ?? 0;
+  const s = newSnippets[i];
+  if (score >= 7)      humanSnippets.push(s);
+  else if (score >= 5) toRewrite.push(s);
+  // score < 5: discard (still marked seen below)
+}
+
+console.log(`Scores: ${humanSnippets.length} human, ${toRewrite.length} to rewrite, ${newSnippets.length - humanSnippets.length - toRewrite.length} discarded`);
+
+// ── Step 2: Rewrite mediocre snippets ────────────────────────────────────────
+
+const rewritten = toRewrite.length > 0 ? await rewriteSnippets(toRewrite) : [];
+
+// ── Step 3: Build rows ────────────────────────────────────────────────────────
+
+// Telegram messages have no author_id — no chat possible, so source="ai" regardless of origin
+const humanRows = humanSnippets.map((s) => ({
   city_id:           s.cityId,
   content:           s.body.trim(),
-  source:            "human",
+  source:            "ai",
   sentiment:         "neutral",
   detected_language: s.language ?? "ru",
   author_id:         null,
   author_number:     null,
   created_at:        randomTimeToday(),
+  payload:           s.links ? JSON.stringify({ links: s.links }) : null,
 }));
 
-// Upload in chunks of 50
+const aiRows = rewritten.map((r) => ({
+  city_id:           r.cityId,
+  content:           r.content.trim(),
+  source:            "ai",
+  sentiment:         "neutral",
+  detected_language: "ru",
+  author_id:         null,
+  author_number:     null,
+  created_at:        randomTimeToday(),
+}));
+
+const allRows = [...humanRows, ...aiRows];
+console.log(`Uploading ${allRows.length} rows (${humanRows.length} human + ${aiRows.length} ai)`);
+
+// ── Step 4: Upload in chunks ──────────────────────────────────────────────────
+
 const chunkSize = 50;
 let uploaded = 0;
-for (let i = 0; i < rows.length; i += chunkSize) {
-  const chunk = rows.slice(i, i + chunkSize);
+for (let i = 0; i < allRows.length; i += chunkSize) {
+  const chunk = allRows.slice(i, i + chunkSize);
   const response = await fetch(`${supabaseUrl}/rest/v1/rpc/bulk_insert_messages`, {
     method: "POST",
     headers: {
@@ -78,15 +121,118 @@ for (let i = 0; i < rows.length; i += chunkSize) {
   }
 
   uploaded += chunk.length;
-  console.log(`Uploaded ${uploaded}/${rows.length}`);
+  console.log(`Uploaded ${uploaded}/${allRows.length}`);
 }
 
-// Persist seen hashes so we don't re-upload next run
+// ── Step 5: Persist seen hashes (all new snippets, incl. discarded) ──────────
+
 const updatedHashes = [...seenHashes, ...newSnippets.map((s) => contentHash(s.body))];
 fs.writeFileSync(seenPath, `${JSON.stringify(updatedHashes, null, 2)}\n`);
 console.log(`Saved ${updatedHashes.length} seen hashes to ${seenPath}`);
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+// ── OpenAI: scoring ───────────────────────────────────────────────────────────
+
+async function scoreSnippets(snippets) {
+  const BATCH = 20;
+  const allScores = [];
+
+  for (let i = 0; i < snippets.length; i += BATCH) {
+    const batch = snippets.slice(i, i + BATCH);
+    const numbered = batch.map((s, idx) => `${idx + 1}. ${s.body.trim()}`).join("\n\n");
+
+    const result = await callOpenAI(
+      `You score Telegram messages as standalone city life snippets for a mobile game.
+Rate each 1-10:
+10 = perfect standalone human moment (everyday life, expat experience, any emotion, even very short)
+7-9 = good, self-contained, authentic voice
+5-6 = has a clear point but somewhat context-dependent
+3-4 = fragment needing context, or too generic
+1-2 = spam, ad, promotion, emoji-only, meaningless
+
+Short messages can score 10 if they feel genuinely human and standalone.
+Return ONLY: {"scores": [<int>, ...]} in the same order as input.`,
+      `Score these ${batch.length} messages:\n\n${numbered}`,
+      200
+    );
+
+    const batchScores = result?.scores ?? batch.map(() => 5);
+    allScores.push(...batchScores.slice(0, batch.length));
+
+    if (i + BATCH < snippets.length) await sleep(300);
+  }
+
+  return allScores;
+}
+
+// ── OpenAI: rewriting ─────────────────────────────────────────────────────────
+
+async function rewriteSnippets(snippets) {
+  const BATCH = 10;
+  const results = [];
+
+  for (let i = 0; i < snippets.length; i += BATCH) {
+    const batch = snippets.slice(i, i + BATCH);
+    const numbered = batch.map((s, idx) => `${idx + 1}. [${s.cityId}] ${s.body.trim()}`).join("\n\n");
+
+    const result = await callOpenAI(
+      `You rewrite Telegram messages as standalone city life observations for a mobile game.
+Rules:
+- Preserve the core feeling, topic, or situation from the original
+- Write in Russian, 1-3 natural sentences
+- Sound like a real person, not a narrator
+- Remove any @mentions, links, or references to specific usernames
+- Keep city-specific details (prices, places, bureaucracy, expat life) if present
+- Do NOT add emojis
+Return JSON: {"rewrites": ["<rewritten text>", ...]} in same order.`,
+      `Rewrite these ${batch.length} messages:\n\n${numbered}`,
+      1000
+    );
+
+    const batchRewrites = result?.rewrites ?? batch.map((s) => s.body);
+    for (let j = 0; j < batch.length; j++) {
+      results.push({
+        cityId: batch[j].cityId,
+        content: batchRewrites[j] ?? batch[j].body,
+      });
+    }
+
+    if (i + BATCH < snippets.length) await sleep(300);
+  }
+
+  return results;
+}
+
+// ── OpenAI: base call ─────────────────────────────────────────────────────────
+
+async function callOpenAI(systemPrompt, userPrompt, maxTokens) {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${openaiApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "gpt-4o-mini",
+      temperature: 0.3,
+      max_tokens: maxTokens,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`OpenAI ${response.status}: ${await response.text()}`);
+  }
+
+  const data = await response.json();
+  const text = data.choices?.[0]?.message?.content?.trim();
+  return JSON.parse(text);
+}
+
+// ── Generic helpers ───────────────────────────────────────────────────────────
 
 function contentHash(text) {
   return crypto.createHash("sha1").update(text.trim().toLowerCase()).digest("hex").slice(0, 16);
@@ -100,18 +246,13 @@ function safeReadJson(filePath) {
 
 function randomTimeToday() {
   const now   = new Date();
-  const start = new Date(now); start.setUTCHours(7,  0,  0, 0);
-  const end   = new Date(now); end.setUTCHours(23, 59, 59, 999);
-  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())).toISOString();
+  const start = new Date(now); start.setUTCHours(7, 0, 0, 0);
+  // Never generate a timestamp in the future
+  const end   = new Date(Math.min(now.getTime(), new Date(now).setUTCHours(23, 59, 59, 999)));
+  const range = Math.max(0, end.getTime() - start.getTime());
+  return new Date(start.getTime() + Math.random() * range).toISOString();
 }
 
-function parseArgs(argv) {
-  const result = {};
-  for (let i = 0; i < argv.length; i++) {
-    if (argv[i].startsWith("--")) {
-      const key = argv[i].slice(2);
-      result[key] = argv[i + 1] && !argv[i + 1].startsWith("--") ? argv[++i] : true;
-    }
-  }
-  return result;
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
 }

@@ -15,7 +15,15 @@ const sourceFiles = {
   news: args["news-input"] ? path.resolve(process.cwd(), args["news-input"]) : resolveProjectPath("content", "news-snippets.json"),
   social: args["social-input"] ? path.resolve(process.cwd(), args["social-input"]) : resolveProjectPath("content", "social-snippets.json"),
   world: args["world-input"] ? path.resolve(process.cwd(), args["world-input"]) : resolveProjectPath("content", "world-trends.json"),
+  nightlife: args["nightlife-input"] ? path.resolve(process.cwd(), args["nightlife-input"]) : resolveProjectPath("content", "ra-berlin-events.json"),
+  trends: args["trends-input"] ? path.resolve(process.cwd(), args["trends-input"]) : resolveProjectPath("content", "google-trends.json"),
+  transport: args["transport-input"] ? path.resolve(process.cwd(), args["transport-input"]) : resolveProjectPath("content", "transport-signals.json"),
+  weather: args["weather-input"] ? path.resolve(process.cwd(), args["weather-input"]) : resolveProjectPath("content", "weather-signals.json"),
+  sports: args["sports-input"] ? path.resolve(process.cwd(), args["sports-input"]) : resolveProjectPath("content", "sports-signals.json"),
 };
+
+// Weather signals are loaded separately to apply moodModifier offsets
+const weatherSignals = readWeatherRaw(sourceFiles.weather);
 
 const items = [
   ...readPublic(sourceFiles.public),
@@ -25,10 +33,22 @@ const items = [
   ...readNews(sourceFiles.news),
   ...readSocial(sourceFiles.social),
   ...readWorld(sourceFiles.world),
+  ...readNightlife(sourceFiles.nightlife),
+  ...readTrends(sourceFiles.trends),
+  ...readTransport(sourceFiles.transport),
+  ...weatherSignals.map(toWeatherItem),
+  ...readSports(sourceFiles.sports),
 ];
 
+// Index weather moodModifiers by cityId for pulse score adjustment
+const weatherModifiers = Object.fromEntries(
+  weatherSignals.map((w) => [w.cityId, w.moodModifier ?? 0])
+);
+
 const byCity = groupBy(items, (item) => item.cityId);
-const rows = Object.entries(byCity).map(([cityId, cityItems]) => buildPulseRow(cityId, cityItems, capturedAt));
+const rows = Object.entries(byCity).map(([cityId, cityItems]) =>
+  buildPulseRow(cityId, cityItems, capturedAt, weatherModifiers[cityId] ?? 0)
+);
 const payload = {
   meta: {
     capturedAt,
@@ -115,6 +135,65 @@ function readSocial(filePath) {
   })).filter((entry) => entry.text.length > 0 && !looksSyntheticPlaceholder(entry.text));
 }
 
+function readNightlife(filePath) {
+  return safeReadJson(filePath).map((entry) => ({
+    cityId: entry.cityId,
+    sourceFamily: "nightlife",
+    sourceOrigin: entry.sourceOrigin ?? "resident_advisor",
+    language: "de",
+    text: cleanText(entry.body ?? [entry.artists?.join(", "), entry.venueName, entry.date].filter(Boolean).join(". ")),
+    observedAt: entry.fetchedAt ?? "today",
+  })).filter((entry) => entry.text.length > 0);
+}
+
+function readTrends(filePath) {
+  return safeReadJson(filePath).map((entry) => ({
+    cityId: entry.cityId,
+    sourceFamily: "trends",
+    sourceOrigin: entry.sourceOrigin ?? "google_trends",
+    language: normalizeSourceLanguage("en"),
+    text: cleanText(entry.body ?? entry.trend ?? ""),
+    observedAt: entry.fetchedAt ?? "today",
+  })).filter((entry) => entry.text.length > 0);
+}
+
+function readTransport(filePath) {
+  return safeReadJson(filePath).map((entry) => ({
+    cityId: entry.cityId,
+    sourceFamily: "transport",
+    sourceOrigin: entry.sourceOrigin ?? "transit",
+    language: normalizeSourceLanguage("en"),
+    text: cleanText(entry.body ?? [entry.line, entry.status, entry.reason].filter(Boolean).join(". ")),
+    observedAt: entry.fetchedAt ?? "today",
+  })).filter((entry) => entry.text.length > 0);
+}
+
+function readWeatherRaw(filePath) {
+  return safeReadJson(filePath);
+}
+
+function toWeatherItem(entry) {
+  return {
+    cityId: entry.cityId,
+    sourceFamily: "weather",
+    sourceOrigin: entry.sourceOrigin ?? "open_meteo",
+    language: normalizeSourceLanguage("en"),
+    text: cleanText(entry.body ?? ""),
+    observedAt: entry.fetchedAt ?? "today",
+  };
+}
+
+function readSports(filePath) {
+  return safeReadJson(filePath).map((entry) => ({
+    cityId: entry.cityId,
+    sourceFamily: "sports",
+    sourceOrigin: entry.sourceOrigin ?? "sports",
+    language: normalizeSourceLanguage("en"),
+    text: cleanText(entry.body ?? ""),
+    observedAt: entry.fetchedAt ?? entry.matchDate ?? "today",
+  })).filter((entry) => entry.text.length > 0);
+}
+
 function readWorld(filePath) {
   return safeReadJson(filePath).flatMap((entry) =>
     ["london", "berlin", "sf", "barcelona"].flatMap((cityId) => {
@@ -132,7 +211,7 @@ function readWorld(filePath) {
   );
 }
 
-function buildPulseRow(cityId, items, snapshotTime) {
+function buildPulseRow(cityId, items, snapshotTime, weatherMoodModifier = 0) {
   const scored = items
     .map((item) => ({
       ...item,
@@ -149,7 +228,8 @@ function buildPulseRow(cityId, items, snapshotTime) {
 
   const totalWeight = scored.reduce((sum, item) => sum + item.totalWeight, 0) || 1;
   const average = scored.reduce((sum, item) => sum + item.weightedValence, 0) / totalWeight;
-  const moodScore = clamp(0.5 + average * 0.34, 0.05, 0.95);
+  // Apply weather modifier (±0.3 max from weather streaks)
+  const moodScore = clamp(0.5 + average * 0.34 + weatherMoodModifier, 0.05, 0.95);
   const moodLabel = labelForMood(moodScore);
   const dominantSentiment = moodScore < 0.42 ? "negative" : moodScore > 0.58 ? "positive" : "neutral";
   const themeCounts = countWeighted(scored.flatMap((item) => item.themes.map((theme) => ({ theme, weight: item.totalWeight }))), (entry) => entry.theme, (entry) => entry.weight);
@@ -206,6 +286,16 @@ function sourceWeight(sourceFamily) {
       return 0.88;
     case "signals":
       return 0.68;
+    case "nightlife":
+      return 0.82;
+    case "transport":
+      return 1.05; // real-time disruptions are highly relevant
+    case "sports":
+      return 0.90;
+    case "weather":
+      return 0.70; // mood modifier applied separately; body is ambient texture
+    case "trends":
+      return 0.65; // country-level, not city-specific
     default:
       return 0.75;
   }

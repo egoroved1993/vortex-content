@@ -59,6 +59,32 @@ jobs:
           EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
         run: node scripts/fetch-city-events.mjs
 
+      - name: Fetch Resident Advisor Berlin nightlife
+        continue-on-error: true
+        run: node scripts/fetch-ra-berlin.mjs
+
+      - name: Fetch Google Trends
+        continue-on-error: true
+        run: node scripts/fetch-google-trends.mjs
+
+      - name: Fetch transport disruptions
+        continue-on-error: true
+        env:
+          TRANSIT_511_KEY: ${{ secrets.TRANSIT_511_KEY }}
+          TMB_APP_ID: ${{ secrets.TMB_APP_ID }}
+          TMB_APP_KEY: ${{ secrets.TMB_APP_KEY }}
+        run: node scripts/fetch-transport.mjs
+
+      - name: Fetch weather signals
+        continue-on-error: true
+        run: node scripts/fetch-weather.mjs
+
+      - name: Fetch sports results
+        continue-on-error: true
+        env:
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: node scripts/fetch-sports.mjs
+
       - name: Fetch Telegram group pulse
         if: env.TG_WORK_SESSION != ''
         continue-on-error: true
@@ -116,7 +142,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/city-pulse.latest.json content/news-snippets.json content/events-snippets.json content/fetched-places.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json content/telegram-uploaded-hashes.json
+          git add content/city-pulse.latest.json content/news-snippets.json content/events-snippets.json content/fetched-places.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json content/telegram-uploaded-hashes.json content/ra-berlin-events.json content/google-trends.json content/transport-signals.json content/weather-signals.json content/sports-signals.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

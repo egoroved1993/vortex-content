@@ -217,6 +217,9 @@ function inferTopic(snapshot, focus) {
   if (/\b(rent|price|expensive|overpriced|bill|sublet|roommate|lease)\b/.test(wider)) return "cost_of_living";
   if (/\b(tourists|visitors|airbnb|suitcase|photo stop|queue for brunch)\b/.test(wider)) return "tourist_vs_local";
   if (/\b(founder|startup|slack|calendar|office|remote work|laptop)\b/.test(wider)) return "work_stress";
+  if (/\b(ai|chatgpt|gpt|llm|generated|artificial intelligence|algorithm)\b/.test(wider)) return "ai_anxiety";
+  if (/\b(apparently|heard that|someone said|rumour|rumor|closing|sold|they're closing|i heard)\b/.test(wider)) return "city_rumor";
+  if (/\b(absurd|ridiculous|ironic|somehow|still|technically|classic|typical)\b/.test(wider)) return "humor";
   if (/\b(cafe|coffee|bar|restaurant|bakery|brunch|burrito)\b/.test(wider)) return "food_moment";
   return focus.id === "soft_detail" ? "random_encounter" : "neighborhood_vibe";
 }

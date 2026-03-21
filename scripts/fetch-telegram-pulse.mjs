@@ -132,9 +132,19 @@ async function scrapeChat(client, source, cutoff) {
     if (text.length < MIN_BODY_LENGTH) continue;
     if (text.length > MAX_BODY_LENGTH) continue;
 
+    // Extract links before stripping URLs
+    const links = extractLinks(text);
+
     // Skip messages that are mostly a bare URL
     const textWithoutUrls = text.replace(/https?:\/\/\S+/g, "").trim();
     if (textWithoutUrls.length < 20) continue;
+
+    // Skip spam/promo: @mentions in body, promo keywords, t.me links
+    if (/@\w+/.test(text)) continue;
+    if (/регистрир|подпишись|промокод|купон|t\.me\/|рекламн|скидк/i.test(text)) continue;
+
+    // Skip short reply fragments (obvious dialogue continuations)
+    if (/^(тоже|кстати|да,|ну,|то есть|а то|ага,|окей,|ок,|ладно,|понял,|точно,|именно,)/i.test(text) && text.length < 150) continue;
 
     const body = cleanText(textWithoutUrls || text).slice(0, 280);
     if (body.length < MIN_BODY_LENGTH) continue;
@@ -146,6 +156,7 @@ async function scrapeChat(client, source, cutoff) {
       postedAt: msgDate.toISOString(),
       language: normalizeSourceLanguage(detectLanguage(body, source.language)),
       body,
+      links: links.length > 0 ? links : undefined,
       capturedAt: new Date().toISOString(),
     });
   }
@@ -181,6 +192,26 @@ async function resolveEntity(client, source) {
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
+
+function extractLinks(text) {
+  const links = [];
+  const urlRegex = /https?:\/\/\S+/g;
+  const urls = text.match(urlRegex) ?? [];
+
+  for (const url of urls) {
+    const clean = url.replace(/[.,;)]+$/, ""); // strip trailing punctuation
+    if (/instagram\.com/i.test(clean)) {
+      const handle = clean.match(/instagram\.com\/([\w.]+)\/?/)?.[1];
+      const label = handle && !["p", "reel", "stories", "explore", "tv"].includes(handle)
+        ? `@${handle}` : undefined;
+      links.push({ type: "instagram", url: clean, ...(label ? { label } : {}) });
+    } else if (/maps\.google\.com|goo\.gl\/maps|maps\.app\.goo\.gl/i.test(clean)) {
+      links.push({ type: "maps", url: clean });
+    }
+  }
+
+  return links;
+}
 
 function detectLanguage(text, fallback) {
   if (/[а-яёА-ЯЁ]/.test(text)) return "ru";

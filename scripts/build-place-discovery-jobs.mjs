@@ -82,6 +82,15 @@ for (const [cityId, cityPlaces] of Object.entries(byCity)) {
 
   for (const [i, place] of selected.entries()) {
     const mapsUrl = place.url ?? buildMapsUrl(place);
+
+    // Build links array: Instagram + Google Maps (no website links)
+    const placeLinks = [];
+    if (place.instagram) {
+      const igHandle = place.instagram.replace(/^@/, "");
+      placeLinks.push({ type: "instagram", url: `https://instagram.com/${igHandle}`, label: `@${igHandle}` });
+    }
+    placeLinks.push({ type: "maps", url: buildMapsUrl(place), label: place.name });
+
     const gameSource = pickWeighted(
       [
         { id: "human", weight: 0.52 },
@@ -115,7 +124,7 @@ for (const [cityId, cityPlaces] of Object.entries(byCity)) {
       placeFact: place.fact ?? "",
       placeUrl: mapsUrl,
       placeSource: place.placeSource,
-      links: [{ type: place.url ? "web" : "maps", url: mapsUrl, label: place.name }],
+      links: placeLinks,
       cityAnchor: place.neighborhood || place.name,
       rawSnippet: buildRawSnippet(place),
       rawSnippetLanguage: inferPlaceLanguage(cityId),
@@ -218,7 +227,9 @@ function buildPlacePrompt({ place, city, style, mapsUrl }) {
     "- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)",
     "",
     "Return JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }",
-    `links: [{ type: "${mapsUrl.includes("eventbrite") ? "web" : "maps"}", url: "${mapsUrl}", label: "${place.name}" }]`,
+    place.instagram
+      ? `links: [{ type: "instagram", url: "https://instagram.com/${place.instagram.replace(/^@/, "")}", label: "@${place.instagram.replace(/^@/, "")}" }, { type: "maps", url: "${buildMapsUrl(place)}", label: "${place.name}" }]`
+      : `links: [{ type: "maps", url: "${buildMapsUrl(place)}", label: "${place.name}" }]`,
   ].filter((l) => l !== null);
 
   return lines.join("\n");
