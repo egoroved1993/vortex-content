@@ -67,6 +67,66 @@ const places = allPlaces.filter((p) => {
   return p.cityId && p.name;
 });
 
+// --- Place prompt styles ---
+
+const PLACE_PROMPT_STYLES = [
+  {
+    id: "just_left",
+    tone: "warm",
+    instruction:
+      "Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.",
+    examples: [
+      "still thinking about the €2.80 vermouth at Calders and I've been home for an hour.",
+      "walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.",
+      "the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.",
+    ],
+  },
+  {
+    id: "specific_dish",
+    tone: "warm",
+    instruction:
+      "Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).",
+    examples: [
+      "the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.",
+      "had the house cava at Xampanyet for €2.20 and now I understand why people come back.",
+      "the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.",
+    ],
+  },
+  {
+    id: "overheard",
+    tone: "dry",
+    instruction:
+      "Write as someone who overheard a funny, strange, or very local conversation at this place. Use dialogue or paraphrase. One exchange only. The humor should come from the specificity — not from editorializing.",
+    examples: [
+      "guy at the bar asked for a paper menu and the bartender looked at him like he'd asked for a fax.",
+      "overheard two people argue about whether the absinthe at Marsella is actually from 1820 or 'just the bottle'. they were both very serious.",
+      "someone at the next table explained to their date that Zeitgeist doesn't do card. date had no cash. long silence.",
+    ],
+  },
+  {
+    id: "mild_roast",
+    tone: "rant",
+    instruction:
+      "Write as someone who has a small specific complaint about this place — the queue, the price hike, the new management, the tourists, the vibe change — but who clearly still goes there and always will. Petty but affectionate. Not a takedown, just one precise grievance.",
+    examples: [
+      "Tartine raised the country loaf to $14 and I still show up at 4:30 to queue. I don't know who I am anymore.",
+      "they put a QR code menu at the place I've been going to for twelve years. I asked for a paper one. they said they don't have them.",
+      "Gordon's raised the house red to £7 and I am choosing to take this personally.",
+    ],
+  },
+  {
+    id: "found_by_accident",
+    tone: "curious",
+    instruction:
+      "Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.",
+    examples: [
+      "walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.",
+      "went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.",
+      "took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.",
+    ],
+  },
+];
+
 // --- Build jobs (capped per city, seeded random selection so it varies daily) ---
 
 const byCity = groupBy(places, (p) => p.cityId);
@@ -139,66 +199,6 @@ fs.writeFileSync(outPath, `${JSON.stringify(jobs, null, 2)}\n`);
 console.log(`Built ${jobs.length} place discovery jobs`);
 console.log(`Wrote jobs to ${outPath}`);
 console.log(JSON.stringify(countBy(jobs, (j) => j.cityId), null, 2));
-
-// --- Place prompt styles ---
-
-const PLACE_PROMPT_STYLES = [
-  {
-    id: "just_left",
-    tone: "warm",
-    instruction:
-      "Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.",
-    examples: [
-      "still thinking about the €2.80 vermouth at Calders and I've been home for an hour.",
-      "walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.",
-      "the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.",
-    ],
-  },
-  {
-    id: "specific_dish",
-    tone: "warm",
-    instruction:
-      "Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).",
-    examples: [
-      "the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.",
-      "had the house cava at Xampanyet for €2.20 and now I understand why people come back.",
-      "the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.",
-    ],
-  },
-  {
-    id: "overheard",
-    tone: "dry",
-    instruction:
-      "Write as someone who overheard a funny, strange, or very local conversation at this place. Use dialogue or paraphrase. One exchange only. The humor should come from the specificity — not from editorializing.",
-    examples: [
-      "guy at the bar asked for a paper menu and the bartender looked at him like he'd asked for a fax.",
-      "overheard two people argue about whether the absinthe at Marsella is actually from 1820 or 'just the bottle'. they were both very serious.",
-      "someone at the next table explained to their date that Zeitgeist doesn't do card. date had no cash. long silence.",
-    ],
-  },
-  {
-    id: "mild_roast",
-    tone: "rant",
-    instruction:
-      "Write as someone who has a small specific complaint about this place — the queue, the price hike, the new management, the tourists, the vibe change — but who clearly still goes there and always will. Petty but affectionate. Not a takedown, just one precise grievance.",
-    examples: [
-      "Tartine raised the country loaf to $14 and I still show up at 4:30 to queue. I don't know who I am anymore.",
-      "they put a QR code menu at the place I've been going to for twelve years. I asked for a paper one. they said they don't have them.",
-      "Gordon's raised the house red to £7 and I am choosing to take this personally.",
-    ],
-  },
-  {
-    id: "found_by_accident",
-    tone: "curious",
-    instruction:
-      "Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.",
-    examples: [
-      "walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.",
-      "went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.",
-      "took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.",
-    ],
-  },
-];
 
 // --- Prompt builder ---
 
