@@ -60,9 +60,9 @@ const toRewrite = [];
 for (let i = 0; i < newSnippets.length; i++) {
   const score = scores[i] ?? 0;
   const s = newSnippets[i];
-  if (score >= 7)      humanSnippets.push(s);
-  else if (score >= 5) toRewrite.push(s);
-  // score < 5: discard (still marked seen below)
+  if (score >= 8)      humanSnippets.push(s);
+  else if (score >= 7) toRewrite.push(s);
+  // score < 7: discard — Telegram chat fragments are too low quality
 }
 
 console.log(`Scores: ${humanSnippets.length} human, ${toRewrite.length} to rewrite, ${newSnippets.length - humanSnippets.length - toRewrite.length} discarded`);
