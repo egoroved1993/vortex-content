@@ -165,25 +165,17 @@ jobs:
 
       - name: Run place-discovery pipeline
         if: ${{ steps.cfg.outputs.upload == 'true' }}
-        continue-on-error: true
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
           MODEL_PROVIDER: ${{ steps.cfg.outputs.provider || 'openai' }}
         shell: bash
         run: |
           set -euo pipefail
-          # Build ~3 place-discovery jobs per city (12 total for 4 cities)
+          # Build 6 place-discovery jobs per city (24 total) — targets ~15% of final feed
           node scripts/build-place-discovery-jobs.mjs \
-            --max-per-city 3 \
+            --max-per-city 6 \
             --out content/place-discovery-jobs.json
 
-          # Generate messages — same model/provider as today's main pipeline
-          # so each day a different character voice writes the place messages:
-          #   grok-3-fast  → toxic local Gen Z
-          #   gpt-4o-mini  → millennial expat trend-hunter
-          #   gpt-4o       → philosophical local woman
-          #   grok-3       → boomer with dry humor
-          #   claude-haiku → Gen Z expat, hyper-specific observer
           node scripts/generate-seed-candidates.mjs \
             --input content/place-discovery-jobs.json \
             --out content/place-discovery-candidates.json \

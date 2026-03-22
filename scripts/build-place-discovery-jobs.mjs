@@ -26,8 +26,8 @@ const outPath = args.out
   ? path.resolve(process.cwd(), args.out)
   : resolveProjectPath("content", "place-discovery-jobs.json");
 
-// How many jobs to generate per city per run (keeps place messages ~10-15% of feed)
-const MAX_PER_CITY = Number(args["max-per-city"] ?? 3);
+// How many jobs to generate per city per run (targets ~15% of final feed being place messages)
+const MAX_PER_CITY = Number(args["max-per-city"] ?? 6);
 const seed = args.seed ?? `place-discovery:${new Date().toISOString().slice(0, 10)}`;
 const rand = createSeededRandom(seed);
 
