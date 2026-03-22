@@ -10,6 +10,8 @@ const cityPulseMap = loadCityPulse();
 // Load Eventbrite events for link injection
 const cityEventsMap = loadCityEvents();
 
+const JOB_CITY_NAMES = { barcelona: "Barcelona", berlin: "Berlin", london: "London", sf: "San Francisco" };
+
 // Daily emotional tone arc — seeded by date so all jobs share the same distribution per run
 const TODAY_DATE = new Date().toISOString().slice(0, 10);
 
@@ -393,6 +395,10 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
 
   // Universal anti-pattern rules — applied to ALL families.
   // These are the most common AI-detection signals found in real output analysis.
+  // Inject city slug for maps links
+  const citySlug = encodeURIComponent(JOB_CITY_NAMES[job.cityId] ?? job.cityId);
+  base += `\n\nLINKS RULE: If your message names a specific venue, bar, restaurant, market, or landmark — include exactly one Google Maps link in the JSON output: {"type":"maps","url":"https://maps.google.com/?q=VENUE_NAME+${citySlug}","label":"VENUE_NAME"}. Replace VENUE_NAME with the actual name. If no specific place is named, output "links": [].`;
+
   base += "\n\nHARD RULES — violating any of these makes the message unusable:";
   base += "\n- No rhetorical questions. ('do we all just...', 'anybody else...', 'ever notice how...' — all banned.)";
   base += "\n- No two-part structure of the form 'X, but Y' or 'not X, just Y' as a closing move. One complete thought only.";
