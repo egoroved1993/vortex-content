@@ -71,10 +71,10 @@ jobs:
               DAY_SLOT=0
             fi
             case $DAY_SLOT in
-              0) SCHED_PROVIDER=xai;       SCHED_MODEL=grok-3-fast ;;
+              0) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
               1) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
               2) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o ;;
-              3) SCHED_PROVIDER=xai;       SCHED_MODEL=grok-3 ;;
+              3) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
               4) SCHED_PROVIDER=anthropic; SCHED_MODEL=claude-3-5-haiku-latest ;;
             esac
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
@@ -129,7 +129,7 @@ jobs:
       - name: Run mixed seed pipeline
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
-          MODEL_PROVIDER: ${{ steps.cfg.outputs.provider || 'xai' }}
+          MODEL_PROVIDER: ${{ steps.cfg.outputs.provider || 'openai' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -168,7 +168,7 @@ jobs:
         continue-on-error: true
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
-          MODEL_PROVIDER: ${{ steps.cfg.outputs.provider || 'xai' }}
+          MODEL_PROVIDER: ${{ steps.cfg.outputs.provider || 'openai' }}
         shell: bash
         run: |
           set -euo pipefail
