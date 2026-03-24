@@ -54,7 +54,7 @@ runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   ...(args["micro-moment-provider"] ? ["--micro-moment-provider", args["micro-moment-provider"]] : []),
   ...(args["micro-moment-model"] ? ["--micro-moment-model", args["micro-moment-model"]] : []),
   "--social-provider",
-  "xai",
+  "openai",
   ...(mock ? ["--mock"] : []),
 ]);
 

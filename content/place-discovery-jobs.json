@@ -1,0 +1,903 @@
+[
+  {
+    "id": "place_seed_0001",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "sf",
+    "cityName": "San Francisco",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "specific_dish",
+    "placeName": "Sightglass Coffee",
+    "placeNeighborhood": "SoMa",
+    "placeCategory": "cafe",
+    "placeFact": "industrial space, roast on-site, their Ethiopia is the one, 7th St, opens at 7am",
+    "placeUrl": "https://sightglasscoffee.com",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/sightglasscoffee",
+        "label": "@sightglasscoffee"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=37.7766,-122.4075",
+        "label": "Sightglass Coffee"
+      }
+    ],
+    "cityAnchor": "SoMa",
+    "rawSnippet": "Sightglass Coffee. SoMa. industrial space, roast on-site, their Ethiopia is the one, 7th St, opens at 7am",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: San Francisco\nPlace: Sightglass Coffee\nNeighborhood: SoMa\nCategory: cafe\nKey detail: industrial space, roast on-site, their Ethiopia is the one, 7th St, opens at 7am\nMaps link: https://sightglasscoffee.com\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).\n\nExamples of this style (different cities, for voice reference only):\n- \"the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.\"\n- \"had the house cava at Xampanyet for €2.20 and now I understand why people come back.\"\n- \"the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/sightglasscoffee\", label: \"@sightglasscoffee\" }, { type: \"maps\", url: \"https://maps.google.com/?q=37.7766,-122.4075\", label: \"Sightglass Coffee\" }]"
+  },
+  {
+    "id": "place_seed_0002",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "sf",
+    "cityName": "San Francisco",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "just_left",
+    "placeName": "Smuggler's Cove",
+    "placeNeighborhood": "Hayes Valley",
+    "placeCategory": "bar",
+    "placeFact": "500+ rums, tiki cocktails, three floors, staff explain everything, somehow not annoying",
+    "placeUrl": "https://smugglerscovesf.com",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/smugglerscovesf",
+        "label": "@smugglerscovesf"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=37.7766,-122.4236",
+        "label": "Smuggler's Cove"
+      }
+    ],
+    "cityAnchor": "Hayes Valley",
+    "rawSnippet": "Smuggler's Cove. Hayes Valley. 500+ rums, tiki cocktails, three floors, staff explain everything, somehow not annoying",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: San Francisco\nPlace: Smuggler's Cove\nNeighborhood: Hayes Valley\nCategory: bar\nKey detail: 500+ rums, tiki cocktails, three floors, staff explain everything, somehow not annoying\nMaps link: https://smugglerscovesf.com\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.\n\nExamples of this style (different cities, for voice reference only):\n- \"still thinking about the €2.80 vermouth at Calders and I've been home for an hour.\"\n- \"walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.\"\n- \"the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/smugglerscovesf\", label: \"@smugglerscovesf\" }, { type: \"maps\", url: \"https://maps.google.com/?q=37.7766,-122.4236\", label: \"Smuggler's Cove\" }]"
+  },
+  {
+    "id": "place_seed_0003",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "sf",
+    "cityName": "San Francisco",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "specific_dish",
+    "placeName": "Vesuvio",
+    "placeNeighborhood": "North Beach",
+    "placeCategory": "bar",
+    "placeFact": "Beat generation bar since 1948, Kerouac left his bag here once, house red $6",
+    "placeUrl": "https://vesuvio.com",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/vesuviocafe",
+        "label": "@vesuviocafe"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=37.7978,-122.4065",
+        "label": "Vesuvio"
+      }
+    ],
+    "cityAnchor": "North Beach",
+    "rawSnippet": "Vesuvio. North Beach. Beat generation bar since 1948, Kerouac left his bag here once, house red $6",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: San Francisco\nPlace: Vesuvio\nNeighborhood: North Beach\nCategory: bar\nKey detail: Beat generation bar since 1948, Kerouac left his bag here once, house red $6\nMaps link: https://vesuvio.com\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).\n\nExamples of this style (different cities, for voice reference only):\n- \"the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.\"\n- \"had the house cava at Xampanyet for €2.20 and now I understand why people come back.\"\n- \"the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/vesuviocafe\", label: \"@vesuviocafe\" }, { type: \"maps\", url: \"https://maps.google.com/?q=37.7978,-122.4065\", label: \"Vesuvio\" }]"
+  },
+  {
+    "id": "place_seed_0004",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "sf",
+    "cityName": "San Francisco",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "dry",
+    "placePromptStyle": "overheard",
+    "placeName": "Trick Dog",
+    "placeNeighborhood": "Mission",
+    "placeCategory": "bar",
+    "placeFact": "cocktail menu changes every 6 months with a theme, 19th St, always ranked top 50 world",
+    "placeUrl": "https://trickdogbar.com",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/trickdogbar",
+        "label": "@trickdogbar"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=37.763,-122.4128",
+        "label": "Trick Dog"
+      }
+    ],
+    "cityAnchor": "Mission",
+    "rawSnippet": "Trick Dog. Mission. cocktail menu changes every 6 months with a theme, 19th St, always ranked top 50 world",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: San Francisco\nPlace: Trick Dog\nNeighborhood: Mission\nCategory: bar\nKey detail: cocktail menu changes every 6 months with a theme, 19th St, always ranked top 50 world\nMaps link: https://trickdogbar.com\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who overheard a funny, strange, or very local conversation at this place. Use dialogue or paraphrase. One exchange only. The humor should come from the specificity — not from editorializing.\n\nExamples of this style (different cities, for voice reference only):\n- \"guy at the bar asked for a paper menu and the bartender looked at him like he'd asked for a fax.\"\n- \"overheard two people argue about whether the absinthe at Marsella is actually from 1820 or 'just the bottle'. they were both very serious.\"\n- \"someone at the next table explained to their date that Zeitgeist doesn't do card. date had no cash. long silence.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/trickdogbar\", label: \"@trickdogbar\" }, { type: \"maps\", url: \"https://maps.google.com/?q=37.763,-122.4128\", label: \"Trick Dog\" }]"
+  },
+  {
+    "id": "place_seed_0005",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "sf",
+    "cityName": "San Francisco",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "specific_dish",
+    "placeName": "Zeitgeist",
+    "placeNeighborhood": "Mission",
+    "placeCategory": "bar",
+    "placeFact": "huge beer garden, cash only, pitchers of Anchor Steam, motorcycles outside always",
+    "placeUrl": "https://maps.google.com/?q=37.7704,-122.4219",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/zeitgeistsf",
+        "label": "@zeitgeistsf"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=37.7704,-122.4219",
+        "label": "Zeitgeist"
+      }
+    ],
+    "cityAnchor": "Mission",
+    "rawSnippet": "Zeitgeist. Mission. huge beer garden, cash only, pitchers of Anchor Steam, motorcycles outside always",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: San Francisco\nPlace: Zeitgeist\nNeighborhood: Mission\nCategory: bar\nKey detail: huge beer garden, cash only, pitchers of Anchor Steam, motorcycles outside always\nMaps link: https://maps.google.com/?q=37.7704,-122.4219\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).\n\nExamples of this style (different cities, for voice reference only):\n- \"the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.\"\n- \"had the house cava at Xampanyet for €2.20 and now I understand why people come back.\"\n- \"the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/zeitgeistsf\", label: \"@zeitgeistsf\" }, { type: \"maps\", url: \"https://maps.google.com/?q=37.7704,-122.4219\", label: \"Zeitgeist\" }]"
+  },
+  {
+    "id": "place_seed_0006",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "sf",
+    "cityName": "San Francisco",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "specific_dish",
+    "placeName": "El Farolito",
+    "placeNeighborhood": "Mission",
+    "placeCategory": "restaurant",
+    "placeFact": "best super burrito in SF, $11, 24h on weekends, line out the door after 2am",
+    "placeUrl": "https://maps.google.com/?q=37.7527,-122.4183",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/elfarolitosf",
+        "label": "@elfarolitosf"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=37.7527,-122.4183",
+        "label": "El Farolito"
+      }
+    ],
+    "cityAnchor": "Mission",
+    "rawSnippet": "El Farolito. Mission. best super burrito in SF, $11, 24h on weekends, line out the door after 2am",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: San Francisco\nPlace: El Farolito\nNeighborhood: Mission\nCategory: restaurant\nKey detail: best super burrito in SF, $11, 24h on weekends, line out the door after 2am\nMaps link: https://maps.google.com/?q=37.7527,-122.4183\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).\n\nExamples of this style (different cities, for voice reference only):\n- \"the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.\"\n- \"had the house cava at Xampanyet for €2.20 and now I understand why people come back.\"\n- \"the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/elfarolitosf\", label: \"@elfarolitosf\" }, { type: \"maps\", url: \"https://maps.google.com/?q=37.7527,-122.4183\", label: \"El Farolito\" }]"
+  },
+  {
+    "id": "place_seed_0007",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "berlin",
+    "cityName": "Berlin",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "just_left",
+    "placeName": "Luzia",
+    "placeNeighborhood": "Kreuzberg",
+    "placeCategory": "bar",
+    "placeFact": "Oranienstrasse, Soviet posters, Club-Mate and cheap beer, always full",
+    "placeUrl": "https://maps.google.com/?q=52.499,13.4192",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/luzia_bar_berlin",
+        "label": "@luzia_bar_berlin"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=52.499,13.4192",
+        "label": "Luzia"
+      }
+    ],
+    "cityAnchor": "Kreuzberg",
+    "rawSnippet": "Luzia. Kreuzberg. Oranienstrasse, Soviet posters, Club-Mate and cheap beer, always full",
+    "rawSnippetLanguage": "de",
+    "prompt": "City: Berlin\nPlace: Luzia\nNeighborhood: Kreuzberg\nCategory: bar\nKey detail: Oranienstrasse, Soviet posters, Club-Mate and cheap beer, always full\nMaps link: https://maps.google.com/?q=52.499,13.4192\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.\n\nExamples of this style (different cities, for voice reference only):\n- \"still thinking about the €2.80 vermouth at Calders and I've been home for an hour.\"\n- \"walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.\"\n- \"the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/luzia_bar_berlin\", label: \"@luzia_bar_berlin\" }, { type: \"maps\", url: \"https://maps.google.com/?q=52.499,13.4192\", label: \"Luzia\" }]"
+  },
+  {
+    "id": "place_seed_0008",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "berlin",
+    "cityName": "Berlin",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "curious",
+    "placePromptStyle": "found_by_accident",
+    "placeName": "Monarch",
+    "placeNeighborhood": "Kreuzberg",
+    "placeCategory": "bar",
+    "placeFact": "above Kotti supermarket, you go up a hidden staircase, drinks 3.50€",
+    "placeUrl": "https://maps.google.com/?q=52.4991,13.4178",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/monarchberlin",
+        "label": "@monarchberlin"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=52.4991,13.4178",
+        "label": "Monarch"
+      }
+    ],
+    "cityAnchor": "Kreuzberg",
+    "rawSnippet": "Monarch. Kreuzberg. above Kotti supermarket, you go up a hidden staircase, drinks 3.50€",
+    "rawSnippetLanguage": "de",
+    "prompt": "City: Berlin\nPlace: Monarch\nNeighborhood: Kreuzberg\nCategory: bar\nKey detail: above Kotti supermarket, you go up a hidden staircase, drinks 3.50€\nMaps link: https://maps.google.com/?q=52.4991,13.4178\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.\n\nExamples of this style (different cities, for voice reference only):\n- \"walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.\"\n- \"went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.\"\n- \"took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/monarchberlin\", label: \"@monarchberlin\" }, { type: \"maps\", url: \"https://maps.google.com/?q=52.4991,13.4178\", label: \"Monarch\" }]"
+  },
+  {
+    "id": "place_seed_0009",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "berlin",
+    "cityName": "Berlin",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "specific_dish",
+    "placeName": "Zum Schmutzigen Hobby",
+    "placeNeighborhood": "Neukölln",
+    "placeCategory": "bar",
+    "placeFact": "weird taxidermy, Sternburg for 2€, no music before midnight",
+    "placeUrl": "https://maps.google.com/?q=52.4803,13.4385",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=52.4803,13.4385",
+        "label": "Zum Schmutzigen Hobby"
+      }
+    ],
+    "cityAnchor": "Neukölln",
+    "rawSnippet": "Zum Schmutzigen Hobby. Neukölln. weird taxidermy, Sternburg for 2€, no music before midnight",
+    "rawSnippetLanguage": "de",
+    "prompt": "City: Berlin\nPlace: Zum Schmutzigen Hobby\nNeighborhood: Neukölln\nCategory: bar\nKey detail: weird taxidermy, Sternburg for 2€, no music before midnight\nMaps link: https://maps.google.com/?q=52.4803,13.4385\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).\n\nExamples of this style (different cities, for voice reference only):\n- \"the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.\"\n- \"had the house cava at Xampanyet for €2.20 and now I understand why people come back.\"\n- \"the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"maps\", url: \"https://maps.google.com/?q=52.4803,13.4385\", label: \"Zum Schmutzigen Hobby\" }]"
+  },
+  {
+    "id": "place_seed_0010",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "berlin",
+    "cityName": "Berlin",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "dry",
+    "placePromptStyle": "overheard",
+    "placeName": "Standard Pizza",
+    "placeNeighborhood": "Mitte",
+    "placeCategory": "restaurant",
+    "placeFact": "Neapolitan, Mitte, lunch specials 8.50€, line out the door after 1pm",
+    "placeUrl": "https://thestandard.de",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/standardpizzaberlin",
+        "label": "@standardpizzaberlin"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=52.5261,13.39",
+        "label": "Standard Pizza"
+      }
+    ],
+    "cityAnchor": "Mitte",
+    "rawSnippet": "Standard Pizza. Mitte. Neapolitan, Mitte, lunch specials 8.50€, line out the door after 1pm",
+    "rawSnippetLanguage": "de",
+    "prompt": "City: Berlin\nPlace: Standard Pizza\nNeighborhood: Mitte\nCategory: restaurant\nKey detail: Neapolitan, Mitte, lunch specials 8.50€, line out the door after 1pm\nMaps link: https://thestandard.de\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who overheard a funny, strange, or very local conversation at this place. Use dialogue or paraphrase. One exchange only. The humor should come from the specificity — not from editorializing.\n\nExamples of this style (different cities, for voice reference only):\n- \"guy at the bar asked for a paper menu and the bartender looked at him like he'd asked for a fax.\"\n- \"overheard two people argue about whether the absinthe at Marsella is actually from 1820 or 'just the bottle'. they were both very serious.\"\n- \"someone at the next table explained to their date that Zeitgeist doesn't do card. date had no cash. long silence.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/standardpizzaberlin\", label: \"@standardpizzaberlin\" }, { type: \"maps\", url: \"https://maps.google.com/?q=52.5261,13.39\", label: \"Standard Pizza\" }]"
+  },
+  {
+    "id": "place_seed_0011",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "berlin",
+    "cityName": "Berlin",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "just_left",
+    "placeName": "Würgeengel",
+    "placeNeighborhood": "Kreuzberg",
+    "placeCategory": "bar",
+    "placeFact": "named after Buñuel film, velvet curtains, bartenders who ignore you the right amount",
+    "placeUrl": "https://maps.google.com/?q=52.4986,13.4226",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=52.4986,13.4226",
+        "label": "Würgeengel"
+      }
+    ],
+    "cityAnchor": "Kreuzberg",
+    "rawSnippet": "Würgeengel. Kreuzberg. named after Buñuel film, velvet curtains, bartenders who ignore you the right amount",
+    "rawSnippetLanguage": "de",
+    "prompt": "City: Berlin\nPlace: Würgeengel\nNeighborhood: Kreuzberg\nCategory: bar\nKey detail: named after Buñuel film, velvet curtains, bartenders who ignore you the right amount\nMaps link: https://maps.google.com/?q=52.4986,13.4226\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.\n\nExamples of this style (different cities, for voice reference only):\n- \"still thinking about the €2.80 vermouth at Calders and I've been home for an hour.\"\n- \"walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.\"\n- \"the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"maps\", url: \"https://maps.google.com/?q=52.4986,13.4226\", label: \"Würgeengel\" }]"
+  },
+  {
+    "id": "place_seed_0012",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "berlin",
+    "cityName": "Berlin",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "just_left",
+    "placeName": "Kumpelnest 3000",
+    "placeNeighborhood": "Tiergarten",
+    "placeCategory": "bar",
+    "placeFact": "former brothel, Lützowstrasse, velvet and mirrors, open till 6am, regulars since 1984",
+    "placeUrl": "https://maps.google.com/?q=52.5079,13.3661",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/kumpelnest3000",
+        "label": "@kumpelnest3000"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=52.5079,13.3661",
+        "label": "Kumpelnest 3000"
+      }
+    ],
+    "cityAnchor": "Tiergarten",
+    "rawSnippet": "Kumpelnest 3000. Tiergarten. former brothel, Lützowstrasse, velvet and mirrors, open till 6am, regulars since 1984",
+    "rawSnippetLanguage": "de",
+    "prompt": "City: Berlin\nPlace: Kumpelnest 3000\nNeighborhood: Tiergarten\nCategory: bar\nKey detail: former brothel, Lützowstrasse, velvet and mirrors, open till 6am, regulars since 1984\nMaps link: https://maps.google.com/?q=52.5079,13.3661\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.\n\nExamples of this style (different cities, for voice reference only):\n- \"still thinking about the €2.80 vermouth at Calders and I've been home for an hour.\"\n- \"walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.\"\n- \"the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/kumpelnest3000\", label: \"@kumpelnest3000\" }, { type: \"maps\", url: \"https://maps.google.com/?q=52.5079,13.3661\", label: \"Kumpelnest 3000\" }]"
+  },
+  {
+    "id": "place_seed_0013",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "barcelona",
+    "cityName": "Barcelona",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "dry",
+    "placePromptStyle": "overheard",
+    "placeName": "Bar Olímpic",
+    "placeNeighborhood": "Poble Sec",
+    "placeCategory": "bar",
+    "placeFact": "vermut i patates, terrassa a la plaça del Sortidor, barri tranquil",
+    "placeUrl": "https://maps.google.com/?q=41.3745,2.1649",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=41.3745,2.1649",
+        "label": "Bar Olímpic"
+      }
+    ],
+    "cityAnchor": "Poble Sec",
+    "rawSnippet": "Bar Olímpic. Poble Sec. vermut i patates, terrassa a la plaça del Sortidor, barri tranquil",
+    "rawSnippetLanguage": "ca",
+    "prompt": "City: Barcelona\nPlace: Bar Olímpic\nNeighborhood: Poble Sec\nCategory: bar\nKey detail: vermut i patates, terrassa a la plaça del Sortidor, barri tranquil\nMaps link: https://maps.google.com/?q=41.3745,2.1649\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who overheard a funny, strange, or very local conversation at this place. Use dialogue or paraphrase. One exchange only. The humor should come from the specificity — not from editorializing.\n\nExamples of this style (different cities, for voice reference only):\n- \"guy at the bar asked for a paper menu and the bartender looked at him like he'd asked for a fax.\"\n- \"overheard two people argue about whether the absinthe at Marsella is actually from 1820 or 'just the bottle'. they were both very serious.\"\n- \"someone at the next table explained to their date that Zeitgeist doesn't do card. date had no cash. long silence.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"maps\", url: \"https://maps.google.com/?q=41.3745,2.1649\", label: \"Bar Olímpic\" }]"
+  },
+  {
+    "id": "place_seed_0014",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "barcelona",
+    "cityName": "Barcelona",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "just_left",
+    "placeName": "La Pepita",
+    "placeNeighborhood": "Gràcia",
+    "placeCategory": "bar",
+    "placeFact": "montaditos por 1.50€, siempre lleno, imposible sentarse los fines de semana",
+    "placeUrl": "https://maps.google.com/?q=41.3989,2.1562",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/lapepitabcn",
+        "label": "@lapepitabcn"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=41.3989,2.1562",
+        "label": "La Pepita"
+      }
+    ],
+    "cityAnchor": "Gràcia",
+    "rawSnippet": "La Pepita. Gràcia. montaditos por 1.50€, siempre lleno, imposible sentarse los fines de semana",
+    "rawSnippetLanguage": "ca",
+    "prompt": "City: Barcelona\nPlace: La Pepita\nNeighborhood: Gràcia\nCategory: bar\nKey detail: montaditos por 1.50€, siempre lleno, imposible sentarse los fines de semana\nMaps link: https://maps.google.com/?q=41.3989,2.1562\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.\n\nExamples of this style (different cities, for voice reference only):\n- \"still thinking about the €2.80 vermouth at Calders and I've been home for an hour.\"\n- \"walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.\"\n- \"the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/lapepitabcn\", label: \"@lapepitabcn\" }, { type: \"maps\", url: \"https://maps.google.com/?q=41.3989,2.1562\", label: \"La Pepita\" }]"
+  },
+  {
+    "id": "place_seed_0015",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "barcelona",
+    "cityName": "Barcelona",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "curious",
+    "placePromptStyle": "found_by_accident",
+    "placeName": "Bar Calders",
+    "placeNeighborhood": "Parlament, Sant Antoni",
+    "placeCategory": "bar",
+    "placeFact": "vermouth amb sifon per 2.80€, taules a fora fins tard",
+    "placeUrl": "https://maps.google.com/?q=41.3783,2.1637",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/barcalders",
+        "label": "@barcalders"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=41.3783,2.1637",
+        "label": "Bar Calders"
+      }
+    ],
+    "cityAnchor": "Parlament, Sant Antoni",
+    "rawSnippet": "Bar Calders. Parlament, Sant Antoni. vermouth amb sifon per 2.80€, taules a fora fins tard",
+    "rawSnippetLanguage": "ca",
+    "prompt": "City: Barcelona\nPlace: Bar Calders\nNeighborhood: Parlament, Sant Antoni\nCategory: bar\nKey detail: vermouth amb sifon per 2.80€, taules a fora fins tard\nMaps link: https://maps.google.com/?q=41.3783,2.1637\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.\n\nExamples of this style (different cities, for voice reference only):\n- \"walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.\"\n- \"went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.\"\n- \"took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/barcalders\", label: \"@barcalders\" }, { type: \"maps\", url: \"https://maps.google.com/?q=41.3783,2.1637\", label: \"Bar Calders\" }]"
+  },
+  {
+    "id": "place_seed_0016",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "barcelona",
+    "cityName": "Barcelona",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "curious",
+    "placePromptStyle": "found_by_accident",
+    "placeName": "La Cova Fumada",
+    "placeNeighborhood": "Barceloneta",
+    "placeCategory": "restaurant",
+    "placeFact": "invented the bombas, no menu, no sign, closes at 3pm, cash only",
+    "placeUrl": "https://maps.google.com/?q=41.3786,2.1905",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=41.3786,2.1905",
+        "label": "La Cova Fumada"
+      }
+    ],
+    "cityAnchor": "Barceloneta",
+    "rawSnippet": "La Cova Fumada. Barceloneta. invented the bombas, no menu, no sign, closes at 3pm, cash only",
+    "rawSnippetLanguage": "ca",
+    "prompt": "City: Barcelona\nPlace: La Cova Fumada\nNeighborhood: Barceloneta\nCategory: restaurant\nKey detail: invented the bombas, no menu, no sign, closes at 3pm, cash only\nMaps link: https://maps.google.com/?q=41.3786,2.1905\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.\n\nExamples of this style (different cities, for voice reference only):\n- \"walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.\"\n- \"went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.\"\n- \"took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"maps\", url: \"https://maps.google.com/?q=41.3786,2.1905\", label: \"La Cova Fumada\" }]"
+  },
+  {
+    "id": "place_seed_0017",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "barcelona",
+    "cityName": "Barcelona",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "curious",
+    "placePromptStyle": "found_by_accident",
+    "placeName": "Civil War Bomb Marks Building",
+    "placeNeighborhood": "El Born",
+    "placeCategory": "landmark",
+    "placeFact": "corner of Carrer de Calders — building still has visible bomb marks from the 1938 Civil War bombardment, almost nobody stops to look",
+    "placeUrl": "https://maps.google.com/?q=41.3844,2.1826",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=41.3844,2.1826",
+        "label": "Civil War Bomb Marks Building"
+      }
+    ],
+    "cityAnchor": "El Born",
+    "rawSnippet": "Civil War Bomb Marks Building. El Born. corner of Carrer de Calders — building still has visible bomb marks from the 1938 Civil War bombardment, almost nobody stops to look",
+    "rawSnippetLanguage": "ca",
+    "prompt": "City: Barcelona\nPlace: Civil War Bomb Marks Building\nNeighborhood: El Born\nCategory: landmark\nKey detail: corner of Carrer de Calders — building still has visible bomb marks from the 1938 Civil War bombardment, almost nobody stops to look\nMaps link: https://maps.google.com/?q=41.3844,2.1826\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.\n\nExamples of this style (different cities, for voice reference only):\n- \"walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.\"\n- \"went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.\"\n- \"took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"maps\", url: \"https://maps.google.com/?q=41.3844,2.1826\", label: \"Civil War Bomb Marks Building\" }]"
+  },
+  {
+    "id": "place_seed_0018",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "barcelona",
+    "cityName": "Barcelona",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "rant",
+    "placePromptStyle": "mild_roast",
+    "placeName": "Flash Flash",
+    "placeNeighborhood": "Gràcia",
+    "placeCategory": "restaurant",
+    "placeFact": "tortillería desde 1970, interior retro blanco y negro, tortilla francesa de autor",
+    "placeUrl": "https://flashflashbarcelona.com",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/flashflashbcn",
+        "label": "@flashflashbcn"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=41.3985,2.1506",
+        "label": "Flash Flash"
+      }
+    ],
+    "cityAnchor": "Gràcia",
+    "rawSnippet": "Flash Flash. Gràcia. tortillería desde 1970, interior retro blanco y negro, tortilla francesa de autor",
+    "rawSnippetLanguage": "ca",
+    "prompt": "City: Barcelona\nPlace: Flash Flash\nNeighborhood: Gràcia\nCategory: restaurant\nKey detail: tortillería desde 1970, interior retro blanco y negro, tortilla francesa de autor\nMaps link: https://flashflashbarcelona.com\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who has a small specific complaint about this place — the queue, the price hike, the new management, the tourists, the vibe change — but who clearly still goes there and always will. Petty but affectionate. Not a takedown, just one precise grievance.\n\nExamples of this style (different cities, for voice reference only):\n- \"Tartine raised the country loaf to $14 and I still show up at 4:30 to queue. I don't know who I am anymore.\"\n- \"they put a QR code menu at the place I've been going to for twelve years. I asked for a paper one. they said they don't have them.\"\n- \"Gordon's raised the house red to £7 and I am choosing to take this personally.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/flashflashbcn\", label: \"@flashflashbcn\" }, { type: \"maps\", url: \"https://maps.google.com/?q=41.3985,2.1506\", label: \"Flash Flash\" }]"
+  },
+  {
+    "id": "place_seed_0019",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "london",
+    "cityName": "London",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "dry",
+    "placePromptStyle": "overheard",
+    "placeName": "Milk Beach",
+    "placeNeighborhood": "Soho",
+    "placeCategory": "cafe",
+    "placeFact": "Australian specialty coffee, Bateman St, flat white £4.20, queue before 9am",
+    "placeUrl": "https://maps.google.com/?q=51.5138,-0.133",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/milkbeachcafe",
+        "label": "@milkbeachcafe"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=51.5138,-0.133",
+        "label": "Milk Beach"
+      }
+    ],
+    "cityAnchor": "Soho",
+    "rawSnippet": "Milk Beach. Soho. Australian specialty coffee, Bateman St, flat white £4.20, queue before 9am",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: London\nPlace: Milk Beach\nNeighborhood: Soho\nCategory: cafe\nKey detail: Australian specialty coffee, Bateman St, flat white £4.20, queue before 9am\nMaps link: https://maps.google.com/?q=51.5138,-0.133\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who overheard a funny, strange, or very local conversation at this place. Use dialogue or paraphrase. One exchange only. The humor should come from the specificity — not from editorializing.\n\nExamples of this style (different cities, for voice reference only):\n- \"guy at the bar asked for a paper menu and the bartender looked at him like he'd asked for a fax.\"\n- \"overheard two people argue about whether the absinthe at Marsella is actually from 1820 or 'just the bottle'. they were both very serious.\"\n- \"someone at the next table explained to their date that Zeitgeist doesn't do card. date had no cash. long silence.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/milkbeachcafe\", label: \"@milkbeachcafe\" }, { type: \"maps\", url: \"https://maps.google.com/?q=51.5138,-0.133\", label: \"Milk Beach\" }]"
+  },
+  {
+    "id": "place_seed_0020",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "london",
+    "cityName": "London",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "rant",
+    "placePromptStyle": "mild_roast",
+    "placeName": "Monmouth Coffee",
+    "placeNeighborhood": "Borough Market",
+    "placeCategory": "cafe",
+    "placeFact": "no wifi, no seats, just filter coffee in paper cups, queue round the corner every morning",
+    "placeUrl": "https://monmouthcoffee.co.uk",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/monmouthcoffee",
+        "label": "@monmouthcoffee"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=51.5055,-0.0908",
+        "label": "Monmouth Coffee"
+      }
+    ],
+    "cityAnchor": "Borough Market",
+    "rawSnippet": "Monmouth Coffee. Borough Market. no wifi, no seats, just filter coffee in paper cups, queue round the corner every morning",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: London\nPlace: Monmouth Coffee\nNeighborhood: Borough Market\nCategory: cafe\nKey detail: no wifi, no seats, just filter coffee in paper cups, queue round the corner every morning\nMaps link: https://monmouthcoffee.co.uk\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who has a small specific complaint about this place — the queue, the price hike, the new management, the tourists, the vibe change — but who clearly still goes there and always will. Petty but affectionate. Not a takedown, just one precise grievance.\n\nExamples of this style (different cities, for voice reference only):\n- \"Tartine raised the country loaf to $14 and I still show up at 4:30 to queue. I don't know who I am anymore.\"\n- \"they put a QR code menu at the place I've been going to for twelve years. I asked for a paper one. they said they don't have them.\"\n- \"Gordon's raised the house red to £7 and I am choosing to take this personally.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/monmouthcoffee\", label: \"@monmouthcoffee\" }, { type: \"maps\", url: \"https://maps.google.com/?q=51.5055,-0.0908\", label: \"Monmouth Coffee\" }]"
+  },
+  {
+    "id": "place_seed_0021",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "london",
+    "cityName": "London",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "rant",
+    "placePromptStyle": "mild_roast",
+    "placeName": "The Dove",
+    "placeNeighborhood": "Hammersmith",
+    "placeCategory": "bar",
+    "placeFact": "Thames riverside, narrowest bar room in UK, Fuller's London Pride £5.40",
+    "placeUrl": "https://maps.google.com/?q=51.4916,-0.2356",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=51.4916,-0.2356",
+        "label": "The Dove"
+      }
+    ],
+    "cityAnchor": "Hammersmith",
+    "rawSnippet": "The Dove. Hammersmith. Thames riverside, narrowest bar room in UK, Fuller's London Pride £5.40",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: London\nPlace: The Dove\nNeighborhood: Hammersmith\nCategory: bar\nKey detail: Thames riverside, narrowest bar room in UK, Fuller's London Pride £5.40\nMaps link: https://maps.google.com/?q=51.4916,-0.2356\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who has a small specific complaint about this place — the queue, the price hike, the new management, the tourists, the vibe change — but who clearly still goes there and always will. Petty but affectionate. Not a takedown, just one precise grievance.\n\nExamples of this style (different cities, for voice reference only):\n- \"Tartine raised the country loaf to $14 and I still show up at 4:30 to queue. I don't know who I am anymore.\"\n- \"they put a QR code menu at the place I've been going to for twelve years. I asked for a paper one. they said they don't have them.\"\n- \"Gordon's raised the house red to £7 and I am choosing to take this personally.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"maps\", url: \"https://maps.google.com/?q=51.4916,-0.2356\", label: \"The Dove\" }]"
+  },
+  {
+    "id": "place_seed_0022",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "london",
+    "cityName": "London",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "ai",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "curious",
+    "placePromptStyle": "found_by_accident",
+    "placeName": "Ye Olde Cheshire Cheese",
+    "placeNeighborhood": "Fleet Street",
+    "placeCategory": "bar",
+    "placeFact": "rebuilt in 1667 after the Great Fire, sawdust on the floor, Dickens had a regular table",
+    "placeUrl": "https://maps.google.com/?q=51.5139,-0.1059",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=51.5139,-0.1059",
+        "label": "Ye Olde Cheshire Cheese"
+      }
+    ],
+    "cityAnchor": "Fleet Street",
+    "rawSnippet": "Ye Olde Cheshire Cheese. Fleet Street. rebuilt in 1667 after the Great Fire, sawdust on the floor, Dickens had a regular table",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: London\nPlace: Ye Olde Cheshire Cheese\nNeighborhood: Fleet Street\nCategory: bar\nKey detail: rebuilt in 1667 after the Great Fire, sawdust on the floor, Dickens had a regular table\nMaps link: https://maps.google.com/?q=51.5139,-0.1059\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.\n\nExamples of this style (different cities, for voice reference only):\n- \"walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.\"\n- \"went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.\"\n- \"took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"maps\", url: \"https://maps.google.com/?q=51.5139,-0.1059\", label: \"Ye Olde Cheshire Cheese\" }]"
+  },
+  {
+    "id": "place_seed_0023",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "london",
+    "cityName": "London",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "curious",
+    "placePromptStyle": "found_by_accident",
+    "placeName": "Blacklock City",
+    "placeNeighborhood": "City",
+    "placeCategory": "restaurant",
+    "placeFact": "chops from £5 at lunch, all-in Sunday roast £26, hidden in a basement on Old Jewry",
+    "placeUrl": "https://theblacklock.com",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/blacklockchops",
+        "label": "@blacklockchops"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=51.5153,-0.0923",
+        "label": "Blacklock City"
+      }
+    ],
+    "cityAnchor": "City",
+    "rawSnippet": "Blacklock City. City. chops from £5 at lunch, all-in Sunday roast £26, hidden in a basement on Old Jewry",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: London\nPlace: Blacklock City\nNeighborhood: City\nCategory: restaurant\nKey detail: chops from £5 at lunch, all-in Sunday roast £26, hidden in a basement on Old Jewry\nMaps link: https://theblacklock.com\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write as someone who discovered this place completely by accident — wrong turn, following someone, stumbled in out of rain — and is still processing the fact that it exists. No recommendation, no hype. Just the slightly disoriented feeling of finding something real.\n\nExamples of this style (different cities, for voice reference only):\n- \"walked past that staircase above Kotti a hundred times without knowing there was a bar at the top.\"\n- \"went in because it was raining. turns out it's the oldest bar in the city. the dust on the bottles is real.\"\n- \"took a wrong turn off Mission and ended up at a place with opera on the jukebox and brandy in the coffee. nobody mentioned this to me.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/blacklockchops\", label: \"@blacklockchops\" }, { type: \"maps\", url: \"https://maps.google.com/?q=51.5153,-0.0923\", label: \"Blacklock City\" }]"
+  },
+  {
+    "id": "place_seed_0024",
+    "batch": "place-discovery-seed",
+    "lane": "micro_moment",
+    "laneLabel": "City Micro-Moment",
+    "cityId": "london",
+    "cityName": "London",
+    "topicId": "place_discovery",
+    "topicLabel": "Place Discovery",
+    "readReason": "discover",
+    "readReasonLabel": "Discover a place",
+    "gameSource": "human",
+    "sourceFamily": "place_discovery",
+    "sourceProfile": "human_like",
+    "tone": "warm",
+    "placePromptStyle": "specific_dish",
+    "placeName": "Kiln",
+    "placeNeighborhood": "Soho",
+    "placeCategory": "restaurant",
+    "placeFact": "Burmese clay pot cooking, counter seating only, no reservations, queue from 5:30pm",
+    "placeUrl": "https://maps.google.com/?q=51.5133,-0.1345",
+    "placeSource": "curated",
+    "links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/kilnsoho",
+        "label": "@kilnsoho"
+      },
+      {
+        "type": "maps",
+        "url": "https://maps.google.com/?q=51.5133,-0.1345",
+        "label": "Kiln"
+      }
+    ],
+    "cityAnchor": "Soho",
+    "rawSnippet": "Kiln. Soho. Burmese clay pot cooking, counter seating only, no reservations, queue from 5:30pm",
+    "rawSnippetLanguage": "en",
+    "prompt": "City: London\nPlace: Kiln\nNeighborhood: Soho\nCategory: restaurant\nKey detail: Burmese clay pot cooking, counter seating only, no reservations, queue from 5:30pm\nMaps link: https://maps.google.com/?q=51.5133,-0.1345\n\nWrite a short first-person city message (1–2 sentences, under 160 characters) about this place.\n\nStyle: Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).\n\nExamples of this style (different cities, for voice reference only):\n- \"the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.\"\n- \"had the house cava at Xampanyet for €2.20 and now I understand why people come back.\"\n- \"the salted caramel soft serve at Bi-Rite does something to your brain. stood in line 25 minutes. no regrets.\"\n\nRules:\n- Name the place OR the neighborhood — not both in the same sentence\n- One concrete specific detail: price, dish, object, moment, line of dialogue\n- Do NOT write a review, recommendation, or 'hidden gem' copy\n- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary\n- Sound like you typed it on the way home, not like you're writing a caption\n- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)\n\nReturn JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }\nlinks: [{ type: \"instagram\", url: \"https://instagram.com/kilnsoho\", label: \"@kilnsoho\" }, { type: \"maps\", url: \"https://maps.google.com/?q=51.5133,-0.1345\", label: \"Kiln\" }]"
+  }
+]
