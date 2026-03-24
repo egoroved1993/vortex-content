@@ -52,7 +52,7 @@ const CITY_TOPIC_VARIETY = {
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "social-snippets.json");
 // Live search (server-side tools) requires grok-4 family
-const model = args.model ?? process.env.CITY_SOCIAL_MODEL ?? "grok-4-mini";
+const model = args.model ?? process.env.CITY_SOCIAL_MODEL ?? "grok-4";
 const countPerCity = Number(args["count-per-city"] ?? 15);
 const useMock = Boolean(args.mock);
 const apiKey = process.env.XAI_API_KEY;

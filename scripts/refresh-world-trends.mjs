@@ -5,7 +5,7 @@ import { resolveProjectPath } from "./path-utils.mjs";
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "world-trends.json");
 // Live search (server-side tools) requires grok-4 family
-const model = args.model ?? process.env.WORLD_TRENDS_MODEL ?? "grok-4-mini";
+const model = args.model ?? process.env.WORLD_TRENDS_MODEL ?? "grok-4";
 const maxItems = Number(args.count ?? 6);
 const apiKey = process.env.XAI_API_KEY;
 
