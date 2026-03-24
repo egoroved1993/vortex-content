@@ -194,6 +194,15 @@ jobs:
           node scripts/upload-seed-payload.mjs \
             --input content/place-discovery-payload.json
 
+      - name: Check content quality
+        if: always()
+        continue-on-error: true
+        run: |
+          node scripts/check-content-quality.mjs \
+            --payload content/pipeline-payload.json \
+            --place-payload content/place-discovery-payload.json \
+            --out content/quality-report.json
+
       - name: Upload pipeline artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -217,4 +226,5 @@ jobs:
             content/place-discovery-jobs.json
             content/place-discovery-candidates.json
             content/place-discovery-payload.json
+            content/quality-report.json
           if-no-files-found: warn
