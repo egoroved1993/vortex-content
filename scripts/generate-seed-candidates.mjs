@@ -405,8 +405,13 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   base += "\n- No emojis of any kind.";
   base += "\n- No promo-style announcements with exact times ('this Friday at 8pm', 'starts at 11am', 'free entry').";
   base += "\n- No 'Dating in [place] feels like...' openings or any sentence that starts with a generalization about a neighborhood's social scene.";
-  base += "\n- No polished metaphors that sound writerly ('the city felt like a paused film', 'traded fog for algorithms'). Observations only, no literary framing.";
+  base += "\n- No polished metaphors that sound writerly ('the city felt like a paused film', 'traded fog for algorithms', 'echo in a quiet symphony'). Observations only, no literary framing.";
   base += "\n- Do not start with 'I feel like', 'Sometimes I', 'There was a time'.";
+  base += "\n- BANNED: price complaint as the main point ('coffee costs €X', 'rent went up', '$14 for a burrito'). Price only as background detail serving a sharper point.";
+  base += "\n- BANNED: movie/TV/book reviews or reactions unless tied to a specific named city venue (cinema, bookshop, screening).";
+  base += "\n- BANNED: home appliance, tech gadget, or work-from-home observations with no city grounding.";
+  base += "\n- BANNED: 'wandered through X and felt...' with no concrete named element following.";
+  base += "\n- REQUIRED: every message must contain at least one hyper-specific local anchor — a street name, venue name, person, product, or current event. Generic city observations with no specific anchor are rejected.";
 
   return base;
 }
