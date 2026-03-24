@@ -126,6 +126,13 @@ jobs:
         run: |
           node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json','content/news-snippets.json','content/social-snippets.json','content/world-trends.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
 
+      - name: Fetch fresh places (Foursquare + Google)
+        continue-on-error: true
+        env:
+          FOURSQUARE_API_KEY: ${{ secrets.FOURSQUARE_API_KEY }}
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: node scripts/fetch-city-places.mjs --out content/fetched-places.json
+
       - name: Run mixed seed pipeline
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
@@ -155,13 +162,6 @@ jobs:
           fi
 
           node scripts/run-seed-pipeline.mjs "${ARGS[@]}"
-
-      - name: Fetch fresh places (Foursquare + Google)
-        continue-on-error: true
-        env:
-          FOURSQUARE_API_KEY: ${{ secrets.FOURSQUARE_API_KEY }}
-          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
-        run: node scripts/fetch-city-places.mjs --out content/fetched-places.json
 
       - name: Run place-discovery pipeline
         if: ${{ steps.cfg.outputs.upload == 'true' }}
