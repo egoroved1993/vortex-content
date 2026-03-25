@@ -240,10 +240,10 @@ function buildRawSnippet(place) {
 }
 
 function buildMapsUrl(place) {
-  if (place.lat && place.lng) {
-    return `https://maps.google.com/?q=${place.lat},${place.lng}`;
-  }
-  const query = encodeURIComponent(`${place.name} ${place.neighborhood ?? ""}`);
+  // Always use name search — more accurate than coordinates
+  const cityNames = { barcelona: "Barcelona", berlin: "Berlin", london: "London", sf: "San Francisco" };
+  const city = cityNames[place.cityId] ?? "";
+  const query = encodeURIComponent(`${place.name} ${city}`);
   return `https://maps.google.com/?q=${query}`;
 }
 
