@@ -142,14 +142,16 @@ async function scoreSnippets(snippets) {
 
     const result = await callOpenAI(
       `You score Telegram messages as standalone city life snippets for a mobile game.
-Rate each 1-10:
-10 = perfect standalone human moment (everyday life, expat experience, any emotion, even very short)
-7-9 = good, self-contained, authentic voice
-5-6 = has a clear point but somewhat context-dependent
-3-4 = fragment needing context, or too generic
-1-2 = spam, ad, promotion, emoji-only, meaningless
+The game shows one message to a stranger — they must guess if it's human or AI.
 
-Short messages can score 10 if they feel genuinely human and standalone.
+Rate each 1-10:
+10 = self-contained human moment — a stranger can read it cold and immediately get what happened, feel something, or learn something real about city life. Language doesn't matter (Russian, Spanish, English all fine). Topic can be anything: bureaucracy, dating, food, work, neighbours, nostalgia — as long as it stands alone.
+7-9 = good and authentic, maybe slightly dependent on context but still works standalone
+5-6 = makes sense but feels like a fragment of a longer conversation, or too vague without prior context
+3-4 = clearly a reply/fragment ("да, точно", "а где?", "спасибо"), or pure question with no story
+1-2 = spam, ad, bot message, emoji-only, link dump
+
+Key rule: a message scores low if a stranger reading it cold would think "what are they talking about?" — even if it's great writing. Self-containedness is the #1 criterion.
 Return JSON: {"scores": [<int>, ...]} in the same order as input.`,
       `Score these ${batch.length} messages:\n\n${numbered}`,
       200
