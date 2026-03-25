@@ -66,7 +66,7 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             # Rotate provider+model by day-of-year mod 5
             # Slot 4 (anthropic) activates only if ANTHROPIC_API_KEY is set, else falls back to slot 0
-            DAY_SLOT=$(( $(date -u +%j) % 5 ))
+            DAY_SLOT=$(( 10#$(date -u +%j) % 5 ))
             if [ "$DAY_SLOT" = "4" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
               DAY_SLOT=0
             fi

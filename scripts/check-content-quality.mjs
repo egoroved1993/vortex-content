@@ -208,6 +208,60 @@ if (suggestions.length > 0) {
 
 console.log("");
 
+// ─── write GitHub Step Summary (markdown) ────────────────────────────────────
+
+const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+if (summaryPath) {
+  const lines = [];
+  lines.push("## Content Quality Report");
+  lines.push("");
+  lines.push(`| | |`);
+  lines.push(`|---|---|`);
+  lines.push(`| Total messages | ${all.total} (${mainRows.length} seed + ${placeRows.length} place) |`);
+  lines.push(`| With links | ${all.withLinks} (${Math.round(all.withLinks / all.total * 100)}%) |`);
+  lines.push(`| Issues flagged | ${all.totalIssues} (${Math.round(all.totalIssues / all.total * 100)}%) |`);
+  lines.push(`| Place mentioned but no link | ${all.withPlaceAndNoLink} |`);
+  lines.push("");
+
+  lines.push("### By city");
+  lines.push("| City | Messages | Links | Issues |");
+  lines.push("|---|---|---|---|");
+  for (const [city, count] of Object.entries(all.byCity)) {
+    const cityRows = allRows.filter(r => r.city_id === city);
+    const cityLinks = cityRows.filter(r => (r.links ?? []).length > 0).length;
+    const cityIssues = cityRows.filter(r => analyseRow(r).length > 0).length;
+    lines.push(`| ${city} | ${count} | ${cityLinks} | ${cityIssues} |`);
+  }
+  lines.push("");
+
+  if (Object.keys(all.issueCounts).length > 0) {
+    lines.push("### Top issues");
+    const sorted = Object.entries(all.issueCounts).sort((a, b) => b[1] - a[1]);
+    for (const [issue, count] of sorted.slice(0, 10)) {
+      lines.push(`- **${count}x** \`${issue}\``);
+    }
+    lines.push("");
+  }
+
+  if (all.flagged.length > 0) {
+    lines.push("### Flagged messages (first 8)");
+    for (const f of all.flagged.slice(0, 8)) {
+      lines.push(`- **[${f.city}]** \`${f.issues.join(", ")}\``);
+      lines.push(`  > ${f.content}`);
+    }
+    lines.push("");
+  }
+
+  if (suggestions.length > 0) {
+    lines.push("### Suggestions");
+    for (const s of suggestions) lines.push(`- ${s}`);
+  } else {
+    lines.push("### ✅ No major issues found");
+  }
+
+  fs.appendFileSync(summaryPath, lines.join("\n") + "\n");
+}
+
 // ─── write JSON report ────────────────────────────────────────────────────────
 
 const report = {
