@@ -220,6 +220,7 @@ function inferTopic(snapshot, focus) {
   if (/\b(ai|chatgpt|gpt|llm|generated|artificial intelligence|algorithm)\b/.test(wider)) return "ai_anxiety";
   if (/\b(apparently|heard that|someone said|rumour|rumor|closing|sold|they're closing|i heard)\b/.test(wider)) return "city_rumor";
   if (/\b(absurd|ridiculous|ironic|somehow|still|technically|classic|typical)\b/.test(wider)) return "humor";
+  if (/\b(told me|she said|he said|they said|stranger|met someone|still think|can't forget|happened to me|that moment|remembered|it hit me)\b/.test(wider)) return "personal_story";
   if (/\b(cafe|coffee|bar|restaurant|bakery|brunch|burrito)\b/.test(wider)) return "food_moment";
   return focus.id === "soft_detail" ? "random_encounter" : "neighborhood_vibe";
 }
