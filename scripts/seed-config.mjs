@@ -242,6 +242,7 @@ export const personas = [
     id: "culture_snob",
     label: "Culture snob",
     guidance: "Sharp eye for aesthetic fraud, but secretly sentimental.",
+    linkBehavior: "occasional",
     tags: ["street_art", "food", "gentrification", "resentment"],
   },
   {
@@ -260,6 +261,7 @@ export const personas = [
     id: "burned_out_remote_worker",
     label: "Burned-out remote worker",
     guidance: "Urban life is filtered through screens, rent, and soft dissociation.",
+    linkBehavior: "occasional",
     tags: ["work", "cost", "late", "confession"],
   },
   {
@@ -267,6 +269,54 @@ export const personas = [
     label: "Older local memory keeper",
     guidance: "Measures the present against vanished shops, rhythms, and manners.",
     tags: ["nostalgia", "gentrification", "local", "city_pride"],
+  },
+  {
+    id: "russian_emigre",
+    label: "Russian émigré",
+    guidance: "Arrived 1-3 years ago, left Russia voluntarily or not. Observes Barcelona with the precision of someone comparing it daily to Moscow or St. Petersburg. Dry, occasionally surprised by warmth, sometimes melancholic without drama.",
+    languageOverride: "Write in Russian. Embed Spanish nouns naturally where a Russian expat would borrow them — piso, metro, mercado, empadronamiento, bono social, barrio — without translating them back to Russian. Do not transliterate Spanish into Cyrillic. Keep Russian casual and unpolished, not literary.",
+    cityOnly: "barcelona",
+    tags: ["expat", "identity", "confession", "language"],
+  },
+  {
+    id: "south_asian_londoner",
+    label: "South Asian Londoner",
+    guidance: "British-born or raised, navigates dual identity without drama. Specific about food, family expectations, and neighbourhood geography. Dry self-awareness about being both insider and outsider simultaneously.",
+    languageOverride: "Write in casual British English. Cultural references can include South Asian specifics — specific foods, family dynamics, Southall or Wembley or Tooting — used without explanation, as natural as any other London reference. No accent parody, no exoticisation.",
+    cityOnly: "london",
+    tags: ["identity", "local", "food", "commute"],
+  },
+  {
+    id: "west_african_londoner",
+    label: "West African Londoner",
+    guidance: "Nigerian or Ghanaian background, London-raised or long-term resident. Direct, ambitious, community-minded. Notices class and race in city life without making it the point of every message.",
+    languageOverride: "Write in confident British English with occasional West African cadences where natural — directness, specific cultural references, Nigerian/Ghanaian phrasing that sounds like someone who grew up switching registers. No parody or exaggeration.",
+    cityOnly: "london",
+    tags: ["identity", "work", "cost", "local"],
+  },
+  {
+    id: "turkish_berliner",
+    label: "Turkish Berliner",
+    guidance: "Second or third generation, born in Berlin, Turkish family. Neukölln or Wedding. Knows the city better than most but is still read as foreign. Sharp about this contradiction without performing it.",
+    languageOverride: "Write in casual English. Drop Turkish words where a Berlin Turkish speaker naturally would — abi, lan, helal, specific phrases — without translating. References Neukölln, Wedding, specific streets. Never writes like a tourist in their own city.",
+    cityOnly: "berlin",
+    tags: ["identity", "local", "resentment", "language"],
+  },
+  {
+    id: "american_expat_berlin",
+    label: "American expat in Berlin",
+    guidance: "Moved from NYC or LA 2-4 years ago. Slightly evangelical about Berlin. Compares everything to home in ways that are sometimes insightful and sometimes embarrassing. Processing freedom and bureaucracy simultaneously.",
+    languageOverride: "Write in American English. Occasional German words used with visible effort — Kiez, Späti, Anmeldung — as someone who learned them recently. Comparisons to New York or California appear naturally. Currency: EUR — use €, never dollars.",
+    cityOnly: "berlin",
+    tags: ["expat", "identity", "work", "confession"],
+  },
+  {
+    id: "mission_latino",
+    label: "Mission District Latino",
+    guidance: "SF Mission resident — Mexican or Central American family background, 2nd generation or recent arrival. Watches the neighbourhood change around them. Food, community, displacement, loyalty.",
+    languageOverride: "Write in casual Spanglish — Spanish with English mixed in, or English with Spanish phrases, however it flows naturally. Not a bilingual performance, just how people actually talk: 'el landlord me mandó un notice', 'la taquería packed with techies taking photos'. Currency: USD — use $.",
+    cityOnly: "sf",
+    tags: ["local", "gentrification", "food", "identity"],
   },
 ];
 
@@ -301,7 +351,7 @@ export const cities = [
       ai_anxiety: ["cv written by chatgpt vs cv written by someone tired", "ai summary of a meeting i was in", "menu that reads like it was prompted"],
       personal_story: ["landlord who kept the deposit", "stranger on the night bus", "first flat viewing that went wrong", "the thing that happened at a work leaving do"],
     },
-    personaBias: ["tired_office_worker", "long_time_local", "serial_dater", "culture_snob"],
+    personaBias: ["tired_office_worker", "long_time_local", "serial_dater", "culture_snob", "south_asian_londoner", "west_african_londoner"],
   },
   {
     id: "berlin",
@@ -333,7 +383,7 @@ export const cities = [
       ai_anxiety: ["job listing that gpt wrote and a gpt applied to", "translation app that understood my german better than i did", "gallery piece that was ai-made and everyone clapped anyway"],
       personal_story: ["visa office waiting room story", "wg roommate who suddenly moved out", "anmeldung appointment that went sideways", "person met at a spati at 2am"],
     },
-    personaBias: ["recent_expat", "immigrant_balancing_languages", "lonely_night_owl", "financially_stressed_renter"],
+    personaBias: ["recent_expat", "immigrant_balancing_languages", "lonely_night_owl", "financially_stressed_renter", "turkish_berliner", "american_expat_berlin"],
   },
   {
     id: "sf",
@@ -364,7 +414,7 @@ export const cities = [
       ai_anxiety: ["ai therapist ad on the muni", "startup that replaced half its team and then wrote a blog post about human creativity", "chatgpt answer to a sf specific question that was completely wrong but confident"],
       personal_story: ["roommate who left without notice", "layoff that came on a tuesday", "stranger at dolores park who said something true", "the coffee shop where something changed"],
     },
-    personaBias: ["burned_out_remote_worker", "service_worker", "financially_stressed_renter", "socially_awkward_observer"],
+    personaBias: ["burned_out_remote_worker", "service_worker", "financially_stressed_renter", "socially_awkward_observer", "mission_latino"],
   },
   {
     id: "barcelona",
@@ -396,7 +446,12 @@ export const cities = [
       ai_anxiety: ["app that translates catalan and just gives you spanish", "instagram reel about barcelona that no person from barcelona would make", "ai travel guide that sent someone to a restaurant closed since 2019"],
       personal_story: ["NIE queue story", "landlord who showed up unannounced", "first time at the mercat understood something", "person met at a vermut bar who changed the afternoon"],
     },
-    personaBias: ["recent_expat", "serial_dater", "long_time_local", "culture_snob"],
+    personaBias: ["recent_expat", "serial_dater", "long_time_local", "culture_snob", "russian_emigre"],
+    personaLanguageOverrides: {
+      long_time_local: "Write in Spanish with natural Catalan influence. Drop Catalan words or short phrases where they feel natural (molt bé, no cal, ara ja, tio/tia). No need to translate them. This is how educated Barcelona locals actually write.",
+      immigrant_balancing_languages: "Write in casual Latin American Spanish (not Castilian). Mix in occasional English words for tech and work. Catalan words appear only as borrowed local vocabulary — metro, gràcies, bústia — not as fluent Catalan.",
+      recent_expat: "Write in English. Include occasional Spanish insertions — menu items, street names, a local phrase — that feel rehearsed and slightly uncertain, not fluent.",
+    },
   },
 ];
 
@@ -925,6 +980,11 @@ export function buildPrompt(job) {
   const sourceProfile = sourceProfiles[job.sourceProfile];
   const tone = tones[job.tone];
   const lane = contentLanes[job.lane];
+  const persona = getPersona(job.personaId);
+  const languageGuidance =
+    persona?.languageOverride ??
+    city.personaLanguageOverrides?.[job.personaId] ??
+    city.languageGuidance;
   const laneInstructions =
     job.lane === "mind_post"
       ? [
@@ -942,7 +1002,7 @@ export function buildPrompt(job) {
   return [
     "Write one short anonymous city message for Vortex.",
     `City: ${city.name}.`,
-    `Language guidance: ${city.languageGuidance}`,
+    `Language guidance: ${languageGuidance}`,
     ...laneInstructions,
     `Topic: ${topic.label}.`,
     `Read reason: ${reason.label} - ${reason.description}`,
@@ -953,6 +1013,11 @@ export function buildPrompt(job) {
     `Texture: ${job.textureGuidance}`,
     `Tone: ${tone.guidance}`,
     `Difficulty target: ${sourceProfile.guidance}`,
+    ...(persona?.linkBehavior === "occasional"
+      ? [
+          "This persona occasionally shares references — a specific article title, link fragment, or named source — when it feels natural. Include one if it fits organically (e.g. 'saw this piece on...', a partial URL, a publication name). Skip it if it would feel forced.",
+        ]
+      : []),
     "This message must be interesting even if there were no guessing mechanic.",
     `This seed will be stored in the game as source="${job.gameSource}". Do not mention that fact, but lean into the kind of ambiguity that makes that label debatable.`,
     "Do not summarize the city. Capture one moment, line, feeling, or irritation.",
@@ -982,12 +1047,14 @@ export function getMindPostFormats() {
 export function getCompatiblePersonas(topicId, cityId) {
   const topic = getTopic(topicId);
   const city = getCity(cityId);
-  const weighted = personas.map((persona) => {
-    let weight = 1;
-    if (city.personaBias.includes(persona.id)) weight += 2.5;
-    if (topic.personaTags.some((tag) => persona.tags.includes(tag))) weight += 2;
-    return { persona, weight };
-  });
+  const weighted = personas
+    .filter((persona) => !persona.cityOnly || persona.cityOnly === cityId)
+    .map((persona) => {
+      let weight = 1;
+      if (city.personaBias.includes(persona.id)) weight += 2.5;
+      if (topic.personaTags.some((tag) => persona.tags.includes(tag))) weight += 2;
+      return { persona, weight };
+    });
   return weighted;
 }
 
