@@ -24,7 +24,7 @@ if (!supabaseUrl || !supabaseServiceKey) {
 
 let uploaded = 0;
 for (let index = 0; index < rows.length; index += chunkSize) {
-  const expiresAt = new Date(Date.now() + 48 * 60 * 60 * 1000).toISOString();
+  const expiresAt = new Date(Date.now() + 72 * 60 * 60 * 1000).toISOString();
   const chunk = rows.slice(index, index + chunkSize).map((row) => ({
     ...row,
     created_at: randomTimeToday(),
