@@ -19,6 +19,11 @@ on:
         type: boolean
         required: false
         default: false
+      expire_existing:
+        description: "Expire all existing AI messages before upload"
+        type: boolean
+        required: false
+        default: false
       mix:
         description: "Comma-separated source families"
         required: false
@@ -162,6 +167,10 @@ jobs:
           fi
 
           node scripts/run-seed-pipeline.mjs "${ARGS[@]}"
+
+      - name: Expire existing generated feed
+        if: ${{ inputs.expire_existing == true && steps.cfg.outputs.upload == 'true' }}
+        run: node scripts/expire-active-seed-messages.mjs
 
       - name: Run place-discovery pipeline
         if: ${{ steps.cfg.outputs.upload == 'true' }}
