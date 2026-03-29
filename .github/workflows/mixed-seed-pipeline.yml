@@ -138,6 +138,10 @@ jobs:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
         run: node scripts/fetch-city-places.mjs --out content/fetched-places.json
 
+      - name: Expire existing generated feed
+        if: ${{ inputs.expire_existing == true && steps.cfg.outputs.upload == 'true' }}
+        run: node scripts/expire-active-seed-messages.mjs
+
       - name: Run mixed seed pipeline
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
@@ -167,10 +171,6 @@ jobs:
           fi
 
           node scripts/run-seed-pipeline.mjs "${ARGS[@]}"
-
-      - name: Expire existing generated feed
-        if: ${{ inputs.expire_existing == true && steps.cfg.outputs.upload == 'true' }}
-        run: node scripts/expire-active-seed-messages.mjs
 
       - name: Run place-discovery pipeline
         if: ${{ steps.cfg.outputs.upload == 'true' }}
