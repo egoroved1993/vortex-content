@@ -26,7 +26,8 @@ const CITY_CONFIGS = [
     cityId: "barcelona",
     cityName: "Barcelona",
     localAnchors: ["l3", "tmb", "raval", "gracia", "eixample", "rodalies", "barceloneta", "guiri"],
-    languageHint: "mix of ca, es, en, and sometimes ru",
+    languageHint: "mix of ca, es, and en — Spanish and Catalan should dominate",
+    allowedLanguages: ["ca", "es", "en"],
   },
 ];
 
@@ -276,15 +277,32 @@ function mergeByCity(existing, fresh, keepPerCity) {
   const merged = [];
   const countByCity = {};
   const seen = new Set();
+  // Per-city per-language cap to prevent one language dominating
+  const langCountByCity = {};
+
+  const cityAllowedLangs = Object.fromEntries(
+    CITY_CONFIGS.filter((c) => c.allowedLanguages).map((c) => [c.cityId, c.allowedLanguages])
+  );
 
   for (const item of [...fresh, ...existing]) {
     const cityId = item.cityId;
     const body = cleanText(item.body ?? "");
     if (!cityId || !body) continue;
     if (looksSyntheticPlaceholder(body)) continue;
+
+    // Drop snippets in languages not allowed for this city
+    const allowed = cityAllowedLangs[cityId];
+    if (allowed && item.language && !allowed.includes(item.language)) continue;
+
     const key = `${cityId}:${body.toLowerCase()}`;
     if (seen.has(key)) continue;
     if ((countByCity[cityId] ?? 0) >= keepPerCity) continue;
+
+    // Cap any single language to 50% of keepPerCity slots
+    const langKey = `${cityId}:${item.language ?? "unknown"}`;
+    const langCap = Math.ceil(keepPerCity * 0.5);
+    if ((langCountByCity[langKey] ?? 0) >= langCap) continue;
+    langCountByCity[langKey] = (langCountByCity[langKey] ?? 0) + 1;
 
     seen.add(key);
     countByCity[cityId] = (countByCity[cityId] ?? 0) + 1;
