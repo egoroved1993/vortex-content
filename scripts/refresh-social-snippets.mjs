@@ -26,8 +26,7 @@ const CITY_CONFIGS = [
     cityId: "barcelona",
     cityName: "Barcelona",
     localAnchors: ["l3", "tmb", "raval", "gracia", "eixample", "rodalies", "barceloneta", "guiri"],
-    languageHint: "mix of ca, es, and en — Spanish and Catalan should dominate",
-    allowedLanguages: ["ca", "es", "en"],
+    languageHint: "mix of ca, es, en, and ru — spread across all four, no single language above 30%",
   },
 ];
 
