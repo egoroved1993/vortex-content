@@ -74,6 +74,8 @@ const rewritten = toRewrite.length > 0 ? await rewriteSnippets(toRewrite) : [];
 // ── Step 3: Build rows ────────────────────────────────────────────────────────
 
 // Telegram messages have no author_id — no chat possible, so source="ai" regardless of origin
+const expiresAt = new Date(Date.now() + 72 * 60 * 60 * 1000).toISOString();
+
 const humanRows = humanSnippets.map((s) => ({
   city_id:           s.cityId,
   content:           s.body.trim(),
@@ -83,6 +85,7 @@ const humanRows = humanSnippets.map((s) => ({
   author_id:         null,
   author_number:     null,
   created_at:        randomTimeToday(),
+  expires_at:        expiresAt,
   payload:           s.links ? JSON.stringify({ links: s.links }) : null,
 }));
 
@@ -95,6 +98,7 @@ const aiRows = rewritten.map((r) => ({
   author_id:         null,
   author_number:     null,
   created_at:        randomTimeToday(),
+  expires_at:        expiresAt,
 }));
 
 const allRows = [...humanRows, ...aiRows];
