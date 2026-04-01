@@ -3,9 +3,11 @@
  *
  * Takes fresh Telegram snippets from content/social-snippets.json,
  * scores each via OpenAI (1-10), then:
- *   score >= 8  → upload as source=human (direct quote, authentic)
- *   score 5-7   → rewrite via AI to preserve essence, upload as source=ai
- *   score < 5   → discard (but still mark as seen so we skip next run)
+ *   score >= 7  → rewrite through a random city persona (voice, language, character)
+ *   score < 7   → discard (but still mark as seen so we skip next run)
+ *
+ * Language caps enforce diversity (e.g. Barcelona max 25% Russian).
+ * All uploads expire in 72 hours.
  *
  * Required env vars:
  *   SUPABASE_URL
@@ -16,6 +18,7 @@
 import fs from "node:fs";
 import crypto from "node:crypto";
 import { resolveProjectPath } from "./path-utils.mjs";
+import { personas, cities, getCity } from "./seed-config.mjs";
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
@@ -54,55 +57,74 @@ if (newSnippets.length === 0) {
 console.log("Scoring snippets via OpenAI...");
 const scores = await scoreSnippets(newSnippets);
 
-const humanSnippets  = [];
 const toRewrite = [];
 
 for (let i = 0; i < newSnippets.length; i++) {
   const score = scores[i] ?? 0;
   const s = newSnippets[i];
-  if (score >= 8)      humanSnippets.push(s);
-  else if (score >= 7) toRewrite.push(s);
+  if (score >= 7) toRewrite.push(s);
   // score < 7: discard — Telegram chat fragments are too low quality
 }
 
-console.log(`Scores: ${humanSnippets.length} human, ${toRewrite.length} to rewrite, ${newSnippets.length - humanSnippets.length - toRewrite.length} discarded`);
+console.log(`Scores: ${toRewrite.length} to rewrite via personas, ${newSnippets.length - toRewrite.length} discarded`);
 
-// ── Step 2: Rewrite mediocre snippets ────────────────────────────────────────
+// ── Step 2: Rewrite ALL accepted snippets through persona voices ─────────────
 
-const rewritten = toRewrite.length > 0 ? await rewriteSnippets(toRewrite) : [];
+const rewritten = toRewrite.length > 0 ? await rewriteWithPersonas(toRewrite) : [];
 
-// ── Step 3: Build rows ────────────────────────────────────────────────────────
+// ── Step 3: Build rows + enforce language caps ───────────────────────────────
 
-// Telegram messages have no author_id — no chat possible, so source="ai" regardless of origin
 const expiresAt = new Date(Date.now() + 72 * 60 * 60 * 1000).toISOString();
 
-const humanRows = humanSnippets.map((s) => ({
-  city_id:           s.cityId,
-  content:           s.body.trim(),
-  source:            "ai",
-  sentiment:         "neutral",
-  detected_language: s.language ?? "ru",
-  author_id:         null,
-  author_number:     null,
-  created_at:        randomTimeToday(),
-  expires_at:        expiresAt,
-  payload:           s.links ? JSON.stringify({ links: s.links }) : null,
-}));
+const LANGUAGE_CAPS = {
+  barcelona: { ru: 0.25 },
+};
 
-const aiRows = rewritten.map((r) => ({
+let allRows = rewritten.map((r) => ({
   city_id:           r.cityId,
   content:           r.content.trim(),
   source:            "ai",
   sentiment:         "neutral",
-  detected_language: "ru",
+  detected_language: r.language ?? "ru",
   author_id:         null,
   author_number:     null,
   created_at:        randomTimeToday(),
   expires_at:        expiresAt,
 }));
 
-const allRows = [...humanRows, ...aiRows];
-console.log(`Uploading ${allRows.length} rows (${humanRows.length} human + ${aiRows.length} ai)`);
+// ── Enforce per-city language caps (e.g. Barcelona max 25% Russian) ──────────
+
+const activeLanguageCounts = await fetchActiveLanguageCounts();
+
+for (const [cityId, caps] of Object.entries(LANGUAGE_CAPS)) {
+  const cityActive = activeLanguageCounts[cityId] ?? {};
+  const cityTotal  = Object.values(cityActive).reduce((a, b) => a + b, 0);
+  const cityNew    = allRows.filter((r) => r.city_id === cityId);
+
+  for (const [lang, maxRatio] of Object.entries(caps)) {
+    const activeLang = cityActive[lang] ?? 0;
+    const newLang    = cityNew.filter((r) => r.detected_language === lang).length;
+    const futureTotal = cityTotal + cityNew.length;
+    const futureLang  = activeLang + newLang;
+
+    if (futureTotal > 0 && futureLang / futureTotal > maxRatio) {
+      // How many of this language can we still add?
+      const maxAllowed = Math.max(0, Math.floor(maxRatio * (cityTotal + cityNew.length)) - activeLang);
+      let dropped = 0;
+      allRows = allRows.filter((r) => {
+        if (r.city_id === cityId && r.detected_language === lang) {
+          if (dropped >= newLang - maxAllowed) return true;
+          dropped++;
+          return false;
+        }
+        return true;
+      });
+      console.log(`Language cap: ${cityId}/${lang} — kept ${maxAllowed}, dropped ${dropped} (active: ${activeLang}/${cityTotal})`);
+    }
+  }
+}
+
+console.log(`Uploading ${allRows.length} rows`);
 
 // ── Step 4: Upload in chunks ──────────────────────────────────────────────────
 
@@ -170,42 +192,115 @@ Return JSON: {"scores": [<int>, ...]} in the same order as input.`,
   return allScores;
 }
 
-// ── OpenAI: rewriting ─────────────────────────────────────────────────────────
+// ── Persona-aware rewriting ───────────────────────────────────────────────────
 
-async function rewriteSnippets(snippets) {
+function getCompatiblePersonasForCity(cityId) {
+  const city = getCity(cityId);
+  const biasSet = new Set(city?.personaBias ?? []);
+  return personas
+    .filter((p) => !p.cityOnly || p.cityOnly === cityId)
+    .map((p) => ({ ...p, weight: biasSet.has(p.id) ? 3 : 1 }));
+}
+
+function pickRandomPersona(cityId) {
+  const compatible = getCompatiblePersonasForCity(cityId);
+  if (compatible.length === 0) return null;
+  const total = compatible.reduce((sum, p) => sum + p.weight, 0);
+  let roll = Math.random() * total;
+  for (const p of compatible) {
+    roll -= p.weight;
+    if (roll <= 0) return p;
+  }
+  return compatible[compatible.length - 1];
+}
+
+function resolveLanguageGuidance(persona, cityId) {
+  if (persona?.languageOverride) return persona.languageOverride;
+  const city = getCity(cityId);
+  if (city?.personaLanguageOverrides?.[persona?.id]) return city.personaLanguageOverrides[persona.id];
+  return city?.languageGuidance ?? "Write naturally in whatever language fits the persona.";
+}
+
+async function rewriteWithPersonas(snippets) {
   const BATCH = 10;
   const results = [];
 
-  for (let i = 0; i < snippets.length; i += BATCH) {
-    const batch = snippets.slice(i, i + BATCH);
-    const numbered = batch.map((s, idx) => `${idx + 1}. [${s.cityId}] ${s.body.trim()}`).join("\n\n");
+  // Pre-assign a persona to each snippet
+  const assignments = snippets.map((s) => ({
+    snippet: s,
+    persona: pickRandomPersona(s.cityId),
+  }));
+
+  for (let i = 0; i < assignments.length; i += BATCH) {
+    const batch = assignments.slice(i, i + BATCH);
+    const numbered = batch.map((a, idx) => {
+      const langGuide = resolveLanguageGuidance(a.persona, a.snippet.cityId);
+      return `${idx + 1}. [City: ${a.snippet.cityId}] [Persona: ${a.persona?.label ?? "anonymous city resident"}] [Voice: ${a.persona?.guidance ?? "observant, authentic"}] [Language: ${langGuide}]\nOriginal: ${a.snippet.body.trim()}`;
+    }).join("\n\n");
 
     const result = await callOpenAI(
-      `You rewrite Telegram messages as standalone city life observations for a mobile game.
+      `You rewrite Telegram messages as standalone city life observations for a mobile game where strangers guess if a message is human or AI.
+
+Each message has a PERSONA assigned — you must write AS that persona, in their voice and language.
+
 Rules:
 - Preserve the core feeling, topic, or situation from the original
-- Write in Russian, 1-3 natural sentences
-- Sound like a real person, not a narrator
+- Write AS the assigned persona — adopt their voice, perspective, and language guidance
+- Follow the Language guidance for each message (it may be English, Russian, Spanish, mixed, etc.)
+- 1-3 natural sentences, 60-200 characters
+- Sound like a real person posting on social media, not a narrator or journalist
 - Remove any @mentions, links, or references to specific usernames
-- Keep city-specific details (prices, places, bureaucracy, expat life) if present
-- Do NOT add emojis
-Return JSON: {"rewrites": ["<rewritten text>", ...]} in same order.`,
-      `Rewrite these ${batch.length} messages:\n\n${numbered}`,
-      1000
+- Keep city-specific details (prices, places, bureaucracy, local life) if present
+- Do NOT add emojis or hashtags
+- Each rewrite should feel self-contained — a stranger reading it cold should understand it
+
+Return JSON: {"rewrites": [{"text": "<rewritten text>", "language": "<2-letter ISO code>"}]} in same order.`,
+      `Rewrite these ${batch.length} messages through their assigned personas:\n\n${numbered}`,
+      1500
     );
 
-    const batchRewrites = result?.rewrites ?? batch.map((s) => s.body);
+    const batchRewrites = result?.rewrites ?? batch.map((a) => ({ text: a.snippet.body, language: a.snippet.language ?? "ru" }));
     for (let j = 0; j < batch.length; j++) {
+      const rewrite = batchRewrites[j];
       results.push({
-        cityId: batch[j].cityId,
-        content: batchRewrites[j] ?? batch[j].body,
+        cityId: batch[j].snippet.cityId,
+        content: (typeof rewrite === "string" ? rewrite : rewrite?.text) ?? batch[j].snippet.body,
+        language: (typeof rewrite === "string" ? (batch[j].snippet.language ?? "ru") : rewrite?.language) ?? "ru",
       });
     }
 
-    if (i + BATCH < snippets.length) await sleep(300);
+    if (i + BATCH < assignments.length) await sleep(300);
   }
 
   return results;
+}
+
+// ── Fetch active message language distribution per city ───────────────────────
+
+async function fetchActiveLanguageCounts() {
+  const nowIso = new Date().toISOString();
+  const url = `${supabaseUrl}/rest/v1/messages?select=city_id,detected_language&author_id=is.null&expires_at=gt.${encodeURIComponent(nowIso)}`;
+  const response = await fetch(url, {
+    headers: {
+      apikey: supabaseServiceKey,
+      Authorization: `Bearer ${supabaseServiceKey}`,
+    },
+  });
+
+  if (!response.ok) {
+    console.warn(`Could not fetch language counts: ${response.status}`);
+    return {};
+  }
+
+  const rows = await response.json();
+  const counts = {};
+  for (const row of rows) {
+    const city = row.city_id;
+    const lang = row.detected_language ?? "unknown";
+    if (!counts[city]) counts[city] = {};
+    counts[city][lang] = (counts[city][lang] ?? 0) + 1;
+  }
+  return counts;
 }
 
 // ── OpenAI: base call ─────────────────────────────────────────────────────────
