@@ -206,8 +206,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const passed =
     passedAsSocial || (
     mindprint >= 3 &&
-    stickiness >= 3 &&
-    ambiguity >= 3 &&
+    stickiness >= 2 &&
+    ambiguity >= 2 &&
     (!requiresFreshContext(candidate) || freshness >= 3) &&
     (!requiresNewsFit(candidate) || newsFit >= 3) &&
     !issues.includes("generic_city_copy") &&
@@ -765,6 +765,7 @@ function pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit) {
   if (!passed) return "reject";
   if (ambiguity >= 4 && freshness >= 4 && newsFit >= 3 && randFn() > 0.35) return "ship_now";
   if (ambiguity >= 4 && freshness >= 3) return "strong_candidate";
+  if (ambiguity >= 3) return "candidate";
   return "needs_human_edit";
 }
 

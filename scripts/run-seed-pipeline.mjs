@@ -84,6 +84,8 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "10",
   "--max-total",
   "50",
+  "--reviewer-buckets",
+  "ship_now,strong_candidate,candidate,needs_human_edit",
 ]);
 
 const payload = readJson(payloadPath);

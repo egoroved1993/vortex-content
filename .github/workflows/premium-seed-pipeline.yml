@@ -117,9 +117,10 @@ jobs:
             ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
           fi
 
-          if [ -n "${XAI_API_KEY:-}" ]; then
-            ARGS+=( --mind-post-provider xai --mind-post-model grok-3-fast )
-          fi
+          # xAI credits exhausted — use OpenAI for all lanes
+          # if [ -n "${XAI_API_KEY:-}" ]; then
+          #   ARGS+=( --mind-post-provider xai --mind-post-model grok-3-fast )
+          # fi
 
           if [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
             ARGS+=( --upload --upload-city-pulse )
