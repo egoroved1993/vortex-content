@@ -15,7 +15,7 @@ import {
 } from "./source-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
-const limitPerSub = Number(args["limit-per-sub"] ?? 120);
+const limitPerSub = Number(args["limit-per-sub"] ?? 100);
 const perCity = Number(args["per-city"] ?? 80);
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "public-human-comments.json");
 
