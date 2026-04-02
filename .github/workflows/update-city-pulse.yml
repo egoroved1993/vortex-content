@@ -92,6 +92,7 @@ jobs:
 
       - name: Refresh city social from X
         if: env.XAI_API_KEY != ''
+        continue-on-error: true
         run: node scripts/refresh-social-snippets.mjs
 
       - name: Refresh world trends from X
@@ -123,6 +124,7 @@ jobs:
 
       - name: Upload to Supabase
         if: ${{ github.event_name == 'schedule' || inputs.upload == true }}
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
