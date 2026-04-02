@@ -2,14 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
 
-// Fetches interesting venues per city from Foursquare + Google Places.
-// Merges results, dedupes by name+city, writes to content/fetched-places.json
+// Fetches interesting venues per city from Overpass (OpenStreetMap) + Google Places.
+// Overpass is free, no API key needed, unlimited.
+// Google Places requires GOOGLE_PLACES_API_KEY (optional, $200/mo free credit).
 //
-// Secrets required (set as GitHub secrets):
-//   FOURSQUARE_API_KEY   — foursquare.com/developers, free, 1000 req/day
-//   GOOGLE_PLACES_API_KEY — console.cloud.google.com, $200/mo free credit
+// Output: content/fetched-places.json
 
-const FOURSQUARE_KEY = process.env.FOURSQUARE_API_KEY;
 const GOOGLE_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
 const CITY_CONFIGS = [
@@ -47,20 +45,14 @@ const CITY_CONFIGS = [
   },
 ];
 
-// Foursquare category IDs: bars, cafes, restaurants, music venues, art galleries, bookstores, parks
-const FOURSQUARE_CATEGORIES = [
-  "13003", // Bar
-  "13032", // Café
-  "13065", // Restaurant
-  "10032", // Music Venue / Concert Hall
-  "10009", // Art Gallery / Museum
-  "17069", // Bookstore
-  "16032", // Park
-].join(",");
+const OVERPASS_CATEGORIES = [
+  { tag: "amenity", values: ["bar", "pub", "cafe", "restaurant", "nightclub", "arts_centre", "theatre", "cinema"] },
+  { tag: "shop", values: ["books"] },
+  { tag: "leisure", values: ["park"] },
+  { tag: "tourism", values: ["gallery", "museum"] },
+];
 
-// Google Places types to query
 const GOOGLE_TYPES = ["bar", "cafe", "restaurant", "night_club", "art_gallery", "book_store"];
-
 const MAX_PER_SOURCE_PER_CITY = 15;
 
 const args = parseArgs(process.argv.slice(2));
@@ -68,22 +60,15 @@ const outPath = args.out
   ? path.resolve(process.cwd(), args.out)
   : resolveProjectPath("content", "fetched-places.json");
 
-if (!FOURSQUARE_KEY && !GOOGLE_KEY) {
-  console.warn("Neither FOURSQUARE_API_KEY nor GOOGLE_PLACES_API_KEY set — skipping.");
-  process.exit(0);
-}
-
 const allPlaces = [];
 
 for (const city of CITY_CONFIGS) {
   console.log(`\nFetching places for ${city.cityId}...`);
 
-  if (FOURSQUARE_KEY) {
-    const fsq = await fetchFoursquare(city);
-    console.log(`  Foursquare: ${fsq.length} venues`);
-    allPlaces.push(...fsq);
-    await sleep(400);
-  }
+  const osm = await fetchOverpass(city);
+  console.log(`  Overpass: ${osm.length} venues`);
+  allPlaces.push(...osm);
+  await sleep(1500); // Overpass fair-use: 1-2s between requests
 
   if (GOOGLE_KEY) {
     const gpl = await fetchGoogle(city);
@@ -102,70 +87,83 @@ const deduped = allPlaces.filter((p) => {
   return true;
 });
 
-// Filter out places without enough signal
-const filtered = deduped.filter((p) => p.name && p.neighborhood && (p.rating ?? 0) >= 7.5);
-
-if (filtered.length === 0) {
+if (deduped.length === 0) {
   console.log("\nNo places fetched — keeping existing file.");
   process.exit(0);
 }
 
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
-fs.writeFileSync(outPath, `${JSON.stringify(filtered, null, 2)}\n`);
-console.log(`\nWrote ${filtered.length} places to ${outPath}`);
-console.log(JSON.stringify(countBy(filtered, (p) => p.cityId), null, 2));
+fs.writeFileSync(outPath, `${JSON.stringify(deduped, null, 2)}\n`);
+console.log(`\nWrote ${deduped.length} places to ${outPath}`);
+console.log(JSON.stringify(countBy(deduped, (p) => p.cityId), null, 2));
 
-// --- Foursquare ---
+// --- Overpass (OpenStreetMap) ---
 
-async function fetchFoursquare(city) {
+async function fetchOverpass(city) {
+  const radiusM = city.radiusM;
+  const lat = city.lat;
+  const lng = city.lng;
+
+  // Build Overpass QL query for all categories
+  const nodeQueries = OVERPASS_CATEGORIES.flatMap(({ tag, values }) =>
+    values.map((v) => `node["${tag}"="${v}"]["name"](around:${radiusM},${lat},${lng});`)
+  );
+  const wayQueries = OVERPASS_CATEGORIES.flatMap(({ tag, values }) =>
+    values.map((v) => `way["${tag}"="${v}"]["name"](around:${radiusM},${lat},${lng});`)
+  );
+
+  const query = `[out:json][timeout:30];(${nodeQueries.join("")}${wayQueries.join("")});out center 80;`;
+
   try {
-    const params = new URLSearchParams({
-      ll: `${city.lat},${city.lng}`,
-      radius: String(city.radiusM),
-      categories: FOURSQUARE_CATEGORIES,
-      sort: "RATING",
-      limit: String(MAX_PER_SOURCE_PER_CITY),
-      fields: "name,categories,location,rating,popularity,tips,price",
-    });
-
-    const response = await fetch(`https://api.foursquare.com/v3/places/search?${params}`, {
-      headers: {
-        Authorization: FOURSQUARE_KEY,
-        Accept: "application/json",
-      },
+    const response = await fetch("https://overpass-api.de/api/interpreter", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `data=${encodeURIComponent(query)}`,
     });
 
     if (!response.ok) {
-      console.warn(`  Foursquare ${city.cityId}: HTTP ${response.status}`);
+      console.warn(`  Overpass ${city.cityId}: HTTP ${response.status}`);
       return [];
     }
 
     const data = await response.json();
-    return (data.results ?? []).map((venue) => ({
-      cityId: city.cityId,
-      name: venue.name,
-      neighborhood: venue.location?.neighborhood?.[0] ?? venue.location?.locality ?? "",
-      category: venue.categories?.[0]?.name ?? "",
-      rating: venue.rating ?? null,
-      popularity: venue.popularity ?? null,
-      lat: venue.location?.lat ?? null,
-      lng: venue.location?.lng ?? null,
-      fact: buildFoursquareFact(venue),
-      source: "foursquare",
-    }));
+    const elements = data.elements ?? [];
+
+    // Shuffle and take top N to get variety each run
+    const shuffled = elements.sort(() => Math.random() - 0.5);
+
+    return shuffled.slice(0, MAX_PER_SOURCE_PER_CITY).map((el) => {
+      const tags = el.tags ?? {};
+      const elLat = el.lat ?? el.center?.lat ?? null;
+      const elLng = el.lon ?? el.center?.lon ?? null;
+      const category = tags.amenity ?? tags.shop ?? tags.leisure ?? tags.tourism ?? "";
+      const neighborhood = tags["addr:suburb"] ?? tags["addr:neighbourhood"] ?? tags["addr:district"] ?? tags["addr:city"] ?? "";
+
+      return {
+        cityId: city.cityId,
+        name: tags.name,
+        neighborhood,
+        category,
+        rating: null,
+        lat: elLat,
+        lng: elLng,
+        fact: buildOverpassFact(tags),
+        source: "openstreetmap",
+      };
+    }).filter((p) => p.name);
   } catch (err) {
-    console.warn(`  Foursquare ${city.cityId}: ${err.message}`);
+    console.warn(`  Overpass ${city.cityId}: ${err.message}`);
     return [];
   }
 }
 
-function buildFoursquareFact(venue) {
+function buildOverpassFact(tags) {
   const parts = [];
-  if (venue.rating) parts.push(`rated ${venue.rating.toFixed(1)}/10`);
-  if (venue.price) parts.push(`price level ${venue.price}`);
-  // Use first tip as flavor if available
-  const tip = venue.tips?.[0]?.text;
-  if (tip && tip.length < 120) parts.push(`"${tip}"`);
+  if (tags.cuisine) parts.push(tags.cuisine.replace(/;/g, ", "));
+  if (tags.opening_hours) parts.push(`hours: ${tags.opening_hours.slice(0, 50)}`);
+  if (tags.outdoor_seating === "yes") parts.push("outdoor seating");
+  if (tags.wheelchair === "yes") parts.push("wheelchair accessible");
+  if (tags.website) parts.push("has website");
   return parts.join(", ");
 }
 
@@ -209,7 +207,7 @@ async function fetchGoogle(city) {
           name: place.name,
           neighborhood: extractGoogleNeighborhood(place.vicinity ?? ""),
           category: type,
-          rating: place.rating ? place.rating * 2 : null, // normalize to /10
+          rating: place.rating ? place.rating * 2 : null,
           lat: place.geometry?.location?.lat ?? null,
           lng: place.geometry?.location?.lng ?? null,
           fact: buildGoogleFact(place),
@@ -236,7 +234,6 @@ function buildGoogleFact(place) {
 }
 
 function extractGoogleNeighborhood(vicinity) {
-  // vicinity is typically "Street, Neighborhood" or "Street, City"
   const parts = vicinity.split(",");
   return parts[parts.length - 2]?.trim() ?? parts[0]?.trim() ?? "";
 }

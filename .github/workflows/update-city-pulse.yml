@@ -45,10 +45,9 @@ jobs:
       - name: Fetch city news
         run: node scripts/fetch-city-news.mjs
 
-      - name: Fetch city places from Foursquare + Google
+      - name: Fetch city places from Overpass + Google
         continue-on-error: true
         env:
-          FOURSQUARE_API_KEY: ${{ secrets.FOURSQUARE_API_KEY }}
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
         run: node scripts/fetch-city-places.mjs
 
