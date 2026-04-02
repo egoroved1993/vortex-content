@@ -69,19 +69,18 @@ for (const city of CITY_CONFIGS) {
 
   try {
     const params = new URLSearchParams({
-      "location.latitude": String(city.lat),
-      "location.longitude": String(city.lng),
-      "location.within": `${city.withinKm}km`,
-      "start_date.range_start": startRange,
-      "start_date.range_end": endRange,
-      expand: "venue,category",
-      sort_by: "date",
+      latitude: String(city.lat),
+      longitude: String(city.lng),
+      within: `${city.withinKm}km`,
+      "date_range": "this_week",
       page_size: "50",
-      token: EVENTBRITE_API_KEY,
     });
 
-    const response = await fetch(`${BASE_URL}/events/search/?${params}`, {
-      headers: { "Accept": "application/json" },
+    const response = await fetch(`${BASE_URL}/destination/search/?${params}`, {
+      headers: {
+        "Accept": "application/json",
+        "Authorization": `Bearer ${EVENTBRITE_API_KEY}`,
+      },
     });
 
     if (!response.ok) {
@@ -90,7 +89,7 @@ for (const city of CITY_CONFIGS) {
     }
 
     const data = await response.json();
-    const events = data.events ?? [];
+    const events = data.events?.results ?? data.events ?? [];
     console.log(`  ${events.length} events returned`);
 
     const filtered = events
