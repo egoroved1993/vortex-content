@@ -98,16 +98,16 @@ console.log(JSON.stringify(countBy(deduped, (p) => p.cityId), null, 2));
 // --- Overpass (OpenStreetMap) ---
 
 async function fetchOverpass(city) {
-  const radiusM = city.radiusM;
-  const lat = city.lat;
-  const lng = city.lng;
+  // Convert radius to a rough bbox (~0.03 deg ≈ 3km)
+  const delta = city.radiusM / 111000;
+  const south = (city.lat - delta).toFixed(4);
+  const north = (city.lat + delta).toFixed(4);
+  const west = (city.lng - delta).toFixed(4);
+  const east = (city.lng + delta).toFixed(4);
+  const bbox = `${south},${west},${north},${east}`;
 
-  // Build Overpass QL query — only nodes, limited categories, small output
-  const nodeQueries = OVERPASS_CATEGORIES.flatMap(({ tag, values }) =>
-    values.map((v) => `node["${tag}"="${v}"]["name"](around:${radiusM},${lat},${lng});`)
-  );
-
-  const query = `[out:json][timeout:25];(${nodeQueries.join("")});out 60;`;
+  // Use regex to match multiple amenity values in one query — much faster than separate queries
+  const query = `[out:json][timeout:25];(node["amenity"~"bar|pub|cafe|restaurant"]["name"](${bbox});node["tourism"~"gallery|museum"]["name"](${bbox}););out 60;`;
 
   try {
     const response = await fetch("https://overpass-api.de/api/interpreter", {
