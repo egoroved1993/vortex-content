@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-02T21:46:56.301Z",
+    "capturedAt": "2026-04-02T22:40:37.396Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 349
+    "totalItems": 352
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-02T21:46:56.301Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-04-02T22:40:37.396Z",
+      "mood_score": 0.47,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -55,7 +55,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Moor Park and Amersham due to train cancellations. Tickets being accepted on Ch"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier points failure at King's Cross St. Pancras."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Monday 30, Tuesday 31 March, Wednesday 1 and Thursday 2 April, after 2330 each evening, no service betwee"
         },
         {
           "source_family": "news",
@@ -64,39 +80,23 @@
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "Wandsworth agrees deal with London Square for social rent homes - UK Property Forums. Wandsworth agrees deal with London Square for social rent homes"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.88,
-          "excerpt": "Is it too soon to expect warm weather? - BBC. Is it too soon to expect warm weather?"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "'Fake landlord lied that his dad had died to scam my deposit' - BBC. 'Fake landlord lied that his dad had died to scam my deposit'"
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.074,
+        "source_item_count": 57,
+        "average_valence": -0.09,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-02T21:46:56.301Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-02T22:40:37.396Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,14 +126,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "A brisk chill hangs in the air, with gray clouds looming overhead threatening a drizzle at any moment.. With the buses and U-Bahn back in operation, commuters seem both relieved an"
         },
         {
           "source_family": "world",
@@ -151,6 +144,14 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, with a heavy curtain of clouds that threatens rain, occasionally filtering the weak sunlight into a pale glow.. The mood along the U-Bahn platforms is tens"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -160,20 +161,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.018,
+        "source_item_count": 92,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.928
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-02T21:46:56.301Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-02T22:40:37.396Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -196,14 +197,6 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a real local by how they know to avoid Dolores Park on weekends; the blanket chaos is a dead giveaway fo"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell who's local by their disdain for BART - they know to plan for delays like it's a second job. Tourists ju"
@@ -222,7 +215,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a moody gray, pinched with the chill of early autumn, while a light drizzle brushes against the iconic Golden Gate Bridge.. Frustration hangs in the air as commuters shu"
+          "excerpt": "The sky is a heavy gray, pregnant with the scent of rain that never quite falls, cloaking the city in a chilly embrace.. BART riders fume on crowded platforms as another train dela"
         },
         {
           "source_family": "review",
@@ -231,23 +224,31 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.047,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-02T21:46:56.301Z",
-      "mood_score": 0.443,
+      "captured_at": "2026-04-02T22:40:37.396Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -256,7 +257,7 @@
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 102,
+        "social": 100,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -310,14 +311,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 148,
-        "average_valence": -0.019,
+        "source_item_count": 146,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.954
+        "freshness_score": 0.952
       }
     }
   ]
