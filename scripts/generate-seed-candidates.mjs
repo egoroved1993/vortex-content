@@ -397,7 +397,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   // These are the most common AI-detection signals found in real output analysis.
   // Inject city slug for maps links
   const citySlug = encodeURIComponent(JOB_CITY_NAMES[job.cityId] ?? job.cityId);
-  base += `\n\nLINKS RULE: If your message names ANY specific location — bar, restaurant, café, market, metro station, street, square, park, museum, venue, neighbourhood, or landmark — include exactly one Google Maps link: {"type":"maps","url":"https://maps.google.com/?q=PLACE_NAME+${citySlug}","label":"PLACE_NAME"}. Replace PLACE_NAME with the actual name from your message. This is mandatory whenever a named place appears. If truly no place is named, output "links": [].`;
+  base += `\n\nLINKS RULE: At least 40% of messages should name a specific real location — a bar, restaurant, café, market, metro station, street, square, park, museum, venue, or landmark that actually exists in the city. When a named place appears, include exactly one Google Maps link: {"type":"maps","url":"https://maps.google.com/?q=PLACE_NAME+${citySlug}","label":"PLACE_NAME"}. Replace PLACE_NAME with the actual name from your message. This is mandatory whenever a named place appears. Prefer naming real places over generic descriptions — "the Thai place on Torrent de l'Olla" is better than "a restaurant nearby". If truly no place is named, output "links": [].`;
 
   base += "\n\nHARD RULES — violating any of these makes the message unusable:";
   base += "\n- No rhetorical questions. ('do we all just...', 'anybody else...', 'ever notice how...' — all banned.)";

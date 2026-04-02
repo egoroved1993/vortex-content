@@ -90,6 +90,7 @@ let allRows = rewritten.map((r) => ({
   author_number:     null,
   created_at:        randomTimeToday(),
   expires_at:        expiresAt,
+  payload:           r.links?.length ? JSON.stringify({ links: r.links }) : null,
 }));
 
 // ── Enforce per-city language caps (e.g. Barcelona max 25% Russian) ──────────
@@ -254,18 +255,22 @@ Rules:
 - Do NOT add emojis or hashtags
 - Each rewrite should feel self-contained — a stranger reading it cold should understand it
 
-Return JSON: {"rewrites": [{"text": "<rewritten text>", "language": "<2-letter ISO code>"}]} in same order.`,
+LINKS: If your rewritten message names ANY specific real location (bar, restaurant, café, market, metro station, street, square, park, museum, venue, landmark), include a Google Maps link. At least 40% of rewrites should reference a named place — prefer concrete place names over generic descriptions.
+
+Return JSON: {"rewrites": [{"text": "<rewritten text>", "language": "<2-letter ISO code>", "links": [{"type":"maps","url":"https://maps.google.com/?q=PLACE_NAME+CITY","label":"PLACE_NAME"}]}]} in same order. If no place is named, use "links": [].`,
       `Rewrite these ${batch.length} messages through their assigned personas:\n\n${numbered}`,
-      1500
+      2000
     );
 
-    const batchRewrites = result?.rewrites ?? batch.map((a) => ({ text: a.snippet.body, language: a.snippet.language ?? "ru" }));
+    const batchRewrites = result?.rewrites ?? batch.map((a) => ({ text: a.snippet.body, language: a.snippet.language ?? "ru", links: [] }));
     for (let j = 0; j < batch.length; j++) {
       const rewrite = batchRewrites[j];
+      const links = (typeof rewrite === "object" && Array.isArray(rewrite?.links)) ? rewrite.links.filter((l) => l?.url) : [];
       results.push({
         cityId: batch[j].snippet.cityId,
         content: (typeof rewrite === "string" ? rewrite : rewrite?.text) ?? batch[j].snippet.body,
         language: (typeof rewrite === "string" ? (batch[j].snippet.language ?? "ru") : rewrite?.language) ?? "ru",
+        links,
       });
     }
 

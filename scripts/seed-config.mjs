@@ -182,6 +182,7 @@ export const personas = [
     id: "tired_office_worker",
     label: "Tired office worker",
     guidance: "Dry, observant, slightly overstimulated by routine.",
+    linkBehavior: "occasional",
     tags: ["work", "commute", "cost", "resentment"],
   },
   {
@@ -194,18 +195,21 @@ export const personas = [
     id: "service_worker",
     label: "Service worker",
     guidance: "Good at reading people, tired of performative behavior.",
+    linkBehavior: "occasional",
     tags: ["food", "work", "tourist", "resentment"],
   },
   {
     id: "recent_expat",
     label: "Recent expat",
     guidance: "Still translating the city in their head before speaking.",
+    linkBehavior: "occasional",
     tags: ["language", "expat", "identity", "confession"],
   },
   {
     id: "long_time_local",
     label: "Long-time local",
     guidance: "Specific, territorial, lightly defensive about change.",
+    linkBehavior: "occasional",
     tags: ["local", "nostalgia", "gentrification", "city_pride"],
   },
   {
@@ -224,12 +228,14 @@ export const personas = [
     id: "serial_dater",
     label: "Serial dater",
     guidance: "Funny, self-aware, a little tired of city romance scripts.",
+    linkBehavior: "occasional",
     tags: ["dating", "night", "confession", "microdrama"],
   },
   {
     id: "financially_stressed_renter",
     label: "Financially stressed renter",
     guidance: "Measures the city through price, compromise, and shame.",
+    linkBehavior: "occasional",
     tags: ["cost", "gentrification", "resentment", "identity"],
   },
   {
@@ -275,6 +281,7 @@ export const personas = [
     label: "Russian émigré",
     guidance: "Arrived 1-3 years ago, left Russia voluntarily or not. Observes Barcelona with the precision of someone comparing it daily to Moscow or St. Petersburg. Dry, occasionally surprised by warmth, sometimes melancholic without drama.",
     languageOverride: "Write in Russian. Embed Spanish nouns naturally where a Russian expat would borrow them — piso, metro, mercado, empadronamiento, bono social, barrio — without translating them back to Russian. Do not transliterate Spanish into Cyrillic. Keep Russian casual and unpolished, not literary.",
+    linkBehavior: "occasional",
     cityOnly: "barcelona",
     tags: ["expat", "identity", "confession", "language"],
   },
@@ -315,6 +322,7 @@ export const personas = [
     label: "Mission District Latino",
     guidance: "SF Mission resident — Mexican or Central American family background, 2nd generation or recent arrival. Watches the neighbourhood change around them. Food, community, displacement, loyalty.",
     languageOverride: "Write in casual Spanglish — Spanish with English mixed in, or English with Spanish phrases, however it flows naturally. Not a bilingual performance, just how people actually talk: 'el landlord me mandó un notice', 'la taquería packed with techies taking photos'. Currency: USD — use $.",
+    linkBehavior: "occasional",
     cityOnly: "sf",
     tags: ["local", "gentrification", "food", "identity"],
   },
@@ -1015,7 +1023,7 @@ export function buildPrompt(job) {
     `Difficulty target: ${sourceProfile.guidance}`,
     ...(persona?.linkBehavior === "occasional"
       ? [
-          "This persona occasionally shares references — a specific article title, link fragment, or named source — when it feels natural. Include one if it fits organically (e.g. 'saw this piece on...', a partial URL, a publication name). Skip it if it would feel forced.",
+          "LINK REQUIRED: This persona shares real references. Your message MUST mention a specific place, venue, bar, restaurant, shop, street, station, or landmark by name. This naturally produces a Google Maps link in the links field. Think of it as: this person doesn't just observe — they name the exact spot. At least 80% of messages from this persona should reference a named location.",
         ]
       : []),
     "This message must be interesting even if there were no guessing mechanic.",
