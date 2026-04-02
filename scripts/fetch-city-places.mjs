@@ -46,9 +46,7 @@ const CITY_CONFIGS = [
 ];
 
 const OVERPASS_CATEGORIES = [
-  { tag: "amenity", values: ["bar", "pub", "cafe", "restaurant", "nightclub", "arts_centre", "theatre", "cinema"] },
-  { tag: "shop", values: ["books"] },
-  { tag: "leisure", values: ["park"] },
+  { tag: "amenity", values: ["bar", "pub", "cafe", "restaurant"] },
   { tag: "tourism", values: ["gallery", "museum"] },
 ];
 
@@ -104,15 +102,12 @@ async function fetchOverpass(city) {
   const lat = city.lat;
   const lng = city.lng;
 
-  // Build Overpass QL query for all categories
+  // Build Overpass QL query — only nodes, limited categories, small output
   const nodeQueries = OVERPASS_CATEGORIES.flatMap(({ tag, values }) =>
     values.map((v) => `node["${tag}"="${v}"]["name"](around:${radiusM},${lat},${lng});`)
   );
-  const wayQueries = OVERPASS_CATEGORIES.flatMap(({ tag, values }) =>
-    values.map((v) => `way["${tag}"="${v}"]["name"](around:${radiusM},${lat},${lng});`)
-  );
 
-  const query = `[out:json][timeout:30];(${nodeQueries.join("")}${wayQueries.join("")});out center 80;`;
+  const query = `[out:json][timeout:25];(${nodeQueries.join("")});out 60;`;
 
   try {
     const response = await fetch("https://overpass-api.de/api/interpreter", {
