@@ -1,54 +1,46 @@
 {
   "meta": {
-    "capturedAt": "2026-03-21T10:15:11.594Z",
+    "capturedAt": "2026-04-02T21:46:56.301Z",
     "sourceFiles": {
-      "public": "/Users/worldfamousnobody/Vortex/github-actions/content/public-human-comments.json",
-      "review": "/Users/worldfamousnobody/Vortex/github-actions/content/place-review-snippets.json",
-      "forum": "/Users/worldfamousnobody/Vortex/github-actions/content/forum-snippets.json",
-      "signals": "/Users/worldfamousnobody/Vortex/github-actions/content/city-signals.json",
-      "news": "/Users/worldfamousnobody/Vortex/github-actions/content/news-snippets.json",
-      "social": "/Users/worldfamousnobody/Vortex/github-actions/content/social-snippets.json",
-      "world": "/Users/worldfamousnobody/Vortex/github-actions/content/world-trends.json",
-      "nightlife": "/Users/worldfamousnobody/Vortex/github-actions/content/ra-berlin-events.json",
-      "trends": "/Users/worldfamousnobody/Vortex/github-actions/content/google-trends.json",
-      "transport": "/Users/worldfamousnobody/Vortex/github-actions/content/transport-signals.json",
-      "weather": "/Users/worldfamousnobody/Vortex/github-actions/content/weather-signals.json",
-      "sports": "/Users/worldfamousnobody/Vortex/github-actions/content/sports-signals.json"
+      "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
+      "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
+      "forum": "/home/runner/work/vortex-content/vortex-content/content/forum-snippets.json",
+      "signals": "/home/runner/work/vortex-content/vortex-content/content/city-signals.json",
+      "news": "/home/runner/work/vortex-content/vortex-content/content/news-snippets.json",
+      "social": "/home/runner/work/vortex-content/vortex-content/content/social-snippets.json",
+      "world": "/home/runner/work/vortex-content/vortex-content/content/world-trends.json",
+      "nightlife": "/home/runner/work/vortex-content/vortex-content/content/ra-berlin-events.json",
+      "trends": "/home/runner/work/vortex-content/vortex-content/content/google-trends.json",
+      "transport": "/home/runner/work/vortex-content/vortex-content/content/transport-signals.json",
+      "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
+      "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 275
+    "totalItems": 349
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-03-21T10:15:11.594Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-04-02T21:46:56.301Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 8,
+        "news": 25,
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "the only way to stay sane here is to treat every overground delay like a personal insult you are too tired to process properly"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -63,57 +55,67 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Saturday 21 March, no service between Whitechapel and Shenfield. The limited ELIZABETH LINE services to/"
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier points failure at King's Cross St. Pancras."
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Liberty: Planned Closure LIBERTY LINE: Saturday 21 and Sunday 22 March, no service between Romford and Upminster. Use local London Buses routes 1"
+          "recency_weight": 0.88,
+          "excerpt": "Wandsworth agrees deal with London Square for social rent homes - UK Property Forums. Wandsworth agrees deal with London Square for social rent homes"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.88,
+          "excerpt": "Is it too soon to expect warm weather? - BBC. Is it too soon to expect warm weather?"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 21 and Sunday 22 March, no service between Cockfosters and Uxbridge (including Friday and Satu"
+          "recency_weight": 0.72,
+          "excerpt": "'Fake landlord lied that his dad had died to scam my deposit' - BBC. 'Fake landlord lied that his dad had died to scam my deposit'"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.166,
+        "source_item_count": 53,
+        "average_valence": -0.074,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.956
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-03-21T10:15:11.594Z",
-      "mood_score": 0.367,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, language. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-02T21:46:56.301Z",
+      "mood_score": 0.494,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 8,
-        "social": 2,
+        "news": 25,
+        "social": 3,
         "world": 5,
+        "nightlife": 40,
         "trends": 8,
         "weather": 1
       },
       "languages": [
         "de",
-        "en"
+        "en",
+        "ru"
       ],
       "drivers": [
         {
@@ -125,28 +127,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "ringbahn delay this morning and one entire carriage somehow looked dressed for three different emotional climates at once"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "nothing says berlin rent discourse like a new cafe where the stools look temporary but the prices sound permanent"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "the best version of sunday closure is when the whole city goes quiet enough that the spati fridge suddenly sounds philosophical"
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "A brisk chill hangs in the air, with gray clouds looming overhead threatening a drizzle at any moment.. With the buses and U-Bahn back in operation, commuters seem both relieved an"
         },
         {
           "source_family": "world",
@@ -155,32 +141,48 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "It's 205 euros not 205 thousand. For whatever reason Berlin demands that you prepay taxes. We needed up getting a tax advisor because this shit was so complicated"
         }
       ],
       "metadata": {
-        "source_item_count": 44,
-        "average_valence": -0.096,
+        "source_item_count": 91,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
-          "language"
+          "transit"
         ],
-        "freshness_score": 0.952
+        "freshness_score": 0.927
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-03-21T10:15:11.594Z",
-      "mood_score": 0.281,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-02T21:46:56.301Z",
+      "mood_score": 0.484,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 8,
+        "news": 25,
         "social": 2,
         "world": 5,
         "trends": 8,
@@ -199,20 +201,28 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a real local by how they know to avoid Dolores Park on weekends; the blanket chaos is a dead giveaway fo"
         },
         {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "muni delay this morning and the guy next to me kept refreshing his startup dashboard like the train personally owed his seed round something"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell who's local by their disdain for BART - they know to plan for delays like it's a second job. Tourists ju"
         },
         {
           "source_family": "public",
-          "source_origin": "curated_public_fallback",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "people talk about sf like the fog makes everything poetic. mostly it just gives you two wrong outfits and one expensive coffee decision before noon"
+          "excerpt": "Socially I’m sure it was quite constructive. I bet at least few people left there with very good sense of community and achievement. I’m sure some people were unemployed and maybe "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a moody gray, pinched with the chill of early autumn, while a light drizzle brushes against the iconic Golden Gate Bridge.. Frustration hangs in the air as commuters shu"
         },
         {
           "source_family": "review",
@@ -221,41 +231,32 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a churn of gray clouds, promising rain yet holding off, while a cool breeze carries the scent of the bay.. Muni buses are bustling with a mix of commuters and tourists, "
         }
       ],
       "metadata": {
-        "source_item_count": 44,
-        "average_valence": -0.056,
+        "source_item_count": 57,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.945
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-03-21T10:15:11.594Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-02T21:46:56.301Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 8,
-        "social": 93,
+        "news": 25,
+        "social": 102,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -276,28 +277,28 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
-          "source_family": "public",
-          "source_origin": "curated_public_fallback",
-          "language": "en",
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "people say barcelona is effortless but half the city runs on carefully managed lateness and pretending the rent conversation can wait another month"
+          "recency_weight": 1,
+          "excerpt": "я улетала вчера утром, никаких проблем и задержек не было, но где-то читала что это только 1го числа , а в остальные дни бастуют"
         },
         {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "А мы вот и сами не очень хотели наличку, тк вроде переводом как-то безопаснее для самих арендаторов (нас)"
+          "recency_weight": 1,
+          "excerpt": "У забстовок, кажется, есть часы, они не весь день не работают. Мы летали Бильбао-Мадрид ток что туда-обратно, рейс, который попал на \"обычные\" рабочие часы был спокойный, всё как в"
         },
         {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "\"они\" это ТБС или арендодатель?"
+          "recency_weight": 1,
+          "excerpt": "Привет Гирички 🙌 Поделитесь, пожалуйста, знает ли кто где можно снять в аренду жилье помесячно? Не на долгосрочную аренду. Спасибо 🙏"
         },
         {
           "source_family": "world",
@@ -309,14 +310,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 135,
+        "source_item_count": 148,
         "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.938
+        "freshness_score": 0.954
       }
     }
   ]
