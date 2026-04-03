@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-03T16:52:51.953Z",
+    "capturedAt": "2026-04-03T17:41:57.301Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-03T16:52:51.953Z",
-      "mood_score": 0.417,
+      "captured_at": "2026-04-03T17:41:57.301Z",
+      "mood_score": 0.428,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
         "review": 2,
@@ -41,14 +41,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Heard a guy on the 133 talking about his late-night fish delivery job—said he’s seen more drunks than the local pub on Friday. Pure chaos out there."
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -80,23 +72,31 @@
           "valence": 0.5,
           "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Reduced Service LIONESS LINE: Good Friday, 3 April, a reduced service operates between Euston and Willesden Junction."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "When London set for warm weather after Storm Dave Easter showers - My London. When London set for warm weather after Storm Dave Easter showers"
         }
       ],
       "metadata": {
         "source_item_count": 59,
-        "average_valence": -0.099,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-03T16:52:51.953Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-04-03T17:41:57.301Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -127,20 +127,20 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Hi!! I’ll be in Berlin for 1.5 days next week and I’d really appreciate some recommendations for a good and crispy pork knuckle meal. From what I know, there’s Zur Haxe and I’m con"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a crisp, vibrant blue, with hints of autumn's chill threading through the air as leaves crunch underfoot.. Though the U-Bahn is running after the recent strike ended, th"
         },
         {
           "source_family": "world",
@@ -161,19 +161,19 @@
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.03,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.932
+        "freshness_score": 0.935
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-03T16:52:51.953Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-03T17:41:57.301Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -209,54 +209,54 @@
           "excerpt": "Look into Airbnb/vbro/Expedia listings for studios in the southeast side of the city (Dogpatch, potrero, bayview, excelsior, parts of the mission). More expensive will be Noe valle"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "San Francisco could hit 80 degrees again as warmth surges back - San Francisco Chronicle. San Francisco could hit 80 degrees again as warmth surges back"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s local when they just shrug at a BART delay and say, 'At least it’s not raining today.' Th"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a tux on a Muni bus, clutching a bouquet—clearly late to a wedding. The bus hit a pothole, and he almost flew. Classic "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, heavy with the threat of fog rolling in from the bay, casting a soft chill on the still-bustling streets.. BART is a mess today, with commuters grimly star"
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.037,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.841
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-03T16:52:51.953Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-04-03T17:41:57.301Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 84,
+        "social": 86,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -285,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun blazes down with a relentless heat, casting sharp shadows on the cobblestones of the Gothic Quarter.. Despite a significant strike affecting Rodalies, a crowd of determined"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -299,25 +307,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "brunch cafe. El Born. Perfect place to watch twelve people cosplay moving to Barcelona for six months. Food fine, prices targeted at people who say barrio like they invented the wo"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists always ask why there's no 'traditional' Catalan breakfast. We just grab a coffee and pastry on the go. Eating at home "
         }
       ],
       "metadata": {
-        "source_item_count": 130,
-        "average_valence": -0.009,
+        "source_item_count": 132,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.954
+        "freshness_score": 0.958
       }
     }
   ]
