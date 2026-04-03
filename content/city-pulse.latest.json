@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-03T05:12:38.850Z",
+    "capturedAt": "2026-04-03T07:20:43.959Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 349
+    "totalItems": 353
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-03T05:12:38.850Z",
-      "mood_score": 0.416,
+      "captured_at": "2026-04-03T07:20:43.959Z",
+      "mood_score": 0.423,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
         "review": 2,
@@ -63,14 +63,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Peckham is trendy AF when were you last there? If you hate sourdough bread and artisan coffee and smashed avocado then Peckham's not for you but the idea that it's rough hasn't bee"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "Demand is how many of X thing people are willing and able to buy at a given price. Regulations that increase the price reduce demand. For example, reserving the land around tube st"
         },
         {
@@ -80,28 +72,36 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Things that instantly reveal you just moved here. Dalston. You still call it 'the Tube' instead of just 'the trains,' and you look genuinely surprised when they run late on weekend"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Lioness: Reduced Service LIONESS LINE: Good Friday, 3 April, a reduced service operates between Euston and Willesden Junction."
         }
       ],
       "metadata": {
         "source_item_count": 61,
-        "average_valence": -0.101,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-03T05:12:38.850Z",
-      "mood_score": 0.436,
+      "captured_at": "2026-04-03T07:20:43.959Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -127,14 +127,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin do you see spontaneous techno parties in abandoned factories. It’s a unique blend of creativity and chaos "
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -156,29 +148,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hovers over Berlin, occasionally releasing brief, chilly sprinkles that catch the afternoon light.. BVG trains are running on schedule, but the air is thi"
+          "excerpt": "The sky hangs heavy with dark clouds, a chilly breeze carries the scent of impending rain through the streets.. Despite recent disruptions, the trains are running smoothly today, w"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "They should close the Bridge for cars completely! No one should use a car in the S-Bahn Ring. It's ridiculous. We have 2026 and people still behave as if it's the 90ies."
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.042,
+        "source_item_count": 94,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.922
+        "freshness_score": 0.923
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-03T05:12:38.850Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-03T07:20:43.959Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,20 +193,20 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught a guy juggling at the Civic Center stop while a bus driver was handing out snacks. Only in San Francisco do transit delays tu"
+          "excerpt": "As I said on your other post SF Building inspectors and the SF rent board Sftu will just tell you the same thing. Go directly to the rent board online and read about what you need "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun struggles to break through a thick blanket of fog, casting a soft gray hue over the bustling streets.. The BART station is unusually chaotic, with frustrated commuters hudd"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "You don't even know me and you're already making comments like this. Maybe I am, maybe I'm not, but why the prejudgement? Let's communicate your way: next time, try adding another "
         },
         {
           "source_family": "review",
@@ -234,29 +234,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.036,
+        "source_item_count": 55,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.844
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-03T05:12:38.850Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-03T07:20:43.959Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 100,
+        "social": 97,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -310,14 +310,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 146,
-        "average_valence": -0.02,
+        "source_item_count": 143,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.925
+        "freshness_score": 0.924
       }
     }
   ]
