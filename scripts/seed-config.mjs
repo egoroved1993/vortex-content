@@ -333,6 +333,10 @@ export const cities = [
     id: "london",
     name: "London",
     languageGuidance: "Write in casual contemporary English with mild London dryness. No fake cockney. Currency: GBP — use £ and p (pounds/pence), never dollars or euros.",
+    languageDistribution: [
+      { lang: "en", weight: 0.85, guidance: "Write in casual contemporary English with mild London dryness. No fake cockney. Currency: GBP — use £ and p (pounds/pence), never dollars or euros." },
+      { lang: "ru", weight: 0.15, guidance: "Write in casual Russian. London-specific words left in English where natural — tube, Oyster, flat share, council tax, Tesco. Not literary Russian — casual, как в чате." },
+    ],
     defaultAnchors: [
       "victoria line platform",
       "zone 2 flat share",
@@ -365,6 +369,11 @@ export const cities = [
     id: "berlin",
     name: "Berlin",
     languageGuidance: "Write in English that feels local to Berlin expat/local life. A little bluntness is okay. No cliches about techno unless earned. Currency: EUR — use € (euros), never dollars or pounds.",
+    languageDistribution: [
+      { lang: "en", weight: 0.50, guidance: "Write in English that feels local to Berlin expat/local life. A little bluntness is okay. No cliches about techno unless earned. Currency: EUR — use € (euros), never dollars or pounds." },
+      { lang: "de", weight: 0.25, guidance: "Schreib auf lockerem Deutsch — wie jemand der in Berlin lebt und tippt. Umgangssprache, nicht Hochdeutsch. Spezifische Berliner Wörter (Späti, Kiez, Anmeldung) einfach benutzen. Währung: EUR — benutze € (Euro)." },
+      { lang: "ru", weight: 0.25, guidance: "Write in casual Russian. Berlin-specific words left in original where natural — Anmeldung, WG, Späti, Kiez, Bürgeramt. Casual, не литературный русский." },
+    ],
     defaultAnchors: [
       "u8 platform",
       "spati fridge",
@@ -397,6 +406,11 @@ export const cities = [
     id: "sf",
     name: "San Francisco",
     languageGuidance: "Write in modern American English. Avoid startup parody unless the scene really supports it. Currency: USD — use $ and cents (dollars), never euros or pounds.",
+    languageDistribution: [
+      { lang: "en", weight: 0.60, guidance: "Write in modern American English. Avoid startup parody unless the scene really supports it. Currency: USD — use $ and cents (dollars), never euros or pounds." },
+      { lang: "es", weight: 0.25, guidance: "Escribe en español coloquial — como alguien del Mission o de un barrio latino de SF. Mezcla palabras en inglés donde sea natural: rent, BART, Muni, tech bro, layoff. Moneda: USD — usa $ (dólares)." },
+      { lang: "ru", weight: 0.15, guidance: "Write in casual Russian. SF-specific words left in English where natural — BART, Muni, tech, startup, layoff, rent control. Casual Russian, не литературный." },
+    ],
     defaultAnchors: [
       "muni delay",
       "fog pushing into the sunset",
@@ -428,6 +442,12 @@ export const cities = [
     id: "barcelona",
     name: "Barcelona",
     languageGuidance: "Write in casual English that can lightly reflect multilingual city life. A small Catalan or Spanish detail is okay if natural. Currency: EUR — use € (euros), never dollars or pounds. Never say 'bucks'.",
+    languageDistribution: [
+      { lang: "en", weight: 0.35, guidance: "Write in casual English that can lightly reflect multilingual city life. A small Catalan or Spanish detail is okay if natural. Currency: EUR — use € (euros), never dollars or pounds." },
+      { lang: "es", weight: 0.35, guidance: "Escribe en español coloquial — como alguien que vive en Barcelona. Puedes mezclar alguna palabra en catalán donde sea natural (molt bé, barri, colla). No es castellano formal — es como escribiría alguien en un chat. Moneda: EUR — usa € (euros)." },
+      { lang: "ru", weight: 0.25, guidance: "Write in casual Russian. Barcelona-specific words left in Spanish/Catalan where natural — piso, metro, empadronamiento, barrio, vermut, mercat. Casual Russian, не литературный." },
+      { lang: "ca", weight: 0.05, guidance: "Escriu en català col·loquial — com algú que viu a Barcelona i escriu al mòbil. No formal. Moneda: EUR — usa € (euros)." },
+    ],
     defaultAnchors: [
       "superblock corner",
       "metro line 3",
@@ -989,10 +1009,18 @@ export function buildPrompt(job) {
   const tone = tones[job.tone];
   const lane = contentLanes[job.lane];
   const persona = getPersona(job.personaId);
-  const languageGuidance =
-    persona?.languageOverride ??
-    city.personaLanguageOverrides?.[job.personaId] ??
-    city.languageGuidance;
+  // Language priority: persona override > city persona override > weighted random from city distribution > fallback
+  let languageGuidance;
+  if (persona?.languageOverride) {
+    languageGuidance = persona.languageOverride;
+  } else if (city.personaLanguageOverrides?.[job.personaId]) {
+    languageGuidance = city.personaLanguageOverrides[job.personaId];
+  } else if (city.languageDistribution?.length) {
+    const picked = pickWeighted(city.languageDistribution, Math.random);
+    languageGuidance = picked.guidance;
+  } else {
+    languageGuidance = city.languageGuidance;
+  }
   const laneInstructions =
     job.lane === "mind_post"
       ? [

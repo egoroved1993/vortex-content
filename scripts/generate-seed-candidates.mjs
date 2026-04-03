@@ -386,10 +386,23 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   }
 
   // Inject city language guidance (includes currency)
+  // If city has languageDistribution, pick weighted random language for this message
   if (job.cityId) {
     const cityConfig = cities.find((c) => c.id === job.cityId);
-    if (cityConfig?.languageGuidance) {
-      base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${cityConfig.languageGuidance}`;
+    if (cityConfig) {
+      let langGuidance;
+      if (cityConfig.languageDistribution?.length) {
+        const total = cityConfig.languageDistribution.reduce((s, d) => s + d.weight, 0);
+        let roll = Math.random() * total;
+        for (const entry of cityConfig.languageDistribution) {
+          roll -= entry.weight;
+          if (roll <= 0) { langGuidance = entry.guidance; break; }
+        }
+        langGuidance = langGuidance ?? cityConfig.languageGuidance;
+      } else {
+        langGuidance = cityConfig.languageGuidance;
+      }
+      base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${langGuidance}`;
     }
   }
 
