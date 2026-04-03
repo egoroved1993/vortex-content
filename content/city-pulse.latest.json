@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-03T13:20:08.400Z",
+    "capturedAt": "2026-04-03T14:53:50.381Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 347
+    "totalItems": 343
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-03T13:20:08.400Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-04-03T14:53:50.381Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -58,6 +58,14 @@
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Bermondsey. Last night on the 47, a lad was singing to the driver—got a chorus going with the regulars. Made the late ride feel more like a pub evening."
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
@@ -72,31 +80,23 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "'Fake landlord lied that his dad had died to scam my deposit' - BBC. 'Fake landlord lied that his dad had died to scam my deposit'"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "Is it too soon to expect warm weather? - BBC. Is it too soon to expect warm weather?"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.061,
+        "average_valence": -0.076,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-03T13:20:08.400Z",
-      "mood_score": 0.439,
+      "captured_at": "2026-04-03T14:53:50.381Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -132,7 +132,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, heavy with clouds that seem ready to burst, hinting at a chilling rain that never quite arrives.. Despite the recent resolution of the strike, the U-Bah"
         },
         {
           "source_family": "world",
@@ -149,31 +157,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sky is overcast, with a hint of drizzle that creates a reflective sheen on the pavement.. Despite the recent end of the strike, the mood on the U-Bahn is still a mix "
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.031,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.918
+        "freshness_score": 0.916
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-03T13:20:08.400Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-03T14:53:50.381Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -214,15 +214,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can spot a local by how they know to avoid BART delays and take the 14 instead, even when it's the 'most"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a passenger in the back of a crowded bus serenading everyone with an off-key rendition of 'I Left My Heart in San Francisco.' Un"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot the locals by how they nonchalantly avoid the BART delays while newcomers stand confused, clutching thei"
         },
         {
           "source_family": "public",
@@ -231,32 +223,40 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "In what way does BART “try to be both local subway and regional rail”? BART is just a regional rail system where all the lines interline in a central cross-town tunnel in the city "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Just saw a guy in a tuxedo hop on the 31 at Turk, he looked like he just came from a wedding. Only in SF do you see that kind of vib"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.046,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.845
+        "freshness_score": 0.835
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-03T13:20:08.400Z",
+      "captured_at": "2026-04-03T14:53:50.381Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 101,
+        "social": 97,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -288,9 +288,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun casts a golden hue across the streets, while a light breeze stirs the scent of fresh tapas from corner bars.. Despite the ongoing strikes, the Rodalies trains are surprisin"
+          "excerpt": "The sun beats down mercilessly, casting sharp shadows that dance across the bustling streets of the Eixample.. Despite the lingering echoes of the transport strike, the trains are "
         },
         {
           "source_family": "review",
@@ -310,14 +310,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 147,
-        "average_valence": -0.01,
+        "source_item_count": 143,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.952
+        "freshness_score": 0.955
       }
     }
   ]
