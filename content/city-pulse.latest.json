@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-03T02:55:09.418Z",
+    "capturedAt": "2026-04-03T05:12:38.850Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 342
+    "totalItems": 349
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-03T02:55:09.418Z",
-      "mood_score": 0.423,
+      "captured_at": "2026-04-03T05:12:38.850Z",
+      "mood_score": 0.416,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 6,
         "review": 2,
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -47,6 +48,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
           "source_family": "public",
@@ -65,37 +74,29 @@
           "excerpt": "Demand is how many of X thing people are willing and able to buy at a given price. Regulations that increase the price reduce demand. For example, reserving the land around tube st"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.88,
-          "excerpt": "Is it too soon to expect warm weather? - BBC. Is it too soon to expect warm weather?"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "'Fake landlord lied that his dad had died to scam my deposit' - BBC. 'Fake landlord lied that his dad had died to scam my deposit'"
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still call it 'the Tube' instead of just 'the trains,' and you look genuinely surprised when they run late on weekend"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.08,
+        "source_item_count": 61,
+        "average_valence": -0.101,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-03T02:55:09.418Z",
-      "mood_score": 0.437,
+      "captured_at": "2026-04-03T05:12:38.850Z",
+      "mood_score": 0.436,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -150,29 +151,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "They should close the Bridge for cars completely! No one should use a car in the S-Bahn Ring. It's ridiculous. We have 2026 and people still behave as if it's the 90ies."
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hovers over Berlin, occasionally releasing brief, chilly sprinkles that catch the afternoon light.. BVG trains are running on schedule, but the air is thi"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.038,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.926
+        "freshness_score": 0.922
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-03T02:55:09.418Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-04-03T05:12:38.850Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -200,12 +201,12 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Caught a guy juggling at the Civic Center stop while a bus driver was handing out snacks. Only in San Francisco do transit delays tu"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. A true local rolls their eyes at tourists fumbling with the BART map—while they navigate the delays and hot brakes li"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun struggles to break through a thick blanket of fog, casting a soft gray hue over the bustling streets.. The BART station is unusually chaotic, with frustrated commuters hudd"
         },
         {
           "source_family": "review",
@@ -234,21 +235,21 @@
       ],
       "metadata": {
         "source_item_count": 50,
-        "average_valence": -0.054,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.807
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-03T02:55:09.418Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-03T05:12:38.850Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -310,11 +311,11 @@
       ],
       "metadata": {
         "source_item_count": 146,
-        "average_valence": -0.017,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.925
       }
