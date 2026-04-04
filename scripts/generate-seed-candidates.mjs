@@ -1880,7 +1880,7 @@ function inferProvider() {
 }
 
 function defaultModelForProvider(activeProvider) {
-  if (activeProvider === "anthropic") return "claude-3-5-haiku-latest";
+  if (activeProvider === "anthropic") return "claude-haiku-4-5-20251001";
   if (activeProvider === "xai") return "grok-3-fast";
   return "gpt-4o-mini";
 }

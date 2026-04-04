@@ -11,7 +11,7 @@ on:
         required: false
         default: "240"
       model:
-        description: "Model to use (e.g. gpt-4o-mini, grok-3-fast, claude-3-5-haiku-latest)"
+        description: "Model to use (e.g. gpt-4o-mini, grok-3-fast, claude-haiku-4-5-20251001)"
         required: false
         default: "gpt-4o-mini"
       upload:
@@ -80,7 +80,7 @@ jobs:
               1) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
               2) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o ;;
               3) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
-              4) SCHED_PROVIDER=anthropic; SCHED_MODEL=claude-3-5-haiku-latest ;;
+              4) SCHED_PROVIDER=anthropic; SCHED_MODEL=claude-haiku-4-5-20251001 ;;
             esac
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
             echo "count=240" >> "$GITHUB_OUTPUT"
