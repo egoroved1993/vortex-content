@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-04T11:36:35.377Z",
+    "capturedAt": "2026-04-04T13:11:38.657Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 314
+    "totalItems": 308
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-04T11:36:35.377Z",
-      "mood_score": 0.457,
+      "captured_at": "2026-04-04T13:11:38.657Z",
+      "mood_score": 0.466,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -41,14 +41,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "The landlords have really come out in full force on this thread. In reality, no, renters need not worry. The real cause of high rent prices in London is lack of supply of actual ph"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -80,28 +72,36 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Yeah these threads pop up every now and then with people shocked by the idea of lodgers. They’re as old as the London rental market itself, it’s not some kind of symptom of London’"
         }
       ],
       "metadata": {
-        "source_item_count": 62,
-        "average_valence": -0.128,
+        "source_item_count": 58,
+        "average_valence": -0.1,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-04T11:36:35.377Z",
-      "mood_score": 0.385,
+      "captured_at": "2026-04-04T13:11:38.657Z",
+      "mood_score": 0.382,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 1,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,6 +126,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5, 100: Delays 2 trips delayed"
         },
         {
           "source_family": "news",
@@ -149,36 +158,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.044,
+        "source_item_count": 92,
+        "average_valence": -0.052,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.938
+        "freshness_score": 0.935
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-04T11:36:35.377Z",
+      "captured_at": "2026-04-04T13:11:38.657Z",
       "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,7 +199,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Outer Mission. Caught a Muni bus today that was more crowded than a Saturday market. It stopped twice because the driver couldn't hear the stops"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local by how they instinctively dodge the BART delays like they're dodging a pothole—total second natu"
         },
         {
           "source_family": "forum",
@@ -206,7 +207,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they instinctively know to double-check BART schedules before making dinner plans—those"
+          "excerpt": "Muni moments that define this city. Outer Mission. Caught a Muni bus today that was more crowded than a Saturday market. It stopped twice because the driver couldn't hear the stops"
         },
         {
           "source_family": "news",
@@ -234,19 +235,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.041,
+        "source_item_count": 55,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-04T11:36:35.377Z",
+      "captured_at": "2026-04-04T13:11:38.657Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -256,7 +257,7 @@
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 60,
+        "social": 57,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -288,9 +289,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A blanket of gray clouds hangs low over the city, occasionally releasing splatters of gentle rain that glisten on the cobblestones.. The mood on the platforms is tense, with commut"
+          "excerpt": "The sun is shining brightly, casting long shadows on the bustling streets, while a gentle breeze carries the fresh scent of pastries from nearby bakeries.. The mood around the trai"
         },
         {
           "source_family": "review",
@@ -310,14 +311,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.014,
+        "source_item_count": 103,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.903
+        "freshness_score": 0.902
       }
     }
   ]
