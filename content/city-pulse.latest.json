@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-05T03:21:40.435Z",
+    "capturedAt": "2026-04-05T05:49:01.334Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 290
+    "totalItems": 289
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-05T03:21:40.435Z",
-      "mood_score": 0.4,
+      "captured_at": "2026-04-05T05:49:01.334Z",
+      "mood_score": 0.402,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -63,6 +63,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Easter Sunday 5 April, until 0745, no service between Paddington and Ealing Broadway. Please use London"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Planned Closure LIONESS LINE: Saturday 4 and Easter Sunday 5 April, no service between Euston and Watford Junction. There will also be n"
         },
         {
@@ -71,32 +79,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Hackney Central. You still call it the Tube instead of just the Underground, and your face when you hear it's on strike is pricele"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.146,
+        "source_item_count": 58,
+        "average_valence": -0.142,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-05T03:21:40.435Z",
-      "mood_score": 0.339,
+      "captured_at": "2026-04-05T05:49:01.334Z",
+      "mood_score": 0.335,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -133,7 +133,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Miete für Drei-Zimmer-Wohnung in deutschen Großstädten: Stärkster Anstieg in Berlin – Chemnitz am billigsten - MSN. Miete für Drei-Zimmer-Wohnung in deutschen Großstädten: Stärkste"
         },
         {
           "source_family": "world",
@@ -150,36 +158,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs low and ominous, a thick blanket of grey that threatens rain yet clings to a humid warmth as people shuffle under unyielding clouds.. After a rough week of transit st"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.031,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-05T03:21:40.435Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-05T05:49:01.334Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -194,36 +194,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "In theory, Caltrain -> Milbrae -> Bart to 16th is faster. In practice, weekend service around the whole SFO / Milbrae situation may be somewhat unreliable - I had a friend meet me "
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local by how they navigate BART delays without a second thought, while newcomers are still cursing the"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Burlingame is a hoity-toity suburb, but the downtown strip has a couple of good reasonably priced restaurants. I particularly like the Turkish one. You’ll need to go to SF to get y"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick fog rolls in off the bay, dampening the golden hues of the setting sun and leaving a chill in the air.. Frustration palpable at the Civic Center, where commuters find thems"
+          "recency_weight": 1.08,
+          "excerpt": "Bay Area Forecast: Warm Easter Sunday - NBC Bay Area. Bay Area Forecast: Warm Easter Sunday"
         },
         {
           "source_family": "review",
@@ -232,25 +208,49 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of SF tenants stunned by eviction notices despite paying rent - MSN. Dozens of SF tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. there is a very local "
         }
       ],
       "metadata": {
-        "source_item_count": 61,
-        "average_valence": -0.026,
+        "source_item_count": 57,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-05T03:21:40.435Z",
+      "captured_at": "2026-04-05T05:49:01.334Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -291,7 +291,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a bright slate gray, heavy with the promise of rain, while a cool breeze whispers through the narrow streets of Eixample.. The mood on the platforms is a mix of impatien"
+          "excerpt": "The sun is burning brightly, casting sharp shadows against the colorful mosaics of Park Güell, while a gentle breeze carries the scent of fresh paella from a nearby vendor.. Despit"
         },
         {
           "source_family": "review",
@@ -315,10 +315,10 @@
         "average_valence": -0.021,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.862
       }
     }
   ]
