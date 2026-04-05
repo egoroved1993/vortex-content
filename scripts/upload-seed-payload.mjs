@@ -24,11 +24,11 @@ if (!supabaseUrl || !supabaseServiceKey) {
 
 let uploaded = 0;
 for (let index = 0; index < rows.length; index += chunkSize) {
-  const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(); // 7 days TTL
+  // AI messages have NO expiry — they live until manually expired via expire-active-seed-messages.mjs
   const chunk = rows.slice(index, index + chunkSize).map((row) => ({
     ...row,
     created_at: randomTimeToday(),
-    expires_at: expiresAt,
+    expires_at: null,
   }));
   // Use RPC so that created_at override is respected (PostgREST ignores it on direct POST)
   const response = await fetch(`${supabaseUrl}/rest/v1/rpc/bulk_insert_messages`, {
