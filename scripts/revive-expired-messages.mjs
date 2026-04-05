@@ -14,6 +14,9 @@ if (!supabaseUrl || !supabaseServiceKey) {
 
 const nowIso = new Date().toISOString();
 const sevenDaysFromNow = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+// expire-old: kill immediately. revive/cleanup: give 7 more days
+const expireValue = mode === "expire-old" ? nowIso : sevenDaysFromNow;
+console.log(`Mode: ${mode}, will set expires_at to: ${expireValue}`);
 
 const maxAgeDays = Number(args["max-age-days"] ?? 4); // only revive messages created in last N days
 const oldestAllowed = new Date(Date.now() - maxAgeDays * 24 * 60 * 60 * 1000).toISOString();
@@ -63,7 +66,7 @@ const patchResponse = await fetch(
       Authorization: `Bearer ${supabaseServiceKey}`,
       Prefer: "return=minimal",
     },
-    body: JSON.stringify({ expires_at: mode === "expire-old" ? nowIso : sevenDaysFromNow }),
+    body: JSON.stringify({ expires_at: expireValue }),
   }
 );
 
@@ -71,7 +74,7 @@ if (!patchResponse.ok) {
   throw new Error(`Patch failed: ${await patchResponse.text()}`);
 }
 
-console.log(`[${mode}] Updated ${total} AI messages — expires_at set to ${sevenDaysFromNow}`);
+console.log(`[${mode}] Updated ${total} AI messages — expires_at set to ${expireValue}`);
 
 function parseArgs(argv) {
   const parsed = {};
