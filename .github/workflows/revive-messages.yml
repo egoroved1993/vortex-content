@@ -11,8 +11,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Revive all expired AI messages
+      - name: Fix permanent messages (add 7-day TTL)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: node scripts/revive-expired-messages.mjs
+        run: node scripts/revive-expired-messages.mjs --mode cleanup
+      - name: Revive recently expired messages (7-day TTL)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: node scripts/revive-expired-messages.mjs --mode revive

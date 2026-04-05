@@ -1,5 +1,9 @@
-// Removes expires_at from ALL AI messages (author_id IS NULL).
-// This makes all previously expired AI content available again.
+// Sets expires_at on AI messages (author_id IS NULL).
+// --mode revive: expired messages get expires_at = now + 7 days (brings them back)
+// --mode cleanup: messages with expires_at=null get expires_at = now + 7 days (fixes permanent ones)
+
+const args = parseArgs(process.argv.slice(2));
+const mode = args.mode ?? "revive"; // "revive" or "cleanup"
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
@@ -8,9 +12,21 @@ if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error("SUPABASE_URL and SUPABASE_SERVICE_KEY are required");
 }
 
-// Count how many AI messages have an expires_at set
+const nowIso = new Date().toISOString();
+const sevenDaysFromNow = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+
+let filter;
+if (mode === "cleanup") {
+  // Fix messages that were set to expires_at=null (permanent) — give them 7-day TTL
+  filter = `author_id=is.null&expires_at=is.null`;
+} else {
+  // Revive expired messages — set their expiry to 7 days from now
+  filter = `author_id=is.null&expires_at=lt.${encodeURIComponent(nowIso)}`;
+}
+
+// Count
 const countResponse = await fetch(
-  `${supabaseUrl}/rest/v1/messages?select=id&author_id=is.null&expires_at=not.is.null`,
+  `${supabaseUrl}/rest/v1/messages?select=id&${filter}`,
   {
     method: "HEAD",
     headers: {
@@ -23,16 +39,16 @@ const countResponse = await fetch(
 
 const contentRange = String(countResponse.headers.get("content-range") ?? "");
 const total = Number(contentRange.split("/")[1]) || 0;
-console.log(`AI messages with expires_at set: ${total}`);
+console.log(`[${mode}] AI messages to update: ${total}`);
 
 if (total === 0) {
-  console.log("Nothing to revive");
+  console.log("Nothing to do");
   process.exit(0);
 }
 
-// Remove expires_at from all AI messages
+// Patch
 const patchResponse = await fetch(
-  `${supabaseUrl}/rest/v1/messages?author_id=is.null&expires_at=not.is.null`,
+  `${supabaseUrl}/rest/v1/messages?${filter}`,
   {
     method: "PATCH",
     headers: {
@@ -41,12 +57,27 @@ const patchResponse = await fetch(
       Authorization: `Bearer ${supabaseServiceKey}`,
       Prefer: "return=minimal",
     },
-    body: JSON.stringify({ expires_at: null }),
+    body: JSON.stringify({ expires_at: sevenDaysFromNow }),
   }
 );
 
 if (!patchResponse.ok) {
-  throw new Error(`Revive failed: ${await patchResponse.text()}`);
+  throw new Error(`Patch failed: ${await patchResponse.text()}`);
 }
 
-console.log(`Revived ${total} AI messages — expires_at set to NULL`);
+console.log(`[${mode}] Updated ${total} AI messages — expires_at set to ${sevenDaysFromNow}`);
+
+function parseArgs(argv) {
+  const parsed = {};
+  for (let i = 0; i < argv.length; i++) {
+    const token = argv[i];
+    if (!token.startsWith("--")) continue;
+    const [key, val] = token.slice(2).split("=");
+    if (val !== undefined) { parsed[key] = val; continue; }
+    const next = argv[i + 1];
+    if (!next || next.startsWith("--")) { parsed[key] = true; continue; }
+    parsed[key] = next;
+    i++;
+  }
+  return parsed;
+}
