@@ -46,7 +46,7 @@ jobs:
 
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+      # XAI_API_KEY: ${{ secrets.XAI_API_KEY }}  # disabled — credits exhausted, causes pipeline noise
       ANTHROPIC_API_KEY: ${{ secrets.CLAUDE }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
