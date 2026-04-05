@@ -723,10 +723,25 @@ async function generateRepairWithAnthropic(job, modelName, weakDraft, assessment
 
 function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = null } = {}) {
   let parsed;
+  // Strip markdown code fences: ```json ... ``` or ```\n...\n```
+  let cleanRaw = String(rawText ?? "").trim();
+  if (cleanRaw.startsWith("```")) {
+    cleanRaw = cleanRaw.replace(/^```(?:json)?\s*\n?/i, "").replace(/\n?```\s*$/, "").trim();
+  }
   try {
-    parsed = JSON.parse(rawText);
+    parsed = JSON.parse(cleanRaw);
   } catch {
-    parsed = { content: rawText };
+    // Second attempt: extract JSON object from text
+    const jsonMatch = cleanRaw.match(/\{[\s\S]*"content"\s*:[\s\S]*\}/);
+    if (jsonMatch) {
+      try {
+        parsed = JSON.parse(jsonMatch[0]);
+      } catch {
+        parsed = { content: cleanRaw };
+      }
+    } else {
+      parsed = { content: cleanRaw };
+    }
   }
 
   const sanitizedContent = sanitizeGeneratedContent(job, parsed.content);
@@ -854,7 +869,12 @@ function buildMockCandidate(job, index) {
 }
 
 function sanitizeGeneratedContent(job, value) {
-  const cleaned = cleanGeneratedText(value);
+  let cleaned = cleanGeneratedText(value);
+  // Strip leftover JSON wrapper: 'json { "content": "actual text..." ... }'
+  const jsonWrapMatch = cleaned.match(/^json\s*\{\s*"content"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+  if (jsonWrapMatch) {
+    cleaned = jsonWrapMatch[1].replace(/\\n/g, " ").replace(/\\"/g, '"').trim();
+  }
   if (isMinimalSalvageFamily(job.sourceFamily)) {
     return sanitizeMinimalSalvageContent(job, cleaned);
   }
