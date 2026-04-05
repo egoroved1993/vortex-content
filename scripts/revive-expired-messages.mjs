@@ -15,13 +15,19 @@ if (!supabaseUrl || !supabaseServiceKey) {
 const nowIso = new Date().toISOString();
 const sevenDaysFromNow = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
 
+const maxAgeDays = Number(args["max-age-days"] ?? 4); // only revive messages created in last N days
+const oldestAllowed = new Date(Date.now() - maxAgeDays * 24 * 60 * 60 * 1000).toISOString();
+
 let filter;
 if (mode === "cleanup") {
-  // Fix messages that were set to expires_at=null (permanent) — give them 7-day TTL
-  filter = `author_id=is.null&expires_at=is.null`;
+  // Fix messages that were set to expires_at=null — give them 7-day TTL (only recent ones)
+  filter = `author_id=is.null&expires_at=is.null&created_at=gte.${encodeURIComponent(oldestAllowed)}`;
+} else if (mode === "expire-old") {
+  // Kill old messages that shouldn't be active — created before max-age-days ago
+  filter = `author_id=is.null&created_at=lt.${encodeURIComponent(oldestAllowed)}&or=(expires_at.is.null,expires_at.gt.${encodeURIComponent(nowIso)})`;
 } else {
-  // Revive expired messages — set their expiry to 7 days from now
-  filter = `author_id=is.null&expires_at=lt.${encodeURIComponent(nowIso)}`;
+  // Revive recently expired messages (only those created in last N days)
+  filter = `author_id=is.null&expires_at=lt.${encodeURIComponent(nowIso)}&created_at=gte.${encodeURIComponent(oldestAllowed)}`;
 }
 
 // Count
@@ -57,7 +63,7 @@ const patchResponse = await fetch(
       Authorization: `Bearer ${supabaseServiceKey}`,
       Prefer: "return=minimal",
     },
-    body: JSON.stringify({ expires_at: sevenDaysFromNow }),
+    body: JSON.stringify({ expires_at: mode === "expire-old" ? nowIso : sevenDaysFromNow }),
   }
 );
 

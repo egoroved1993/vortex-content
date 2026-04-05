@@ -11,13 +11,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Fix permanent messages (add 7-day TTL)
+      - name: Expire old messages (older than 4 days)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: node scripts/revive-expired-messages.mjs --mode cleanup
-      - name: Revive recently expired messages (7-day TTL)
+        run: node scripts/revive-expired-messages.mjs --mode expire-old --max-age-days 4
+      - name: Fix permanent messages (add 7-day TTL, last 4 days only)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: node scripts/revive-expired-messages.mjs --mode revive
+        run: node scripts/revive-expired-messages.mjs --mode cleanup --max-age-days 4
+      - name: Revive recently expired (last 4 days, 7-day TTL)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: node scripts/revive-expired-messages.mjs --mode revive --max-age-days 4
