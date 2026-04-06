@@ -51,25 +51,8 @@ for (let index = 0; index < rows.length; index += chunkSize) {
 
 console.log(`Finished uploading ${uploaded} rows from ${inputPath}`);
 
-// Spread created_at values randomly across 7:00–23:59 UTC server-side.
-// PostgREST ignores created_at on insert regardless of RPC; the UPDATE below
-// runs RANDOM() per-row inside Postgres, which is the only reliable way.
-const spreadResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/randomize_recent_timestamps`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    apikey: supabaseServiceKey,
-    Authorization: `Bearer ${supabaseServiceKey}`,
-  },
-  body: JSON.stringify({ window_minutes: 180 }),
-});
-
-if (!spreadResponse.ok) {
-  console.warn(`Warning: timestamp spread failed: ${await spreadResponse.text()}`);
-} else {
-  const count = await spreadResponse.json();
-  console.log(`Spread timestamps for ${count} messages across 7:00–23:59 UTC`);
-}
+// NOTE: randomize_recent_timestamps RPC removed — it was overwriting expires_at
+// and killing messages. randomTimeToday() already handles created_at spread.
 
 function randomTimeToday() {
   const now = new Date();
