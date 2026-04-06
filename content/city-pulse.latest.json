@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-06T21:45:03.517Z",
+    "capturedAt": "2026-04-06T22:45:26.579Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,12 +15,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 360
+    "totalItems": 362
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-06T21:45:03.517Z",
+      "captured_at": "2026-04-06T22:45:26.579Z",
       "mood_score": 0.469,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 9,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -63,6 +63,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: No service between Whitechapel and Upminster and between Earl's Court and Kensington (Olympia) due to pla"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Easter Monday, 6 April, no service between Willesden Junction and Watford Junction. There will also be no"
         },
         {
@@ -72,34 +80,26 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 63,
-        "average_valence": -0.092,
+        "source_item_count": 65,
+        "average_valence": -0.091,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-06T21:45:03.517Z",
-      "mood_score": 0.294,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-06T22:45:26.579Z",
+      "mood_score": 0.494,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
         "review": 2,
@@ -156,7 +156,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a dense gray blanket, threatening rain, with a chilly breeze that sends shivers through the bundled-up commuters.. After a rocky week with transit strikes, the U-Bahn is"
+          "excerpt": "A thick layer of clouds hangs low, cloaking the city in a muted gray that feels heavy but far from oppressive.. Despite the BVG strike being over, the trains are still running late"
         }
       ],
       "metadata": {
@@ -172,10 +172,10 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-06T21:45:03.517Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-06T22:45:26.579Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -209,14 +209,6 @@
           "excerpt": "Greens is in SF and honestly I didn't think the food was any better than Millennium and not as creative. And from what I recall it was even more expensive than Millennium..."
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only a local knows to avoid the Civic Center BART during rush hour, especially with all the recent delays an"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -231,25 +223,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "A much easier place to learn how to sail in the Bay Area would be in Tamales Bay, less traffic, less weird currents and wind patterns, and less harsh tidal changes."
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.017,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.827
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-06T21:45:03.517Z",
+      "captured_at": "2026-04-06T22:45:26.579Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -311,11 +311,11 @@
       ],
       "metadata": {
         "source_item_count": 150,
-        "average_valence": -0.024,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
         "freshness_score": 0.963
       }
