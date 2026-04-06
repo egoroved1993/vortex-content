@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-06T06:04:12.940Z",
+    "capturedAt": "2026-04-06T08:26:17.578Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 302
+    "totalItems": 313
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-06T06:04:12.940Z",
-      "mood_score": 0.464,
+      "captured_at": "2026-04-06T08:26:17.578Z",
+      "mood_score": 0.466,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 8,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -63,14 +63,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to a points failure at Neasden. Tickets are being accepted on London Buses and the Eliza"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Easter Monday, 6 April, no service between Willesden Junction and Watford Junction. There will also be no"
         },
         {
@@ -80,25 +72,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I lost my grandma to it in the 90s. It was a pretty fast decline and she was only in her late 50s, it mimicked dementia so it was hard to diagnose at first. My mum had to fight to "
         }
       ],
       "metadata": {
-        "source_item_count": 63,
-        "average_valence": -0.105,
+        "source_item_count": 64,
+        "average_valence": -0.099,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-06T06:04:12.940Z",
-      "mood_score": 0.284,
+      "captured_at": "2026-04-06T08:26:17.578Z",
+      "mood_score": 0.293,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 1,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,22 +126,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Wohnungspreise: Leipzig fast so teuer wie Berlin – Mieten binnen zehn Jahren um bis zu 69 Prozent gestiegen - WELT. Wohnungspreise: Leipzig fast so teuer wie Berlin – Mieten binnen"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -157,23 +140,39 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The crisp autumn air carries a hint of damp leaves as gray clouds loom overhead, promising a drizzle.. The streets are relatively calm today, as a mix of relief and skepticism hang"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Lots of gruesome accidents in the 13 years I've lived here. Neukölln drivers are a bit crazy as well (where I live)."
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.047,
+        "source_item_count": 89,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.922
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-06T06:04:12.940Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-06T08:26:17.578Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -201,20 +200,12 @@
           "excerpt": "Oakland to SSF would be long commute, I recommend staying on the city and peninsula side. Look on a map for your shuttle stops and focus on those areas. All of SF is dog friendly, "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only locals know to stay clear of the Civic Center BART when the sun goes down; the weird sounds and smoke a"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with an impending drizzle that gives the air a chill, while the persistent wind carries a hint of salty ocean spray.. With BART Civic Center closed, "
+          "excerpt": "The sky is a thick layer of grey, heavy with the smell of impending rain, as a chilly breeze cuts through the bustling streets.. Frustration hangs in the air at the BART stations, "
         },
         {
           "source_family": "review",
@@ -231,32 +222,40 @@
           "valence": 0.5,
           "recency_weight": 0.72,
           "excerpt": "San Francisco could hit 80 degrees again as warmth surges back - sfchronicle.com. San Francisco could hit 80 degrees again as warmth surges back"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.019,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.819
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-06T06:04:12.940Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-06T08:26:17.578Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 49,
+        "social": 60,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -268,6 +267,22 @@
         "ru"
       ],
       "drivers": [
+        {
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Спасибо за фидбек! Да, кафе/бары зло везде, лифтом не пользуюсь в принципе, но если он есть, наверное, хорошо)) А вы в каком месте там жили? По ощущениям барселонета тоже разная не"
+        },
+        {
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Мы все платим деньги вперёд, когда арендуем квартиру. Не через месяц проживаения в ней"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -291,33 +306,17 @@
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "The air hangs heavy with humidity, cloaking the city in an uncommonly warm embrace for October.. The trains are running at reduced capacity due to the maquinistes' strike, and a pa"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.025,
+        "source_item_count": 106,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.908
       }
     }
   ]
