@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-06T14:57:35.823Z",
+    "capturedAt": "2026-04-06T15:57:41.708Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 296
+    "totalItems": 302
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-06T14:57:35.823Z",
-      "mood_score": 0.463,
+      "captured_at": "2026-04-06T15:57:41.708Z",
+      "mood_score": 0.465,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -84,19 +84,19 @@
       ],
       "metadata": {
         "source_item_count": 59,
-        "average_valence": -0.11,
+        "average_valence": -0.104,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-06T14:57:35.823Z",
-      "mood_score": 0.291,
+      "captured_at": "2026-04-06T15:57:41.708Z",
+      "mood_score": 0.286,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,6 +127,22 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a patchwork of grey clouds with brief, shimmering bursts of sunlight that catch the eye unexpectedly.. With the recent end of the BVG strike, commuters are cautiously"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -140,39 +157,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "A thick layer of clouds cloaks the sky, but the crisp autumn air carries the scent of damp leaves and distant roasting chestnuts.. With the BVG strikes now behind them, commuters a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Lots of gruesome accidents in the 13 years I've lived here. Neukölln drivers are a bit crazy as well (where I live)."
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.026,
+        "source_item_count": 90,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.932
+        "freshness_score": 0.93
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-06T14:57:35.823Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-06T15:57:41.708Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -191,14 +192,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals know that the smell of churros at 16th and Mission is a warning—locals are fueling up before the chaos of"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -224,38 +217,46 @@
           "excerpt": "Yes sf roommates fb group! We mainly subleased with ppl where a roommate was on one-three month trips. Craigslist is fine too. The main effort is actually going to the place and me"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a chilly wind that carries the smell of rain, hinting at a stormy night ahead.. The BART station at Civic Center is eerily quiet, with commuters shuff"
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "The Bay Area’s warm stretch is over for now. Rain is on the way - San Francisco Chronicle. The Bay Area’s warm stretch is over for now. Rain is on the way"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.017,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-06T14:57:35.823Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-06T15:57:41.708Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 46,
+        "social": 51,
         "world": 5,
         "trends": 8,
         "weather": 1
@@ -277,19 +278,19 @@
         },
         {
           "source_family": "social",
-          "source_origin": "telegram_group",
-          "language": "ru",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Мы все платим деньги вперёд, когда арендуем квартиру. Не через месяц проживаения в ней"
-        },
-        {
-          "source_family": "social",
           "source_origin": "x_post",
           "language": "es",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
+        },
+        {
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Мы все платим деньги вперёд, когда арендуем квартиру. Не через месяц проживаения в ней"
         },
         {
           "source_family": "world",
@@ -305,18 +306,18 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs high, casting a golden hue on the bustling streets while a soft breeze carries the salty scent of the nearby sea.. A palpable frustration ripples through the crowded "
+          "excerpt": "A crisp autumn breeze carries a symphony of rustling leaves, while clouds hover lazily above, promising rain later in the day.. The metro is notably quieter than usual, with commut"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.034,
+        "source_item_count": 97,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.919
+        "freshness_score": 0.922
       }
     }
   ]
