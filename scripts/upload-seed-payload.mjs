@@ -51,8 +51,61 @@ for (let index = 0; index < rows.length; index += chunkSize) {
 
 console.log(`Finished uploading ${uploaded} rows from ${inputPath}`);
 
-// NOTE: randomize_recent_timestamps RPC removed — it was overwriting expires_at
-// and killing messages. randomTimeToday() already handles created_at spread.
+// ── Repair: fix expires_at that randomize_recent_timestamps (inside the RPC) broke ──
+// The bulk_insert_messages RPC internally calls randomize_recent_timestamps which
+// overwrites expires_at on ALL recent AI messages, not just newly inserted ones.
+// We immediately repair by patching all recent AI messages back to 7-day TTL.
+await repairExpiresAt(supabaseUrl, supabaseServiceKey);
+
+// NOTE: randomize_recent_timestamps RPC removed from client side — but it still runs
+// server-side inside bulk_insert_messages. The repair step above fixes the damage.
+
+async function repairExpiresAt(url, key) {
+  const repairTtl = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+  const fourDaysAgo = new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString();
+  const nowIso = new Date().toISOString();
+
+  // Patch all AI messages created in last 4 days that have broken expires_at
+  // (either null, or set to within the next 2 hours — signs of RPC damage)
+  const twoHoursFromNow = new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString();
+  const filter = `author_id=is.null&created_at=gte.${encodeURIComponent(fourDaysAgo)}&or=(expires_at.is.null,expires_at.lt.${encodeURIComponent(twoHoursFromNow)})`;
+
+  // Count affected
+  const countResp = await fetch(`${url}/rest/v1/messages?select=id&${filter}`, {
+    method: "HEAD",
+    headers: {
+      apikey: key,
+      Authorization: `Bearer ${key}`,
+      Prefer: "count=exact",
+    },
+  });
+  const contentRange = String(countResp.headers.get("content-range") ?? "");
+  const total = Number(contentRange.split("/")[1]) || 0;
+
+  if (total === 0) {
+    console.log("Repair: no broken expires_at found — all good");
+    return;
+  }
+
+  console.log(`Repair: fixing expires_at on ${total} AI messages → ${repairTtl}`);
+
+  const patchResp = await fetch(`${url}/rest/v1/messages?${filter}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      apikey: key,
+      Authorization: `Bearer ${key}`,
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify({ expires_at: repairTtl }),
+  });
+
+  if (!patchResp.ok) {
+    console.error(`Repair PATCH failed: ${await patchResp.text()}`);
+  } else {
+    console.log(`Repair: fixed ${total} messages — expires_at set to ${repairTtl}`);
+  }
+}
 
 function randomTimeToday() {
   const now = new Date();

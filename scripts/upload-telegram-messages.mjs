@@ -74,7 +74,7 @@ const rewritten = toRewrite.length > 0 ? await rewriteWithPersonas(toRewrite) : 
 
 // ── Step 3: Build rows + enforce language caps ───────────────────────────────
 
-const expiresAt = new Date(Date.now() + 72 * 60 * 60 * 1000).toISOString();
+const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(); // 7 days TTL
 
 const LANGUAGE_CAPS = {
   barcelona: { ru: 0.25 },
@@ -150,6 +150,9 @@ for (let i = 0; i < allRows.length; i += chunkSize) {
   uploaded += chunk.length;
   console.log(`Uploaded ${uploaded}/${allRows.length}`);
 }
+
+// ── Step 4b: Repair expires_at broken by randomize_recent_timestamps inside RPC ──
+await repairExpiresAt(supabaseUrl, supabaseServiceKey);
 
 // ── Step 5: Persist seen hashes (all new snippets, incl. discarded) ──────────
 
@@ -357,6 +360,46 @@ function randomTimeToday() {
   const end   = new Date(Math.min(now.getTime(), new Date(now).setUTCHours(23, 59, 59, 999)));
   const range = Math.max(0, end.getTime() - start.getTime());
   return new Date(start.getTime() + Math.random() * range).toISOString();
+}
+
+async function repairExpiresAt(url, key) {
+  const repairTtl = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+  const fourDaysAgo = new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString();
+
+  // Patch AI messages created in last 4 days with broken expires_at
+  // (null or expiring within next 2 hours — signs of RPC damage)
+  const twoHoursFromNow = new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString();
+  const filter = `author_id=is.null&created_at=gte.${encodeURIComponent(fourDaysAgo)}&or=(expires_at.is.null,expires_at.lt.${encodeURIComponent(twoHoursFromNow)})`;
+
+  const countResp = await fetch(`${url}/rest/v1/messages?select=id&${filter}`, {
+    method: "HEAD",
+    headers: { apikey: key, Authorization: `Bearer ${key}`, Prefer: "count=exact" },
+  });
+  const contentRange = String(countResp.headers.get("content-range") ?? "");
+  const total = Number(contentRange.split("/")[1]) || 0;
+
+  if (total === 0) {
+    console.log("Repair: no broken expires_at found");
+    return;
+  }
+
+  console.log(`Repair: fixing expires_at on ${total} AI messages → ${repairTtl}`);
+  const patchResp = await fetch(`${url}/rest/v1/messages?${filter}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      apikey: key,
+      Authorization: `Bearer ${key}`,
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify({ expires_at: repairTtl }),
+  });
+
+  if (!patchResp.ok) {
+    console.error(`Repair PATCH failed: ${await patchResp.text()}`);
+  } else {
+    console.log(`Repair: fixed ${total} messages`);
+  }
 }
 
 function sleep(ms) {
