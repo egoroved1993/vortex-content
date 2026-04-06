@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-06T22:45:26.579Z",
+    "capturedAt": "2026-04-06T23:43:55.911Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 362
+    "totalItems": 359
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-06T22:45:26.579Z",
-      "mood_score": 0.469,
+      "captured_at": "2026-04-06T23:43:55.911Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 11,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -63,14 +63,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: No service between Whitechapel and Upminster and between Earl's Court and Kensington (Olympia) due to pla"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Easter Monday, 6 April, no service between Willesden Junction and Watford Junction. There will also be no"
         },
         {
@@ -80,23 +72,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "They operate on low margins. Read an article that they're paying £10 in various taxes for every £1 of profit they make. I think it was also Whetherspoons that negotiate good prices"
         }
       ],
       "metadata": {
-        "source_item_count": 65,
-        "average_valence": -0.091,
+        "source_item_count": 63,
+        "average_valence": -0.07,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-06T22:45:26.579Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-06T23:43:55.911Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -154,28 +153,28 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.283,
           "recency_weight": 0.72,
-          "excerpt": "A thick layer of clouds hangs low, cloaking the city in a muted gray that feels heavy but far from oppressive.. Despite the BVG strike being over, the trains are still running late"
+          "excerpt": "The sky hangs low with thick, gray clouds, and a chill breeze carries the faint smell of rain, making umbrellas a common sight among pedestrians.. With the BVG services back in ope"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.017,
+        "source_item_count": 92,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.934
+        "freshness_score": 0.932
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-06T22:45:26.579Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-06T23:43:55.911Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -192,14 +191,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Nothing like the chaos of a Muni delay due to a dog on the tracks while someone tries to sell you a mixtape through the window."
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -231,25 +222,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.88,
+          "excerpt": "'Drastic change' coming to Bay Area forecast with chances of rain, thunder - SFGATE. 'Drastic change' coming to Bay Area forecast with chances of rain, thunder The Bay Area’s warm "
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.021,
+        "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.834
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-06T22:45:26.579Z",
+      "captured_at": "2026-04-06T23:43:55.911Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -311,13 +310,13 @@
       ],
       "metadata": {
         "source_item_count": 150,
-        "average_valence": -0.025,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.963
+        "freshness_score": 0.962
       }
     }
   ]
