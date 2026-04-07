@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-07T09:14:42.894Z",
+    "capturedAt": "2026-04-07T11:06:31.968Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 326
+    "totalItems": 325
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-07T09:14:42.894Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-04-07T11:06:31.968Z",
+      "mood_score": 0.468,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -49,6 +49,22 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Turnham Green and Ealing Broadway due to an earlier fire alert at Ealing Common. GO"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The overcast sky hangs low, threatening rain while a damp chill weaves through the air, making coats feel tighter against the body.. The mood on the buses is a weary acceptance, wi"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK: March 2026 - Office for National Statistics. Private rent and house prices, UK: March 2026"
         }
       ],
       "metadata": {
         "source_item_count": 50,
-        "average_valence": -0.079,
+        "average_valence": -0.095,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.808
+        "freshness_score": 0.821
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-07T09:14:42.894Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-07T11:06:31.968Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -124,14 +124,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. Last week, I saw a toddler casually riding a unicycle past a protest for better public transport. Only in Neukölln, right?"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -148,29 +140,37 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BVG-Tarifstreit mit Verdi spitzt sich zu: Berlin droht neuer Streik - Berliner Kurier. BVG-Tarifstreit mit Verdi spitzt sich zu: Berlin droht neuer Streik"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "A blanket of dark clouds hangs low, threatening rain, while the air carries a chilly bite that nips at exposed skin.. Despite the recent return of services, the mood on the platfor"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "That is not new. 30 is the speed limit in Sonnenallee (in NK) for at least 2 (?) years now. Had to travel daily through that part and posers and speeders were (are) a daily nuisanc"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.041,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.929
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-07T09:14:42.894Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-07T11:06:31.968Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -202,6 +202,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they complain about the Muni delays but still don’t own a car, and they think that’s no"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy serenading the bus crowd with a ukulele at Civic Center—Muni delays or not, he had everyone smiling. Classic SF moment."
         },
         {
@@ -213,37 +221,29 @@
           "excerpt": "Honestly, I'm good with it, especially in the Marina where so many luxury-living types are already concentrated. I do hope that a good number of the new developments planned will y"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.88,
-          "excerpt": "'Drastic change' coming to Bay Area forecast with chances of rain, thunder - SFGATE. 'Drastic change' coming to Bay Area forecast with chances of rain, thunder The Bay Area’s warm "
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a tuxedo get on the 19 Polk, hat in hand. He just smiled and said, 'Going to a wedding, wish me luck!' Muni’s magic."
         }
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.02,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-07T09:14:42.894Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-07T11:06:31.968Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -252,7 +252,7 @@
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 88,
+        "social": 87,
         "world": 5,
         "trends": 8
       },
@@ -299,20 +299,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs lazily over the bustling streets, casting a warm golden hue that dances off the cobblestones, while a gentle breeze carries the scent of fresh churros from nearby sta"
+          "excerpt": "The sun casts a golden hue through the thin clouds, with a brisk breeze that carries the scent of fresh pastries from nearby bakeries.. The air on the platforms is thick with impat"
         }
       ],
       "metadata": {
-        "source_item_count": 133,
-        "average_valence": -0.017,
+        "source_item_count": 132,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.925
+        "freshness_score": 0.935
       }
     }
   ]
