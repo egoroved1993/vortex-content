@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-07T15:18:41.390Z",
+    "capturedAt": "2026-04-07T17:11:09.713Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 330
+    "totalItems": 342
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-07T15:18:41.390Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-04-07T17:11:09.713Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -58,50 +58,50 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations"
         },
         {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to an earlier fire alert at Plaistow."
         },
         {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier fire alert at Plaistow. Tickets are currently being accepted"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier fire alert at Stanmore. Tickets are being accepted on London Buses, London"
         }
       ],
       "metadata": {
-        "source_item_count": 51,
-        "average_valence": -0.084,
+        "source_item_count": 58,
+        "average_valence": -0.164,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-07T15:18:41.390Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-07T17:11:09.713Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -119,9 +119,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "damn i fucking feel for ya’ll. i grew up in sf and never experienced paying rent since we bought a house back in the 90’s. the prices landlords are charging ya’ll are ridiculous. i"
+          "excerpt": "There is a LOT of that in S.F. and the Bay Area generally. Can you narrow this down to the kind of cuisine? Berkeley’s Chez Panisse opened in the early 70’s and began what would be"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "You mean the city where average rents are cheaper than San Francisco, despite having significantly more people in a smaller space? And where the city is famed for being clean and s"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate gray, heavy with an impending drizzle that clings to the air like unspoken tension.. BART stations are crowded with commuters, their faces a mix of confusion and"
         },
         {
           "source_family": "review",
@@ -138,41 +154,25 @@
           "valence": 0.5,
           "recency_weight": 0.88,
           "excerpt": "'Drastic change' coming to Bay Area forecast with chances of rain, thunder - SFGATE. 'Drastic change' coming to Bay Area forecast with chances of rain, thunder The Bay Area’s warm "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - abc7news.com. Dozens protest eviction of 3 disabled seniors from rent-controlled apa"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.018,
+        "source_item_count": 57,
+        "average_valence": 0.022,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-07T15:18:41.390Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-07T17:11:09.713Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -183,6 +183,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -199,6 +200,14 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
+        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -207,47 +216,39 @@
           "excerpt": "When you knew you were actually living here. Neukölln. The moment I found a street vendor selling fresh döner at 3 AM, packed with locals chatting, I knew Neukölln was home."
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low and gray, drizzling a fine mist that makes the autumn leaves glisten like jewels on the wet pavement.. With the BVG strike recently lifted, the subway cars are fi"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, occasionally letting through a shy sunbeam that dances on puddles from earlier rain.. The mood on the U-Bahn is tense as commuters anxiously "
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.039,
+        "source_item_count": 90,
+        "average_valence": -0.05,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.919
+        "freshness_score": 0.923
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-07T15:18:41.390Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-07T17:11:09.713Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -291,31 +292,31 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a recent arrival by their bewilderment at the vagueness of train schedules—any delays are met with pure shock, not the resigned s"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds looms over the city, threatening rain but only offering a humid, sticky warmth for now.. The trains are eerily quiet today, with passengers exchanging war"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.017,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.943
+        "freshness_score": 0.928
       }
     }
   ]
