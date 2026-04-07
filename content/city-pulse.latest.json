@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-07T05:20:38.856Z",
+    "capturedAt": "2026-04-07T07:43:39.527Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,25 +15,26 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 345
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-07T05:20:38.856Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-04-07T07:43:39.527Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
+        "public": 1,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
         "social": 2,
         "world": 5,
-        "trends": 8
+        "trends": 8,
+        "transport": 2
       },
       "languages": [
         "en"
@@ -46,6 +47,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Suspended Piccadilly Line: No service between Rayners Lane and Uxbridge while we fix a points failure at Uxbridge. GOOD SERVICE on"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The sun breaks through the clouds intermittently, casting a warm glow on the red brick of old buildings while a cool breeze rustles through the trees in the park.. With ongoing tub"
         },
         {
           "source_family": "world",
@@ -62,44 +79,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Housing crisis pushing key workers out of London, Generation Rent analysis reveals (press release) - Generation Rent. Housing crisis pushing key workers out of London, analysis rev"
         }
       ],
       "metadata": {
-        "source_item_count": 49,
-        "average_valence": -0.071,
+        "source_item_count": 50,
+        "average_valence": -0.063,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.814
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-07T05:20:38.856Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-07T07:43:39.527Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -107,8 +108,7 @@
         "social": 2,
         "world": 5,
         "nightlife": 40,
-        "trends": 8,
-        "transport": 2
+        "trends": 8
       },
       "languages": [
         "de",
@@ -124,12 +124,20 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. Last week, I saw a toddler casually riding a unicycle past a protest for better public transport. Only in Neukölln, right?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Don't stress too much—if you’ve lived here 8 years, you’ll find most of it is common sense or stuff you've already picked up. The \"Berlin list\" you found is likely the official 300"
         },
         {
           "source_family": "world",
@@ -146,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a chill in the air that makes the autumn leaves rustle restlessly on the cobblestone streets.. With the BVG strike finally eased, the U-Bahn is buzzin"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.037,
+        "source_item_count": 90,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ],
-        "freshness_score": 0.935
+        "freshness_score": 0.924
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-07T05:20:38.856Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-07T07:43:39.527Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -200,59 +200,59 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Community classes are good. Usually towns offer a variety of interesting classes or the local community colleges can be good too. It really helps to have a thing where a group of p"
+          "excerpt": "I will never forget when a fellow catholic filled me in on a term applied to the late morning 11 o'clock service. Ass mass. Honestly, I hope kids are going for deeper reasons. I'm "
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.88,
-          "excerpt": "'Drastic change' coming to Bay Area forecast with chances of rain, thunder - sfgate.com. 'Drastic change' coming to Bay Area forecast with chances of rain, thunder The Bay Area’s w"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+          "recency_weight": 1.04,
+          "excerpt": "Craigslist isn’t a scam but in this heated market scammers will try to collect money for low priced special units. Look at the comps if it is under market and you don’t need to see"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Intensions were to see if there is a community or handful of people looking for farm milk rather than super market milk. My title RAW got people triggered it looks like. you make a"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1,
+          "excerpt": "The Bay Area’s warm stretch is over for now. Rain is on the way - San Francisco Chronicle. The Bay Area’s warm stretch is over for now. Rain is on the way 'Drastic change' coming t"
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.02,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-07T05:20:38.856Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-07T07:43:39.527Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 105,
+        "social": 100,
         "world": 5,
         "trends": 8
       },
@@ -305,14 +305,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 150,
-        "average_valence": -0.026,
+        "source_item_count": 145,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.932
+        "freshness_score": 0.929
       }
     }
   ]
