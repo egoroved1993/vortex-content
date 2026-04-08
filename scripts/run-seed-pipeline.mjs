@@ -91,9 +91,13 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
 const payload = readJson(payloadPath);
 const payloadRows = Array.isArray(payload.rows) ? payload.rows : [];
 
+const expireExisting = Boolean(args["expire-existing"]);
+
 if (upload) {
   if (payloadRows.length > 0) {
-    runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), []);
+    if (expireExisting) {
+      runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), []);
+    }
     runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
       "--input",
       payloadPath,
