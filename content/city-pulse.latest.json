@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-08T13:40:29.632Z",
+    "capturedAt": "2026-04-08T14:43:11.234Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 344
+    "totalItems": 343
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-08T13:40:29.632Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-04-08T14:43:11.234Z",
+      "mood_score": 0.467,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -83,20 +83,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.124,
+        "source_item_count": 59,
+        "average_valence": -0.097,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-08T13:40:29.632Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-04-08T14:43:11.234Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -116,6 +116,14 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Civic Center. Only a true local knows the quickest side streets to avoid the Muni delays when a dog gets on the tracks at Civi"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -124,12 +132,20 @@
           "excerpt": "Idk if it counts as but lately whenever I’m in the sunset I like to order Win’s marinated tea soy chicken. I think the whole chicken is like $25 pretty good deal"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1,
-          "excerpt": "Rain, possible thunderstorms expected across the Bay Area this week - NBC Bay Area. Rain, possible thunderstorms expected across the Bay Area this week The Bay Area’s warm stretch "
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy calmly waiting for the 47, reading a book while a pigeon pecked at his shoelaces. Only in the Tenderloin do the birds have"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The late afternoon sun struggles to break through a veil of gray clouds, casting an eerie glow on the damp streets.. Frustration hangs in the air at the Civic Center as commuters s"
         },
         {
           "source_family": "review",
@@ -138,41 +154,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "The fog hangs low over the city, wrapping everything in a damp chill that seeps through jackets and lingers in the air.. Frustration ripples through the crowded BART station as com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": 0.005,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.844
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-08T13:40:29.632Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-08T14:43:11.234Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -205,7 +205,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7, M5: Delays 3 trips delayed"
+          "excerpt": "Berlin transit RE2, M5: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted grey, thick with clouds that threaten rain, while a cold breeze carries the damp scent of the Spree River.. The U-Bahn platforms are unusually quiet today, with "
         },
         {
           "source_family": "world",
@@ -222,30 +230,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp with a hint of impending rain, and grey clouds loom heavily over the city, promising a wash soon.. With the BVG strike now resolved, the trains are packed, and the"
         }
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.036,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.917
+        "freshness_score": 0.922
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-08T13:40:29.632Z",
+      "captured_at": "2026-04-08T14:43:11.234Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal still feels live today.",
@@ -305,7 +305,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, heavy with the promise of rain, while a cool breeze rustles the leaves along La Rambla.. Trains are running at a fraction of their capacity due to the o"
+          "excerpt": "The sky is draped in a heavy gray, with sporadic showers that leave a fresh scent lingering in the air.. The atmosphere in the train stations is a mix of frustration and resigned a"
         }
       ],
       "metadata": {
@@ -316,7 +316,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.851
       }
     }
   ]
