@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-08T10:31:18.561Z",
+    "capturedAt": "2026-04-08T11:27:44.100Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-08T10:31:18.561Z",
-      "mood_score": 0.468,
+      "captured_at": "2026-04-08T11:27:44.100Z",
+      "mood_score": 0.469,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -83,22 +83,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.095,
+        "source_item_count": 53,
+        "average_valence": -0.09,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.832
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-08T10:31:18.561Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-08T11:27:44.100Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -132,7 +132,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, U8: Delays 2 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky over Berlin is a brooding gray, with a cold breeze carrying the faint scent of impending rain.. The usual hustle of trams and buses feels muted today, with many checking th"
         },
         {
           "source_family": "world",
@@ -149,33 +157,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.039,
+        "source_item_count": 91,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.926
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-08T10:31:18.561Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-08T11:27:44.100Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 8,
@@ -201,6 +201,22 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy on the 47 pulling out a guitar as we crawled past Civic Center. Didn't miss a beat, serenading a packed bus. Only in San F"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the Muni at Civic Center today, it stopped for a good ten minutes because a dog decided to take a nap on the tracks. Just ano"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The fog hangs low over the Bay, thick and damp, filtering the golden hour light into a muted, ghostly glow.. Frustration looms at the Civic Center as bewildered commuters gather, c"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -215,39 +231,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.021,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-08T10:31:18.561Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-08T11:27:44.100Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -277,14 +277,6 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Eixample. You can tell by their excitement at discovering the 'merienda' tradition, asking for hot chocolate at 5 PM, completely unaware of the late d"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +299,25 @@
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a delicate gray canvas, heavy with clouds that threaten rain but only release a cool mist every now and then.. The usually bustling Estació de Sants is filled with frust"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.024,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.851
       }
     }
   ]
