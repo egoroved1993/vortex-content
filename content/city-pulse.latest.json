@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-08T03:15:02.455Z",
+    "capturedAt": "2026-04-08T04:58:09.954Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 332
+    "totalItems": 334
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-08T03:15:02.455Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-04-08T04:58:09.954Z",
+      "mood_score": 0.467,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -49,20 +50,20 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Hayes & Harlington and Reading while we undertake urgent repairs to the track at West Drayton. GOO"
+        },
+        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think a Tube strike just means a longer wait for the Overground. Wait until you see the 'no trains' signs on ev"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "cancer can kiss my arse. 7 months from diagnosis to dead in early 40s. I do agree with you though, Korea, France, Spain all I'm pretty sure using systems that work better than wrun"
         },
         {
           "source_family": "world",
@@ -82,20 +83,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.068,
+        "source_item_count": 53,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.824
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-08T03:15:02.455Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-08T04:58:09.954Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -109,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -124,14 +124,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit FEX: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -156,28 +148,36 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate gray, with a light drizzle that dampens the cobblestones, enhancing the brisk chill in the air.. BVG's trains are unusually quiet, as a looming strike casts a pa"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.039,
+        "source_item_count": 89,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.926
+        "freshness_score": 0.928
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-08T03:15:02.455Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-04-08T04:58:09.954Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -197,7 +197,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals know to never trust a BART schedule, especially when the Civic Center station is a chaos zone. Delays are"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they can navigate the Muni schedule chaos and still find time for tacos at La Taqueria,"
         },
         {
           "source_family": "forum",
@@ -205,7 +205,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know they’re locals when they know to avoid Dolores Park on Saturdays. Those 'Instagrammers' just don’t "
+          "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals know to never trust a BART schedule, especially when the Civic Center station is a chaos zone. Delays are"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The evening sky is painted in hues of orange and gray, with a sharp chill settling in as the fog begins its slow creep over the Bay.. BART is in disarray, with large crowds and fru"
         },
         {
           "source_family": "news",
@@ -213,7 +221,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1,
-          "excerpt": "Rain, possible thunderstorms expected across the Bay Area this week - NBC Bay Area. Rain, possible thunderstorms expected across the Bay Area this week The Bay Area’s warm stretch "
+          "excerpt": "Rain, possible thunderstorms expected across the Bay Area this week - nbcbayarea.com. Rain, possible thunderstorms expected across the Bay Area this week The Bay Area’s warm stretc"
         },
         {
           "source_family": "review",
@@ -222,30 +230,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - abc7news.com. Dozens protest eviction of 3 disabled seniors from rent-controlled apa"
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.059,
+        "source_item_count": 55,
+        "average_valence": -0.054,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-08T03:15:02.455Z",
+      "captured_at": "2026-04-08T04:58:09.954Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -305,7 +305,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs high over Barcelona, casting sharp shadows and giving the air a warm, golden hue, just shy of feeling oppressive.. The mood in the train stations is tense; commuters "
+          "excerpt": "The skies are a brilliant cerulean, punctuated by fluffy white clouds lazily drifting by, casting playful shadows on the sun-baked streets.. Despite the sunshine, the mood at the R"
         }
       ],
       "metadata": {
