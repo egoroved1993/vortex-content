@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-08T14:43:11.234Z",
+    "capturedAt": "2026-04-08T15:39:05.860Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 343
+    "totalItems": 344
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-08T14:43:11.234Z",
-      "mood_score": 0.467,
+      "captured_at": "2026-04-08T15:39:05.860Z",
+      "mood_score": 0.459,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -79,12 +79,12 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to a points failure at East Ham. Tickets will be accepted on London Buses, Elizabeth Li"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to an earlier points failure at East Ham."
         }
       ],
       "metadata": {
         "source_item_count": 59,
-        "average_valence": -0.097,
+        "average_valence": -0.121,
         "dominant_themes": [
           "general",
           "transit",
@@ -95,8 +95,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-08T14:43:11.234Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-04-08T15:39:05.860Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local by how they instinctively avoid the BART Civic Center on Fridays. Not just for the crowds, but t"
+        },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
@@ -140,14 +148,6 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy calmly waiting for the 47, reading a book while a pigeon pecked at his shoelaces. Only in the Tenderloin do the birds have"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The late afternoon sun struggles to break through a veil of gray clouds, casting an eerie glow on the damp streets.. Frustration hangs in the air at the Civic Center as commuters s"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -158,7 +158,7 @@
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": 0.002,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "transit",
@@ -169,10 +169,10 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-08T14:43:11.234Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-08T15:39:05.860Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -183,7 +183,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -200,20 +200,20 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. When I saw a group of kids playing football on the street while their parents chatted over beers. That simple mix of chaos an"
+        },
+        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2, M5: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted grey, thick with clouds that threaten rain, while a cold breeze carries the damp scent of the Spree River.. The U-Bahn platforms are unusually quiet today, with "
+          "excerpt": "Berlin transit RE2, M5, RE1: Delays 3 trips delayed"
         },
         {
           "source_family": "world",
@@ -233,22 +233,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.046,
+        "source_item_count": 90,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.922
+        "freshness_score": 0.919
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-08T14:43:11.234Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-08T15:39:05.860Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -303,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is draped in a heavy gray, with sporadic showers that leave a fresh scent lingering in the air.. The atmosphere in the train stations is a mix of frustration and resigned a"
+          "excerpt": "The afternoon sun casts a golden hue over the city, interrupted only by occasional clouds that threaten but never quite deliver rain.. The usually bustling train stations are notic"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.023,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.848
       }
     }
   ]
