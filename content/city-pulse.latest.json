@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-09T15:41:16.490Z",
+    "capturedAt": "2026-04-09T16:39:50.147Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 333
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-09T15:41:16.490Z",
-      "mood_score": 0.464,
+      "captured_at": "2026-04-09T16:39:50.147Z",
+      "mood_score": 0.466,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -41,20 +42,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I think some people are missing the point. Of course I could rent somewhere out, my point is that what you get for your money is now pretty horrendous. I've lived in London for 18 "
-        },
-        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays while we fix a signal failure at Caledonian Road & Barnsbury."
         },
         {
           "source_family": "news",
@@ -65,39 +66,39 @@
           "excerpt": "Tube strike could cause disruption for Harrow commuters later this month - Harrow Online. Tube strike could cause disruption for Harrow commuters later this month"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I live in south London so I am quite familiar with it and nowhere is too far in south London. I’m looking for good pub recommendations that also show the football so thank you but "
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A brisk wind carries the scent of rain through the bustling streets, hints of clouds looming overhead.. The mood at the Tube stations is tense, with commuters anxiously checking th"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.105,
+        "source_item_count": 51,
+        "average_valence": -0.101,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-09T15:41:16.490Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-09T16:39:50.147Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -131,7 +132,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Opposite corner of the city from me but it’s really quite nice in Tegel my first time there on the last weekend. Will be good when the U6 again can reach it instead of only S-Bahn."
         },
         {
           "source_family": "world",
@@ -148,36 +157,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.039,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.917
+        "freshness_score": 0.924
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-09T15:41:16.490Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-04-09T16:39:50.147Z",
+      "mood_score": 0.477,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,6 +192,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "If you want to explore the coast or Muir Woods, I would look at a car for a day or 2. You can rent from SFO and take BART from Daly City to SFO, then the Airtrain to the rental car"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "So I was living in a 3 bedroom townhouse in Daly City and when I moved in in 2012 rent was $2100. When I left rent was $3200. It wasn’t super jacked up but they began to adjust to "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Nothing like waiting for the 19 in the Tenderloin while a jazz band sets up right next to the street. Makes the delays feel a bit le"
+        },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
@@ -206,47 +231,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Muni moments that define this city. Civic Center. Caught the bus at Civic Center just as they announced a delay due to an actual dog on the tracks. Only in SF can that be a Tuesday"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.05,
+        "source_item_count": 59,
+        "average_valence": -0.068,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.838
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-09T15:41:16.490Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-09T16:39:50.147Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
@@ -284,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a patchwork of grey and sunlit blue, with a gentle breeze carrying the salty scent of the sea.. The trains are unusually crowded as commuters navigate the disruptions ca"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -298,19 +307,11 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in a brilliant blue sky, casting long shadows on the cobblestone streets where the heat of the day clings stubbornly.. The platforms at Plaça de Catalunya buzz wi"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.023,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
