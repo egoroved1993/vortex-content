@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-10T15:26:40.703Z",
+    "capturedAt": "2026-04-10T16:28:05.685Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 341
+    "totalItems": 343
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-10T15:26:40.703Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-04-10T16:28:05.685Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -42,6 +42,14 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Yeah, that's fair - the post Covid world is different But go back to 2000 and you would have been earning 3.60 an hour - and there's no way you would have got two cocktails in Camd"
+        },
+        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
@@ -53,17 +61,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The fact that my mother FLIPPED on me one day when I said I went to South London and then said I was at a pub garden in Brixton says it all. She said it was a no go zone for her ba"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "The Netherlands has done a pretty good job - Dutch urban centres are full of coffee shops, bars, and restaurants. It's possible because their exceptional cycling infrastructure mea"
+          "excerpt": "When I was a student in 2019 you could get a cocktail in Camden 2 for £10, my wage was £10/hr and I could work as much as I wanted. Now I’m still a student, wage is £12.80 & I’m ve"
         },
         {
           "source_family": "news",
@@ -74,34 +74,34 @@
           "excerpt": "Mayor of London urged to take action as key workers struggle with rent - Property118. Mayor of London urged to take action as key workers struggle with rent"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a dull gray blanket, with a light drizzle that mists across the city, making the pavements gleam underfoot.. With Tube strikes looming this week, the mood around the bus"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
         }
       ],
       "metadata": {
-        "source_item_count": 58,
-        "average_valence": -0.067,
+        "source_item_count": 54,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-10T15:26:40.703Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-10T16:28:05.685Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,14 +124,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U8, RE2: Delays 4 trips delayed"
         },
         {
           "source_family": "world",
@@ -157,28 +148,36 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate gray, thick with clouds that threaten rain at any moment, casting a dim light over the bustling streets.. The mood on the U-Bahn is uneasy as rumors of possible "
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.039,
+        "source_item_count": 91,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.924
+        "freshness_score": 0.93
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-10T15:26:40.703Z",
-      "mood_score": 0.459,
+      "captured_at": "2026-04-10T16:28:05.685Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,9 +195,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Your parked car while you're not driving it subtracts from the city. 160 sq. feet in San Francisco goes for about...... $1500-$1700 a month but you know what? We'll just throw that"
+          "excerpt": "Caltrain to Mountain View then VTA to Baylands won't work because the earliest weekend train is way too late to get there by 8 a.m.. BART to Milpitas then VTA to Baylands also won'"
         },
         {
           "source_family": "public",
@@ -206,15 +205,15 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Mortified is super fun. If you are in the Haight, an arcade called Free Gold Watch is open until 8. It’s loaded with awesome pinball machines & good food is a block over."
+          "excerpt": "I know this is not what you are asking for. If you would like to meditate which is what i got into after some drinking and running a lot. I can share some good spots for it and an "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can spot a local by their relaxed smile while dodging a dog on the Muni tracks, not panicking like the t"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The late afternoon sun struggles to pierce through a thick veil of lingering fog, creating a soft, muted light across the city.. Commuters at the Civic Center are glancing anxiousl"
         },
         {
           "source_family": "review",
@@ -234,22 +233,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": 0.026,
+        "source_item_count": 61,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-10T15:26:40.703Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-10T16:28:05.685Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -301,23 +300,23 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun filters through scattered clouds, casting a warm glow on the bustling sidewalks of Passeig de Gràcia.. Trains are crowded but subdued, with commuters exchanging s"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.023,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.737
+        "freshness_score": 0.729
       }
     }
   ]
