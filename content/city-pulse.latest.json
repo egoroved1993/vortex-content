@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-10T12:28:44.937Z",
+    "capturedAt": "2026-04-10T13:40:06.107Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-10T12:28:44.937Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-04-10T13:40:06.107Z",
+      "mood_score": 0.466,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -50,6 +50,14 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Airport/Reading due to an earlier faulty freight train at West Ealing. GOO"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -63,40 +71,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Caught a late 333 the other night. Driver knew all the regulars by name, even paused for a guy to finish his takeaway outside the pub. That’s real s"
+          "excerpt": "Night bus confessions. Brixton. Caught a late 333 last week; the driver stopped for a kebab run at 2am. Best part? He yelled 'order up!' as he walked back on. Pure Brixton."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "The Netherlands has done a pretty good job - Dutch urban centres are full of coffee shops, bars, and restaurants. It's possible because their exceptional cycling infrastructure mea"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Mayor of London urged to take action as key workers struggle with rent - Property118. Mayor of London urged to take action as key workers struggle with rent"
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Brixton. Caught a late 333 the other night. Driver knew all the regulars by name, even paused for a guy to finish his takeaway outside the pub. That’s real s"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.077,
+        "average_valence": -0.101,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-10T12:28:44.937Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-10T13:40:06.107Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -132,15 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Today is a crisp and overcast day, with the sky draped in a thick layer of gray clouds that occasionally release a few sprinkles of rain.. Despite the ongoing strikes, the few U-Ba"
+          "excerpt": "Berlin transit RE2: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -157,11 +149,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.045,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "routine",
@@ -172,10 +172,10 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-10T12:28:44.937Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-04-10T13:40:06.107Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 8,
@@ -209,14 +209,6 @@
           "excerpt": "Mortified is super fun. If you are in the Haight, an arcade called Free Gold Watch is open until 8. It’s loaded with awesome pinball machines & good food is a block over."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The skies are a muted gray, casting a cool, damp chill that seems to seep into every corner of the city.. BART is crawling with frustrated commuters, still reeling from earlier del"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -231,22 +223,30 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": 0.009,
+        "average_valence": 0.021,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.85
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-10T12:28:44.937Z",
+      "captured_at": "2026-04-10T13:40:06.107Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
