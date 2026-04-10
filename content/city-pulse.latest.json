@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-10T03:15:49.187Z",
+    "capturedAt": "2026-04-10T05:06:58.971Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 329
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-10T03:15:49.187Z",
-      "mood_score": 0.47,
+      "captured_at": "2026-04-10T05:06:58.971Z",
+      "mood_score": 0.456,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -49,131 +50,58 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Caught a man in a full tuxedo arguing with a bus driver about not having change—pure Brixton late night chaos. Taxi not an option, I guess."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Mayor of London urged to take action as key workers struggle with rent - Property118. Mayor of London urged to take action as key workers struggle with rent"
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Friday 10 April, until 0615, no southbound service from Willesden Junction to Shepherds Bush. The 0552 fir"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Northfields and Heathrow Terminals, and MINOR DELAYS between Acton Town and Uxbri"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Northfields and Heathrow Terminals, and MINOR DELAYS between Acton Town and Uxbri"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "wow never got a hug from a stranger Londoner lol. Being from another country where people are more \"physical\" that would surprise me, good for u! And thanks :) I'm so excited to be"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, threatening rain, while the damp air clings uncomfortably to skin as commuters rush about.. Frustration simmers among those waiting for packed "
+          "excerpt": "have an overnight layover in London in May. I land at 9:25pm and booked a hotel in SoHo. Any suggestions for a fun late dinner / bars / lounges on a Sunday night??"
         }
       ],
       "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.087,
+        "source_item_count": 55,
+        "average_valence": -0.129,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.857
-      }
-    },
-    {
-      "city_id": "sf",
-      "captured_at": "2026-04-10T03:15:49.187Z",
-      "mood_score": 0.483,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 6,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy serenading Muni riders with a ukulele at Civic Center, just after the whole station went haywire. Only in SF do we turn ch"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from here if they can describe the exact moment when Muni delays hit peak frustration—often around"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "the bay model is pretty cool actually, went there few years back when i was stationed at travis. kind of random but they have this massive scale model of the entire bay area water "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs gray, a low mist weaving through the buildings, muffling the clamor of the city.. The mood at the Civic Center, where Muni and BART platforms are unusually crowded, s"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        }
-      ],
-      "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.05,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "work"
-        ],
-        "freshness_score": 0.846
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-10T03:15:49.187Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-10T05:06:58.971Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -182,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -196,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -220,33 +157,99 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 92,
+        "average_valence": -0.038,
+        "dominant_themes": [
+          "general",
+          "routine",
+          "transit"
+        ],
+        "freshness_score": 0.927
+      }
+    },
+    {
+      "city_id": "sf",
+      "captured_at": "2026-04-10T05:06:58.971Z",
+      "mood_score": 0.491,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 6,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from here if they can describe the exact moment when Muni delays hit peak frustration—often around"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "The wiki here has a lot of general information about San Francisco, and links to threads about how to make friends and meet people. (Honestly you will probably get a handful of peo"
         },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The air is crisp with a hint of spring, a soft sun breaking through the lingering clouds over the cityscape.. Despite the impending threats of strikes, the U-Bahn is surprisingly f"
+          "excerpt": "The sky is a muted grey, with a chilly breeze weaving through the streets, hinting at an autumn rain just out of sight.. Commuters at the Civic Center are exasperated but resigned,"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.035,
+        "source_item_count": 54,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "routine",
-          "money"
+          "transit",
+          "work"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-10T03:15:49.187Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-10T05:06:58.971Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -282,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun arches high, casting a golden glow over the cobblestone streets, while a slight breeze carries the promise of autumn's chill.. The air at the Sants station is thick with im"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -296,23 +307,15 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs high over Barcelona, casting a warm golden hue on the cobbled streets, while a gentle breeze carries the salty tang of the nearby sea.. Commuters on the Rodalies line"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.018,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
         "freshness_score": 0.741
       }
