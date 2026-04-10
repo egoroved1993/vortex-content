@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-10T22:18:56.749Z",
+    "capturedAt": "2026-04-10T23:18:56.850Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-10T22:18:56.749Z",
-      "mood_score": 0.456,
+      "captured_at": "2026-04-10T23:18:56.850Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -55,7 +55,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays between Finchley Road and Stanmore northbound only and MINOR DELAYS on the rest of the line"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays northbound only while we fix a faulty train at Piccadilly Circus.GOOD SERVICE on the rest o"
         },
         {
           "source_family": "transport",
@@ -63,7 +63,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Severe delays between Finchley Road and Stanmore northbound only and MINOR DELAYS on the rest of the line"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier customer incident at St. John's Wood."
         },
         {
           "source_family": "transport",
@@ -84,21 +84,21 @@
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.128,
+        "average_valence": -0.123,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-10T22:18:56.749Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-10T23:18:56.850Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -126,14 +126,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a bruised gray, heavy with the promise of rain, and the air feels thick with humidity, reminiscent of a late summer storm.. Buses are running late today, with frustrated"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -156,25 +148,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a heavy slate gray, threatening rain but holding back, casting a muted light over the wet streets.. Public transport is in a dismal mood as rumors of impending strikes c"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.036,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
         "freshness_score": 0.923
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-10T22:18:56.749Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-04-10T23:18:56.850Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 12,
@@ -192,6 +192,14 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy feeding pigeons on the tracks at Civic Center yesterday. Muni crew just shrugged and let the chaos unfold. Classic SF mome"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -208,45 +216,37 @@
           "excerpt": "it sounds like you have a parking spot. my partner has a car and we don't have a parking spot. looking for parking every time we use a car is a gigantic pain in the ass, and we hav"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local when they instinctively know to avoid Civic Center BART when a dog’s on the tracks—always a good"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 60,
-        "average_valence": -0.018,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-10T22:18:56.749Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-10T23:18:56.850Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -276,20 +276,20 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is just one big festival. In reality, the locals are often bemoaning the noise and wishing for a quiet ev"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a moody grey, punctuated by bursts of rain that leave the pavements glistening and reflective.. The trains are packed tighter than usual, with commuters exchanging wary "
         },
         {
           "source_family": "social",
@@ -310,13 +310,13 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.026,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.66
+        "freshness_score": 0.661
       }
     }
   ]
