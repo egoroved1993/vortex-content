@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-11T01:42:44.901Z",
+    "capturedAt": "2026-04-11T03:12:22.139Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-11T01:42:44.901Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-04-11T03:12:22.139Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -58,14 +58,6 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 11 April, between 0100 and 0700, no service between Hyde Park Corner and Acton Town. Replaceme"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think the 48 bus is reliable. Good luck with that on a Saturday night, mate."
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -80,23 +72,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.07,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.85
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-11T01:42:44.901Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-11T03:12:22.139Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -160,7 +160,7 @@
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.032,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "routine",
@@ -171,8 +171,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-11T01:42:44.901Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-04-11T03:12:22.139Z",
+      "mood_score": 0.439,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -191,6 +191,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local when they casually mention the BART delays while ordering a burrito, like it’s ju"
+        },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
@@ -222,33 +230,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.011,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.857
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-11T01:42:44.901Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-11T03:12:22.139Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -300,23 +300,23 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is blazing but the cool sea breeze offers a refreshing contrast, creating that quintessential Mediterranean warmth.. The typically bustling Rodalies stations are eerily qui"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.018,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.657
+        "freshness_score": 0.66
       }
     }
   ]
