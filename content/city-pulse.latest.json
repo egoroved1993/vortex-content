@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-11T15:17:43.117Z",
+    "capturedAt": "2026-04-11T16:16:08.485Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-11T15:17:43.117Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-04-11T16:16:08.485Z",
+      "mood_score": 0.411,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 2,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -83,25 +83,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.104,
+        "source_item_count": 54,
+        "average_valence": -0.114,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-11T15:17:43.117Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-11T16:16:08.485Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 1,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -132,15 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2, M5, 248: Delays 3 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Do you work night shift or something? Because that's a good reason to drive. Most people in Berlin who are out past when public transit stops running aren't good to drive anyway (h"
+          "excerpt": "Berlin transit RE7, S9, S7: Delays 3 trips delayed"
         },
         {
           "source_family": "nightlife",
@@ -157,28 +149,36 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.042,
+        "source_item_count": 91,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.944
+        "freshness_score": 0.945
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-11T15:17:43.117Z",
-      "mood_score": 0.393,
-      "mood_label": "low",
+      "captured_at": "2026-04-11T16:16:08.485Z",
+      "mood_score": 0.403,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 5,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,6 +192,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "My last shared apartment had a cleaner that came to tackle shared spaces every two weeks and our master tenant was a good communicator about expectations as part of her vetting pro"
+        },
         {
           "source_family": "review",
           "source_origin": "maps_review",
@@ -223,33 +231,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S. - KTVU. San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A chilly marine layer blankets the city, with fog rolling in over the Golden Gate, forcing even the sun to play hide and seek.. Frustration hangs in the air as commuters receive up"
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.019,
+        "source_item_count": 55,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-11T15:17:43.117Z",
+      "captured_at": "2026-04-11T16:16:08.485Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun blazes high in a deep blue sky, casting sharp shadows on the cobblestones of the Gothic Quarter.. Commuters are packed into the crowded Rodalies trains, their expressions a"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,15 +299,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with dark, brooding clouds, hinting at a storm that hasn’t yet arrived but lingers in the air like an uninvited guest.. The normally bustling Rodalies stations "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "tourism"
         ],
         "freshness_score": 0.629
       }
