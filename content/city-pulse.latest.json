@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-12T22:15:37.980Z",
+    "capturedAt": "2026-04-12T23:17:38.942Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-12T22:15:37.980Z",
-      "mood_score": 0.344,
+      "captured_at": "2026-04-12T23:17:38.942Z",
+      "mood_score": 0.301,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 9,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -83,23 +83,23 @@
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.166,
+        "source_item_count": 60,
+        "average_valence": -0.143,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-12T22:15:37.980Z",
-      "mood_score": 0.385,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-12T23:17:38.942Z",
+      "mood_score": 0.493,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
         "review": 2,
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,20 +127,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit FEX: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. It hit me when I saw a group of kids playing Fußball in the street while a protest marched by, and nobody batted an eye. Tota"
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of gray clouds hangs low, occasionally dripping light rain that makes the pavement glisten under the muted light.. The air is heavy with resignation as commuters hu"
         },
         {
           "source_family": "world",
@@ -157,23 +149,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.045,
+        "source_item_count": 92,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.941
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-12T22:15:37.980Z",
-      "mood_score": 0.331,
+      "captured_at": "2026-04-12T23:17:38.942Z",
+      "mood_score": 0.327,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -206,6 +206,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. Real locals know that the only thing worse than a late bus is a group of tourists blocking the sidewalk whil"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Muni moments that define this city. Tenderloin. Caught the 21 late last night, driver stopped to let a raccoon cross. Only in the Tenderloin do Muni detours include wildlife."
         },
         {
@@ -215,14 +223,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy gray, with a cool breeze carrying the scent of rain that's yet to fall.. BART is a mess; commuters are grumbling in the Civic Center, frustrated by the delays an"
         },
         {
           "source_family": "news",
@@ -235,18 +235,18 @@
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.057,
+        "average_valence": -0.069,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.832
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-12T22:15:37.980Z",
+      "captured_at": "2026-04-12T23:17:38.942Z",
       "mood_score": 0.394,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. They think all the good tapas are in El Born; meanwhile, the best patatas bravas are hiding in a corner bar on Carrer de Frater"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a washed-out gray, punctuated by bursts of sunlight struggling to break through the low-hanging clouds, hinting at a looming rain.. Trains are severely delayed due to th"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.017,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.632
+        "freshness_score": 0.63
       }
     }
   ]
