@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-12T16:17:48.334Z",
+    "capturedAt": "2026-04-12T17:17:59.442Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-12T16:17:48.334Z",
-      "mood_score": 0.357,
+      "captured_at": "2026-04-12T17:17:59.442Z",
+      "mood_score": 0.35,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -48,6 +48,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays while we fix a signal failure at Chancery Lane."
         },
         {
           "source_family": "transport",
@@ -71,34 +79,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier fire alert at Holborn. Tickets are being accepted on London Buses and G"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to an earlier fire alert at Holborn. Tickets are being accepted on London Buses and Gr"
         }
       ],
       "metadata": {
-        "source_item_count": 58,
-        "average_valence": -0.126,
+        "source_item_count": 59,
+        "average_valence": -0.147,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-12T16:17:48.334Z",
-      "mood_score": 0.351,
+      "captured_at": "2026-04-12T17:17:59.442Z",
+      "mood_score": 0.341,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 6,
@@ -116,12 +116,28 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local when they know the taco truck schedules by heart but still hesitate at the BART c"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I believe the peninsula (San Mateo, foster city, redwood City etc) also has a pretty good Japanese community if you are looking for something beyond SF ( basically 20-30 minutes so"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The fog hugs the hills tightly today, wrapping the city in a cool embrace that dampens the sound of the bustling streets.. BART riders are restless at the Civic Center station, anx"
         },
         {
           "source_family": "review",
@@ -138,39 +154,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Eviction Over Unpaid Rent - Realtor.com. Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Evict"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": 0.002,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.818
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-12T16:17:48.334Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-04-12T17:17:59.442Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -205,7 +205,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low and heavy, shrouding the city in a dull gray that feels almost oppressive after days of rain.. Trains are packed tighter than usual, with commuters eyeing the clo"
         },
         {
           "source_family": "world",
@@ -222,19 +230,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.043,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "routine",
@@ -245,10 +245,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-12T16:17:48.334Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-04-12T17:17:59.442Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,37 +284,37 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all bars serve paella. In Gràcia, it’s all about tapas and vermut. Good luck finding a decent paella here!"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The morning sky hangs heavy with thick grey clouds that promise rain, casting a cool shadow over the bustling streets.. Commuters shuffle cautiously at the train stations, their ex"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
-        },
-        {
-          "source_family": "social",
-          "source_origin": "telegram_group",
-          "language": "ru",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky over Barcelona is a muted gray, threatening rain while a chill lingers in the air, making people pull their jackets a bit tighter.. The trains are unusually quiet, with a m"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
         "freshness_score": 0.632
       }
