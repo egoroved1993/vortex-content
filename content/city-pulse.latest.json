@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-12T05:05:40.984Z",
+    "capturedAt": "2026-04-12T06:43:21.381Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-12T05:05:40.984Z",
-      "mood_score": 0.353,
+      "captured_at": "2026-04-12T06:43:21.381Z",
+      "mood_score": 0.348,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -63,6 +63,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: No service between Edgware Road and Tower Hill due to planned engineering work. MINOR DELAYS on the rest of"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 11 and Sunday 12 April, no service between Embankment / Edgware Road and Ealing Broadway / Kensi"
         },
         {
@@ -72,31 +80,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 12 April, until 0745, no service between Paddington and Ealing Broadway. Please use London Underg"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.139,
+        "source_item_count": 57,
+        "average_valence": -0.152,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-12T05:05:40.984Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-04-12T06:43:21.381Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -127,28 +126,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. The moment I spotted a group of kids using a broken trampoline as a makeshift stage for their rap battles at the park. Pure N"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.612,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "A cool breeze flows through the streets as dark clouds loom overhead, hinting at a potential rain shower that never seems to arrive.. With the end of the BVG strike, a sense of rel"
+          "excerpt": "Today, a crisp autumn chill bites through the air, with gray clouds hanging low, threatening rain but holding off for now.. The U-Bahn is unusually quiet, with many commuters check"
         },
         {
           "source_family": "world",
@@ -157,25 +140,41 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.045,
+        "source_item_count": 90,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.943
+        "freshness_score": 0.937
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-12T05:05:40.984Z",
-      "mood_score": 0.387,
+      "captured_at": "2026-04-12T06:43:21.381Z",
+      "mood_score": 0.392,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
@@ -201,14 +200,6 @@
           "excerpt": "They are not allowed to do so. When you post comments with no knowledge of the actual protections renters have in SF with this level of unbridled certainty, you give people the ide"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "AccuWeather Forecast: Scattered morning showers; storm intensifies to Level 2 late this afternoon - ABC7 San Francisco. AccuWeather Forecast: Scattered morning showers; storm inten"
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -231,25 +222,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 50,
-        "average_valence": -0.039,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.824
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-12T05:05:40.984Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-04-12T06:43:21.381Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun casts a warm golden hue over the streets, while a light breeze carries the scent of fresh churros from nearby cafes.. The mood is fraught at the train stations, with commut"
+          "excerpt": "The sky is a muted gray, heavy with clouds, threatening rain that never quite falls.. Commuters shuffle through the damp streets, frustration brewing as delayed trains leave them s"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.024,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.628
+        "freshness_score": 0.627
       }
     }
   ]
