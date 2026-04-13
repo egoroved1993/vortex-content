@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-13T08:53:50.339Z",
+    "capturedAt": "2026-04-13T09:47:38.923Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-13T08:53:50.339Z",
-      "mood_score": 0.323,
+      "captured_at": "2026-04-13T09:47:38.923Z",
+      "mood_score": 0.328,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -49,14 +49,6 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick grey overcast looms above, promising rain but only drizzling sporadically, casting a dull light over the bustling streets.. The air is thick with frustration as commuters h"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -79,25 +71,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.08,
+        "average_valence": -0.065,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-13T08:53:50.339Z",
-      "mood_score": 0.392,
+      "captured_at": "2026-04-13T09:47:38.923Z",
+      "mood_score": 0.387,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 4,
@@ -109,7 +109,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -124,6 +124,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S3: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -148,34 +156,26 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The skies are a moody gray, with a brisk chill in the air that makes your cheeks flush.. The usually bustling U-Bahn stations are eerily quiet, as the ongoing strikes have left man"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.025,
+        "source_item_count": 94,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ],
         "freshness_score": 0.929
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-13T08:53:50.339Z",
-      "mood_score": 0.501,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-04-13T09:47:38.923Z",
+      "mood_score": 0.292,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
         "review": 2,
@@ -191,6 +191,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only a true local knows to avoid 16th Street BART on Fridays; the echo of broken brakes and bus delays is li"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -222,33 +230,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A hazy veil hangs over the city, with a chill in the air that clings like a forgotten layer of fog.. BART's delays and the lingering evacuation at Civic Center have left commuters "
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": 0.002,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.825
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-13T08:53:50.339Z",
+      "captured_at": "2026-04-13T09:47:38.923Z",
       "mood_score": 0.394,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
@@ -313,10 +313,10 @@
         "average_valence": -0.017,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.634
+        "freshness_score": 0.632
       }
     }
   ]
