@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-13T07:43:57.873Z",
+    "capturedAt": "2026-04-13T08:53:50.339Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 343
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-13T07:43:57.873Z",
-      "mood_score": 0.322,
+      "captured_at": "2026-04-13T08:53:50.339Z",
+      "mood_score": 0.323,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 4,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,7 +34,6 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -50,12 +49,12 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham / Chesham due to an earlier signalling problem. The next"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick grey overcast looms above, promising rain but only drizzling sporadically, casting a dull light over the bustling streets.. The air is thick with frustration as commuters h"
         },
         {
           "source_family": "news",
@@ -84,24 +83,24 @@
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.084,
+        "average_valence": -0.08,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.838
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-13T07:43:57.873Z",
-      "mood_score": 0.384,
+      "captured_at": "2026-04-13T08:53:50.339Z",
+      "mood_score": 0.392,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 2,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,7 +109,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,22 +126,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, RE7: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you find a bar hidden behind a kebab shop, where the cocktails are named after protest slogans. It's a"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -157,28 +140,44 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a moody gray, with a brisk chill in the air that makes your cheeks flush.. The usually bustling U-Bahn stations are eerily quiet, as the ongoing strikes have left man"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.046,
+        "source_item_count": 93,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "money"
         ],
-        "freshness_score": 0.928
+        "freshness_score": 0.929
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-13T07:43:57.873Z",
+      "captured_at": "2026-04-13T08:53:50.339Z",
       "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,7 +197,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "We don't usually have a voice in federal stuff (Nancy hogged the seat for 40 years) so basically no one in the SF political establishment knows much about Congress - whether that's"
+          "excerpt": "I’m not sure where you would be working but if you’re ok with it I would recommend not having a car and either living close to BART/Caltrain if your job is near one of those statio"
         },
         {
           "source_family": "review",
@@ -230,26 +229,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy gray, casting a muted light over the streets, with a chilly breeze carrying the scent of damp asphalt.. BART riders are glancing anxiously at their phones, waiti"
+          "excerpt": "A hazy veil hangs over the city, with a chill in the air that clings like a forgotten layer of fog.. BART's delays and the lingering evacuation at Civic Center have left commuters "
         }
       ],
       "metadata": {
-        "source_item_count": 61,
+        "source_item_count": 55,
         "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.823
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-13T07:43:57.873Z",
-      "mood_score": 0.388,
+      "captured_at": "2026-04-13T08:53:50.339Z",
+      "mood_score": 0.394,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
@@ -269,14 +268,6 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is just Gaudí, but really it's the hum of locals at the plaça and the chaos of the festa major that defin"
-        },
-        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "es",
@@ -291,6 +282,14 @@
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. They think 'tapas' means a plate of Olives everywhere. Most of us prefer a good bocadillo over the tourist traps, any day."
         },
         {
           "source_family": "social",
@@ -311,11 +310,11 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.036,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
         "freshness_score": 0.634
       }
