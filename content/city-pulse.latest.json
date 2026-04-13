@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-13T10:41:33.918Z",
+    "capturedAt": "2026-04-13T11:35:43.330Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-13T10:41:33.918Z",
-      "mood_score": 0.328,
+      "captured_at": "2026-04-13T11:35:43.330Z",
+      "mood_score": 0.323,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -47,6 +48,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays while we deal with a points failure between Paddington and Acton Main Line. London Underground, London Bus"
         },
         {
           "source_family": "news",
@@ -71,31 +80,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.065,
+        "source_item_count": 54,
+        "average_valence": -0.08,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-13T10:41:33.918Z",
-      "mood_score": 0.387,
+      "captured_at": "2026-04-13T11:35:43.330Z",
+      "mood_score": 0.388,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -109,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -131,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S9, S7, S3: Delays 4 trips delayed"
         },
         {
           "source_family": "world",
@@ -159,20 +160,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.038,
+        "source_item_count": 94,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.926
+        "freshness_score": 0.928
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-13T10:41:33.918Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-04-13T11:35:43.330Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -195,9 +196,9 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only a true local knows to avoid 16th Street BART on Fridays; the echo of broken brakes and bus delays is li"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from here when they can name the BART delays like old friends—\"Oh, the 22’s just always late, but "
         },
         {
           "source_family": "public",
@@ -234,21 +235,21 @@
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.011,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-13T10:41:33.918Z",
-      "mood_score": 0.393,
+      "captured_at": "2026-04-13T11:35:43.330Z",
+      "mood_score": 0.392,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
@@ -300,21 +301,21 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The sun casts a warm golden hue across the bustling streets, making the autumn leaves dance in the light breeze.. The trains are running on reduced schedules due to the ongoing str"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.636
       }
