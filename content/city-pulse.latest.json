@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-13T01:43:53.055Z",
+    "capturedAt": "2026-04-13T03:17:05.412Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 330
+    "totalItems": 332
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-13T01:43:53.055Z",
-      "mood_score": 0.321,
+      "captured_at": "2026-04-13T03:17:05.412Z",
+      "mood_score": 0.328,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 3,
@@ -49,14 +49,6 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Caught a late 59 last night, bloke in a full suit swaying with a bouquet. Turns out it was for a surprise engagement. Could smell the champagne!"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -79,25 +71,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London Underground strike action: March – May 2026 - UCL | University College London. London Underground strike action: March – May 2026"
         }
       ],
       "metadata": {
         "source_item_count": 51,
-        "average_valence": -0.085,
+        "average_valence": -0.064,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.813
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-13T01:43:53.055Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-13T03:17:05.412Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -109,6 +109,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -125,6 +126,22 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit FEX, S9: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A damp gray sky hangs heavily over the city, with occasional splatters of rain adding a chill to the air that feels almost bittersweet.. With major disruptions from the Deutsche Ba"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -139,39 +156,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Also people say there is traffic in Berlin. They think waiting 3 mins for a red light with few cars is traffic xd"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.029,
+        "source_item_count": 91,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.936
+        "freshness_score": 0.934
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-13T01:43:53.055Z",
-      "mood_score": 0.342,
+      "captured_at": "2026-04-13T03:17:05.412Z",
+      "mood_score": 0.336,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -199,6 +200,14 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a true local by how they react to a BART closure—it's a resigned sigh, not panic, like they've been thro"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. Only a local knows that dodging the BART delays is a skill, especially after that train brake meltdown last Friday. W"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -221,33 +230,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.024,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.822
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-13T01:43:53.055Z",
-      "mood_score": 0.391,
+      "captured_at": "2026-04-13T03:17:05.412Z",
+      "mood_score": 0.392,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
@@ -283,14 +284,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun casts a golden hue over the streets, occasionally obscured by wisps of cotton-like clouds that float lazily overhead.. The atmosphere at the train stations is thi"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -305,17 +298,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with slate-gray clouds, threatening rain, while a chill breeze stirs fallen leaves along the pavement.. The train stations buzz with an undercurrent of frustrat"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.634
+        "freshness_score": 0.639
       }
     }
   ]
