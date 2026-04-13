@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-13T18:37:01.031Z",
+    "capturedAt": "2026-04-13T19:36:00.187Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 334
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-13T18:37:01.031Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-04-13T19:36:00.187Z",
+      "mood_score": 0.311,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -63,14 +63,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier customer incident at Green Park."
         },
         {
@@ -80,25 +72,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier customer incident. Tickets will be accepted on London Buses, Elizabeth"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Mayor of London urged to take action as key workers struggle with rent - Property118. Mayor of London urged to take action as key workers struggle with rent"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.153,
+        "source_item_count": 53,
+        "average_valence": -0.116,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-13T18:37:01.031Z",
-      "mood_score": 0.386,
+      "captured_at": "2026-04-13T19:36:00.187Z",
+      "mood_score": 0.39,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 3,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,14 +124,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -157,23 +148,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 1.04,
+          "excerpt": "Time to check out inberlinwohnen.de and make it a part-time job to search for apartments. I hope you don't have too high expectations besides 3 rooms. Apartments are either incredi"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.042,
+        "source_item_count": 91,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "money"
         ],
         "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-13T18:37:01.031Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-13T19:36:00.187Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -201,14 +200,6 @@
           "excerpt": "Go to the SF Rent Board and let them know whats happening. I’d start CCing them to every email you send so that there is an ongoing record of the communication you have with them. "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a chill creeping in that hints at the fog rolling in from the ocean.. Frustration hangs in the air as commuters eye the Muni buses that are consistent"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -231,25 +222,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is an overcast gray, heavy and brooding, as the scent of impending rain lingers in the cool air.. Commuters at Civic Center are visibly frustrated, with many glancing at th"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.034,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.829
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-13T18:37:01.031Z",
-      "mood_score": 0.39,
+      "captured_at": "2026-04-13T19:36:00.187Z",
+      "mood_score": 0.393,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
@@ -277,14 +276,6 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a recent arrival by their wide-eyed wonder at how late the bars serve dinner. Locals have perfected the art of the late-night tap"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -307,15 +298,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.031,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
         "freshness_score": 0.64
       }
