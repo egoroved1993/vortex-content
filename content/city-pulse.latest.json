@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-13T05:12:16.996Z",
+    "capturedAt": "2026-04-13T06:58:30.847Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 342
+    "totalItems": 343
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-13T05:12:16.996Z",
-      "mood_score": 0.329,
+      "captured_at": "2026-04-13T06:58:30.847Z",
+      "mood_score": 0.32,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 4,
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -47,6 +48,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham / Chesham due to an earlier signalling problem. The next"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low with a soft blanket of grey clouds, threatening to drench the city but holding back for now.. With ongoing Tube strikes, many commuters are opting for buses or ri"
         },
         {
           "source_family": "news",
@@ -63,41 +80,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 - UCL | University College London. London Underground strike action: March – May 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.063,
+        "source_item_count": 53,
+        "average_valence": -0.089,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.823
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-13T05:12:16.996Z",
-      "mood_score": 0.389,
+      "captured_at": "2026-04-13T06:58:30.847Z",
+      "mood_score": 0.386,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
@@ -131,7 +132,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you find a bar hidden behind a kebab shop, where the cocktails are named after protest slogans. It's a"
         },
         {
           "source_family": "world",
@@ -148,33 +157,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the heavy clouds, casting sporadic warmth on the damp streets while a cool breeze swirls fallen leaves around the sidewalks.. With the BVG strike just liftin"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.031,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.93
+        "freshness_score": 0.926
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-13T05:12:16.996Z",
-      "mood_score": 0.348,
+      "captured_at": "2026-04-13T06:58:30.847Z",
+      "mood_score": 0.349,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 13,
@@ -192,20 +193,20 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. Only a local knows that dodging the BART delays is a skill, especially after that train brake meltdown last Friday. W"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "We don't usually have a voice in federal stuff (Nancy hogged the seat for 40 years) so basically no one in the SF political establishment knows much about Congress - whether that's"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a leaden gray, with a persistent chill that bites through jackets and whispers of impending rain.. BART is in a state of chaos as riders deal with unexpected delays and "
         },
         {
           "source_family": "review",
@@ -234,19 +235,19 @@
       ],
       "metadata": {
         "source_item_count": 61,
-        "average_valence": -0.005,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-13T05:12:16.996Z",
-      "mood_score": 0.393,
+      "captured_at": "2026-04-13T06:58:30.847Z",
+      "mood_score": 0.389,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
@@ -267,6 +268,14 @@
         "ru"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is just Gaudí, but really it's the hum of locals at the plaça and the chaos of the festa major that defin"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -298,19 +307,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
