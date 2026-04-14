@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-14T03:16:00.967Z",
+    "capturedAt": "2026-04-14T05:05:37.927Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,88 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 332
+    "totalItems": 340
   },
   "rows": [
     {
+      "city_id": "london",
+      "captured_at": "2026-04-14T05:05:37.927Z",
+      "mood_score": 0.24,
+      "mood_label": "low",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
+      "source_counts": {
+        "public": 4,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "transport": 4,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays anticlockwise and MINOR DELAYS clockwise direction following a late finish of engineering wor"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Severe delays anticlockwise and MINOR DELAYS clockwise direction following a late finish of engineering wor"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays following a late finish of engineering work. Tickets are being accepted on DLR,"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1,
+          "excerpt": "All the Tube strike dates confirmed so far as 12 DAYS of chaos to hit entire network - starting next week - The Sun. All the Tube strike dates confirmed so far as 12 DAYS of chaos "
+        },
+        {
+          "source_family": "social",
+          "source_origin": "x_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 56,
+        "average_valence": -0.178,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "money"
+        ],
+        "freshness_score": 0.857
+      }
+    },
+    {
       "city_id": "berlin",
-      "captured_at": "2026-04-14T03:16:00.967Z",
-      "mood_score": 0.341,
+      "captured_at": "2026-04-14T05:05:37.927Z",
+      "mood_score": 0.338,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -35,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -49,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -67,42 +151,34 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through scattered clouds, casting a warm glow on the wet cobblestones after a brief morning rain.. Berlin's public transport is buzzing with frustrated commuters, th"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "That’s an S-Bahn station in Berlin, the particular line comes every ten minutes. I think 20 minutes is the lowest timing of S-Bahn trains in Berlin."
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.026,
+        "source_item_count": 90,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.921
+        "freshness_score": 0.928
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-14T03:16:00.967Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-14T05:05:37.927Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -117,36 +193,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local when they know the exact route to avoid the BART chaos after a loud bang at Civic Center. Tour"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "7k a month on rent is insane to me, and I'm not much below what you would make in the Bay area. Definitely look into the utility bills (PG&E electric bills are absolutely crazy in "
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "If you don’t mind a gay bar you have tons of options around Castro station. My personal favorite is Last Call, super cute and cozy neighborhood bar with good and affordable drinks."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It’s kind of a combo of Broke Ass Stuart, SF funcheap, and Eddie’s list. Back in the day it was the pink pages, SF weekly, and Bay Guardian, so same same but different"
+          "excerpt": "When I visit friends in Europe they always love my Bay Area tote bags. Napa/Sonoma wine can be a hit. Local coffee beans like odd_mechanic_4984 mentioned is a good idea too. An for"
         },
         {
           "source_family": "review",
@@ -155,98 +207,49 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        }
-      ],
-      "metadata": {
-        "source_item_count": 58,
-        "average_valence": -0.018,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "weather"
-        ],
-        "freshness_score": 0.845
-      }
-    },
-    {
-      "city_id": "london",
-      "captured_at": "2026-04-14T03:16:00.967Z",
-      "mood_score": 0.26,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "negative",
-      "source_counts": {
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "All the Tube strike dates confirmed so far as 12 DAYS of chaos to hit entire network - starting next week - The Sun. All the Tube strike dates confirmed so far as 12 DAYS of chaos "
-        },
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Clapton. You still check the TfL app for delays during Tube strikes—locals know to just bike or grab a bus instead."
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The eye-watering salary you now need to make to rent alone in London - Metro.co.uk. The eye-watering salary you now need to make to rent alone in London"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A blanket of gray clouds looms overhead, mingling with a cool breeze that whispers of rain but holds back for now.. The mood at the BART Civic Center station is tense, as travelers"
         }
       ],
       "metadata": {
-        "source_item_count": 48,
-        "average_valence": -0.117,
+        "source_item_count": 57,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-14T03:16:00.967Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-14T05:05:37.927Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -274,20 +277,20 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think we all drink vermut at noon. Most locals prefer a quiet café and a late afternoon caña instead. It's about the v"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "How to spot a recent arrival. Eixample. You can tell they're new by the way they still think they can get a seat on the metro during rush hour. Good luck with that!"
         },
         {
           "source_family": "social",
@@ -308,13 +311,13 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.031,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.64
+        "freshness_score": 0.639
       }
     }
   ]
