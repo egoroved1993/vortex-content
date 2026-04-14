@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-14T09:41:50.085Z",
+    "capturedAt": "2026-04-14T10:37:30.855Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-14T09:41:50.085Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-04-14T10:37:30.855Z",
+      "mood_score": 0.467,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -41,12 +42,28 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Brixton. Caught a glimpse of a rat casually riding the backseat of the 35 last Saturday. It was totally unfazed by the chaos around it."
+        },
+        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Wandsworth Road and Clapham Junction while we respond to a fire alert. GOOD SERVICE on"
         },
         {
           "source_family": "news",
@@ -57,47 +74,31 @@
           "excerpt": "London Tube drivers to strike twice this April over four-day week plans - London Now. London Tube drivers to strike twice this April over four-day week plans"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "BBC Weather verdict on when good weather will end and nearly week of rain will begin - My London. BBC Weather verdict on when good weather will end and nearly week of rain will beg"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The eye-watering salary you now need to make to rent alone in London - Metro.co.uk. The eye-watering salary you now need to make to rent alone in London"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+          "excerpt": "Today's sun shines down through a veil of grey clouds, casting a soft glow over the damp streets of London.. The mood at the Tube stations is tense, with commuters glancing nervous"
         }
       ],
       "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.082,
+        "source_item_count": 51,
+        "average_valence": -0.097,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.82
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-14T09:41:50.085Z",
-      "mood_score": 0.336,
+      "captured_at": "2026-04-14T10:37:30.855Z",
+      "mood_score": 0.34,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
@@ -109,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -131,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE2, 100: Delays 3 trips delayed"
         },
         {
           "source_family": "world",
@@ -150,29 +151,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "A mix of grey clouds and sporadic sunlight brings a cool crispness to the air, as autumn leaves scatter on the sidewalks.. With the recent strikes behind us, the U-Bahn is bustling"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.041,
+        "source_item_count": 91,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.941
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-14T09:41:50.085Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-04-14T10:37:30.855Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -192,14 +193,6 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they're locals when they dodge the BART Civic Center evacuation chaos like pros, while newcomers just stare "
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -216,25 +209,33 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission District. You know they’re local when they take the 14 Mission and complain about the bus delays like it’s a rite of p"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun peeks through a veil of clouds, casting a soft glow that dances on the puddles from this morning's drizzle.. With BART's Civic Center station closed, a palpable frustration"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.068,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
@@ -245,8 +246,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-14T09:41:50.085Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-14T10:37:30.855Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
@@ -284,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sun casts a golden hue over the Eixample, while a gentle breeze carries the scent of fresh paella from nearby terraces.. Commuters on the Rodalies train are visibly f"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -298,19 +307,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
