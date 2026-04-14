@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-14T12:34:52.091Z",
+    "capturedAt": "2026-04-14T13:42:14.648Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 346
+    "totalItems": 345
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-14T12:34:52.091Z",
-      "mood_score": 0.278,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-14T13:42:14.648Z",
+      "mood_score": 0.479,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 8,
         "review": 2,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -42,20 +42,28 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "All the Tube strike dates confirmed so far as 12 DAYS of chaos to hit entire network - starting next week - The Sun. All the Tube strike dates confirmed so far as 12 DAYS of chaos "
-        },
-        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays while we fix a signal failure at Maida Vale. Ticket are being accepted on London Buses, Lio"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Clapham. Caught a night bus from Clapham Common and noticed a guy selling leftover bakery goods. Not sure if it was genius or just too late for that."
         },
         {
           "source_family": "news",
@@ -72,33 +80,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London Tube drivers to strike twice this April over four-day week plans - London Now. London Tube drivers to strike twice this April over four-day week plans"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Lots of.people saying the Guinness... but they also do a very good steak and were featured on Sorted Foods \"best steaks in london\" list not too long ago."
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.066,
+        "source_item_count": 58,
+        "average_valence": -0.062,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-14T12:34:52.091Z",
-      "mood_score": 0.336,
+      "captured_at": "2026-04-14T13:42:14.648Z",
+      "mood_score": 0.338,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 4,
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, RE2, 100: Delays 3 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
           "source_family": "forum",
@@ -140,7 +140,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Prenzlauer Berg. Only in Prenzlauer Berg can you find a street fruit vendor next to a craft beer bar, both packed at 2 PM on a Tuesday. C"
+          "excerpt": "When you knew you were actually living here. Neukölln. I knew I was home when a random guy on the U7 sang opera to a packed train, and everyone just nodded along, like it was a Tue"
         },
         {
           "source_family": "world",
@@ -161,21 +161,21 @@
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.041,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.945
+        "freshness_score": 0.946
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-14T12:34:52.091Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-14T13:42:14.648Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -201,14 +201,6 @@
           "excerpt": "Bayview gets a little rough near 3rd and Palou. It used to be a hangout for drug trafficking, but they shut down the open drug market last year. It has all the problems a tradition"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A gray fog clings to the tall buildings, muffling the sounds of the city and creating a damp chill that seeps through layers of clothing.. The BART system is a chaotic mess, with c"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -231,25 +223,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. there is a very local "
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.03,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
         "freshness_score": 0.836
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-14T12:34:52.091Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-14T13:42:14.648Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The morning sun filtered through a hazy sky, warming the cobblestones as a light breeze carried the scent of fresh churros from a nearby café.. The platforms at Plaça Catalunya are"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,15 +299,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sun is a glare on the pavement, mixing with the cool breeze that offers relief from the lingering warmth of the day.. With train services disrupted due to the ongoing"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "transit",
-          "tourism"
+          "routine"
         ],
         "freshness_score": 0.64
       }
