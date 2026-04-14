@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-14T05:05:37.927Z",
+    "capturedAt": "2026-04-14T06:49:10.492Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 336
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-14T05:05:37.927Z",
-      "mood_score": 0.24,
+      "captured_at": "2026-04-14T06:49:10.492Z",
+      "mood_score": 0.272,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 4,
@@ -34,37 +34,12 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays anticlockwise and MINOR DELAYS clockwise direction following a late finish of engineering wor"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Severe delays anticlockwise and MINOR DELAYS clockwise direction following a late finish of engineering wor"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays following a late finish of engineering work. Tickets are being accepted on DLR,"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -80,23 +55,47 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The eye-watering salary you now need to make to rent alone in London - Metro.co.uk. The eye-watering salary you now need to make to rent alone in London"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.178,
+        "source_item_count": 52,
+        "average_valence": -0.083,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.832
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-14T05:05:37.927Z",
-      "mood_score": 0.338,
+      "captured_at": "2026-04-14T06:49:10.492Z",
+      "mood_score": 0.335,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -132,7 +131,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S9, U8, M5, 200, 100: Delays 5 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Reuterkiez. The moment I realized I was living here? Watching a group of kids turn a broken bus stop into a makeshift skate park. Pure "
         },
         {
           "source_family": "world",
@@ -149,30 +156,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "That’s an S-Bahn station in Berlin, the particular line comes every ten minutes. I think 20 minutes is the lowest timing of S-Bahn trains in Berlin."
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.034,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.928
+        "freshness_score": 0.926
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-14T05:05:37.927Z",
+      "captured_at": "2026-04-14T06:49:10.492Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -230,7 +229,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A blanket of gray clouds looms overhead, mingling with a cool breeze that whispers of rain but holds back for now.. The mood at the BART Civic Center station is tense, as travelers"
+          "excerpt": "The sun is struggling to break through a blanket of gray fog, casting a cool, muted hue over the streets.. BART riders are visibly frustrated as reports of delays echo through the "
         }
       ],
       "metadata": {
@@ -241,13 +240,13 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.835
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-14T05:05:37.927Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-14T06:49:10.492Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
@@ -311,7 +310,7 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
