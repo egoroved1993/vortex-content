@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-15T15:35:50.134Z",
+    "capturedAt": "2026-04-15T16:32:19.173Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 356
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-15T15:35:50.134Z",
-      "mood_score": 0.406,
+      "captured_at": "2026-04-15T16:32:19.173Z",
+      "mood_score": 0.411,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 6,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -48,6 +48,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -72,36 +80,101 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Part Suspended District Line: No service between Wimbledon and Wimbledon Park and SEVERE DELAYS between Earl's Court and Wimbledon Park"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Severe Delays Windrush Line: No service between Dalston Junction and Highbury & Islington while we remove an obstruction from the trac"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.129,
+        "source_item_count": 58,
+        "average_valence": -0.116,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.865
+      }
+    },
+    {
+      "city_id": "sf",
+      "captured_at": "2026-04-15T16:32:19.173Z",
+      "mood_score": 0.484,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 7,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a clown suit juggling while waiting for the 6. Only in San Francisco does a Muni delay turn into a street performance."
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by how they eye the BART delays like it's a game—calculating their next move based on malfunctio"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 31 late last night, driver chatting with a regular about how the Muni can feel like therapy. That connection? Only in SF."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "BART Delays Disrupt Commutes Across San Francisco - National Today. BART Delays Disrupt Commutes Across San Francisco"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Practical advice: It might be easier for you to just BART to Richmond and transfer to Amtrak there, as opposed to getting yourself to Emeryville"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 55,
+        "average_valence": -0.046,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "work"
+        ],
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-15T15:35:50.134Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-15T16:32:19.173Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -126,14 +199,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Just inform the Ausländerbehörde then do Abmeldung when you leave. You won’t be banned if you already submitted your residence permit application in good time. Plus UK citizens can"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -150,103 +215,37 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate gray, heavy with clouds that threaten rain but have yet to spill, creating an oppressive yet strangely comforting blanket over the bustling streets.. With the re"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.02,
+        "source_item_count": 88,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.954
-      }
-    },
-    {
-      "city_id": "sf",
-      "captured_at": "2026-04-15T15:35:50.134Z",
-      "mood_score": 0.481,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 17,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Shit is so expensive I take the Samtrans bus instead which makes me wonder why BART even bothered with the giant expensive concrete bridge and station instead of just running frequ"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by how they eye the BART delays like it's a game—calculating their next move based on malfunctio"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 31 late last night, driver chatting with a regular about how the Muni can feel like therapy. That connection? Only in SF."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "actually, neighborhood wandering is perfect for this. Bernal Hill is great with short climb, incredible views very chill energy and I am also seconding coffee shops from other comm"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 65,
-        "average_valence": -0.055,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "money"
-        ],
-        "freshness_score": 0.868
+        "freshness_score": 0.95
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-15T15:35:50.134Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-15T16:32:19.173Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
@@ -303,14 +302,14 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The winter sun breaks through low-hanging clouds, casting a muted glow on the damp streets after yesterday's rain.. People are huddled together at El Clot station, eyes glued to th"
+          "excerpt": "The sun hangs low, casting a golden glow over the cobblestone streets, while a brisk breeze tugs at scarves and jackets.. Commuters are glancing anxiously at their watches as they "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
