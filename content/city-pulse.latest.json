@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-15T18:35:31.363Z",
+    "capturedAt": "2026-04-15T19:37:33.060Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 335
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-15T18:35:31.363Z",
-      "mood_score": 0.412,
+      "captured_at": "2026-04-15T19:37:33.060Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
         "review": 2,
@@ -41,14 +41,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "Tube and bus strikes set to bring four days of travel chaos next week - London Evening Standard. Tube and bus strikes set to bring four days of travel chaos next week"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -74,29 +66,37 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Tube strike dates announced as London Underground faces fresh disruption - Teddington Nub News. Tube strike dates announced as London Underground faces fresh disruption"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Peckham. Last night, the 36 bus was packed with a group singing sea shanties. Didn't know Peckham had a maritime mood!"
+          "excerpt": "A lot of these animals are bred to be food though. If they werent then they never would have a life. This assumes they have a life worth living of course, I would always try and bu"
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.113,
+        "average_valence": -0.076,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-15T18:35:31.363Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-15T19:37:33.060Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -158,19 +158,19 @@
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.019,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.838
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-15T18:35:31.363Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-15T19:37:33.060Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -183,7 +183,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -200,12 +199,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, 248: Delays 2 trips delayed"
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin do you see people casually setting up a raves in parks, complete with sound systems, regardless of local l"
         },
         {
           "source_family": "world",
@@ -229,24 +228,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, threatening rain, while a gusty wind sends fallen leaves swirling along the damp pavement.. With ongoing strike tensions, the usually bustling U-Bahn pl"
+          "excerpt": "The sky hangs heavy and gray, with the scent of impending rain mingling with the dampness of the fallen leaves.. Buses and trams are bustling, yet a palpable tension fills the air "
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.037,
+        "source_item_count": 88,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.953
+        "freshness_score": 0.95
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-15T18:35:31.363Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-15T19:37:33.060Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -284,14 +283,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is shining brightly, casting long shadows across the narrow streets, while a cool breeze stirs the leaves of the palm trees lining the avenues.. Commuters on the Renfe are "
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -306,11 +297,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
