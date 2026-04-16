@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-16T13:42:33.441Z",
+    "capturedAt": "2026-04-16T14:45:53.885Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-16T13:42:33.441Z",
-      "mood_score": 0.367,
+      "captured_at": "2026-04-16T14:45:53.885Z",
+      "mood_score": 0.375,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -48,14 +48,6 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "Tube strikes: Travel chaos as London Underground drivers set to walk out - The Independent. Tube strikes: Travel chaos as London Underground drivers set to walk out"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "Tube and bus strikes set to bring four days of travel chaos next week - London Evening Standard. Tube and bus strikes set to bring four days of travel chaos next week"
         },
         {
           "source_family": "social",
@@ -74,6 +66,14 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays between Liverpool Street and Enfield Town/Cheshunt due to an earlier trespasser on the track"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -83,19 +83,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.096,
+        "source_item_count": 55,
+        "average_valence": -0.073,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.912
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-16T13:42:33.441Z",
+      "captured_at": "2026-04-16T14:45:53.885Z",
       "mood_score": 0.44,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
@@ -147,7 +147,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is overcast with a chill that pricks the skin, hinting at an impending autumn rain.. Today's transit mood is restless, with many commuters glancing at their watches as they"
+          "excerpt": "A chilly overcast sky hangs low, casting a muted grey light that makes the autumn leaves glow eerily bright.. The U-Bahns are running again after the strike, but the platforms feel"
         },
         {
           "source_family": "public",
@@ -171,8 +171,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-16T13:42:33.441Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-16T14:45:53.885Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -208,6 +208,14 @@
           "excerpt": "Red flag to me is that the Noe Valley landlord is 90 y.o. What will be the outlook for the building and its tenants once he passes?"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals know how to dodge the BART delays and still make it to a taco truck before the lunch rush hits. Tourists?"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -222,31 +230,23 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "BART Delays Disrupt Commutes Across San Francisco - National Today. BART Delays Disrupt Commutes Across San Francisco"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.048,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.838
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-16T13:42:33.441Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-16T14:45:53.885Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
@@ -300,17 +300,17 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, pregnant with rain, threatening to burst open at any moment.. The trains are notably less crowded, with commuters visibly frustrated as they check their ph"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
