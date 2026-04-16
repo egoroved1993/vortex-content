@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-16T14:45:53.885Z",
+    "capturedAt": "2026-04-16T15:41:33.300Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-16T14:45:53.885Z",
-      "mood_score": 0.375,
+      "captured_at": "2026-04-16T15:41:33.300Z",
+      "mood_score": 0.361,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,13 +34,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "Tube and bus strikes set to bring four days of travel chaos next week - London Evening Standard. Tube and bus strikes set to bring four days of travel chaos next week"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -63,7 +71,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -71,32 +79,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays between Liverpool Street and Enfield Town/Cheshunt due to an earlier trespasser on the track"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Saw a very rare performance by the La's in there . Club night was good too , there was a.very \" European \" approach to queuing there ! Mixed feelings about it being a a wetherspoon"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.073,
+        "source_item_count": 56,
+        "average_valence": -0.115,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.912
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-16T14:45:53.885Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-04-16T15:41:33.300Z",
+      "mood_score": 0.437,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -124,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, 200, 248: Delays 3 trips delayed"
         },
         {
           "source_family": "world",
@@ -142,36 +151,28 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A chilly overcast sky hangs low, casting a muted grey light that makes the autumn leaves glow eerily bright.. The U-Bahns are running again after the strike, but the platforms feel"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Where do you get one for 5€? On Kleinanzeigen.de I can't find anything below 15€ in Berlin. I do see one for 5€ in south germany, but shipping will probably push that to 10€ at lea"
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.029,
+        "source_item_count": 91,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.936
+        "freshness_score": 0.939
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-16T14:45:53.885Z",
+      "captured_at": "2026-04-16T15:41:33.300Z",
       "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -224,31 +225,31 @@
           "excerpt": "That Tyler Durden moment! Mamdani is truly a master communicator. And the idea is no nonsense. Good! Yep, every city on earth should do the same. What good do empty investment apar"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "BART Delays Disrupt Commutes Across San Francisco - National Today. BART Delays Disrupt Commutes Across San Francisco"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The air is a heavy mix of chilly fog and sharp sunlight, casting a ghostly glow over the bustling streets.. BART stations are particularly grim today, with frustrated commuters pac"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.075,
+        "average_valence": -0.073,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-16T14:45:53.885Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-16T15:41:33.300Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -300,23 +301,23 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The sun blazes down, casting sharp shadows against the cobblestones as a warm breeze stirs a sense of unease in the air.. Subway stations buzz with frustrated commuters, some glanc"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.63
+        "freshness_score": 0.628
       }
     }
   ]
