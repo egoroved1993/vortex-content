@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-16T07:41:48.348Z",
+    "capturedAt": "2026-04-16T08:44:41.862Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-16T07:41:48.348Z",
-      "mood_score": 0.365,
+      "captured_at": "2026-04-16T08:44:41.862Z",
+      "mood_score": 0.371,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -46,8 +46,8 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "Tube and bus strikes set to bring four days of travel chaos next week - London Evening Standard. Tube and bus strikes set to bring four days of travel chaos next week"
+          "recency_weight": 1.08,
+          "excerpt": "London Tube and bus strikes to spark four days of travel chaos next week as two major lines to shut - London Evening Standard. London Tube and bus strikes to spark four days of tra"
         },
         {
           "source_family": "social",
@@ -63,15 +63,65 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "recency_weight": 1,
+          "excerpt": "Four days of tube disruption expected due to tube strike by the RMT - ianVisits. Four days of tube disruption expected due to tube strike by the RMT"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 56,
+        "average_valence": -0.084,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "weather"
+        ],
+        "freshness_score": 0.885
+      }
+    },
+    {
+      "city_id": "sf",
+      "captured_at": "2026-04-16T08:44:41.862Z",
+      "mood_score": 0.452,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 9,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Damn this hits too close. Spent most my twenties just trying to keep the lights on and now I'm finally getting some breathing room at 28. Hard to think about adding more chaos when"
         },
         {
           "source_family": "public",
@@ -79,29 +129,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Having commuted in Manchester, Birmingham, and London in the last 50 years (yikes), I think Mancs and Brummies will chat during off-peak daylight hours, in a reasonably populated c"
+          "excerpt": "Noe. San Francisco is a great city to live in, Noe is an amazing neighborhood, you’ll have rent control in what sounds like a great building m, and the shuttle commute is a luxury."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Red flag to me is that the Noe Valley landlord is 90 y.o. What will be the outlook for the building and its tenants once he passes?"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a true local by how they avoid the Civic Center BART entrance—it's like a game of dodgeball with the del"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. SOMA. Caught the 12 at 4th street today, and it was packed with a marching band in full costume. Only in SF do you see such random joy on a comm"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.104,
+        "average_valence": -0.14,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-16T07:41:48.348Z",
-      "mood_score": 0.443,
+      "captured_at": "2026-04-16T08:44:41.862Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -142,113 +215,39 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The clouds hang low over Berlin, casting a muted gray light that feels both heavy and reflective.. After a chaotic morning of strikes, there's a palpable sense of relief among comm"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I was born in Berlin, my Parents still live there. I lived close to Cologne as an adult for 20 years. I don't like the rudeness of the people in Berlin. I much prefer Cologne, the "
-        }
-      ],
-      "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.022,
-        "dominant_themes": [
-          "general",
-          "routine",
-          "transit"
-        ],
-        "freshness_score": 0.939
-      }
-    },
-    {
-      "city_id": "sf",
-      "captured_at": "2026-04-16T07:41:48.348Z",
-      "mood_score": 0.475,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 6,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "There’s asymmetric home owner risk in SF vs other areas because the housing stock is so old, building costs and code changes are so expensive, and rent control caps your value reca"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 21 one evening, packed with locals and tourists alike, all jamming to a street musician. Only in SF do you get a full con"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "BART Delays Disrupt Commutes Across San Francisco - National Today. BART Delays Disrupt Commutes Across San Francisco"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
-          "valence": 0.5,
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "city_guide_snippet",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.074,
+        "source_item_count": 88,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "belonging"
+          "routine",
+          "weather"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-16T07:41:48.348Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-16T08:44:41.862Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,14 +283,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with gray clouds, pregnant with the promise of rain, casting a muted light over the bustling streets.. The trains are packed but quiet as commuters share knowin"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -306,17 +297,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sun pours down with an intensity that dances off the vibrant tiles of the streets, casting long shadows against the old buildings.. The atmosphere on the Rodalies tra"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.633
+        "freshness_score": 0.635
       }
     }
   ]
