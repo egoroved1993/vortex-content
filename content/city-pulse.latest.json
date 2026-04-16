@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-16T05:09:46.719Z",
+    "capturedAt": "2026-04-16T06:50:17.569Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-16T05:09:46.719Z",
-      "mood_score": 0.483,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-04-16T06:50:17.569Z",
+      "mood_score": 0.371,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
         "review": 2,
@@ -34,12 +34,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1,
+          "excerpt": "Tube and bus strikes set to bring four days of travel chaos next week - London Evening Standard. Tube and bus strikes set to bring four days of travel chaos next week"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -49,53 +58,45 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Having commuted in Manchester, Birmingham, and London in the last 50 years (yikes), I think Mancs and Brummies will chat during off-peak daylight hours, in a reasonably populated c"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "London is no.1 city in the world, if we have more officers in the public face it will do more harm than good and it can escalate the situation that would hurt both side. A few fare"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Four days of tube disruption expected due to tube strike by the RMT - ianVisits. Four days of tube disruption expected due to tube strike by the RMT"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Tube strike dates announced as London Underground faces fresh disruption - Teddington Nub News. Tube strike dates announced as London Underground faces fresh disruption"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.051,
+        "source_item_count": 57,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-16T05:09:46.719Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-04-16T06:50:17.569Z",
+      "mood_score": 0.437,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -109,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -141,37 +151,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I was born in Berlin, my Parents still live there. I lived close to Cologne as an adult for 20 years. I don't like the rudeness of the people in Berlin. I much prefer Cologne, the "
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Gray clouds hang heavily over the city, hinting at rain but holding back, while a chilly breeze nips at exposed skin.. After a series of strikes, the U-Bahn is running again, but t"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.025,
+        "source_item_count": 90,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.941
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-16T05:09:46.719Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-16T06:50:17.569Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -215,25 +217,25 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy trying to fix the Muni bus stop sign with duct tape. Smiled when he got a round of applause as the bus finally arrived. On"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of gray clouds hangs low, creating a damp chill that seems to seep into every corner of the city.. Frustration hangs in the air as commuters huddle together, sharing "
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.047,
+        "average_valence": -0.052,
         "dominant_themes": [
           "general",
           "transit",
@@ -244,7 +246,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-16T05:09:46.719Z",
+      "captured_at": "2026-04-16T06:50:17.569Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
@@ -288,7 +290,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, tinged with the scent of impending rain that lingers in the air.. The trains are unusually crowded with commuters brimming with frustration, as the ongoing"
+          "excerpt": "The morning is shrouded in a warm, hazy light, as the sun struggles to break through a thin veil of clouds, casting soft shadows on the intricate façades.. The atmosphere on the Ce"
         },
         {
           "source_family": "social",
@@ -315,7 +317,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.636
+        "freshness_score": 0.635
       }
     }
   ]
