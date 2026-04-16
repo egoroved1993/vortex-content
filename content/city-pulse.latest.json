@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-16T20:23:55.003Z",
+    "capturedAt": "2026-04-16T21:23:07.138Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-16T20:23:55.003Z",
-      "mood_score": 0.363,
+      "captured_at": "2026-04-16T21:23:07.138Z",
+      "mood_score": 0.372,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,21 +34,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "London Tube and bus strikes to spark four days of travel chaos next week as two major lines to shut - London Evening Standard. London Tube and bus strikes to spark four days of tra"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -74,6 +66,14 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+        },
+        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -83,20 +83,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.108,
+        "source_item_count": 58,
+        "average_valence": -0.081,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.905
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-16T20:23:55.003Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-04-16T21:23:07.138Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -127,6 +127,22 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248, 300: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "The grey clouds hang low, threatening rain, but a crisp breeze carries the scent of autumn leaves through the streets.. With the BVG services back on track, the platforms are bustl"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -141,41 +157,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy slate gray, with a fine mist that clings to the air, making everything appear softly blurred.. The mood around the U-Bahn stations is tense; commuters are glanci"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Happens a lot with the 140 line. If you write to BVG support they'll be like \"Please give us a list of exact dates and times when it happened\". You'd think they know themselves whe"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.024,
+        "source_item_count": 94,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.941
+        "freshness_score": 0.944
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-16T20:23:55.003Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-16T21:23:07.138Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -192,6 +192,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell someone’s from here when they warn you about the BART delays before you even mention your commute. It’s "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a mottled gray, with a stubborn chill seeping through the air as fog rolls in thick from the bay.. Frustration hangs heavily at downtown bus stops, where passengers chec"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -215,41 +231,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.037,
+        "average_valence": -0.073,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.826
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-16T20:23:55.003Z",
+      "captured_at": "2026-04-16T21:23:07.138Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with the scent of rain that hasn't yet fallen, making the air feel thick and electric.. With the Rodalies train service disrupted by strikes, commute"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a mix of moody gray clouds and pockets of stubborn blue, threatening rain yet holding off for now.. The trains are packed with frustrated commuters, a palpable tension i"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.637
+        "freshness_score": 0.636
       }
     }
   ]
