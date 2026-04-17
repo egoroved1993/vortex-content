@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-17T13:39:53.545Z",
+    "capturedAt": "2026-04-17T14:35:23.339Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-17T13:39:53.545Z",
-      "mood_score": 0.311,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-17T14:35:23.339Z",
+      "mood_score": 0.463,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
         "review": 2,
@@ -34,7 +34,6 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -58,14 +57,6 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays while we fix a track fault at Liverpool Street"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -80,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Dozens of organisations call for rent controls and more council homes as part of national housing demonstration - Inside Housing. Dozens of organisations call for rent controls and"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Tube strike weather forecast boost for thousands of Londoners taking to bikes - London Evening Standard. Tube strike weather forecast boost for thousands of Londoners taking to bik"
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.114,
+        "source_item_count": 52,
+        "average_valence": -0.108,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-17T13:39:53.545Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-17T14:35:23.339Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -145,9 +144,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, while a brisk wind carries the scent of damp earth.. Despite the recent strikes, buses are running today but are more"
+          "excerpt": "The sun breaks through the clouds, casting golden hues on the damp pavement after an earlier drizzle.. The usual hustle of commuters is dampened today, as many are still adjusting "
         },
         {
           "source_family": "public",
@@ -160,19 +159,19 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.028,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.951
+        "freshness_score": 0.948
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-17T13:39:53.545Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-04-17T14:35:23.339Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -191,6 +190,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a true local by their indifference to the BART delays. They know it’s not a matter of if, but when the c"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -222,19 +229,11 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.001,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
@@ -245,10 +244,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-17T13:39:53.545Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-17T14:35:23.339Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -303,18 +302,18 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sun filters through a hazy canopy of clouds, casting a soft golden glow over the bustling streets of Barcelona.. The feeling on the metro is one of impatience; commuters exchan"
+          "excerpt": "A thick, damp fog blankets the city, muting the usual vibrant hues of buildings and casting a veil over the bustling streets.. Commuters are visibly frustrated as they crowd the pl"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.636
       }
