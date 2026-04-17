@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-17T14:35:23.339Z",
+    "capturedAt": "2026-04-17T15:31:17.081Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-17T14:35:23.339Z",
-      "mood_score": 0.463,
+      "captured_at": "2026-04-17T15:31:17.081Z",
+      "mood_score": 0.461,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -57,6 +58,14 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays between Liverpool Street and Hackney Downs while we fix a track fault at Liverpool Street. GO"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -71,31 +80,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Dozens of organisations call for rent controls and more council homes as part of national housing demonstration - Inside Housing. Dozens of organisations call for rent controls and"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Tube strike weather forecast boost for thousands of Londoners taking to bikes - London Evening Standard. Tube strike weather forecast boost for thousands of Londoners taking to bik"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.108,
+        "source_item_count": 53,
+        "average_valence": -0.114,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-17T14:35:23.339Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-17T15:31:17.081Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -144,9 +145,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the clouds, casting golden hues on the damp pavement after an earlier drizzle.. The usual hustle of commuters is dampened today, as many are still adjusting "
+          "excerpt": "The skies are a dull gray, pregnant with the promise of rain, as a chilly breeze sweeps through the streets, pushing the fallen leaves in a restless dance.. With the recent strike "
         },
         {
           "source_family": "public",
@@ -159,19 +160,19 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.025,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.948
+        "freshness_score": 0.943
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-17T14:35:23.339Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-17T15:31:17.081Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -233,21 +234,21 @@
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.025,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-17T14:35:23.339Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-17T15:31:17.081Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -283,6 +284,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is painted a steely gray, heavy with the promise of rain, occasionally slashed by reluctant rays of sunlight breaking through the clouds.. The metro is crowded yet silent, "
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -297,25 +306,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "A thick, damp fog blankets the city, muting the usual vibrant hues of buildings and casting a veil over the bustling streets.. Commuters are visibly frustrated as they crowd the pl"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
-          "tourism"
+          "routine"
         ],
-        "freshness_score": 0.636
+        "freshness_score": 0.639
       }
     }
   ]
