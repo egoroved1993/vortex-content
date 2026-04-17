@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-17T08:45:04.760Z",
+    "capturedAt": "2026-04-17T09:41:14.473Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 336
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-17T08:45:04.760Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-04-17T09:41:14.473Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -49,12 +50,20 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Moor Park and Watford due to train cancellations. After the 09:56 departure fro"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "What is needed for next week's London Tube strike to be called off? - Metro.co.uk. What is needed for next week's London Tube strike to be called off?"
+          "excerpt": "London Tube Strike to disrupt services next week - RailAdvent. London Tube Strike to disrupt services next week"
         },
         {
           "source_family": "public",
@@ -71,33 +80,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
-        "source_item_count": 51,
-        "average_valence": -0.049,
+        "source_item_count": 52,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-17T08:45:04.760Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-17T09:41:14.473Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -149,29 +150,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "If you wanna live with normal people, don't choose Berlin or the Frankfurter train district. I live in BW and I like it here"
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The overcast skies are keeping the temperatures cool, casting a grey hue over the bustling streets of Berlin.. The stifled anxiety is palpable among commuters, many checking their "
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.033,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
         "freshness_score": 0.934
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-17T08:45:04.760Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-17T09:41:14.473Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -233,21 +234,21 @@
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.04,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.834
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-17T08:45:04.760Z",
+      "captured_at": "2026-04-17T09:41:14.473Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -302,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A warm autumn sun casts a golden hue over the cobbled streets, while a gentle breeze carries the scent of roasted chestnuts.. The mood on the Metro is tense but determined, as comm"
+          "excerpt": "Clouds swirl above, threatening rain but holding back, creating a heavy, still air that feels electric with anticipation.. Trains are running on skeleton schedules as frustrated co"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.634
+        "freshness_score": 0.638
       }
     }
   ]
