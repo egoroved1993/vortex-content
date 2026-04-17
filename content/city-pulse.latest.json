@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-17T06:50:19.012Z",
+    "capturedAt": "2026-04-17T07:41:50.756Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 331
+    "totalItems": 334
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-17T06:50:19.012Z",
-      "mood_score": 0.338,
+      "captured_at": "2026-04-17T07:41:50.756Z",
+      "mood_score": 0.328,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -47,6 +48,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge while we deal with a customer incident at Uxbrid"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "news",
@@ -63,39 +80,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Most people under 60 who moved to Bromley within the last 10 years do it because of the easy commute into Central London and good schools. In fact that's the main selling point of "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "BBC Weather verdict on when good weather will end and nearly week of rain will begin - My London. BBC Weather verdict on when good weather will end and nearly week of rain will beg"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
         }
       ],
       "metadata": {
-        "source_item_count": 51,
-        "average_valence": -0.036,
+        "source_item_count": 54,
+        "average_valence": -0.065,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-17T06:50:19.012Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-17T07:41:50.756Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -131,15 +132,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9, 100: Delays 2 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 1,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, with occasional bursts of sunlight that momentarily warm the chilly autumn air.. With the earlier strikes easing, commuters shuffle through t"
+          "excerpt": "The sky is a heavy gray, with spitting rain that clings to the cobblestones and reflects the dim light of the overcast day.. With the BVG strike looming, tension is palpable as com"
         },
         {
           "source_family": "world",
@@ -160,18 +161,18 @@
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.026,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.937
+        "freshness_score": 0.943
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-17T06:50:19.012Z",
+      "captured_at": "2026-04-17T07:41:50.756Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
@@ -229,7 +230,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A thick layer of fog wraps the city in a damp embrace, softening the edges of the Golden Gate Bridge into ghostly silhouettes.. BART riders are visibly frustrated, checking their p"
+          "excerpt": "The overcast skies blanket the city in a muted gray, with a chill in the air suggesting rain may come at any moment.. BART is a chaotic sea of frustrated commuters, with many venti"
         }
       ],
       "metadata": {
@@ -240,15 +241,15 @@
           "transit",
           "weather"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 0.813
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-17T06:50:19.012Z",
+      "captured_at": "2026-04-17T07:41:50.756Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a light drizzle that brings a glossy sheen to the cobblestone streets of the Gothic Quarter.. The usually bustling train platforms are eerily quiet, w"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -306,15 +299,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a muted grey, with a dense blanket of clouds hanging overhead, threatening rain but holding off for now.. Frustration simmers in the air at Plaça de Catalunya as comm"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "money"
         ],
         "freshness_score": 0.63
       }
