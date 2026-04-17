@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-16T23:22:10.202Z",
+    "capturedAt": "2026-04-17T00:55:17.677Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 343
+    "totalItems": 333
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-16T23:22:10.202Z",
-      "mood_score": 0.321,
+      "captured_at": "2026-04-17T00:55:17.677Z",
+      "mood_score": 0.333,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 7,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,7 +34,6 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -50,58 +49,58 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+          "recency_weight": 1.04,
+          "excerpt": "I'd recommend going early in the morning or later in the evening. The canal is my go to place when I feel sad and around sunset it's usually pretty empty apart from the people on t"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "recency_weight": 1,
+          "excerpt": "London bus turmoil as TfL workers vote to strike over rota changes - Unite the Union. London bus turmoil as TfL workers vote to strike over rota changes"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "BBC Weather verdict on when good weather will end and nearly week of rain will begin - My London. BBC Weather verdict on when good weather will end and nearly week of rain will beg"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Camden Town and Kennington (via Bank) due to planned engineering work. SEVERE DELAYS o"
+          "recency_weight": 0.56,
+          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.086,
+        "source_item_count": 53,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.917
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-16T23:22:10.202Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-17T00:55:17.677Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,7 +109,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -132,7 +131,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit FEX: Delays 1 trips delayed"
+          "excerpt": "Berlin transit N5, FEX: Delays 3 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of gray clouds hangs overhead, casting a cool, muted light over the damp streets of Berlin.. Public transport is bustling again, with commuters cautiously returning"
         },
         {
           "source_family": "world",
@@ -149,36 +156,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A dull gray sky hangs low, promising rain that never quite materializes, leaving the streets damp and reflective.. The air around the U-Bahn stations is charged with frustration as"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.036,
+        "source_item_count": 92,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.942
+        "freshness_score": 0.937
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-16T23:22:10.202Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-17T00:55:17.677Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,12 +192,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local by their ability to navigate the BART delays without a meltdown. Tourists will start panicking a"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The fog rolls in thick, softening the edges of the Golden Gate and cloaking the skyline in a muted, damp chill.. BART stations are unusually crowded as frustrated commuters huddle "
         },
         {
           "source_family": "news",
@@ -234,22 +233,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.04,
+        "source_item_count": 51,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.809
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-16T23:22:10.202Z",
+      "captured_at": "2026-04-17T00:55:17.677Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy slate gray, with occasional bursts of sunlight breaking through the clouds, promising a mix of warmth and rain.. The mood on the Metro is tense, with commuters e"
+          "excerpt": "The sky is a heavy gray, pressing down with an impending rain, while a brisk wind swirls fallen leaves through the streets.. The air around the train stations is charged with frust"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.635
+        "freshness_score": 0.636
       }
     }
   ]
