@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-17T12:33:45.843Z",
+    "capturedAt": "2026-04-17T13:39:53.545Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-17T12:33:45.843Z",
-      "mood_score": 0.327,
+      "captured_at": "2026-04-17T13:39:53.545Z",
+      "mood_score": 0.311,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -41,12 +42,28 @@
       ],
       "drivers": [
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1,
+          "excerpt": "London Tube and bus strikes to spark four days of travel chaos next week as two major lines to shut - London Evening Standard. London Tube and bus strikes to spark four days of tra"
+        },
+        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays while we fix a track fault at Liverpool Street"
         },
         {
           "source_family": "news",
@@ -63,41 +80,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Dozens of organisations call for rent controls and more council homes as part of national housing demonstration - Inside Housing. Dozens of organisations call for rent controls and"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.066,
+        "source_item_count": 53,
+        "average_valence": -0.114,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-17T12:33:45.843Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-17T13:39:53.545Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -125,22 +126,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg can you find a mix of Turkish döner shops and vegan cafes right across the street, both packed at 2 AM."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the clouds intermittently, casting dramatic shadows on the damp streets after a morning of drizzling rain.. Despite the recent strike interruptions, the U-Ba"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -155,23 +140,39 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, while a brisk wind carries the scent of damp earth.. Despite the recent strikes, buses are running today but are more"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Are there really places where the Fastnachtskuchen is the same as a Berliner? Where I am they’re two different things, though similar—the former doesn’t have a filling, and the dou"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.039,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "weather"
         ],
         "freshness_score": 0.951
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-17T12:33:45.843Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-17T13:39:53.545Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -190,14 +191,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local when they dodge the BART delays like it’s a game—everyone else just stands there confused, sta"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -229,25 +222,33 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.021,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-17T12:33:45.843Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-17T13:39:53.545Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -302,18 +303,18 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun is breaking through a veil of clouds, casting a warm glow on the Gaudí facades, while a fresh breeze carries the faint scent of rain from earlier.. Commuters on the R1 line"
+          "excerpt": "The sun filters through a hazy canopy of clouds, casting a soft golden glow over the bustling streets of Barcelona.. The feeling on the metro is one of impatience; commuters exchan"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.024,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
         "freshness_score": 0.636
       }
