@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-18T12:22:42.284Z",
+    "capturedAt": "2026-04-18T13:34:04.773Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,14 +15,14 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 345
+    "totalItems": 344
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-18T12:22:42.284Z",
-      "mood_score": 0.399,
-      "mood_label": "low",
+      "captured_at": "2026-04-18T13:34:04.773Z",
+      "mood_score": 0.407,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
-          "recency_weight": 1,
+          "recency_weight": 0.88,
           "excerpt": "Renters head to national housing protest in call for rent controls - Big Issue. Renters head to national housing protest in call for rent controls"
         },
         {
@@ -63,14 +63,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's Park and Harrow & Wealdstone due to an earlier customer incident at Paddingt"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 18 and Sunday 19 April, no service between Earls Court and Ealing Broadway / Richmond. Use MILDM"
         },
         {
@@ -80,23 +72,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an obstruction on the track earlier at Baker Street. Tickets being accepted on London"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 (from 0130) and Sunday 19 April, including Friday and Saturday Night Tube, no service betwe"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.15,
+        "source_item_count": 59,
+        "average_valence": -0.127,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-18T12:22:42.284Z",
-      "mood_score": 0.438,
+      "captured_at": "2026-04-18T13:34:04.773Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 200, 100: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -151,12 +151,12 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp with a cool breeze, hinting at autumn's approach while the sun intermittently breaks through the cloud cover.. After a tumultuous few days, the U-Bahn is running s"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "The Kiez Creator Monthly DE: Dieser Beitrag wurde im Rahmen unseres monatlichen Formats gepostet (jeden 1. des Monats). Feedback ist willkommen! EN: This post is part of our monthl"
         }
       ],
       "metadata": {
@@ -167,15 +167,15 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.934
+        "freshness_score": 0.935
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-18T12:22:42.284Z",
+      "captured_at": "2026-04-18T13:34:04.773Z",
       "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -192,6 +192,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low with a smoky overcast, as a cool breeze carries the scent of damp asphalt after a brief drizzle.. Frustration simmers among commuters at Powell Street as they che"
+        },
         {
           "source_family": "review",
           "source_origin": "maps_review",
@@ -223,33 +231,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Eviction Over Unpaid Rent - Realtor.com. Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Evict"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.033,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.841
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-18T12:22:42.284Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-18T13:34:04.773Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -301,23 +301,23 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs lazily in a pale blue sky, casting warm light that beckons everyone to enjoy the afternoon.. The usually bustling Rodalies are quieter today, with commuters glancing "
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.644
+        "freshness_score": 0.645
       }
     }
   ]
