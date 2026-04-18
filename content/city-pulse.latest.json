@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-18T04:54:23.304Z",
+    "capturedAt": "2026-04-18T05:39:04.863Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,12 +15,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 345
+    "totalItems": 344
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-18T04:54:23.304Z",
+      "captured_at": "2026-04-18T05:39:04.863Z",
       "mood_score": 0.412,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -95,8 +95,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-18T04:54:23.304Z",
-      "mood_score": 0.436,
+      "captured_at": "2026-04-18T05:39:04.863Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,14 +124,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -157,22 +148,30 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of gray clouds looms overhead, occasionally releasing drizzles that glisten on the pavement.. After a weekend of disruptions, the mood on the U-Bahn is a mix of rel"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.042,
+        "source_item_count": 91,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.942
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-18T04:54:23.304Z",
+      "captured_at": "2026-04-18T05:39:04.863Z",
       "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
@@ -214,7 +213,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is an overcast gray, casting a muted light on the damp pavement as a chill seeps in from the bay.. Frustration hangs thick in the air with BART delays causing commuters to "
+          "excerpt": "A damp chill lingers in the air, with thick gray clouds cloaking the sky and the faint scent of rain hovering just out of reach.. BART stations are eerily quiet, with a growing cro"
         },
         {
           "source_family": "review",
@@ -235,21 +234,21 @@
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.044,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-18T04:54:23.304Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-18T05:39:04.863Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -301,12 +300,12 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun spills golden light over the bustling streets while a cool breeze carries the scent of fresh bread from nearby bakeries.. The trains are unusually quiet today, as"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
@@ -315,9 +314,9 @@
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.634
+        "freshness_score": 0.637
       }
     }
   ]
