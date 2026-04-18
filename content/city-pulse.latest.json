@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-18T05:39:04.863Z",
+    "capturedAt": "2026-04-18T06:37:17.506Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 344
+    "totalItems": 342
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-18T05:39:04.863Z",
-      "mood_score": 0.412,
+      "captured_at": "2026-04-18T06:37:17.506Z",
+      "mood_score": 0.421,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 10,
         "review": 2,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -63,14 +63,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Kensington (Olympia) and Clapham Junction due to a late finish of engineering work. GOO"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 (from 0130) and Sunday 19 April, including Friday and Saturday Night Tube, no service betwe"
         },
         {
@@ -80,25 +72,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Dozens of organisations call for rent controls and more council homes as part of national housing demonstration - Inside Housing. Dozens of organisations call for rent controls and"
         }
       ],
       "metadata": {
-        "source_item_count": 63,
-        "average_valence": -0.112,
+        "source_item_count": 61,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-18T05:39:04.863Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-04-18T06:37:17.506Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -126,6 +126,14 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. You can find spontaneous techno parties in the middle of a park thanks to the Berlinale's after-parties, mixing art and c"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -148,31 +156,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of gray clouds looms overhead, occasionally releasing drizzles that glisten on the pavement.. After a weekend of disruptions, the mood on the U-Bahn is a mix of rel"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.029,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ],
-        "freshness_score": 0.94
+        "freshness_score": 0.941
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-18T05:39:04.863Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-18T06:37:17.506Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -197,7 +197,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a suit serenading the bus stop with an old Motown tune. The guitar? A broken broomstick. Only in SF."
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 21 bus packed with people on their phones, but the lady next to me was reading a physical book. Felt so out of place in 2"
         },
         {
           "source_family": "public",
@@ -206,14 +206,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "caltrain is a good idea; but if you want to take uber / lyft while going back, try to pre-book it from a location nearby (like a hotel parking lot nearby). i'm a bay area local. fe"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A damp chill lingers in the air, with thick gray clouds cloaking the sky and the faint scent of rain hovering just out of reach.. BART stations are eerily quiet, with a growing cro"
         },
         {
           "source_family": "review",
@@ -230,23 +222,31 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.043,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.829
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-18T05:39:04.863Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-18T06:37:17.506Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -276,6 +276,14 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often miss how late we eat; dinner at 7 PM is practically breakfast in Gràcia. Restaurant staff look at you like you’r"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -284,39 +292,31 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The air is thick with humidity, as grey clouds loom overhead, promising a late afternoon rain that hangs in the balance.. The mood on the Rodalies trains is tense, with commuters e"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
-        },
-        {
-          "source_family": "social",
-          "source_origin": "telegram_group",
-          "language": "ru",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.637
+        "freshness_score": 0.634
       }
     }
   ]
