@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-18T09:24:01.844Z",
+    "capturedAt": "2026-04-18T10:21:56.459Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-18T09:24:01.844Z",
-      "mood_score": 0.408,
+      "captured_at": "2026-04-18T10:21:56.459Z",
+      "mood_score": 0.402,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -42,12 +42,28 @@
       ],
       "drivers": [
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1,
+          "excerpt": "Renters head to national housing protest in call for rent controls - Big Issue. Renters head to national housing protest in call for rent controls"
+        },
+        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to a customer incident at Paddington. Tickets being accepted by London Buses and Thames"
         },
         {
           "source_family": "transport",
@@ -64,41 +80,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 (from 0130) and Sunday 19 April, including Friday and Saturday Night Tube, no service betwe"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think the 67 bus will get you anywhere on time. Welcome to Dalston, mate. Better get used to delays and diversi"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.123,
+        "source_item_count": 57,
+        "average_valence": -0.14,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-18T09:24:01.844Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-04-18T10:21:56.459Z",
+      "mood_score": 0.437,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -132,7 +132,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you ride a U-Bahn packed with people while a guy juggles on the overhead bars during a BVG strike. It'"
         },
         {
           "source_family": "public",
@@ -149,31 +157,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.027,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "transit"
         ],
         "freshness_score": 0.937
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-18T09:24:01.844Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-04-18T10:21:56.459Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -192,14 +192,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only locals know to avoid BART during the evening rush; the overcooked brakes are an early indicator of chao"
-        },
         {
           "source_family": "review",
           "source_origin": "maps_review",
@@ -231,25 +223,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Eviction Over Unpaid Rent - Realtor.com. Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Evict"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.054,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.827
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-18T09:24:01.844Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-18T10:21:56.459Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "Today, the skies are overcast with a heavy blanket of grey, hinting at a rain that never quite falls.. The metro is unusually crowded, a mix of frustrated commuters and students, a"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -299,23 +307,15 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun bathes the streets in a warm, golden hue while a gentle breeze carries the scent of blooming jasmine.. The metro is noticeably more crowded as commuters seek alternatives d"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
         "freshness_score": 0.637
       }
