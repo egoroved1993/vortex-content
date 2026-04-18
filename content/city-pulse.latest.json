@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-18T13:34:04.773Z",
+    "capturedAt": "2026-04-18T14:21:40.248Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-18T13:34:04.773Z",
-      "mood_score": 0.407,
+      "captured_at": "2026-04-18T14:21:40.248Z",
+      "mood_score": 0.411,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -63,6 +63,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 18 and Sunday 19 April, no service between Earls Court and Ealing Broadway / Richmond. Use MILDM"
         },
         {
@@ -72,33 +80,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an obstruction on the track earlier at Baker Street. Tickets being accepted on London"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 (from 0130) and Sunday 19 April, including Friday and Saturday Night Tube, no service betwe"
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.127,
+        "source_item_count": 61,
+        "average_valence": -0.114,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-18T13:34:04.773Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-18T14:21:40.248Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -125,14 +124,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, 100: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -151,6 +142,14 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a thick blanket of gray, with a light drizzle that makes the streets shimmer under the muted autumn light.. The air is thick with tension as commuters shuffle through th"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -160,22 +159,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.034,
+        "source_item_count": 89,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.935
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-18T13:34:04.773Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-18T14:21:40.248Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -193,12 +192,12 @@
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs low with a smoky overcast, as a cool breeze carries the scent of damp asphalt after a brief drizzle.. Frustration simmers among commuters at Powell Street as they che"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell a local by how they instinctively check BART delays before even stepping out. Tourists just com"
         },
         {
           "source_family": "review",
@@ -222,7 +221,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         },
         {
           "source_family": "news",
@@ -230,26 +229,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+          "excerpt": "Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Eviction Over Unpaid Rent - Realtor.com. Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Evict"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.031,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "weather"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.838
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-18T13:34:04.773Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-18T14:21:40.248Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -301,23 +300,23 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The morning sky is a washed-out grey, heavy with the promise of rain that hangs in the air like a thick blanket.. Trains are running on minimal schedules due to the ongoing strike,"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.645
+        "freshness_score": 0.641
       }
     }
   ]
