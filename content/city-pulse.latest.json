@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-19T08:29:15.772Z",
+    "capturedAt": "2026-04-19T09:23:53.081Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-19T08:29:15.772Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-04-19T09:23:53.081Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
@@ -34,21 +34,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "Tube strikes to go ahead next week as RMT accuses TfL of refusing to negotiate to avoid walkout chaos - London Evening Standard. Tube strikes to go ahead next week as RMT accuses T"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -71,6 +63,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays while we respond to a fire alert at Moorgate."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 18 and Sunday 19 April, no service between Earls Court and Ealing Broadway / Richmond. Use MILDM"
         },
         {
@@ -79,26 +79,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 19 April, no service between Willesden Junction and Richmond. There will also be no DISTRICT LINE b"
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays while we respond to a fire alert at Moorgate."
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.145,
+        "source_item_count": 62,
+        "average_valence": -0.17,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.919
+        "freshness_score": 0.927
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-19T08:29:15.772Z",
-      "mood_score": 0.394,
+      "captured_at": "2026-04-19T09:23:53.081Z",
+      "mood_score": 0.388,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 1,
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -126,12 +127,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. Caught a bus this morning and everyone just laughed when it broke down. That kind of shared moment makes you realize you’re r"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M2: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -150,31 +151,31 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Whatever. You're wrong. Charlottenburg-Wilmersdorf and Steglitz-Zehlendorf are the only districts where the use of cars didn't went down (and people own several cars). Those are di"
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The overcast sky is heavy with humidity, threatening rain but holding back, casting a silvery light over everything.. After several days of disruption, the buses and trams are runn"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.018,
+        "source_item_count": 91,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.93
+        "freshness_score": 0.929
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-19T08:29:15.772Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-04-19T09:23:53.081Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -200,14 +201,6 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a tuxedo sharing a Muni seat with a dog in a tutu. Only in SF do you get that kind of public transport fashion show."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The air is thick with a chill from the bay, punctuated by the sharp scent of damp concrete as low-hanging clouds blanket the skyline.. BART stations echo with frustrated murmurs as"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -230,25 +223,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 50,
-        "average_valence": -0.008,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
         "freshness_score": 0.811
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-19T08:29:15.772Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-19T09:23:53.081Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -303,20 +304,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "Today, a thick blanket of clouds looms over Barcelona, occasionally giving way to brief, drizzling showers that make the streets gleam with a silver sheen.. The mood on the metro i"
+          "excerpt": "The sky hangs heavy with clouds, threatening rain but instead draping the city in a soft gray light that makes the colors of the buildings more vibrant.. The mood on the platforms "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.639
+        "freshness_score": 0.638
       }
     }
   ]
