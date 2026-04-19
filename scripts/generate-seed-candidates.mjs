@@ -139,9 +139,9 @@ const useMock = Boolean(args.mock);
 const microMomentOpenings = [
   "saw this today:",
   "on my way home",
-  "this morning",
   "outside the station",
   "i hate that i noticed this but",
+  "waiting for the bus and",
 ];
 
 const mindPostOpenings = [
@@ -402,7 +402,14 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
       } else {
         langGuidance = cityConfig.languageGuidance;
       }
-      base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${langGuidance}`;
+      // For non-English languages, add a forceful override so the model doesn't default to English
+      const isNonEnglish = langGuidance && !langGuidance.startsWith("Write in casual contemporary English") && !langGuidance.startsWith("Write in modern American English") && !langGuidance.startsWith("Write in English") && !langGuidance.startsWith("Write in casual English") && !langGuidance.startsWith("Write in confident British English") && !langGuidance.startsWith("Write in casual British English") && !langGuidance.startsWith("Write in American English");
+      if (isNonEnglish) {
+        base += `\n\nCRITICAL LANGUAGE REQUIREMENT: ${langGuidance}`;
+        base += "\nThe ENTIRE message must be in this language. Do NOT write in English. Do NOT translate to English. Every word must be in the specified language (except city-specific proper nouns). If you write in English, the message is REJECTED.";
+      } else {
+        base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${langGuidance}`;
+      }
     }
   }
 
@@ -412,6 +419,21 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   const citySlug = encodeURIComponent(JOB_CITY_NAMES[job.cityId] ?? job.cityId);
   base += `\n\nLINKS RULE: At least 40% of messages should name a specific real location — a bar, restaurant, café, market, metro station, street, square, park, museum, venue, or landmark that actually exists in the city. When a named place appears, include exactly one Google Maps link: {"type":"maps","url":"https://maps.google.com/?q=PLACE_NAME+${citySlug}","label":"PLACE_NAME"}. Replace PLACE_NAME with the actual name from your message. This is mandatory whenever a named place appears. Prefer naming real places over generic descriptions — "the Thai place on Torrent de l'Olla" is better than "a restaurant nearby". If truly no place is named, output "links": [].`;
 
+  // Assign a random length mode to this message for diversity
+  const lengthModes = [
+    { id: "short", weight: 0.2, guidance: "Write a SHORT punchy message (30-80 characters). Like a quick text: one reaction, one detail, done." },
+    { id: "medium", weight: 0.55, guidance: "Write a medium-length message (80-200 characters). A quick observation with one concrete detail." },
+    { id: "long", weight: 0.25, guidance: "Write a LONGER message (200-400 characters). A mini-story or a scene with 2-3 sentences. More detail, more texture." },
+  ];
+  const lengthTotal = lengthModes.reduce((s, m) => s + m.weight, 0);
+  let lengthRoll = Math.random() * lengthTotal;
+  let lengthMode = lengthModes[1];
+  for (const mode of lengthModes) {
+    lengthRoll -= mode.weight;
+    if (lengthRoll <= 0) { lengthMode = mode; break; }
+  }
+  base += `\n\nLENGTH: ${lengthMode.guidance}`;
+
   base += "\n\nHARD RULES — violating any of these makes the message unusable:";
   base += "\n- No rhetorical questions. ('do we all just...', 'anybody else...', 'ever notice how...' — all banned.)";
   base += "\n- No two-part structure of the form 'X, but Y' or 'not X, just Y' as a closing move. One complete thought only.";
@@ -420,6 +442,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   base += "\n- No 'Dating in [place] feels like...' openings or any sentence that starts with a generalization about a neighborhood's social scene.";
   base += "\n- No polished metaphors that sound writerly ('the city felt like a paused film', 'traded fog for algorithms', 'echo in a quiet symphony'). Observations only, no literary framing.";
   base += "\n- Do not start with 'I feel like', 'Sometimes I', 'There was a time'.";
+  base += "\n- BANNED: starting with 'this morning near', 'this morning on', 'stood on the', 'standing on the', 'sitting on the'. These are overused AI patterns — find a different opening.";
   base += "\n- BANNED: price complaint as the main point ('coffee costs €X', 'rent went up', '$14 for a burrito'). Price only as background detail serving a sharper point.";
   base += "\n- BANNED: movie/TV/book reviews or reactions unless tied to a specific named city venue (cinema, bookshop, screening).";
   base += "\n- BANNED: home appliance, tech gadget, or work-from-home observations with no city grounding.";
@@ -900,7 +923,7 @@ function sanitizeReasonField(value, fallback) {
 }
 
 function buildFallbackContent(job) {
-  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const maxChars = job.lane === "mind_post" ? 400 : 350;
   const sourceText = cleanSourceFallback(job);
 
   if (sourceText) {
@@ -948,7 +971,7 @@ function cleanSourceFallback(job) {
 }
 
 function sanitizeMinimalSalvageContent(job, candidateText) {
-  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const maxChars = job.lane === "mind_post" ? 400 : 350;
   const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
   if (!candidateText || looksPromptLeaked(candidateText)) {
     return sourceCandidate || buildFallbackContent(job);
@@ -969,7 +992,7 @@ function sanitizeMinimalSalvageContent(job, candidateText) {
 }
 
 function sanitizeNewsContent(job, candidateText) {
-  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const maxChars = job.lane === "mind_post" ? 400 : 350;
   const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
   if (!candidateText || looksPromptLeaked(candidateText)) {
     return buildNewsFallbackContent(job, sourceCandidate);
@@ -998,7 +1021,7 @@ function sanitizeSourceLikeText(text, maxChars) {
 }
 
 function buildNewsFallbackContent(job, sourceCandidate) {
-  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const maxChars = job.lane === "mind_post" ? 400 : 350;
   const headline = cleanGeneratedText(job.rawSnippetHeadline ?? "");
   const body = cleanGeneratedText(job.rawSnippetBody ?? job.rawSnippet ?? "");
   const source = sourceCandidate || sanitizeSourceLikeText(body || headline, maxChars);
@@ -1323,7 +1346,7 @@ function buildLiveFirstPersonRepair(job, text) {
 function buildPettyLocalRepair(job, text) {
   if (!["news", "world", "bridge", "signals"].includes(job.sourceFamily)) return "";
 
-  const maxChars = job.lane === "mind_post" ? 220 : 180;
+  const maxChars = job.lane === "mind_post" ? 400 : 350;
   const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
   const prefix = freshnessPrefixFor(job);
   const lower = `${cleanGeneratedText(text)} ${job.liveEventClue ?? ""} ${job.rawSnippetHeadline ?? ""} ${job.rawSnippetBody ?? ""}`.toLowerCase();

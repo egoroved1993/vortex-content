@@ -68,6 +68,7 @@ const maxTransitPerCity = 2;
 const cityCounts = new Map();
 const transitCounts = new Map();
 const seenContent = new Set();
+const seenOpenings = new Map(); // track first 30 chars to catch "stood on the victoria line..." dupes
 for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal * 4)) {
   const cityId = entry.candidate.cityId ?? "unknown";
   if ((cityCounts.get(cityId) ?? 0) >= maxPerCity) {
@@ -88,6 +89,12 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
     rejected.push({ id: entry.candidate.id, reason: "headline_injection" });
     continue;
   }
+  const openingKey = content.trim().toLowerCase().slice(0, 30);
+  if (seenOpenings.has(openingKey)) {
+    rejected.push({ id: entry.candidate.id, reason: "duplicate_opening" });
+    continue;
+  }
+  seenOpenings.set(openingKey, true);
   if (TRANSIT_RE.test(content)) {
     const key = `${cityId}:transit`;
     if ((transitCounts.get(key) ?? 0) >= maxTransitPerCity) {
