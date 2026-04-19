@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-19T16:18:58.318Z",
+    "capturedAt": "2026-04-19T17:18:36.788Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 344
+    "totalItems": 345
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-19T16:18:58.318Z",
-      "mood_score": 0.459,
+      "captured_at": "2026-04-19T17:18:36.788Z",
+      "mood_score": 0.461,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -84,19 +84,19 @@
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.12,
+        "average_valence": -0.115,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.914
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-19T16:18:58.318Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-04-19T17:18:36.788Z",
+      "mood_score": 0.383,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -129,9 +130,17 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": 0.5,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. I knew I was in Neukölln when the guy in front of me at the Kebab stand started arguing passionately with the vendor about th"
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. You know it’s Berlin when you see a crowd of people dancing on the U-Bahn platform during a strike. The city's chaos has a cer"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -148,33 +157,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds looms overhead, occasionally dripping gentle rain that makes the city glisten with a muted sheen.. The atmosphere at U-Bahn stations is a strange mix of r"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.014,
+        "source_item_count": 93,
+        "average_valence": -0.05,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.924
+        "freshness_score": 0.926
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-19T16:18:58.318Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-19T17:18:36.788Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 10,
@@ -200,14 +201,6 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by their ability to navigate the BART delays while still clutching their burrito. Tourists just "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone's local when they instinctively check BART delays before planning a taco run, like it’s a s"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -216,39 +209,47 @@
           "excerpt": "We’d take his car 🤣 he somehow worked in sf for 10 years in all different places without getting his car bipped so I assume he has some magical power or that his car somehow deter"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A heavy fog blankets the city, wrapping the skyline in a damp embrace that softens the sharp edges of the towering buildings.. BART stations are buzzing with frustrated passengers,"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.043,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.845
+        "freshness_score": 0.837
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-19T16:18:58.318Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-19T17:18:36.788Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -303,20 +304,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a slate gray, heavy with clouds threatening rain, casting a muted light over the narrow streets of the Barri Gòtic.. The atmosphere at the Plaça de Catalunya is tense"
+          "excerpt": "The sky hangs heavy with clouds, the air thick with the promise of rain, making the cobblestones glisten like dark glass.. A sea of frustrated commuters waits at the train station,"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.641
+        "freshness_score": 0.648
       }
     }
   ]
