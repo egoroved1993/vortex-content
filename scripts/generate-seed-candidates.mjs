@@ -135,6 +135,7 @@ const familyProviderOverrides = {
 const concurrency = Number(args.concurrency ?? 4);
 const limit = args.limit ? Number(args.limit) : undefined;
 const useMock = Boolean(args.mock);
+const forceLanguage = args["force-language"] ?? null;
 
 const microMomentOpenings = [
   "saw this today:",
@@ -386,12 +387,16 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   }
 
   // Inject city language guidance (includes currency)
-  // If city has languageDistribution, pick weighted random language for this message
+  // If --force-language is set, override all language selection with that language
   if (job.cityId) {
     const cityConfig = cities.find((c) => c.id === job.cityId);
     if (cityConfig) {
       let langGuidance;
-      if (cityConfig.languageDistribution?.length) {
+      if (forceLanguage) {
+        // Find guidance for the forced language in this city's distribution
+        const entry = cityConfig.languageDistribution?.find((d) => d.lang === forceLanguage);
+        langGuidance = entry?.guidance ?? null;
+      } else if (cityConfig.languageDistribution?.length) {
         const total = cityConfig.languageDistribution.reduce((s, d) => s + d.weight, 0);
         let roll = Math.random() * total;
         for (const entry of cityConfig.languageDistribution) {
@@ -402,13 +407,28 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
       } else {
         langGuidance = cityConfig.languageGuidance;
       }
-      // For non-English languages, add a forceful override so the model doesn't default to English
-      const isNonEnglish = langGuidance && !langGuidance.startsWith("Write in casual contemporary English") && !langGuidance.startsWith("Write in modern American English") && !langGuidance.startsWith("Write in English") && !langGuidance.startsWith("Write in casual English") && !langGuidance.startsWith("Write in confident British English") && !langGuidance.startsWith("Write in casual British English") && !langGuidance.startsWith("Write in American English");
-      if (isNonEnglish) {
-        base += `\n\nCRITICAL LANGUAGE REQUIREMENT: ${langGuidance}`;
-        base += "\nThe ENTIRE message must be in this language. Do NOT write in English. Do NOT translate to English. Every word must be in the specified language (except city-specific proper nouns). If you write in English, the message is REJECTED.";
+
+      if (forceLanguage === "ru") {
+        // Ultra-strong Russian enforcement — system prompt partially in Russian
+        const cityRuName = { barcelona: "Барселоне", berlin: "Берлине", sf: "Сан-Франциско", london: "Лондоне" }[job.cityId] ?? job.cityId;
+        base += `\n\n🇷🇺 ЯЗЫК: ТЫ ПИШЕШЬ ТОЛЬКО ПО-РУССКИ. Весь текст — кириллицей. Ни одного предложения на английском.`;
+        base += `\nПиши как русскоязычный человек, живущий в ${cityRuName}. Разговорный русский, как в чатике.`;
+        base += `\nЛокальные слова оставляй на языке оригинала где это естественно (Späti, BART, tube, piso).`;
+        if (langGuidance) base += `\n${langGuidance}`;
+        base += `\nIf the output contains ANY sentence in English, it is IMMEDIATELY REJECTED. Output language: Russian. Script: Cyrillic.`;
+      } else if (forceLanguage) {
+        const entry = cityConfig.languageDistribution?.find((d) => d.lang === forceLanguage);
+        base += `\n\nCRITICAL LANGUAGE REQUIREMENT: ${entry?.guidance ?? `Write entirely in language code: ${forceLanguage}`}`;
+        base += "\nThe ENTIRE message must be in this language. If you write in English, the message is REJECTED.";
       } else {
-        base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${langGuidance}`;
+        // Normal flow — detect if non-English and add enforcement
+        const isNonEnglish = langGuidance && !langGuidance.startsWith("Write in casual contemporary English") && !langGuidance.startsWith("Write in modern American English") && !langGuidance.startsWith("Write in English") && !langGuidance.startsWith("Write in casual English") && !langGuidance.startsWith("Write in confident British English") && !langGuidance.startsWith("Write in casual British English") && !langGuidance.startsWith("Write in American English");
+        if (isNonEnglish) {
+          base += `\n\nCRITICAL LANGUAGE REQUIREMENT: ${langGuidance}`;
+          base += "\nThe ENTIRE message must be in this language. Do NOT write in English. Do NOT translate to English. Every word must be in the specified language (except city-specific proper nouns). If you write in English, the message is REJECTED.";
+        } else {
+          base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${langGuidance}`;
+        }
       }
     }
   }

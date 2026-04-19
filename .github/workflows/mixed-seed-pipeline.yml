@@ -203,6 +203,44 @@ jobs:
           node scripts/upload-seed-payload.mjs \
             --input content/place-discovery-payload.json
 
+      - name: Generate Russian content via Claude
+        if: ${{ steps.cfg.outputs.upload == 'true' && env.ANTHROPIC_API_KEY != '' }}
+        env:
+          MODEL_NAME: claude-haiku-4-5-20251001
+          MODEL_PROVIDER: anthropic
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Build 40 launch jobs (10 per city) for Russian-only generation
+          node scripts/build-seed-batches.mjs \
+            --count 40 \
+            --seed "russian-${GITHUB_RUN_ID}" \
+            --out content/russian-jobs.json
+
+          # Generate with Claude + forced Russian language
+          node scripts/generate-seed-candidates.mjs \
+            --input content/russian-jobs.json \
+            --out content/russian-candidates.json \
+            --provider anthropic \
+            --model claude-haiku-4-5-20251001 \
+            --force-language ru \
+            --concurrency 2
+
+          # Prepare payload with relaxed thresholds
+          node scripts/prepare-seed-payload.mjs \
+            --candidates content/russian-candidates.json \
+            --out content/russian-payload.json \
+            --min-score 1 \
+            --min-mindprint 1 \
+            --min-ambiguity 1 \
+            --min-composite-score 1 \
+            --max-per-city 8 \
+            --max-total 30
+
+          # Upload
+          node scripts/upload-seed-payload.mjs \
+            --input content/russian-payload.json
+
       - name: Check content quality
         if: always()
         continue-on-error: true
@@ -236,4 +274,7 @@ jobs:
             content/place-discovery-candidates.json
             content/place-discovery-payload.json
             content/quality-report.json
+            content/russian-jobs.json
+            content/russian-candidates.json
+            content/russian-payload.json
           if-no-files-found: warn
