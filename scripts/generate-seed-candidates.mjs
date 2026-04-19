@@ -162,6 +162,19 @@ const mockEndings = [
 ];
 
 const jobs = readJobs(inputPath).slice(0, limit ?? Number.POSITIVE_INFINITY);
+
+// When --force-language is set, override the "Language guidance: ..." line baked into job.prompt
+// by build-seed-batches.mjs. Without this, the user prompt says "Write in English" while the
+// system prompt says "Write in Russian" — and models follow the user prompt.
+if (forceLanguage) {
+  for (const job of jobs) {
+    const cityConfig = cities.find((c) => c.id === job.cityId);
+    const entry = cityConfig?.languageDistribution?.find((d) => d.lang === forceLanguage);
+    const guidance = entry?.guidance ?? `Write entirely in language code: ${forceLanguage}`;
+    job.prompt = job.prompt.replace(/^Language guidance: .+$/m, `Language guidance: ${guidance}`);
+  }
+}
+
 const candidates = await runWithConcurrency(jobs, concurrency, async (job, index) => {
   if (useMock) return buildMockCandidate(job, index);
   const target = resolveTargetModel(job, { provider, model, laneProviderOverrides, laneModelOverrides, familyProviderOverrides });
