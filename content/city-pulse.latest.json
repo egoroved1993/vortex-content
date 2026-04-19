@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-19T22:16:09.135Z",
+    "capturedAt": "2026-04-19T23:18:34.588Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 341
+    "totalItems": 342
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-19T22:16:09.135Z",
-      "mood_score": 0.462,
+      "captured_at": "2026-04-19T23:18:34.588Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -84,19 +84,19 @@
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.112,
+        "average_valence": -0.122,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-19T22:16:09.135Z",
-      "mood_score": 0.344,
+      "captured_at": "2026-04-19T23:18:34.588Z",
+      "mood_score": 0.337,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,12 +127,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp with a hint of autumn, leaves swirling in the cool breeze under a gray sky.. After a brief tumult, buses and trams are back in motion, but the impatience is palpab"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -150,29 +151,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Where were you in China ? Leaving Berlin to live for 3 months in Shenzhen was honestly pretty eye opening for me. Felt like I'd traveled in time a couple centuries into the future "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.018,
+        "source_item_count": 91,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.928
+        "freshness_score": 0.93
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-19T22:16:09.135Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-19T23:18:34.588Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -208,6 +209,14 @@
           "excerpt": "Reconnect with your network over a few weeks, and think of companies you would like to work for. Tap connections since an internal referral will often at least get a call from the "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The late afternoon fog rolls in thickly, cloaking the Bay Bridge in a ghostly white shroud as the temperature drops sharply.. BART is a sea of frustrated faces today, with commuter"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -222,33 +231,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.031,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.824
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-19T22:16:09.135Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-19T23:18:34.588Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -276,20 +277,20 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How to spot a recent arrival. Gràcia. You can spot them by their bewilderment at the number of people queueing for a table at 8 PM. Only locals know dinner starts late here."
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun blazes down on the cobblestones, casting sharp shadows and making the air shimmer with heat.. Commuters are grumbling in the packed Rodalies stations, casting wary glances "
         },
         {
           "source_family": "social",
@@ -310,13 +311,13 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.644
+        "freshness_score": 0.643
       }
     }
   ]
