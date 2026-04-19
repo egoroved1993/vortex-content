@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-19T06:45:16.442Z",
+    "capturedAt": "2026-04-19T07:38:22.260Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 342
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-19T06:45:16.442Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-04-19T07:38:22.260Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -34,13 +34,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "Tube strikes to go ahead next week as RMT accuses TfL of refusing to negotiate to avoid walkout chaos - London Evening Standard. Tube strikes to go ahead next week as RMT accuses T"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -63,40 +71,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 18 and Sunday 19 April, no service between Earls Court and Ealing Broadway / Richmond. Use MILDM"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 19 April, until 0745, no service between Paddington and Ealing Broadway. Please use London Underg"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 19 April, no service between Willesden Junction and Richmond. There will also be no DISTRICT LINE b"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.147,
+        "source_item_count": 62,
+        "average_valence": -0.164,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.928
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-19T06:45:16.442Z",
-      "mood_score": 0.392,
+      "captured_at": "2026-04-19T07:38:22.260Z",
+      "mood_score": 0.395,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -126,6 +126,14 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. Caught a bus this morning and everyone just laughed when it broke down. That kind of shared moment makes you realize you’re r"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -145,34 +153,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The air is crisp and grey, with occasional drizzles that leave the pavements glistening under muted autumn light.. Despite the recent strike disruptions, there's a palpable relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Whatever. You're wrong. Charlottenburg-Wilmersdorf and Steglitz-Zehlendorf are the only districts where the use of cars didn't went down (and people own several cars). Those are di"
+          "excerpt": "The sky hangs low, heavy with clouds, threatening rain but holding back, casting a muted light over the graffiti-laden walls of Kreuzberg.. Despite the recent strike, the U-Bahn is"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.023,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.932
+        "freshness_score": 0.93
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-19T06:45:16.442Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-04-19T07:38:22.260Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -200,12 +200,12 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by how we don’t flinch at the BART announcements; minor delays are just the background noise of "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a thick canvas of grey, spitting light rain that paints the streets with an eerie sheen.. Frustration fills the air at the BART stations as commuters check their phones "
+          "valence": 0.5,
+          "recency_weight": 1,
+          "excerpt": "Bay Area Forecast: Spring warmth - NBC Bay Area. Bay Area Forecast: Spring warmth"
         },
         {
           "source_family": "review",
@@ -234,18 +234,18 @@
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.051,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.824
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-19T06:45:16.442Z",
+      "captured_at": "2026-04-19T07:38:22.260Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
@@ -305,7 +305,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun is fighting through a stubborn layer of clouds, casting a silver light over the gothic buildings, while a cool breeze carries the scent of fresh baked goods from nearby bak"
+          "excerpt": "A thick blanket of gray clouds hovers over the city, threatening rain but only allowing the occasional drizzle to fall on the bustling streets.. The mood at the Sants train station"
         }
       ],
       "metadata": {
@@ -316,7 +316,7 @@
           "tourism",
           "transit"
         ],
-        "freshness_score": 0.642
+        "freshness_score": 0.64
       }
     }
   ]
