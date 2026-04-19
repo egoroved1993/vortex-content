@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-19T09:23:53.081Z",
+    "capturedAt": "2026-04-19T10:21:17.984Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-19T09:23:53.081Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-04-19T10:21:17.984Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -41,6 +41,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "All the Tube strike dates confirmed so far as 12 DAYS of chaos to hit entire network - starting next week - The Sun. All the Tube strike dates confirmed so far as 12 DAYS of chaos "
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -72,31 +80,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 18 and Sunday 19 April, no service between Earls Court and Ealing Broadway / Richmond. Use MILDM"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays while we respond to a fire alert at Moorgate."
         }
       ],
       "metadata": {
         "source_item_count": 62,
-        "average_valence": -0.17,
+        "average_valence": -0.165,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.923
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-19T09:23:53.081Z",
-      "mood_score": 0.388,
+      "captured_at": "2026-04-19T10:21:17.984Z",
+      "mood_score": 0.391,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,14 +125,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M2: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -156,26 +148,34 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The overcast sky is heavy with humidity, threatening rain but holding back, casting a silvery light over everything.. After several days of disruption, the buses and trams are runn"
+          "excerpt": "Grey clouds hang low over Berlin, occasionally releasing a fine drizzle that creates a slick sheen on the cobblestones.. With the recent strike concluded, there's a palpable relief"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Whatever. You're wrong. Charlottenburg-Wilmersdorf and Steglitz-Zehlendorf are the only districts where the use of cars didn't went down (and people own several cars). Those are di"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.034,
+        "source_item_count": 90,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.929
+        "freshness_score": 0.927
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-19T09:23:53.081Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-04-19T10:21:17.984Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -193,14 +193,6 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a tuxedo sharing a Muni seat with a dog in a tutu. Only in SF do you get that kind of public transport fashion show."
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -215,6 +207,14 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with a gray overcast, threatening rain, while a slight chill lingers in the air, cutting through the usual warmth of the afternoon sun.. A dull murmuring of fru"
         },
         {
           "source_family": "news",
@@ -235,21 +235,21 @@
       ],
       "metadata": {
         "source_item_count": 50,
-        "average_valence": -0.002,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
         "freshness_score": 0.811
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-19T09:23:53.081Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-19T10:21:17.984Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a muted gray, heavy with clouds that threaten rain but hold back as if listening to the city’s pulse.. The train stations are teeming with frustrated commuters glanci"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -299,25 +307,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with clouds, threatening rain but instead draping the city in a soft gray light that makes the colors of the buildings more vibrant.. The mood on the platforms "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.638
+        "freshness_score": 0.639
       }
     }
   ]
