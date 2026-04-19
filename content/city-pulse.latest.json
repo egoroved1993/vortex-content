@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-18T23:17:25.222Z",
+    "capturedAt": "2026-04-19T00:56:55.493Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 346
+    "totalItems": 336
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-18T23:17:25.222Z",
-      "mood_score": 0.439,
+      "captured_at": "2026-04-19T00:56:55.493Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -63,14 +63,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier signal failure at Willesden Junction. London Buses and Lioness line are a"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 18 and Sunday 19 April, no service between Earls Court and Ealing Broadway / Richmond. Use MILDM"
         },
         {
@@ -79,29 +71,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations"
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 (from 0130) and Sunday 19 April, including Friday and Saturday Night Tube, no service betwe"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "National Housing Demo calls for rent controls and council housing - Socialist Worker. National Housing Demo calls for rent controls and council housing"
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.179,
+        "source_item_count": 55,
+        "average_valence": -0.128,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-18T23:17:25.222Z",
-      "mood_score": 0.386,
+      "captured_at": "2026-04-19T00:56:55.493Z",
+      "mood_score": 0.39,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 3,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,14 +126,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -143,42 +134,50 @@
           "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin do you get a public transport strike that ends just in time for rush hour. It's like a bizarre choreograph"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. When the U-Bahn was packed with a mix of people singing loudly, while the busker in the corner played 'Wonderwall' on repeat."
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 1,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding grey, thick clouds loom low, threatening rain yet holding back in a sultry, humid standoff.. After a tumultuous week of strikes, the atmosphere at U-Bahn stat"
+          "excerpt": "The overcast sky hangs low, with a chill in the air that hints at impending rain, creating a moody backdrop for the bustling streets.. After a week of uncertainty, the restored U-B"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.042,
+        "source_item_count": 90,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.936
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-18T23:17:25.222Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-19T00:56:55.493Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,7 +197,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Been in SF area for few years now and Lumina is pretty well known development in SOMA, you might know it as that tall glass tower near the ballpark. Street noise definitely gets be"
+          "excerpt": "I've been and frankly some areas like Berkeley I'll just opt to drive to instead as parking garages are not unreasonable and driving is way faster from the south bay, sometimes i e"
         },
         {
           "source_family": "forum",
@@ -206,14 +205,22 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy playing a sax in a crowded bus, next stop he gets up, finishes his solo, and everyone just goes back to scrolling their ph"
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in full tuxedo with a bouquet of roses on the 47 bus. Turns out he was late for his own wedding across town. Pure SF magic"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Near the airport will be cheaper if you want a nice hotel. You can stay in the city on a budget, but less nice hotels. Public transit is pretty good and if you are close to BART do"
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "Bay Area Forecast: Spring warmth - NBC Bay Area. Bay Area Forecast: Spring warmth"
         },
         {
@@ -223,33 +230,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
-        "source_item_count": 58,
-        "average_valence": -0.042,
+        "source_item_count": 54,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-18T23:17:25.222Z",
+      "captured_at": "2026-04-19T00:56:55.493Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun is a reluctant warmth today, peeking through a stubborn veil of clouds that threaten a light drizzle.. Commuters are visibly frustrated at the crowded train stations, with "
+          "excerpt": "The sun filters through a haze of clouds, casting a warm, golden hue over the bustling streets.. Commuters at Plaça Catalunya are visibly frustrated, glancing at their watches as t"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.024,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "routine",
+          "tourism",
           "transit"
         ],
-        "freshness_score": 0.644
+        "freshness_score": 0.643
       }
     }
   ]
