@@ -961,9 +961,38 @@ function sanitizeGeneratedContent(job, value) {
     stripSyntheticLanding(cleanGeneratedText(cleaned)),
     job.lane === "mind_post" ? 220 : 180
   );
+
+  // When forceLanguage is set and content is actually in that language,
+  // skip English-specific composition checks (looksTooComposed, hasSyntheticThesisOpener
+  // both use English regex patterns that don't apply to Russian/other languages).
+  if (bounded.length >= 45 && forceLanguage && isInForcedLanguage(bounded, forceLanguage)) {
+    return bounded;
+  }
+
   if (bounded.length >= 45 && !looksTooComposed(bounded) && !hasSyntheticThesisOpener(bounded)) return bounded;
 
   return buildFallbackContent(job);
+}
+
+// Detect if text is actually in the forced language (cyrillic for Russian, etc)
+function isInForcedLanguage(text, lang) {
+  if (!text) return false;
+  if (lang === "ru" || lang === "uk" || lang === "bg") {
+    // Cyrillic script — require the majority of alphabetic chars to be cyrillic
+    const cyrillic = (text.match(/[а-яА-ЯёЁ]/g) || []).length;
+    const latin = (text.match(/[a-zA-Z]/g) || []).length;
+    return cyrillic > 0 && cyrillic >= latin;
+  }
+  // For other non-English langs, heuristic: lang-specific chars present
+  const scripts = {
+    de: /[äöüÄÖÜß]/,
+    es: /[ñáéíóúÑÁÉÍÓÚ¿¡]/,
+    ca: /[àèéíòóúüÀÈÉÍÒÓÚÜçÇ·]/,
+    fr: /[àâçéèêëîïôùûüÿÀÂÇÉÈÊËÎÏÔÙÛÜŸ]/,
+    pt: /[ãõáéíóúâêôÁÉÍÓÚÂÊÔÃÕç]/,
+    it: /[àèéìíîòóùÀÈÉÌÍÎÒÓÙ]/,
+  };
+  return scripts[lang]?.test(text) ?? false;
 }
 
 function sanitizeReasonField(value, fallback) {
@@ -981,6 +1010,21 @@ function buildFallbackContent(job) {
   }
 
   const anchor = normalizeAnchor(job.cityAnchor || job.cityName || "this block");
+
+  // Russian fallback when --force-language ru is set
+  if (forceLanguage === "ru") {
+    if (job.lane === "mind_post") {
+      return enforceCharacterLimit(
+        `теория: ${anchor} говорит об этом городе больше, чем все кто любят его объяснять.`,
+        maxChars
+      );
+    }
+    return enforceCharacterLimit(
+      `видел сегодня рядом с ${anchor}, и все вокруг выглядели так, будто уже на середине того же спора.`,
+      maxChars
+    );
+  }
+
   if (job.lane === "mind_post") {
     return enforceCharacterLimit(
       `my current theory is ${anchor} tells you more about this city than the people who keep explaining it.`,
