@@ -249,6 +249,15 @@ console.log(
 
 async function generateCandidate(job, { provider: activeProvider, model: activeModel }) {
   const initial = await generateCandidateOnce(job, { provider: activeProvider, model: activeModel });
+
+  // When forceLanguage is set, bypass repair variants entirely.
+  // Repair variants (both model-based and local English templates) frequently
+  // return English output and can outscore the correct-language initial variant
+  // because scoring metrics are mostly English-oriented.
+  if (forceLanguage) {
+    return initial;
+  }
+
   const variants = [initial];
   const assessment = assessCandidateQuality(job, initial.content);
 
