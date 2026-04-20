@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-20T05:11:48.692Z",
+    "capturedAt": "2026-04-20T06:59:38.779Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 329
+    "totalItems": 336
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-20T05:11:48.692Z",
-      "mood_score": 0.415,
+      "captured_at": "2026-04-20T06:59:38.779Z",
+      "mood_score": 0.413,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -63,15 +63,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Hainault via Newbury Park while we fix a signal failure at Redbridge."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading while we deal with a trespasser on the track at Paddin"
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Arnos Grove and Acton Town westbound only due to an earlier faulty train at Manor"
         },
         {
           "source_family": "news",
@@ -80,25 +72,33 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "Renters head to national housing protest in call for rent controls - Big Issue. Renters head to national housing protest in call for rent controls"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "'With four jobs in London I couldn't afford rent so I'm going to Manchester' - BBC. 'With four jobs in London I couldn't afford rent so I'm going to Manchester'"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.104,
+        "source_item_count": 53,
+        "average_valence": -0.108,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-20T05:11:48.692Z",
-      "mood_score": 0.339,
+      "captured_at": "2026-04-20T06:59:38.779Z",
+      "mood_score": 0.336,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 1,
@@ -109,6 +109,7 @@
         "social": 2,
         "world": 5,
         "nightlife": 40,
+        "trends": 8,
         "weather": 1
       },
       "languages": [
@@ -123,6 +124,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. When I saw a group of kids using a cardboard box as a makeshift sled down the hill in Hasenheide park. Pure joy in the chaos "
         },
         {
           "source_family": "world",
@@ -141,14 +150,6 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Autumn leaves swirl in the brisk air, a vivid backdrop of golden hues against a slate gray sky.. The streets are abuzz with people who seem relieved but also cautious as bus and tr"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -158,20 +159,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.032,
+        "source_item_count": 89,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-20T05:11:48.692Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-20T06:59:38.779Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -199,6 +200,22 @@
           "excerpt": "Thanks! I don't mind train noise and want to live near a Caltrain station for commute, especially the ones with grocery places nearby because I do plan to cook most meals. That's b"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they don’t flinch at a BART delay but lose their minds over a dog on the tracks at Civi"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 31 at Civic Center just as a guy with a full saxophone ensemble set up to busk. Muni delays turned into a spontaneous min"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -207,45 +224,29 @@
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught a guy fixing his sax on the bus, played a sweet tune just as the doors opened. It was like a mini concert before the chaos ou"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.043,
+        "average_valence": -0.06,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-20T05:11:48.692Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-20T06:59:38.779Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
@@ -275,14 +276,6 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just stroll through Parc Güell without realizing it’s often packed and the locals avoid it like the pla"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -305,11 +298,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The sun hangs low in the sky, casting a warm golden hue over the bustling streets, while a cool breeze offers a refreshing reprieve from the afternoon warmth.. The trains are eeril"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.029,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "tourism",
