@@ -164,31 +164,52 @@ const mockEndings = [
 const jobs = readJobs(inputPath).slice(0, limit ?? Number.POSITIVE_INFINITY);
 
 // When --force-language is set, rewrite the user prompt to force the target language.
-// The entire prompt is in English by default, so a single "Language guidance" line swap
-// is not enough — the model follows the dominant English context. We must:
-// 1. Replace the opening instruction line to the target language
-// 2. Replace the "Language guidance: ..." line with target language guidance
-// 3. Append a hard override at the very end (last instruction wins)
-if (forceLanguage) {
+// For Russian (ru): completely REPLACE the English user prompt with a Russian one.
+// Previous approach (replace single line + append tail) was insufficient — the English
+// meta-instructions in the middle (Persona:, Scene angle:, Moment:, etc) still anchored
+// the model to English context. Claude Haiku was generating 92% English despite
+// system prompt + head + tail Russian instructions.
+if (forceLanguage === "ru") {
   const cityRuNames = { barcelona: "Барселоне", berlin: "Берлине", sf: "Сан-Франциско", london: "Лондоне" };
+  for (const job of jobs) {
+    const cityRu = cityRuNames[job.cityId] ?? job.cityId;
+    job.prompt = [
+      `Напиши одно короткое анонимное городское сообщение для Vortex в ${cityRu}.`,
+      `ПИШИ ТОЛЬКО ПО-РУССКИ — весь текст поля "content" должен быть кириллицей.`,
+      ``,
+      `Контекст сцены:`,
+      `- Тема: ${job.topicLabel || "городская жизнь"}`,
+      `- Угол сцены: ${job.angle || ""}`,
+      `- Момент: ${job.moment || ""}`,
+      `- Место: ${job.cityAnchor || ""}`,
+      `- Тон: ${job.tone || "нейтральный"}`,
+      `- Стиль: ${job.laneLabel || "микро-момент"}`,
+      job.personaLabel ? `- Персона: ${job.personaLabel}` : ``,
+      ``,
+      `Правила:`,
+      `- От первого лица или как наблюдение. Не эссе, не стих.`,
+      `- 60–240 символов, 1–3 предложения.`,
+      `- Разговорный русский, как в чатике или сообщении другу.`,
+      `- Ни одного предложения на английском.`,
+      `- Локальные слова можно оставить как есть (Späti, tube, BART, piso, metro, Oyster, Anmeldung).`,
+      `- Без эмодзи, без риторических вопросов, без красивых метафор.`,
+      `- Без назидательного вывода в конце — оставь сцену недосказанной.`,
+      `- Используй хотя бы один конкретный локальный якорь (улица, место, продукт).`,
+      ``,
+      `⚠️ ВАЖНО: если содержимое content на английском — сообщение отклоняется.`,
+      ``,
+      `Верни только JSON с ключами: content, why_human, why_ai, read_value_hook, sentiment, detected_language.`,
+      `detected_language = "ru".`,
+    ].filter(Boolean).join("\n");
+  }
+} else if (forceLanguage) {
+  // For other forced languages: light-touch patch (single line + tail override)
   for (const job of jobs) {
     const cityConfig = cities.find((c) => c.id === job.cityId);
     const entry = cityConfig?.languageDistribution?.find((d) => d.lang === forceLanguage);
     const guidance = entry?.guidance ?? `Write entirely in language code: ${forceLanguage}`;
     job.prompt = job.prompt.replace(/^Language guidance: .+$/m, `Language guidance: ${guidance}`);
-
-    if (forceLanguage === "ru") {
-      const cityRu = cityRuNames[job.cityId] ?? job.cityId;
-      // Replace English opening with Russian
-      job.prompt = job.prompt.replace(
-        /^Write one short anonymous city message for Vortex\.$/m,
-        `Напиши одно короткое анонимное городское сообщение для Vortex. ПИШИ ТОЛЬКО ПО-РУССКИ.`
-      );
-      // Append hard Russian override at the end (last instruction wins for LLMs)
-      job.prompt += `\n\n⚠️ ЯЗЫК: ОБЯЗАТЕЛЬНО ПИШИ ПО-РУССКИ. Весь текст в поле "content" — кириллицей, на русском языке. Ты — русскоязычный человек в ${cityRu}. Ни одного предложения на английском. Локальные слова (Späti, BART, tube, piso) можно оставить. Если content на английском — сообщение ОТКЛОНЕНО.`;
-    } else {
-      job.prompt += `\n\n⚠️ MANDATORY: The "content" field MUST be written entirely in language: ${forceLanguage}. If you write in English, the message is REJECTED.`;
-    }
+    job.prompt += `\n\n⚠️ MANDATORY: The "content" field MUST be written entirely in language: ${forceLanguage}. If you write in English, the message is REJECTED.`;
   }
 }
 
