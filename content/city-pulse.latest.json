@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-20T01:43:03.803Z",
+    "capturedAt": "2026-04-20T03:16:27.088Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-20T01:43:03.803Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-20T03:16:27.088Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -90,13 +90,13 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-20T01:43:03.803Z",
-      "mood_score": 0.335,
+      "captured_at": "2026-04-20T03:16:27.088Z",
+      "mood_score": 0.338,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -126,12 +127,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. Walking past the open-air market on Maybachufer, I realized I wasn't just a visitor; I was part of the chaos of the fruit ven"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7, RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -153,28 +154,28 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs low with thick, grey clouds, threatening rain but holding back, giving the air a damp chill that seeps into your bones.. Despite the recent strikes, buses are running"
+          "excerpt": "The sky is a heavy gray blanket, with sporadic drops of rain tap-dancing on umbrellas and pavement.. Despite the recent strike ending, sporadic delays still leave commuters glancin"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.043,
+        "source_item_count": 92,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.928
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-20T01:43:03.803Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-20T03:16:27.088Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 7,
@@ -192,28 +193,20 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local when they navigate around the BART delays without breaking a sweat, while newcome"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Gray clouds loom heavily over the city, threatening rain while a chilly breeze whips around the corners of downtown.. BART riders stand in frustrated clusters, checking their phone"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught a guy fixing his sax on the bus, played a sweet tune just as the doors opened. It was like a mini concert before the chaos ou"
         },
         {
           "source_family": "news",
@@ -230,23 +223,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.048,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.825
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-20T01:43:03.803Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-20T03:16:27.088Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -281,7 +282,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is all about Gaudí; they miss the tiny bars where locals debate football late into the night, that’s wher"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just stroll through Parc Güell without realizing it’s often packed and the locals avoid it like the pla"
         },
         {
           "source_family": "world",
@@ -310,13 +311,13 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.642
+        "freshness_score": 0.641
       }
     }
   ]
