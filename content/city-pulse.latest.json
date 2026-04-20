@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-20T21:24:02.240Z",
+    "capturedAt": "2026-04-20T22:25:32.377Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-20T21:24:02.240Z",
-      "mood_score": 0.433,
+      "captured_at": "2026-04-20T22:25:32.377Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -58,6 +58,14 @@
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Camden Town and Kennington via Bank due to planned engineering works. NO SERVICE betwe"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -66,40 +74,32 @@
           "excerpt": "Renters head to national housing protest in call for rent controls - Big Issue. Renters head to national housing protest in call for rent controls"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Suspended Northern Line: No service between Edgware and Colindale while we fix a faulty train at Edgware. GOOD SERVICE on the rest"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Tube strikes: how disruptive will action by London Underground drivers be? - The Guardian. Tube strikes: how disruptive will action by London Underground drivers be? TfL Tube strik"
+          "excerpt": "Tube strikes: how disruptive will action by London Underground drivers be? - The Guardian. Tube strikes: how disruptive will action by London Underground drivers be? Tube strikes: "
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.051,
+        "source_item_count": 54,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-20T21:24:02.240Z",
-      "mood_score": 0.34,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-20T22:25:32.377Z",
+      "mood_score": 0.481,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
         "review": 2,
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,56 +127,56 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Kreuzkölln. When I saw a whole family of ducks waddling down the street while the tram was on strike. Only in Neukölln does nature and "
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, punctuated by sporadic raindrops that dance on the pavement, giving the city a glistening sheen.. The streets are quieter than usual, but there"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchy tapestry of grey clouds, with occasional flickers of sunlight breaking through the gloom.. People are huddled together at bus stops, glancing nervously at their"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "The US also has a much lower share of muslim population, overall, and NYC has a lower share compared to many Western European metropolitan areas, including Berlin. His religion sim"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.029,
+        "source_item_count": 90,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.93
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-20T21:24:02.240Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-04-20T22:25:32.377Z",
+      "mood_score": 0.419,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 8,
         "review": 2,
@@ -197,6 +198,22 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local if they instinctively know to avoid the BART on Fridays at 5, like it’s a rite of passage."
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 31 last night, and it stopped mid-route for a saxophonist playing 'Take Five.' Only in SF would a Muni delay become an im"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Muni moments that define this city. Mission District. Caught a guy strumming a ukulele on the 26 Valencia, while someone else tried to sell a broken selfie stick. Just another day."
         },
         {
@@ -205,7 +222,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The fog is thick today, wrapping the city in a damp, gray blanket that muffles sounds and softens outlines.. Frustration hangs in the air as commuters wait impatiently for the next"
+          "excerpt": "A thick fog creeps in from the bay, wrapping the city in a chilly embrace as the golden hues of late afternoon fade.. Commuters are spirited but frayed, glancing at their phones as"
         },
         {
           "source_family": "news",
@@ -213,42 +230,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.88,
-          "excerpt": "‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area - SFGATE. ‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area Bay Area W"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+          "excerpt": "‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area - SFGATE. ‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area Bay Area r"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.062,
+        "average_valence": -0.091,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.828
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-20T21:24:02.240Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-20T22:25:32.377Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -313,10 +314,10 @@
         "average_valence": -0.016,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.646
+        "freshness_score": 0.643
       }
     }
   ]
