@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-20T16:35:30.028Z",
+    "capturedAt": "2026-04-20T17:30:03.355Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 341
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-20T16:35:30.028Z",
-      "mood_score": 0.404,
+      "captured_at": "2026-04-20T17:30:03.355Z",
+      "mood_score": 0.401,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -55,7 +55,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Heathrow Terminal 2&3 and Heathrow Terminal 4, MINOR DELAYS between Abbey Wood and Paddington whil"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -63,7 +63,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Heathrow Terminal 2&3 and Heathrow Terminal 4, MINOR DELAYS between Abbey Wood and Paddington whil"
+          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Paddington and Heathrow Terminals / Reading and MINOR DELAYS between Paddington and Abbey Wood whi"
         },
         {
           "source_family": "transport",
@@ -71,7 +71,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton and Arnos Grove, eastbound only, and MINOR DELAYS on the rest of the line."
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading and MINOR DELAYS between Paddington and Abbey Wood whi"
         },
         {
           "source_family": "transport",
@@ -79,26 +79,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton and Arnos Grove, eastbound only, and MINOR DELAYS on the rest of the line."
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Cockfosters and MINOR DELAYS on the rest of the line due to an ear"
         }
       ],
       "metadata": {
         "source_item_count": 60,
-        "average_valence": -0.136,
+        "average_valence": -0.143,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.917
+        "freshness_score": 0.909
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-20T16:35:30.028Z",
-      "mood_score": 0.339,
+      "captured_at": "2026-04-20T17:30:03.355Z",
+      "mood_score": 0.34,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,22 +126,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, M5: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a persistent drizzle that blankets the city, making the streets glisten under the soft glow of the streetlights.. The atmosphere at the U-Bahn station"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -157,25 +140,41 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The cool autumn breeze carries a hint of rain, making the colorful leaves dance through the air like confetti.. Despite the recent strikes, a cautious confidence has returned to th"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Why the downvotes? Maybe you see them more often in Berlin, today, but in the 2000s, the only other place I ever saw them was in Munich Maximilianstraße (but VERY different socioec"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.031,
+        "source_item_count": 90,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.931
+        "freshness_score": 0.932
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-20T16:35:30.028Z",
-      "mood_score": 0.434,
+      "captured_at": "2026-04-20T17:30:03.355Z",
+      "mood_score": 0.439,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
@@ -196,17 +195,17 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they know to avoid the bus stop at 16th and Mission after 5 PM—absolute chaos, a perf"
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 21 late night, driver held up by a street performer having a solo rave. Only in SF can a transit delay turn into a dance "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The air is thick with the scent of impending rain as a cool breeze tussles with lingering sunshine, painting the sky in heavy gray hues.. BART is a jumble of frustrated commuters, "
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they can name the taco truck parked outside by the type of salsa it serves—especially"
         },
         {
           "source_family": "review",
@@ -230,26 +229,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.048,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.826
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-20T16:35:30.028Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-20T17:30:03.355Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,6 +284,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a new arrival by their hesitant smile when ordering a coffee; locals just know to skip the 'por favor' and get straight to the po"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -299,23 +306,15 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.021,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "transit"
         ],
         "freshness_score": 0.645
       }
