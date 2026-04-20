@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-20T13:42:02.261Z",
+    "capturedAt": "2026-04-20T14:42:41.599Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 333
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-20T13:42:02.261Z",
-      "mood_score": 0.404,
+      "captured_at": "2026-04-20T14:42:41.599Z",
+      "mood_score": 0.415,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,6 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -48,22 +47,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier customer incident."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays between Liverpool Street and Hackney Downs while we fix a signal failure at Liverpool Street."
         },
         {
           "source_family": "news",
@@ -80,25 +63,41 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I want it called off - I already WFH but I have to drop my kids off at the tube so they can get to school. I face a 1.5hr drive to get them there and back if the strike is on!"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Tube strikes: how disruptive will action by London Underground drivers be? - The Guardian. Tube strikes: how disruptive will action by London Underground drivers be? Tube strikes: "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "'With four jobs in London I couldn't afford rent so I'm going to Manchester' - BBC. 'With four jobs in London I couldn't afford rent so I'm going to Manchester'"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.136,
+        "source_item_count": 50,
+        "average_valence": -0.103,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-20T13:42:02.261Z",
-      "mood_score": 0.339,
+      "captured_at": "2026-04-20T14:42:41.599Z",
+      "mood_score": 0.34,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 5,
@@ -127,12 +126,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 2 trips delayed"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A heavy cloud cover looms over the city, threatening rain while a brisk wind sends fallen leaves dancing along the streets.. Buses and trams are running again, but the mood remains"
         },
         {
           "source_family": "world",
@@ -161,19 +160,19 @@
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.032,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.942
+        "freshness_score": 0.938
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-20T13:42:02.261Z",
-      "mood_score": 0.431,
+      "captured_at": "2026-04-20T14:42:41.599Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -192,14 +191,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local by their disdain for BART’s 'sudden' delays; we expect the chaos like fog rolling in. Tourists s"
-        },
         {
           "source_family": "review",
           "source_origin": "maps_review",
@@ -231,25 +222,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Eviction Over Unpaid Rent - Realtor.com. Startup Offering $700-a-Month Sleeping Pods in San Francisco Faces Evict"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S. - KTVU. San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S."
         }
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.055,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.825
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-20T13:42:02.261Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-20T14:42:41.599Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +284,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A gray blanket of clouds hangs over Barcelona, with a light drizzle intermittently refreshing the streets.. The mood at the Plaça de Catalunya is tense, as confused commuters crowd"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +298,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "A grey blanket of clouds hangs low, promising rain, while the chill in the air makes it feel like winter is stubbornly hanging on.. The train stations are buzzing, but a tense unea"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.646
+        "freshness_score": 0.642
       }
     }
   ]
