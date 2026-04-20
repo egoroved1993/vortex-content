@@ -163,15 +163,32 @@ const mockEndings = [
 
 const jobs = readJobs(inputPath).slice(0, limit ?? Number.POSITIVE_INFINITY);
 
-// When --force-language is set, override the "Language guidance: ..." line baked into job.prompt
-// by build-seed-batches.mjs. Without this, the user prompt says "Write in English" while the
-// system prompt says "Write in Russian" — and models follow the user prompt.
+// When --force-language is set, rewrite the user prompt to force the target language.
+// The entire prompt is in English by default, so a single "Language guidance" line swap
+// is not enough — the model follows the dominant English context. We must:
+// 1. Replace the opening instruction line to the target language
+// 2. Replace the "Language guidance: ..." line with target language guidance
+// 3. Append a hard override at the very end (last instruction wins)
 if (forceLanguage) {
+  const cityRuNames = { barcelona: "Барселоне", berlin: "Берлине", sf: "Сан-Франциско", london: "Лондоне" };
   for (const job of jobs) {
     const cityConfig = cities.find((c) => c.id === job.cityId);
     const entry = cityConfig?.languageDistribution?.find((d) => d.lang === forceLanguage);
     const guidance = entry?.guidance ?? `Write entirely in language code: ${forceLanguage}`;
     job.prompt = job.prompt.replace(/^Language guidance: .+$/m, `Language guidance: ${guidance}`);
+
+    if (forceLanguage === "ru") {
+      const cityRu = cityRuNames[job.cityId] ?? job.cityId;
+      // Replace English opening with Russian
+      job.prompt = job.prompt.replace(
+        /^Write one short anonymous city message for Vortex\.$/m,
+        `Напиши одно короткое анонимное городское сообщение для Vortex. ПИШИ ТОЛЬКО ПО-РУССКИ.`
+      );
+      // Append hard Russian override at the end (last instruction wins for LLMs)
+      job.prompt += `\n\n⚠️ ЯЗЫК: ОБЯЗАТЕЛЬНО ПИШИ ПО-РУССКИ. Весь текст в поле "content" — кириллицей, на русском языке. Ты — русскоязычный человек в ${cityRu}. Ни одного предложения на английском. Локальные слова (Späti, BART, tube, piso) можно оставить. Если content на английском — сообщение ОТКЛОНЕНО.`;
+    } else {
+      job.prompt += `\n\n⚠️ MANDATORY: The "content" field MUST be written entirely in language: ${forceLanguage}. If you write in English, the message is REJECTED.`;
+    }
   }
 }
 
