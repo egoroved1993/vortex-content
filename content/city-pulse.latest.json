@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-20T18:31:15.792Z",
+    "capturedAt": "2026-04-20T19:31:41.178Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 342
+    "totalItems": 345
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-20T18:31:15.792Z",
-      "mood_score": 0.403,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "captured_at": "2026-04-20T19:31:41.178Z",
+      "mood_score": 0.395,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -55,7 +55,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays North Acton to Ealing Broadway / West Ruislip due to an earlier faulty train at Tottenham Co"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays North Acton to Ealing Broadway / West Ruislip due to an earlier faulty train at Tottenham Co"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Ealing Broadway / Richmond / Wimbledon due to an earlier faulty tr"
         },
         {
           "source_family": "transport",
@@ -64,41 +80,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading and MINOR DELAYS between Paddington and Abbey Wood due"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Paddington and Heathrow Terminals / Reading and MINOR DELAYS between Paddington and Abbey Wood due"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Cockfosters and MINOR DELAYS on the rest of the line due to an ear"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.138,
+        "source_item_count": 64,
+        "average_valence": -0.161,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.921
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-20T18:31:15.792Z",
-      "mood_score": 0.337,
+      "captured_at": "2026-04-20T19:31:41.178Z",
+      "mood_score": 0.342,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,14 +125,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -151,29 +143,37 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Why the downvotes? Maybe you see them more often in Berlin, today, but in the 2000s, the only other place I ever saw them was in Munich Maximilianstraße (but VERY different socioec"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Fully agree, connecting and extending existing lines just makes sense. Too much traffic is routed through the center where the railways are already often at capacity. Trams help co"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.038,
+        "source_item_count": 91,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "belonging"
         ],
         "freshness_score": 0.934
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-20T18:31:15.792Z",
-      "mood_score": 0.428,
+      "captured_at": "2026-04-20T19:31:41.178Z",
+      "mood_score": 0.439,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -193,36 +193,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 21 late night, driver held up by a street performer having a solo rave. Only in SF can a transit delay turn into a dance "
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they can name the taco truck parked outside by the type of salsa it serves—especially"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a chilly breeze weaving through the streets, hinting at the possibility of rain later in the day.. BART is a mess today, with frustrated commuters sta"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.88,
-          "excerpt": "‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area - SFGATE. ‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area Bay Area r"
+          "excerpt": "‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area - SFGATE. ‘Uncommon’ weather shift brings rain, thunder and possible flooding to Bay Area Bay Area W"
         },
         {
           "source_family": "review",
@@ -231,25 +207,49 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.065,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.822
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-20T18:31:15.792Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-20T19:31:41.178Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,20 +285,12 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a new arrival by their hesitant smile when ordering a coffee; locals just know to skip the 'por favor' and get straight to the po"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs low, casting long shadows on the bustling streets while a sharp breeze ruffles the leaves of the palm trees lining Passeig de Gràcia.. With the ongoing strike, the pl"
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
         },
         {
           "source_family": "social",
@@ -306,18 +298,26 @@
           "language": "ru",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
+          "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A gray blanket of low-hanging clouds throws a muted light over the bustling streets, hinting at rain.. The platforms at Plaça de Catalunya are unusually sparse, with frustrated com"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.021,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.645
+        "freshness_score": 0.646
       }
     }
   ]
