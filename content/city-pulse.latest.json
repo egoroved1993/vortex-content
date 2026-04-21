@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-21T10:38:26.879Z",
+    "capturedAt": "2026-04-21T11:32:24.618Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-21T10:38:26.879Z",
-      "mood_score": 0.407,
+      "captured_at": "2026-04-21T11:32:24.618Z",
+      "mood_score": 0.417,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 12,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -47,7 +47,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to strike action."
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to strike action. Services will finish early tonight please complete your journey by 20:"
         },
         {
           "source_family": "transport",
@@ -55,7 +55,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to strike action."
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to strike action. Services will finish early tonight please complete your journey by 20"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to strike action. Services will finish early tonight please complete your journey by 20:"
         },
         {
           "source_family": "transport",
@@ -72,33 +80,25 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Baker Street and Aldgate and MINOR DELAYS on the rest of the line due to strike ac"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to strike action."
         }
       ],
       "metadata": {
-        "source_item_count": 68,
-        "average_valence": -0.275,
+        "source_item_count": 67,
+        "average_valence": -0.245,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.949
+        "freshness_score": 0.946
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-21T10:38:26.879Z",
+      "captured_at": "2026-04-21T11:32:24.618Z",
       "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -150,29 +151,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a mix of gray and blue, with a chilly wind biting at your cheeks as autumn leaves swirl around the pavement.. After the recent suppressions, the U-Bahn is back in act"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.036,
+        "source_item_count": 90,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ],
         "freshness_score": 0.919
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-21T10:38:26.879Z",
-      "mood_score": 0.377,
+      "captured_at": "2026-04-21T11:32:24.618Z",
+      "mood_score": 0.378,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -200,14 +201,6 @@
           "excerpt": "Did you have any interest in the winter Olympics? If yes, visit the Oakland Ice Center where double gold medalist Alysa Liu trains, rent some skates and have fun!"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a real local by how they know to avoid the bus stop by 16th and Mission after 5 PM—it's like a magnet fo"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -224,31 +217,39 @@
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.72,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sky is a hazy mix of gray and muted gold, with the chill of the bay creeping in as the sun struggles to warm the streets.. Frustration hangs in the air at the BART st"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.067,
+        "average_valence": -0.064,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.821
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-21T10:38:26.879Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-21T11:32:24.618Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,39 +285,39 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just waltz into a bar and order tapas. Here, you need to know the secret menu for the good stuff."
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is intermittently hidden behind brooding clouds, casting a moody glow over the bustling streets of Eixample.. With the ongoing railway strike, the Metro is packed tighter t"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
-        },
-        {
-          "source_family": "social",
-          "source_origin": "telegram_group",
-          "language": "ru",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in the afternoon sky, casting long shadows on the bustling streets while a gentle breeze carries the faint scent of fresh paella from nearby food stalls.. The moo"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.643
+        "freshness_score": 0.642
       }
     }
   ]
