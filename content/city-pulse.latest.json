@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-21T05:07:40.569Z",
+    "capturedAt": "2026-04-21T06:50:46.251Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 341
+    "totalItems": 343
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-21T05:07:40.569Z",
-      "mood_score": 0.483,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-04-21T06:50:46.251Z",
+      "mood_score": 0.375,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 6,
         "review": 2,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -48,6 +48,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "news",
@@ -71,34 +79,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Rent control campaigners march in central London - thenegotiator.co.uk. Rent control campaigners march in central London"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It's a public spectacle in a beautiful area of London, and lots of people having a good time. For going to one event in one of the biggest cities in the world?"
+          "excerpt": "London Underground drivers to walk out for 24-hour strike - lbc.co.uk. London Underground drivers to walk out for 24-hour strike"
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.051,
+        "source_item_count": 57,
+        "average_valence": -0.074,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.923
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-21T05:07:40.569Z",
+      "captured_at": "2026-04-21T06:50:46.251Z",
       "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, M5: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 100, 200: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -151,29 +151,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of grey clouds, occasionally pierced by beams of sunlight that warm the damp air.. The recent transit strike has left the mood on the U-Bahn a mix of relief "
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "If you must see Checkpoint Charlie simply walk past it and move on. You do not need to dedicate much time to it. While in Berlin, highly recommend trying Mustafa's Gemüse Kebap! It"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.031,
+        "source_item_count": 93,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.934
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-21T05:07:40.569Z",
-      "mood_score": 0.433,
+      "captured_at": "2026-04-21T06:50:46.251Z",
+      "mood_score": 0.437,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -198,15 +198,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1,
-          "excerpt": "Bay Area Weather Turns the Corner With More Late Spring Rain - KQED. Bay Area Weather Turns the Corner With More Late Spring Rain ‘Uncommon’ weather shift brings rain, thunder and "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, the cool breeze carries the faint scent of damp asphalt, hinting at earlier showers.. The BART stations are packed with frustrated commuters, many checking"
+          "excerpt": "Bay Area weather: Cool temps, steady rain, possible thunderstorms - NBC Bay Area. Bay Area weather: Cool temps, steady rain, possible thunderstorms Bay Area Weather Turns the Corne"
         },
         {
           "source_family": "review",
@@ -231,25 +223,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.05,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.829
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-21T05:07:40.569Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-21T06:50:46.251Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs low with a heavy, gray blanket, promising rain, while the cool breeze carries the scent of humidity from the nearby sea.. Trains are running on reduced schedules due "
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The air is crisp and tinged with a hint of rain, the kind that puts a glossy sheen on the cobblestones.. The strike has left commuters fidgety and irritable, with many opting for c"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "tourism",
+          "routine",
           "transit"
         ],
-        "freshness_score": 0.643
+        "freshness_score": 0.645
       }
     }
   ]
