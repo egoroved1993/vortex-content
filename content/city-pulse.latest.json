@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-21T09:40:53.475Z",
+    "capturedAt": "2026-04-21T10:38:26.879Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 341
+    "totalItems": 347
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-21T09:40:53.475Z",
-      "mood_score": 0.432,
+      "captured_at": "2026-04-21T10:38:26.879Z",
+      "mood_score": 0.407,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 8,
         "review": 2,
@@ -34,7 +34,8 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 7
+        "transport": 12,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -62,42 +63,42 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to strike action."
-        },
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: No service between Baker Street and Aldgate and MINOR DELAYS on the rest of the line due to strike ac"
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Baker Street and Aldgate and MINOR DELAYS on the rest of the line due to strike ac"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to strike action."
         }
       ],
       "metadata": {
-        "source_item_count": 62,
-        "average_valence": -0.199,
+        "source_item_count": 68,
+        "average_valence": -0.275,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.941
+        "freshness_score": 0.949
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-21T09:40:53.475Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-21T10:38:26.879Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -125,6 +126,14 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. The moment I saw a group of kids playing footie while their parents debated the latest BVG strike over coffee at the corner c"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -141,37 +150,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy gray, drizzling sporadically, casting a muted tone over the bustling streets.. After days of disruption, a mix of relief and frustration fills the air as buses a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah, I even bothered to dive into my timeline and find when I was at the restaurant, and wouldn't you know it, I took a picture. Then I struggled about whether I should bother to "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.024,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "money"
         ],
         "freshness_score": 0.919
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-21T09:40:53.475Z",
-      "mood_score": 0.373,
+      "captured_at": "2026-04-21T10:38:26.879Z",
+      "mood_score": 0.377,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -215,37 +216,37 @@
           "excerpt": "Bay Area weather: Cool temps, steady rain, possible thunderstorms - NBC Bay Area. Bay Area weather: Cool temps, steady rain, possible thunderstorms Bay Area Weather Turns the Corne"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds and fleeting sunlight, casting a moody glow over the city streets.. Frustration ripples through the crowded BART platform as announcements ech"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.72,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sky is a hazy mix of gray and muted gold, with the chill of the bay creeping in as the sun struggles to warm the streets.. Frustration hangs in the air at the BART st"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.078,
+        "average_valence": -0.067,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 0.817
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-21T09:40:53.475Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-21T10:38:26.879Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
@@ -302,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun pierces through a thin layer of clouds, casting a warm glow over the bustling streets of Barcelona, with a slight breeze carrying the scent of freshly baked bread from near"
+          "excerpt": "The sun hangs low in the afternoon sky, casting long shadows on the bustling streets while a gentle breeze carries the faint scent of fresh paella from nearby food stalls.. The moo"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.645
+        "freshness_score": 0.643
       }
     }
   ]
