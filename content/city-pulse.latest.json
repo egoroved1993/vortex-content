@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-21T13:41:16.387Z",
+    "capturedAt": "2026-04-21T14:43:20.535Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 347
+    "totalItems": 351
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-21T13:41:16.387Z",
-      "mood_score": 0.402,
+      "captured_at": "2026-04-21T14:43:20.535Z",
+      "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
         "review": 2,
@@ -34,29 +34,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 15,
+        "transport": 18,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to strike action. Services will finish early tonight so please complete your journey by"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Service is operating at a reduced frequency on the entire line every 20 minutes due to strike"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,7 +55,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Service is operating at a reduced frequency due to strike action. Trains are running between Baker St"
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Service is operating at a reduced frequency due to strike action. Trains are running between Baker St"
         },
         {
           "source_family": "transport",
@@ -79,24 +63,40 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Service is operating at a reduced frequency on the entire line every 10 minutes due to strike action. Ser"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Service is operating at a reduced frequency on the entire line every 15 minutes due to strike action. Ser"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Service is operating at a reduced frequency on the entire line every 5 minutes due to strike action. Serv"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Severe Delays Waterloo and City Line: Service is operating at a reduced frequency every 8 minutes due to strike action. Services will"
         }
       ],
       "metadata": {
-        "source_item_count": 67,
-        "average_valence": -0.289,
+        "source_item_count": 70,
+        "average_valence": -0.235,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.945
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-21T13:41:16.387Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-21T14:43:20.535Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,6 +127,22 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. When the BVG strike left my street eerily quiet, but I still heard the distant sounds of a spontaneous block party. That's Be"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -140,39 +157,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A cool breeze sweeps through the streets, carrying the scent of freshly baked Brezeln mixed with a hint of impending rain.. After a chaotic morning, the U-Bahnen, Trams, and Buses "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah, I even bothered to dive into my timeline and find when I was at the restaurant, and wouldn't you know it, I took a picture. Then I struggled about whether I should bother to "
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.03,
+        "source_item_count": 91,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.912
+        "freshness_score": 0.913
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-21T13:41:16.387Z",
-      "mood_score": 0.383,
+      "captured_at": "2026-04-21T14:43:20.535Z",
+      "mood_score": 0.387,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -192,12 +193,28 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals know that the BART maintenance delays are just another excuse not to ride the 14 or 49 during rush hour. "
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Bay Area weather: Cool temps, steady rain, possible thunderstorms - NBC Bay Area. Bay Area weather: Cool temps, steady rain, possible thunderstorms Bay Area Weather Turns the Corne"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, thick with fog that swirls around the golden towers like a damp blanket.. Frustration hangs in the air as commuters wait anxiously for BART trains that are"
         },
         {
           "source_family": "review",
@@ -214,39 +231,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.049,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.837
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-21T13:41:16.387Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-21T14:43:20.535Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -284,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "A hazy warmth blankets the city, with the sun peeking through the scattered clouds, casting a cozy glow over the streets.. The platforms at Plaça de Catalunya are buzzing with frus"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -298,19 +307,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with gray clouds threatening rain, but the air is warm and laden with the scent of fresh pastries from nearby cafes.. The usually bustling Renfe stations are qu"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
