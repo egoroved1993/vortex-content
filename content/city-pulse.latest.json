@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-21T14:43:20.535Z",
+    "capturedAt": "2026-04-21T15:37:48.919Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 351
+    "totalItems": 350
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-21T14:43:20.535Z",
-      "mood_score": 0.42,
+      "captured_at": "2026-04-21T15:37:48.919Z",
+      "mood_score": 0.412,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 4,
         "review": 2,
@@ -34,13 +34,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 18,
+        "transport": 17,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to strike action. Services will finish early tonight so please complete your journey by"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -72,33 +80,25 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Service is operating at a reduced frequency on the entire line every 5 minutes due to strike action. Serv"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Severe Delays Waterloo and City Line: Service is operating at a reduced frequency every 8 minutes due to strike action. Services will"
         }
       ],
       "metadata": {
-        "source_item_count": 70,
-        "average_valence": -0.235,
+        "source_item_count": 69,
+        "average_valence": -0.258,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.945
+        "freshness_score": 0.936
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-21T14:43:20.535Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-21T15:37:48.919Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
         },
         {
           "source_family": "forum",
@@ -161,21 +161,21 @@
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.043,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.913
+        "freshness_score": 0.918
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-21T14:43:20.535Z",
-      "mood_score": 0.387,
+      "captured_at": "2026-04-21T15:37:48.919Z",
+      "mood_score": 0.374,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 5,
@@ -196,6 +196,14 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy serenading the 38 bus line with an opera aria. All the riders paused, phones out, and for a moment, the chaos faded. Class"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals know that the BART maintenance delays are just another excuse not to ride the 14 or 49 during rush hour. "
@@ -207,14 +215,6 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Bay Area weather: Cool temps, steady rain, possible thunderstorms - NBC Bay Area. Bay Area weather: Cool temps, steady rain, possible thunderstorms Bay Area Weather Turns the Corne"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, thick with fog that swirls around the golden towers like a damp blanket.. Frustration hangs in the air as commuters wait anxiously for BART trains that are"
         },
         {
           "source_family": "review",
@@ -235,19 +235,19 @@
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.038,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.817
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-21T14:43:20.535Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-04-21T15:37:48.919Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "A hazy warmth blankets the city, with the sun peeking through the scattered clouds, casting a cozy glow over the streets.. The platforms at Plaça de Catalunya are buzzing with frus"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sun pierces through a thin veil of clouds, casting a warm glow over the bustling streets of Eixample.. With the Rodalies train service in turmoil, commuters are visib"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.016,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.648
+        "freshness_score": 0.646
       }
     }
   ]
