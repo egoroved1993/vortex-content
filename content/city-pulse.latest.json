@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-21T03:15:24.574Z",
+    "capturedAt": "2026-04-21T05:07:40.569Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-21T03:15:24.574Z",
-      "mood_score": 0.469,
+      "captured_at": "2026-04-21T05:07:40.569Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -57,50 +58,50 @@
           "excerpt": "Renters head to national housing protest in call for rent controls - Big Issue. Renters head to national housing protest in call for rent controls"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "People intentionally moving far away from their offices is a very different thing from closing closing down offices and demanding employees to accommodate these decisions. Its call"
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Sydenham and West Croydon while we fix a signal failure at Brockley. GOOD SERVICE on t"
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Tube strikes: how disruptive will action by London Underground drivers be? - The Guardian. Tube strikes: how disruptive will action by London Underground drivers be? Tube strikes: "
+          "recency_weight": 1.08,
+          "excerpt": "Rent control campaigners march in central London - thenegotiator.co.uk. Rent control campaigners march in central London"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The overcast sky hangs heavy with the threat of rain, casting a muted light over the bustling streets.. The mood in the air is tense as people crowd the platforms, anxiously checki"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "It's a public spectacle in a beautiful area of London, and lots of people having a good time. For going to one event in one of the biggest cities in the world?"
         }
       ],
       "metadata": {
-        "source_item_count": 51,
-        "average_valence": -0.09,
+        "source_item_count": 56,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-21T03:15:24.574Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-04-21T05:07:40.569Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -126,20 +127,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin, for all its quirks, seems like a nice city to live in. I only ever travelled there so I may be wrong. It’s easily navigable with great public transport, proper green spaces"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. When I saw a whole family of ducks waddling down Karl-Marx-Straße like they owned the place. Only in Neukölln do you get that"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7, M5: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -156,25 +149,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a patchwork of grey clouds, occasionally pierced by beams of sunlight that warm the damp air.. The recent transit strike has left the mood on the U-Bahn a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.014,
+        "source_item_count": 92,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.934
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-21T03:15:24.574Z",
-      "mood_score": 0.428,
+      "captured_at": "2026-04-21T05:07:40.569Z",
+      "mood_score": 0.433,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 8,
@@ -192,28 +193,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "This should be indexed at 100 at start then set to a log scale. Eyeballing it, san jose/fremont clearly doing the best, san francisco/oakland/santa rosa similar. It used to be Mari"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw someone feeding the pigeons at Civic Center while Muni idled behind a dog on the tracks. Only in SF do delays come with a side o"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Bay Area Weather Turns the Corner With More Late Spring Rain - KQED. Bay Area Weather Turns the Corner With More Late Spring Rain ‘Uncommon’ weather shift brings rain, thunder and "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, the cool breeze carries the faint scent of damp asphalt, hinting at earlier showers.. The BART stations are packed with frustrated commuters, many checking"
         },
         {
           "source_family": "review",
@@ -230,25 +223,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.065,
+        "average_valence": -0.05,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-21T03:15:24.574Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-21T05:07:40.569Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low with a heavy, gray blanket, promising rain, while the cool breeze carries the scent of humidity from the nearby sea.. Trains are running on reduced schedules due "
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -298,25 +307,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a thick blanket of clouds, casting a muted gray light over the bustling streets of Barcelona.. The atmosphere at the train stations is charged with frustra"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.641
+        "freshness_score": 0.643
       }
     }
   ]
