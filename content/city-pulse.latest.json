@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-21T20:25:52.092Z",
+    "capturedAt": "2026-04-21T21:22:38.433Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 359
+    "totalItems": 356
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-21T20:25:52.092Z",
-      "mood_score": 0.431,
+      "captured_at": "2026-04-21T21:22:38.433Z",
+      "mood_score": 0.432,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -34,29 +34,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 16,
+        "transport": 13,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Service is operating at a reduced frequency on the entire line every 15 minutes due to strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Service is operating at a reduced frequency on the entire line every 5 minutes due to strike action."
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -80,25 +64,41 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Bakerloo: Suspended Bakerloo Line: No service on the entire line due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Suspended Central Line: No service on the entire line due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Suspended Circle Line: No service on the entire line due to strike action."
         }
       ],
       "metadata": {
-        "source_item_count": 70,
-        "average_valence": -0.202,
+        "source_item_count": 67,
+        "average_valence": -0.2,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.941
+        "freshness_score": 0.933
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-21T20:25:52.092Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-21T21:22:38.433Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, 200: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 200: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -161,21 +161,21 @@
       ],
       "metadata": {
         "source_item_count": 95,
-        "average_valence": -0.037,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.94
+        "freshness_score": 0.936
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-21T20:25:52.092Z",
-      "mood_score": 0.384,
+      "captured_at": "2026-04-21T21:22:38.433Z",
+      "mood_score": 0.387,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 9,
@@ -201,6 +201,14 @@
           "excerpt": "I just did 4 nights in the city and decided not to rent a car. We used a combo of Bart, Muni, Uber and Lime Scooters , plus walked 25,000 steps/day and it was fantastic. We got eve"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local if they don't flinch at the BART delays but still complain about the taco truck line at 10"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -217,36 +225,28 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy doing yoga in the middle of the Muni aisle while we were stuck in traffic. Only in SF do you see that kind of calm amid ch"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The crisp evening air carries the hint of salty sea breeze, with a feeble sun disappearing behind the iconic skyline.. Frustration hangs in the air at the BART station, where passe"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Bay Area weather: Cool temps, steady rain, possible thunderstorms - NBC Bay Area. Bay Area weather: Cool temps, steady rain, possible thunderstorms Bay Area Weather Turns the Corne"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.048,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-21T20:25:52.092Z",
+      "captured_at": "2026-04-21T21:22:38.433Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
@@ -290,7 +290,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with clouds, threatening rain, as a chilly breeze sweeps through the narrow streets of the Gothic Quarter.. The platforms at Plaça de Catalunya are unusually cr"
+          "excerpt": "A thick blanket of clouds looms over Barcelona, punctuated by sporadic drizzle that gives the city a glossy sheen.. The mood on the metro is notably tense, with commuters exchangin"
         },
         {
           "source_family": "social",
