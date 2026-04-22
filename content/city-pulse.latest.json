@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-22T16:32:46.247Z",
+    "capturedAt": "2026-04-22T17:28:27.636Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 350
+    "totalItems": 349
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-22T16:32:46.247Z",
-      "mood_score": 0.419,
+      "captured_at": "2026-04-22T17:28:27.636Z",
+      "mood_score": 0.426,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
         "review": 2,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 9,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -55,22 +55,6 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to earlier strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to earlier strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to earlier strike action."
         },
         {
@@ -79,26 +63,42 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: No service between Rayners Lane and Uxbridge due to earlier strike action. Please use the Metropolitan"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Rayners Lane and Uxbridge due to earlier strike action. Please use the Metropolitan"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to earlier strike action."
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.238,
+        "source_item_count": 58,
+        "average_valence": -0.219,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.922
+        "freshness_score": 0.918
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-22T16:32:46.247Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-22T17:28:27.636Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, 248: Delays 4 trips delayed"
+          "excerpt": "Berlin transit M4, 200, RE2: Delays 3 trips delayed"
         },
         {
           "source_family": "forum",
@@ -161,19 +161,19 @@
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.043,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ],
         "freshness_score": 0.942
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-22T16:32:46.247Z",
-      "mood_score": 0.348,
+      "captured_at": "2026-04-22T17:28:27.636Z",
+      "mood_score": 0.341,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -201,6 +201,22 @@
           "excerpt": "I've seen BART police storm through trains late at night to drag people off for the \"crime\" of sitting in their seat half asleep, all while not even looking at me and my drunk frie"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni bus late last night—two musicians set up on the back steps, playing a duet while we creep through the fog. Just a Tues"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Scattered showers linger across the Bay Area. Here’s when rain ends - San Francisco Chronicle. Scattered showers linger across the Bay Area. Here’s when rain ends Pop-up thundersto"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -215,39 +231,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Lol the Bart and good is funny but coming from Pleasanton it might actually be good. You could def do some evenings in the city via bart if you’re free after your work obligations."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "If you stay anywhere close to SFO - it will be much easier to drive around. From anywhere between South San Francisco and Redwood City - you can drive to the ocean (Half Moon Bay) "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Bay Area Weather Turns the Corner With More Late Spring Rain - KQED. Bay Area Weather Turns the Corner With More Late Spring Rain Scattered showers linger across the Bay Area. Here"
         }
       ],
       "metadata": {
         "source_item_count": 60,
-        "average_valence": -0.005,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.853
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-22T16:32:46.247Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-22T17:28:27.636Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -301,23 +301,23 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through a blanket of grey clouds, offering fleeting moments of warmth that contrast with the chill in the air.. The usually bustling morning metro is quieter than no"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.647
+        "freshness_score": 0.639
       }
     }
   ]
