@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-22T09:41:39.196Z",
+    "capturedAt": "2026-04-22T10:38:26.001Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,12 +15,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 349
+    "totalItems": 348
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-22T09:41:39.196Z",
+      "captured_at": "2026-04-22T10:38:26.001Z",
       "mood_score": 0.417,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -34,13 +34,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 16,
+        "transport": 15,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Service is operating at a reduced frequency on the entire line due to strike action."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -72,31 +80,23 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Service is operating at a reduced frequency on the entire line due to strike action."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "Tube strikes: how disruptive will action by London Underground drivers be? - The Guardian. Tube strikes: how disruptive will action by London Underground drivers be? Tube strikes: "
         }
       ],
       "metadata": {
-        "source_item_count": 67,
-        "average_valence": -0.243,
+        "source_item_count": 66,
+        "average_valence": -0.244,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.919
+        "freshness_score": 0.918
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-22T09:41:39.196Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-22T10:38:26.001Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -126,12 +126,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp and brisk, with a sharpness that hints at the onset of fall, as wisps of low-hanging clouds gather overhead.. Despite the U-Bahn and bus services resuming, the moo"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. I knew I was home when I saw a guy juggling on the sidewalk while a group of kids traded Pokémon cards nearby, all while the "
         },
         {
           "source_family": "world",
@@ -150,28 +150,28 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "not boring, but indeed a bit gentrified lol i must admit to have exaggerated, its more like i need 20-50€ cash, but it's far from \"berlin is only cash\", which was the actual intent"
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with gray clouds, a chill wind cutting through the day that feels like it might rain any moment.. Despite the recent end to the strike, the U-Bahn is running la"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.018,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.934
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-22T09:41:39.196Z",
+      "captured_at": "2026-04-22T10:38:26.001Z",
       "mood_score": 0.327,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
@@ -240,13 +240,13 @@
           "transit",
           "work"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.826
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-22T09:41:39.196Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-22T10:38:26.001Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -303,14 +303,14 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.612,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun bathes the city in a warm glow, while a brisk wind carries the salty tang of the sea.. The platforms at Sants are crowded, with commuters checking their phones an"
+          "excerpt": "The sun hangs timidly behind a veil of clouds, casting a muted glow over the bustling streets of El Raval.. The tension is palpable at Plaça Catalunya as commuters navigate the del"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
