@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-22T22:23:13.827Z",
+    "capturedAt": "2026-04-22T23:24:24.205Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 347
+    "totalItems": 345
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-22T22:23:13.827Z",
-      "mood_score": 0.43,
+      "captured_at": "2026-04-22T23:24:24.205Z",
+      "mood_score": 0.433,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 9,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -79,24 +79,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays between Edgware Road and Hammersmith and MINOR DELAYS on the rest of the line due to train ca"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.207,
+        "source_item_count": 59,
+        "average_valence": -0.197,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.93
+        "freshness_score": 0.921
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-22T22:23:13.827Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-22T23:24:24.205Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,14 +124,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -154,28 +145,36 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The air is crisp with a slight chill, while the sun peeks through thick grey clouds, casting a muted glow over the bustling streets.. With the announcement of resumed services, the"
+          "excerpt": "The sky is a patchwork of grey and blue, with a cool breeze that carries the sharp scent of wet pavement after a light drizzle.. With the recent end of the BVG strike, the U-Bahn i"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I live in Berlin for 10 years and most of the problems I saw or heard about were not caused by immigrants. Most of them were cause by teenage Germans or drunk Germans."
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.034,
+        "source_item_count": 90,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.932
+        "freshness_score": 0.929
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-22T22:23:13.827Z",
-      "mood_score": 0.35,
+      "captured_at": "2026-04-22T23:24:24.205Z",
+      "mood_score": 0.348,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 11,
@@ -192,6 +191,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 6 tonight with a saxophonist serenading the packed bus. Only in San Francisco do you get a live concert mid-commute."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Bay Area storm adds to remarkably wet April. Here are the rain totals - San Francisco Chronicle. Bay Area storm adds to remarkably wet April. Here are the rain totals Pop-up thunde"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -215,39 +230,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "On Nob Hill this is intentional. Muni has some kind of policy about stopping every block when the hill exceeds a certain steepness. It really sucks to have to walk up a huge hill t"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Bay Area weather: Storm continues wettest April in nearly a decade - The Mercury News. Bay Area weather: Storm continues wettest April in nearly a decade Scattered showers linger a"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
         "source_item_count": 59,
-        "average_valence": 0,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-22T22:23:13.827Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-22T23:24:24.205Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -301,17 +300,17 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray with a light drizzle that turns the pavement slick and reflective, infusing the air with a cool, crisp freshness.. The platforms at Sants station are unusua"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
