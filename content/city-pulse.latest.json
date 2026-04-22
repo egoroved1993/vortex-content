@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-22T06:50:34.903Z",
+    "capturedAt": "2026-04-22T07:41:44.997Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 352
+    "totalItems": 355
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-22T06:50:34.903Z",
-      "mood_score": 0.425,
+      "captured_at": "2026-04-22T07:41:44.997Z",
+      "mood_score": 0.427,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 15,
+        "transport": 17,
         "weather": 1
       },
       "languages": [
@@ -55,14 +55,6 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Service is operating at a reduced frequency on the entire line due to strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Service is operating at a reduced frequency on the entire line due to strike action."
         },
         {
@@ -71,34 +63,42 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Service is operating at a reduced frequency on the entire line due to strike action."
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Service is operating at a reduced frequency on the entire line due to strike action."
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "Tube strikes: how disruptive will action by London Underground drivers be? - The Guardian. Tube strikes: how disruptive will action by London Underground drivers be? London Tube Dr"
+          "recency_weight": 1.08,
+          "excerpt": "Tube strikes latest: First services starting to run as commuters face rush hour disruption - BBC. Tube strikes latest: First services starting to run as commuters face rush hour di"
+        },
+        {
+          "source_family": "social",
+          "source_origin": "x_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         }
       ],
       "metadata": {
-        "source_item_count": 68,
-        "average_valence": -0.22,
+        "source_item_count": 70,
+        "average_valence": -0.213,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.932
+        "freshness_score": 0.943
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-22T06:50:34.903Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-22T07:41:44.997Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,53 +127,53 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg can you catch a bus that arrives late because it's stuck in traffic from a street festival—while the festiva"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The skies above Berlin are a mottled grey, with a chill in the air that promises rain, yet the occasional burst of sunlight breaks through the clouds, illuminating the wet pavement"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted grey, with a damp chill in the air that makes the cobblestones glisten after the morning drizzle.. While buses and trams have resumed their routes, a palpable fr"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "not boring, but indeed a bit gentrified lol i must admit to have exaggerated, its more like i need 20-50€ cash, but it's far from \"berlin is only cash\", which was the actual intent"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.021,
+        "source_item_count": 92,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.939
+        "freshness_score": 0.936
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-22T06:50:34.903Z",
-      "mood_score": 0.366,
+      "captured_at": "2026-04-22T07:41:44.997Z",
+      "mood_score": 0.32,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -229,24 +230,24 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a low layer of gray clouds, threatening rain but holding back, while a brisk breeze whips through the streets, carrying the salty scent of the bay.. Riders"
+          "excerpt": "The fog hangs thick over the Financial District, giving the skyscrapers a ghostly silhouette against a muted gray sky.. Frustration is palpable among commuters at the BART station,"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.1,
+        "average_valence": -0.089,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-22T06:50:34.903Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-22T07:41:44.997Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -284,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often think they can find good paella everywhere, but real locals know it’s a coastal dish. Here in Gràcia, it's all a"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -306,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The sun casts a warm glow over the La Rambla, with a gentle breeze carrying the salty scent of the Mediterranean.. The metro stations are unusually packed as frustrated commuters n"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.018,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.648
+        "freshness_score": 0.647
       }
     }
   ]
