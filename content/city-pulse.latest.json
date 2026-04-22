@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-22T01:43:02.196Z",
+    "capturedAt": "2026-04-22T03:15:26.341Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 345
+    "totalItems": 347
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-22T01:43:02.196Z",
-      "mood_score": 0.424,
+      "captured_at": "2026-04-22T03:15:26.341Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, general, money. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -41,14 +41,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still line up at the bus stop like it’s the tube instead of diving into the chaos of an Uber or the 38."
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -80,23 +72,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Circle: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take strike action on the following dates and times: U"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take strike action on the following dates and times: U"
         }
       ],
       "metadata": {
         "source_item_count": 62,
-        "average_valence": -0.223,
+        "average_valence": -0.193,
         "dominant_themes": [
           "transit",
           "general",
           "money"
         ],
-        "freshness_score": 0.928
+        "freshness_score": 0.934
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-22T01:43:02.196Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-22T03:15:26.341Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -126,20 +127,20 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE 647: Delays 1 trips delayed"
+        },
+        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. You ever notice how Kreuzberg’s street art seems to change overnight? One day a wall's blank, next it’s a canvas of protest or"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy gray, thick with clouds threatening rain, yet a cool breeze sweeps through the streets, carrying the faint scent of wet pavement.. With the recent BVG strike sti"
         },
         {
           "source_family": "world",
@@ -159,20 +160,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.043,
+        "source_item_count": 93,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.935
+        "freshness_score": 0.937
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-22T01:43:02.196Z",
-      "mood_score": 0.388,
+      "captured_at": "2026-04-22T03:15:26.341Z",
+      "mood_score": 0.384,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -208,6 +209,14 @@
           "excerpt": "I’d recommend some place close to both the 4th and King Street Caltrain station and the Ferry Building. On the latter, you can take the ferry to Sausalito and a ~20 min public tran"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "Bay Area weather: Cool temps, steady rain, possible thunderstorms - NBC Bay Area. Bay Area weather: Cool temps, steady rain, possible thunderstorms Bay Area weather: Storm continue"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -216,37 +225,29 @@
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a moody gray, punctuated by the occasional burst of sun peeking through, casting a harsh light on the wet pavement.. Chaos reigns in the transit system today, with BART "
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.035,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.813
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-22T01:43:02.196Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-22T03:15:26.341Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -284,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun bathes the streets in a golden hue, while a gentle breeze carries the salty scent of the nearby sea.. Rodalies trains are visibly sparse, with many commuters opti"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -306,11 +299,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with a soft, brooding gray, punctuated by a chill that suggests rain is just around the corner.. The trains are unusually crowded today, with anxious commuters "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
