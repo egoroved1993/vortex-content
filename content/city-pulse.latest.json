@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-23T12:34:12.935Z",
+    "capturedAt": "2026-04-23T13:41:19.570Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 348
+    "totalItems": 350
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-23T12:34:12.935Z",
-      "mood_score": 0.425,
+      "captured_at": "2026-04-23T13:41:19.570Z",
+      "mood_score": 0.408,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 6,
         "review": 2,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 12,
+        "transport": 13,
         "weather": 1
       },
       "languages": [
@@ -47,7 +47,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays on the entire line due to strike action. Tube services will finish early tonight, so pleas"
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays on the entire line due to strike action. Service is operating between Queen's Park and Elep"
         },
         {
           "source_family": "transport",
@@ -63,7 +63,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays on the entire line due to strike action. Tube services will finish early tonight, so pleas"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays on the entire line due to strike action. Services are operating approximately every 15 minu"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays on the entire line due to strike action. Tube services will finish early tonight"
         },
         {
           "source_family": "transport",
@@ -72,31 +80,23 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays on the entire line due to strike action. Tube services will finish early tonight, so please"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Baker Street and Aldgate and SEVERE DELAYS on the rest of the line due to strike a"
         }
       ],
       "metadata": {
-        "source_item_count": 66,
-        "average_valence": -0.222,
+        "source_item_count": 67,
+        "average_valence": -0.272,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.959
+        "freshness_score": 0.96
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-23T12:34:12.935Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-23T13:41:19.570Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -124,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
         },
         {
           "source_family": "forum",
@@ -148,33 +157,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin runway and other security points are opening at 4am every day. I would expect that to be the case, if you want to be extra sure, just book a runway slot at 4am, it's anyway "
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.032,
+        "source_item_count": 92,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.947
+        "freshness_score": 0.945
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-23T12:34:12.935Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-04-23T13:41:19.570Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -197,7 +198,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from SF when they complain about BART delays as if it’s a personal affront, not just another Tuesd"
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a tutu dancing on the bus as it crawled past the Civic Center. Only in SF do delays inspire performances like that."
         },
         {
           "source_family": "forum",
@@ -205,7 +206,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re from here when they don't flinch at a BART delay but complain about Muni only because they can't tru"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from SF when they complain about BART delays as if it’s a personal affront, not just another Tuesd"
         },
         {
           "source_family": "public",
@@ -216,39 +217,39 @@
           "excerpt": "I changed from an engineering degree to business major plus comp science minor at 20. Took an extra year in college but it was worth it. Also college in 2005ish rocked. Even then I"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of fog rolls in from the bay, dampening the golden hues of the afternoon sun and wrapping the city in a cool embrace.. With BART delays cascading across the system,"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Bay Area weather: Storm continues wettest April in nearly a decade - The Mercury News. Bay Area weather: Storm continues wettest April in nearly a decade Heaviest rain now sweeping"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.058,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "belonging"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.815
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-23T12:34:12.935Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-23T13:41:19.570Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -276,20 +277,20 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gothic Quarter. You can spot a recent arrival by the way they stand puzzled at the Metro maps, not realizing the trains are on strike until someone po"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a muted grey, casting a soft light that makes the wet pavements shimmer like polished stone after an early rain.. The platforms at Plaça de Catalunya are unusually cr"
         },
         {
           "source_family": "social",
@@ -310,11 +311,11 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.031,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
         "freshness_score": 0.64
       }
