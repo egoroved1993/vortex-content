@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-23T07:42:41.174Z",
+    "capturedAt": "2026-04-23T08:47:01.917Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 336
+    "totalItems": 331
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-23T07:42:41.174Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-04-23T08:47:01.917Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -42,12 +42,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I’m your age, left London last year moved to Surrey. For the same rent I have my own flat here (vs living in an HMO back in London). Plus bills though, which I don’t have to worry "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to strike action."
         },
         {
           "source_family": "news",
@@ -55,7 +55,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "Full list of London Underground line delays ahead of second 24-hour strike - London Evening Standard. Full list of London Underground line delays ahead of second 24-hour strike"
+          "excerpt": "Full list of London Underground line delays and closures ahead of second 24-hour strike - London Evening Standard. Full list of London Underground line delays and closures ahead of"
         },
         {
           "source_family": "social",
@@ -71,37 +71,110 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations"
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I mean i moved to London about 3 years ago from Surrey. I have had to deal with tube strikes, shitty weather, people moving at a snails pace or just deciding all together just to s"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 54,
+        "average_valence": -0.15,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "weather"
+        ],
+        "freshness_score": 0.919
+      }
+    },
+    {
+      "city_id": "sf",
+      "captured_at": "2026-04-23T08:47:01.917Z",
+      "mood_score": 0.488,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 4,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only a true local would know not to complain about the Muni delays after a dog on the tracks—it's just Tuesd"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I changed from an engineering degree to business major plus comp science minor at 20. Took an extra year in college but it was worth it. Also college in 2005ish rocked. Even then I"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of gray clouds hangs low, spitting occasional light rain that dances off the pavement.. The BART passengers, faces lined with frustration, huddle closely as announc"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Second Tube strike to impact London from midday - BBC. Second Tube strike to impact London from midday London faces more disruption as second 24-hour tube strike begins The Guardia"
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.103,
+        "source_item_count": 52,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.913
+        "freshness_score": 0.815
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-23T07:42:41.174Z",
+      "captured_at": "2026-04-23T08:47:01.917Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -131,7 +204,7 @@
           "language": "en",
           "valence": 1,
           "recency_weight": 0.72,
-          "excerpt": "The air is crisp with a hint of impending rain, and dark clouds loom overhead while scattered sunlight breaks through intermittently.. Despite the recent end of the strikes, many c"
+          "excerpt": "The sky is a heavy slate gray, threatening rain, while a chilly breeze stirs the fallen leaves along the sidewalks.. With the recent resolution of the BVG strike, the subway cars a"
         },
         {
           "source_family": "world",
@@ -150,102 +223,28 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Because people kept reposting the same capital-comparing image from 2017 that didn't hold true by 2019. And also Berlin bad or something."
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
+        "source_item_count": 88,
         "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.939
-      }
-    },
-    {
-      "city_id": "sf",
-      "captured_at": "2026-04-23T07:42:41.174Z",
-      "mood_score": 0.503,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 6,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Yes but a graduate student with years of perfect rental history and good credit score and the ability to live within their means can't find an apartment. Or a teacher, or an elder "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I don’t have any points of comparison but I’ve gone to BodySpec in the Marina three times now and have had good experiences (appointment starts on time, friendly people working the"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 54,
-        "average_valence": 0.008,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "routine"
-        ],
-        "freshness_score": 0.826
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-23T07:42:41.174Z",
+      "captured_at": "2026-04-23T08:47:01.917Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
@@ -305,7 +304,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a blanket of gray clouds, hinting at rain that never quite falls, creating a damp chill in the air.. Trains are running with significant delays due to the "
+          "excerpt": "A gray blanket of clouds looms over the city, threatening rain but holding back as the sun timidly peeks through.. The air at the train station is thick with frustration and uncert"
         }
       ],
       "metadata": {
@@ -316,7 +315,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.64
+        "freshness_score": 0.643
       }
     }
   ]
