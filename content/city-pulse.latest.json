@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-23T17:38:40.203Z",
+    "capturedAt": "2026-04-23T18:35:50.249Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 350
+    "totalItems": 352
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-23T17:38:40.203Z",
-      "mood_score": 0.39,
+      "captured_at": "2026-04-23T18:35:50.249Z",
+      "mood_score": 0.392,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
@@ -84,19 +84,19 @@
       ],
       "metadata": {
         "source_item_count": 66,
-        "average_valence": -0.323,
+        "average_valence": -0.319,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.97
+        "freshness_score": 0.966
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-23T17:38:40.203Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-23T18:35:50.249Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -124,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, 248: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -148,33 +157,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Berlin airport is built so that you can go through security anywhere and still be able to reach your gate. I have had multiple 6am flights scheduled for T2 and have never once gone"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.025,
+        "source_item_count": 91,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.942
+        "freshness_score": 0.941
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-23T17:38:40.203Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-23T18:35:50.249Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 10,
@@ -234,21 +235,21 @@
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.039,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-23T17:38:40.203Z",
+      "captured_at": "2026-04-23T18:35:50.249Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -313,8 +314,8 @@
         "average_valence": -0.03,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.641
       }
