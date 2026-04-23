@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-23T19:36:34.086Z",
+    "capturedAt": "2026-04-23T20:28:34.560Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 350
+    "totalItems": 346
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-23T19:36:34.086Z",
-      "mood_score": 0.406,
+      "captured_at": "2026-04-23T20:28:34.560Z",
+      "mood_score": 0.421,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 15,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
@@ -48,14 +48,6 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Central: Severe Delays Central Line: No service between White City and Liverpool Street and SEVERE DELAYS on the rest of the line due to strike"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Part Suspended Central Line: No service between White City and Liverpool Street and SEVERE DELAYS on the rest of the line due to strike"
         },
         {
           "source_family": "transport",
@@ -79,29 +71,110 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Baker Street and Aldgate and SEVERE DELAYS on the rest of the line due to strike a"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to strike action. Services are operating approximately every 15 minutes."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays on the entire line due to strike action. Services are operating approximately every 5 minute"
         }
       ],
       "metadata": {
-        "source_item_count": 65,
-        "average_valence": -0.276,
+        "source_item_count": 63,
+        "average_valence": -0.232,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.959
+        "freshness_score": 0.954
+      }
+    },
+    {
+      "city_id": "sf",
+      "captured_at": "2026-04-23T20:28:34.560Z",
+      "mood_score": 0.488,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 9,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 5-Fulton today; a guy was singing opera over the chaos of a dog barking and a broken speaker. Just another day in the Ten"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Civic Center. Caught a Muni bus today at Civic Center, and a saxophonist had the entire crowd swaying. Only in SF do delays turn into dance brea"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "If you're coming from Minnesota, I think you'd enjoy: - visiting the Presidio - Chinatown (usually busiest in the morning IME) - if you're a coffee drinker, the local cafe culture "
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 57,
+        "average_valence": -0.036,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "work"
+        ],
+        "freshness_score": 0.829
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-23T19:36:34.086Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-23T20:28:34.560Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -146,110 +219,36 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs low with a blanket of grey clouds, and the cool breeze carries the scent of impending rain.. With the recent strikes fresh in memory, commuters are moving with a caut"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin airport is built so that you can go through security anywhere and still be able to reach your gate. I have had multiple 6am flights scheduled for T2 and have never once gone"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.021,
-        "dominant_themes": [
-          "general",
-          "routine",
-          "weather"
-        ],
-        "freshness_score": 0.939
-      }
-    },
-    {
-      "city_id": "sf",
-      "captured_at": "2026-04-23T19:36:34.086Z",
-      "mood_score": 0.491,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 10,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "San Francisco's MSA is about 4.6 to 4.7 million whereas San Diego is much smaller at 3.3. Just saying. San Francisco's big energy also emanates from global tourism, finance, academ"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Civic Center. Caught a Muni bus today at Civic Center, and a saxophonist had the entire crowd swaying. Only in SF do delays turn into dance brea"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I did grad school in SD after living in SF and ngl it was tough being somewhere so mellow. I love SF. Public transport vs. driving, nightlife, really diverse folks, amazing food, a"
+          "excerpt": "The late autumn sun breaks through thick clouds, casting a muted glow over damp streets, with a chill that bites at exposed skin.. After days of uncertainty, there’s a mix of relie"
         },
         {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
-          "valence": 0.5,
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
         }
       ],
       "metadata": {
-        "source_item_count": 58,
+        "source_item_count": 89,
         "average_valence": -0.026,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.938
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-23T19:36:34.086Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-23T20:28:34.560Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +284,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun pierces through a tangle of grey clouds, casting sharp shadows on the bustling streets of the Gothic Quarter.. The mood at the Catalunya station is tense, with commuters an"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +298,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, with a drizzling mist that makes the vibrant colors of the city’s facades appear even more saturated.. Commuters at the Plaça de Catalunya train station ar"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.641
+        "freshness_score": 0.639
       }
     }
   ]
