@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-23T22:22:10.737Z",
+    "capturedAt": "2026-04-23T23:24:41.837Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 346
+    "totalItems": 357
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-23T22:22:10.737Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-04-23T23:24:41.837Z",
+      "mood_score": 0.413,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 3,
         "review": 2,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 13,
+        "transport": 23,
         "weather": 1
       },
       "languages": [
@@ -42,28 +42,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: No service between White City and Liverpool Street and SEVERE DELAYS on the rest of the line due to strike"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Part Suspended Central Line: No service between White City and Liverpool Street and SEVERE DELAYS on the rest of the line due to strike"
-        },
-        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take strike action on the following dates and times: U"
         },
         {
           "source_family": "transport",
@@ -79,24 +71,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Suspended Circle Line: No service on the entire line due to strike action."
+          "excerpt": "London transit Central: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take strike action on the following dates and times: U"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Suspended Central Line: No service on the entire line due to strike action."
         }
       ],
       "metadata": {
-        "source_item_count": 64,
-        "average_valence": -0.208,
+        "source_item_count": 74,
+        "average_valence": -0.256,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.96
+        "freshness_score": 0.974
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-23T22:22:10.737Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-23T23:24:41.837Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -116,28 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 6 this morning, and a busker belted out 'I Will Survive' as the driver played air drums. Only in SF do delays come with a"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "If you're coming from Minnesota, I think you'd enjoy: - visiting the Presidio - Chinatown (usually busiest in the morning IME) - if you're a coffee drinker, the local cafe culture "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a slate gray, making the city feel like it’s caught in a moody embrace of fog and mist.. BART riders are congested and restless, with many glancing at thei"
         },
         {
           "source_family": "review",
@@ -154,23 +138,39 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "Pop-up thunderstorms could bring hail, heavy downpours to Bay Area - SFGATE. Pop-up thunderstorms could bring hail, heavy downpours to Bay Area Scattered showers linger across the "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.033,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.832
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-23T22:22:10.737Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-23T23:24:41.837Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -183,6 +183,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -199,6 +200,22 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N8, RE1: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The late autumn sun breaks through a veil of gray clouds, casting a gentle light over the damp pavements.. Despite the recent news of transit strikes, the buses and U-Bahnen are ru"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -213,41 +230,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun blazes through scattered clouds, casting sharp shadows on the damp cobblestones from last night's rain.. The mood on the S-Bahn is tense yet relieved; passengers exchange g"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.03,
+        "source_item_count": 89,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "routine",
           "weather"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.936
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-23T22:22:10.737Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-23T23:24:41.837Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -283,14 +284,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can find a good paella in Gràcia. It's all about the tapas here, and they'll miss the best spots if they ch"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -305,15 +298,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The sun pours down fiercely, mixing warmth with the salty tang of the nearby sea breeze, a stark contrast to the tense atmosphere of the day.. Commuters on the Rodalies are visibly"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "money"
         ],
         "freshness_score": 0.639
       }
