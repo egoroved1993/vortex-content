@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-23T06:50:55.088Z",
+    "capturedAt": "2026-04-23T07:42:41.174Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 336
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-23T06:50:55.088Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-04-23T07:42:41.174Z",
+      "mood_score": 0.465,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -34,6 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -49,6 +50,14 @@
           "excerpt": "I’m your age, left London last year moved to Surrey. For the same rent I have my own flat here (vs living in an HMO back in London). Plus bills though, which I don’t have to worry "
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "Full list of London Underground line delays ahead of second 24-hour strike - London Evening Standard. Full list of London Underground line delays ahead of second 24-hour strike"
+        },
+        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
@@ -57,47 +66,39 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Second Tube strike to impact London from midday - BBC. Second Tube strike to impact London from midday London Tube Drivers’ Strike Halts a Key Line The New York Times London faces "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I’ve spent time in New York, I’ve lived in London for 26 years. I genuinely like both but NYC has over London - you can get a drink after midnight any night of the week, or food. L"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Private rent and house prices, UK: April 2026 - Office for National Statistics. Private rent and house prices, UK: April 2026"
+          "excerpt": "Second Tube strike to impact London from midday - BBC. Second Tube strike to impact London from midday London faces more disruption as second 24-hour tube strike begins The Guardia"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.075,
+        "source_item_count": 55,
+        "average_valence": -0.103,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.903
+        "freshness_score": 0.913
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-23T06:50:55.088Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-23T07:42:41.174Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -128,9 +129,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": 1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork quilt of gray clouds, threatening rain but holding back, while a chilly breeze rustles the autumn leaves swirling around the streets.. With the recent strike"
+          "excerpt": "The air is crisp with a hint of impending rain, and dark clouds loom overhead while scattered sunlight breaks through intermittently.. Despite the recent end of the strikes, many c"
         },
         {
           "source_family": "world",
@@ -159,22 +160,22 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.032,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
-        "freshness_score": 0.94
+        "freshness_score": 0.939
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-23T06:50:55.088Z",
-      "mood_score": 0.344,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-04-23T07:42:41.174Z",
+      "mood_score": 0.503,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
         "review": 2,
@@ -207,45 +208,45 @@
           "excerpt": "I don’t have any points of comparison but I’ve gone to BodySpec in the Marina three times now and have had good experiences (appointment starts on time, friendly people working the"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a cool breeze that carries the faint scent of salt from the bay, making sweaters a necessity this afternoon.. BART platforms are crowded with commuter"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Bay Area storm to bring heavy showers, possible thunderstorms - San Francisco Chronicle. Bay Area storm to bring heavy showers, possible thunderstorms Bay Area weather: Cool temps,"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.016,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "routine"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.826
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-23T06:50:55.088Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-23T07:42:41.174Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -302,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs high in a crisp blue sky, casting warm light on the bustling streets while a light breeze carries the scent of fresh churros from a nearby vendor.. The usually crowde"
+          "excerpt": "The sky hangs heavy with a blanket of gray clouds, hinting at rain that never quite falls, creating a damp chill in the air.. Trains are running with significant delays due to the "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.641
+        "freshness_score": 0.64
       }
     }
   ]
