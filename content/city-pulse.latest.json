@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-23T14:55:10.642Z",
+    "capturedAt": "2026-04-23T15:43:50.981Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 351
+    "totalItems": 353
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-23T14:55:10.642Z",
-      "mood_score": 0.409,
+      "captured_at": "2026-04-23T15:43:50.981Z",
+      "mood_score": 0.404,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 6,
@@ -34,21 +34,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 14,
+        "transport": 15,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays on the entire line due to strike action. Service is operating between Queen's Park and Elep"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,24 +71,32 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays on the entire line due to strike action. Services are operating approximately ev"
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays on the entire line due to strike action. Tube services will finish early tonigh"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays on the entire line due to strike action. Services are operating approximately every 5 minute"
         }
       ],
       "metadata": {
-        "source_item_count": 68,
-        "average_valence": -0.269,
+        "source_item_count": 69,
+        "average_valence": -0.282,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.962
+        "freshness_score": 0.977
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-23T14:55:10.642Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-23T15:43:50.981Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, M5, 100, U2, M4: Delays 8 trips delayed"
+          "excerpt": "Berlin transit M5, 100, 200, 300, 248: Delays 6 trips delayed"
         },
         {
           "source_family": "world",
@@ -154,25 +154,25 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds that occasionally let loose brief showers, lending a damp coolness to the afternoon air.. Despite the recent resumption of services, the bus a"
+          "excerpt": "The sky is a moody gray, punctuated by bursts of sunshine that struggle to break through the clouds, hinting at rain with the smell of wet asphalt lingering in the air.. BVG buses "
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.033,
+        "source_item_count": 93,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.948
+        "freshness_score": 0.944
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-23T14:55:10.642Z",
+      "captured_at": "2026-04-23T15:43:50.981Z",
       "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
@@ -198,7 +198,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Civic Center. Caught a glimpse of a dog lounging on the tracks at Civic Center. Muni's delays are a staple, but a pooch casually blocking the tr"
+          "excerpt": "Muni moments that define this city. Civic Center. Just saw a guy with a pizza box waving Muni down like a taxi at Civic Center. Only in SF do we turn delays into dinner plans."
         },
         {
           "source_family": "forum",
@@ -206,7 +206,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a tutu dancing on the bus as it crawled past the Civic Center. Only in SF do delays inspire performances like that."
+          "excerpt": "Muni moments that define this city. Civic Center. Caught a glimpse of a dog lounging on the tracks at Civic Center. Muni's delays are a staple, but a pooch casually blocking the tr"
         },
         {
           "source_family": "public",
@@ -235,21 +235,21 @@
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.036,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.82
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-23T14:55:10.642Z",
+      "captured_at": "2026-04-23T15:43:50.981Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -306,7 +306,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in the sky, casting warm golden hues across the buildings, while a refreshing breeze carries the salty scent of the nearby sea.. The usually bustling Sants statio"
+          "excerpt": "The sun bathes the streets in a warm golden glow, but a stiff breeze carries a hint of salt from the nearby waves.. The air is thick with impatience as commuters huddle at the Roda"
         }
       ],
       "metadata": {
@@ -314,8 +314,8 @@
         "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.641
       }
