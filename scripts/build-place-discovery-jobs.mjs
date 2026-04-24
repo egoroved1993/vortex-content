@@ -28,6 +28,7 @@ const outPath = args.out
 
 // How many jobs to generate per city per run (targets ~15% of final feed being place messages)
 const MAX_PER_CITY = Number(args["max-per-city"] ?? 6);
+const cityFocus = args["city-focus"] ?? null;
 const seed = args.seed ?? `place-discovery:${new Date().toISOString().slice(0, 10)}`;
 const rand = createSeededRandom(seed);
 
@@ -61,6 +62,7 @@ const eventPlaces = safeReadJson(eventsPath).map((e) => ({
 const allPlaces = shuffle([...fetchedPlaces, ...curatedPlaces, ...eventPlaces], rand);
 const seen = new Set();
 const places = allPlaces.filter((p) => {
+  if (cityFocus && p.cityId !== cityFocus) return false;
   const key = `${p.cityId}:${p.name.toLowerCase().slice(0, 30)}`;
   if (seen.has(key)) return false;
   seen.add(key);

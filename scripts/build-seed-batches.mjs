@@ -37,9 +37,7 @@ const cityFocus = args["city-focus"] ?? null;
 const rand = createSeededRandom(seed);
 const topicPool = buildShuffledPool(listTopicIds(), count, rand);
 const baseCityIds = listCityIds();
-const weightedCityIds = cityFocus
-  ? baseCityIds.flatMap((id) => (id === cityFocus ? [id, id, id] : [id]))
-  : baseCityIds;
+const weightedCityIds = cityFocus ? [cityFocus] : baseCityIds;
 const cityPool = buildShuffledPool(weightedCityIds, count, rand);
 const jobs = [];
 

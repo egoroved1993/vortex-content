@@ -182,9 +182,16 @@ jobs:
         run: |
           set -euo pipefail
           # Build 6 place-discovery jobs per city (24 total) — targets ~15% of final feed
-          node scripts/build-place-discovery-jobs.mjs \
-            --max-per-city 6 \
+          PLACE_ARGS=(
+            --max-per-city 6
             --out content/place-discovery-jobs.json
+          )
+
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            PLACE_ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+
+          node scripts/build-place-discovery-jobs.mjs "${PLACE_ARGS[@]}"
 
           node scripts/generate-seed-candidates.mjs \
             --input content/place-discovery-jobs.json \
@@ -204,6 +211,8 @@ jobs:
             --min-mindprint 1 \
             --min-ambiguity 1 \
             --min-composite-score 1 \
+            --max-per-city 2 \
+            --max-total 8 \
             --reviewer-buckets ship_now,strong_candidate,candidate
 
           # Upload to Supabase
@@ -221,10 +230,17 @@ jobs:
           # Build 16 launch jobs (4 per city) for Russian-only generation
           # Target: add ~10 Russian messages to the main pipeline's existing ~15-20% ru
           # to keep total Russian share under 30% across the full content mix.
-          node scripts/build-seed-batches.mjs \
-            --count 16 \
-            --seed "russian-${GITHUB_RUN_ID}" \
+          RUSSIAN_ARGS=(
+            --count 16
+            --seed "russian-${GITHUB_RUN_ID}"
             --out content/russian-jobs.json
+          )
+
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            RUSSIAN_ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+
+          node scripts/build-seed-batches.mjs "${RUSSIAN_ARGS[@]}"
 
           # Generate with Claude + forced Russian language
           node scripts/generate-seed-candidates.mjs \
