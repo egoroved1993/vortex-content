@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T01:43:21.548Z",
+    "capturedAt": "2026-04-24T03:15:55.920Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,8 +20,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T01:43:21.548Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-04-24T03:15:55.920Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around transit, general, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -41,14 +41,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "Full list of London Underground line delays as second 24-hour strike hits - London Evening Standard. Full list of London Underground line delays as second 24-hour strike hits"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -80,25 +72,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Circle: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take strike action on the following dates and times: U"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take strike action on the following dates and times: U"
         }
       ],
       "metadata": {
         "source_item_count": 64,
-        "average_valence": -0.19,
+        "average_valence": -0.178,
         "dominant_themes": [
           "transit",
           "general",
           "weather"
         ],
-        "freshness_score": 0.946
+        "freshness_score": 0.943
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T01:43:21.548Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-24T03:15:55.920Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -142,12 +142,12 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The clouds hang low like a thick quilt, muffling the city’s sounds while an occasional drizzle brings a glistening sheen to the pavements.. Despite the BVG services resuming, a sli"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Yes, prom dress. Or at least something close to it, like a bride's maid dress. Abiball and weddings are times an approx 18-year-old girl wears formal wear. At Abiball the boys are "
         },
         {
           "source_family": "public",
@@ -155,7 +155,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Yes, prom dress. Or at least something close to it, like a bride's maid dress. Abiball and weddings are times an approx 18-year-old girl wears formal wear. At Abiball the boys are "
+          "excerpt": "And despite this, the only image that will go viral on Twitter is that image from 2017 that shows Germany‘s GDP per capita would be higher if you removed Berlin… Meanwhile, Berlin‘"
         }
       ],
       "metadata": {
@@ -164,15 +164,15 @@
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
         "freshness_score": 0.936
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T01:43:21.548Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-24T03:15:55.920Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -197,7 +197,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from here when they know not to freak out over a BART delay but still curse under their breath whi"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local if they don't flinch at the Muni delays but get mad if you talk trash about the burritos."
         },
         {
           "source_family": "review",
@@ -206,14 +206,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Pop-up thunderstorms could bring hail, heavy downpours to Bay Area - SFGATE. Pop-up thunderstorms could bring hail, heavy downpours to Bay Area Scattered showers linger across the "
         },
         {
           "source_family": "news",
@@ -230,25 +222,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S. - KTVU. San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S."
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.036,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.823
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T01:43:21.548Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-24T03:15:55.920Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,6 +284,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are gray, heavy with low-hanging clouds, threatening rain while a cool breeze tousles hair and rustles leaves.. Train platforms are bustling with frustrated commuters, th"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -298,25 +306,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.638
+        "freshness_score": 0.639
       }
     }
   ]
