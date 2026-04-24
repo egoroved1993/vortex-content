@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T13:40:00.937Z",
+    "capturedAt": "2026-04-24T14:41:54.982Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,16 +15,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 347
+    "totalItems": 345
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T13:40:00.937Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-04-24T14:41:54.982Z",
+      "mood_score": 0.402,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
         "review": 2,
@@ -47,7 +47,23 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays clockwise due to strike action. NO SERVICE on the line due to strike action."
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to earlier strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to strike action."
         },
         {
           "source_family": "transport",
@@ -63,40 +79,24 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays on the entire line due to strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays on the entire line due to strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays on the entire line due to strike action."
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays on the entire line due to strike action."
         }
       ],
       "metadata": {
         "source_item_count": 62,
-        "average_valence": -0.209,
+        "average_valence": -0.287,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.946
+        "freshness_score": 0.957
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T13:40:00.937Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-24T14:41:54.982Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -127,12 +126,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, 100: Delays 2 trips delayed"
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. When I saw a busker playing accordion to a crowd of joggers at Tempelhofer Feld. That blend of chaos and calm felt like home."
         },
         {
           "source_family": "public",
@@ -160,20 +159,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.042,
+        "source_item_count": 91,
+        "average_valence": -0.05,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.923
+        "freshness_score": 0.927
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T13:40:00.937Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-04-24T14:41:54.982Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -193,20 +192,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy with an accordion serenading Muni riders at the Civic Center stop, completely oblivious to the chaos from the BART delays."
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell a true local by their confidence in navigating BART chaos—if they’re calmly checking the app fo"
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of gray clouds hangs low, threatening rain as the chill from the bay seeps into the streets.. With BART delays causing frustration, commuters crowd platforms, glancin"
         },
         {
           "source_family": "review",
@@ -217,12 +208,12 @@
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "The skies are a heavy gray, with a chill that slices through the usual vibrant San Francisco afternoon warmth.. Amidst the swirling fog, BART stations are a mix of frustration and "
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         },
         {
           "source_family": "news",
@@ -230,12 +221,20 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.068,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
@@ -246,7 +245,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T13:40:00.937Z",
+      "captured_at": "2026-04-24T14:41:54.982Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
@@ -317,7 +316,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.637
+        "freshness_score": 0.639
       }
     }
   ]
