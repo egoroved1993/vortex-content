@@ -602,6 +602,24 @@ function looksPipelineSeam(content, contentLower, cityId) {
     "yougov",
     "mrp",
     "charity became independent from its nhs trust",
+    "local vibe",
+    "vibe's",
+    "rite of passage",
+    "shared moment",
+    "collective breath",
+    "warmth from each other",
+    "in on a secret",
+    "morning therapy",
+    "true fan",
+    "outlast in a bar fight",
+    "creeping into my daily grind",
+    "to feel human",
+    "playing their part",
+    "envy how locals",
+    "figuring out the present",
+    "makes me wonder why",
+    "last to find out",
+    "crave warmth from each other",
     "ai safety talk",
     "felt like a performance",
     "emotional post online feels like a performance",
@@ -624,7 +642,7 @@ function looksTruncatedOutput(content, contentLower) {
 
   if (hasUnbalancedQuotes(trimmed)) return true;
   if (/\b(one said|someone said|he said|she said|they said),?\s+['"][^'"]*$/i.test(trimmed)) return true;
-  if (/\b(and|but|because|while|with|to|in|as if|if|when|where|than|that|another|still|already)$/i.test(trimmed)) return true;
+  if (/\b(and|but|because|while|with|to|in|as if|if|when|where|than|that|another|still|already|was|were|is|are|like)$/i.test(trimmed)) return true;
   if (/\b(foreca|contro)\b/i.test(trimmed)) return true;
 
   const incompletePlaceCopy = [
