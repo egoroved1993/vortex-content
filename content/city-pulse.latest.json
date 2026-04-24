@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T12:33:49.589Z",
+    "capturedAt": "2026-04-24T13:40:00.937Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,7 +20,7 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T12:33:49.589Z",
+      "captured_at": "2026-04-24T13:40:00.937Z",
       "mood_score": 0.429,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 14,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
@@ -47,7 +47,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays on the entire line due to strike action."
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays clockwise due to strike action. NO SERVICE on the line due to strike action."
         },
         {
           "source_family": "transport",
@@ -71,7 +71,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays on the entire line due to strike action."
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays on the entire line due to strike action."
         },
         {
           "source_family": "transport",
@@ -83,7 +83,7 @@
         }
       ],
       "metadata": {
-        "source_item_count": 64,
+        "source_item_count": 62,
         "average_valence": -0.209,
         "dominant_themes": [
           "general",
@@ -95,8 +95,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T12:33:49.589Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-24T13:40:00.937Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -124,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, 100: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -148,31 +157,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The skies are a mix of gray clouds and sporadic sunshine, casting a patchwork of light over the damp streets.. After days of uncertainty, the U-Bahnen and buses are finally moving "
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.03,
+        "source_item_count": 93,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.92
+        "freshness_score": 0.923
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T12:33:49.589Z",
-      "mood_score": 0.467,
+      "captured_at": "2026-04-24T13:40:00.937Z",
+      "mood_score": 0.477,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -203,25 +204,9 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local if they’ll complain about a BART delay but still ride the 49 with a smile, not batting an eye "
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell a true local by their confidence in navigating BART chaos—if they’re calmly checking the app fo"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, but the air feels cool and crisp with a hint of saltiness from the bay.. BART stations are packed with commuters, the"
         },
         {
           "source_family": "review",
@@ -230,23 +215,39 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a heavy gray, with a chill that slices through the usual vibrant San Francisco afternoon warmth.. Amidst the swirling fog, BART stations are a mix of frustration and "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.098,
+        "average_valence": -0.068,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T12:33:49.589Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-24T13:40:00.937Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -300,23 +301,23 @@
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, releasing a steady drizzle that paints the streets and brightens the colors of graffiti and old stone alike.. The platforms at Plaça Catalunya are abuzz wi"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.64
+        "freshness_score": 0.637
       }
     }
   ]
