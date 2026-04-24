@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T20:23:04.043Z",
+    "capturedAt": "2026-04-24T21:24:00.587Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 344
+    "totalItems": 342
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T20:23:04.043Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-04-24T21:24:00.587Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -34,21 +34,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to earlier strike action."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -80,23 +72,31 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: No service between Rayners Lane and Uxbridge and SEVERE DELAYS between Acton Town and Rayners Lane due"
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.177,
+        "source_item_count": 56,
+        "average_valence": -0.191,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.935
+        "freshness_score": 0.93
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T20:23:04.043Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-04-24T21:24:00.587Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,7 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -140,15 +140,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S3, 300: Delays 3 trips delayed"
         },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.72,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sky is a patchwork of gray clouds, with the occasional beam of sunlight breaking through, casting a spotlight on the wet pavement.. A sense of relief washes over the "
+          "excerpt": "The sky is a patchwork of grey clouds, intermittently released drizzle that makes the pavements glisten under the muted autumn light.. With the recent strike now over, there's a ca"
         },
         {
           "source_family": "world",
@@ -160,20 +160,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 94,
+        "source_item_count": 93,
         "average_valence": -0.054,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.947
+        "freshness_score": 0.944
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T20:23:04.043Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-24T21:24:00.587Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -222,7 +222,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         },
         {
           "source_family": "news",
@@ -230,26 +230,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+          "excerpt": "San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S. - KTVU. San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S."
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.027,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.838
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T20:23:04.043Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-24T21:24:00.587Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -293,12 +293,12 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The air feels heavy with a mix of humidity and the scent of rain, as dark clouds loom overhead but the sun fights to break through.. Trains are running late, and the commuters at P"
+          "source_family": "social",
+          "source_origin": "telegram_group",
+          "language": "ru",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
         },
         {
           "source_family": "social",
@@ -306,16 +306,16 @@
           "language": "ru",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
+          "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.034,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "transit"
         ],
         "freshness_score": 0.64
       }
