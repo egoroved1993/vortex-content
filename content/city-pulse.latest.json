@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T10:40:17.502Z",
+    "capturedAt": "2026-04-24T11:32:16.767Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 350
+    "totalItems": 351
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T10:40:17.502Z",
-      "mood_score": 0.439,
+      "captured_at": "2026-04-24T11:32:16.767Z",
+      "mood_score": 0.431,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 14,
+        "transport": 15,
         "weather": 1
       },
       "languages": [
@@ -47,7 +47,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays on the entire line due to strike action."
+          "excerpt": "London transit District: Severe Delays District Line: No service between Parsons Green and Wimbledon while we fix a signal failure at East Putney. SEVERE DELAY"
         },
         {
           "source_family": "transport",
@@ -71,7 +71,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays on the entire line due to strike action."
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays on the entire line due to strike action."
         },
         {
           "source_family": "news",
@@ -79,26 +79,26 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "Tube strikes latest: Circle line suspended as walkout disrupts London transport - BBC. Tube strikes latest: Circle line suspended as walkout disrupts London transport London faces "
+          "excerpt": "Tube strikes latest: Second walkout comes to an end but travel disruption continues - BBC. Tube strikes latest: Second walkout comes to an end but travel disruption continues Londo"
         }
       ],
       "metadata": {
-        "source_item_count": 63,
-        "average_valence": -0.179,
+        "source_item_count": 64,
+        "average_valence": -0.202,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.954
+        "freshness_score": 0.952
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T10:40:17.502Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-24T11:32:16.767Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -154,26 +154,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of grey and sporadic blue, with the crisp autumn air carrying hints of fallen leaves and distant coffee roasting.. People are cautiously boarding trams with "
+          "excerpt": "The sky is overcast, casting a muted gray hue over the bustling streets, with a light drizzle intermittently draping a sheen across the pavement.. With the recent strike disruption"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.031,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.918
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T10:40:17.502Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-24T11:32:16.767Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -192,6 +192,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local if they’ll complain about a BART delay but still ride the 49 with a smile, not batting an eye "
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -217,14 +225,6 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Caught a glimpse of a kid using an old Muni transfer as a fan, the kind that should've been thrown out ages ago. Just another day in"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a thick blanket of gray, drizzling intermittently, making the pavement shimmer underfoot.. BART platforms are unusually crowded as frustrated commuters huddle together, "
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -235,19 +235,19 @@
       ],
       "metadata": {
         "source_item_count": 60,
-        "average_valence": -0.045,
+        "average_valence": -0.056,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T10:40:17.502Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-24T11:32:16.767Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Overcast skies blanket the city, with a light drizzle creating a rhythmic patter on the pavement, cooling the afternoon air.. The mood on the metro is tense, as commuters exchange "
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a patchwork of grey clouds, occasionally letting the sun break through, casting a warm glow on the damp streets after last night's rain.. The mood on the Metro is strain"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.639
+        "freshness_score": 0.644
       }
     }
   ]
