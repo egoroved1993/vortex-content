@@ -9,7 +9,7 @@ on:
       count:
         description: "Total mixed job count before generation"
         required: false
-        default: "240"
+        default: "480"
       model:
         description: "Model to use (e.g. gpt-4o-mini, grok-3-fast, claude-haiku-4-5-20251001)"
         required: false
@@ -83,7 +83,7 @@ jobs:
               4) SCHED_PROVIDER=anthropic; SCHED_MODEL=claude-haiku-4-5-20251001 ;;
             esac
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
-            echo "count=240" >> "$GITHUB_OUTPUT"
+            echo "count=480" >> "$GITHUB_OUTPUT"
             echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
             echo "upload=true" >> "$GITHUB_OUTPUT"
             echo "mix=launch,public,review,forum,signals,news,social,world,bridge" >> "$GITHUB_OUTPUT"
@@ -101,7 +101,7 @@ jobs:
               MANUAL_PROVIDER=openai
             fi
             echo "provider=${MANUAL_PROVIDER}" >> "$GITHUB_OUTPUT"
-            echo "count=${{ inputs.count || '240' }}" >> "$GITHUB_OUTPUT"
+            echo "count=${{ inputs.count || '480' }}" >> "$GITHUB_OUTPUT"
             echo "model=${MANUAL_MODEL}" >> "$GITHUB_OUTPUT"
             echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
             echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social,world,bridge' }}" >> "$GITHUB_OUTPUT"

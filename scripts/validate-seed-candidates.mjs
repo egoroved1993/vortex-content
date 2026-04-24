@@ -60,9 +60,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
       /\b(i|i’m|i'd|i’ve|me|my|mine|we|our|yo|me|mi|mis|mio|mía|nosotros|nuestra|jo|em|mi|meu|meva|nosaltres|ich|mir|mein|meine|wir)\b/i.test(content) ||
       hasCyrillicFirstPerson,
     implicitFirstPerson:
-      /^[\s"'“”]*(?:(?:this morning|this afternoon|today|tonight|hoy|avui|heute)[,\s]+)?(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost|waiting|waited|caught|catching)\b/i.test(
-        content
-      ),
+      /^[\s"'“”]*(?:(?:this morning|this afternoon|today|tonight|hoy|avui|heute)[,\s]+)?(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost|waiting|waited|caught|catching)\b/i.test(content) ||
+      /^[\s"'“”]*(?:otra mañana|hoy|avui|aquesta matinada|esta mañana)[,\s]+(?:escuchando|viendo|mirando|esperando|pagando|buscando|sentint|veient|mirant|esperant|pagant)\b/i.test(content),
     dialogue: /[“’””«»]/.test(content) || /\bsaid\b/i.test(content),
     detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|каталан|каталан|барселон|шум|miete|l3|очеред|дождь|туман|кофе|автобус|метро|турист|чемодан|кухн|холодильник|официант|сосед|велосипед|граффити|двор|бабушка|местные|аренд|хозяин|еда|толпа|деньги)/i.test(content),
     anchor:
@@ -566,6 +565,27 @@ function looksPipelineSeam(content, contentLower, cityId) {
     "can anyone just be real anymore",
     "it hit differently today",
     "everyone loves safe ai until",
+    "safe ai",
+    "ai safety",
+    "pr filter",
+    "can't help but",
+    "can’t help but",
+    "waiting for applause",
+    "launch date gets pushed back",
+    "ordinary disappointment",
+    "premium pricing for ordinary disappointment",
+    "silent protest against premium pricing",
+    "small act of defiance against",
+    "language slip can feel like a downpour",
+    "airport lounge",
+    "airport vibe",
+    "baggage fees",
+    "one more platform change",
+    "travel feels like endless admin",
+    "sidewalk energy is low",
+    "hunkering down instead of hitting the bars",
+    "i just found out that in",
+    "the air is thick with",
     "ai safety talk",
     "felt like a performance",
     "emotional post online feels like a performance",
@@ -577,6 +597,7 @@ function looksPipelineSeam(content, contentLower, cityId) {
     "сидю",
   ];
   if (generatedTrendFragments.some((fragment) => contentLower.includes(fragment))) return true;
+  if (/\bit hit me[—,\s-]/i.test(content)) return true;
 
   return endsWithCityLabel(trimmed, cityId);
 }
@@ -585,8 +606,9 @@ function looksTruncatedOutput(content, contentLower) {
   const trimmed = content.trim();
   if (!trimmed) return false;
 
+  if (hasUnbalancedQuotes(trimmed)) return true;
   if (/\b(one said|someone said|he said|she said|they said),?\s+['"][^'"]*$/i.test(trimmed)) return true;
-  if (/\b(and|but|because|while|with|to|in|as if|if|when|where|than|that|another)$/i.test(trimmed)) return true;
+  if (/\b(and|but|because|while|with|to|in|as if|if|when|where|than|that|another|still|already)$/i.test(trimmed)) return true;
   if (/\b(foreca|contro)\b/i.test(trimmed)) return true;
 
   const incompletePlaceCopy = [
@@ -596,6 +618,17 @@ function looksTruncatedOutput(content, contentLower) {
     "in another",
   ];
   return incompletePlaceCopy.some((fragment) => contentLower.endsWith(fragment));
+}
+
+function hasUnbalancedQuotes(content) {
+  const straightDouble = (content.match(/"/g) ?? []).length;
+  if (straightDouble % 2 !== 0) return true;
+
+  const leftDouble = (content.match(/[“«]/g) ?? []).length;
+  const rightDouble = (content.match(/[”»]/g) ?? []).length;
+  if (leftDouble !== rightDouble) return true;
+
+  return false;
 }
 
 function endsWithCityLabel(content, cityId) {
