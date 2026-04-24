@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T11:32:16.767Z",
+    "capturedAt": "2026-04-24T12:33:49.589Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 351
+    "totalItems": 347
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T11:32:16.767Z",
-      "mood_score": 0.431,
+      "captured_at": "2026-04-24T12:33:49.589Z",
+      "mood_score": 0.429,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 15,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
@@ -47,7 +47,23 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: No service between Parsons Green and Wimbledon while we fix a signal failure at East Putney. SEVERE DELAY"
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays on the entire line due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays on the entire line due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays on the entire line due to strike action."
         },
         {
           "source_family": "transport",
@@ -64,44 +80,28 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays on the entire line due to strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays on the entire line due to strike action."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "Tube strikes latest: Second walkout comes to an end but travel disruption continues - BBC. Tube strikes latest: Second walkout comes to an end but travel disruption continues Londo"
         }
       ],
       "metadata": {
         "source_item_count": 64,
-        "average_valence": -0.202,
+        "average_valence": -0.209,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.952
+        "freshness_score": 0.946
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T11:32:16.767Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-24T12:33:49.589Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,12 +126,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "Don't worry — you are safe and in compliance with German law, even in 'poor but sexy' Berlin. Between 10pm and 6am, silence must be observed. Period. If your neighbour is still mak"
         },
         {
           "source_family": "world",
@@ -154,31 +153,31 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is overcast, casting a muted gray hue over the bustling streets, with a light drizzle intermittently draping a sheen across the pavement.. With the recent strike disruption"
+          "excerpt": "The skies are a mix of gray clouds and sporadic sunshine, casting a patchwork of light over the damp streets.. After days of uncertainty, the U-Bahnen and buses are finally moving "
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.039,
+        "source_item_count": 91,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
-          "weather"
+          "transit"
         ],
         "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T11:32:16.767Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-04-24T12:33:49.589Z",
+      "mood_score": 0.467,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,31 +197,31 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local if they’ll complain about a BART delay but still ride the 49 with a smile, not batting an eye "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I remember hosting an open house when I lived in a penthouse in Oakland. Approximately forty people showed up, and some brought gifts such as wine. It was bizarre. This happened in"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "My dudes just get out of the train and mob these trucks. You had 4 Munis worth of angry people to scare them away. SFMTA tickets won’t make the trains be on time, will just make th"
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy with an accordion serenading Muni riders at the Civic Center stop, completely oblivious to the chaos from the BART delays."
         },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": 0.5,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught a glimpse of a kid using an old Muni transfer as a fan, the kind that should've been thrown out ages ago. Just another day in"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local if they’ll complain about a BART delay but still ride the 49 with a smile, not batting an eye "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell a true local by their confidence in navigating BART chaos—if they’re calmly checking the app fo"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, but the air feels cool and crisp with a hint of saltiness from the bay.. BART stations are packed with commuters, the"
         },
         {
           "source_family": "review",
@@ -234,22 +233,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.056,
+        "source_item_count": 55,
+        "average_valence": -0.098,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.829
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T11:32:16.767Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-24T12:33:49.589Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of grey clouds, occasionally letting the sun break through, casting a warm glow on the damp streets after last night's rain.. The mood on the Metro is strain"
+          "excerpt": "The sky is a slate gray, releasing a steady drizzle that paints the streets and brightens the colors of graffiti and old stone alike.. The platforms at Plaça Catalunya are abuzz wi"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.644
+        "freshness_score": 0.64
       }
     }
   ]
