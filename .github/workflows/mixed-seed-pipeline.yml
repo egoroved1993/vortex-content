@@ -163,17 +163,29 @@ jobs:
           fi
 
           if [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
-            ARGS+=( --upload --upload-city-pulse )
+            ARGS+=( --upload --upload-city-pulse --upload-state content/pipeline-upload-state.json )
           fi
 
           if [ "${{ inputs.expire_existing }}" = "true" ] && [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
-            ARGS+=( --expire-existing )
+            ARGS+=( --expire-existing --min-upload-total 60 --min-upload-per-city 12 )
           fi
 
           node scripts/run-seed-pipeline.mjs "${ARGS[@]}"
 
+      - name: Read main upload state
+        id: main_upload_state
+        if: always()
+        shell: bash
+        run: |
+          if [ -f content/pipeline-upload-state.json ]; then
+            node -e "const fs=require('fs'); const state=JSON.parse(fs.readFileSync('content/pipeline-upload-state.json','utf8')); console.log(JSON.stringify(state,null,2)); console.log('main_uploaded=' + (state.uploadedMain ? 'true' : 'false'));" | tee /tmp/pipeline-upload-state.log
+            grep '^main_uploaded=' /tmp/pipeline-upload-state.log >> "$GITHUB_OUTPUT"
+          else
+            echo "main_uploaded=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Run place-discovery pipeline
-        if: ${{ steps.cfg.outputs.upload == 'true' }}
+        if: ${{ steps.cfg.outputs.upload == 'true' && (inputs.expire_existing != true || steps.main_upload_state.outputs.main_uploaded == 'true') }}
         continue-on-error: true
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
@@ -220,7 +232,7 @@ jobs:
             --input content/place-discovery-payload.json
 
       - name: Generate Russian content via Claude
-        if: ${{ steps.cfg.outputs.upload == 'true' && env.ANTHROPIC_API_KEY != '' }}
+        if: ${{ steps.cfg.outputs.upload == 'true' && env.ANTHROPIC_API_KEY != '' && (inputs.expire_existing != true || steps.main_upload_state.outputs.main_uploaded == 'true') }}
         env:
           MODEL_NAME: claude-haiku-4-5-20251001
           MODEL_PROVIDER: anthropic
@@ -300,6 +312,7 @@ jobs:
             content/pipeline-candidates.json
             content/pipeline-candidates.report.json
             content/pipeline-payload.json
+            content/pipeline-upload-state.json
             content/city-pulse.latest.json
             content/place-discovery-jobs.json
             content/place-discovery-candidates.json

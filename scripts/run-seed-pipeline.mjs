@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { detectProjectRoot, resolveProjectPath } from "./path-utils.mjs";
+import { cities } from "./seed-config.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const projectRoot = detectProjectRoot();
@@ -19,6 +20,7 @@ const candidatesPath = args.candidates ? path.resolve(process.cwd(), args.candid
 const reportPath = args.report ? path.resolve(process.cwd(), args.report) : resolveProjectPath("content", "pipeline-candidates.report.json");
 const payloadPath = args.payload ? path.resolve(process.cwd(), args.payload) : resolveProjectPath("content", "pipeline-payload.json");
 const cityPulsePath = args["city-pulse-out"] ? path.resolve(process.cwd(), args["city-pulse-out"]) : resolveProjectPath("content", "city-pulse.latest.json");
+const uploadStatePath = args["upload-state"] ? path.resolve(process.cwd(), args["upload-state"]) : null;
 runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
   "--out",
   cityPulsePath,
@@ -92,19 +94,39 @@ const payload = readJson(payloadPath);
 const payloadRows = Array.isArray(payload.rows) ? payload.rows : [];
 
 const expireExisting = Boolean(args["expire-existing"]);
+const minUploadTotal = Number(args["min-upload-total"] ?? 1);
+const minUploadPerCity = Number(args["min-upload-per-city"] ?? 0);
+const cityCounts = countBy(payloadRows, (row) => row.city_id ?? row.cityId ?? "unknown");
+const uploadState = {
+  attempted: upload,
+  uploadedMain: false,
+  reason: upload ? "not_started" : "dry_run",
+  payloadRows: payloadRows.length,
+  cityCounts,
+};
 
 if (upload) {
   if (payloadRows.length > 0) {
-    if (expireExisting) {
-      runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), []);
+    const minimums = checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity });
+    if (expireExisting && !minimums.ok) {
+      uploadState.reason = minimums.reason;
+      console.warn(`Prepared payload did not meet replacement minimums (${minimums.reason}); keeping current generated feed in place and skipping main upload`);
+    } else {
+      if (expireExisting) {
+        runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), []);
+      }
+      runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
+        "--input",
+        payloadPath,
+      ]);
+      uploadState.uploadedMain = true;
+      uploadState.reason = "uploaded";
     }
-    runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
-      "--input",
-      payloadPath,
-    ]);
   } else {
+    uploadState.reason = "empty_payload";
     console.warn("Prepared payload is empty; keeping current generated feed in place and skipping upload");
   }
+  writeUploadState(uploadStatePath, uploadState);
   if (Boolean(args["upload-city-pulse"])) {
     runNode(path.join(projectRoot, "scripts", "upload-city-pulse-payload.mjs"), [
       "--input",
@@ -122,6 +144,7 @@ if (upload) {
     cityPulsePath,
     "--dry-run",
   ]);
+  writeUploadState(uploadStatePath, uploadState);
 }
 
 console.log("Seed pipeline finished");
@@ -167,6 +190,37 @@ function runNode(scriptPath, scriptArgs) {
   if (result.status !== 0) {
     process.exit(result.status ?? 1);
   }
+}
+
+function checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity }) {
+  if (payloadRows.length < minUploadTotal) {
+    return { ok: false, reason: `total_below_min:${payloadRows.length}/${minUploadTotal}` };
+  }
+
+  if (minUploadPerCity > 0) {
+    const expectedCities = cities.map((city) => city.id);
+    const lowCity = expectedCities.find((cityId) => (cityCounts[cityId] ?? 0) < minUploadPerCity);
+    if (lowCity) {
+      return { ok: false, reason: `city_below_min:${lowCity}:${cityCounts[lowCity] ?? 0}/${minUploadPerCity}` };
+    }
+  }
+
+  return { ok: true, reason: "ok" };
+}
+
+function writeUploadState(filePath, state) {
+  if (!filePath) return;
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, `${JSON.stringify(state, null, 2)}\n`);
+  console.log(`Wrote upload state to ${filePath}`);
+}
+
+function countBy(items, getKey) {
+  return items.reduce((acc, item) => {
+    const key = getKey(item);
+    acc[key] = (acc[key] ?? 0) + 1;
+    return acc;
+  }, {});
 }
 
 
