@@ -1,17 +1,17 @@
 export const launchMix = {
   defaultCount: 320,
   lanes: {
-    micro_moment: 0.55,
-    mind_post: 0.45,
+    micro_moment: 0.72,
+    mind_post: 0.28,
   },
   gameSources: {
     human: 0.5,
     ai: 0.5,
   },
   sourceProfiles: {
-    ambiguous: 0.45,
-    human_like: 0.45,
-    slightly_too_clean: 0.1,
+    ambiguous: 0.35,
+    human_like: 0.62,
+    slightly_too_clean: 0.03,
   },
   readReasons: {
     weird_observation: 0.18,
@@ -92,7 +92,7 @@ export const sourceProfiles = {
     id: "slightly_too_clean",
     label: "Slightly Too Clean",
     guidance:
-      "Let the writing feel almost too neatly observed or structured, but ground it with one real detail so it does not become obvious AI.",
+      "Keep the writing controlled and compact, but do not make it elegant, essay-like, or neatly resolved.",
   },
 };
 
@@ -107,7 +107,7 @@ export const contentLanes = {
     id: "mind_post",
     label: "Mind Post",
     guidance:
-      "The message should feel like a compact public thought: a take, mini-theory, complaint with a thesis, or social diagnosis written by someone with a strong angle.",
+      "The message should feel like a compact public thought attached to one concrete scene, object, route, price, or overheard line.",
   },
 };
 
@@ -167,7 +167,7 @@ export const textures = [
   },
   {
     id: "polished_but_local",
-    guidance: "The text reads almost too elegant, but a local detail keeps it alive.",
+    guidance: "The text is controlled but plain. A local detail carries it; no elegance, metaphor, or tidy lesson.",
     fits: ["slightly_too_clean", "ambiguous"],
   },
   {
@@ -1027,8 +1027,8 @@ export function buildPrompt(job) {
           `Content lane: ${lane.label}. ${lane.guidance}`,
           `Mind-post format: ${job.formatLabel}. ${job.formatDescription}`,
           `Mind-post shape: ${job.formatPromptShape}`,
-          "Write like someone thinking in public with a clear angle, not like a polished essay.",
-          "A thesis, irritation, ranking, mini-theory, or diagnosis is welcome if it still feels like a person, not a pundit.",
+          "Write like someone thinking in public from one concrete thing they saw, heard, paid for, missed, carried, or misread.",
+          "If there is a thesis, irritation, ranking, or mini-theory, it must stay attached to that concrete thing and stop before becoming a pundit take.",
         ]
       : [
           `Content lane: ${lane.label}. ${lane.guidance}`,
@@ -1065,11 +1065,12 @@ export function buildPrompt(job) {
     "Prefer a messier stop over a clever final sentence.",
     "Do not write urban poetry, postcard copy, or a polished mini-essay.",
     "Hard ban: do not use vibe, energy, feels like, realized, therapy, human, rite of passage, shared moment, collective breath, in on a secret, true fan, TED Talk, warmth, belonging, or softens the chaos.",
+    "Hard ban: no classic-[city] move/ritual, romantic comedy, expensive city, different planet, small win, badge of honor, small failure, or tourists-and-prices closer.",
     "Do not explain whether the speaker belongs. Show one concrete action, price, overheard line, route, object, or mistake instead.",
     "No rhetorical questions and no clean little moral at the end.",
     "Avoid generic closers and avoid resolving the thought too perfectly.",
     "Make it plausible that a smart user could argue both human and AI.",
-    "CRITICAL: The content field must be 60–240 characters. Do not exceed 240 characters. One to three sentences max.",
+    "CRITICAL: The content field must be 50-220 characters. Do not exceed 220 characters. One to three sentences max. Finish the grammar; no dangling clause.",
     "Return only JSON with keys: content, why_human, why_ai, read_value_hook, sentiment, detected_language.",
   ].join("\n");
 }

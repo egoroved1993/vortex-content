@@ -329,7 +329,8 @@ async function fetchWithRetry(fn, maxRetries = 5) {
         err.cause?.code === "ECONNREFUSED" ||
         err.cause?.code === "UND_ERR_HEADERS_TIMEOUT" ||
         err.cause?.code === "UND_ERR_CONNECT_TIMEOUT" ||
-        err.message?.includes("fetch failed");
+        err.message?.includes("fetch failed") ||
+        /\b(OpenAI|Anthropic|XAI) error (408|409|429|500|502|503|504)\b/i.test(err.message ?? "");
       if (attempt < maxRetries - 1 && isRetryable) {
         const delay = 2000 * Math.pow(2, attempt);
         await sleep(delay);
@@ -501,9 +502,9 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
 
   // Assign a random length mode to this message for diversity
   const lengthModes = [
-    { id: "short", weight: 0.2, guidance: "Write a SHORT punchy message (30-80 characters). Like a quick text: one reaction, one detail, done." },
-    { id: "medium", weight: 0.55, guidance: "Write a medium-length message (80-200 characters). A quick observation with one concrete detail." },
-    { id: "long", weight: 0.25, guidance: "Write a LONGER message (200-400 characters). A mini-story or a scene with 2-3 sentences. More detail, more texture." },
+    { id: "short", weight: 0.25, guidance: "Write a SHORT punchy message (45-90 characters). Like a quick text: one reaction, one detail, done." },
+    { id: "medium", weight: 0.6, guidance: "Write a medium-length message (90-170 characters). A quick observation with one concrete detail." },
+    { id: "long", weight: 0.15, guidance: "Write a longer message (150-220 characters). A mini-scene with 2 sentences max. More detail, no essay." },
   ];
   const lengthTotal = lengthModes.reduce((s, m) => s + m.weight, 0);
   let lengthRoll = Math.random() * lengthTotal;
@@ -527,6 +528,8 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   base += "\n- BANNED: movie/TV/book reviews or reactions unless tied to a specific named city venue (cinema, bookshop, screening).";
   base += "\n- BANNED: home appliance, tech gadget, or work-from-home observations with no city grounding.";
   base += "\n- BANNED: 'wandered through X and felt...' with no concrete named element following.";
+  base += "\n- BANNED: synthetic closers like 'classic [city] move', 'expensive city', 'romantic comedy', 'different planet', 'small win', 'badge of honor', 'small failure', or 'tourists and prices'.";
+  base += "\n- BANNED: dangling endings. If the last words are 'who's', 'he looked', 'she looked', 'it felt', 'I tried', 'they said', or any unfinished clause, the message fails.";
   base += "\n- REQUIRED: every message must contain at least one hyper-specific local anchor — a street name, venue name, person, product, or current event. Generic city observations with no specific anchor are rejected.";
 
   return base;
@@ -558,15 +561,15 @@ Examples of your voice (city-agnostic):
 - "rent went up €200 and they added a 'smart lock' to the building. revolutionary."
 Do NOT soften. Do NOT add a reflection at the end. Do NOT perform depth.`;
   }
-  // gpt-4o-mini → миллениал-экспат, тренд-хантер
+  // gpt-4o-mini → under-edited group-chat note
   if (providerHint === "openai" && modelName === "gpt-4o-mini") {
     return `CHARACTER VOICE — this is non-negotiable and overrides any neutral tone you default to.
-You are a millennial expat who moved to this city 2-3 years ago. You track every trend obsessively — new neighborhoods, openings, cultural shifts. You compare this city to places you've lived before (Berlin, London, Amsterdam, wherever fits the city). You notice what's changing before locals do and can't stop talking about it. Slightly overwhelmed, fully energized.
+You write like a tired group-chat person making one city note before they forget it. Under-edited, concrete, a little judgmental, not poetic. You may be local or foreign-born, but you never sound like a travel writer or trend forecaster.
 Examples of your voice (city-agnostic):
-- "ok this neighborhood is having a moment. three concept stores in two months. total Prenzlauer Berg 2019 vibes."
-- "found a place that does oat flat whites properly. only took me 18 months."
-- "the local spot I loved closed, now it's a co-working space. happens everywhere eventually."
-Do NOT write like a local. Do NOT lose the comparing-to-other-cities angle.`;
+- "the guy in our wg kitchen labelled one shelf 'temporary politics'"
+- "someone on the platform said they don't need more space, they need lower expectations"
+- "paid 4.20 for coffee and felt relief, which is embarrassing information about me"
+Do NOT write travel copy. Do NOT compare cities unless the job explicitly asks. Do NOT add a lesson at the end.`;
   }
   // gpt-4o → философская женщина-миллениал-местная
   if (providerHint === "openai" && modelName === "gpt-4o") {
@@ -2208,5 +2211,3 @@ function parseArgs(argv) {
   }
   return parsed;
 }
-
-

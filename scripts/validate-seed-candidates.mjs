@@ -76,12 +76,21 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     performativeFrame: /^(people say|people talk about|nothing says|the weird thing about|the thing about|the only way to stay sane|my rule is|the real sign|nothing exposes a person faster|everyone in here is either)\b/i.test(content),
     mindPostThesis: isMindPost && /(turns out|realized|realize|the truth|the thing is|the problem|the real|the only|actually|everyone|always|never|every time|rule is|theory|pattern|reveals|proves|signals|means that|more than|less than|better than|worse than|the best|the worst)/i.test(content),
     mindPostContrast: isMindPost && /\b(but|except|until|though|whereas|despite|instead|rather|unless|yet)\b/i.test(content),
-    conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|teure|teuer|chaos|задерж|шум|дорого|турист|уволили|продал|спорят|деньги|жду|ждать|очеред|чемодан|не помогает)/i.test(content),
+    conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|saturad|colaps|retard|vaga|avaria|averia|teure|teuer|chaos|задерж|шум|дорого|турист|уволили|продал|спорят|деньги|жду|ждать|очеред|чемодан|не помогает)/i.test(content),
     tenderness: /(remembered|kind|calm|gentle|helped|shared|smiled|warmer|softer|wink|quietly|still here|still going|small kindness|запомнил|улыб|тепл|спокойн|помог|никто не злится)/i.test(content),
     freshnessMarker: /(today|tonight|this morning|this afternoon|right now|still|again|otra mañana|hoy|ahora|esta mañana|encara|avui|heute|jetzt|сегодня|сейчас|опять|до сих пор)/i.test(content),
     liveContext: contextOverlap > 0,
     newsCycleFit: newsContextOverlap > 0,
   };
+  signals.localComplaintFragment =
+    !signals.firstPerson &&
+    !signals.dialogue &&
+    signals.freshnessMarker &&
+    signals.detail &&
+    signals.anchor &&
+    signals.conflict &&
+    words.length <= 22 &&
+    !looksArticleVoice(contentLower);
 
   const stickySignal =
     signals.hook || signals.pettySpecificity || signals.conflict || signals.tenderness || signals.mindPostThesis || signals.mindPostContrast;
@@ -107,7 +116,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (content.length < 45) issues.push("too_short");
   if (content.length > 280) issues.push("too_long");
   if (!signals.detail) issues.push("low_detail");
-  if (!signals.firstPerson && !signals.implicitFirstPerson && !signals.dialogue) issues.push("weak_mindprint");
+  if (!signals.firstPerson && !signals.implicitFirstPerson && !signals.dialogue && !signals.localComplaintFragment) issues.push("weak_mindprint");
   if (!signals.anchor) issues.push("missing_city_anchor");
   if (looksGeneric(contentLower)) issues.push("generic_city_copy");
   if (looksTooPolished(sentences, words, contentLower)) issues.push("overpolished");
@@ -137,6 +146,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     signals.firstPerson,
     signals.implicitFirstPerson,
     signals.dialogue,
+    signals.localComplaintFragment,
     signals.detail,
     signals.pettySpecificity,
     /(maybe|honestly|weirdly|literally|kind of|sort of)/i.test(content),
@@ -267,6 +277,25 @@ function looksGeneric(contentLower) {
     "living here feels",
     "the vibe here",
     "silver linings i guess",
+    "expensive city",
+    "romantic comedy",
+    "different planet",
+    "small win",
+    "badge of honor",
+    "small failure",
+    "some kind of secret",
+    "tourists and prices",
+    "prices inflated",
+    "classic london ritual",
+    "classic london move",
+    "classic barcelona ritual",
+    "classic barcelona move",
+    "classic san francisco ritual",
+    "classic san francisco move",
+    "classic sf ritual",
+    "classic sf move",
+    "classic berlin ritual",
+    "classic berlin move",
   ];
   return genericPhrases.some((phrase) => contentLower.includes(phrase));
 }
@@ -286,11 +315,15 @@ function looksTooPolished(sentences, words, contentLower) {
 
   const polishedConnector = /(at least|meanwhile|almost makes|in a way|as if|as though)/i.test(contentLower);
   const vagueConnector = /\bsomehow\b/i.test(contentLower) && !groundedFirstPerson;
+  const syntheticCoda =
+    /\bclassic (london|barcelona|san francisco|sf|berlin) (ritual|move)\b/i.test(contentLower) ||
+    /\b(extra in someone else'?s romantic comedy|different planet|expensive city|small win|badge of honor|small failure|some kind of secret|tourists and prices)\b/i.test(contentLower);
 
   return (
-    (polishedConnector || vagueConnector) &&
-    words.length >= 20 &&
-    !/[?!]/.test(contentLower)
+    syntheticCoda ||
+    ((polishedConnector || vagueConnector) &&
+      words.length >= 20 &&
+      !/[?!]/.test(contentLower))
   );
 }
 
@@ -326,6 +359,19 @@ function looksEssayLike(contentLower, sentences, words) {
     "felt intimate yet distant",
     "faint clink",
     "morning light",
+    "romantic comedy",
+    "different planet",
+    "expensive city",
+    "badge of honor",
+    "small failure",
+    "small win",
+    "classic london ritual",
+    "classic barcelona move",
+    "classic san francisco",
+    "classic berlin",
+    "watch tourists flock",
+    "prices inflated",
+    "some kind of secret",
   ];
 
   const abstractTerms = [
@@ -501,6 +547,9 @@ function looksStagedObservation(contentLower) {
     "whispering to themselves about how",
     "felt out of place",
     "i only feel real city pride",
+    "staring into the distance like",
+    "like he's waiting for something to happen",
+    "like he’s waiting for something to happen",
   ];
 
   const contrastyAesthetic =
@@ -643,6 +692,9 @@ function looksTruncatedOutput(content, contentLower) {
   if (hasUnbalancedQuotes(trimmed)) return true;
   if (/\b(one said|someone said|he said|she said|they said),?\s+['"][^'"]*$/i.test(trimmed)) return true;
   if (/\b(and|but|because|while|with|to|in|as if|if|when|where|than|that|another|still|already|was|were|is|are|like)$/i.test(trimmed)) return true;
+  if (/\b(who|what|where|why|how)(?:'s|’s)?$/i.test(trimmed)) return true;
+  if (/\b(he|she|they|it|i|we|you)\s+(looked|felt|seemed|thought|wanted|needed|started|kept|tried|asked|said|told|went|got|had)$/i.test(trimmed)) return true;
+  if (/\b(but|and|because|while|though|honestly),?\s+(who|what|where|why|how|he|she|they|it|i|we|you)(?:'s|’s)?$/i.test(trimmed)) return true;
   if (/\b(foreca|contro)\b/i.test(trimmed)) return true;
 
   const incompletePlaceCopy = [

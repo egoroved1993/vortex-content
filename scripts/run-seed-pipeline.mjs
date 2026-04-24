@@ -134,11 +134,14 @@ function buildMixedJobsCorpus({ mix: selectedSources, seed: activeSeed, cityFocu
     const source = config[sourceId];
     if (!source || source.targetCount <= 0) continue;
 
-  runNode(source.script, source.args(activeSeed, activeCityFocus));
-    const builtJobs = readJson(source.outPath).slice(0, source.targetCount).map((job) => ({
-      ...job,
-      sourceFamily: sourceId,
-    }));
+    runNode(source.script, source.args(activeSeed, activeCityFocus));
+    const builtJobs = readJson(source.outPath)
+      .filter((job) => !activeCityFocus || job.cityId === activeCityFocus)
+      .slice(0, source.targetCount)
+      .map((job) => ({
+        ...job,
+        sourceFamily: sourceId,
+      }));
     mergedJobs.push(...builtJobs);
     summary[sourceId] = {
       targetCount: source.targetCount,
@@ -182,6 +185,7 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 
   const baseJobsPath = args.jobs ? path.resolve(process.cwd(), args.jobs) : resolveProjectPath("content", "pipeline-jobs.json");
   const perSourcePath = (suffix) => replaceExtension(baseJobsPath, `.${suffix}.json`);
+  const sourceLimit = (count, cityFocus) => String(cityFocus ? Math.max(count * 4, count) : count);
 
   return {
     launch: {
@@ -202,13 +206,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.public ?? 0,
       script: path.join(projectRoot, "scripts", "build-public-snippet-jobs.mjs"),
       outPath: perSourcePath("public"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["public-input"] ? path.resolve(process.cwd(), args["public-input"]) : resolveProjectPath("content", "public-human-comments.json"),
         "--out",
         perSourcePath("public"),
         "--limit",
-        String(allocations.public ?? 0),
+        sourceLimit(allocations.public ?? 0, cityFocus),
         "--seed",
         `${seed}:public`,
       ],
@@ -217,13 +221,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.review ?? 0,
       script: path.join(projectRoot, "scripts", "build-place-review-jobs.mjs"),
       outPath: perSourcePath("review"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["review-input"] ? path.resolve(process.cwd(), args["review-input"]) : resolveProjectPath("content", "place-review-snippets.json"),
         "--out",
         perSourcePath("review"),
         "--limit",
-        String(allocations.review ?? 0),
+        sourceLimit(allocations.review ?? 0, cityFocus),
         "--seed",
         `${seed}:review`,
       ],
@@ -232,13 +236,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.forum ?? 0,
       script: path.join(projectRoot, "scripts", "build-forum-snippet-jobs.mjs"),
       outPath: perSourcePath("forum"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["forum-input"] ? path.resolve(process.cwd(), args["forum-input"]) : resolveProjectPath("content", "forum-snippets.json"),
         "--out",
         perSourcePath("forum"),
         "--limit",
-        String(allocations.forum ?? 0),
+        sourceLimit(allocations.forum ?? 0, cityFocus),
         "--seed",
         `${seed}:forum`,
       ],
@@ -247,13 +251,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.signals ?? 0,
       script: path.join(projectRoot, "scripts", "build-signal-conditioned-jobs.mjs"),
       outPath: perSourcePath("signals"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["signals-input"] ? path.resolve(process.cwd(), args["signals-input"]) : resolveProjectPath("content", "city-signals.json"),
         "--out",
         perSourcePath("signals"),
         "--limit",
-        String(Math.max(1, Math.ceil((allocations.signals ?? 0) / jobsPerSnapshot))),
+        sourceLimit(Math.max(1, Math.ceil((allocations.signals ?? 0) / jobsPerSnapshot)), cityFocus),
         "--jobs-per-snapshot",
         String(jobsPerSnapshot),
         "--seed",
@@ -264,13 +268,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.news ?? 0,
       script: path.join(projectRoot, "scripts", "build-news-snippet-jobs.mjs"),
       outPath: perSourcePath("news"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["news-input"] ? path.resolve(process.cwd(), args["news-input"]) : resolveProjectPath("content", "news-snippets.json"),
         "--out",
         perSourcePath("news"),
         "--limit",
-        String(allocations.news ?? 0),
+        sourceLimit(allocations.news ?? 0, cityFocus),
         "--seed",
         `${seed}:news`,
       ],
@@ -279,13 +283,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.social ?? 0,
       script: path.join(projectRoot, "scripts", "build-social-snippet-jobs.mjs"),
       outPath: perSourcePath("social"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["social-input"] ? path.resolve(process.cwd(), args["social-input"]) : resolveProjectPath("content", "social-snippets.json"),
         "--out",
         perSourcePath("social"),
         "--limit",
-        String(allocations.social ?? 0),
+        sourceLimit(allocations.social ?? 0, cityFocus),
         "--seed",
         `${seed}:social`,
       ],
@@ -294,13 +298,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.world ?? 0,
       script: path.join(projectRoot, "scripts", "build-world-trend-jobs.mjs"),
       outPath: perSourcePath("world"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["world-input"] ? path.resolve(process.cwd(), args["world-input"]) : resolveProjectPath("content", "world-trends.json"),
         "--out",
         perSourcePath("world"),
         "--limit",
-        String(allocations.world ?? 0),
+        sourceLimit(allocations.world ?? 0, cityFocus),
         "--seed",
         `${seed}:world`,
       ],
@@ -309,13 +313,13 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
       targetCount: allocations.bridge ?? 0,
       script: path.join(projectRoot, "scripts", "build-world-bridge-jobs.mjs"),
       outPath: perSourcePath("bridge"),
-      args: (seed) => [
+      args: (seed, cityFocus) => [
         "--input",
         args["world-input"] ? path.resolve(process.cwd(), args["world-input"]) : resolveProjectPath("content", "world-trends.json"),
         "--out",
         perSourcePath("bridge"),
         "--limit",
-        String(allocations.bridge ?? 0),
+        sourceLimit(allocations.bridge ?? 0, cityFocus),
         "--seed",
         `${seed}:bridge`,
       ],
