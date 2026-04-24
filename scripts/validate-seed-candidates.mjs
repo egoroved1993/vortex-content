@@ -101,6 +101,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const instructionLeakage = looksInstructionLeakage(contentLower);
   const articleVoice = looksArticleVoice(contentLower);
   const pipelineSeam = looksPipelineSeam(content, contentLower, candidate.cityId);
+  const truncatedOutput = looksTruncatedOutput(content, contentLower);
 
   const issues = [];
   if (!content) issues.push("empty_content");
@@ -127,6 +128,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (instructionLeakage) issues.push("instruction_leakage");
   if (articleVoice) issues.push("article_voice");
   if (pipelineSeam) issues.push("pipeline_seam");
+  if (truncatedOutput) issues.push("truncated_output");
   if (!stickySignal) issues.push("low_stickiness");
   if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
   if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
@@ -194,7 +196,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "generic_city_copy", "essay_like", "forum_advice_framing", "stereotype_bundle",
     "crafted_payoff", "staged_observation", "atmospheric_poetry", "performative_snark",
     "raw_headline_injection", "off_city_place", "cloned_template", "off_topic_sports",
-    "repetitive_anchor", "instruction_leakage", "article_voice", "pipeline_seam", "too_long",
+    "repetitive_anchor", "instruction_leakage", "article_voice", "pipeline_seam", "truncated_output", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
 
@@ -232,6 +234,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("instruction_leakage") &&
     !issues.includes("article_voice") &&
     !issues.includes("pipeline_seam") &&
+    !issues.includes("truncated_output") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long") &&
@@ -394,6 +397,11 @@ function looksForumAdviceFraming(contentLower) {
     "if you and your husband",
     "i just had my first",
     "it's really not too hard",
+    "that is not shady",
+    "go with a different airline",
+    "i know some people that live",
+    "unit below them just opened up",
+    "on roommate math",
   ];
 
   const asksForInput =
@@ -557,10 +565,37 @@ function looksPipelineSeam(content, contentLower, cityId) {
     "focus-grouped",
     "can anyone just be real anymore",
     "it hit differently today",
+    "everyone loves safe ai until",
+    "ai safety talk",
+    "felt like a performance",
+    "emotional post online feels like a performance",
+    "shows how disconnected",
+    "group therapy session, but for sports",
+    "latest match result has everyone acting",
+    "they think the local bars",
+    "if you know where to look",
+    "сидю",
   ];
   if (generatedTrendFragments.some((fragment) => contentLower.includes(fragment))) return true;
 
   return endsWithCityLabel(trimmed, cityId);
+}
+
+function looksTruncatedOutput(content, contentLower) {
+  const trimmed = content.trim();
+  if (!trimmed) return false;
+
+  if (/\b(one said|someone said|he said|she said|they said),?\s+['"][^'"]*$/i.test(trimmed)) return true;
+  if (/\b(and|but|because|while|with|to|in|as if|if|when|where|than|that|another)$/i.test(trimmed)) return true;
+  if (/\b(foreca|contro)\b/i.test(trimmed)) return true;
+
+  const incompletePlaceCopy = [
+    "it’s art, babe!",
+    "it's art, babe!",
+    "en una altra",
+    "in another",
+  ];
+  return incompletePlaceCopy.some((fragment) => contentLower.endsWith(fragment));
 }
 
 function endsWithCityLabel(content, cityId) {
