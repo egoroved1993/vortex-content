@@ -52,21 +52,24 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const currentContext = mergeContext(candidate.cityId);
   const contextOverlap = countOverlap(words, currentContext.tokens);
   const newsContextOverlap = countOverlap(words, currentContext.newsTokens);
+  const hasCyrillicFirstPerson = /(^|[^\p{L}\p{N}_])(я|мне|меня|мой|моя|мои|мы|нам|нас|наш|наша|наши)(?=$|[^\p{L}\p{N}_])/iu.test(content);
 
   const isMindPost = candidate.lane === "mind_post";
   const signals = {
-    firstPerson: /\b(i|i’m|i'd|i’ve|me|my|mine|we|our|yo|me|mi|mis|mio|mía|nosotros|nuestra|jo|em|mi|meu|meva|nosaltres|ich|mir|mein|meine|wir|я|мне|меня|мой|моя|мы)\b/i.test(content),
+    firstPerson:
+      /\b(i|i’m|i'd|i’ve|me|my|mine|we|our|yo|me|mi|mis|mio|mía|nosotros|nuestra|jo|em|mi|meu|meva|nosaltres|ich|mir|mein|meine|wir)\b/i.test(content) ||
+      hasCyrillicFirstPerson,
     implicitFirstPerson:
       /^[\s"'“”]*(?:(?:this morning|this afternoon|today|tonight|hoy|avui|heute)[,\s]+)?(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost|waiting|waited|caught|catching)\b/i.test(
         content
       ),
-    dialogue: /[“’””]/.test(content) || /\bsaid\b/i.test(content),
-    detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|каталан|каталан|барселон|шум|miete|l3)/i.test(content),
+    dialogue: /[“’””«»]/.test(content) || /\bsaid\b/i.test(content),
+    detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|каталан|каталан|барселон|шум|miete|l3|очеред|дождь|туман|кофе|автобус|метро|турист|чемодан|кухн|холодильник|официант|сосед|велосипед|граффити|двор|бабушка|местные|аренд|хозяин|еда|толпа|деньги)/i.test(content),
     anchor:
       cityAnchorsLower.some((anchor) => contentLower.includes(anchor)) ||
       anchorsForCity.some((token) => contentLower.includes(token)) ||
       /(барселон|берлин|лондон|сан[- ]?франц|san francisco|barcelona|berlin|london)/i.test(content),
-    hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|до сих пор|каждый раз|wieder|immer noch)/i.test(content),
+    hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|всё равно|до сих пор|каждый раз|каждое утро|каждый день|понимаешь|не знаю|никто|вдруг|wieder|immer noch)/i.test(content),
     pettySpecificity:
       /(had to|ended up|checked (the )?(board|app) twice|before coffee|before work|rent math|rent tab|wrong jacket|three suitcases|same rent|walk back out|queue and half of us|got trapped in it|suitcase slalom|suitcase traffic|step around|swerved around|sidestep|two wrong outfits|platform displays|red digital signage|temporary politics|one normal errand|detour|missed the (bus|train|tram|tube)|important appointment|over an hour early|three scheduled times|stuck dodging|waiting ages|turn at the caf[eé]|clock tick past|two minutes late|train just left|group chat|second six dollar coffee|twelve minutes to be ignored)/i.test(
         content
@@ -74,8 +77,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     performativeFrame: /^(people say|people talk about|nothing says|the weird thing about|the thing about|the only way to stay sane|my rule is|the real sign|nothing exposes a person faster|everyone in here is either)\b/i.test(content),
     mindPostThesis: isMindPost && /(turns out|realized|realize|the truth|the thing is|the problem|the real|the only|actually|everyone|always|never|every time|rule is|theory|pattern|reveals|proves|signals|means that|more than|less than|better than|worse than|the best|the worst)/i.test(content),
     mindPostContrast: isMindPost && /\b(but|except|until|though|whereas|despite|instead|rather|unless|yet)\b/i.test(content),
-    conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|teure|teuer|chaos|задерж|шум|дорого|турист)/i.test(content),
-    tenderness: /(remembered|kind|calm|gentle|helped|shared|smiled|warmer|softer|wink|quietly|still here|still going|small kindness)/i.test(content),
+    conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|teure|teuer|chaos|задерж|шум|дорого|турист|уволили|продал|спорят|деньги|жду|ждать|очеред|чемодан|не помогает)/i.test(content),
+    tenderness: /(remembered|kind|calm|gentle|helped|shared|smiled|warmer|softer|wink|quietly|still here|still going|small kindness|запомнил|улыб|тепл|спокойн|помог|никто не злится)/i.test(content),
     freshnessMarker: /(today|tonight|this morning|this afternoon|right now|still|again|otra mañana|hoy|ahora|esta mañana|encara|avui|heute|jetzt|сегодня|сейчас|опять|до сих пор)/i.test(content),
     liveContext: contextOverlap > 0,
     newsCycleFit: newsContextOverlap > 0,
@@ -97,6 +100,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const repetitiveAnchor = looksRepetitiveAnchor(contentLower, candidate.cityId);
   const instructionLeakage = looksInstructionLeakage(contentLower);
   const articleVoice = looksArticleVoice(contentLower);
+  const pipelineSeam = looksPipelineSeam(content, contentLower, candidate.cityId);
 
   const issues = [];
   if (!content) issues.push("empty_content");
@@ -122,6 +126,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (signals.performativeFrame) issues.push("performative_frame");
   if (instructionLeakage) issues.push("instruction_leakage");
   if (articleVoice) issues.push("article_voice");
+  if (pipelineSeam) issues.push("pipeline_seam");
   if (!stickySignal) issues.push("low_stickiness");
   if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
   if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
@@ -189,7 +194,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "generic_city_copy", "essay_like", "forum_advice_framing", "stereotype_bundle",
     "crafted_payoff", "staged_observation", "atmospheric_poetry", "performative_snark",
     "raw_headline_injection", "off_city_place", "cloned_template", "off_topic_sports",
-    "repetitive_anchor", "instruction_leakage", "article_voice", "too_long",
+    "repetitive_anchor", "instruction_leakage", "article_voice", "pipeline_seam", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
 
@@ -226,6 +231,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("performative_frame") &&
     !issues.includes("instruction_leakage") &&
     !issues.includes("article_voice") &&
+    !issues.includes("pipeline_seam") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long") &&
@@ -382,6 +388,12 @@ function looksForumAdviceFraming(contentLower) {
     "looking at an apartment",
     "close to the ",
     "seems close to the ",
+    "it is not my intention to trivialize",
+    "might want to check with",
+    "you might want to check",
+    "if you and your husband",
+    "i just had my first",
+    "it's really not too hard",
   ];
 
   const asksForInput =
@@ -517,6 +529,55 @@ function looksRawHeadlineInjection(content) {
   // 5+ consecutive Title-Cased words = likely pasted headline
   if (/(?:[A-Z][a-z]+ ){5,}/.test(content)) return true;
   return false;
+}
+
+function looksPipelineSeam(content, contentLower, cityId) {
+  const trimmed = content.trim();
+
+  if (trimmed.includes("|")) return true;
+
+  if (/\bi noticed\s+(everyone|the internet|people keep|a bunch of|travel frustration|sports discourse)\b/i.test(trimmed)) {
+    return true;
+  }
+
+  if (/\b(this morning|today|tonight|heute|hoy|avui)\b.{0,80}\bthe\b.{0,120}\bthing (made me|had me|still turned it into)\b/i.test(trimmed)) {
+    return true;
+  }
+
+  const generatedTrendFragments = [
+    "the internet is tired of",
+    "everyone is debating whether",
+    "posts are converging",
+    "people keep posting the same",
+    "this morning near",
+    "global trend theme",
+    "phrase fragments seen",
+    "weather thing made me wear the wrong jacket",
+    "miss the useful train",
+    "focus-grouped",
+    "can anyone just be real anymore",
+    "it hit differently today",
+  ];
+  if (generatedTrendFragments.some((fragment) => contentLower.includes(fragment))) return true;
+
+  return endsWithCityLabel(trimmed, cityId);
+}
+
+function endsWithCityLabel(content, cityId) {
+  const labelsByCity = {
+    london: ["london"],
+    berlin: ["berlin"],
+    barcelona: ["barcelona"],
+    sf: ["san francisco", "sf"],
+  };
+  const labels = labelsByCity[cityId] ?? [];
+  const normalized = content.trim().toLowerCase();
+
+  return labels.some((label) => new RegExp(`[.!?]\\s*${escapeRegExp(label)}[.!?]?$`, "i").test(normalized));
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function mentionsOffCityPlace(content, cityId) {
@@ -863,4 +924,3 @@ function isDirectExecution() {
   if (!process.argv[1]) return false;
   return import.meta.url === pathToFileURL(process.argv[1]).href;
 }
-

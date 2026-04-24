@@ -191,14 +191,20 @@ jobs:
             --out content/place-discovery-candidates.json \
             --concurrency 2
 
+          node scripts/validate-seed-candidates.mjs \
+            --input content/place-discovery-candidates.json \
+            --out content/place-discovery-candidates.report.json
+
           # Prepare payload (lower thresholds — place messages are short/simple by design)
           node scripts/prepare-seed-payload.mjs \
             --candidates content/place-discovery-candidates.json \
+            --report content/place-discovery-candidates.report.json \
             --out content/place-discovery-payload.json \
             --min-score 1 \
             --min-mindprint 1 \
             --min-ambiguity 1 \
-            --min-composite-score 1
+            --min-composite-score 1 \
+            --reviewer-buckets ship_now,strong_candidate,candidate
 
           # Upload to Supabase
           node scripts/upload-seed-payload.mjs \
@@ -229,16 +235,22 @@ jobs:
             --force-language ru \
             --concurrency 2
 
+          node scripts/validate-seed-candidates.mjs \
+            --input content/russian-candidates.json \
+            --out content/russian-candidates.report.json
+
           # Prepare payload with relaxed thresholds — cap at 10 total, 3 per city
           node scripts/prepare-seed-payload.mjs \
             --candidates content/russian-candidates.json \
+            --report content/russian-candidates.report.json \
             --out content/russian-payload.json \
             --min-score 1 \
             --min-mindprint 1 \
             --min-ambiguity 1 \
             --min-composite-score 1 \
             --max-per-city 3 \
-            --max-total 10
+            --max-total 10 \
+            --reviewer-buckets ship_now,strong_candidate,candidate
 
           # Upload
           node scripts/upload-seed-payload.mjs \
@@ -275,9 +287,11 @@ jobs:
             content/city-pulse.latest.json
             content/place-discovery-jobs.json
             content/place-discovery-candidates.json
+            content/place-discovery-candidates.report.json
             content/place-discovery-payload.json
             content/quality-report.json
             content/russian-jobs.json
             content/russian-candidates.json
+            content/russian-candidates.report.json
             content/russian-payload.json
           if-no-files-found: warn

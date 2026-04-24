@@ -24,6 +24,7 @@ const includeReviewerBuckets = String(args["reviewer-buckets"] ?? "strong_candid
   .split(",")
   .map((value) => value.trim())
   .filter(Boolean);
+const allowUnreviewed = Boolean(args["allow-unreviewed"]);
 
 const candidates = readJson(candidatesPath);
 const reportEntries = reportPath ? readJson(reportPath).report ?? [] : [];
@@ -46,6 +47,7 @@ for (const candidate of candidates) {
     minCompositeScore,
     allowedFamilies,
     includeReviewerBuckets,
+    allowUnreviewed,
   });
   if (!decision.include) {
     rejected.push({ id: candidate.id, reason: decision.reason });
@@ -113,7 +115,7 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
   selected.push({
     city_id: entry.candidate.cityId,
     content: entry.candidate.content,
-    detected_language: normalizeDetectedLanguage(entry.candidate.detected_language),
+    detected_language: normalizeDetectedLanguage(entry.candidate.detected_language, entry.candidate.content),
     source: entry.candidate.gameSource,
     sentiment: entry.candidate.sentiment ?? "neutral",
     type: "text",
@@ -154,7 +156,10 @@ function shouldInclude(candidate, review, options) {
   }
 
   if (!review) {
-    return { include: true, reason: "no_review_report", compositeScore: 0, freshness: 0, newsFit: 0, ambiguity: 0 };
+    if (options.allowUnreviewed) {
+      return { include: true, reason: "unreviewed_allowed", compositeScore: 0, freshness: 0, newsFit: 0, ambiguity: 0 };
+    }
+    return { include: false, reason: "missing_review_report" };
   }
 
   const scores = review.scores ?? {};
@@ -180,6 +185,18 @@ function shouldInclude(candidate, review, options) {
     "article_voice",
     "detached_from_news_cycle",
     "low_freshness",
+    "raw_headline_injection",
+    "off_city_place",
+    "cloned_template",
+    "off_topic_sports",
+    "repetitive_anchor",
+    "performative_frame",
+    "forum_advice_framing",
+    "crafted_payoff",
+    "staged_observation",
+    "atmospheric_poetry",
+    "stereotype_bundle",
+    "pipeline_seam",
   ]);
   const issueHit = (review.issues ?? []).find((issue) => blockedIssues.has(issue));
   if (issueHit) {
@@ -214,8 +231,9 @@ function requiresLiveContext(sourceFamily) {
   return ["news", "social", "world", "bridge", "signals"].includes(sourceFamily);
 }
 
-function normalizeDetectedLanguage(value) {
+function normalizeDetectedLanguage(value, content = "") {
   const raw = String(value ?? "en").trim().toLowerCase();
+  if (/[а-яё]/i.test(String(content ?? "")) && (!raw || raw === "en" || raw === "english")) return "ru";
   if (!raw) return "en";
 
   const aliases = {
