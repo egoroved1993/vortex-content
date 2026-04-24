@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T05:10:20.962Z",
+    "capturedAt": "2026-04-24T06:51:54.710Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,13 +15,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 348
+    "totalItems": 350
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T05:10:20.962Z",
-      "mood_score": 0.439,
+      "captured_at": "2026-04-24T06:51:54.710Z",
+      "mood_score": 0.429,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 11,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
@@ -42,63 +42,63 @@
       ],
       "drivers": [
         {
-          "source_family": "social",
-          "source_origin": "x_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays on the entire line due to strike action."
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Suspended Bakerloo Line: Service is not expected to resume until after 07:30 due to strike action"
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays on the entire line due to strike action."
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Suspended Central Line: Service is not expected to resume until after 07:30 due to strike action"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays on the entire line due to strike action."
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Suspended Circle Line: Service is not expected to resume until after 12:00 due to strike action"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays on the entire line due to strike action."
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Suspended District Line: Service is not expected to resume until after 07:30 due to strike action"
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays on the entire line due to strike action."
         }
       ],
       "metadata": {
-        "source_item_count": 64,
-        "average_valence": -0.18,
+        "source_item_count": 65,
+        "average_valence": -0.207,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.943
+        "freshness_score": 0.938
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T05:10:20.962Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-24T06:51:54.710Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -124,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -145,34 +154,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "Grey clouds hang low over Berlin, creating a damp chill that seeps through the streets, punctuated by sudden bursts of rain.. After the recent disruptions, the public transport see"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "And despite this, the only image that will go viral on Twitter is that image from 2017 that shows Germany‘s GDP per capita would be higher if you removed Berlin… Meanwhile, Berlin‘"
+          "excerpt": "The sky is a slate gray, thick with clouds that threaten rain but hold back, casting a dim light over the streets.. Despite recent disruptions, the U-Bahn is bustling again, with c"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.029,
+        "source_item_count": 91,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 0.937
+        "freshness_score": 0.931
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T05:10:20.962Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-04-24T06:51:54.710Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -208,12 +209,12 @@
           "excerpt": "It's not just the AI boom. This will last until A) people no longer want to move to San Francisco, especially young people whocsn only rent versus buy B) until we build enough God "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local if they don't flinch at the Muni delays but get mad if you talk trash about the burritos."
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of gray clouds drapes over the city, occasionally releasing a heavy mist that makes everything feel damp and chilly.. The BART platforms are crowded and restless, w"
         },
         {
           "source_family": "review",
@@ -234,18 +235,18 @@
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.062,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T05:10:20.962Z",
+      "captured_at": "2026-04-24T06:51:54.710Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
@@ -303,20 +304,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun casts a golden hue over the bustling streets, with a cool breeze offering brief relief from the warmth.. The mood on the trains is tense and frustrated, with comm"
+          "excerpt": "The morning sky is a heavy gray, casting a muted light that seems to amplify the urban sounds of bustling tram cars clanking on their tracks.. Despite the drizzle, the train statio"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.64
+        "freshness_score": 0.644
       }
     }
   ]
