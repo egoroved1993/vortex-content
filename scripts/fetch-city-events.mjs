@@ -66,14 +66,16 @@ for (const city of CITY_CONFIGS) {
 
   try {
     const params = new URLSearchParams({
-      latitude: String(city.lat),
-      longitude: String(city.lng),
-      within: `${city.withinKm}km`,
-      "date_range": dateRange,
+      "location.latitude": String(city.lat),
+      "location.longitude": String(city.lng),
+      "location.within": `${city.withinKm}km`,
+      "start_date.keyword": dateRange,
+      expand: "venue,category",
+      sort_by: "date",
       page_size: "50",
     });
 
-    const response = await fetch(`${BASE_URL}/destination/search/?${params}`, {
+    const response = await fetch(`${BASE_URL}/events/search/?${params}`, {
       headers: {
         "Accept": "application/json",
         "Authorization": `Bearer ${EVENTBRITE_API_KEY}`,
@@ -94,7 +96,8 @@ for (const city of CITY_CONFIGS) {
         // Skip events without a URL or name
         if (!event.url || !event.name?.text) return false;
         // Skip if category not in our allowed set
-        if (event.category_id && !ALLOWED_CATEGORY_IDS.has(event.category_id)) return false;
+        const categoryId = event.category_id ?? event.category?.id ?? null;
+        if (categoryId && !ALLOWED_CATEGORY_IDS.has(String(categoryId))) return false;
         // Skip online-only events (no physical venue)
         if (event.online_event) return false;
         return true;

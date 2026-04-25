@@ -82,6 +82,10 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-city-events.mjs --date-range "${{ steps.cfg.outputs.date_range }}" --max-per-city 16 --out content/events-snippets.json
 
+      - name: Fetch city news fallback
+        continue-on-error: true
+        run: node scripts/fetch-city-news.mjs --out content/news-snippets.json
+
       - name: Fetch Resident Advisor Berlin nightlife
         continue-on-error: true
         run: node scripts/fetch-ra-berlin.mjs --out content/ra-berlin-events.json
@@ -94,6 +98,7 @@ jobs:
           ARGS=(
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}"
             --horizon-days 45
+            --news-input content/news-snippets.json
             --out content/event-discovery-jobs.json
           )
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
@@ -162,6 +167,7 @@ jobs:
           name: current-event-layer-${{ github.run_id }}
           path: |
             content/events-snippets.json
+            content/news-snippets.json
             content/ra-berlin-events.json
             content/event-discovery-jobs.json
             content/event-discovery-candidates.json

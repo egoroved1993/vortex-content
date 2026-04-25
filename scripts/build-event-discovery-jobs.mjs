@@ -14,6 +14,9 @@ const eventsPath = args["events-input"]
 const raPath = args["ra-input"]
   ? path.resolve(process.cwd(), args["ra-input"])
   : resolveProjectPath("content", "ra-berlin-events.json");
+const newsPath = args["news-input"]
+  ? path.resolve(process.cwd(), args["news-input"])
+  : resolveProjectPath("content", "news-snippets.json");
 const outPath = args.out
   ? path.resolve(process.cwd(), args.out)
   : resolveProjectPath("content", "event-discovery-jobs.json");
@@ -55,10 +58,12 @@ const EVENT_PROMPT_STYLES = [
 const rawEvents = [
   ...safeReadJson(eventsPath).map(normalizeEventbriteEvent),
   ...safeReadJson(raPath).map(normalizeResidentAdvisorEvent),
+  ...safeReadJson(newsPath).map(normalizeNewsEvent),
 ].filter(Boolean);
 
 const deduped = dedupeEvents(rawEvents)
   .filter((event) => !cityFocus || event.cityId === cityFocus)
+  .filter((event) => hasUsableEventSubject(event))
   .filter((event) => isWithinHorizon(event, now, horizonDays));
 
 const byCity = groupBy(deduped, (event) => event.cityId);
@@ -69,7 +74,7 @@ for (const [cityId, cityEvents] of Object.entries(byCity)) {
   if (!city) continue;
 
   const selected = cityEvents
-    .map((event) => ({ event, score: eventPriority(event, now, horizonDays) + rand() * 0.35 }))
+    .map((event) => ({ event, score: eventPriority(event, now, horizonDays) + sourcePriority(event) + rand() * 0.35 }))
     .sort((a, b) => b.score - a.score)
     .slice(0, maxPerCity)
     .map((entry) => entry.event);
@@ -126,23 +131,24 @@ console.log(`Wrote jobs to ${outPath}`);
 console.log(JSON.stringify(countBy(jobs, (job) => job.cityId), null, 2));
 
 function buildEventPrompt({ city, event, style, links }) {
+  const subjectLabel = event.kind === "news_event" ? "Current city signal" : "Event";
   const lines = [
     `City: ${city.name}`,
     `Current date: ${new Date().toISOString().slice(0, 10)}`,
-    `Event: ${event.name}`,
+    `${subjectLabel}: ${event.name}`,
     event.venueName ? `Venue: ${event.venueName}` : null,
     event.neighborhood ? `Area: ${event.neighborhood}` : null,
     event.dateLabel ? `Date window: ${event.dateLabel}` : null,
     event.category ? `Category/context: ${event.category}` : null,
     event.url ? `Event link: ${event.url}` : null,
     "",
-    "Write one short anonymous Vortex city message about this event being relevant now or soon.",
+    "Write one short anonymous Vortex city message about this event/signal being relevant now or soon.",
     "It must feel like a local post, not a listing. 1-2 sentences, under 190 characters.",
     "",
     `Angle: ${style.instruction}`,
     "",
     "Rules:",
-    "- Name either the event OR the venue so the attached link makes sense",
+    "- Name either the event, the venue, or the specific city issue so the attached link makes sense",
     "- One concrete human detail: queue, ticket, route home, bag, weather, battery, friend, door, drink, neighborhood crowd",
     "- Do NOT write promo copy, a guide, a recommendation, or 'can't wait for X'",
     "- Do NOT include exact times, prices unless they are the human complaint, or calendar phrasing like 'this Friday at 8pm'",
@@ -159,7 +165,9 @@ function buildEventPrompt({ city, event, style, links }) {
 
 function normalizeEventbriteEvent(entry) {
   if (!entry?.cityId || !entry?.name || !entry?.url) return null;
+  if (isBadVenueName(entry.venueName)) return null;
   return {
+    kind: "listed_event",
     cityId: entry.cityId,
     sourceOrigin: entry.sourceOrigin ?? "eventbrite",
     name: String(entry.name).trim(),
@@ -176,6 +184,7 @@ function normalizeEventbriteEvent(entry) {
 
 function normalizeResidentAdvisorEvent(entry) {
   if (!entry?.cityId || !entry?.url) return null;
+  if (!entry.venueName || isBadVenueName(entry.venueName)) return null;
   const artists = Array.isArray(entry.artists) ? entry.artists.filter(Boolean) : [];
   const eventName = artists.length > 0
     ? artists.slice(0, 3).join(", ")
@@ -184,6 +193,7 @@ function normalizeResidentAdvisorEvent(entry) {
       : "RA event";
   const genres = Array.isArray(entry.genres) ? entry.genres.filter(Boolean).join(", ") : "";
   return {
+    kind: "listed_event",
     cityId: entry.cityId,
     sourceOrigin: entry.sourceOrigin ?? "resident_advisor",
     name: eventName,
@@ -195,6 +205,29 @@ function normalizeResidentAdvisorEvent(entry) {
     category: genres,
     text: entry.body ?? "",
     fetchedAt: entry.fetchedAt ?? null,
+  };
+}
+
+function normalizeNewsEvent(entry) {
+  if (!entry?.cityId || !entry?.headline) return null;
+  const headline = cleanNewsHeadline(entry.headline, entry.publisher);
+  const url = extractFirstHref(entry.body ?? "");
+  const text = stripHtml([headline, entry.body].filter(Boolean).join(" "));
+  if (!url || !looksLikeEventNews(`${headline} ${text}`)) return null;
+
+  return {
+    kind: "news_event",
+    cityId: entry.cityId,
+    sourceOrigin: "google_news_rss_event",
+    name: headline,
+    url,
+    venueName: "",
+    neighborhood: "",
+    dateIso: entry.publishedAt ?? "",
+    dateLabel: entry.publishedAt ? formatEventDate(entry.publishedAt) : "",
+    category: entry.publisher ? `city news via ${entry.publisher}` : "city news",
+    text,
+    fetchedAt: entry.publishedAt ?? null,
   };
 }
 
@@ -212,7 +245,7 @@ function buildEventLinks(event, city) {
   const links = [];
   if (event.url) {
     links.push({
-      type: event.sourceOrigin === "resident_advisor" ? "ra" : "web",
+      type: event.sourceOrigin === "resident_advisor" ? "ra" : event.sourceOrigin === "google_news_rss_event" ? "news" : "web",
       url: event.url,
       label: truncateLabel(event.name || "event"),
     });
@@ -244,11 +277,24 @@ function dedupeEvents(events) {
   return output;
 }
 
+function hasUsableEventSubject(event) {
+  if (!event.name || event.name.length < 6) return false;
+  if (isBadVenueName(event.name)) return false;
+  return true;
+}
+
+function isBadVenueName(value) {
+  const normalized = String(value ?? "").trim().toLowerCase();
+  if (!normalized) return false;
+  return /^(tba|tbc|secret location|unknown venue|various venues)$/i.test(normalized) || /\btba\b/i.test(normalized);
+}
+
 function isWithinHorizon(event, referenceDate, maxDays) {
   const eventDate = parseEventDate(event.dateIso);
   if (!eventDate) return true;
   const daysAway = (eventDate - referenceDate) / (24 * 60 * 60 * 1000);
-  return daysAway >= -1 && daysAway <= maxDays;
+  const minDays = event.kind === "news_event" ? -5 : -1;
+  return daysAway >= minDays && daysAway <= maxDays;
 }
 
 function eventPriority(event, referenceDate, maxDays) {
@@ -256,6 +302,13 @@ function eventPriority(event, referenceDate, maxDays) {
   if (!eventDate) return 0.25;
   const daysAway = Math.max(0, (eventDate - referenceDate) / (24 * 60 * 60 * 1000));
   return Math.max(0, 1 - daysAway / Math.max(maxDays, 1));
+}
+
+function sourcePriority(event) {
+  if (event.sourceOrigin === "resident_advisor") return 0.22;
+  if (event.sourceOrigin === "eventbrite") return 0.18;
+  if (event.sourceOrigin === "google_news_rss_event") return 0.08;
+  return 0;
 }
 
 function parseEventDate(value) {
@@ -278,9 +331,40 @@ function inferEventLanguage(cityId) {
   return "en";
 }
 
+function looksLikeEventNews(value) {
+  return /\b(strike|strikes|festival|concert|gig|screening|exhibition|opening|opens|reopen|reopens|closure|closed|protest|march|parade|market|fair|show|tickets?|tour|summit|conference|derby|final|fixture|lineup|cancelled|canceled|delayed|returns?|launches?|streik|demo|ausstellung|konzert|markt|messe|eröffnung|vaga|manifestaci[oó]|manifestació|concert|exposici[oó]|exposició|fira|mercat|huelga|manifestaci[oó]n|exposici[oó]n)\b/i.test(value);
+}
+
+function cleanNewsHeadline(headline, publisher) {
+  let cleaned = String(headline ?? "").replace(/\s+/g, " ").trim();
+  const suffixes = [publisher, "BBC", "The Guardian", "Time Out", "London Evening Standard", "SF Chronicle", "SFGATE"].filter(Boolean);
+  for (const suffix of suffixes) {
+    cleaned = cleaned.replace(new RegExp(`\\s+-\\s+${escapeRegExp(suffix)}\\s*$`, "i"), "").trim();
+  }
+  return cleaned;
+}
+
+function extractFirstHref(html) {
+  const match = String(html ?? "").match(/href="([^"]+)"/i);
+  return match?.[1] ?? "";
+}
+
+function stripHtml(value) {
+  return String(value ?? "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function truncateLabel(value) {
   const text = String(value ?? "").replace(/\s+/g, " ").trim();
   return text.length <= 48 ? text : `${text.slice(0, 45).trim()}...`;
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function normalizeKey(value) {
