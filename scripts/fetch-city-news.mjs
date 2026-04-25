@@ -8,6 +8,8 @@ const CITY_NEWS_QUERIES = [
     cityId: "london",
     queries: [
       "london transport tube strike",
+      "london events this weekend concert festival",
+      "london exhibition opening this week",
       "london housing rent",
       "london crime news today",
       "london weather",
@@ -22,6 +24,8 @@ const CITY_NEWS_QUERIES = [
     cityId: "berlin",
     queries: [
       "berlin verkehr streik",
+      "berlin events this weekend concert festival",
+      "berlin ausstellung konzert wochenende",
       "berlin mieten wohnungen",
       "berlin wetter heute",
       "berlin kriminalität polizei",
@@ -43,6 +47,8 @@ const CITY_NEWS_QUERIES = [
     cityId: "sf",
     queries: [
       "san francisco muni bart delay",
+      "san francisco events this weekend concert festival",
+      "sf concert exhibition opening this week",
       "san francisco housing rent eviction",
       "san francisco crime homelessness",
       "bay area weather",
@@ -57,6 +63,9 @@ const CITY_NEWS_QUERIES = [
     cityId: "barcelona",
     queries: [
       "barcelona metro rodalies vaga",
+      "barcelona eventos conciertos festival esta semana",
+      "barcelona agenda cultural conciertos festival",
+      "barcelona exposicion concierto esta semana",
       "barcelona habitatge lloguer",
       "barcelona turisme massiu",
       "barcelona temps meteorologia",

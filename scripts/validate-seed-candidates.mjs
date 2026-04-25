@@ -110,6 +110,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const repetitiveAnchor = looksRepetitiveAnchor(contentLower, candidate.cityId);
   const instructionLeakage = looksInstructionLeakage(contentLower);
   const articleVoice = looksArticleVoice(contentLower);
+  const rhetoricalQuestion = /\?/.test(content);
+  const instructionalAdvice = looksInstructionalAdvice(contentLower);
   const pipelineSeam = looksPipelineSeam(content, contentLower, candidate.cityId);
   const truncatedOutput = looksTruncatedOutput(content, contentLower);
 
@@ -137,6 +139,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (signals.performativeFrame) issues.push("performative_frame");
   if (instructionLeakage) issues.push("instruction_leakage");
   if (articleVoice) issues.push("article_voice");
+  if (rhetoricalQuestion) issues.push("rhetorical_question");
+  if (instructionalAdvice) issues.push("instructional_advice");
   if (pipelineSeam) issues.push("pipeline_seam");
   if (truncatedOutput) issues.push("truncated_output");
   if (!stickySignal) issues.push("low_stickiness");
@@ -207,7 +211,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "generic_city_copy", "essay_like", "forum_advice_framing", "stereotype_bundle",
     "crafted_payoff", "staged_observation", "atmospheric_poetry", "performative_snark",
     "raw_headline_injection", "off_city_place", "cloned_template", "off_topic_sports",
-    "repetitive_anchor", "instruction_leakage", "article_voice", "pipeline_seam", "truncated_output", "too_long",
+    "repetitive_anchor", "instruction_leakage", "article_voice", "rhetorical_question",
+    "instructional_advice", "pipeline_seam", "truncated_output", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
 
@@ -244,6 +249,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("performative_frame") &&
     !issues.includes("instruction_leakage") &&
     !issues.includes("article_voice") &&
+    !issues.includes("rhetorical_question") &&
+    !issues.includes("instructional_advice") &&
     !issues.includes("pipeline_seam") &&
     !issues.includes("truncated_output") &&
     !issues.includes("low_freshness") &&
@@ -507,6 +514,38 @@ function looksForumAdviceFraming(contentLower) {
     /\b(recommend|advice|thoughts|opinions|experience)\b/.test(contentLower);
 
   return adviceFragments.some((fragment) => contentLower.includes(fragment)) || asksForInput;
+}
+
+function looksInstructionalAdvice(contentLower) {
+  const fragments = [
+    "don't forget",
+    "do not forget",
+    "remember to",
+    "make sure",
+    "you should",
+    "you need to",
+    "better bring",
+    "better take",
+    "bring a drink",
+    "charge your",
+    "avoid the",
+    "не забудь",
+    "не забудьте",
+    "лучше взять",
+    "лучше ехать",
+    "лучше идти",
+    "надо зарядить",
+    "стоит взять",
+    "vergiss nicht",
+    "denk dran",
+    "du solltest",
+    "besser mitnehmen",
+    "no olvides",
+    "acuérdate",
+    "mejor lleva",
+  ];
+
+  return fragments.some((fragment) => contentLower.includes(fragment));
 }
 
 function hasIconicCityBundle(contentLower, cityId) {

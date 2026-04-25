@@ -195,6 +195,8 @@ function shouldInclude(candidate, review, options) {
     "repetitive_anchor",
     "performative_frame",
     "performative_snark",
+    "rhetorical_question",
+    "instructional_advice",
     "forum_advice_framing",
     "crafted_payoff",
     "staged_observation",
