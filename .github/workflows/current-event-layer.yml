@@ -63,7 +63,7 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "upload=true" >> "$GITHUB_OUTPUT"
             echo "date_range=this_month" >> "$GITHUB_OUTPUT"
-            echo "max_per_city=2" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=4" >> "$GITHUB_OUTPUT"
             echo "expires_hours=48" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
           else

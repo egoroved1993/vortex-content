@@ -198,6 +198,8 @@ function shouldInclude(candidate, review, options) {
     "rhetorical_question",
     "instructional_advice",
     "generic_event_reference",
+    "banned_opener",
+    "synthetic_collective",
     "forum_advice_framing",
     "crafted_payoff",
     "staged_observation",
