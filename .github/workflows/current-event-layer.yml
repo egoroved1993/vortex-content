@@ -132,8 +132,9 @@ jobs:
             --expires-hours "${{ steps.cfg.outputs.expires_hours }}" \
             --min-score 1 \
             --min-mindprint 1 \
+            --min-stickiness 3 \
             --min-ambiguity 1 \
-            --min-composite-score 1 \
+            --min-composite-score 3 \
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}" \
             --max-total 12 \
             --reviewer-buckets ship_now,strong_candidate,candidate

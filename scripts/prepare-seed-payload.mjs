@@ -197,6 +197,7 @@ function shouldInclude(candidate, review, options) {
     "performative_snark",
     "rhetorical_question",
     "instructional_advice",
+    "generic_event_reference",
     "forum_advice_framing",
     "crafted_payoff",
     "staged_observation",

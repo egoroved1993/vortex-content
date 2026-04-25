@@ -151,6 +151,7 @@ function buildEventPrompt({ city, event, style, links }) {
     "- Name either the event, the venue, or the specific city issue so the attached link makes sense",
     "- One concrete human detail: queue, ticket, route home, bag, weather, battery, friend, door, drink, neighborhood crowd",
     "- Do NOT write promo copy, a guide, a recommendation, or 'can't wait for X'",
+    "- Do NOT say generic phrases like 'the event' or 'this event'; use the actual event name, venue, or issue",
     "- Do NOT ask a question and do NOT give advice like 'better bring', 'remember to', or 'don't forget'",
     "- Do NOT include exact times, prices unless they are the human complaint, or calendar phrasing like 'this Friday at 8pm'",
     "- Do NOT make the event sound globally important; keep it as one small city consequence",
