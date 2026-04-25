@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-25T03:13:32.556Z",
+    "capturedAt": "2026-04-25T04:57:19.069Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 344
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-25T03:13:32.556Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-04-25T04:57:19.069Z",
+      "mood_score": 0.436,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -34,13 +34,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Baker Street and Watford / Uxbridge northbound only following a late finish of e"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -63,7 +71,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Part Closure JUBILEE LINE: Saturday 25 April, between 0100 and 0430, no service between Willesden Green and Stanmore."
+          "excerpt": "London transit Jubilee: Part Suspended Jubilee Line: No service between Willesden Green and Stanmore northbound only following a late finish of engineering wo"
         },
         {
           "source_family": "transport",
@@ -71,37 +79,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 April, between 0130 and 0530, no service between Kings Cross St Pancras and Cockfosters. Us"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "My kid had the same issue. They've recorded the sound from a YouTube of traffic noise (yep they exist) and looped it using Audacity so it will play continually for 8 hours without "
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 and Sunday 26 April, no service between Rayners Lane and Uxbridge. Use METROPOLITAN LINE se"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.143,
+        "source_item_count": 56,
+        "average_valence": -0.19,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.908
+        "freshness_score": 0.919
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-25T03:13:32.556Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-04-25T04:57:19.069Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -127,22 +127,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "wow thats really crazy, my blue card in a Lower Saxony city only took 2 weeks. That's why I avoid living in Berlin bcs of how crowded it gets lol. I suggest you move to a lower sax"
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -157,28 +141,44 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The skies over Berlin are a swirling mix of gray and blue, with a brisk wind that sends flurries of fallen leaves skittering across the pavements.. With the recent reports of strik"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.053,
+        "source_item_count": 91,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.942
+        "freshness_score": 0.94
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-25T03:13:32.556Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-25T04:57:19.069Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 15,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,33 +196,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "People can’t just go out and buy a home instead of renting as home ownership is significantly more expensive than renting - especially in SF and the surrounding areas."
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by their ability to navigate BART delays while still managing to get a burrito from La Taqueria "
+          "excerpt": "It’s not exactly what you asked for but I found volunteering at an organization where my values align has really helped me heal. I volunteer at a farm/food forest, which is part of"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I would forget about number 1. The closer to the bridge the worse the parking the time you save will be wasted. I'd suggest northern peninsula honestly Darby dans in south san fran"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It’s a good idea, but depending on the day you might have to kill A LOT of time for it to make a difference. You shouldn’t try to get on/off the freeway near the bridge during that"
+          "excerpt": "Don’t listen to these people. You can easily afford the Bay Area in general. Specific, high rent locations? Might be a stretch."
         },
         {
           "source_family": "signals",
@@ -230,26 +214,42 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with gray clouds, punctuated by a cool breeze that whispers promises of rain.. BART stations are packed with frustrated commuters, their faces a mix of impatien"
+          "excerpt": "The late afternoon sky is a muted gray, heavy with the scent of impending rain that has yet to fall.. BART riders shuffle anxiously along the platform, with extended pauses as anno"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
-        "source_item_count": 63,
-        "average_valence": -0.028,
+        "source_item_count": 56,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-25T03:13:32.556Z",
+      "captured_at": "2026-04-25T04:57:19.069Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick layer of grey clouds casts an almost somber light over the city, hinting at rain that hasn't quite arrived yet.. The platforms at Plaça Catalunya are unusually crowded, wit"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A grey blanket of clouds hangs low, threatening rain while a cool breeze carries the scent of wet earth and distant storm.. The trains are nearly empty, with frustrated commuters g"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.639
+        "freshness_score": 0.635
       }
     }
   ]
