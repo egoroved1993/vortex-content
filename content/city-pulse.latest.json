@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-25T09:25:42.209Z",
+    "capturedAt": "2026-04-25T10:22:48.013Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -20,10 +20,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-25T09:25:42.209Z",
-      "mood_score": 0.464,
+      "captured_at": "2026-04-25T10:22:48.013Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
@@ -55,14 +55,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. After the 10:00 departure fro"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 and Sunday 26 April, no service between Rayners Lane and Uxbridge. Use METROPOLITAN LINE se"
         },
         {
@@ -80,25 +72,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "It's very efficient - they have lots of busy events on there so have a decent system in place. It's impossible tell you how long it'll take for you to get out to the tube as it dep"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.105,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-25T09:25:42.209Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-25T10:22:48.013Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -132,15 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of grey clouds, casting a muted light over the bustling streets, with a cool breeze hinting at the autumn chill to come.. Despite the recent disruptions, the"
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -157,23 +149,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "One of my favourite pho spots in Berlin has a 3.2 rating. Every negative review complains they insist on cadh, and because “service is bad” (guys are Asian, not even rude, just pre"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.041,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "weather"
         ],
         "freshness_score": 0.933
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-25T09:25:42.209Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-04-25T10:22:48.013Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -192,14 +192,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The air is thick with a damp chill, the fog rolling in off the bay like a shroud over the evening skyline.. BART is a chaotic swirl of frustrated commuters, with muffled conversati"
-        },
         {
           "source_family": "review",
           "source_origin": "maps_review",
@@ -225,6 +217,14 @@
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a mottled gray, thick with clouds that threaten rain but hold off, creating a damp chill in the air.. BART commuters huddle together on the platform, their faces a mix o"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -235,18 +235,18 @@
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.018,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.822
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-25T09:25:42.209Z",
+      "captured_at": "2026-04-25T10:22:48.013Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
@@ -306,7 +306,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun is glaring down, casting sharp shadows on the bustling streets, with a slight breeze that offers brief moments of relief.. Trains are noticeably quieter today, with many co"
+          "excerpt": "The sun is casting a golden hue over the bustling streets, but a chilly wind reminds everyone that winter isn't quite over yet.. The trains are notably quieter today, with frustrat"
         }
       ],
       "metadata": {
