@@ -1,0 +1,70 @@
+name: Upload Golden Feed
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build and validate payload without changing production"
+        type: boolean
+        required: false
+        default: true
+      expire_existing:
+        description: "Expire existing AI-generated feed before upload"
+        type: boolean
+        required: false
+        default: false
+      min_per_city:
+        description: "Minimum accepted golden messages per city"
+        required: false
+        default: "15"
+      max_per_city:
+        description: "Maximum golden messages per city"
+        required: false
+        default: "20"
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build golden payload
+        run: >
+          node scripts/build-golden-feed-payload.mjs
+          --input content/golden-feed-messages.json
+          --out /tmp/golden-feed-payload.json
+          --min-per-city "${{ inputs.min_per_city }}"
+          --max-per-city "${{ inputs.max_per_city }}"
+
+      - name: Show payload stats
+        run: |
+          node -e "const fs=require('fs'); const data=JSON.parse(fs.readFileSync('/tmp/golden-feed-payload.json','utf8')); console.log(JSON.stringify({selectedCount:data.meta.selectedCount, rejectedCount:data.meta.rejectedCount, counts:data.meta.counts}, null, 2));"
+
+      - name: Dry-run expiration
+        if: ${{ inputs.expire_existing == true && inputs.dry_run == true }}
+        run: node scripts/expire-active-seed-messages.mjs --dry-run
+
+      - name: Expire existing generated feed
+        if: ${{ inputs.expire_existing == true && inputs.dry_run == false }}
+        run: node scripts/expire-active-seed-messages.mjs
+
+      - name: Dry-run upload
+        if: ${{ inputs.dry_run == true }}
+        run: node scripts/upload-seed-payload.mjs --input /tmp/golden-feed-payload.json --dry-run
+
+      - name: Upload golden payload
+        if: ${{ inputs.dry_run == false }}
+        run: node scripts/upload-seed-payload.mjs --input /tmp/golden-feed-payload.json
