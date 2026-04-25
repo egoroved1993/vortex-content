@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-24T23:21:36.376Z",
+    "capturedAt": "2026-04-25T00:52:14.135Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,18 +15,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 342
+    "totalItems": 343
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-24T23:21:36.376Z",
-      "mood_score": 0.437,
+      "captured_at": "2026-04-25T00:52:14.135Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -34,29 +34,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to earlier strike action."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to earlier strike action."
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -79,29 +63,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Rayners Lane and Uxbridge and SEVERE DELAYS between Acton Town and Rayners Lane due"
+          "excerpt": "London transit Jubilee: Part Closure JUBILEE LINE: Saturday 25 April, between 0100 and 0430, no service between Willesden Green and Stanmore."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 April, between 0130 and 0530, no service between Kings Cross St Pancras and Cockfosters. Us"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "My kid had the same issue. They've recorded the sound from a YouTube of traffic noise (yep they exist) and looped it using Audacity so it will play continually for 8 hours without "
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.185,
+        "source_item_count": 52,
+        "average_valence": -0.141,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.926
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-24T23:21:36.376Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-04-25T00:52:14.135Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,7 +110,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -130,17 +129,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Gerhard Schröder wanted Berlin to become the \"Hub to the East\" with his pal Putin. Things worked out differently than expected.. This is one reason flights in the other direction a"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N60: Delays 1 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "wow thats really crazy, my blue card in a Lower Saxony city only took 2 weeks. That's why I avoid living in Berlin bcs of how crowded it gets lol. I suggest you move to a lower sax"
         },
         {
           "source_family": "world",
@@ -157,28 +148,36 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon is draped in a heavy gray sky, with a cool breeze that occasionally stirs the fallen leaves along the sidewalks.. With the BVG back in operation, commuters are cautio"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.051,
+        "source_item_count": 91,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "weather"
         ],
         "freshness_score": 0.941
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-24T23:21:36.376Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-04-25T00:52:14.135Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,7 +197,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Orphan Andy's is only open 24 hours on weekends now, it used to be a true open 24 hours restaurant all week long. The pandemic led to a reduction in late night options across the c"
+          "excerpt": "People can’t just go out and buy a home instead of renting as home ownership is significantly more expensive than renting - especially in SF and the surrounding areas."
         },
         {
           "source_family": "forum",
@@ -209,47 +208,47 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell who’s local when they flinch at the BART delays but still trust it over an Uber surge. It’s like a badge"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a true local by how they know to avoid the BART delays and just roll with a bike or scooter when the Civ"
+          "excerpt": "I would forget about number 1. The closer to the bridge the worse the parking the time you save will be wasted. I'd suggest northern peninsula honestly Darby dans in south san fran"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy dressed as a pirate trying to board a crowded bus. He didn’t get on but made the entire line laugh. Only in SF."
+          "excerpt": "It’s a good idea, but depending on the day you might have to kill A LOT of time for it to make a difference. You shouldn’t try to get on/off the freeway near the bridge during that"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a gloomy gray, with a chill in the air that hints at rain, making the pavement glisten in the fading light.. BART platforms are crowded and buzzing with anxiety, as ride"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.074,
+        "source_item_count": 63,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.822
+        "freshness_score": 0.844
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-24T23:21:36.376Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-25T00:52:14.135Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -306,7 +305,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a blanket of gray, thick with impending rain that casts a muted light over the bustling streets.. The usually packed trains are quieter today, with commuters glancing ne"
+          "excerpt": "The sky is a slate grey, threatening rain, while a brisk wind carries the scent of damp earth through the narrow streets.. The atmosphere at the Plaça de Catalunya is restless as c"
         }
       ],
       "metadata": {
@@ -314,10 +313,10 @@
         "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.636
+        "freshness_score": 0.639
       }
     }
   ]
