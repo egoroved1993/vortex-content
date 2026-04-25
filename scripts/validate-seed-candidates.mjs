@@ -114,7 +114,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const issues = [];
   if (!content) issues.push("empty_content");
   if (content.length < 45) issues.push("too_short");
-  if (content.length > 280) issues.push("too_long");
+  if (content.length > 240) issues.push("too_long");
   if (!signals.detail) issues.push("low_detail");
   if (!signals.firstPerson && !signals.implicitFirstPerson && !signals.dialogue && !signals.localComplaintFragment) issues.push("weak_mindprint");
   if (!signals.anchor) issues.push("missing_city_anchor");
@@ -296,6 +296,37 @@ function looksGeneric(contentLower) {
     "classic sf move",
     "classic berlin ritual",
     "classic berlin move",
+    "feels like",
+    "vibe",
+    "weird thrill",
+    "startup prices",
+    "too polished to trust",
+    "editing themselves",
+    "genuine stuff feels rehearsed",
+    "not sure it was worth the hassle",
+    "pressure to perform",
+    "mini airport",
+    "bad investment",
+    "small spati",
+    "mix of curry and desperation",
+    "buzz felt real",
+    "life choices too",
+    "struggle, abi",
+    "performing the right public feeling",
+    "google translate mess",
+    "basically perfect for middle aged",
+    "so you should totally move here",
+    "jessica burch",
+    "tech bros talking",
+    "circle back on the budget",
+    "felt nothing but tired",
+    "got me thinking",
+    "romanticizes the past",
+    "casual kindness",
+    "nice it must be",
+    "hipster or overpriced",
+    "only in kreuzberg",
+    "late-night snack and local art",
   ];
   return genericPhrases.some((phrase) => contentLower.includes(phrase));
 }
@@ -317,7 +348,7 @@ function looksTooPolished(sentences, words, contentLower) {
   const vagueConnector = /\bsomehow\b/i.test(contentLower) && !groundedFirstPerson;
   const syntheticCoda =
     /\bclassic (london|barcelona|san francisco|sf|berlin) (ritual|move)\b/i.test(contentLower) ||
-    /\b(extra in someone else'?s romantic comedy|different planet|expensive city|small win|badge of honor|small failure|some kind of secret|tourists and prices)\b/i.test(contentLower);
+    /\b(extra in someone else'?s romantic comedy|different planet|expensive city|small win|badge of honor|small failure|some kind of secret|tourists and prices|got me thinking|romanticizes the past|nice it must be|only in kreuzberg)\b/i.test(contentLower);
 
   return (
     syntheticCoda ||
@@ -372,6 +403,21 @@ function looksEssayLike(contentLower, sentences, words) {
     "watch tourists flock",
     "prices inflated",
     "some kind of secret",
+    "feels like",
+    "vibe",
+    "weird thrill",
+    "startup prices",
+    "too polished to trust",
+    "editing themselves",
+    "pressure to perform",
+    "mini airport",
+    "bad investment",
+    "buzz felt real",
+    "got me thinking",
+    "romanticizes the past",
+    "nice it must be",
+    "only in kreuzberg",
+    "late-night snack and local art",
   ];
 
   const abstractTerms = [
@@ -445,6 +491,11 @@ function looksForumAdviceFraming(contentLower) {
     "that is not shady",
     "go with a different airline",
     "i know some people that live",
+    "in case you’re undecided",
+    "in case you're undecided",
+    "middle aged gay men",
+    "so you should totally move here",
+    "most of our buildings",
     "unit below them just opened up",
     "on roommate math",
   ];
@@ -550,6 +601,10 @@ function looksStagedObservation(contentLower) {
     "staring into the distance like",
     "like he's waiting for something to happen",
     "like he’s waiting for something to happen",
+    "one-night stand in coffee form",
+    "mix of curry and desperation",
+    "performing the right public feeling",
+    "google translate mess",
   ];
 
   const contrastyAesthetic =
@@ -677,6 +732,16 @@ function looksPipelineSeam(content, contentLower, cityId) {
     "latest match result has everyone acting",
     "they think the local bars",
     "if you know where to look",
+    "feels like",
+    "vibe",
+    "my current theory",
+    "tells you more about this city",
+    "checked the board twice and still ended up late",
+    "thing had already spread down the platform",
+    "one normal errand",
+    "reopening the same rent tab",
+    "useful train",
+    "suitcase slalom",
     "сидю",
   ];
   if (generatedTrendFragments.some((fragment) => contentLower.includes(fragment))) return true;
@@ -757,6 +822,7 @@ function looksClonedTemplate(contentLower) {
   // The "checked the board twice" template is very specific
   if (contentLower.includes("checked the board twice and still ended up late")) return true;
   if (contentLower.includes("i heard another ai conversation before coffee")) return true;
+  if (/^this morning at\b/.test(contentLower)) return true;
   return false;
 }
 

@@ -574,12 +574,12 @@ Do NOT write travel copy. Do NOT compare cities unless the job explicitly asks. 
   // gpt-4o → философская женщина-миллениал-местная
   if (providerHint === "openai" && modelName === "gpt-4o") {
     return `CHARACTER VOICE — this is non-negotiable and overrides any neutral tone you default to.
-You are a local millennial woman who has lived in this city her whole life. Philosophical. You find meaning in small things and connect them to something larger without stating the connection explicitly. You notice what others miss. Occasionally melancholic, sometimes quietly beautiful. You think out loud and don't need a conclusion.
+You are a local millennial who has lived in this city for years. Observant, tired, specific, not lyrical. You notice small social tells and write them down plainly before they turn into an essay.
 Examples of your voice (city-agnostic):
-- "watched a stranger help an old man with his groceries and felt something shift. the city still has its moments."
-- "that café has been here since before I was born. prices went up twice this year. I keep going anyway. don't know what that means."
-- "the light in October here does something to you. like it's apologizing for the summer."
-Do NOT wrap up neatly. Do NOT be neutral. Let things stay unresolved.`;
+- "same woman at the bakery corrected my order again. honestly useful at this point."
+- "the bus driver waited for one running teenager and everyone pretended not to be pleased."
+- "my neighbour wrote 'temporary' on a box in the hallway six months ago. still there."
+Do NOT wrap up neatly. Do NOT write beautifully. Let things stay underexplained.`;
   }
   // grok-3 → бумер-местный с юмором
   if (providerHint === "xai" && modelName === "grok-3") {
@@ -999,7 +999,7 @@ function sanitizeGeneratedContent(job, value) {
     return sanitizeNewsContent(job, cleaned);
   }
 
-  if (!cleaned || looksPromptLeaked(cleaned)) return buildFallbackContent(job);
+  if (!cleaned || looksPromptLeaked(cleaned)) return fallbackContentForMode(job);
 
   const bounded = enforceCharacterLimit(
     stripSyntheticLanding(cleanGeneratedText(cleaned)),
@@ -1015,7 +1015,7 @@ function sanitizeGeneratedContent(job, value) {
 
   if (bounded.length >= 45 && !looksTooComposed(bounded) && !hasSyntheticThesisOpener(bounded)) return bounded;
 
-  return buildFallbackContent(job);
+  return fallbackContentForMode(job);
 }
 
 // Detect if text is actually in the forced language (cyrillic for Russian, etc)
@@ -1082,6 +1082,10 @@ function buildFallbackContent(job) {
   );
 }
 
+function fallbackContentForMode(job) {
+  return useMock ? buildFallbackContent(job) : "";
+}
+
 function cleanSourceFallback(job) {
   const rawParts = [];
 
@@ -1112,12 +1116,12 @@ function sanitizeMinimalSalvageContent(job, candidateText) {
   const maxChars = job.lane === "mind_post" ? 400 : 350;
   const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
   if (!candidateText || looksPromptLeaked(candidateText)) {
-    return sourceCandidate || buildFallbackContent(job);
+    return sourceCandidate || fallbackContentForMode(job);
   }
 
   const modelCandidate = sanitizeSourceLikeText(candidateText, maxChars);
   if (!sourceCandidate) {
-    return modelCandidate || buildFallbackContent(job);
+    return modelCandidate || fallbackContentForMode(job);
   }
   if (!modelCandidate) return sourceCandidate;
   if (!hasEnoughSourceOverlap(modelCandidate, sourceCandidate)) return sourceCandidate;
@@ -1170,29 +1174,31 @@ function buildNewsFallbackContent(job, sourceCandidate) {
   const eventPhrase = rawEventPhrase.split(/\s+/).length <= 5 ? rawEventPhrase : "";
   const prefix = freshnessPrefixFor(job);
 
-  if (/\b(strike|delays?|closure|cancelled|service|platform|tube|muni|bart|u-bahn|ringbahn|tram|metro)\b/.test(lower)) {
-    return enforceCharacterLimit(
-      `${prefix} at ${anchor} i checked the board twice and still ended up late because the ${eventPhrase || "delay"} thing had already spread down the platform.`,
-      maxChars
-    );
-  }
-  if (/\b(rent|housing|homes|build-to-rent|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
-    return enforceCharacterLimit(
-      `${prefix} near ${anchor} the ${eventPhrase || "housing"} update had me reopening the same rent tab before coffee.`,
-      maxChars
-    );
-  }
-  if (/\b(touris|visitor|hotel|cruise|suitcase)\b/.test(lower)) {
-    return enforceCharacterLimit(
-      `${prefix} near ${anchor} i had to do the suitcase slalom again because the ${eventPhrase || "tourism"} thing was already running the pavement.`,
-      maxChars
-    );
-  }
-  if (/\b(weather|rain|flood|fog|heat|cold|storm)\b/.test(lower)) {
-    return enforceCharacterLimit(
-      `${prefix} near ${anchor} the ${eventPhrase || "weather"} thing made me wear the wrong jacket and miss the useful train.`,
-      maxChars
-    );
+  if (useMock) {
+    if (/\b(strike|delays?|closure|cancelled|service|platform|tube|muni|bart|u-bahn|ringbahn|tram|metro)\b/.test(lower)) {
+      return enforceCharacterLimit(
+        `${prefix} at ${anchor} i checked the board twice and still ended up late because the ${eventPhrase || "delay"} thing had already spread down the platform.`,
+        maxChars
+      );
+    }
+    if (/\b(rent|housing|homes|build-to-rent|lease|apartment|flat|eviction|airbnb)\b/.test(lower)) {
+      return enforceCharacterLimit(
+        `${prefix} near ${anchor} the ${eventPhrase || "housing"} update had me reopening the same rent tab before coffee.`,
+        maxChars
+      );
+    }
+    if (/\b(touris|visitor|hotel|cruise|suitcase)\b/.test(lower)) {
+      return enforceCharacterLimit(
+        `${prefix} near ${anchor} i had to do the suitcase slalom again because the ${eventPhrase || "tourism"} thing was already running the pavement.`,
+        maxChars
+      );
+    }
+    if (/\b(weather|rain|flood|fog|heat|cold|storm)\b/.test(lower)) {
+      return enforceCharacterLimit(
+        `${prefix} near ${anchor} the ${eventPhrase || "weather"} thing made me wear the wrong jacket and miss the useful train.`,
+        maxChars
+      );
+    }
   }
   if (source && hasHumanTrace(source) && !looksArticleish(source)) {
     return source;
@@ -1201,13 +1207,14 @@ function buildNewsFallbackContent(job, sourceCandidate) {
     return enforceCharacterLimit(source, maxChars);
   }
   if (eventPhrase) {
+    if (!useMock) return "";
     return enforceCharacterLimit(
       `${prefix} near ${anchor} i had one normal errand and the ${eventPhrase} thing still turned it into a detour.`,
       maxChars
     );
   }
 
-  return buildFallbackContent(job);
+  return fallbackContentForMode(job);
 }
 
 function cleanGeneratedText(value) {

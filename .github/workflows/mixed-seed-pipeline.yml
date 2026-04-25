@@ -27,7 +27,7 @@ on:
       mix:
         description: "Comma-separated source families"
         required: false
-        default: "launch,public,review,forum,signals,news,social,world,bridge"
+        default: "launch,public,review,forum,signals,news,social"
       city_focus:
         description: "Optional city focus"
         required: false
@@ -86,7 +86,7 @@ jobs:
             echo "count=480" >> "$GITHUB_OUTPUT"
             echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
             echo "upload=true" >> "$GITHUB_OUTPUT"
-            echo "mix=launch,public,review,forum,signals,news,social,world,bridge" >> "$GITHUB_OUTPUT"
+            echo "mix=launch,public,review,forum,signals,news,social" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
             echo "seed=mixed-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
           else
@@ -104,7 +104,7 @@ jobs:
             echo "count=${{ inputs.count || '480' }}" >> "$GITHUB_OUTPUT"
             echo "model=${MANUAL_MODEL}" >> "$GITHUB_OUTPUT"
             echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
-            echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social,world,bridge' }}" >> "$GITHUB_OUTPUT"
+            echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social' }}" >> "$GITHUB_OUTPUT"
             echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
             echo "seed=mixed-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
           fi

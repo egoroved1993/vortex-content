@@ -1,8 +1,8 @@
 export const launchMix = {
   defaultCount: 320,
   lanes: {
-    micro_moment: 0.72,
-    mind_post: 0.28,
+    micro_moment: 0.88,
+    mind_post: 0.12,
   },
   gameSources: {
     human: 0.5,
