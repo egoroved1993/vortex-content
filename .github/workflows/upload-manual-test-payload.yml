@@ -38,9 +38,12 @@ jobs:
           set -euo pipefail
           node -e "const fs=require('fs'); const p='${{ inputs.payload_path }}'; const data=JSON.parse(fs.readFileSync(p,'utf8')); console.log(JSON.stringify({payload:p, selectedCount:data?.meta?.selectedCount ?? (data.rows?.length ?? 0), rows:data.rows?.length ?? 0}, null, 2));"
 
-      - name: Expire existing generated feed
-        if: ${{ inputs.expire_existing == true }}
-        run: node scripts/expire-active-seed-messages.mjs
-
       - name: Upload manual payload
-        run: node scripts/upload-seed-payload.mjs --input "${{ inputs.payload_path }}"
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(--input "${{ inputs.payload_path }}")
+          if [[ "${{ inputs.expire_existing }}" == "true" ]]; then
+            args+=(--replace-existing)
+          fi
+          node scripts/upload-seed-payload.mjs "${args[@]}"

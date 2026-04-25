@@ -112,14 +112,11 @@ if (upload) {
       uploadState.reason = minimums.reason;
       console.warn(`Prepared payload did not meet replacement minimums (${minimums.reason}); keeping current generated feed in place and skipping main upload`);
     } else {
-      if (expireExisting) {
-        runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), [
-          ...(cityFocus ? ["--city", cityFocus] : []),
-        ]);
-      }
       runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
         "--input",
         payloadPath,
+        ...(expireExisting ? ["--replace-existing"] : []),
+        ...(expireExisting && cityFocus ? ["--city", cityFocus] : []),
       ]);
       uploadState.uploadedMain = true;
       uploadState.reason = "uploaded";

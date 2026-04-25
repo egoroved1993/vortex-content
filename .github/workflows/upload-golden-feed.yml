@@ -53,18 +53,15 @@ jobs:
         run: |
           node -e "const fs=require('fs'); const data=JSON.parse(fs.readFileSync('/tmp/golden-feed-payload.json','utf8')); console.log(JSON.stringify({selectedCount:data.meta.selectedCount, rejectedCount:data.meta.rejectedCount, counts:data.meta.counts}, null, 2));"
 
-      - name: Dry-run expiration
-        if: ${{ inputs.expire_existing == true && inputs.dry_run == true }}
-        run: node scripts/expire-active-seed-messages.mjs --dry-run
-
-      - name: Expire existing generated feed
-        if: ${{ inputs.expire_existing == true && inputs.dry_run == false }}
-        run: node scripts/expire-active-seed-messages.mjs
-
-      - name: Dry-run upload
-        if: ${{ inputs.dry_run == true }}
-        run: node scripts/upload-seed-payload.mjs --input /tmp/golden-feed-payload.json --dry-run
-
       - name: Upload golden payload
-        if: ${{ inputs.dry_run == false }}
-        run: node scripts/upload-seed-payload.mjs --input /tmp/golden-feed-payload.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(--input /tmp/golden-feed-payload.json)
+          if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+            args+=(--dry-run)
+          fi
+          if [[ "${{ inputs.expire_existing }}" == "true" ]]; then
+            args+=(--replace-existing)
+          fi
+          node scripts/upload-seed-payload.mjs "${args[@]}"
