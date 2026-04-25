@@ -107,13 +107,15 @@ const uploadState = {
 
 if (upload) {
   if (payloadRows.length > 0) {
-    const minimums = checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity });
+    const minimums = checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity, cityFocus });
     if (expireExisting && !minimums.ok) {
       uploadState.reason = minimums.reason;
       console.warn(`Prepared payload did not meet replacement minimums (${minimums.reason}); keeping current generated feed in place and skipping main upload`);
     } else {
       if (expireExisting) {
-        runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), []);
+        runNode(path.join(projectRoot, "scripts", "expire-active-seed-messages.mjs"), [
+          ...(cityFocus ? ["--city", cityFocus] : []),
+        ]);
       }
       runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
         "--input",
@@ -192,13 +194,13 @@ function runNode(scriptPath, scriptArgs) {
   }
 }
 
-function checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity }) {
+function checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity, cityFocus }) {
   if (payloadRows.length < minUploadTotal) {
     return { ok: false, reason: `total_below_min:${payloadRows.length}/${minUploadTotal}` };
   }
 
   if (minUploadPerCity > 0) {
-    const expectedCities = cities.map((city) => city.id);
+    const expectedCities = cityFocus ? [cityFocus] : cities.map((city) => city.id);
     const lowCity = expectedCities.find((cityId) => (cityCounts[cityId] ?? 0) < minUploadPerCity);
     if (lowCity) {
       return { ok: false, reason: `city_below_min:${lowCity}:${cityCounts[lowCity] ?? 0}/${minUploadPerCity}` };

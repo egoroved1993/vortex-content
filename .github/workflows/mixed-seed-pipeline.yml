@@ -167,7 +167,11 @@ jobs:
           fi
 
           if [ "${{ inputs.expire_existing }}" = "true" ] && [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
-            ARGS+=( --expire-existing --min-upload-total 60 --min-upload-per-city 12 )
+            if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+              ARGS+=( --expire-existing --min-upload-total 12 --min-upload-per-city 12 )
+            else
+              ARGS+=( --expire-existing --min-upload-total 60 --min-upload-per-city 12 )
+            fi
           fi
 
           node scripts/run-seed-pipeline.mjs "${ARGS[@]}"
