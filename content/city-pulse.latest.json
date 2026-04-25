@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-25T01:41:40.527Z",
+    "capturedAt": "2026-04-25T03:13:32.556Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 343
+    "totalItems": 344
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-25T01:41:40.527Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-04-25T03:13:32.556Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -84,19 +84,19 @@
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.14,
+        "average_valence": -0.143,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.908
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-25T01:41:40.527Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-25T03:13:32.556Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,6 +127,14 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -134,47 +143,39 @@
           "excerpt": "wow thats really crazy, my blue card in a Lower Saxony city only took 2 weeks. That's why I avoid living in Berlin bcs of how crowded it gets lol. I suggest you move to a lower sax"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you catch a bus-turned-restaurant, serving currywurst at midnight while you wait for a late tram. Pure"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A crisp breeze slices through the streets, carrying with it the earthy scent of fallen leaves under the muted gray sky.. Despite the recent strikes, buses and trams are back on sch"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.037,
+        "source_item_count": 92,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.941
+        "freshness_score": 0.942
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-25T01:41:40.527Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-25T03:13:32.556Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 15,
@@ -224,31 +225,31 @@
           "excerpt": "It’s a good idea, but depending on the day you might have to kill A LOT of time for it to make a difference. You shouldn’t try to get on/off the freeway near the bridge during that"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with gray clouds, punctuated by a cool breeze that whispers promises of rain.. BART stations are packed with frustrated commuters, their faces a mix of impatien"
         }
       ],
       "metadata": {
         "source_item_count": 63,
-        "average_valence": -0.018,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-25T01:41:40.527Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-25T03:13:32.556Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of grey clouds casts an almost somber light over the city, hinting at rain that hasn't quite arrived yet.. The platforms at Plaça Catalunya are unusually crowded, wit"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -298,23 +307,15 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is overcast with a thick blanket of gray clouds, promising rain but holding back for now, casting a somber light over the city.. The trains are unusually quiet, with anxiou"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
         "freshness_score": 0.639
       }
