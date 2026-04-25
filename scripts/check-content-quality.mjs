@@ -24,6 +24,10 @@ function safeRead(p) {
   try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return null; }
 }
 
+function rowLinks(row) {
+  return row.links ?? row.payload?.links ?? [];
+}
+
 const CITY_CURRENCIES = { barcelona: ["€", "eur"], berlin: ["€", "eur"], london: ["£", "gbp"], sf: ["$", "usd"] };
 const WRONG_CURRENCY  = { barcelona: ["$", "£"], berlin: ["$", "£"], london: ["$", "€"], sf: ["£", "€"] };
 
@@ -71,11 +75,12 @@ function analyseRow(row) {
     if (c.toLowerCase().includes(w)) { issues.push(`wrong_city_ref:${w}`); break; }
   }
 
-  // 4. Russian in non-Russian city (Spanish/Catalan is fine in Barcelona)
-  if (/[а-яё]/iu.test(c)) issues.push("russian_text");
+  // 4. Cyrillic text is allowed when the payload declares Russian.
+  const detectedLanguage = String(row.detected_language ?? row.detectedLanguage ?? "").trim().toLowerCase();
+  if (/[а-яё]/iu.test(c) && detectedLanguage && detectedLanguage !== "ru") issues.push("russian_language_mismatch");
 
   // 5. No link but mentions specific place name (heuristic)
-  const hasLink = (row.links ?? []).length > 0;
+  const hasLink = rowLinks(row).length > 0;
   const mentionsPlace = /\b(bar|café|cafe|restaurant|club|market|gallery|shop|museum|bakery|cinema|theatre|theater|bookshop)\b/i.test(c);
   if (mentionsPlace && !hasLink) issues.push("place_mentioned_no_link");
 
@@ -106,7 +111,7 @@ function summarise(rows) {
   for (const row of rows) {
     const city = row.city_id;
     byCity[city] = (byCity[city] ?? 0) + 1;
-    if ((row.links ?? []).length > 0) withLinks++;
+    if (rowLinks(row).length > 0) withLinks++;
 
     const issues = analyseRow(row);
     if (issues.length > 0) {
@@ -154,7 +159,7 @@ console.log(`⚠️  Messages with issues: ${all.totalIssues}/${all.total} (${Ma
 console.log("📊 By city:");
 for (const [city, count] of Object.entries(all.byCity)) {
   const cityRows = allRows.filter(r => r.city_id === city);
-  const cityLinks = cityRows.filter(r => (r.links ?? []).length > 0).length;
+  const cityLinks = cityRows.filter(r => rowLinks(r).length > 0).length;
   const cityIssues = cityRows.filter(r => analyseRow(r).length > 0).length;
   console.log(`   ${city.padEnd(10)} ${count} msgs  |  links: ${cityLinks}  |  issues: ${cityIssues}`);
 }
@@ -182,8 +187,8 @@ const suggestions = [];
 if (all.issueCounts["wrong_currency:$"] > 0 || all.issueCounts["wrong_currency:€"] > 0) {
   suggestions.push("Fix currency: add per-city currency instruction to prompts (€ for EU, £ for London, $ for SF).");
 }
-if (all.issueCounts["russian_text"] > 0) {
-  suggestions.push("Russian text found outside Russian-speaking context — tighten Telegram scoring filter.");
+if (all.issueCounts["russian_language_mismatch"] > 0) {
+  suggestions.push("Cyrillic text has a non-Russian detected_language — fix language normalization before upload.");
 }
 if (all.issueCounts["place_mentioned_no_link"] > 0) {
   const pct = Math.round(all.issueCounts["place_mentioned_no_link"] / all.total * 100);
@@ -228,7 +233,7 @@ if (summaryPath) {
   lines.push("|---|---|---|---|");
   for (const [city, count] of Object.entries(all.byCity)) {
     const cityRows = allRows.filter(r => r.city_id === city);
-    const cityLinks = cityRows.filter(r => (r.links ?? []).length > 0).length;
+    const cityLinks = cityRows.filter(r => rowLinks(r).length > 0).length;
     const cityIssues = cityRows.filter(r => analyseRow(r).length > 0).length;
     lines.push(`| ${city} | ${count} | ${cityLinks} | ${cityIssues} |`);
   }

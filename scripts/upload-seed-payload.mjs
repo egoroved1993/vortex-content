@@ -71,6 +71,7 @@ await repairExpiresAt(supabaseUrl, supabaseServiceKey, uploadBatchId, replaceCit
 // NOTE: randomize_recent_timestamps RPC removed from client side — but it still runs
 // server-side inside bulk_insert_messages. The repair step above fixes the damage.
 if (replaceExisting) {
+  await adoptExistingUploadRows(supabaseUrl, supabaseServiceKey, rows, uploadBatchId, replaceCity);
   await replaceExistingFeed(supabaseUrl, supabaseServiceKey, uploadBatchId, replaceCity);
 }
 
@@ -171,6 +172,56 @@ async function replaceExistingFeed(url, key, batchId, cityId) {
   }
 
   console.log(`Replacement: restored ${restoreCount} uploaded messages → ${restoreTtl}`);
+}
+
+async function adoptExistingUploadRows(url, key, sourceRows, batchId, cityId) {
+  let adopted = 0;
+  const restoreTtl = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+
+  for (const row of sourceRows) {
+    const content = String(row.content ?? "").trim();
+    const rowCityId = String(row.city_id ?? row.cityId ?? "").trim();
+    if (!content || !rowCityId || (cityId && rowCityId !== cityId)) continue;
+
+    const filter = [
+      "author_id=is.null",
+      `city_id=eq.${encodeURIComponent(rowCityId)}`,
+      `content=eq.${encodeURIComponent(content)}`,
+    ].join("&");
+
+    const count = await countRows(url, key, filter);
+    if (count === 0) continue;
+
+    const response = await fetch(`${url}/rest/v1/messages?${filter}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        Prefer: "return=minimal",
+      },
+      body: JSON.stringify({
+        detected_language: row.detected_language ?? row.detectedLanguage ?? "en",
+        source: row.source ?? "human",
+        sentiment: row.sentiment ?? "neutral",
+        type: row.type ?? "text",
+        created_at: randomTimeToday(),
+        expires_at: restoreTtl,
+        payload: {
+          ...normalizePayload(row.payload),
+          upload_batch_id: batchId,
+        },
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to adopt existing upload row: ${await response.text()}`);
+    }
+
+    adopted += count;
+  }
+
+  console.log(`Replacement: adopted ${adopted} existing duplicate rows into batch ${batchId}`);
 }
 
 function randomTimeToday() {

@@ -1,0 +1,171 @@
+name: Current Event Layer
+
+on:
+  schedule:
+    - cron: "30 9 * * *"
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: "Append approved event posts to Supabase"
+        type: boolean
+        required: false
+        default: false
+      date_range:
+        description: "Eventbrite date_range"
+        required: false
+        default: "this_month"
+      max_per_city:
+        description: "Max generated event jobs per city"
+        required: false
+        default: "4"
+      expires_hours:
+        description: "How long event posts stay active"
+        required: false
+        default: "48"
+      city_focus:
+        description: "Optional city id"
+        required: false
+        default: ""
+
+concurrency:
+  group: current-event-layer-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  events:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      MODEL_PROVIDER: openai
+      MODEL_NAME: gpt-4o-mini
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Resolve run configuration
+        id: cfg
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "upload=true" >> "$GITHUB_OUTPUT"
+            echo "date_range=this_month" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=2" >> "$GITHUB_OUTPUT"
+            echo "expires_hours=48" >> "$GITHUB_OUTPUT"
+            echo "city_focus=" >> "$GITHUB_OUTPUT"
+          else
+            echo "upload=${{ inputs.upload == true && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
+            echo "date_range=${{ inputs.date_range || 'this_month' }}" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=${{ inputs.max_per_city || '4' }}" >> "$GITHUB_OUTPUT"
+            echo "expires_hours=${{ inputs.expires_hours || '48' }}" >> "$GITHUB_OUTPUT"
+            echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch city events from Eventbrite
+        if: env.EVENTBRITE_API_KEY != ''
+        continue-on-error: true
+        run: node scripts/fetch-city-events.mjs --date-range "${{ steps.cfg.outputs.date_range }}" --max-per-city 16 --out content/events-snippets.json
+
+      - name: Fetch Resident Advisor Berlin nightlife
+        continue-on-error: true
+        run: node scripts/fetch-ra-berlin.mjs --out content/ra-berlin-events.json
+
+      - name: Build event jobs
+        id: jobs
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARGS=(
+            --max-per-city "${{ steps.cfg.outputs.max_per_city }}"
+            --horizon-days 45
+            --out content/event-discovery-jobs.json
+          )
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+          node scripts/build-event-discovery-jobs.mjs "${ARGS[@]}"
+          node -e "const fs=require('fs'); const rows=JSON.parse(fs.readFileSync('content/event-discovery-jobs.json','utf8')); console.log('count=' + rows.length);" >> "$GITHUB_OUTPUT"
+
+      - name: Generate event candidates
+        if: steps.jobs.outputs.count != '0'
+        run: |
+          node scripts/generate-seed-candidates.mjs \
+            --input content/event-discovery-jobs.json \
+            --out content/event-discovery-candidates.json \
+            --concurrency 2
+
+      - name: Validate event candidates
+        if: steps.jobs.outputs.count != '0'
+        run: |
+          node scripts/validate-seed-candidates.mjs \
+            --input content/event-discovery-candidates.json \
+            --out content/event-discovery-candidates.report.json
+
+      - name: Prepare event payload
+        if: steps.jobs.outputs.count != '0'
+        run: |
+          node scripts/prepare-seed-payload.mjs \
+            --candidates content/event-discovery-candidates.json \
+            --report content/event-discovery-candidates.report.json \
+            --out content/event-discovery-payload.json \
+            --expires-hours "${{ steps.cfg.outputs.expires_hours }}" \
+            --min-score 1 \
+            --min-mindprint 1 \
+            --min-ambiguity 1 \
+            --min-composite-score 1 \
+            --max-per-city "${{ steps.cfg.outputs.max_per_city }}" \
+            --max-total 12 \
+            --reviewer-buckets ship_now,strong_candidate,candidate
+
+      - name: Check event payload
+        if: steps.jobs.outputs.count != '0'
+        run: |
+          node scripts/check-event-payload.mjs \
+            --payload content/event-discovery-payload.json \
+            --require-links true
+          node scripts/check-content-quality.mjs \
+            --payload content/event-discovery-payload.json \
+            --place-payload content/missing-place-payload.json \
+            --out content/event-discovery-quality-report.json
+
+      - name: Read event payload state
+        id: payload
+        if: steps.jobs.outputs.count != '0'
+        shell: bash
+        run: |
+          node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync('content/event-discovery-payload.json','utf8')); console.log('rows=' + (p.rows || []).length);" >> "$GITHUB_OUTPUT"
+
+      - name: Upload event layer
+        if: steps.cfg.outputs.upload == 'true' && steps.payload.outputs.rows != '0'
+        run: node scripts/upload-seed-payload.mjs --input content/event-discovery-payload.json
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: current-event-layer-${{ github.run_id }}
+          path: |
+            content/events-snippets.json
+            content/ra-berlin-events.json
+            content/event-discovery-jobs.json
+            content/event-discovery-candidates.json
+            content/event-discovery-candidates.report.json
+            content/event-discovery-payload.json
+            content/event-discovery-quality-report.json
+          if-no-files-found: ignore

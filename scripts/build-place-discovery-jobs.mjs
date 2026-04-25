@@ -8,7 +8,10 @@ import { createSeededRandom, getCity, pickOne, pickWeighted } from "./seed-confi
 //
 // Sources (merged, deduped by place name+city):
 //   - content/curated-places.json  (hand-picked from 34travel, timeout, top50bars, local)
-//   - content/events-snippets.json (Eventbrite upcoming events, if present)
+//   - content/fetched-places.json  (daily Overpass/Foursquare/Google places)
+//
+// Upcoming events are handled by build-event-discovery-jobs.mjs so place prompts
+// do not accidentally turn a concert or screening into a restaurant-style review.
 //
 // Output: content/place-discovery-jobs.json
 
@@ -19,9 +22,6 @@ const curatedPath = args["curated-input"]
 const fetchedPath = args["fetched-input"]
   ? path.resolve(process.cwd(), args["fetched-input"])
   : resolveProjectPath("content", "fetched-places.json");
-const eventsPath = args["events-input"]
-  ? path.resolve(process.cwd(), args["events-input"])
-  : resolveProjectPath("content", "events-snippets.json");
 const outPath = args.out
   ? path.resolve(process.cwd(), args.out)
   : resolveProjectPath("content", "place-discovery-jobs.json");
@@ -42,24 +42,9 @@ const curatedPlaces = safeReadJson(curatedPath)
 const fetchedPlaces = safeReadJson(fetchedPath)
   .map((p) => ({ ...p, placeSource: p.source ?? "fetched" }));
 
-const eventPlaces = safeReadJson(eventsPath).map((e) => ({
-  cityId: e.cityId,
-  name: e.name,
-  neighborhood: e.neighborhood ?? "",
-  category: e.categoryName ?? "event",
-  fact: [
-    e.venueName ? `at ${e.venueName}` : "",
-    e.startLocal ? `on ${e.startLocal.slice(0, 10)}` : "",
-  ].filter(Boolean).join(", "),
-  lat: null,
-  lng: null,
-  url: e.url,
-  placeSource: "eventbrite",
-}));
-
-// Merge all sources: fetched (fresh, daily) takes priority, curated as fallback, events as bonus
+// Merge all sources: fetched (fresh, daily) takes priority, curated as fallback.
 // Shuffle before dedup so fetched places aren't always at the front
-const allPlaces = shuffle([...fetchedPlaces, ...curatedPlaces, ...eventPlaces], rand);
+const allPlaces = shuffle([...fetchedPlaces, ...curatedPlaces], rand);
 const seen = new Set();
 const places = allPlaces.filter((p) => {
   if (cityFocus && p.cityId !== cityFocus) return false;

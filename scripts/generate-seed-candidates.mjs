@@ -376,6 +376,12 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
       "\n\nFor news snippets, convert article pressure into one resident-sized consequence." +
       "\nDo not sound like a reporter, newsletter, explainer, or headline writer." +
       "\nNo rhetorical questions. No moral. No polished landing sentence.";
+  } else if (job.sourceFamily === "event_discovery") {
+    base +=
+      "\n\nFor event-discovery snippets, turn the upcoming event into one local human-sized consequence." +
+      "\nDo not write a promo, calendar listing, flyer, recommendation, or nightlife guide." +
+      "\nNo exact times, no ticket-sales language, no 'you should go' framing." +
+      "\nThe post should sound like logistics, irritation, anticipation, overheard chatter, or a tiny plan around the event.";
   } else if (["world", "bridge", "signals"].includes(job.sourceFamily)) {
     base +=
       "\n\nUse world/signal context only as pressure on routine, friction, or one overheard-feeling moment." +
@@ -424,7 +430,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
 
   // Inject Eventbrite events for this city — offer one relevant event as an optional link hook
   const cityEvents = cityEventsMap[job.cityId] ?? [];
-  if (cityEvents.length > 0 && !isMinimalSalvageFamily(job.sourceFamily)) {
+  if (cityEvents.length > 0 && !isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "event_discovery") {
     // Pick the event most relevant to the job or just the first one if nothing matches
     const event = pickRelevantEvent(job, cityEvents);
     if (event) {

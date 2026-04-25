@@ -66,6 +66,7 @@ for (const [index, message] of messages.entries()) {
       reviewer: "manual",
       scores: review.scores,
       tags: message.tags ?? [],
+      links: normalizeLinks(message.links),
     },
   });
 }
@@ -109,6 +110,17 @@ function normalizeDetectedLanguage(value, content = "") {
   if (/[äöüß]/i.test(content)) return "de";
   if (/[¿¡ñ]/i.test(content)) return "es";
   return "en";
+}
+
+function normalizeLinks(value) {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((link) => ({
+      type: String(link?.type ?? "web").trim() || "web",
+      url: String(link?.url ?? "").trim(),
+      ...(link?.label ? { label: String(link.label).trim() } : {}),
+    }))
+    .filter((link) => link.url);
 }
 
 function parseArgs(argv) {

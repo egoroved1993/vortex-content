@@ -15,6 +15,7 @@ const sourceFiles = {
   news: args["news-input"] ? path.resolve(process.cwd(), args["news-input"]) : resolveProjectPath("content", "news-snippets.json"),
   social: args["social-input"] ? path.resolve(process.cwd(), args["social-input"]) : resolveProjectPath("content", "social-snippets.json"),
   world: args["world-input"] ? path.resolve(process.cwd(), args["world-input"]) : resolveProjectPath("content", "world-trends.json"),
+  events: args["events-input"] ? path.resolve(process.cwd(), args["events-input"]) : resolveProjectPath("content", "events-snippets.json"),
   nightlife: args["nightlife-input"] ? path.resolve(process.cwd(), args["nightlife-input"]) : resolveProjectPath("content", "ra-berlin-events.json"),
   trends: args["trends-input"] ? path.resolve(process.cwd(), args["trends-input"]) : resolveProjectPath("content", "google-trends.json"),
   transport: args["transport-input"] ? path.resolve(process.cwd(), args["transport-input"]) : resolveProjectPath("content", "transport-signals.json"),
@@ -33,6 +34,7 @@ const items = [
   ...readNews(sourceFiles.news),
   ...readSocial(sourceFiles.social),
   ...readWorld(sourceFiles.world),
+  ...readEvents(sourceFiles.events),
   ...readNightlife(sourceFiles.nightlife),
   ...readTrends(sourceFiles.trends),
   ...readTransport(sourceFiles.transport),
@@ -143,6 +145,17 @@ function readNightlife(filePath) {
     language: "de",
     text: cleanText(entry.body ?? [entry.artists?.join(", "), entry.venueName, entry.date].filter(Boolean).join(". ")),
     observedAt: entry.fetchedAt ?? "today",
+  })).filter((entry) => entry.text.length > 0);
+}
+
+function readEvents(filePath) {
+  return safeReadJson(filePath).map((entry) => ({
+    cityId: entry.cityId,
+    sourceFamily: "events",
+    sourceOrigin: entry.sourceOrigin ?? "eventbrite",
+    language: normalizeSourceLanguage(entry.language ?? "en"),
+    text: cleanText(entry.text ?? [entry.name, entry.venueName, entry.neighborhood, entry.categoryName].filter(Boolean).join(". ")),
+    observedAt: entry.startLocal ?? entry.fetchedAt ?? "today",
   })).filter((entry) => entry.text.length > 0);
 }
 
@@ -288,6 +301,8 @@ function sourceWeight(sourceFamily) {
       return 0.68;
     case "nightlife":
       return 0.82;
+    case "events":
+      return 0.86;
     case "transport":
       return 1.05; // real-time disruptions are highly relevant
     case "sports":
@@ -331,6 +346,7 @@ function detectThemes(text) {
   if (/\b(catalan|spanish|german|english|translation|accent|русск)\b/.test(lower)) themes.push("language");
   if (/\b(fog|rain|cold|heat|weather|warmth)\b/.test(lower)) themes.push("weather");
   if (/\b(bar|bakery|cafe|coffee|burrito|restaurant|pub)\b/.test(lower)) themes.push("routine");
+  if (/\b(event|concert|gig|festival|screening|show|club|venue|tickets?|lineup|exhibition|talk)\b/.test(lower)) themes.push("events");
   if (/\b(helped|solidarity|kind|neighbours|neighbors|community|belong|home)\b/.test(lower)) themes.push("belonging");
   return themes.length > 0 ? themes : ["general"];
 }

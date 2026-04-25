@@ -27,6 +27,7 @@ jobs:
       TG_WORK_API_ID: ${{ secrets.TG_WORK_API_ID }}
       TG_WORK_API_HASH: ${{ secrets.TG_WORK_API_HASH }}
       TG_WORK_SESSION: ${{ secrets.TG_WORK_SESSION }}
+      EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
 
     steps:
       - name: Checkout
@@ -54,9 +55,7 @@ jobs:
       - name: Fetch city events from Eventbrite
         if: env.EVENTBRITE_API_KEY != ''
         continue-on-error: true
-        env:
-          EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
-        run: node scripts/fetch-city-events.mjs
+        run: node scripts/fetch-city-events.mjs --date-range this_month --max-per-city 12
 
       - name: Fetch Resident Advisor Berlin nightlife
         continue-on-error: true

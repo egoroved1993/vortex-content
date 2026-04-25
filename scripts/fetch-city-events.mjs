@@ -5,7 +5,7 @@ import { resolveProjectPath } from "./path-utils.mjs";
 // Eventbrite API — free tier, requires EVENTBRITE_API_KEY env var
 // Register at: https://www.eventbrite.com/platform/api → Create App → Private token
 //
-// Fetches upcoming events (next 7 days) for each city.
+// Fetches upcoming events for each city.
 // Output: content/events-snippets.json
 
 const EVENTBRITE_API_KEY = process.env.EVENTBRITE_API_KEY;
@@ -45,12 +45,12 @@ const CITY_CONFIGS = [
 // Event categories to include (music, arts, food, sports, community, science)
 const ALLOWED_CATEGORY_IDS = new Set(["103", "104", "105", "108", "110", "111", "113", "115"]);
 
-const MAX_PER_CITY = 6;
-
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out
   ? path.resolve(process.cwd(), args.out)
   : resolveProjectPath("content", "events-snippets.json");
+const maxPerCity = Number(args["max-per-city"] ?? 12);
+const dateRange = String(args["date-range"] ?? "this_month");
 
 if (!EVENTBRITE_API_KEY) {
   console.warn("EVENTBRITE_API_KEY not set — skipping event fetch, keeping existing file.");
@@ -58,9 +58,6 @@ if (!EVENTBRITE_API_KEY) {
 }
 
 const now = new Date();
-const sevenDaysLater = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
-const startRange = now.toISOString().slice(0, 19) + "Z";
-const endRange = sevenDaysLater.toISOString().slice(0, 19) + "Z";
 
 const allSnippets = [];
 
@@ -72,7 +69,7 @@ for (const city of CITY_CONFIGS) {
       latitude: String(city.lat),
       longitude: String(city.lng),
       within: `${city.withinKm}km`,
-      "date_range": "this_week",
+      "date_range": dateRange,
       page_size: "50",
     });
 
@@ -102,7 +99,7 @@ for (const city of CITY_CONFIGS) {
         if (event.online_event) return false;
         return true;
       })
-      .slice(0, MAX_PER_CITY);
+      .slice(0, maxPerCity);
 
     for (const event of filtered) {
       const venue = event.venue;

@@ -49,6 +49,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const sentences = splitSentences(content);
   const words = contentLower.split(/\s+/).filter(Boolean);
   const anchorsForCity = candidate.cityId ? cityAnchorTokens[candidate.cityId] ?? [] : [];
+  const jobAnchorTokens = extractCandidateAnchorTokens(candidate);
   const currentContext = mergeContext(candidate.cityId);
   const contextOverlap = countOverlap(words, currentContext.tokens);
   const newsContextOverlap = countOverlap(words, currentContext.newsTokens);
@@ -63,10 +64,11 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
       /^[\s"'“”]*(?:(?:this morning|this afternoon|today|tonight|hoy|avui|heute)[,\s]+)?(paid|missed|checked|reopened|opened|walked|heard|watched|got|took|spent|stood|queued|dodged|did|lost|waiting|waited|caught|catching)\b/i.test(content) ||
       /^[\s"'“”]*(?:otra mañana|hoy|avui|aquesta matinada|esta mañana)[,\s]+(?:escuchando|viendo|mirando|esperando|pagando|buscando|sentint|veient|mirant|esperant|pagant)\b/i.test(content),
     dialogue: /[“’””«»]/.test(content) || /\bsaid\b/i.test(content),
-    detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|каталан|каталан|барселон|шум|miete|l3|очеред|дождь|туман|кофе|автобус|метро|турист|чемодан|кухн|холодильник|официант|сосед|велосипед|граффити|двор|бабушка|местные|аренд|хозяин|еда|толпа|деньги)/i.test(content),
+    detail: /(\d|€|\$|£|:|line \d|line \w|\bl\d\b|stop|platform|queue|rent|coffee|espresso|cortado|flat white|tram|bus|train|metro|ube?r?bahn|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|bodega|fog|startup|kebab|canal|market|bakery|corner shop|overground|victoria line|u8|ringbahn|metro line|dolores|mission|sunset district|painted ladies|brick lane|pret|hackney|peckham|islington|dalston|gracia|raval|barceloneta|superblock|neukolln|prenzlauer|kreuzberg|friedrichshain|spati|maletas|barrio|ticket|tickets|gig|concert|festival|screening|lineup|venue|door|guestlist|club|exhibition|каталан|каталан|барселон|шум|miete|l3|очеред|дождь|туман|кофе|автобус|метро|турист|чемодан|кухн|холодильник|официант|сосед|велосипед|граффити|двор|бабушка|местные|аренд|хозяин|еда|толпа|деньги)/i.test(content),
     anchor:
       cityAnchorsLower.some((anchor) => contentLower.includes(anchor)) ||
       anchorsForCity.some((token) => contentLower.includes(token)) ||
+      jobAnchorTokens.some((token) => contentLower.includes(token)) ||
       /(барселон|берлин|лондон|сан[- ]?франц|san francisco|barcelona|berlin|london)/i.test(content),
     hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|всё равно|до сих пор|каждый раз|каждое утро|каждый день|понимаешь|не знаю|никто|вдруг|wieder|immer noch)/i.test(content),
     pettySpecificity:
@@ -944,6 +946,32 @@ function buildCityAnchorTokens() {
 
       return [city.id, Array.from(new Set(tokens))];
     })
+  );
+}
+
+function extractCandidateAnchorTokens(candidate) {
+  const labels = Array.isArray(candidate.links)
+    ? candidate.links.map((link) => link?.label ?? "").filter(Boolean)
+    : [];
+  const raw = [
+    candidate.cityAnchor,
+    candidate.placeName,
+    candidate.placeNeighborhood,
+    candidate.eventName,
+    candidate.eventVenue,
+    candidate.eventNeighborhood,
+    ...labels,
+  ].filter(Boolean).join(" ");
+
+  return Array.from(
+    new Set(
+      String(raw)
+        .toLowerCase()
+        .split(/[^\p{L}\p{N}]+/u)
+        .map((token) => token.trim())
+        .filter((token) => token.length >= 4 || /^[a-z]\d$/i.test(token))
+        .filter((token) => !["event", "venue", "city", "maps", "link", "near", "with", "from", "club", "hall", "room", "ticket", "tickets"].includes(token))
+    )
   );
 }
 
