@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-25T08:28:52.145Z",
+    "capturedAt": "2026-04-25T09:25:42.209Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-25T08:28:52.145Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-04-25T09:25:42.209Z",
+      "mood_score": 0.464,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
@@ -55,6 +55,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. After the 10:00 departure fro"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 and Sunday 26 April, no service between Rayners Lane and Uxbridge. Use METROPOLITAN LINE se"
         },
         {
@@ -72,33 +80,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Which Tube lines are running as second 24-hour strike hits London? - London Evening Standard. Which Tube lines are running as second 24-hour strike hits London?"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.084,
+        "average_valence": -0.105,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-25T08:28:52.145Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-25T09:25:42.209Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,12 +127,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. The sound of a neighbor's saxophone cutting through the morning chaos of a bus strike—classic Neukölln vibes that remind you "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
         },
         {
           "source_family": "signals",
@@ -139,7 +140,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "A thick layer of gray clouds blankets the city, hinting at rain, with a cool breeze carrying the scent of damp earth.. The U-Bahn is running smoothly again, but there's a noticeabl"
+          "excerpt": "The sky is a patchwork of grey clouds, casting a muted light over the bustling streets, with a cool breeze hinting at the autumn chill to come.. Despite the recent disruptions, the"
         },
         {
           "source_family": "world",
@@ -159,20 +160,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.046,
+        "source_item_count": 90,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "money"
         ],
-        "freshness_score": 0.937
+        "freshness_score": 0.933
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-25T08:28:52.145Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-04-25T09:25:42.209Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -191,6 +192,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The air is thick with a damp chill, the fog rolling in off the bay like a shroud over the evening skyline.. BART is a chaotic swirl of frustrated commuters, with muffled conversati"
+        },
         {
           "source_family": "review",
           "source_origin": "maps_review",
@@ -216,14 +225,6 @@
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Gray clouds hover over the city, thick with the promise of rain but holding back, casting a muted light over the bustling streets.. The BART stations are unusually chaotic, with co"
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -234,7 +235,7 @@
       ],
       "metadata": {
         "source_item_count": 53,
-        "average_valence": -0.012,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "transit",
@@ -245,8 +246,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-25T08:28:52.145Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-25T09:25:42.209Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
@@ -284,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, punctuated by brief bursts of golden sunlight that dance on the streets of the Eixample.. Commuters are restless at the Sants station, freque"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -306,17 +299,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is glaring down, casting sharp shadows on the bustling streets, with a slight breeze that offers brief moments of relief.. Trains are noticeably quieter today, with many co"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.636
+        "freshness_score": 0.634
       }
     }
   ]
