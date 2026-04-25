@@ -85,7 +85,9 @@ jobs:
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
             echo "count=480" >> "$GITHUB_OUTPUT"
             echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
-            echo "upload=true" >> "$GITHUB_OUTPUT"
+            # Keep scheduled generation as a dry run while the curated golden feed is active.
+            # Manual dispatch can still upload by setting upload=true.
+            echo "upload=false" >> "$GITHUB_OUTPUT"
             echo "mix=launch,public,review,forum,signals,news,social" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
             echo "seed=mixed-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"

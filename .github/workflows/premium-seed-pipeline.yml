@@ -62,7 +62,9 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "count=60" >> "$GITHUB_OUTPUT"
-            echo "upload=true" >> "$GITHUB_OUTPUT"
+            # Keep scheduled generation as a dry run while the curated golden feed is active.
+            # Manual dispatch can still upload by setting upload=true.
+            echo "upload=false" >> "$GITHUB_OUTPUT"
             echo "mix=launch,public,review,forum,signals,news,social,world,bridge" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
             echo "seed=premium-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
