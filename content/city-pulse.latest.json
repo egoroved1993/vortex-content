@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-25T16:20:23.181Z",
+    "capturedAt": "2026-04-25T17:20:14.802Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -15,15 +15,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 335
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-25T16:20:23.181Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-04-25T17:20:14.802Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -34,7 +34,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 8,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -55,7 +55,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Chesham due to train cancellations. After the 16:30 departure from"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Abbey Wood and Heathrow Terminals / Reading while we fix a points failure in the Hanwell area. Lo"
         },
         {
           "source_family": "transport",
@@ -79,26 +79,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we help a person ill on a train at Finsbury Park."
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.152,
+        "source_item_count": 55,
+        "average_valence": -0.15,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-25T16:20:23.181Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-25T17:20:14.802Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -132,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 2 trips delayed"
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -154,26 +154,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The air hangs heavy with the moisture of a light drizzle, turning the vibrant autumn leaves into glistening jewels.. Despite the recent strike disruptions, the buses and trams are "
+          "excerpt": "The sky is an ominous grey, with occasional bursts of sunlight slicing through thick clouds, hinting at both rain and warmth.. With the recent resumption of services, the mood on t"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.038,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "weather"
         ],
-        "freshness_score": 0.936
+        "freshness_score": 0.942
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-25T16:20:23.181Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-04-25T17:20:14.802Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -201,14 +201,6 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Caught that bus this morning packed with folks, even had a guy playing the accordion. Only in SF can rush hour feel like a street pe"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell who's local when they won't blink at a BART delay but still freak out over a Mission burrito running out"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -223,6 +215,14 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         },
         {
           "source_family": "news",
@@ -246,10 +246,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-25T16:20:23.181Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-25T17:20:14.802Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,20 +304,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.72,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs high, casting a vibrant warmth on the bustling Plaza de Catalunya, while a gentle breeze carries the salty tang of the nearby sea.. The mood on the trains is tense ye"
+          "excerpt": "The afternoon sun breaks through a blanket of gray clouds, casting a warm, glowing light on the damp pavement after a brief shower.. The ongoing strike by Rodalies train workers ha"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.026,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.642
+        "freshness_score": 0.644
       }
     }
   ]
