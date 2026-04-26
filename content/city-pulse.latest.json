@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-26T01:42:37.798Z",
+    "capturedAt": "2026-04-26T03:16:39.656Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 336
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-26T01:42:37.798Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-04-26T03:16:39.656Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -67,12 +67,12 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 April, from 0530, and all day Sunday 26 April, no service between Wood Green and Cockfoster"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "it's not common, Londoner are usually civilized. in 15y in London, I've seen very few fights on the street, and never on the tube. but: \\- it's one of the first sunday with a very "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
           "source_family": "public",
@@ -80,26 +80,26 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Finalised plans for our wedding at the venue this afternoon, had some food and met some friends there for drinks after. Kept going and here we are back home, celebrating with a Mer"
+          "excerpt": "it's not common, Londoner are usually civilized. in 15y in London, I've seen very few fights on the street, and never on the tube. but: \\- it's one of the first sunday with a very "
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.06,
+        "source_item_count": 59,
+        "average_valence": -0.076,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-26T01:42:37.798Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-04-26T03:16:39.656Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -135,12 +135,12 @@
           "excerpt": "Is this a Späti, a market which is open late in the evening? Maybe there were problems with neighbours calling the police for noise complaints. Some of these markets have customers"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. I knew I was home when I saw the neighbor’s cat perched on the bus stop sign, oblivious to the chaos around it. Only in Neukö"
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "The autumn sun breaks through the clouds, painting the damp cobblestones with a warm glow.. With the BVG back in action, crowds are slowly filtering into public transport, though s"
         },
         {
           "source_family": "world",
@@ -161,21 +161,21 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.051,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.921
+        "freshness_score": 0.919
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-26T01:42:37.798Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-04-26T03:16:39.656Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -192,6 +192,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. The Mission. The guy playing the accordion at 24th and Mission made the bus wait, but everyone smiled. Only in San Francisco do we turn delays i"
+        },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
@@ -223,33 +231,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with low-hanging clouds threatening rain, making the air feel heavy and damp.. The BART stations are unusually crowded, as frustrated commuters gather in h"
         }
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.029,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.799
+        "freshness_score": 0.804
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-26T01:42:37.798Z",
+      "captured_at": "2026-04-26T03:16:39.656Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,14 +285,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thin veil of clouds drapes over Barcelona, softening the midday sun and tinging the air with a cool breeze that carries a hint of salt from the nearby sea.. The platforms at Plaç"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,14 +299,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of grey clouds looms over the city, threatening rain but only delivering a fine mist that softens the edges of the bustling streets.. A palpable tension hangs in th"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "tourism",
+          "routine",
           "transit"
         ],
         "freshness_score": 0.633
