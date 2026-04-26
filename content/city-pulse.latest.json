@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-26T18:23:55.960Z",
+    "capturedAt": "2026-04-26T19:25:03.724Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 343
+    "totalItems": 344
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-26T18:23:55.960Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-04-26T19:25:03.724Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -85,7 +85,7 @@
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.14,
+        "average_valence": -0.134,
         "dominant_themes": [
           "general",
           "transit",
@@ -96,10 +96,10 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-26T18:23:55.960Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-26T19:25:03.724Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -111,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,6 +126,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -143,37 +152,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I would be surprised you could find some \"in\" Berlin. Around Berlin maybe in Brandenburg, but in 40 years I have yet to hear of a place in the city where you can reliably find some"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I love Berlin. So much to do and so much action. Munich is great but a different speed for me. If it were me I would start in Berlin and the have a more relaxed finish in Munich."
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of clouds hangs low, casting a gray filter on the vibrant street art that clings to the walls.. With the BVG services back to normal, the mood on the U-Bahn is a mix "
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.025,
+        "source_item_count": 93,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.922
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-26T18:23:55.960Z",
-      "mood_score": 0.468,
+      "captured_at": "2026-04-26T19:25:03.724Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -192,14 +193,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Watched a guy serenade commuters on the 47 with a ukulele while the Muni app crashed. Only in SF do you get free entertainment and c"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -225,31 +218,39 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy doing yoga on the back of a crowded Muni at Civic Center. The tourists were all filming—it’s one way to cope with the chao"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot locals by their indifference to the endless BART delays. If they roll their eyes at the mention of a bro"
+          "excerpt": "If you don’t need to get downtown ever, the Richmond is quiet, has good food, and has proximity to the beach and Golden Gate Bridge for leaving the city for outdoor adventures via "
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.093,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.823
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-26T18:23:55.960Z",
+      "captured_at": "2026-04-26T19:25:03.724Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,9 +305,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.612,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs tired in a blue-gray sky, casting a warm glow on the damp cobblestones after last night's rain.. The mood at the Sants train station is a tense mix of frustration and"
+          "excerpt": "The sun bathes the city in a warm, golden light, but gusts of wind carry a hint of autumn chill.. The trains are unusually quiet today, with anxious commuters checking their watche"
         }
       ],
       "metadata": {
@@ -315,7 +316,7 @@
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "transit"
         ],
         "freshness_score": 0.631
       }
