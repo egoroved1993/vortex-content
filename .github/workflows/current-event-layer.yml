@@ -130,7 +130,13 @@ jobs:
 
       - name: Prepare event payload
         if: steps.jobs.outputs.count != '0'
+        shell: bash
         run: |
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            MAX_TOTAL="${{ steps.cfg.outputs.max_per_city }}"
+          else
+            MAX_TOTAL=$(( ${{ steps.cfg.outputs.max_per_city }} * 4 ))
+          fi
           node scripts/prepare-seed-payload.mjs \
             --candidates content/event-discovery-candidates.json \
             --report content/event-discovery-candidates.report.json \
@@ -142,7 +148,7 @@ jobs:
             --min-ambiguity 1 \
             --min-composite-score 3 \
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}" \
-            --max-total 12 \
+            --max-total "$MAX_TOTAL" \
             --reviewer-buckets ship_now,strong_candidate,candidate
 
       - name: Check event payload

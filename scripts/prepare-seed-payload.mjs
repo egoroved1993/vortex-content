@@ -198,6 +198,7 @@ function shouldInclude(candidate, review, options) {
     "rhetorical_question",
     "instructional_advice",
     "generic_event_reference",
+    "event_cliche",
     "banned_opener",
     "city_language_mismatch",
     "synthetic_collective",

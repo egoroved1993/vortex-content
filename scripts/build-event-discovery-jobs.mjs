@@ -161,6 +161,7 @@ function buildEventPrompt({ city, event, style, links }) {
     "- Do NOT ask a question and do NOT give advice like 'better bring', 'remember to', or 'don't forget'",
     "- Do NOT include exact times, prices unless they are the human complaint, or calendar phrasing like 'this Friday at 8pm'",
     "- Do NOT make the event sound globally important; keep it as one small city consequence",
+    "- BANNED event clichés: 'going to be packed', 'already dreading the queue', 'hope the queue', 'figure out how to get home', 'phone is at X%', 'phone's at X%', 'classic city night'",
     "- Avoid generic logistics-only templates: low battery, long queue, ride home, packed crowd. If you use one, add a specific object, person, or awkward social detail not copied from the listing",
     "- If writing Russian, write the sentence in Russian. Only real artist/event/venue names may stay in Latin; do not use local foreign words like Kiez, Späti, Tube, U-Bahn, barrio, or Raval as flavor unless they are the actual venue/event name",
     eventLanguageRule(city),

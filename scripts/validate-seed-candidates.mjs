@@ -114,6 +114,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const rhetoricalQuestion = /\?/.test(content);
   const instructionalAdvice = looksInstructionalAdvice(contentLower);
   const genericEventReference = candidate.sourceFamily === "event_discovery" && /\b(the|this) event\b/.test(contentLower);
+  const eventCliche = candidate.sourceFamily === "event_discovery" && looksEventCliche(contentLower);
   const bannedOpener = /^(this morning near|this morning on|stood on the|standing on the|sitting on the)\b/i.test(content.trim());
   const cityLanguageMismatch = hasCityLanguageMismatch(candidate, detectedLanguage, content);
   const syntheticCollective = /\b(we all just|we were all in on|all in on the joke)\b/i.test(contentLower);
@@ -151,6 +152,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (rhetoricalQuestion) issues.push("rhetorical_question");
   if (instructionalAdvice) issues.push("instructional_advice");
   if (genericEventReference) issues.push("generic_event_reference");
+  if (eventCliche) issues.push("event_cliche");
   if (bannedOpener) issues.push("banned_opener");
   if (cityLanguageMismatch) issues.push("city_language_mismatch");
   if (syntheticCollective) issues.push("synthetic_collective");
@@ -226,7 +228,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "crafted_payoff", "staged_observation", "atmospheric_poetry", "performative_snark",
     "raw_headline_injection", "off_city_place", "cloned_template", "off_topic_sports",
     "repetitive_anchor", "instruction_leakage", "article_voice", "rhetorical_question",
-    "instructional_advice", "generic_event_reference", "banned_opener", "synthetic_collective",
+    "instructional_advice", "generic_event_reference", "event_cliche", "banned_opener", "synthetic_collective",
     "city_language_mismatch", "ru_latin_leakage", "pipeline_seam", "truncated_output", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
@@ -613,6 +615,12 @@ function normalizeCandidateLanguage(value, content = "") {
   if (raw === "de" || raw === "german" || raw === "deutsch") return "de";
   if (/[а-яё]/iu.test(String(content ?? "")) && (!raw || raw === "en" || raw === "english")) return "ru";
   return raw;
+}
+
+function looksEventCliche(contentLower) {
+  return /\b(going to be packed|gonna be packed|already dreading the queue|hope (the )?queue|figure out how to get home|phone'?s? (is )?(at|on) \d{1,3}%|classic [a-z ]*night|just hope|good luck trying to)\b/i.test(
+    contentLower
+  );
 }
 
 function hasCityLanguageMismatch(candidate, detectedLanguage, content) {
