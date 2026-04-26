@@ -27,10 +27,10 @@ on:
         required: false
         default: "30"
       replace_existing:
-        description: "Replace active AI feed in uploaded cities"
+        description: "Replace active AI feed in uploaded cities before upload"
         type: boolean
         required: false
-        default: true
+        default: false
       city_focus:
         description: "Optional city id"
         required: false
@@ -75,7 +75,7 @@ jobs:
             echo "max_per_city=20" >> "$GITHUB_OUTPUT"
             echo "variants_per_event=2" >> "$GITHUB_OUTPUT"
             echo "expires_hours=30" >> "$GITHUB_OUTPUT"
-            echo "replace_existing=true" >> "$GITHUB_OUTPUT"
+            echo "replace_existing=false" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
           else
             echo "upload=${{ inputs.upload == true && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
