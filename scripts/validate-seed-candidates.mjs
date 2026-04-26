@@ -115,6 +115,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const instructionalAdvice = looksInstructionalAdvice(contentLower);
   const genericEventReference = candidate.sourceFamily === "event_discovery" && /\b(the|this) event\b/.test(contentLower);
   const bannedOpener = /^(this morning near|this morning on|stood on the|standing on the|sitting on the)\b/i.test(content.trim());
+  const cityLanguageMismatch = hasCityLanguageMismatch(candidate, detectedLanguage, content);
   const syntheticCollective = /\b(we all just|we were all in on|all in on the joke)\b/i.test(contentLower);
   const ruLatinLeakage =
     candidate.sourceFamily === "event_discovery" &&
@@ -151,6 +152,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (instructionalAdvice) issues.push("instructional_advice");
   if (genericEventReference) issues.push("generic_event_reference");
   if (bannedOpener) issues.push("banned_opener");
+  if (cityLanguageMismatch) issues.push("city_language_mismatch");
   if (syntheticCollective) issues.push("synthetic_collective");
   if (ruLatinLeakage) issues.push("ru_latin_leakage");
   if (pipelineSeam) issues.push("pipeline_seam");
@@ -225,7 +227,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "raw_headline_injection", "off_city_place", "cloned_template", "off_topic_sports",
     "repetitive_anchor", "instruction_leakage", "article_voice", "rhetorical_question",
     "instructional_advice", "generic_event_reference", "banned_opener", "synthetic_collective",
-    "ru_latin_leakage", "pipeline_seam", "truncated_output", "too_long",
+    "city_language_mismatch", "ru_latin_leakage", "pipeline_seam", "truncated_output", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
 
@@ -246,6 +248,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     ambiguity >= 2 &&
     (!requiresFreshContext(candidate) || freshness >= 3) &&
     (!requiresNewsFit(candidate) || newsFit >= 3) &&
+    !hasHardBlock &&
     !issues.includes("generic_city_copy") &&
     !issues.includes("essay_like") &&
     !issues.includes("forum_advice_framing") &&
@@ -604,8 +607,29 @@ function normalizeLatinToken(value) {
 function normalizeCandidateLanguage(value, content = "") {
   const raw = String(value ?? "").trim().toLowerCase();
   if (raw === "ru" || raw === "russian") return "ru";
+  if (raw === "en" || raw === "english" || raw === "eng" || raw === "american english" || raw === "british english") return "en";
+  if (raw === "es" || raw === "spanish" || raw === "español" || raw === "espanol") return "es";
+  if (raw === "ca" || raw === "catalan" || raw === "català" || raw === "catala") return "ca";
+  if (raw === "de" || raw === "german" || raw === "deutsch") return "de";
   if (/[а-яё]/iu.test(String(content ?? "")) && (!raw || raw === "en" || raw === "english")) return "ru";
   return raw;
+}
+
+function hasCityLanguageMismatch(candidate, detectedLanguage, content) {
+  if (candidate.sourceFamily !== "event_discovery") return false;
+  if (!candidate.cityId) return false;
+
+  const normalized = normalizeCandidateLanguage(detectedLanguage, content);
+  if (candidate.cityId === "sf" || candidate.cityId === "london") {
+    return normalized && normalized !== "en";
+  }
+  if (candidate.cityId === "barcelona") {
+    return normalized && !["ca", "es", "en", "ru"].includes(normalized);
+  }
+  if (candidate.cityId === "berlin") {
+    return normalized && !["de", "en", "ru"].includes(normalized);
+  }
+  return false;
 }
 
 function hasIconicCityBundle(contentLower, cityId) {

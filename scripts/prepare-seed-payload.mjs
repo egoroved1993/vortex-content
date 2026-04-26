@@ -199,6 +199,7 @@ function shouldInclude(candidate, review, options) {
     "instructional_advice",
     "generic_event_reference",
     "banned_opener",
+    "city_language_mismatch",
     "synthetic_collective",
     "ru_latin_leakage",
     "forum_advice_framing",
