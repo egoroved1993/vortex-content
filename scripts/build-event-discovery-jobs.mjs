@@ -5,9 +5,13 @@ import { createSeededRandom, getCity, pickOne, pickWeighted } from "./seed-confi
 
 // Builds jobs for the dynamic current-events layer.
 // This is intentionally source-driven: no seasonal or hand-coded event names.
-// Input: Eventbrite + RA snippets. Output: event-discovery jobs with links.
+// Input: live event feeds + optional Eventbrite + RA + news snippets.
+// Output: event-discovery jobs with links.
 
 const args = parseArgs(process.argv.slice(2));
+const feedPath = args["feed-input"]
+  ? path.resolve(process.cwd(), args["feed-input"])
+  : resolveProjectPath("content", "event-feed-snippets.json");
 const eventsPath = args["events-input"]
   ? path.resolve(process.cwd(), args["events-input"])
   : resolveProjectPath("content", "events-snippets.json");
@@ -56,6 +60,7 @@ const EVENT_PROMPT_STYLES = [
 ];
 
 const rawEvents = [
+  ...safeReadJson(feedPath).map(normalizeEventFeedEvent),
   ...safeReadJson(eventsPath).map(normalizeEventbriteEvent),
   ...safeReadJson(raPath).map(normalizeResidentAdvisorEvent),
   ...safeReadJson(newsPath).map(normalizeNewsEvent),
@@ -184,6 +189,27 @@ function normalizeEventbriteEvent(entry) {
   };
 }
 
+function normalizeEventFeedEvent(entry) {
+  if (!entry?.cityId || !entry?.name) return null;
+  const venueName = entry.venueName ?? "";
+  if (isBadVenueName(venueName)) return null;
+  const dateIso = entry.startLocal ?? entry.dateIso ?? entry.publishedAt ?? "";
+  return {
+    kind: "listed_event",
+    cityId: entry.cityId,
+    sourceOrigin: entry.sourceOrigin ?? "event_feed",
+    name: String(entry.name).trim(),
+    url: entry.url ?? "",
+    venueName,
+    neighborhood: entry.neighborhood ?? "",
+    dateIso,
+    dateLabel: dateIso ? formatEventDate(dateIso) : "",
+    category: entry.categoryName ?? entry.publisher ?? "",
+    text: entry.text ?? "",
+    fetchedAt: entry.fetchedAt ?? null,
+  };
+}
+
 function normalizeResidentAdvisorEvent(entry) {
   if (!entry?.cityId || !entry?.url) return null;
   if (!entry.venueName || isBadVenueName(entry.venueName)) return null;
@@ -271,7 +297,7 @@ function dedupeEvents(events) {
   const seen = new Set();
   const output = [];
   for (const event of events) {
-    const key = normalizeKey(`${event.cityId}:${event.name}:${event.venueName}:${String(event.dateIso).slice(0, 10)}`);
+    const key = normalizeKey(`${event.cityId}:${event.name}:${String(event.dateIso).slice(0, 10)}`);
     if (seen.has(key)) continue;
     seen.add(key);
     output.push(event);
@@ -307,6 +333,7 @@ function eventPriority(event, referenceDate, maxDays) {
 }
 
 function sourcePriority(event) {
+  if (String(event.sourceOrigin).startsWith("event_feed:")) return 0.3;
   if (event.sourceOrigin === "resident_advisor") return 0.22;
   if (event.sourceOrigin === "eventbrite") return 0.18;
   if (event.sourceOrigin === "google_news_rss_event") return 0.08;

@@ -42,6 +42,7 @@ jobs:
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
+      ENABLE_EVENTBRITE_EVENTS: ${{ vars.ENABLE_EVENTBRITE_EVENTS || 'false' }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       MODEL_PROVIDER: openai
@@ -77,8 +78,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Fetch live city event feeds
+        continue-on-error: true
+        run: node scripts/fetch-city-event-feeds.mjs --horizon-days 60 --max-per-city 70 --out content/event-feed-snippets.json
+
       - name: Fetch city events from Eventbrite
-        if: env.EVENTBRITE_API_KEY != ''
+        if: env.ENABLE_EVENTBRITE_EVENTS == 'true' && env.EVENTBRITE_API_KEY != ''
         continue-on-error: true
         run: node scripts/fetch-city-events.mjs --date-range "${{ steps.cfg.outputs.date_range }}" --max-per-city 16 --out content/events-snippets.json
 
@@ -98,6 +103,7 @@ jobs:
           ARGS=(
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}"
             --horizon-days 45
+            --feed-input content/event-feed-snippets.json
             --news-input content/news-snippets.json
             --out content/event-discovery-jobs.json
           )
@@ -168,6 +174,7 @@ jobs:
           name: current-event-layer-${{ github.run_id }}
           path: |
             content/events-snippets.json
+            content/event-feed-snippets.json
             content/news-snippets.json
             content/ra-berlin-events.json
             content/event-discovery-jobs.json
