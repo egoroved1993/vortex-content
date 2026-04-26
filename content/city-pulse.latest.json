@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-26T21:18:53.068Z",
+    "capturedAt": "2026-04-26T22:18:12.789Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 345
+    "totalItems": 347
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-26T21:18:53.068Z",
-      "mood_score": 0.456,
+      "captured_at": "2026-04-26T22:18:12.789Z",
+      "mood_score": 0.453,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 7,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -64,7 +64,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between High Barnet and Kennington via Bank and no service between Edgware and Charing Cross w"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate while we fix a points failure at Harrow-on-the-H"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate while we fix a points failure at Harrow-on-the-H"
         },
         {
           "source_family": "transport",
@@ -73,33 +81,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 and Sunday 26 April, no service between Rayners Lane and Uxbridge. Use METROPOLITAN LINE se"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 25 April, from 0530, and all day Sunday 26 April, no service between Wood Green and Cockfoster"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.13,
+        "source_item_count": 62,
+        "average_valence": -0.14,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-26T21:18:53.068Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-26T22:18:12.789Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -162,19 +162,19 @@
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.041,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.918
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-26T21:18:53.068Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-04-26T22:18:12.789Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -194,6 +194,14 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s from here when they can name the exact time the BART delays start and end, like it’s part"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -208,14 +216,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "if the bay area truly had good public transit you could get there using it easily from surrounding areas too"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 6 bus at 5th and Market, a guy serenading the crowd with a ukulele while we waited. Classic Tenderloin moment—both chaoti"
         },
         {
           "source_family": "review",
@@ -236,21 +236,21 @@
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": 0.021,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.821
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-26T21:18:53.068Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-26T22:18:12.789Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -286,14 +286,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun beats down, casting long shadows across the quays of Barceloneta, where the salty breeze provides a brief respite from the heat.. Trains are packed with commuters"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -308,15 +300,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
         "freshness_score": 0.631
       }
