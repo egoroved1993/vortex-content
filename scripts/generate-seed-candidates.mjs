@@ -502,9 +502,13 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
 
   // Universal anti-pattern rules — applied to ALL families.
   // These are the most common AI-detection signals found in real output analysis.
-  // Inject city slug for maps links
-  const citySlug = encodeURIComponent(JOB_CITY_NAMES[job.cityId] ?? job.cityId);
-  base += `\n\nLINKS RULE: At least 40% of messages should name a specific real location — a bar, restaurant, café, market, metro station, street, square, park, museum, venue, or landmark that actually exists in the city. When a named place appears, include exactly one Google Maps link: {"type":"maps","url":"https://maps.google.com/?q=PLACE_NAME+${citySlug}","label":"PLACE_NAME"}. Replace PLACE_NAME with the actual name from your message. This is mandatory whenever a named place appears. Prefer naming real places over generic descriptions — "the Thai place on Torrent de l'Olla" is better than "a restaurant nearby". If truly no place is named, output "links": [].`;
+  if (job.sourceFamily === "event_discovery") {
+    base += "\n\nLINKS RULE: verified event/source links are already attached outside the model response. Do not output a links field. If you name a venue or place, keep it in the message text only.";
+  } else {
+    // Inject city slug for maps links
+    const citySlug = encodeURIComponent(JOB_CITY_NAMES[job.cityId] ?? job.cityId);
+    base += `\n\nLINKS RULE: At least 40% of messages should name a specific real location — a bar, restaurant, café, market, metro station, street, square, park, museum, venue, or landmark that actually exists in the city. When a named place appears, include exactly one Google Maps link: {"type":"maps","url":"https://maps.google.com/?q=PLACE_NAME+${citySlug}","label":"PLACE_NAME"}. Replace PLACE_NAME with the actual name from your message. This is mandatory whenever a named place appears. Prefer naming real places over generic descriptions — "the Thai place on Torrent de l'Olla" is better than "a restaurant nearby". If truly no place is named, output "links": [].`;
+  }
 
   // Assign a random length mode to this message for diversity
   const lengthModes = [
@@ -745,7 +749,7 @@ async function generateRepairWithOpenAI(job, modelName, weakDraft, assessment) {
       body: JSON.stringify({
         model: modelName,
         temperature: 0.22,
-        max_tokens: job.lane === "mind_post" ? 220 : 180,
+        max_tokens: repairMaxTokens(job),
         response_format: { type: "json_object" },
         messages: [
           {
@@ -786,7 +790,7 @@ async function generateRepairWithXAI(job, modelName, weakDraft, assessment) {
       body: JSON.stringify({
         model: modelName,
         temperature: 0.28,
-        max_tokens: job.lane === "mind_post" ? 220 : 180,
+        max_tokens: repairMaxTokens(job),
         messages: [
           {
             role: "system",
@@ -826,7 +830,7 @@ async function generateRepairWithAnthropic(job, modelName, weakDraft, assessment
     },
     body: JSON.stringify({
       model: modelName,
-      max_tokens: job.lane === "mind_post" ? 220 : 180,
+      max_tokens: repairMaxTokens(job),
       temperature: 0.2,
       system: buildRepairSystemPrompt(job, assessment, "anthropic", modelName),
       messages: [{ role: "user", content: buildRepairUserPrompt(job, weakDraft, assessment) }],
@@ -860,10 +864,10 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
       try {
         parsed = JSON.parse(jsonMatch[0]);
       } catch {
-        parsed = { content: cleanRaw };
+        parsed = extractPartialModelJson(cleanRaw) ?? { content: cleanRaw };
       }
     } else {
-      parsed = { content: cleanRaw };
+      parsed = extractPartialModelJson(cleanRaw) ?? { content: cleanRaw };
     }
   }
 
@@ -901,6 +905,32 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     usage,
     systemFingerprint,
   };
+}
+
+function extractPartialModelJson(rawText) {
+  const cleanRaw = String(rawText ?? "").trim();
+  const content = extractJsonStringField(cleanRaw, "content");
+  if (!content) return null;
+
+  return {
+    content,
+    why_human: extractJsonStringField(cleanRaw, "why_human"),
+    why_ai: extractJsonStringField(cleanRaw, "why_ai"),
+    read_value_hook: extractJsonStringField(cleanRaw, "read_value_hook"),
+    sentiment: extractJsonStringField(cleanRaw, "sentiment"),
+    detected_language: extractJsonStringField(cleanRaw, "detected_language") ?? extractJsonStringField(cleanRaw, "detectedLanguage"),
+  };
+}
+
+function extractJsonStringField(rawText, key) {
+  const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = String(rawText ?? "").match(new RegExp(`"${escapedKey}"\\s*:\\s*"((?:\\\\.|[^"\\\\])*)"`));
+  if (!match) return null;
+  try {
+    return JSON.parse(`"${match[1]}"`);
+  } catch {
+    return match[1].replace(/\\"/g, '"').replace(/\\n/g, " ").replace(/\\\\/g, "\\").trim();
+  }
 }
 
 function buildRepairSystemPrompt(job, assessment, providerHint = null, activeModel = null) {
@@ -1313,6 +1343,13 @@ function generationProfile(job, providerName) {
     };
   }
 
+  if (job.sourceFamily === "event_discovery") {
+    return {
+      temperature: providerName === "xai" ? 0.5 : 0.42,
+      maxTokens: 320,
+    };
+  }
+
   if (["world", "bridge", "signals"].includes(job.sourceFamily)) {
     return {
       temperature: providerName === "xai" ? 0.55 : 0.45,
@@ -1324,6 +1361,11 @@ function generationProfile(job, providerName) {
     temperature: providerName === "xai" ? 0.72 : 0.62,
     maxTokens: 250,
   };
+}
+
+function repairMaxTokens(job) {
+  if (job.sourceFamily === "event_discovery") return 300;
+  return job.lane === "mind_post" ? 220 : 180;
 }
 
 function stripInstructionyLead(text, job) {

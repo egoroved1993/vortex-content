@@ -162,9 +162,9 @@ function buildEventPrompt({ city, event, style, links }) {
     "- Do NOT make the event sound globally important; keep it as one small city consequence",
     "- If writing Russian, write the sentence in Russian. Only real artist/event/venue names may stay in Latin; do not use local foreign words like Kiez, Späti, Tube, U-Bahn, barrio, or Raval as flavor unless they are the actual venue/event name",
     "- Write in the language that fits the city (Barcelona can be Catalan, Spanish, English, or Russian; Berlin can be German, English, or Russian; London/SF mostly English)",
+    "- Verified links are already attached by the pipeline. Do NOT output or rewrite links.",
     "",
-    "Return JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }",
-    `links: ${JSON.stringify(links)}`,
+    "Return JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language }",
   ].filter((line) => line !== null);
 
   return lines.join("\n");
