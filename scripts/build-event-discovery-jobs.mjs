@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
-import { createSeededRandom, getCity, pickOne, pickWeighted } from "./seed-config.mjs";
+import { createSeededRandom, getCity, pickWeighted } from "./seed-config.mjs";
 
 // Builds jobs for the dynamic current-events layer.
 // This is intentionally source-driven: no seasonal or hand-coded event names.
@@ -26,6 +26,7 @@ const outPath = args.out
   : resolveProjectPath("content", "event-discovery-jobs.json");
 
 const maxPerCity = Number(args["max-per-city"] ?? 4);
+const variantsPerEvent = Math.max(1, Number(args["variants-per-event"] ?? 1));
 const horizonDays = Number(args["horizon-days"] ?? 45);
 const cityFocus = args["city-focus"] ?? null;
 const seed = args.seed ?? `event-discovery:${new Date().toISOString().slice(0, 10)}`;
@@ -85,46 +86,49 @@ for (const [cityId, cityEvents] of Object.entries(byCity)) {
     .map((entry) => entry.event);
 
   for (const event of selected) {
-    const style = pickOne(EVENT_PROMPT_STYLES, rand);
-    const gameSource = pickWeighted(
-      [
-        { id: "human", weight: 0.56 },
-        { id: "ai", weight: 0.44 },
-      ],
-      rand
-    ).id;
-    const links = buildEventLinks(event, city);
-    const idx = jobs.length + 1;
+    for (let variantIndex = 0; variantIndex < variantsPerEvent; variantIndex += 1) {
+      const style = EVENT_PROMPT_STYLES[(variantIndex + Math.floor(rand() * EVENT_PROMPT_STYLES.length)) % EVENT_PROMPT_STYLES.length];
+      const gameSource = pickWeighted(
+        [
+          { id: "human", weight: 0.56 },
+          { id: "ai", weight: 0.44 },
+        ],
+        rand
+      ).id;
+      const links = buildEventLinks(event, city);
+      const idx = jobs.length + 1;
 
-    jobs.push({
-      id: `event_seed_${String(idx).padStart(4, "0")}`,
-      batch: "event-discovery-seed",
-      lane: "micro_moment",
-      laneLabel: "City Micro-Moment",
-      cityId,
-      cityName: city.name,
-      topicId: "current_event",
-      topicLabel: "Current Event",
-      readReason: "useful_local",
-      readReasonLabel: "Useful Local",
-      gameSource,
-      sourceFamily: "event_discovery",
-      sourceProfile: "human_like",
-      tone: style.tone,
-      eventPromptStyle: style.id,
-      eventName: event.name,
-      eventVenue: event.venueName,
-      eventNeighborhood: event.neighborhood,
-      eventDate: event.dateLabel,
-      eventUrl: event.url,
-      links,
-      cityAnchor: event.venueName || event.neighborhood || event.name,
-      rawSnippet: buildRawSnippet(event),
-      rawSnippetLanguage: inferEventLanguage(cityId),
-      rawSnippetSourceOrigin: event.sourceOrigin,
-      rawSnippetPublishedAt: event.fetchedAt ?? now.toISOString(),
-      prompt: buildEventPrompt({ city, event, style, links }),
-    });
+      jobs.push({
+        id: `event_seed_${String(idx).padStart(4, "0")}`,
+        batch: "event-discovery-seed",
+        lane: "micro_moment",
+        laneLabel: "City Micro-Moment",
+        cityId,
+        cityName: city.name,
+        topicId: "current_event",
+        topicLabel: "Current Event",
+        readReason: "useful_local",
+        readReasonLabel: "Useful Local",
+        gameSource,
+        sourceFamily: "event_discovery",
+        sourceProfile: "human_like",
+        tone: style.tone,
+        eventPromptStyle: style.id,
+        eventVariant: variantIndex + 1,
+        eventName: event.name,
+        eventVenue: event.venueName,
+        eventNeighborhood: event.neighborhood,
+        eventDate: event.dateLabel,
+        eventUrl: event.url,
+        links,
+        cityAnchor: event.venueName || event.neighborhood || event.name,
+        rawSnippet: buildRawSnippet(event),
+        rawSnippetLanguage: inferEventLanguage(cityId),
+        rawSnippetSourceOrigin: event.sourceOrigin,
+        rawSnippetPublishedAt: event.fetchedAt ?? now.toISOString(),
+        prompt: buildEventPrompt({ city, event, style, links, variantIndex }),
+      });
+    }
   }
 }
 
@@ -135,7 +139,7 @@ console.log(`Built ${jobs.length} event discovery jobs`);
 console.log(`Wrote jobs to ${outPath}`);
 console.log(JSON.stringify(countBy(jobs, (job) => job.cityId), null, 2));
 
-function buildEventPrompt({ city, event, style, links }) {
+function buildEventPrompt({ city, event, style, links, variantIndex = 0 }) {
   const subjectLabel = event.kind === "news_event" ? "Current city signal" : "Event";
   const lines = [
     `City: ${city.name}`,
@@ -151,6 +155,7 @@ function buildEventPrompt({ city, event, style, links }) {
     "It must feel like a local post, not a listing. 1-2 sentences, under 190 characters.",
     "",
     `Angle: ${style.instruction}`,
+    `Variant pressure: ${variantIndex % 2 === 0 ? "make the human detail social or overheard" : "make the human detail private, slightly embarrassing, or practical"}`,
     "",
     "Rules:",
     "- Name either the event, the venue, or the specific city issue so the attached link makes sense",
@@ -341,7 +346,7 @@ function isWithinHorizon(event, referenceDate, maxDays) {
   const eventDate = parseEventDate(event.dateIso);
   if (!eventDate) return true;
   const daysAway = (eventDate - referenceDate) / (24 * 60 * 60 * 1000);
-  const minDays = event.kind === "news_event" ? -5 : -1;
+  const minDays = event.kind === "news_event" ? -5 : -2;
   return daysAway >= minDays && daysAway <= maxDays;
 }
 

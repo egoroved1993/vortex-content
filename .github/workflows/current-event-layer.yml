@@ -19,6 +19,10 @@ on:
         description: "Max generated event jobs per city"
         required: false
         default: "4"
+      variants_per_event:
+        description: "Generated variants per selected event"
+        required: false
+        default: "2"
       expires_hours:
         description: "How long event posts stay active"
         required: false
@@ -46,7 +50,7 @@ jobs:
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       MODEL_PROVIDER: openai
-      MODEL_NAME: gpt-4o-mini
+      MODEL_NAME: gpt-4o
 
     steps:
       - name: Checkout
@@ -65,12 +69,14 @@ jobs:
             echo "upload=true" >> "$GITHUB_OUTPUT"
             echo "date_range=this_month" >> "$GITHUB_OUTPUT"
             echo "max_per_city=4" >> "$GITHUB_OUTPUT"
+            echo "variants_per_event=2" >> "$GITHUB_OUTPUT"
             echo "expires_hours=48" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
           else
             echo "upload=${{ inputs.upload == true && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
             echo "date_range=${{ inputs.date_range || 'this_month' }}" >> "$GITHUB_OUTPUT"
             echo "max_per_city=${{ inputs.max_per_city || '4' }}" >> "$GITHUB_OUTPUT"
+            echo "variants_per_event=${{ inputs.variants_per_event || '2' }}" >> "$GITHUB_OUTPUT"
             echo "expires_hours=${{ inputs.expires_hours || '48' }}" >> "$GITHUB_OUTPUT"
             echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
           fi
@@ -102,6 +108,7 @@ jobs:
           set -euo pipefail
           ARGS=(
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}"
+            --variants-per-event "${{ steps.cfg.outputs.variants_per_event }}"
             --horizon-days 45
             --feed-input content/event-feed-snippets.json
             --news-input content/news-snippets.json
