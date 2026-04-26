@@ -71,15 +71,15 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
       anchorsForCity.some((token) => contentLower.includes(token)) ||
       jobAnchorTokens.some((token) => contentLower.includes(token)) ||
       /(барселон|берлин|лондон|сан[- ]?франц|san francisco|barcelona|berlin|london)/i.test(content),
-    hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|всё равно|до сих пор|каждый раз|каждое утро|каждый день|понимаешь|не знаю|никто|вдруг|wieder|immer noch)/i.test(content),
+    hook: /(still|again|weirdly|somehow|for some reason|caught myself|keep|pretend|told myself|cannot stop|can't stop|why does|i hate|i love|never gets old|already regretting|forgot|left .* at home|lost (my|their|his|her|the)|otra mañana|cada vez|me hace gracia|todavía|encara|sempre|cada cop|смешно|все равно|всё равно|до сих пор|каждый раз|каждое утро|каждый день|понимаешь|не знаю|никто|вдруг|wieder|immer noch)/i.test(content),
     pettySpecificity:
-      /(had to|ended up|checked (the )?(board|app) twice|before coffee|before work|rent math|rent tab|wrong jacket|three suitcases|same rent|walk back out|queue and half of us|got trapped in it|suitcase slalom|suitcase traffic|step around|swerved around|sidestep|two wrong outfits|platform displays|red digital signage|temporary politics|one normal errand|detour|missed the (bus|train|tram|tube)|important appointment|over an hour early|three scheduled times|stuck dodging|waiting ages|turn at the caf[eé]|clock tick past|two minutes late|train just left|group chat|second six dollar coffee|twelve minutes to be ignored)/i.test(
+      /(had to|ended up|checked (the )?(board|app) twice|before coffee|before work|rent math|rent tab|wrong jacket|three suitcases|same rent|walk back out|queue and half of us|got trapped in it|suitcase slalom|suitcase traffic|step around|swerved around|sidestep|two wrong outfits|platform displays|red digital signage|temporary politics|one normal errand|detour|missed the (bus|train|tram|tube)|important appointment|over an hour early|three scheduled times|stuck dodging|waiting ages|turn at the caf[eé]|clock tick past|two minutes late|train just left|group chat|second six dollar coffee|twelve minutes to be ignored|lost (my|their|his|her|the) (friend|ticket|voice|charger|jacket|umbrella)|forgot (my|the|his|her|their)? ?(ticket|charger|headphones|jacket|umbrella|bag)|beer spill|spilled drinks|wet socks|bag zipper|safety pin|overpriced mojitos|awkward eye contact|tote bags?|left (my|the|his|her|their)? ?(ticket|charger|headphones|jacket|umbrella|bag) at home)/i.test(
         content
       ),
     performativeFrame: /^(people say|people talk about|nothing says|the weird thing about|the thing about|the only way to stay sane|my rule is|the real sign|nothing exposes a person faster|everyone in here is either)\b/i.test(content),
     mindPostThesis: isMindPost && /(turns out|realized|realize|the truth|the thing is|the problem|the real|the only|actually|everyone|always|never|every time|rule is|theory|pattern|reveals|proves|signals|means that|more than|less than|better than|worse than|the best|the worst)/i.test(content),
     mindPostContrast: isMindPost && /\b(but|except|until|though|whereas|despite|instead|rather|unless|yet)\b/i.test(content),
-    conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|overpriced|changed|can't afford|pushed out|no longer|used to be|turístic|turistico|turistas|guiri|maletas|ruido|caro|saturad|colaps|retard|vaga|avaria|averia|teure|teuer|chaos|задерж|шум|дорого|турист|уволили|продал|спорят|деньги|жду|ждать|очеред|чемодан|не помогает)/i.test(content),
+    conflict: /(argued|fighting|annoying|delay|late|awkward|rent|expensive|shame|embarrass|wrong|mad|tired|replaced|gone|disappeared|lost|forgot|overpriced|changed|can't afford|pushed out|no longer|used to be|spill|wet socks|broken zipper|turístic|turistico|turistas|guiri|maletas|ruido|caro|saturad|colaps|retard|vaga|avaria|averia|teure|teuer|chaos|задерж|шум|дорого|турист|уволили|продал|спорят|деньги|жду|ждать|очеред|чемодан|не помогает)/i.test(content),
     tenderness: /(remembered|kind|calm|gentle|helped|shared|smiled|warmer|softer|wink|quietly|still here|still going|small kindness|запомнил|улыб|тепл|спокойн|помог|никто не злится)/i.test(content),
     freshnessMarker: /(today|tonight|this morning|this afternoon|right now|still|again|otra mañana|hoy|ahora|esta mañana|encara|avui|heute|jetzt|сегодня|сейчас|опять|до сих пор)/i.test(content),
     liveContext: contextOverlap > 0,
@@ -628,10 +628,13 @@ function hasCityLanguageMismatch(candidate, detectedLanguage, content) {
   if (!candidate.cityId) return false;
 
   const normalized = normalizeCandidateLanguage(detectedLanguage, content);
+  const lower = String(content ?? "").toLowerCase();
   if (candidate.cityId === "sf" || candidate.cityId === "london") {
     return normalized && normalized !== "en";
   }
   if (candidate.cityId === "barcelona") {
+    if (["ca", "es"].includes(normalized) && /\b(and|but|someone|my|will|tonight|hope|already|forgot|lost my)\b/i.test(lower)) return true;
+    if (normalized === "en" && /\b(avui|aquest|aquesta|vaig|però|pero|alguien|móvil|quejándose)\b/i.test(lower)) return true;
     return normalized && !["ca", "es", "en", "ru"].includes(normalized);
   }
   if (candidate.cityId === "berlin") {
@@ -889,7 +892,8 @@ function looksTruncatedOutput(content, contentLower) {
 
   if (hasUnbalancedQuotes(trimmed)) return true;
   if (/\b(one said|someone said|he said|she said|they said),?\s+['"][^'"]*$/i.test(trimmed)) return true;
-  if (/\b(and|but|because|while|with|to|in|as if|if|when|where|than|that|another|still|already|was|were|is|are|like)$/i.test(trimmed)) return true;
+  if (/\b(and|but|because|while|with|to|in|of|from|for|on|at|by|the|a|an|using|near|through|into|onto|over|under|as if|if|when|where|than|that|another|still|already|was|were|is|are|like)$/i.test(trimmed)) return true;
+  if (/(?:'s|’s)$/i.test(trimmed)) return true;
   if (/\b(who|what|where|why|how)(?:'s|’s)?$/i.test(trimmed)) return true;
   if (/\b(he|she|they|it|i|we|you)\s+(looked|felt|seemed|thought|wanted|needed|started|kept|tried|asked|said|told|went|got|had)$/i.test(trimmed)) return true;
   if (/\b(but|and|because|while|though|honestly),?\s+(who|what|where|why|how|he|she|they|it|i|we|you)(?:'s|’s)?$/i.test(trimmed)) return true;
