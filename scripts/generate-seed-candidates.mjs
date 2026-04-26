@@ -1474,6 +1474,8 @@ function shouldAttemptRepair(job, assessment) {
 }
 
 function buildLocalRepairVariants(job, text) {
+  if (job.sourceFamily === "event_discovery") return [];
+
   const sourceText = cleanSourceFallback(job);
   const basis = sourceText || cleanGeneratedText(text);
   const variants = [];

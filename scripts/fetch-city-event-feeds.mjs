@@ -91,9 +91,18 @@ async function fetchSource(source) {
 }
 
 async function fetchBarcelonaOpenDataCsv(source) {
-  const buffer = await fetchBuffer(source.url);
-  const csv = decodeBuffer(buffer);
-  const rows = parseCsv(csv);
+  let rows = [];
+  try {
+    const buffer = await fetchBuffer(source.url);
+    const csv = decodeBuffer(buffer);
+    rows = parseCsv(csv);
+  } catch (err) {
+    if (!source.apiUrl) throw err;
+  }
+  if (!hasBarcelonaOpenDataRows(rows) && source.apiUrl) {
+    rows = await fetchBarcelonaOpenDataApiRows(source.apiUrl);
+  }
+
   const grouped = new Map();
 
   for (const row of rows) {
@@ -129,6 +138,16 @@ async function fetchBarcelonaOpenDataCsv(source) {
       text: [row.name, venueName, neighborhood, category].map(cleanText).filter(Boolean).join(" "),
     };
   });
+}
+
+async function fetchBarcelonaOpenDataApiRows(apiUrl) {
+  const payload = JSON.parse(await fetchText(apiUrl));
+  const records = payload?.result?.records;
+  return Array.isArray(records) ? records : [];
+}
+
+function hasBarcelonaOpenDataRows(rows) {
+  return Array.isArray(rows) && rows.some((row) => cleanText(row.register_id) && cleanText(row.name));
 }
 
 function parseJsonLdEvents(html, source) {
