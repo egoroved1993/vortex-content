@@ -200,6 +200,7 @@ function shouldInclude(candidate, review, options) {
     "generic_event_reference",
     "banned_opener",
     "synthetic_collective",
+    "ru_latin_leakage",
     "forum_advice_framing",
     "crafted_payoff",
     "staged_observation",

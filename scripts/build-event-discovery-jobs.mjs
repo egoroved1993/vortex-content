@@ -155,7 +155,7 @@ function buildEventPrompt({ city, event, style, links }) {
     "- Do NOT ask a question and do NOT give advice like 'better bring', 'remember to', or 'don't forget'",
     "- Do NOT include exact times, prices unless they are the human complaint, or calendar phrasing like 'this Friday at 8pm'",
     "- Do NOT make the event sound globally important; keep it as one small city consequence",
-    "- If writing Russian, use casual Russian. Local venue names can stay in Latin or be simplified as a person would type them in chat",
+    "- If writing Russian, write the sentence in Russian. Only real artist/event/venue names may stay in Latin; do not use local foreign words like Kiez, Späti, Tube, U-Bahn, barrio, or Raval as flavor unless they are the actual venue/event name",
     "- Write in the language that fits the city (Barcelona can be Catalan, Spanish, English, or Russian; Berlin can be German, English, or Russian; London/SF mostly English)",
     "",
     "Return JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }",
