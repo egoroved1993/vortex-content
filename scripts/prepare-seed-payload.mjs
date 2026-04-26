@@ -15,6 +15,7 @@ const minFreshness = Number(args["min-freshness"] ?? minScore);
 const minNewsFit = Number(args["min-news-fit"] ?? 4);
 const minCompositeScore = Number(args["min-composite-score"] ?? 4);
 const maxPerCity = Number(args["max-per-city"] ?? 1);
+const minPerCity = Number(args["min-per-city"] ?? 0);
 const maxTotal = Number(args["max-total"] ?? 8);
 const allowedFamilies = String(args["allowed-families"] ?? "")
   .split(",")
@@ -71,37 +72,72 @@ const cityCounts = new Map();
 const transitCounts = new Map();
 const seenContent = new Set();
 const seenOpenings = new Map(); // track first 30 chars to catch "stood on the victoria line..." dupes
-for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal * 4)) {
+const consumedIds = new Set();
+const sortedApproved = approved.sort(compareApprovedCandidates);
+const approvedByCity = new Map();
+
+for (const entry of sortedApproved) {
+  const cityId = entry.candidate.cityId ?? "unknown";
+  const entries = approvedByCity.get(cityId) ?? [];
+  entries.push(entry);
+  approvedByCity.set(cityId, entries);
+}
+
+if (minPerCity > 0) {
+  const cityFloor = Math.min(minPerCity, maxPerCity);
+  for (const [cityId, cityEntries] of approvedByCity.entries()) {
+    for (const entry of cityEntries) {
+      if (selected.length >= maxTotal || (cityCounts.get(cityId) ?? 0) >= cityFloor) break;
+      trySelect(entry);
+    }
+  }
+}
+
+for (const entry of sortedApproved) {
+  if (selected.length >= maxTotal) {
+    if (!consumedIds.has(entry.candidate.id)) {
+      consumedIds.add(entry.candidate.id);
+      rejected.push({ id: entry.candidate.id, reason: "max_total_reached" });
+    }
+    continue;
+  }
+  trySelect(entry);
+}
+
+function trySelect(entry) {
+  if (consumedIds.has(entry.candidate.id)) return false;
+  consumedIds.add(entry.candidate.id);
+
   const cityId = entry.candidate.cityId ?? "unknown";
   if ((cityCounts.get(cityId) ?? 0) >= maxPerCity) {
     rejected.push({ id: entry.candidate.id, reason: "city_cap_reached" });
-    continue;
+    return false;
   }
   if (selected.length >= maxTotal) {
     rejected.push({ id: entry.candidate.id, reason: "max_total_reached" });
-    continue;
+    return false;
   }
   const content = entry.candidate.content ?? "";
   const contentKey = content.trim().toLowerCase().slice(0, 60);
   if (seenContent.has(contentKey)) {
     rejected.push({ id: entry.candidate.id, reason: "duplicate_content" });
-    continue;
+    return false;
   }
   if (HEADLINE_INJECTION_RE.test(content)) {
     rejected.push({ id: entry.candidate.id, reason: "headline_injection" });
-    continue;
+    return false;
   }
   const openingKey = content.trim().toLowerCase().slice(0, 30);
   if (seenOpenings.has(openingKey)) {
     rejected.push({ id: entry.candidate.id, reason: "duplicate_opening" });
-    continue;
+    return false;
   }
   seenOpenings.set(openingKey, true);
   if (TRANSIT_RE.test(content)) {
     const key = `${cityId}:transit`;
     if ((transitCounts.get(key) ?? 0) >= maxTransitPerCity) {
       rejected.push({ id: entry.candidate.id, reason: "transit_cap_reached" });
-      continue;
+      return false;
     }
     transitCounts.set(key, (transitCounts.get(key) ?? 0) + 1);
   }
@@ -124,6 +160,7 @@ for (const entry of approved.sort(compareApprovedCandidates).slice(0, maxTotal *
     expires_at: expiresAt,
     ...(payloadData ? { payload: payloadData } : {}),
   });
+  return true;
 }
 
 const payload = {
@@ -134,6 +171,7 @@ const payload = {
     selectedCount: selected.length,
     rejectedCount: rejected.length,
     expiresHours,
+    minPerCity,
   },
   rows: selected,
   rejected,

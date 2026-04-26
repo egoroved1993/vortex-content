@@ -2,12 +2,11 @@ name: Current Event Layer
 
 on:
   schedule:
-    - cron: "30 9 * * *"
-    - cron: "30 18 * * *"
+    - cron: "30 0,6,12,18 * * *"
   workflow_dispatch:
     inputs:
       upload:
-        description: "Append approved event posts to Supabase"
+        description: "Upload approved event posts to Supabase"
         type: boolean
         required: false
         default: false
@@ -18,7 +17,7 @@ on:
       max_per_city:
         description: "Max generated event jobs per city"
         required: false
-        default: "4"
+        default: "20"
       variants_per_event:
         description: "Generated variants per selected event"
         required: false
@@ -26,7 +25,12 @@ on:
       expires_hours:
         description: "How long event posts stay active"
         required: false
-        default: "48"
+        default: "30"
+      replace_existing:
+        description: "Replace active AI feed in uploaded cities"
+        type: boolean
+        required: false
+        default: true
       city_focus:
         description: "Optional city id"
         required: false
@@ -39,7 +43,7 @@ concurrency:
 jobs:
   events:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     permissions:
       contents: read
 
@@ -68,16 +72,18 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "upload=true" >> "$GITHUB_OUTPUT"
             echo "date_range=this_month" >> "$GITHUB_OUTPUT"
-            echo "max_per_city=4" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=20" >> "$GITHUB_OUTPUT"
             echo "variants_per_event=2" >> "$GITHUB_OUTPUT"
-            echo "expires_hours=48" >> "$GITHUB_OUTPUT"
+            echo "expires_hours=30" >> "$GITHUB_OUTPUT"
+            echo "replace_existing=true" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
           else
             echo "upload=${{ inputs.upload == true && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
             echo "date_range=${{ inputs.date_range || 'this_month' }}" >> "$GITHUB_OUTPUT"
-            echo "max_per_city=${{ inputs.max_per_city || '4' }}" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=${{ inputs.max_per_city || '20' }}" >> "$GITHUB_OUTPUT"
             echo "variants_per_event=${{ inputs.variants_per_event || '2' }}" >> "$GITHUB_OUTPUT"
-            echo "expires_hours=${{ inputs.expires_hours || '48' }}" >> "$GITHUB_OUTPUT"
+            echo "expires_hours=${{ inputs.expires_hours || '30' }}" >> "$GITHUB_OUTPUT"
+            echo "replace_existing=${{ inputs.replace_existing != false && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
             echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
           fi
 
@@ -154,6 +160,7 @@ jobs:
             --min-stickiness 3 \
             --min-ambiguity 1 \
             --min-composite-score 3 \
+            --min-per-city 6 \
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}" \
             --max-total "$MAX_TOTAL" \
             --reviewer-buckets ship_now,strong_candidate,candidate
@@ -178,7 +185,22 @@ jobs:
 
       - name: Upload event layer
         if: steps.cfg.outputs.upload == 'true' && steps.payload.outputs.rows != '0'
-        run: node scripts/upload-seed-payload.mjs --input content/event-discovery-payload.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARGS=(
+            --input content/event-discovery-payload.json
+            --ttl-hours "${{ steps.cfg.outputs.expires_hours }}"
+            --created-at-mode now
+            --upload-batch-id "current_event_${{ github.run_id }}"
+          )
+          if [ "${{ steps.cfg.outputs.replace_existing }}" = "true" ]; then
+            ARGS+=( --replace-existing )
+          fi
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            ARGS+=( --city "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+          node scripts/upload-seed-payload.mjs "${ARGS[@]}"
 
       - name: Upload artifacts
         if: always()
