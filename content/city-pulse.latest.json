@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-27T03:18:15.907Z",
+    "capturedAt": "2026-04-27T05:14:08.297Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 333
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-27T03:18:15.907Z",
-      "mood_score": 0.42,
+      "captured_at": "2026-04-27T05:14:08.297Z",
+      "mood_score": 0.432,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,6 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -50,12 +51,20 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier fire alert at Camden Town."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "What a horrible thing to stress a cat with. That cat is holding on to you for dear life because it “loves gliding through streets busy with noise and traffic in London”, it’s terri"
+          "excerpt": "I love London , I think it's the best city in the world (NYC is a close second ) but like let's not delude ourselves - the subway is much cheaper and mostly just as good as the tub"
         },
         {
           "source_family": "public",
@@ -64,14 +73,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Yeah the NYC underground is genuinely like stepping back into the mid 20th century if not earlier. Just feels kind of grim in a way that only the worst tube lines can come close to"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs low, a blanket of grey that threatens rain, with rare bursts of sunlight breaking through sporadically.. The mood on the Tube is tense, with commuters glancing at the"
         },
         {
           "source_family": "news",
@@ -83,22 +84,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 51,
-        "average_valence": -0.087,
+        "source_item_count": 54,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.822
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-27T03:18:15.907Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-27T05:14:08.297Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -110,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,20 +128,20 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Berlin do you hear techno beats blaring from the park while kids play in the sun. It's a wild mix of chaos and calm th"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
         },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": 1,
           "recency_weight": 0.72,
-          "excerpt": "The sun occasionally breaks through the clouds, creating a patchwork of light and shadow on the cobblestone streets.. Despite the recent strikes, the U-Bahn is surprisingly full, w"
+          "excerpt": "A thick blanket of clouds hangs low, casting a muted grey light over the bustling streets, interrupted occasionally by splashes of autumn leaves swirling in the brisk wind.. The mo"
         },
         {
           "source_family": "world",
@@ -159,22 +161,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.046,
+        "source_item_count": 92,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-27T03:18:15.907Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-04-27T05:14:08.297Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -192,12 +194,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a group of tourists try to figure out the Muni map while right next to a driver playing the trumpet. Classic SF chaos in motion."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I mean any kind of improvements or repairs that you made to it would just get destroyed again. That's not an enormously worthwhile investment. Take a look at any of the bathrooms a"
+          "excerpt": "Exciting area ≠ Silicon Valley. I'd opt for the west Valley, especially Campbell or Los Gatos. You should be able to rent a 4BR house for around 6-7K. Downtown Campbell and downtow"
         },
         {
           "source_family": "review",
@@ -222,31 +232,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs low and gray, a blanket of clouds promising rain that never quite arrives, leaving the air thick and humid.. Frustration bubbles among commuters as the platforms swel"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": 0.004,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "work"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 0.818
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-27T03:18:15.907Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-27T05:14:08.297Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -284,14 +286,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think every bar has tapas, but locals know a good vermut is what you really want at 12 on a Sunday."
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -306,11 +300,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of grey clouds hangs over Barcelona, threatening rain but holding back, the air feeling heavy and electric.. The vibe on the Rodalies train is tense, with commuters e"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "tourism",
