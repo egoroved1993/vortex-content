@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-27T19:37:43.897Z",
+    "capturedAt": "2026-04-27T20:32:58.042Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-27T19:37:43.897Z",
-      "mood_score": 0.402,
+      "captured_at": "2026-04-27T20:32:58.042Z",
+      "mood_score": 0.453,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,13 +35,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to an earlier bridge strike at Hackney Wick. Tickets are being accepted on London Underg"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -64,45 +72,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: No service between Highbury & Islington and Stratford and MINOR DELAYS between Highbury & Islington and Wi"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Highbury & Islington and Stratford and MINOR DELAYS between Highbury & Islington and Wi"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to an earlier faulty train at Camden Town. Tickets are being accepted on London Buses,"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I was working late one summer evening, decided to walk through the Barbican instead of going straight to the tube. Put a podcast on, didn't even think about it. Sun went down just "
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.14,
+        "average_valence": -0.137,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-27T19:37:43.897Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-27T20:32:58.042Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -120,17 +120,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Don't rent a car to tour SF itself, you'll spend most of the day looking for parking. Once you get out of US metropolitan areas and off freeways you probably won't encounter very m"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I was thinking it was that one or Bartlett. I parked at both before and Hoff was definitely more sketchy. Good Luck with your search."
+          "excerpt": "I moved to the tenderloin when I split up with the ex and always figured I'd upgrade once the market was good and my job was better. I've been in the same place for 22 years now. l"
         },
         {
           "source_family": "review",
@@ -155,25 +147,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S. - ktvu.com. San Francisco offers $5K Airbnb gift cards; city has highest rent increase in U.S."
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.02,
+        "source_item_count": 54,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.815
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-27T19:37:43.897Z",
+      "captured_at": "2026-04-27T20:32:58.042Z",
       "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -184,7 +184,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -206,7 +206,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, RE1: Delays 2 trips delayed"
+          "excerpt": "Berlin transit M5, 248: Delays 2 trips delayed"
         },
         {
           "source_family": "world",
@@ -234,19 +234,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.035,
+        "source_item_count": 90,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.925
+        "freshness_score": 0.933
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-27T19:37:43.897Z",
+      "captured_at": "2026-04-27T20:32:58.042Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
