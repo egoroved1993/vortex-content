@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-27T01:44:44.343Z",
+    "capturedAt": "2026-04-27T03:18:15.907Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,10 +21,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-27T01:44:44.343Z",
-      "mood_score": 0.422,
+      "captured_at": "2026-04-27T03:18:15.907Z",
+      "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -66,12 +66,12 @@
           "excerpt": "Yeah the NYC underground is genuinely like stepping back into the mid 20th century if not earlier. Just feels kind of grim in a way that only the worst tube lines can come close to"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Tube strike ends but major disruption continues - live - London Evening Standard. Tube strike ends but major disruption continues - live"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low, a blanket of grey that threatens rain, with rare bursts of sunlight breaking through sporadically.. The mood on the Tube is tense, with commuters glancing at the"
         },
         {
           "source_family": "news",
@@ -79,26 +79,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "London tube strike live: Disruption continues on Friday as services cancelled - mirror.co.uk. London tube strike live: Disruption continues on Friday as services cancelled"
+          "excerpt": "London Underground potential strike days - kcl.ac.uk. London Underground potential strike days"
         }
       ],
       "metadata": {
         "source_item_count": 51,
-        "average_valence": -0.083,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.822
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-27T01:44:44.343Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-27T03:18:15.907Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -134,6 +134,14 @@
           "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Berlin do you hear techno beats blaring from the park while kids play in the sun. It's a wild mix of chaos and calm th"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun occasionally breaks through the clouds, creating a patchwork of light and shadow on the cobblestone streets.. Despite the recent strikes, the U-Bahn is surprisingly full, w"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -148,31 +156,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "The only firefly I've ever seen in 6 years in Berlin was last summer during a movie at Freiluftkino Hasenheide"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.039,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.913
+        "freshness_score": 0.915
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-27T01:44:44.343Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-04-27T03:18:15.907Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -191,14 +191,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know you're local when you can tell which BART delays are BS and which ones are just the usual Friday ch"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -229,26 +221,34 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low and gray, a blanket of clouds promising rain that never quite arrives, leaving the air thick and humid.. Frustration bubbles among commuters as the platforms swel"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.013,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.811
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-27T01:44:44.343Z",
+      "captured_at": "2026-04-27T03:18:15.907Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -313,10 +313,10 @@
         "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.632
+        "freshness_score": 0.631
       }
     }
   ]
