@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-27T21:29:40.292Z",
+    "capturedAt": "2026-04-27T22:24:55.816Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-27T21:29:40.292Z",
-      "mood_score": 0.402,
+      "captured_at": "2026-04-27T22:24:55.816Z",
+      "mood_score": 0.404,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -35,21 +35,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to an earlier bridge strike at Hackney Wick."
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -80,24 +72,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Camden Town and Kennington via Bank due to planned engineering work. NO SERVICE betwee"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Camden Town and Kennington via Bank due to planned engineering work. SEVERE DELAYS on"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 27, Tuesday 28, Wednesday 29 and Thursday 30 April, after 2245 each evening, no service between Hack"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.142,
+        "source_item_count": 59,
+        "average_valence": -0.135,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-27T21:29:40.292Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-04-27T22:24:55.816Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -159,21 +159,21 @@
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.013,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.817
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-27T21:29:40.292Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-27T22:24:55.816Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -184,7 +184,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -199,14 +198,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -231,22 +222,30 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "city_guide_snippet",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.035,
+        "source_item_count": 88,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "transit"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.926
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-27T21:29:40.292Z",
+      "captured_at": "2026-04-27T22:24:55.816Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
