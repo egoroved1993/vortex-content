@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-27T11:40:16.982Z",
+    "capturedAt": "2026-04-27T12:46:28.386Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 347
+    "totalItems": 331
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-27T11:40:16.982Z",
-      "mood_score": 0.422,
+      "captured_at": "2026-04-27T12:46:28.386Z",
+      "mood_score": 0.423,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -56,130 +56,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Golders Green and Camden Town while emergency services deal with a casualty on the tra"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to an earlier customer incident at Hampstead. Tickets are being accepted on London Buse"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Heathrow/Rayners Lane due an earlier faulty train at Finsbury Park."
+          "excerpt": "Temperatures in London tipped to hit 22C with days of warm sunshine ahead - London Evening Standard. Temperatures in London tipped to hit 22C with days of warm sunshine ahead"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Certainly in Houston, which I visit at least yearly, the concrete is laid differently though. The grooves in the surface run in the same direction of the traffic, instead of across"
+          "recency_weight": 0.72,
+          "excerpt": "Tube strike ends but major disruption continues - live - London Evening Standard. Tube strike ends but major disruption continues - live"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Stoke Newington. You still look shocked when someone casually brings up the latest Tube strike over a pint at the Queen's. That's "
+          "recency_weight": 0.72,
+          "excerpt": "London tube strike LIVE: Walkout finally ends but Underground still disrupted - Metro.co.uk. London tube strike LIVE: Walkout finally ends but Underground still disrupted"
         }
       ],
       "metadata": {
-        "source_item_count": 61,
-        "average_valence": -0.082,
+        "source_item_count": 51,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.875
-      }
-    },
-    {
-      "city_id": "berlin",
-      "captured_at": "2026-04-27T11:40:16.982Z",
-      "mood_score": 0.484,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 1,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "nightlife": 40,
-        "trends": 8,
-        "transport": 2,
-        "weather": 1
-      },
-      "languages": [
-        "de",
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "de",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you board a packed U-Bahn and hear a guy playing Beethoven on a theremin. It's a weird mix of classica"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.048,
-        "dominant_themes": [
-          "general",
-          "routine",
-          "events"
-        ],
-        "freshness_score": 0.931
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-27T11:40:16.982Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-04-27T12:46:28.386Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -202,12 +125,12 @@
           "excerpt": "I was thinking it was that one or Bartlett. I parked at both before and Hoff was definitely more sketchy. Good Luck with your search."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of fog rolls in from the ocean, dampening the evening light and casting a muted gray hue over the city.. The BART station is packed with frustrated commuters, their"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Lmao Baltimore is not a high trust community. The programs you speak of always sound good in theory but somehow never actually solve the problem. You cannot force people to rehabil"
         },
         {
           "source_family": "review",
@@ -235,22 +158,98 @@
         }
       ],
       "metadata": {
-        "source_item_count": 58,
-        "average_valence": -0.003,
+        "source_item_count": 54,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.828
+      }
+    },
+    {
+      "city_id": "berlin",
+      "captured_at": "2026-04-27T12:46:28.386Z",
+      "mood_score": 0.487,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "nightlife": 40,
+        "trends": 8,
+        "transport": 1,
+        "weather": 1
+      },
+      "languages": [
+        "de",
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "social",
+          "source_origin": "x_post",
+          "language": "de",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The air is crisp with scattered clouds, and the late autumn sun flickers through the branches of bare trees, casting long shadows on the pavement.. Public transport is relatively c"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 89,
+        "average_valence": -0.038,
+        "dominant_themes": [
+          "general",
+          "routine",
+          "events"
+        ],
+        "freshness_score": 0.932
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-27T11:40:16.982Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-27T12:46:28.386Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -286,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.792,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a washed-out blue, punctuated by wispy clouds that threaten rain but hold back, leaving a sticky humidity in the air.. The mood on the Metro is tense; passengers are gla"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -300,25 +307,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun casts a warm glow on the cobblestones, interrupted only by the soft whisper of a chilly breeze coming off the sea.. The platforms at Plaça Catalunya are unusually"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.631
+        "freshness_score": 0.633
       }
     }
   ]
