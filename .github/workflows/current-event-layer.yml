@@ -17,15 +17,15 @@ on:
       max_per_city:
         description: "Max generated event jobs per city"
         required: false
-        default: "20"
+        default: "2"
       variants_per_event:
         description: "Generated variants per selected event"
         required: false
-        default: "2"
+        default: "1"
       expires_hours:
         description: "How long event posts stay active"
         required: false
-        default: "30"
+        default: "18"
       replace_existing:
         description: "Replace active AI feed in uploaded cities before upload"
         type: boolean
@@ -43,7 +43,7 @@ concurrency:
 jobs:
   events:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 35
     permissions:
       contents: read
 
@@ -72,17 +72,17 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "upload=true" >> "$GITHUB_OUTPUT"
             echo "date_range=this_month" >> "$GITHUB_OUTPUT"
-            echo "max_per_city=20" >> "$GITHUB_OUTPUT"
-            echo "variants_per_event=2" >> "$GITHUB_OUTPUT"
-            echo "expires_hours=30" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=2" >> "$GITHUB_OUTPUT"
+            echo "variants_per_event=1" >> "$GITHUB_OUTPUT"
+            echo "expires_hours=18" >> "$GITHUB_OUTPUT"
             echo "replace_existing=false" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
           else
             echo "upload=${{ inputs.upload == true && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
             echo "date_range=${{ inputs.date_range || 'this_month' }}" >> "$GITHUB_OUTPUT"
-            echo "max_per_city=${{ inputs.max_per_city || '20' }}" >> "$GITHUB_OUTPUT"
-            echo "variants_per_event=${{ inputs.variants_per_event || '2' }}" >> "$GITHUB_OUTPUT"
-            echo "expires_hours=${{ inputs.expires_hours || '30' }}" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=${{ inputs.max_per_city || '2' }}" >> "$GITHUB_OUTPUT"
+            echo "variants_per_event=${{ inputs.variants_per_event || '1' }}" >> "$GITHUB_OUTPUT"
+            echo "expires_hours=${{ inputs.expires_hours || '18' }}" >> "$GITHUB_OUTPUT"
             echo "replace_existing=${{ inputs.replace_existing != false && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
             echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
           fi
@@ -160,7 +160,7 @@ jobs:
             --min-stickiness 3 \
             --min-ambiguity 1 \
             --min-composite-score 3 \
-            --min-per-city 6 \
+            --min-per-city 1 \
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}" \
             --max-total "$MAX_TOTAL" \
             --reviewer-buckets ship_now,strong_candidate,candidate

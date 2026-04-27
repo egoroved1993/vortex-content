@@ -115,6 +115,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const instructionalAdvice = looksInstructionalAdvice(contentLower);
   const genericEventReference = candidate.sourceFamily === "event_discovery" && /\b(the|this) event\b/.test(contentLower);
   const eventCliche = candidate.sourceFamily === "event_discovery" && looksEventCliche(contentLower);
+  const eventListingVoice = candidate.sourceFamily === "event_discovery" && looksEventListingVoice(content);
   const bannedOpener = /^(this morning near|this morning on|stood on the|standing on the|sitting on the)\b/i.test(content.trim());
   const cityLanguageMismatch = hasCityLanguageMismatch(candidate, detectedLanguage, content);
   const syntheticCollective = /\b(we all just|we were all in on|all in on the joke)\b/i.test(contentLower);
@@ -122,6 +123,10 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     candidate.sourceFamily === "event_discovery" &&
     detectedLanguage === "ru" &&
     hasRussianLatinLeakage(candidate, content);
+  const ruLatinPhraseLeakage =
+    candidate.sourceFamily === "event_discovery" &&
+    detectedLanguage === "ru" &&
+    hasRussianLongLatinPhrase(content);
   const pipelineSeam = looksPipelineSeam(content, contentLower, candidate.cityId);
   const truncatedOutput = looksTruncatedOutput(content, contentLower);
 
@@ -153,10 +158,12 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (instructionalAdvice) issues.push("instructional_advice");
   if (genericEventReference) issues.push("generic_event_reference");
   if (eventCliche) issues.push("event_cliche");
+  if (eventListingVoice) issues.push("event_listing_voice");
   if (bannedOpener) issues.push("banned_opener");
   if (cityLanguageMismatch) issues.push("city_language_mismatch");
   if (syntheticCollective) issues.push("synthetic_collective");
   if (ruLatinLeakage) issues.push("ru_latin_leakage");
+  if (ruLatinPhraseLeakage) issues.push("ru_latin_phrase_leakage");
   if (pipelineSeam) issues.push("pipeline_seam");
   if (truncatedOutput) issues.push("truncated_output");
   if (!stickySignal) issues.push("low_stickiness");
@@ -229,7 +236,8 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "raw_headline_injection", "off_city_place", "cloned_template", "off_topic_sports",
     "repetitive_anchor", "instruction_leakage", "article_voice", "rhetorical_question",
     "instructional_advice", "generic_event_reference", "event_cliche", "banned_opener", "synthetic_collective",
-    "city_language_mismatch", "ru_latin_leakage", "pipeline_seam", "truncated_output", "too_long",
+    "event_listing_voice", "city_language_mismatch", "ru_latin_leakage", "ru_latin_phrase_leakage",
+    "pipeline_seam", "truncated_output", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
 
@@ -270,9 +278,11 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("rhetorical_question") &&
     !issues.includes("instructional_advice") &&
     !issues.includes("generic_event_reference") &&
+    !issues.includes("event_listing_voice") &&
     !issues.includes("banned_opener") &&
     !issues.includes("synthetic_collective") &&
     !issues.includes("ru_latin_leakage") &&
+    !issues.includes("ru_latin_phrase_leakage") &&
     !issues.includes("pipeline_seam") &&
     !issues.includes("truncated_output") &&
     !issues.includes("low_freshness") &&
@@ -621,6 +631,26 @@ function looksEventCliche(contentLower) {
   return /\b(going to be packed|gonna be packed|already dreading the queue|hope (the )?queue|figure out how to get home|phone'?s? (is )?(at|on) \d{1,3}%|classic [a-z ]*night|just hope|good luck trying to)\b/i.test(
     contentLower
   );
+}
+
+function looksEventListingVoice(content) {
+  const trimmed = String(content ?? "").trim();
+  if (!trimmed) return false;
+  if (/^(concert|event|show|gig|talk|workshop|exhibition|screening|party|club night)\b/i.test(trimmed)) return true;
+  if (/\b(concert|show|gig|talk|workshop|exhibition|screening|party)\s+["“][^"”]{4,80}["”]\s+(at|on|near)\b/i.test(trimmed)) return true;
+  if (/^[A-Z][^.!?]{2,80}\s+(at|@)\s+[A-Z][^.!?]{2,80}\b/.test(trimmed) && /\b(today|tonight|tomorrow|this week|this weekend|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b/i.test(trimmed)) return true;
+  return false;
+}
+
+function hasRussianLongLatinPhrase(content) {
+  if (!/[а-яё]/iu.test(String(content ?? ""))) return false;
+  const phrases = String(content ?? "").match(/[\p{Script=Latin}][\p{Script=Latin}\p{M}\d'’.-]*(?:\s+[\p{Script=Latin}][\p{Script=Latin}\p{M}\d'’.-]*)+/gu) ?? [];
+  return phrases.some((phrase) => {
+    const tokens = phrase.split(/\s+/).map(normalizeLatinToken).filter(Boolean);
+    if (tokens.length < 2) return false;
+    if (tokens.every((token) => token.length <= 2)) return false;
+    return true;
+  });
 }
 
 function hasCityLanguageMismatch(candidate, detectedLanguage, content) {

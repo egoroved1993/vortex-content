@@ -24,6 +24,10 @@ on:
         type: boolean
         required: false
         default: false
+      upload_ttl_hours:
+        description: "How long uploaded balanced posts stay active"
+        required: false
+        default: "48"
       mix:
         description: "Comma-separated source families"
         required: false
@@ -85,9 +89,10 @@ jobs:
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
             echo "count=480" >> "$GITHUB_OUTPUT"
             echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
-            # Keep scheduled generation as a dry run while the curated golden feed is active.
-            # Manual dispatch can still upload by setting upload=true.
-            echo "upload=false" >> "$GITHUB_OUTPUT"
+            # Scheduled balanced feed owns the main AI pool; event layer only appends a small spice layer.
+            echo "upload=true" >> "$GITHUB_OUTPUT"
+            echo "expire_existing=true" >> "$GITHUB_OUTPUT"
+            echo "upload_ttl_hours=48" >> "$GITHUB_OUTPUT"
             echo "mix=launch,public,review,forum,signals,news,social" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
             echo "seed=mixed-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
@@ -106,6 +111,8 @@ jobs:
             echo "count=${{ inputs.count || '480' }}" >> "$GITHUB_OUTPUT"
             echo "model=${MANUAL_MODEL}" >> "$GITHUB_OUTPUT"
             echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
+            echo "expire_existing=${{ inputs.expire_existing && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
+            echo "upload_ttl_hours=${{ inputs.upload_ttl_hours || '48' }}" >> "$GITHUB_OUTPUT"
             echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social' }}" >> "$GITHUB_OUTPUT"
             echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
             echo "seed=mixed-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
@@ -165,10 +172,16 @@ jobs:
           fi
 
           if [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
-            ARGS+=( --upload --upload-city-pulse --upload-state content/pipeline-upload-state.json )
+            ARGS+=(
+              --upload
+              --upload-city-pulse
+              --upload-state content/pipeline-upload-state.json
+              --upload-ttl-hours "${{ steps.cfg.outputs.upload_ttl_hours }}"
+              --created-at-mode now
+            )
           fi
 
-          if [ "${{ inputs.expire_existing }}" = "true" ] && [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
+          if [ "${{ steps.cfg.outputs.expire_existing }}" = "true" ] && [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
             if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
               ARGS+=( --expire-existing --min-upload-total 12 --min-upload-per-city 12 )
             else
@@ -191,7 +204,7 @@ jobs:
           fi
 
       - name: Run place-discovery pipeline
-        if: ${{ steps.cfg.outputs.upload == 'true' && (inputs.expire_existing != true || steps.main_upload_state.outputs.main_uploaded == 'true') }}
+        if: ${{ steps.cfg.outputs.upload == 'true' && (steps.cfg.outputs.expire_existing != 'true' || steps.main_upload_state.outputs.main_uploaded == 'true') }}
         continue-on-error: true
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
@@ -235,10 +248,12 @@ jobs:
 
           # Upload to Supabase
           node scripts/upload-seed-payload.mjs \
-            --input content/place-discovery-payload.json
+            --input content/place-discovery-payload.json \
+            --ttl-hours "${{ steps.cfg.outputs.upload_ttl_hours }}" \
+            --created-at-mode now
 
       - name: Generate Russian content via Claude
-        if: ${{ steps.cfg.outputs.upload == 'true' && env.ANTHROPIC_API_KEY != '' && (inputs.expire_existing != true || steps.main_upload_state.outputs.main_uploaded == 'true') }}
+        if: ${{ steps.cfg.outputs.upload == 'true' && env.ANTHROPIC_API_KEY != '' && (steps.cfg.outputs.expire_existing != 'true' || steps.main_upload_state.outputs.main_uploaded == 'true') }}
         env:
           MODEL_NAME: claude-haiku-4-5-20251001
           MODEL_PROVIDER: anthropic
@@ -288,7 +303,9 @@ jobs:
 
           # Upload
           node scripts/upload-seed-payload.mjs \
-            --input content/russian-payload.json
+            --input content/russian-payload.json \
+            --ttl-hours "${{ steps.cfg.outputs.upload_ttl_hours }}" \
+            --created-at-mode now
 
       - name: Check content quality
         if: always()

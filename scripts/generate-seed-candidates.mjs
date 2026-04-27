@@ -191,7 +191,7 @@ if (forceLanguage === "ru") {
       `- 60–240 символов, 1–3 предложения.`,
       `- Разговорный русский, как в чатике или сообщении другу.`,
       `- Ни одного предложения на английском.`,
-      `- Локальные слова можно оставить как есть (Späti, tube, BART, piso, metro, Oyster, Anmeldung).`,
+      `- Локальные слова оставляй как есть только если русскоязычный человек реально так написал бы. Иначе пиши по-русски, не "правильно".`,
       `- Без эмодзи, без риторических вопросов, без красивых метафор.`,
       `- Без назидательного вывода в конце — оставь сцену недосказанной.`,
       `- Используй хотя бы один конкретный локальный якорь (улица, место, продукт).`,
@@ -430,7 +430,8 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
 
   // Inject Eventbrite events for this city — offer one relevant event as an optional link hook
   const cityEvents = cityEventsMap[job.cityId] ?? [];
-  if (cityEvents.length > 0 && !isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "event_discovery") {
+  const eventHookRoll = createSeededRandom(`optional-event-hook:${TODAY_DATE}:${job.id}`)();
+  if (eventHookRoll < 0.12 && cityEvents.length > 0 && !isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "event_discovery") {
     // Pick the event most relevant to the job or just the first one if nothing matches
     const event = pickRelevantEvent(job, cityEvents);
     if (event) {
@@ -438,7 +439,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
       base += `\nEvent link: ${event.url}`;
       base +=
         "\n\nIf your message naturally references this event or a similar event, include the link in your JSON output as: \"links\": [{\"type\": \"web\", \"url\": \"<event_url>\", \"label\": \"<event name short>\"}]." +
-        "\nOnly include the link if the message ACTUALLY references this event. Do not force it. If the message is about something else entirely, output \"links\": [].";
+        "\nThis is optional background, not the topic. Do not turn the message into a listing. If the message is about something else entirely, output \"links\": [].";
     }
   }
 
@@ -480,7 +481,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
         const cityRuName = { barcelona: "Барселоне", berlin: "Берлине", sf: "Сан-Франциско", london: "Лондоне" }[job.cityId] ?? job.cityId;
         base += `\n\n🇷🇺 ЯЗЫК: ТЫ ПИШЕШЬ ТОЛЬКО ПО-РУССКИ. Весь текст — кириллицей. Ни одного предложения на английском.`;
         base += `\nПиши как русскоязычный человек, живущий в ${cityRuName}. Разговорный русский, как в чатике.`;
-        base += `\nЛокальные слова оставляй на языке оригинала где это естественно (Späti, BART, tube, piso).`;
+        base += `\nЛокальные слова оставляй как есть только если русскоязычный человек реально так написал бы; иначе пиши по-русски/кириллицей, даже если это менее “правильно”.`;
         if (langGuidance) base += `\n${langGuidance}`;
         base += `\nIf the output contains ANY sentence in English, it is IMMEDIATELY REJECTED. Output language: Russian. Script: Cyrillic.`;
       } else if (forceLanguage) {
@@ -492,7 +493,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
         const isNonEnglish = langGuidance && !langGuidance.startsWith("Write in casual contemporary English") && !langGuidance.startsWith("Write in modern American English") && !langGuidance.startsWith("Write in English") && !langGuidance.startsWith("Write in casual English") && !langGuidance.startsWith("Write in confident British English") && !langGuidance.startsWith("Write in casual British English") && !langGuidance.startsWith("Write in American English");
         if (isNonEnglish) {
           base += `\n\nCRITICAL LANGUAGE REQUIREMENT: ${langGuidance}`;
-          base += "\nThe ENTIRE message must be in this language. Do NOT write in English. Do NOT translate to English. Every word must be in the specified language (except city-specific proper nouns). If you write in English, the message is REJECTED.";
+          base += "\nThe ENTIRE message must be in this language. Do NOT write in English. Do not preserve foreign names just to be correct: shorten, transliterate, or describe them if that is how a human in this language would type it. If you write English glue around a foreign title, the message is REJECTED.";
         } else {
           base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${langGuidance}`;
         }

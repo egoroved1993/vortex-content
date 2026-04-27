@@ -96,6 +96,8 @@ const payloadRows = Array.isArray(payload.rows) ? payload.rows : [];
 const expireExisting = Boolean(args["expire-existing"]);
 const minUploadTotal = Number(args["min-upload-total"] ?? 1);
 const minUploadPerCity = Number(args["min-upload-per-city"] ?? 0);
+const uploadTtlHours = args["upload-ttl-hours"] ? String(args["upload-ttl-hours"]) : null;
+const createdAtMode = args["created-at-mode"] ? String(args["created-at-mode"]) : null;
 const cityCounts = countBy(payloadRows, (row) => row.city_id ?? row.cityId ?? "unknown");
 const uploadState = {
   attempted: upload,
@@ -115,6 +117,8 @@ if (upload) {
       runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
         "--input",
         payloadPath,
+        ...(uploadTtlHours ? ["--ttl-hours", uploadTtlHours] : []),
+        ...(createdAtMode ? ["--created-at-mode", createdAtMode] : []),
         ...(expireExisting ? ["--replace-existing"] : []),
         ...(expireExisting && cityFocus ? ["--city", cityFocus] : []),
       ]);

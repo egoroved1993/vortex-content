@@ -168,7 +168,9 @@ function buildEventPrompt({ city, event, style, links, variantIndex = 0 }) {
     "- Do NOT make the event sound globally important; keep it as one small city consequence",
     "- BANNED event clichés: 'going to be packed', 'already dreading the queue', 'hope the queue', 'figure out how to get home', 'phone is at X%', 'phone's at X%', 'classic city night'",
     "- Avoid generic logistics-only templates: low battery, long queue, ride home, packed crowd. If you use one, add a specific object, person, or awkward social detail not copied from the listing",
-    "- If writing Russian, write the sentence in Russian. Only real artist/event/venue names may stay in Latin; do not use local foreign words like Kiez, Späti, Tube, U-Bahn, barrio, or Raval as flavor unless they are the actual venue/event name",
+    "- Do not preserve an event title just to be correct. If a local would shorten it, transliterate it, call it 'that concert', or mention only the venue/neighborhood, do that.",
+    "- If writing Russian, write like a Russian speaker typed it. Transliterate or simplify foreign multi-word titles when that feels more human. One-word artist/venue names may stay Latin only if Russian speakers would actually type them that way.",
+    "- Do not use local foreign words like Kiez, Späti, Tube, U-Bahn, barrio, or Raval as flavor unless that exact word is genuinely how this speaker would write it.",
     eventLanguageRule(city),
     "- Verified links are already attached by the pipeline. Do NOT output or rewrite links.",
     "",
@@ -181,18 +183,18 @@ function buildEventPrompt({ city, event, style, links, variantIndex = 0 }) {
 function eventLanguageRule(city) {
   const cityId = city.id ?? city.cityId ?? "";
   if (cityId === "sf") {
-    return "- Language: write entirely in casual American English. Do not switch into Spanish, Catalan, German, or Russian unless it is an exact event/venue name.";
+    return "- Language: write entirely in casual American English. Event names can be shortened or paraphrased; do not sound like a calendar listing.";
   }
   if (cityId === "london") {
-    return "- Language: write entirely in casual British English. Do not switch into Spanish, Catalan, German, or Russian unless it is an exact event/venue name.";
+    return "- Language: write entirely in casual British English. Event names can be shortened or paraphrased; do not sound like a calendar listing.";
   }
   if (cityId === "barcelona") {
-    return "- Language: choose exactly one language for the whole message: Catalan, Spanish, English, or Russian. Do not mix sentence languages; only event/venue names may stay as written.";
+    return "- Language: choose exactly one language for the whole message: Catalan, Spanish, English, or Russian. Do not mix sentence languages. Event/venue names may be shortened, transliterated, or described instead of preserved.";
   }
   if (cityId === "berlin") {
-    return "- Language: choose exactly one language for the whole message: German, English, or Russian. Do not mix sentence languages; only event/venue names may stay as written.";
+    return "- Language: choose exactly one language for the whole message: German, English, or Russian. Do not mix sentence languages. Event/venue names may be shortened, transliterated, or described instead of preserved.";
   }
-  return "- Language: choose one natural city language and do not mix languages except for exact event/venue names.";
+  return "- Language: choose one natural city language and do not mix languages. Event/venue names may be shortened, transliterated, or described instead of preserved.";
 }
 
 function normalizeEventbriteEvent(entry) {
