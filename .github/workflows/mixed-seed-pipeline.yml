@@ -89,9 +89,9 @@ jobs:
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
             echo "count=480" >> "$GITHUB_OUTPUT"
             echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
-            # Scheduled balanced feed owns the main AI pool; event layer only appends a small spice layer.
+            # Scheduled balanced feed refreshes the curated base without risking a low-count replacement.
             echo "upload=true" >> "$GITHUB_OUTPUT"
-            echo "expire_existing=true" >> "$GITHUB_OUTPUT"
+            echo "expire_existing=false" >> "$GITHUB_OUTPUT"
             echo "upload_ttl_hours=48" >> "$GITHUB_OUTPUT"
             echo "mix=launch,public,review,forum,signals,news,social" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
