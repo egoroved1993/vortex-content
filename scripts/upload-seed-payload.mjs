@@ -274,9 +274,10 @@ function randomTimeToday() {
   const now = new Date();
   const start = new Date(now);
   start.setUTCHours(7, 0, 0, 0); // 7:00 UTC min
-  const end = new Date(now);
-  end.setUTCHours(23, 59, 59, 999); // 23:59 UTC max
-  const ms = start.getTime() + Math.random() * (end.getTime() - start.getTime());
+  if (start.getTime() > now.getTime()) {
+    start.setUTCDate(start.getUTCDate() - 1);
+  }
+  const ms = start.getTime() + Math.random() * (now.getTime() - start.getTime());
   return new Date(ms).toISOString();
 }
 

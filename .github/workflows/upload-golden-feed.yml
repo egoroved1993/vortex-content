@@ -57,7 +57,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          args=(--input /tmp/golden-feed-payload.json)
+          args=(--input /tmp/golden-feed-payload.json --created-at-mode now)
           if [[ "${{ inputs.dry_run }}" == "true" ]]; then
             args+=(--dry-run)
           fi

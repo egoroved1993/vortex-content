@@ -1,0 +1,63 @@
+name: City Feed Top-Up
+
+on:
+  schedule:
+    # One city every two hours; each city gets a fresh append roughly every 8 hours.
+    - cron: "20 */2 * * *"
+  workflow_dispatch:
+    inputs:
+      city_focus:
+        description: "Optional city id. If empty, rotate by UTC hour."
+        required: false
+        default: ""
+      count:
+        description: "Mixed job count before city filtering"
+        required: false
+        default: "200"
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+
+    steps:
+      - name: Pick city
+        id: pick
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          manual_city="${{ inputs.city_focus || '' }}"
+          if [ -n "$manual_city" ]; then
+            city="$manual_city"
+          else
+            slot=$(( (10#$(date -u +%H) / 2) % 4 ))
+            case "$slot" in
+              0) city="barcelona" ;;
+              1) city="berlin" ;;
+              2) city="london" ;;
+              3) city="sf" ;;
+            esac
+          fi
+
+          count="${{ inputs.count || '200' }}"
+          echo "city=${city}" >> "$GITHUB_OUTPUT"
+          echo "count=${count}" >> "$GITHUB_OUTPUT"
+          echo "Dispatching top-up for ${city} with count=${count}"
+
+      - name: Dispatch mixed city top-up
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh workflow run mixed-seed-pipeline.yml \
+            --ref main \
+            -f count="${{ steps.pick.outputs.count }}" \
+            -f model=claude-haiku-4-5-20251001 \
+            -f upload=true \
+            -f expire_existing=false \
+            -f upload_ttl_hours=72 \
+            -f city_focus="${{ steps.pick.outputs.city }}" \
+            -f mix=launch,public,review,forum,signals,news,social
