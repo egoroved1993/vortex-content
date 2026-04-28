@@ -1,6 +1,10 @@
 const args = parseArgs(process.argv.slice(2));
 const dryRun = Boolean(args["dry-run"]);
 const cityId = args["city"] ?? null; // optional: --city barcelona
+const messageIds = String(args.ids ?? "")
+  .split(",")
+  .map((value) => value.trim())
+  .filter(Boolean);
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
@@ -14,7 +18,9 @@ const nowIso = new Date().toISOString();
 // Expire ALL AI messages: both expires_at IS NULL (permanent) and expires_at > now (active)
 // author_id IS NULL = AI-generated. Never touches real user messages.
 const baseFilter = `author_id=is.null&or=(expires_at.is.null,expires_at.gt.${encodeURIComponent(nowIso)})`;
-const filterQuery = cityId ? `${baseFilter}&city_id=eq.${cityId}` : baseFilter;
+const idFilter = messageIds.length > 0 ? `id=in.(${messageIds.map(encodeURIComponent).join(",")})` : null;
+const cityFilter = cityId ? `city_id=eq.${encodeURIComponent(cityId)}` : null;
+const filterQuery = [baseFilter, cityFilter, idFilter].filter(Boolean).join("&");
 
 const countUrl = `${supabaseUrl}/rest/v1/messages?select=id&${filterQuery}`;
 
@@ -32,7 +38,7 @@ if (!countResponse.ok) {
 }
 
 const activeCount = parseCount(countResponse.headers.get("content-range"));
-console.log(`AI messages to expire${cityId ? ` in ${cityId}` : ""}: ${activeCount}`);
+console.log(`AI messages to expire${cityId ? ` in ${cityId}` : ""}${messageIds.length ? ` by id (${messageIds.length})` : ""}: ${activeCount}`);
 
 if (dryRun || activeCount === 0) {
   console.log(dryRun ? "Dry run: skipping expiration" : "Nothing to expire");
@@ -56,7 +62,7 @@ if (!expireResponse.ok) {
   throw new Error(`Supabase expiration failed: ${await expireResponse.text()}`);
 }
 
-console.log(`Expired ${activeCount} AI messages${cityId ? ` in ${cityId}` : ""}`);
+console.log(`Expired ${activeCount} AI messages${cityId ? ` in ${cityId}` : ""}${messageIds.length ? " by id" : ""}`);
 
 function parseCount(contentRange) {
   const raw = String(contentRange ?? "");

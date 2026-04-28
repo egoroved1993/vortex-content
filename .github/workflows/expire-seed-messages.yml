@@ -1,0 +1,55 @@
+name: Expire Seed Messages
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Comma-separated message ids to expire. Leave empty to expire by city."
+        required: false
+        default: ""
+      city:
+        description: "Optional city id filter"
+        required: false
+        default: ""
+      dry_run:
+        description: "Show count without changing production"
+        type: boolean
+        required: false
+        default: true
+
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Expire selected AI messages
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          args=()
+          if [ -n "${{ inputs.ids }}" ]; then
+            args+=(--ids "${{ inputs.ids }}")
+          fi
+          if [ -n "${{ inputs.city }}" ]; then
+            args+=(--city "${{ inputs.city }}")
+          fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            args+=(--dry-run)
+          fi
+
+          node scripts/expire-active-seed-messages.mjs "${args[@]}"
