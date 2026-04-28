@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-28T07:07:14.431Z",
+    "capturedAt": "2026-04-28T09:00:05.856Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-28T07:07:14.431Z",
-      "mood_score": 0.368,
+      "captured_at": "2026-04-28T09:00:05.856Z",
+      "mood_score": 0.362,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -56,7 +56,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier points failure at Camden Town."
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we fix faulty communications equipment."
         },
         {
           "source_family": "transport",
@@ -64,7 +64,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge while we fix a signal failure at North Ealing. Tickets wi"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays while we fix a points failure at Camden Town."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge due to an ealier signal failure at North Ealing. Tickets"
         },
         {
           "source_family": "signals",
@@ -73,33 +81,25 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The afternoon sky is a patchwork of gray clouds while a soft drizzle adds a sheen to the streets.. Commuters are still on edge, eyeing platforms anxiously as they wait for the Tube"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.094,
+        "average_valence": -0.11,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.844
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-28T07:07:14.431Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-04-28T09:00:05.856Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -133,7 +133,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100, M5: Delays 3 trips delayed"
+          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "They pulled only my debit card and hit the nearest Spati, by the time they hit the second Spati I'd already blocked it on the mobile app. We found them and recognized them from the"
         },
         {
           "source_family": "world",
@@ -150,36 +158,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "You are right! Great mindset keep it up! Berlin contains roughly 3.7 million people and i've been counting!!!!! 2.5 million fall within these 2 categories meaning you are super dup"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.033,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.938
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-28T07:07:14.431Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-28T09:00:05.856Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -199,7 +199,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "As someone from San Francisco I wouldn’t have any idea where to start on a flag for it honestly, maybe something more hippie based, the city is so packed full of stuff and culture "
+          "excerpt": "You can protest it. You qualify for free legal advice through the SF Bar Association. (sorry for the AI but it’s clear Info) Free Legal Advice (Lawyers on Call) Program: The \"Lawye"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "For your first arrival, I would Uber from the airport not from Bart on Market. Just easier peace of mind until you're more familiar with the ups and downs of the area. I generally "
         },
         {
           "source_family": "review",
@@ -224,30 +232,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.042,
+        "source_item_count": 52,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.815
+        "freshness_score": 0.801
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-28T07:07:14.431Z",
+      "captured_at": "2026-04-28T09:00:05.856Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
@@ -318,7 +318,7 @@
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.628
+        "freshness_score": 0.627
       }
     }
   ]
