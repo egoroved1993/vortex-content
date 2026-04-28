@@ -17,6 +17,8 @@ const mix = parseMix(args.mix ?? "launch");
 const jobsPerSignalSnapshot = Number(args["signal-jobs-per-snapshot"] ?? 3);
 const socialProvider =
   args["social-provider"] ?? process.env.SOCIAL_PROVIDER ?? (provider && provider !== "openai" ? null : "openai");
+const generationConcurrency = Number(args["generation-concurrency"] ?? (provider === "anthropic" ? 1 : 2));
+const generationThrottleMs = Number(args["generation-throttle-ms"] ?? (provider === "anthropic" ? 4000 : 0));
 
 const jobsPath = args.jobs ? path.resolve(process.cwd(), args.jobs) : resolveProjectPath("content", "pipeline-jobs.json");
 const candidatesPath = args.candidates ? path.resolve(process.cwd(), args.candidates) : resolveProjectPath("content", "pipeline-candidates.json");
@@ -29,6 +31,8 @@ console.log(JSON.stringify({
   modelProvider: provider ?? "auto",
   model: model ?? process.env.MODEL_NAME ?? "provider_default",
   socialProvider: socialProvider ?? "same_as_model_provider",
+  generationConcurrency,
+  generationThrottleMs,
 }, null, 2));
 
 runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
@@ -59,7 +63,8 @@ runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   "--out",
   candidatesPath,
   "--concurrency",
-  "2",
+  String(generationConcurrency),
+  ...(generationThrottleMs > 0 ? ["--throttle-ms", String(generationThrottleMs)] : []),
   ...(provider ? ["--provider", provider] : []),
   ...(model ? ["--model", model] : []),
   ...(args["mind-post-provider"] ? ["--mind-post-provider", args["mind-post-provider"]] : []),

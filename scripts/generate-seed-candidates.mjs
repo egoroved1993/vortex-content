@@ -133,6 +133,7 @@ const familyProviderOverrides = {
   social: args["social-provider"] ?? process.env.SOCIAL_PROVIDER ?? null,
 };
 const concurrency = Number(args.concurrency ?? 4);
+const throttleMs = Number(args["throttle-ms"] ?? 0);
 const limit = args.limit ? Number(args.limit) : undefined;
 const useMock = Boolean(args.mock);
 const forceLanguage = args["force-language"] ?? null;
@@ -215,6 +216,7 @@ if (forceLanguage === "ru") {
 
 const candidates = await runWithConcurrency(jobs, concurrency, async (job, index) => {
   if (useMock) return buildMockCandidate(job, index);
+  if (throttleMs > 0 && index > 0) await sleep(throttleMs);
   const target = resolveTargetModel(job, { provider, model, laneProviderOverrides, laneModelOverrides, familyProviderOverrides });
   const generated = await generateCandidate(job, target);
   return {
@@ -709,30 +711,32 @@ async function generateWithAnthropic(job, modelName) {
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY is required for provider=anthropic");
   const profile = generationProfile(job, "anthropic");
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: modelName,
-      max_tokens: profile.maxTokens,
-      temperature: profile.temperature,
-      system: buildSystemPrompt(job, "anthropic", modelName),
-      messages: [{ role: "user", content: job.prompt }],
-    }),
-  });
+  return fetchWithRetry(async () => {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: modelName,
+        max_tokens: profile.maxTokens,
+        temperature: profile.temperature,
+        system: buildSystemPrompt(job, "anthropic", modelName),
+        messages: [{ role: "user", content: job.prompt }],
+      }),
+    });
 
-  if (!response.ok) {
-    throw new Error(`Anthropic error ${response.status}: ${await response.text()}`);
-  }
+    if (!response.ok) {
+      throw new Error(`Anthropic error ${response.status}: ${await response.text()}`);
+    }
 
-  const payload = await response.json();
-  const text = payload.content?.map((part) => part.text ?? "").join("").trim();
-  return normalizeModelJson(job, text, {
-    usage: normalizeAnthropicUsage(payload.usage),
+    const payload = await response.json();
+    const text = payload.content?.map((part) => part.text ?? "").join("").trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeAnthropicUsage(payload.usage),
+    });
   });
 }
 
@@ -822,30 +826,32 @@ async function generateRepairWithAnthropic(job, modelName, weakDraft, assessment
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY is required for provider=anthropic");
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: modelName,
-      max_tokens: repairMaxTokens(job),
-      temperature: 0.2,
-      system: buildRepairSystemPrompt(job, assessment, "anthropic", modelName),
-      messages: [{ role: "user", content: buildRepairUserPrompt(job, weakDraft, assessment) }],
-    }),
-  });
+  return fetchWithRetry(async () => {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: modelName,
+        max_tokens: repairMaxTokens(job),
+        temperature: 0.2,
+        system: buildRepairSystemPrompt(job, assessment, "anthropic", modelName),
+        messages: [{ role: "user", content: buildRepairUserPrompt(job, weakDraft, assessment) }],
+      }),
+    });
 
-  if (!response.ok) {
-    throw new Error(`Anthropic error ${response.status}: ${await response.text()}`);
-  }
+    if (!response.ok) {
+      throw new Error(`Anthropic error ${response.status}: ${await response.text()}`);
+    }
 
-  const payload = await response.json();
-  const text = payload.content?.map((part) => part.text ?? "").join("").trim();
-  return normalizeModelJson(job, text, {
-    usage: normalizeAnthropicUsage(payload.usage),
+    const payload = await response.json();
+    const text = payload.content?.map((part) => part.text ?? "").join("").trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeAnthropicUsage(payload.usage),
+    });
   });
 }
 
