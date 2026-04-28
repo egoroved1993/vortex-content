@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-28T16:45:02.720Z",
+    "capturedAt": "2026-04-28T17:40:18.714Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-28T16:45:02.720Z",
-      "mood_score": 0.364,
+      "captured_at": "2026-04-28T17:40:18.714Z",
+      "mood_score": 0.359,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -64,7 +64,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays while we fix a points failure at Camden Town. Trains are operating between High Barnet and M"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays while we fix a points failure at Camden Town. Tickets are being accepted on London Buses, L"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Peckham. Saw a guy on the 36 coming back from a late shift—he’s fallen asleep in the corner with a takeaway box still in his hand. It was half-open, chips ev"
         },
         {
           "source_family": "signals",
@@ -72,32 +80,24 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sky is a patchwork of gray clouds while a soft drizzle adds a sheen to the streets.. Commuters are still on edge, eyeing platforms anxiously as they wait for the Tube"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+          "excerpt": "The gray clouds hang low, promising rain, with a brisk wind whipping through the streets, making the air feel sharp against exposed skin.. With the looming threat of the tube strik"
         }
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.105,
+        "average_valence": -0.119,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.838
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-28T16:45:02.720Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-04-28T17:40:18.714Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -133,6 +133,14 @@
           "excerpt": "not FiDi, but Habibi's Birria is pretty good fusion Mediterranean/Mexican. It's right next to Bart/Muni too so if you can go there in person it'll probably be better and you'll sav"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, with a hint of humidity lingering in the air, making the city feel heavier than usual.. BART lines are crawling with frustrated commuters, their faces etch"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -147,33 +155,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.008,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.823
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-28T16:45:02.720Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-28T17:40:18.714Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -206,7 +206,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1, 200: Delays 2 trips delayed"
+          "excerpt": "Berlin transit S3, RE1, 200: Delays 3 trips delayed"
         },
         {
           "source_family": "world",
@@ -225,29 +225,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Today the sky hangs heavy with a mix of overcast and breaks of unexpected sunlight, hinting at early autumn's chill.. With the recent announcements of resumed services, commuters a"
         }
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.035,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.934
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-28T16:45:02.720Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-28T17:40:18.714Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -304,14 +304,14 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun breaks through a veil of gray clouds, casting a warm glow on the wet streets after last night’s rain.. The air around the Sants station is thick with frustration as commute"
+          "excerpt": "A thick blanket of clouds lingers over Barcelona, casting a muted light on the streets as a cool breeze carries the scent of rain yet to fall.. The atmosphere at train stations is "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "tourism",
