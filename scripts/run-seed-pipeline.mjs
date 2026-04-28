@@ -10,10 +10,13 @@ const count = args.count ?? 40;
 const seed = args.seed ?? "launch-pipeline";
 const mock = Boolean(args.mock);
 const upload = Boolean(args.upload);
+const provider = args.provider ?? process.env.MODEL_PROVIDER ?? null;
 const model = args.model ?? null;
 const cityFocus = args["city-focus"] ?? null;
 const mix = parseMix(args.mix ?? "launch");
 const jobsPerSignalSnapshot = Number(args["signal-jobs-per-snapshot"] ?? 3);
+const socialProvider =
+  args["social-provider"] ?? process.env.SOCIAL_PROVIDER ?? (provider && provider !== "openai" ? null : "openai");
 
 const jobsPath = args.jobs ? path.resolve(process.cwd(), args.jobs) : resolveProjectPath("content", "pipeline-jobs.json");
 const candidatesPath = args.candidates ? path.resolve(process.cwd(), args.candidates) : resolveProjectPath("content", "pipeline-candidates.json");
@@ -21,6 +24,13 @@ const reportPath = args.report ? path.resolve(process.cwd(), args.report) : reso
 const payloadPath = args.payload ? path.resolve(process.cwd(), args.payload) : resolveProjectPath("content", "pipeline-payload.json");
 const cityPulsePath = args["city-pulse-out"] ? path.resolve(process.cwd(), args["city-pulse-out"]) : resolveProjectPath("content", "city-pulse.latest.json");
 const uploadStatePath = args["upload-state"] ? path.resolve(process.cwd(), args["upload-state"]) : null;
+
+console.log(JSON.stringify({
+  modelProvider: provider ?? "auto",
+  model: model ?? process.env.MODEL_NAME ?? "provider_default",
+  socialProvider: socialProvider ?? "same_as_model_provider",
+}, null, 2));
+
 runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
   "--out",
   cityPulsePath,
@@ -50,13 +60,13 @@ runNode(path.join(projectRoot, "scripts", "generate-seed-candidates.mjs"), [
   candidatesPath,
   "--concurrency",
   "2",
+  ...(provider ? ["--provider", provider] : []),
   ...(model ? ["--model", model] : []),
   ...(args["mind-post-provider"] ? ["--mind-post-provider", args["mind-post-provider"]] : []),
   ...(args["mind-post-model"] ? ["--mind-post-model", args["mind-post-model"]] : []),
   ...(args["micro-moment-provider"] ? ["--micro-moment-provider", args["micro-moment-provider"]] : []),
   ...(args["micro-moment-model"] ? ["--micro-moment-model", args["micro-moment-model"]] : []),
-  "--social-provider",
-  "openai",
+  ...(socialProvider ? ["--social-provider", socialProvider] : []),
   ...(mock ? ["--mock"] : []),
 ]);
 
