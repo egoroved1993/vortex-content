@@ -927,6 +927,7 @@ function looksTruncatedOutput(content, contentLower) {
   if (/\b(who|what|where|why|how)(?:'s|’s)?$/i.test(trimmed)) return true;
   if (/\b(he|she|they|it|i|we|you)\s+(looked|felt|seemed|thought|wanted|needed|started|kept|tried|asked|said|told|went|got|had)$/i.test(trimmed)) return true;
   if (/\b(but|and|because|while|though|honestly),?\s+(who|what|where|why|how|he|she|they|it|i|we|you)(?:'s|’s)?$/i.test(trimmed)) return true;
+  if (/\blike\s+(i['’]?m|we['’]?re|it['’]?s|he['’]?s|she['’]?s|they['’]?re|you['’]?re)\s+(applying|waiting|trying|looking|asking|arguing|paying|checking)\s+(for|to|at|with|in)\s+(a|an|the)?\s*\w{2,24}$/i.test(trimmed)) return true;
   if (/\b(foreca|contro)\b/i.test(trimmed)) return true;
 
   const incompletePlaceCopy = [
@@ -1018,8 +1019,8 @@ function looksOffTopicSports(contentLower, cityId) {
 }
 
 function looksRepetitiveAnchor(contentLower, cityId) {
-  // "superblock corner" is used as a lazy template anchor for Barcelona
-  if (cityId === "barcelona" && contentLower.includes("superblock corner")) return true;
+  // "superblock" became a lazy template anchor for Barcelona and reads synthetic.
+  if (cityId === "barcelona" && contentLower.includes("superblock")) return true;
   return false;
 }
 
