@@ -49,12 +49,12 @@ jobs:
 
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.CLAUDE }}
       EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
       ENABLE_EVENTBRITE_EVENTS: ${{ vars.ENABLE_EVENTBRITE_EVENTS || 'false' }}
+      ENABLE_OPENAI_SCHEDULE: ${{ vars.ENABLE_OPENAI_SCHEDULE || 'false' }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-      MODEL_PROVIDER: openai
-      MODEL_NAME: gpt-4o
 
     steps:
       - name: Checkout
@@ -69,6 +69,16 @@ jobs:
         id: cfg
         shell: bash
         run: |
+          if [ "${ENABLE_OPENAI_SCHEDULE:-false}" != "true" ] && [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+            DEFAULT_PROVIDER=anthropic
+            DEFAULT_MODEL=claude-haiku-4-5-20251001
+          else
+            DEFAULT_PROVIDER=openai
+            DEFAULT_MODEL=gpt-4o
+          fi
+          echo "provider=${DEFAULT_PROVIDER}" >> "$GITHUB_OUTPUT"
+          echo "model=${DEFAULT_MODEL}" >> "$GITHUB_OUTPUT"
+
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "upload=true" >> "$GITHUB_OUTPUT"
             echo "date_range=this_month" >> "$GITHUB_OUTPUT"
@@ -127,24 +137,50 @@ jobs:
           node -e "const fs=require('fs'); const rows=JSON.parse(fs.readFileSync('content/event-discovery-jobs.json','utf8')); console.log('count=' + rows.length);" >> "$GITHUB_OUTPUT"
 
       - name: Generate event candidates
+        id: generate
         if: steps.jobs.outputs.count != '0'
+        shell: bash
+        env:
+          MODEL_PROVIDER: ${{ steps.cfg.outputs.provider }}
+          MODEL_NAME: ${{ steps.cfg.outputs.model }}
         run: |
+          set +e
           node scripts/generate-seed-candidates.mjs \
             --input content/event-discovery-jobs.json \
             --out content/event-discovery-candidates.json \
             --concurrency 2
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            echo "::warning::Event candidate generation failed; skipping this tiny event append instead of failing the whole workflow."
+            echo "generated=false" >> "$GITHUB_OUTPUT"
+            printf '[]\n' > content/event-discovery-candidates.json
+            exit 0
+          fi
+          echo "generated=true" >> "$GITHUB_OUTPUT"
 
       - name: Validate event candidates
-        if: steps.jobs.outputs.count != '0'
+        id: validate
+        if: steps.generate.outputs.generated == 'true'
+        shell: bash
         run: |
+          set +e
           node scripts/validate-seed-candidates.mjs \
             --input content/event-discovery-candidates.json \
             --out content/event-discovery-candidates.report.json
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            echo "::warning::Event candidate validation failed; skipping event upload for this run."
+            echo "validated=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "validated=true" >> "$GITHUB_OUTPUT"
 
       - name: Prepare event payload
-        if: steps.jobs.outputs.count != '0'
+        id: prepare
+        if: steps.validate.outputs.validated == 'true'
         shell: bash
         run: |
+          set +e
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
             MAX_TOTAL="${{ steps.cfg.outputs.max_per_city }}"
           else
@@ -164,27 +200,46 @@ jobs:
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}" \
             --max-total "$MAX_TOTAL" \
             --reviewer-buckets ship_now,strong_candidate,candidate
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            echo "::warning::Event payload preparation failed or produced too little usable content; skipping event upload for this run."
+            echo "prepared=false" >> "$GITHUB_OUTPUT"
+            printf '{"rows":[]}\n' > content/event-discovery-payload.json
+            exit 0
+          fi
+          echo "prepared=true" >> "$GITHUB_OUTPUT"
 
       - name: Check event payload
-        if: steps.jobs.outputs.count != '0'
+        id: quality
+        if: steps.prepare.outputs.prepared == 'true'
+        shell: bash
         run: |
+          set +e
           node scripts/check-event-payload.mjs \
             --payload content/event-discovery-payload.json \
             --require-links true
+          event_status=$?
           node scripts/check-content-quality.mjs \
             --payload content/event-discovery-payload.json \
             --place-payload content/missing-place-payload.json \
             --out content/event-discovery-quality-report.json
+          quality_status=$?
+          if [ "$event_status" -ne 0 ] || [ "$quality_status" -ne 0 ]; then
+            echo "::warning::Event payload quality checks failed; skipping event upload for this run."
+            echo "checked=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "checked=true" >> "$GITHUB_OUTPUT"
 
       - name: Read event payload state
         id: payload
-        if: steps.jobs.outputs.count != '0'
+        if: steps.quality.outputs.checked == 'true'
         shell: bash
         run: |
           node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync('content/event-discovery-payload.json','utf8')); console.log('rows=' + (p.rows || []).length);" >> "$GITHUB_OUTPUT"
 
       - name: Upload event layer
-        if: steps.cfg.outputs.upload == 'true' && steps.payload.outputs.rows != '0'
+        if: steps.cfg.outputs.upload == 'true' && steps.quality.outputs.checked == 'true' && steps.payload.outputs.rows != '0'
         shell: bash
         run: |
           set -euo pipefail

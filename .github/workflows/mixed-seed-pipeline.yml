@@ -52,6 +52,7 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       # XAI_API_KEY: ${{ secrets.XAI_API_KEY }}  # disabled — credits exhausted, causes pipeline noise
       ANTHROPIC_API_KEY: ${{ secrets.CLAUDE }}
+      ENABLE_OPENAI_SCHEDULE: ${{ vars.ENABLE_OPENAI_SCHEDULE || 'false' }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       MODEL_COST_GPT_4O_INPUT_PER_1M_USD: "2.5"
@@ -73,19 +74,20 @@ jobs:
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            # Rotate provider+model by day-of-year mod 5
-            # Slot 4 (anthropic) activates only if ANTHROPIC_API_KEY is set, else falls back to slot 0
-            DAY_SLOT=$(( 10#$(date -u +%j) % 5 ))
-            if [ "$DAY_SLOT" = "4" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
-              DAY_SLOT=0
+            # OpenAI currently returns insufficient_quota in scheduled runs.
+            # Prefer Claude for cron if available; set ENABLE_OPENAI_SCHEDULE=true to restore rotation.
+            if [ "${ENABLE_OPENAI_SCHEDULE:-false}" != "true" ] && [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+              SCHED_PROVIDER=anthropic
+              SCHED_MODEL=claude-haiku-4-5-20251001
+            else
+              DAY_SLOT=$(( 10#$(date -u +%j) % 4 ))
+              case $DAY_SLOT in
+                0) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o-mini ;;
+                1) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o-mini ;;
+                2) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o ;;
+                3) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o-mini ;;
+              esac
             fi
-            case $DAY_SLOT in
-              0) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
-              1) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
-              2) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o ;;
-              3) SCHED_PROVIDER=openai;    SCHED_MODEL=gpt-4o-mini ;;
-              4) SCHED_PROVIDER=anthropic; SCHED_MODEL=claude-haiku-4-5-20251001 ;;
-            esac
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
             echo "count=480" >> "$GITHUB_OUTPUT"
             echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
