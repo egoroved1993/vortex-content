@@ -1,0 +1,81 @@
+name: Retry Mixed Runner Cancel
+
+on:
+  workflow_run:
+    workflows:
+      - Mixed Seed Pipeline
+    types:
+      - completed
+
+jobs:
+  retry:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' || github.event.workflow_run.conclusion == 'cancelled' }}
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      checks: read
+      contents: read
+
+    steps:
+      - name: Detect hosted runner acquisition failure
+        id: detect
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          run_json="$(gh api "repos/${REPO}/actions/runs/${RUN_ID}")"
+          attempt="$(jq -r '.run_attempt // 1' <<< "$run_json")"
+          event="$(jq -r '.event // ""' <<< "$run_json")"
+          conclusion="$(jq -r '.conclusion // ""' <<< "$run_json")"
+
+          runner_acquisition_failure=false
+          while read -r job_id; do
+            if [ -z "$job_id" ]; then
+              continue
+            fi
+            if gh api "repos/${REPO}/check-runs/${job_id}/annotations" \
+              --jq '.[].message' | grep -Fq "not acquired by Runner"; then
+              runner_acquisition_failure=true
+              break
+            fi
+          done < <(gh api "repos/${REPO}/actions/runs/${RUN_ID}/jobs?per_page=100" --jq '.jobs[].id')
+
+          should_retry=false
+          if [ "$runner_acquisition_failure" = "true" ] && [ "$attempt" -lt 3 ]; then
+            should_retry=true
+          fi
+
+          {
+            echo "attempt=${attempt}"
+            echo "event=${event}"
+            echo "conclusion=${conclusion}"
+            echo "runner_acquisition_failure=${runner_acquisition_failure}"
+            echo "should_retry=${should_retry}"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "run_id=${RUN_ID}"
+          echo "event=${event}"
+          echo "conclusion=${conclusion}"
+          echo "attempt=${attempt}"
+          echo "runner_acquisition_failure=${runner_acquisition_failure}"
+          echo "should_retry=${should_retry}"
+
+      - name: Rerun mixed pipeline
+        if: ${{ steps.detect.outputs.should_retry == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          REPO: ${{ github.repository }}
+        shell: bash
+        run: gh api -X POST "repos/${REPO}/actions/runs/${RUN_ID}/rerun"
+
+      - name: Skip retry
+        if: ${{ steps.detect.outputs.should_retry != 'true' }}
+        run: |
+          echo "No retry needed."
+          echo "runner_acquisition_failure=${{ steps.detect.outputs.runner_acquisition_failure }}"
+          echo "attempt=${{ steps.detect.outputs.attempt }}"
