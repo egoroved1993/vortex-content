@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-28T21:31:12.742Z",
+    "capturedAt": "2026-04-28T22:27:58.552Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 342
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-28T21:31:12.742Z",
-      "mood_score": 0.355,
+      "captured_at": "2026-04-28T22:27:58.552Z",
+      "mood_score": 0.357,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -64,6 +64,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Shepherd's Bush and Clapham Junction while we fix a signal failure at Clapham Juncti"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
         },
         {
@@ -72,31 +80,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays while we fix a points failure at Camden Town. Tickets are being accepted on London Buses, L"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays between Liverpool Street and Enfield Town / Cheshunt while we respond to a customer incident"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Charing Cross and East Finchley / Hampstead and severe delays on the rest of the line"
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.132,
+        "source_item_count": 59,
+        "average_valence": -0.126,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.85
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-28T21:31:12.742Z",
+      "captured_at": "2026-04-28T22:27:58.552Z",
       "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
@@ -111,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -160,8 +161,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.047,
+        "source_item_count": 92,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "routine",
@@ -172,8 +173,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-28T21:31:12.742Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-04-28T22:27:58.552Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -193,20 +194,20 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a tourist trying to board a crowded 38 Geary with a huge suitcase, completely ignoring the 'No Bikes' sign. Classic San Francisc"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Try asking in the desi community groups on Facebook, they usually have good recommendations for this stuff. Most regular tailors won't know how to work with sherwanis properly so y"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is cloaked in a gray veil, with a chilly breeze carrying the scent of seawater and burnt toast from nearby food trucks.. BART riders are anxiously checking their phones, fa"
         },
         {
           "source_family": "news",
@@ -235,7 +236,7 @@
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.002,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "transit",
@@ -246,8 +247,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-28T21:31:12.742Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-28T22:27:58.552Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
@@ -304,14 +305,14 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy gray, spitting drizzle that leaves the pavement glistening but fails to lift the spirits of the morning commuters.. The train platforms are abuzz with frustrated"
+          "excerpt": "A thick blanket of clouds hangs over Barcelona, threatening rain yet holding back, leaving a cool dampness in the air.. The Rodalies train station is buzzing with whispered frustra"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
