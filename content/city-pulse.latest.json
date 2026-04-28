@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-28T05:15:52.777Z",
+    "capturedAt": "2026-04-28T07:07:14.431Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-28T05:15:52.777Z",
-      "mood_score": 0.367,
+      "captured_at": "2026-04-28T07:07:14.431Z",
+      "mood_score": 0.368,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -35,21 +35,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays between Edgware and Battersea Power Station via Charing Cross following a late finish of eng"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -59,20 +51,28 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier points failure at Camden Town."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge while we fix a signal failure at North Ealing. Tickets wi"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The afternoon sky is a patchwork of gray clouds while a soft drizzle adds a sheen to the streets.. Commuters are still on edge, eyeing platforms anxiously as they wait for the Tube"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "London Underground potential strike days - King's College London. London Underground potential strike days"
         },
         {
           "source_family": "world",
@@ -84,20 +84,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.097,
+        "source_item_count": 56,
+        "average_valence": -0.094,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-28T05:15:52.777Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-28T07:07:14.431Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -111,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,6 +126,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, M5: Delays 3 trips delayed"
         },
         {
           "source_family": "world",
@@ -149,31 +158,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "You are right! Great mindset keep it up! Berlin contains roughly 3.7 million people and i've been counting!!!!! 2.5 million fall within these 2 categories meaning you are super dup"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I mean the only unhealthy components are the white bread and the (usually pretty greasy) meat. The sauces too, depending on the recipe, but they're often yogurt-based. Other than t"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.024,
+        "source_item_count": 92,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.938
+        "freshness_score": 0.933
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-28T05:15:52.777Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-04-28T07:07:14.431Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -235,19 +236,19 @@
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.034,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.815
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-28T05:15:52.777Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-28T07:07:14.431Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -317,7 +318,7 @@
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.63
+        "freshness_score": 0.628
       }
     }
   ]
