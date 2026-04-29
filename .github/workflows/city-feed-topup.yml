@@ -53,6 +53,7 @@ jobs:
         shell: bash
         run: |
           gh workflow run mixed-seed-pipeline.yml \
+            --repo "${{ github.repository }}" \
             --ref main \
             -f count="${{ steps.pick.outputs.count }}" \
             -f model=claude-haiku-4-5-20251001 \
