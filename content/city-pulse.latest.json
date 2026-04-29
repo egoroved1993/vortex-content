@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-29T12:46:38.334Z",
+    "capturedAt": "2026-04-29T13:42:22.868Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 346
+    "totalItems": 347
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-29T12:46:38.334Z",
-      "mood_score": 0.464,
+      "captured_at": "2026-04-29T13:42:22.868Z",
+      "mood_score": 0.469,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -35,21 +35,13 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think the 149 bus takes you anywhere useful after 10 PM. Welcome to the club of late-night chaos and questionab"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -75,6 +67,14 @@
           "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays due to an earlier obstruction at Southbury and an earlier power supply failure at Clapton."
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays due to an earlier obstruction on the track at Surrey Quays."
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -84,20 +84,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.106,
+        "source_item_count": 55,
+        "average_valence": -0.092,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-29T12:46:38.334Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-29T13:42:22.868Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -111,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -125,6 +126,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, 200, M6: Delays 3 trips delayed"
         },
         {
           "source_family": "news",
@@ -149,31 +158,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The overcast sky hangs heavy, occasionally releasing a fine mist that gives the streets a slick sheen.. With recent strikes fresh in memory, people wait at bus stops with a mix of "
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.018,
+        "source_item_count": 95,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.94
+        "freshness_score": 0.958
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-29T12:46:38.334Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-04-29T13:42:22.868Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -214,28 +215,28 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know a local when they talk about the 'itch' of BART delays like it’s a seasonal allergy, not just a commute hass"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission District. You can spot a local when they casually reference the BART delays like it’s weather gossip—'Did you hear the"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sky is a hazy gray, just thick enough to smother the late sun, leaving the city with a chill that feels almost eerie.. Frustration hangs in the air at the BART statio"
         }
       ],
       "metadata": {
         "source_item_count": 60,
-        "average_valence": -0.045,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
@@ -246,7 +247,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-29T12:46:38.334Z",
+      "captured_at": "2026-04-29T13:42:22.868Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
@@ -285,14 +286,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a washed-out gray, with a drizzle that casts a reflective sheen on the cobblestones, lending a melancholic charm to the streets.. The air in the train stations is thick "
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,17 +300,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted grey, heavy with clouds that threaten rain, and a cool breeze carries the scent of wet asphalt.. The atmosphere at the train station is tense, with commuters gla"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.627
+        "freshness_score": 0.626
       }
     }
   ]
