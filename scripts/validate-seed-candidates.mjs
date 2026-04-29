@@ -912,6 +912,7 @@ function looksPipelineSeam(content, contentLower, cityId) {
   ];
   if (generatedTrendFragments.some((fragment) => contentLower.includes(fragment))) return true;
   if (/\bit hit me[—,\s-]/i.test(content)) return true;
+  if (/^(this morning|today|tonight)\s+[а-яё]/iu.test(trimmed)) return true;
 
   return endsWithCityLabel(trimmed, cityId);
 }
@@ -960,7 +961,7 @@ function endsWithCityLabel(content, cityId) {
   const labels = labelsByCity[cityId] ?? [];
   const normalized = content.trim().toLowerCase();
 
-  return labels.some((label) => new RegExp(`[.!?]\\s*${escapeRegExp(label)}[.!?]?$`, "i").test(normalized));
+  return labels.some((label) => new RegExp(`(?:^|[.!?\\s])${escapeRegExp(label)}[.!?]?\\s*$`, "i").test(normalized));
 }
 
 function escapeRegExp(value) {
