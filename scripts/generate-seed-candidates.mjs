@@ -319,22 +319,25 @@ async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchWithRetry(fn, maxRetries = 5) {
+async function fetchWithRetry(fn, maxRetries = 6) {
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     try {
       return await fn();
     } catch (err) {
+      const message = err.message ?? "";
       const isRetryable =
-        err.message.includes("429") ||
+        message.includes("429") ||
         err.cause?.code === "ETIMEDOUT" ||
         err.cause?.code === "ECONNRESET" ||
         err.cause?.code === "ECONNREFUSED" ||
         err.cause?.code === "UND_ERR_HEADERS_TIMEOUT" ||
         err.cause?.code === "UND_ERR_CONNECT_TIMEOUT" ||
-        err.message?.includes("fetch failed") ||
-        /\b(OpenAI|Anthropic|XAI) error (408|409|429|500|502|503|504)\b/i.test(err.message ?? "");
+        message.includes("fetch failed") ||
+        /\b(OpenAI|Anthropic|XAI|xAI) error (408|409|425|429|500|502|503|504|529)\b/i.test(message) ||
+        /\b(overloaded|overloaded_error|temporarily unavailable|rate.?limit)\b/i.test(message);
       if (attempt < maxRetries - 1 && isRetryable) {
-        const delay = 2000 * Math.pow(2, attempt);
+        const delay = 2000 * Math.pow(2, attempt) + Math.floor(Math.random() * 1000);
+        console.warn(`Retrying model request after ${delay}ms (${attempt + 1}/${maxRetries}) because: ${message.slice(0, 160)}`);
         await sleep(delay);
         continue;
       }
