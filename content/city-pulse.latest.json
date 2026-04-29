@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-29T17:39:18.395Z",
+    "capturedAt": "2026-04-29T18:42:00.525Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-29T17:39:18.395Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-04-29T18:42:00.525Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -67,37 +67,37 @@
           "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Heathrow Terminals due to an earlier faulty train at Hounslow West."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Hackney City Farm might be a good option. From their web site: Want to volunteer? We are always grateful for additional help at the farm, let us know if you can lend a hand. For mo"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we fix an electrical fault at Highbury & Islington. Tickets are being accepted on Lon"
         },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Last Friday on the N35, a guy serenaded the whole bus with old Michael Jackson tunes. It felt like a mini concert, the driver just smiled and let it"
+          "excerpt": "Night bus confessions. Brixton. Caught a late night 333 last week; a lad dropped his burger on the floor and insisted it was still fine to eat. The bus driver just shook his head."
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.06,
+        "source_item_count": 54,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.853
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-29T17:39:18.395Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-29T18:42:00.525Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -111,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -133,7 +133,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, RE1, S5: Delays 4 trips delayed"
+          "excerpt": "Berlin transit RE2, U2, 200, 248: Delays 4 trips delayed"
         },
         {
           "source_family": "news",
@@ -161,22 +161,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.024,
+        "source_item_count": 91,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.95
+        "freshness_score": 0.952
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-29T17:39:18.395Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-29T18:42:00.525Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -202,6 +202,14 @@
           "excerpt": "I think the real question is if we let BART die will it be bought out by a private company with government incentives. Does it get broken up piecemeal by local cities or counties? "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of fog rolls over the Golden Gate, muting the sun and enveloping the city in a cool, damp embrace.. BART stations are buzzing with frustration as commuters huddle tog"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -223,34 +231,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a gray mist, creating a damp chill that settles into the corners of Market Street.. Frustration echoes through the BART station as commuters pace restlessl"
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.026,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.813
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-29T17:39:18.395Z",
+      "captured_at": "2026-04-29T18:42:00.525Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -307,7 +307,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with thick gray clouds, threatening rain and casting the streets in a muted light that makes the colorful buildings look a bit tired.. Commuters on the Rodalies"
+          "excerpt": "A thick blanket of clouds hangs low, threatening rain, while a damp chill settles across the city streets.. Rodalies trains are noticeably less crowded today as many commuters opt "
         }
       ],
       "metadata": {
@@ -316,7 +316,7 @@
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "transit"
         ],
         "freshness_score": 0.626
       }
