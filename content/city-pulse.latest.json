@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-29T10:44:03.389Z",
+    "capturedAt": "2026-04-29T11:38:11.738Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 346
+    "totalItems": 348
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-29T10:44:03.389Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-04-29T11:38:11.738Z",
+      "mood_score": 0.463,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -35,13 +35,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think the 149 bus takes you anywhere useful after 10 PM. Welcome to the club of late-night chaos and questionab"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -72,32 +80,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays while we remove an obstruction from the track at Surrey Quays."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays due to an earlier obstruction at Southbury and a power fault at Clapton."
         }
       ],
       "metadata": {
-        "source_item_count": 62,
-        "average_valence": -0.086,
+        "source_item_count": 64,
+        "average_valence": -0.109,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-29T10:44:03.389Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-29T11:38:11.738Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -133,14 +133,6 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You know you’re local when you’re the only one unfazed by a BART delay and still make it to Tacolicious before 8."
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know they’re local if they don’t flinch at the BART delays but still complain about how bad the food at La Taquer"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -155,22 +147,30 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 58,
-        "average_valence": -0.04,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.82
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-29T10:44:03.389Z",
+      "captured_at": "2026-04-29T11:38:11.738Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
@@ -206,7 +206,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -241,15 +241,15 @@
           "routine",
           "events"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.938
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-29T10:44:03.389Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-29T11:38:11.738Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,6 +285,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sun is hidden behind a veil of gray clouds, casting a soft light that feels both heavy and humid.. With the ongoing train strike, the atmosphere at Plaça Catalunya is"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -299,23 +307,15 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with clouds threatening rain, yet the air is warm and humid, creating a suffocating blanket around the city.. The platforms at Plaça de Catalunya are"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.02,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.627
       }
