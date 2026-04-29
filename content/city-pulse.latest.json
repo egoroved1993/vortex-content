@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-29T03:18:09.459Z",
+    "capturedAt": "2026-04-29T05:14:05.554Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 347
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-29T03:18:09.459Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-04-29T05:14:05.554Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -35,6 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -50,135 +51,58 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "£5 a month for 50% off coffee (up to 5 a day) and 20% off food. It’s a pretty good deal compared to other shops. Even without that it’s more reasonable than most."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick layer of clouds blankets the sky, threatening rain while a brisk wind sends fallen leaves swirling along the pavements.. The usually bustling Tube stations are eerily quiet"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1,
-          "excerpt": "Temperatures in London tipped to hit 22C with days of warm sunshine ahead - London Evening Standard. Temperatures in London tipped to hit 22C with days of warm sunshine ahead"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.039,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "routine"
-        ],
-        "freshness_score": 0.837
-      }
-    },
-    {
-      "city_id": "berlin",
-      "captured_at": "2026-04-29T03:18:09.459Z",
-      "mood_score": 0.488,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 1,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "nightlife": 40,
-        "trends": 8,
-        "transport": 1,
-        "weather": 1
-      },
-      "languages": [
-        "de",
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "de",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
           "source_family": "transport",
-          "source_origin": "bvg",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays while we fix a points failure at Camden Town. Trains are operating between High Barnet and M"
         },
         {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Cockfosters and Arnos Grove westbound while we deal with a signalling problem at C"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Are you polish? Berlin is only about an hour from the Polish border, so not that far. I’m American and managed to survive in Berlin for four months in 1997. Though my coworkers all"
+          "excerpt": "Depends on where you live and work. 50/60K in Liverpool is a good salary. 50/60K in London is pretty average and you're probably in a house share."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Londoners don’t have an hour to spare at lunch time to have a full sit down French-style lunch :) A country obsessed with sandwiches + a fast food chain that makes good sandwiches "
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.034,
+        "source_item_count": 60,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.936
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-29T03:18:09.459Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-04-29T05:14:05.554Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,12 +117,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The beauty of the Bay Area! :) Why it’s still worth it even tho everyone that doesn’t work for OpenAI or Anthropic will be priced out by end of year 😭…. Hold on to your controlled"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from here if they complain about the BART delays while juggling a burrito, not just scrolling Twit"
         },
         {
           "source_family": "forum",
@@ -214,7 +138,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Not necessarily a bar but there is a cowboy themed steakhouse that has a bar in it (no pool table iirc) called cattlemans its probably a good 45 minutes out of SF with no traffic. "
+          "excerpt": "It was purchased and reopened by a group of really cool guys who are actively building community. Cocktails are great, I always end up in a couple good conversations and they alway"
         },
         {
           "source_family": "review",
@@ -234,20 +158,95 @@
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.029,
+        "source_item_count": 62,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.801
+        "freshness_score": 0.832
+      }
+    },
+    {
+      "city_id": "berlin",
+      "captured_at": "2026-04-29T05:14:05.554Z",
+      "mood_score": 0.49,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "nightlife": 40,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "de",
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "social",
+          "source_origin": "x_post",
+          "language": "de",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A crisp autumn breeze rustles through the fallen leaves, mingling with the scent of roasted chestnuts from nearby stalls.. The streets are unusually quiet as many commuters avoid p"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 88,
+        "average_valence": -0.03,
+        "dominant_themes": [
+          "general",
+          "routine",
+          "events"
+        ],
+        "freshness_score": 0.93
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-29T03:18:09.459Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-04-29T05:14:05.554Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -304,20 +303,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun is trying to break through the thick clouds, casting a dusky glow over the wet streets from last night's rain.. The atmosphere at Passeig de Gràcia station is tense, with c"
+          "excerpt": "The afternoon sun casts a warm glow over the cobblestone streets, making the air feel slightly heavy but alive with the promise of spring.. Trains at the Sants station are unusuall"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.629
+        "freshness_score": 0.626
       }
     }
   ]
