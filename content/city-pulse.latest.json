@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-30T13:42:44.653Z",
+    "capturedAt": "2026-04-30T14:51:11.855Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 348
+    "totalItems": 344
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-30T13:42:44.653Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-04-30T14:51:11.855Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -56,22 +56,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to an earlier fire alert at High Street Kensington."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to an earlier fire alert at High Street Kensington. Tickets are being accepted on the M"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier fire alert at High Street Kensington. Tickets are being accep"
         },
         {
@@ -81,25 +65,41 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays while we fix a points failure at Camden Town. Until the end of this week, trains are operati"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Yes but only on the Overground, and they'd go down the train askibg to see everyone's ticket/card as it pulled into Liverpool Street. I guess it's easier there whereas most Tube tr"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "My first job (2010) post Uni was at a fashion brand (cool!) in North Acton (not cool at all!). So the vibe was… industrial estate. I also severely underestimated rush hour on the t"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.08,
+        "source_item_count": 56,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-30T13:42:44.653Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-04-30T14:51:11.855Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -135,14 +135,6 @@
           "excerpt": "Their mango sauce is truly tasty. Damn, I miss the days back when I lived in Moabit and could get easily get a good falafel after class for 2,50..."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky looms gray and heavy, threatening rain, while a cool breeze carries the faint scent of damp earth from the nearby parks.. Despite the recently resumed U-Bahn services, the "
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
@@ -157,25 +149,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.018,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.937
+        "freshness_score": 0.933
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-30T13:42:44.653Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-04-30T14:51:11.855Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 11,
@@ -235,18 +235,18 @@
       ],
       "metadata": {
         "source_item_count": 59,
-        "average_valence": 0.008,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
         "freshness_score": 0.835
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-30T13:42:44.653Z",
+      "captured_at": "2026-04-30T14:51:11.855Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
@@ -306,7 +306,7 @@
           "language": "en",
           "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of gray clouds looms over the city, hinting at a sudden downpour that's just holding back its fury.. The atmosphere at the Rodalies station is tense, with commuters"
+          "excerpt": "This afternoon, the sun breaks through a patchy gray sky, casting a warm golden hue on the bustling streets of Eixample.. The mood at the train stations is tense, with commuters gl"
         }
       ],
       "metadata": {
@@ -317,7 +317,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.632
+        "freshness_score": 0.629
       }
     }
   ]
