@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-30T11:37:40.923Z",
+    "capturedAt": "2026-04-30T12:45:29.025Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 347
+    "totalItems": 351
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-30T11:37:40.923Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-04-30T12:45:29.025Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -56,7 +56,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays due to an earlier police investigation."
+          "excerpt": "London transit Circle: Severe Delays Circle Line: No service between Aldgate and Edgware Road clockwise only, and between Edgware Road and High Street Kensin"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays due to an earlier police investigation."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Watford due to train cancellations. MINOR DELAYS between Rickmansw"
         },
         {
           "source_family": "transport",
@@ -65,44 +81,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays while we fix a points failure at Camden Town. Until the end of this week, trains are operati"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I'm amazed you didn't check this before you moved. Secondly it might be UK average but London average is higher I think. Even if you're on 100k it's expensive"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Moved to London in 2008, shared houses and flats with friends for 10 years before meeting my partner and sharing rented places and now a mortgage with her in zone 4. Never once did"
         }
       ],
       "metadata": {
-        "source_item_count": 62,
-        "average_valence": -0.081,
+        "source_item_count": 61,
+        "average_valence": -0.07,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "routine"
         ],
         "freshness_score": 0.868
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-30T11:37:40.923Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-04-30T12:45:29.025Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -141,7 +141,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, RE2, S7: Delays 3 trips delayed"
+          "excerpt": "Berlin transit S9, 200, 248: Delays 3 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Their mango sauce is truly tasty. Damn, I miss the days back when I lived in Moabit and could get easily get a good falafel after class for 2,50..."
         },
         {
           "source_family": "news",
@@ -150,36 +158,28 @@
           "valence": 0.5,
           "recency_weight": 0.88,
           "excerpt": "Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig warm - Berliner Morgenpost. Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.72,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is peeking through the clouds, casting a soft glow on the damp streets from earlier rain, creating a rhythm of light and shadow.. With the BVG strike now over, a sense of r"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.047,
+        "source_item_count": 94,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.945
+        "freshness_score": 0.944
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-30T11:37:40.923Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-04-30T12:45:29.025Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,14 +200,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Someone who doesn’t know what a run is and recommends a game the marina is not a good source 😂. Walk the marina for 5 minutes and you’ll know"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The overcast skies hang low, a blanket of gray dampening the vibrant colors of the Mission's murals.. BART is in disarray today, with packed platforms and frustrated commuters wait"
         },
         {
           "source_family": "review",
@@ -232,25 +224,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. there is a very local "
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.003,
+        "source_item_count": 59,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.837
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-30T11:37:40.923Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-04-30T12:45:29.025Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -286,6 +286,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun breaks through thick clouds, casting a warm glow on the damp streets after a morning drizzle.. The usually bustling train stations feel subdued, with commuters anxiously ch"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -300,25 +308,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a dreamy slate gray, intermittently releasing soft drizzles that cast a sheen on the cobblestones.. The mood on the platform is tense as commuters shuffle restlessly, ey"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.628
+        "freshness_score": 0.632
       }
     }
   ]
