@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-04-30T14:51:11.855Z",
+    "capturedAt": "2026-04-30T15:42:19.837Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 344
+    "totalItems": 345
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-04-30T14:51:11.855Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-04-30T15:42:19.837Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -56,14 +56,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier fire alert at High Street Kensington. Tickets are being accep"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays while we fix a points failure at Camden Town. Until the end of this week, trains are operati"
         },
         {
@@ -81,23 +73,31 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "My first job (2010) post Uni was at a fashion brand (cool!) in North Acton (not cool at all!). So the vibe was… industrial estate. I also severely underestimated rush hour on the t"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "UK weather turning warm and humid with temperature reaching 26 °C in London - yourweather.co.uk. UK weather turning warm and humid with temperature reaching 26 °C in London"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.042,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-04-30T14:51:11.855Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-04-30T15:42:19.837Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -111,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,6 +126,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin do you find a packed club where people dance surrounded by cages filled with live chickens. It’s as bizarr"
         },
         {
           "source_family": "public",
@@ -149,31 +158,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.016,
+        "source_item_count": 93,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.938
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-04-30T14:51:11.855Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-04-30T15:42:19.837Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -225,17 +226,17 @@
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         },
         {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. there is a very local "
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A chilly fog clings to the Golden Gate, wrapping the city in a damp, gray embrace that muffles sound and sight alike.. People grumble quietly at bus stops, eyeing their phones more"
         }
       ],
       "metadata": {
         "source_item_count": 59,
-        "average_valence": 0.007,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "transit",
@@ -246,10 +247,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-04-30T14:51:11.855Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-04-30T15:42:19.837Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,18 +305,18 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "This afternoon, the sun breaks through a patchy gray sky, casting a warm golden hue on the bustling streets of Eixample.. The mood at the train stations is tense, with commuters gl"
+          "excerpt": "The sun drapes a warm golden hue over the cobblestone streets while a gentle breeze carries the salty scent of the sea.. With the current rail strike, the mood on the platforms is "
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.024,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
         "freshness_score": 0.629
       }
