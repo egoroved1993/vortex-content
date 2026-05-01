@@ -89,7 +89,8 @@ jobs:
               esac
             fi
             echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
-            echo "count=480" >> "$GITHUB_OUTPUT"
+            # count=240 keeps monthly cost under ~$20 (2 runs/day × 30 days × $0.30/run)
+            echo "count=240" >> "$GITHUB_OUTPUT"
             echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
             # Scheduled balanced feed refreshes the curated base without risking a low-count replacement.
             echo "upload=true" >> "$GITHUB_OUTPUT"
