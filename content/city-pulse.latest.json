@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-01T13:37:39.652Z",
+    "capturedAt": "2026-05-01T14:32:53.473Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-01T13:37:39.652Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-01T14:32:53.473Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -51,6 +51,14 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -59,45 +67,37 @@
           "excerpt": "Unseasonable warmth to fade for bank holiday weekend as unsettled weather returns - BBC. Unseasonable warmth to fade for bank holiday weekend as unsettled weather returns"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a fine drizzle creating a slick sheen on the pavement that makes the city glisten faintly under the overcast light.. The energy at Tube stations feels"
         }
       ],
       "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.017,
+        "source_item_count": 52,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-01T13:37:39.652Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-01T14:32:53.473Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -133,7 +133,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U8, 100, S9, RE2: Delays 4 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 2 trips delayed"
         },
         {
           "source_family": "news",
@@ -162,21 +162,21 @@
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.033,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.924
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-01T13:37:39.652Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-01T14:32:53.473Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -205,9 +205,17 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals rush to the bodega for a michelada when they hear the BART alarm. It's like, the only band-aid for a brok"
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know a true local when they still call Valencia 'the street with the good burritos' instead of 'Valencia"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A heavy layer of gray clouds hangs low, trapping the scent of damp earth and salt in the air, while a cool breeze slips through the streets.. Frustration ripples through commuters "
         },
         {
           "source_family": "review",
@@ -224,33 +232,25 @@
           "valence": 0.5,
           "recency_weight": 0.88,
           "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 61,
-        "average_valence": -0.03,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
         "freshness_score": 0.839
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-01T13:37:39.652Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-01T14:32:53.473Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -278,6 +278,14 @@
           "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists assume every Plaça is for lounging, but the locals know they’re just as likely to be host to a protest or spontaneous "
+        },
+        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -300,23 +308,15 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a canvas of slate gray, heavy with clouds that threaten rain as a slight chill dances through the air.. The Rodalies trains are running on reduced schedules, with anxiou"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
         "freshness_score": 0.627
       }
