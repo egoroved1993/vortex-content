@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-01T07:07:30.890Z",
+    "capturedAt": "2026-05-01T08:49:48.698Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 334
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-01T07:07:30.890Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-05-01T08:49:48.698Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 2,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -56,15 +56,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Arnos Grove and Hyde Park Corner westbound only, and SEVERE DELAYS on the rest of th"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier signal failure at King's Cross St. Pancras. Tickets are being accepted"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "i like the Nellie Dean. the French house is also a classic. Dog and Duck. but soho is not a place to go out late anymore, most of it is wrapping up by 11."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Suspended Piccadilly Line: No service between Arnos Grove and Hyde Park Corner westbound only, and SEVERE DELAYS on the rest of th"
+          "excerpt": "Warm weather fails to boost consumer mood says BDO's April retail sales report - FashionNetwork France. Warm weather fails to boost consumer mood says BDO's April retail sales repo"
         },
         {
           "source_family": "world",
@@ -73,33 +81,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.077,
+        "source_item_count": 59,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-01T07:07:30.890Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-01T08:49:48.698Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -111,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -128,11 +128,19 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": 0.5,
-          "recency_weight": 0.88,
+          "recency_weight": 0.72,
           "excerpt": "Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig warm - Berliner Morgenpost. Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig "
         },
         {
@@ -150,36 +158,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp with a hint of autumn, as scattered clouds drift lazily across the sunlit sky, casting playful shadows on the streets below.. Despite the recent strike disruptions"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.024,
+        "source_item_count": 91,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.929
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-01T07:07:30.890Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-01T08:49:48.698Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,30 +193,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they know the perfect time to dodge the BART delays—like when there’s a dog on the tr"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I have in person purchased a paper transit map from the market&powell booth. Had to shove the cash through the slot before they would give me the map. But...muni has so many lines "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick fog is rolling in from the ocean, wrapping the city in a cool, damp embrace that muffles sounds and blurs outlines.. BART commuters are visibly frustrated as they huddle to"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -232,23 +208,47 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.018,
+        "source_item_count": 52,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.815
+        "freshness_score": 0.805
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-01T07:07:30.890Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-01T08:49:48.698Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
@@ -286,14 +286,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "A chilly breeze cuts through the sun-drenched streets, making the warmth feel fleeting as clouds gather on the horizon.. The platforms of Plaça de Catalunya are unusually quiet, wi"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -308,11 +300,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.016,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "tourism",
