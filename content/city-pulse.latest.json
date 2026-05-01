@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-01T12:33:05.945Z",
+    "capturedAt": "2026-05-01T13:37:39.652Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-01T12:33:05.945Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-05-01T13:37:39.652Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -51,20 +51,12 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to an earlier signal failure at King's Cross St. Pancras."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Minor Delays Windrush Line: Minor delays due to an earlier faulty train at Surrey Quays."
+          "excerpt": "Unseasonable warmth to fade for bank holiday weekend as unsettled weather returns - BBC. Unseasonable warmth to fade for bank holiday weekend as unsettled weather returns"
         },
         {
           "source_family": "world",
@@ -81,23 +73,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, with a fine drizzle creating a slick sheen on the pavement that makes the city glisten faintly under the overcast light.. The energy at Tube stations feels"
         }
       ],
       "metadata": {
-        "source_item_count": 51,
-        "average_valence": -0.076,
+        "source_item_count": 50,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-01T12:33:05.945Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-01T13:37:39.652Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -133,7 +133,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S3, S9, S7, RE2, 100: Delays 6 trips delayed"
+          "excerpt": "Berlin transit U8, 100, S9, RE2: Delays 4 trips delayed"
         },
         {
           "source_family": "news",
@@ -162,19 +162,19 @@
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.03,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.931
+        "freshness_score": 0.927
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-01T12:33:05.945Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-05-01T13:37:39.652Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -210,33 +210,33 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals rush to the bodega for a michelada when they hear the BART alarm. It's like, the only band-aid for a brok"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. The other day, a clown on a unicycle stopped the Muni at Larkin. Everyone laughed, but we were still late to work. Only in SF, right"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a damp chill creeping through the streets as fog rolls in, wrapping around the buildings like a thick shroud.. BART is a cacophony of frustrated murmu"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.88,
+          "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 61,
-        "average_valence": -0.052,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "transit",
@@ -247,10 +247,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-01T12:33:05.945Z",
+      "captured_at": "2026-05-01T13:37:39.652Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -307,7 +307,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in the sky, casting a golden hue over the bustling streets, while a brisk breeze carries the scent of fresh churros from nearby stalls.. Commuters are visibly fru"
+          "excerpt": "The sky is a canvas of slate gray, heavy with clouds that threaten rain as a slight chill dances through the air.. The Rodalies trains are running on reduced schedules, with anxiou"
         }
       ],
       "metadata": {
@@ -315,8 +315,8 @@
         "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
         "freshness_score": 0.627
       }
