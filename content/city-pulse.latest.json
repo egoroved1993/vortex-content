@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-01T10:38:30.893Z",
+    "capturedAt": "2026-05-01T11:32:00.601Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-01T10:38:30.893Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-05-01T11:32:00.601Z",
+      "mood_score": 0.472,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -59,6 +59,14 @@
           "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier signal failure at King's Cross St. Pancras. Tickets are being accepted"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Minor Delays Windrush Line: Minor delays due to an earlier faulty train at Surrey Quays."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -73,33 +81,25 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Things that instantly reveal you just moved here. Hackney Downs. You still check the Tube app for delays on weekends. In Hackney, it's all about the bus or just walking over to the"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.069,
+        "source_item_count": 60,
+        "average_valence": -0.081,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-01T10:38:30.893Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-01T11:32:00.601Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
@@ -133,15 +133,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9, S5, S7, S3: Delays 5 trips delayed"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg do you find a 24-hour Turkish bakery with steaming simit on Sundays, where the smell alone pulls you in like"
+          "excerpt": "Berlin transit S3, S9, RE2, S7, 100: Delays 8 trips delayed"
         },
         {
           "source_family": "news",
@@ -158,23 +150,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.023,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
         "freshness_score": 0.927
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-01T10:38:30.893Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-01T11:32:00.601Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -194,12 +194,12 @@
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick fog blankets the city, weaving through the skyscrapers and reducing visibility to a soft blur.. The mood on BART is tense; commuters exchanged frustrated glances as announc"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. The other day, a clown on a unicycle stopped the Muni at Larkin. Everyone laughed, but we were still late to work. Only in SF, right"
         },
         {
           "source_family": "news",
@@ -236,21 +236,21 @@
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.006,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.81
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-01T10:38:30.893Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-01T11:32:00.601Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -286,14 +286,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is peeking shyly behind scattered clouds, casting a warm but crisp glow on the Rambla.. The trains are bustling with frustrated commuters, their faces resigned as they shar"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -308,15 +300,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is peeking through scattered clouds, painting the streets of Barcelona with a warm golden hue that contrasts against the cool breeze coming off the sea.. The platforms at P"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.016,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.628
       }
