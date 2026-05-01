@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-01T21:24:23.362Z",
+    "capturedAt": "2026-05-01T22:24:13.363Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 341
+    "totalItems": 344
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-01T21:24:23.362Z",
-      "mood_score": 0.417,
+      "captured_at": "2026-05-01T22:24:13.363Z",
+      "mood_score": 0.405,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 3,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -75,29 +75,29 @@
           "excerpt": "London transit Hammersmith & City: Part Suspended Hammersmith and City Line: No service between Paddington and Barking and SEVERE DELAYS on the rest of the line while we"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we fix a faulty train at Oxford Circus. Tickets are being accepted on London Buses."
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.096,
+        "source_item_count": 58,
+        "average_valence": -0.133,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-01T21:24:23.362Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-01T22:24:13.363Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -111,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -133,7 +133,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U8, 300, 100, 248: Delays 4 trips delayed"
+          "excerpt": "Berlin transit RE1, U8: Delays 4 trips delayed"
         },
         {
           "source_family": "news",
@@ -161,20 +161,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.029,
+        "source_item_count": 93,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.926
+        "freshness_score": 0.927
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-01T21:24:23.362Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-05-01T22:24:13.363Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -210,14 +210,6 @@
           "excerpt": "Seconding the Craigslist rec: there's a bunch of places listed currently under live/work, including a $2225 loft in Oakland. It's also tiny at a nudge over 900 sq ft. (I tried to p"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they can spot a tourist just looking at the BART map, but barely grimace at another M"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -232,25 +224,33 @@
           "valence": 0.5,
           "recency_weight": 0.88,
           "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.061,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.819
+        "freshness_score": 0.828
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-01T21:24:23.362Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-05-01T22:24:13.363Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, weather.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -286,6 +286,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all the locals love paella; in Gràcia, you'll find far more people loyal to their calçots and a good romesco."
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -300,23 +308,15 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The sun bathes the streets in a golden light, but there's a brisk chill in the air that makes you pull your jacket tighter.. The usually bustling Rodalies platform feels like a pre"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.024,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "tourism",
-          "weather"
+          "routine"
         ],
         "freshness_score": 0.63
       }
