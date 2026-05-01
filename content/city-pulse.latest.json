@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-01T20:26:15.008Z",
+    "capturedAt": "2026-05-01T21:24:23.362Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 343
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-01T20:26:15.008Z",
-      "mood_score": 0.466,
+      "captured_at": "2026-05-01T21:24:23.362Z",
+      "mood_score": 0.417,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 3,
         "review": 2,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 7,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -56,15 +56,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: No service between Northolt and West Ruislip. SEVERE DEALYS North Acton to Northolt while we deal with tre"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: No service between Northolt and West Ruislip. SEVERE DEALYS North Acton to Northolt while we deal with tre"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to an earlier trespasser on the track at Chancery lane."
         },
         {
           "source_family": "transport",
@@ -81,23 +73,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Part Suspended Hammersmith and City Line: No service between Paddington and Barking and SEVERE DELAYS on the rest of the line while we"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
-        "source_item_count": 58,
-        "average_valence": -0.1,
+        "source_item_count": 56,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-01T20:26:15.008Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-01T21:24:23.362Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -133,7 +133,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, 248: Delays 2 trips delayed"
+          "excerpt": "Berlin transit U8, 300, 100, 248: Delays 4 trips delayed"
         },
         {
           "source_family": "news",
@@ -162,19 +162,19 @@
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.026,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.926
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-01T20:26:15.008Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-05-01T21:24:23.362Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -193,6 +193,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Civic Center. Caught a glimpse of a street performer directing traffic today near the Civic Center. Just another day of chaos in Muni-land, but "
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -224,33 +232,25 @@
           "valence": 0.5,
           "recency_weight": 0.88,
           "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a blanket of gray, occasionally disrupted by stubborn rays of sunlight that fight their way through the clouds, casting soft shadows on the streets.. Frust"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.039,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.819
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-01T20:26:15.008Z",
+      "captured_at": "2026-05-01T21:24:23.362Z",
       "mood_score": 0.442,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, weather.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -305,18 +305,18 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun spills its warm glow over the city, but a biting wind snakes through the streets, reminding everyone that winter is still holding on.. The train stations are buzzing with f"
+          "excerpt": "The sun bathes the streets in a golden light, but there's a brisk chill in the air that makes you pull your jacket tighter.. The usually bustling Rodalies platform feels like a pre"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "weather"
         ],
         "freshness_score": 0.63
       }
