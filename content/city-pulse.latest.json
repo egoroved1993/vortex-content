@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-01T03:18:17.149Z",
+    "capturedAt": "2026-05-01T05:25:04.149Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 336
+    "totalItems": 335
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-01T03:18:17.149Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-05-01T05:25:04.149Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,12 +35,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays between Surrey Quays and Clapham Junction due to a late finish of engineering work. London"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -50,53 +59,45 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I'm pretty sure this landlord is going for people who don't know any better, such as international students and other people new to the country."
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway / West Ruislip while we fix a signal failure at White"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If you're just touristing in London, you won't notice much of a difference as you'll mostly be surrounded by other tourists. Stand on the right side of the escalator, don't cut que"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Never had them in decades living in London. The building I moved to in hove had them though. Get pheremone traps and move all your food into sealed plastic or glass containers - th"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What kind of card scams and how do you protect yourself? ( Canadian who very much wants to visit London after not doing so for 14 years)."
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Cockfosters and Heathrow Terminals / Uxbridge westbound only while we fix a signa"
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.069,
+        "source_item_count": 54,
+        "average_valence": -0.124,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.835
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-01T03:18:17.149Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-01T05:25:04.149Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -110,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -153,28 +155,28 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, occasionally letting through beams of muted sunlight that warm the damp air.. With the recent strike threat looming, the U-Bahn is surprising"
+          "excerpt": "The sky is a mottled gray, with a cool breeze that flutters through the leafy streets, hinting at rain but holding back for now.. Despite the relief of transit services resuming, t"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.02,
+        "source_item_count": 90,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.935
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-01T03:18:17.149Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-05-01T05:25:04.149Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
@@ -197,15 +199,31 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they know the perfect time to dodge the BART delays—like when there’s a dog on the tr"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. Only a true local knows the exact moment when the BART delays hit peak chaos and can pivot to a taco truck before hea"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "THANK YOU!!! I was in Bart this morning and I took mine off because it was crowded but everyone else had theirs on and were bumping into me. The train would be so much more comfort"
+          "excerpt": "I have in person purchased a paper transit map from the market&powell booth. Had to shove the cash through the slot before they would give me the map. But...muni has so many lines "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon fog swirls low over the bay, a damp chill wrapping around the towering skyscrapers like a ghostly blanket.. BART is a knot of frustration today, with commuters eyeing"
         },
         {
           "source_family": "news",
@@ -214,41 +232,25 @@
           "valence": 0.5,
           "recency_weight": 1,
           "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.035,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
         "freshness_score": 0.818
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-01T03:18:17.149Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-01T05:25:04.149Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -284,6 +286,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun hangs in a clear blue sky, illuminating the cobblestone streets in a golden hue while a gentle breeze rustles through the orange trees.. The mood at Plaça de Catalunya is t"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -298,25 +308,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.629
+        "freshness_score": 0.628
       }
     }
   ]
