@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-02T18:27:55.538Z",
+    "capturedAt": "2026-05-02T19:29:01.876Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-02T18:27:55.538Z",
-      "mood_score": 0.37,
+      "captured_at": "2026-05-02T19:29:01.876Z",
+      "mood_score": 0.36,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -64,6 +64,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays due to an earlier power supply failure. Tickets are being accepted on London Underground, London Buses, DL"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         },
         {
@@ -73,19 +81,11 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Kilburn High Road and Euston. Pleas"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Part Closure METROPOLITAN LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Harrow-on-the-Hill and Amersha"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.089,
+        "average_valence": -0.117,
         "dominant_themes": [
           "general",
           "transit",
@@ -96,10 +96,10 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-02T18:27:55.538Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-02T19:29:01.876Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -133,7 +133,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, 100, 248, RE2: Delays 6 trips delayed"
+          "excerpt": "Berlin transit RE2, 248: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Reuterkiez. The morning smell of fresh bagels from the corner shop mixed with the sound of a street performer playing on a broken guita"
         },
         {
           "source_family": "news",
@@ -150,33 +158,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.031,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
         "freshness_score": 0.918
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-02T18:27:55.538Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-02T19:29:01.876Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 2,
@@ -202,14 +202,6 @@
           "excerpt": "The current federal minimum wage is STILL $7.25. Bernie and AOC were fighting to increasing that. $20/hr in the BAY AREA is basically poverty unless you: Still live with you parent"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The late afternoon sun casts a hazy glow over the city, struggling to break through a thick layer of marine fog that drapes across the Golden Gate.. BART riders are visibly frustra"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -232,25 +224,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 50,
-        "average_valence": -0.028,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.787
+        "freshness_score": 0.793
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-02T18:27:55.538Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-05-02T19:29:01.876Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -286,14 +286,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think the local bars are just for sipping cocktails, but really, we gather over a simple glass of vermut and good conv"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -308,17 +300,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, thick clouds hang low, threatening rain but holding back as the damp chill clings to the air.. The usually bustling Ronda de Sant Antoni is unusually quiet"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.016,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.63
+        "freshness_score": 0.628
       }
     }
   ]
