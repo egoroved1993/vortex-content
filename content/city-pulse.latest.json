@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-02T15:23:10.807Z",
+    "capturedAt": "2026-05-02T16:24:04.284Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 337
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-02T15:23:10.807Z",
+      "captured_at": "2026-05-02T16:24:04.284Z",
       "mood_score": 0.361,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 2,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,13 +35,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Heya, I’m growing out my hair (curly - 3A if that means anything) and I’ve no clue what I want to do with it apart from keep my curls. Anyone have recommendations of either barbers"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -73,33 +81,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Part Closure METROPOLITAN LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Harrow-on-the-Hill and Amersha"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.115,
+        "source_item_count": 58,
+        "average_valence": -0.114,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.85
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-02T15:23:10.807Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-02T16:24:04.284Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -111,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -133,7 +133,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300, RE2: Delays 2 trips delayed"
+          "excerpt": "Berlin transit RE7, RE1, 100, RE2: Delays 4 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A brisk autumn chill bites at exposed skin, while golden leaves swirl playfully along the streets amidst a reluctant bright sun.. With yesterday's strike now over, the U-Bahn is pa"
         },
         {
           "source_family": "news",
@@ -150,36 +158,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.033,
+        "source_item_count": 92,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.917
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-02T15:23:10.807Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-02T16:24:04.284Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -199,7 +199,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Living in marina on 150k is gonna have some pretty big limitations on what you can rent and how many roommates you will have. Mission will be easier. Get a bike"
+          "excerpt": "The current federal minimum wage is STILL $7.25. Bernie and AOC were fighting to increasing that. $20/hr in the BAY AREA is basically poverty unless you: Still live with you parent"
         },
         {
           "source_family": "review",
@@ -208,6 +208,14 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
         },
         {
           "source_family": "news",
@@ -224,33 +232,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. there is a very local "
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.022,
+        "source_item_count": 50,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.808
+        "freshness_score": 0.787
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-02T15:23:10.807Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-05-02T16:24:04.284Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -286,14 +286,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, hanging heavy with the promise of rain, while a chilly breeze cuts through the bustling streets.. The trains are eerily quiet today, with more passengers g"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -308,17 +300,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.631
+        "freshness_score": 0.627
       }
     }
   ]
