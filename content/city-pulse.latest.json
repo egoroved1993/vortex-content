@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-02T01:43:57.087Z",
+    "capturedAt": "2026-05-02T03:16:03.689Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,10 +21,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-02T01:43:57.087Z",
-      "mood_score": 0.38,
+      "captured_at": "2026-05-02T03:16:03.689Z",
+      "mood_score": 0.376,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
@@ -35,6 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -48,6 +49,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
           "source_family": "world",
@@ -72,33 +81,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Second Tube strike to impact London from midday - BBC. Second Tube strike to impact London from midday"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.058,
+        "source_item_count": 56,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-02T01:43:57.087Z",
+      "captured_at": "2026-05-02T03:16:03.689Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -110,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -132,7 +133,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit FEX: Delays 1 trips delayed"
+          "excerpt": "Berlin transit N40, RE1: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. Caught a bus driver singing along to the radio in the middle of the rush hour. Only in Neukölln would you see that kind of jo"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with grey clouds, threatening rain but only offering a cool, damp breeze to those trudging along the streets.. Despite the recent news of strikes, the U-Bahn is"
         },
         {
           "source_family": "news",
@@ -141,41 +158,25 @@
           "valence": 0.5,
           "recency_weight": 0.72,
           "excerpt": "Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig warm - Berliner Morgenpost. Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig "
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
+        "source_item_count": 92,
         "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.924
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-02T01:43:57.087Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-05-02T03:16:03.689Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -192,6 +193,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Civic Center. Saw a couple arguing over who lost the dog on the tracks while Muni was delayed—only in SF do you witness love and chaos at a stan"
+        },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
@@ -217,14 +226,6 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy feeding pizza to the pigeons at Civic Center while waiting for the bus. Muni delays turn into moments of urban wildlife wa"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The fog clings tight to the hills, casting a cool gray blanket over the city, while the occasional sunbeam breaks through, warming the pavement only briefly.. With BART delays echo"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -235,21 +236,21 @@
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.059,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.827
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-02T01:43:57.087Z",
-      "mood_score": 0.443,
+      "captured_at": "2026-05-02T03:16:03.689Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -285,6 +286,14 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun spills over the mosaic of La Rambla, warming the air while a crisp breeze dances between the buildings.. Trains are unusually empty this afternoon, as commuters navigate th"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -299,25 +308,17 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.022,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.63
+        "freshness_score": 0.632
       }
     }
   ]
