@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-02T21:21:38.357Z",
+    "capturedAt": "2026-05-02T22:20:12.311Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 342
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-02T21:21:38.357Z",
-      "mood_score": 0.352,
+      "captured_at": "2026-05-02T22:20:12.311Z",
+      "mood_score": 0.365,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -56,22 +56,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Whitechapel and Abbey Wood / Heathrow Airport / Reading, MINOR DELAYS on the rest of the line due"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Whitechapel and Abbey Wood / Heathrow Airport / Reading, MINOR DELAYS on the rest of the line due"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         },
         {
@@ -81,23 +65,39 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Kilburn High Road and Euston. Pleas"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Part Closure METROPOLITAN LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Harrow-on-the-Hill and Amersha"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.142,
+        "source_item_count": 58,
+        "average_valence": -0.102,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-02T21:21:38.357Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-02T22:20:12.311Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -149,17 +149,17 @@
           "excerpt": "Oh, that’s nice to hear! You can totally have another baby well into your 40s. My doctor, over 10 years ago, told me that 42 was nothing. So good luck, fellow SF mama!"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of fog hugs the city, muffling sounds and casting an ethereal glow in the late afternoon light.. BART stations are filled with frustrated commuters, the air thick wit"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.006,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
@@ -170,10 +170,10 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-02T21:21:38.357Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-02T22:20:12.311Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -206,7 +206,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300, RE7, RE1, 200: Delays 4 trips delayed"
+          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg can you sip coffee next to a guy painting a mural while a kid rides by on a skateboard with their dog. It's "
         },
         {
           "source_family": "news",
@@ -223,34 +231,26 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.027,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.916
+        "freshness_score": 0.914
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-02T21:21:38.357Z",
-      "mood_score": 0.441,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-02T22:20:12.311Z",
+      "mood_score": 0.391,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
         "forum": 4,
@@ -290,7 +290,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, thick with clouds that occasionally threaten rain but hold back, casting a soft, diffused light over the streets of the Eixample.. The mood on the platform"
+          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, while a cool breeze whispers through the narrow streets of the Gothic Quarter.. The platforms at Plaça de Catalunya a"
         },
         {
           "source_family": "social",
@@ -314,10 +314,10 @@
         "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.627
+        "freshness_score": 0.628
       }
     }
   ]
