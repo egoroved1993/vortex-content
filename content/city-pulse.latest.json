@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-02T07:40:08.334Z",
+    "capturedAt": "2026-05-02T08:41:00.728Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-02T07:40:08.334Z",
-      "mood_score": 0.369,
+      "captured_at": "2026-05-02T08:41:00.728Z",
+      "mood_score": 0.373,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 4,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -75,31 +75,31 @@
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.88,
-          "excerpt": "Unseasonable warmth to fade for bank holiday weekend as unsettled weather returns - BBC. Unseasonable warmth to fade for bank holiday weekend as unsettled weather returns"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Brixton. Last night on the 59, a guy serenaded the whole bus with a karaoke version of 'Wonderwall'. Most were tired but he got a round of applause at the en"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.09,
+        "source_item_count": 58,
+        "average_valence": -0.08,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-02T07:40:08.334Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-02T08:41:00.728Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -111,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -133,7 +133,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, S9, 100: Delays 3 trips delayed"
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A chill wind dances through the streets, carrying hints of impending rain as gray clouds loom above.. The mood around the U-Bahn stations is cautious, with commuters glancing at th"
         },
         {
           "source_family": "news",
@@ -150,36 +158,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.029,
+        "source_item_count": 92,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.925
+        "freshness_score": 0.919
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-02T07:40:08.334Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-05-02T08:41:00.728Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -194,6 +194,14 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Welcome to the Bay Area chaos lol. Tbh, the South Bay has solid environmental consulting firms and nonprofits you should consider, and the E-3 visa actually works in your favor sin"
+        },
+        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -202,55 +210,47 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Caught the 12 bus today; it was so late I almost had time to read a whole chapter. Only in SF does a bus delay feel like a mini vaca"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Living in marina on 150k is gonna have some pretty big limitations on what you can rent and how many roommates you will have. Mission will be easier. Get a bike"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The fog rolls in thick and damp, wrapping the streets in a cool embrace that dampens the usual chatter.. BART is crawling today, with frustrated commuters checking their phones rep"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The fog swirls lazily, dimming the sun's rays and giving the air a chilly bite even as afternoon light creeps in.. BART is a sea of frustrated faces, with the delays echoing throug"
         }
       ],
       "metadata": {
-        "source_item_count": 55,
-        "average_valence": -0.037,
+        "source_item_count": 52,
+        "average_valence": -0.07,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.812
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-02T07:40:08.334Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-05-02T08:41:00.728Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -305,20 +305,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun fights to break through thick clouds, casting a muted light that makes the streets shimmer after yesterday's rain.. The usually bustling commuter trains are eerily quiet to"
+          "excerpt": "The sun beams relentlessly through a band of scattered clouds, casting sharp shadows on the bustling streets of the Eixample.. With the train strikes in full swing, commuters are r"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.63
+        "freshness_score": 0.632
       }
     }
   ]
