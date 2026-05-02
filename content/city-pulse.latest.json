@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-02T22:20:12.311Z",
+    "capturedAt": "2026-05-02T23:24:52.798Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 341
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-02T22:20:12.311Z",
-      "mood_score": 0.365,
+      "captured_at": "2026-05-02T23:24:52.798Z",
+      "mood_score": 0.307,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 6,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -84,20 +84,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 58,
-        "average_valence": -0.102,
+        "source_item_count": 56,
+        "average_valence": -0.126,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.841
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-02T22:20:12.311Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-02T23:24:52.798Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -125,14 +125,6 @@
           "excerpt": "rent control is the only answer. I live in SF now 25 yrs never married and no kids. I also live in a tiny 600 sq ft apt which is too embarassingly small to have guests. But at the "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. Only locals know that the BART delays mean planning around the 24-hour taco spot, not just the train schedule. We ada"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -149,17 +141,25 @@
           "excerpt": "Oh, that’s nice to hear! You can totally have another baby well into your 40s. My doctor, over 10 years ago, told me that 42 was nothing. So good luck, fellow SF mama!"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
-          "valence": -1,
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "A thick layer of fog hugs the city, muffling sounds and casting an ethereal glow in the late afternoon light.. BART stations are filled with frustrated commuters, the air thick wit"
+          "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
         }
       ],
       "metadata": {
         "source_item_count": 57,
-        "average_valence": -0.012,
+        "average_valence": 0.015,
         "dominant_themes": [
           "general",
           "transit",
@@ -170,8 +170,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-02T22:20:12.311Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-05-02T23:24:52.798Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -184,7 +184,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -199,14 +198,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
         },
         {
           "source_family": "forum",
@@ -231,11 +222,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.028,
+        "source_item_count": 88,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
@@ -246,8 +245,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-02T22:20:12.311Z",
-      "mood_score": 0.391,
+      "captured_at": "2026-05-02T23:24:52.798Z",
+      "mood_score": 0.392,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "negative",
@@ -285,14 +284,6 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, while a cool breeze whispers through the narrow streets of the Gothic Quarter.. The platforms at Plaça de Catalunya a"
-        },
-        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
@@ -307,11 +298,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sun bathes the streets in a warm glow, but a crisp breeze hints that winter still lingers around the corner.. Trains are unusually quiet today, with many commuters opting for b"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.028,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "tourism",
