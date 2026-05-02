@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-02T19:29:01.876Z",
+    "capturedAt": "2026-05-02T20:20:02.286Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 335
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-02T19:29:01.876Z",
-      "mood_score": 0.36,
+      "captured_at": "2026-05-02T20:20:02.286Z",
+      "mood_score": 0.357,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 3,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -42,14 +42,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Heya, I’m growing out my hair (curly - 3A if that means anything) and I’ve no clue what I want to do with it apart from keep my curls. Anyone have recommendations of either barbers"
-        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -81,28 +73,109 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Kilburn High Road and Euston. Pleas"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Part Closure METROPOLITAN LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Harrow-on-the-Hill and Amersha"
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.117,
+        "source_item_count": 57,
+        "average_valence": -0.127,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.843
+      }
+    },
+    {
+      "city_id": "sf",
+      "captured_at": "2026-05-02T20:20:02.286Z",
+      "mood_score": 0.505,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 9,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "rent control is the only answer. I live in SF now 25 yrs never married and no kids. I also live in a tiny 600 sq ft apt which is too embarassingly small to have guests. But at the "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Personally don't know of any coaches but I took two classes in community college (in Saratoga) that helped tremendously. One was a general communications class but the other was ca"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Oh, that’s nice to hear! You can totally have another baby well into your 40s. My doctor, over 10 years ago, told me that 42 was nothing. So good luck, fellow SF mama!"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 57,
+        "average_valence": 0.015,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "weather"
+        ],
+        "freshness_score": 0.815
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-02T19:29:01.876Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-05-02T20:20:02.286Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -133,7 +206,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2, 248: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 200, 300, 100, RE2: Delays 5 trips delayed"
         },
         {
           "source_family": "forum",
@@ -144,113 +217,39 @@
           "excerpt": "When you knew you were actually living here. Reuterkiez. The morning smell of fresh bagels from the corner shop mixed with the sound of a street performer playing on a broken guita"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun breaks through the low-hanging clouds, casting a soft golden glow on the damp pavement, with a chill whispering through the air.. Buses and trams are running again, but a l"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": 0.5,
           "recency_weight": 0.72,
           "excerpt": "Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig warm - Berliner Morgenpost. Wetter in Berlin: Viel Sonnenschein – Am Wochenende wird es endlich richtig "
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.037,
+        "source_item_count": 89,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.918
-      }
-    },
-    {
-      "city_id": "sf",
-      "captured_at": "2026-05-02T19:29:01.876Z",
-      "mood_score": 0.495,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 2,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The current federal minimum wage is STILL $7.25. Bernie and AOC were fighting to increasing that. $20/hr in the BAY AREA is basically poverty unless you: Still live with you parent"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.013,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "money"
-        ],
-        "freshness_score": 0.793
+        "freshness_score": 0.916
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-02T19:29:01.876Z",
-      "mood_score": 0.443,
+      "captured_at": "2026-05-02T20:20:02.286Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -305,20 +304,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, thick clouds hang low, threatening rain but holding back as the damp chill clings to the air.. The usually bustling Ronda de Sant Antoni is unusually quiet"
+          "excerpt": "A thick blanket of clouds hovers over the city, threatening intermittent rain that makes the air feel heavy and electric.. The usually vibrant chatter on the train is subdued today"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.628
+        "freshness_score": 0.627
       }
     }
   ]
