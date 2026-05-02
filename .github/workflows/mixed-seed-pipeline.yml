@@ -257,6 +257,9 @@ jobs:
 
       - name: Generate Russian content via Claude
         if: ${{ steps.cfg.outputs.upload == 'true' && env.ANTHROPIC_API_KEY != '' && (steps.cfg.outputs.expire_existing != 'true' || steps.main_upload_state.outputs.main_uploaded == 'true') }}
+        # Russian step uses Anthropic which can run out of credits.
+        # Don't fail the whole pipeline — main content is already uploaded by this point.
+        continue-on-error: true
         env:
           MODEL_NAME: claude-haiku-4-5-20251001
           MODEL_PROVIDER: anthropic
