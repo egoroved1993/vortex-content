@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-03T13:37:05.350Z",
+    "capturedAt": "2026-05-03T14:26:36.118Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 339
   },
   "rows": [
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-03T13:37:05.350Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-05-03T14:26:36.118Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -36,7 +36,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -51,6 +51,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -75,31 +83,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "That's true, Berlin really is like a wall. I'm from the north of Brandenburg and I think I never really visited the south of Brandenburg 🤔 I've only been at the Elsterwerda train "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "It's funny that apparently as soon as you leave Berlin (+15 km), you land in the _\"wilderness\"_ of Brandenburg. Where everything is rural a.f. for German/European standards. It's f"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.024,
+        "source_item_count": 94,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.933
+        "freshness_score": 0.934
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-03T13:37:05.350Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-05-03T14:26:36.118Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -119,20 +119,20 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell when someone’s from here if they know not to trust a BART announcement. Delays are a way of lif"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "A great place for a bike is Alviso Marina park. Free parking, good security. No shade, so prepare for that, but there’s something like 9 miles of level gravel trails. And, if you h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick layer of fog drapes over the city, swallowing the tops of the skyscrapers and leaving a cool chill in the air.. Frustration simmers at BART stations, where a palpable tensi"
         },
         {
           "source_family": "review",
@@ -161,7 +161,7 @@
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": 0.009,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "transit",
@@ -172,11 +172,11 @@
     },
     {
       "city_id": "london",
-      "captured_at": "2026-05-03T13:37:05.350Z",
-      "mood_score": 0.454,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-03T14:26:36.118Z",
+      "mood_score": 0.307,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
         "forum": 4,
@@ -206,14 +206,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Hainault via Newbury Park due to an earlier signal failure at Redbrid"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Kilburn High Road and Euston. Pleas"
         },
         {
@@ -230,26 +222,34 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier customer incident at Brixton."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": -0.136,
+        "average_valence": -0.126,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.813
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-03T13:37:05.350Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-03T14:26:36.118Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -304,20 +304,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in a crisp, clear sky, casting a golden hue over the bustling streets of Barcelona.. Subway cars are quieter than usual, their windows fogged from the mix of frus"
+          "excerpt": "The sun hangs lazily over Barcelona, casting warm, golden light, while a soft breeze carries the scent of roasted chestnuts from the stalls around Plaça de Catalunya.. A restless m"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.025,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.634
+        "freshness_score": 0.635
       }
     }
   ]
