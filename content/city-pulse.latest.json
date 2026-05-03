@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-03T14:26:36.118Z",
+    "capturedAt": "2026-05-03T15:21:51.026Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 338
   },
   "rows": [
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-03T14:26:36.118Z",
-      "mood_score": 0.449,
+      "captured_at": "2026-05-03T15:21:51.026Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -58,7 +58,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 248, RE1, RE2: Delays 3 trips delayed"
         },
         {
           "source_family": "world",
@@ -77,29 +77,29 @@
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "That's true, Berlin really is like a wall. I'm from the north of Brandenburg and I think I never really visited the south of Brandenburg 🤔 I've only been at the Elsterwerda train "
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a moody gray, thick with the promise of rain, yet the air feels surprisingly warm for late October.. After a turbulent week, the trains and buses are finally running "
         }
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.032,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.934
+        "freshness_score": 0.933
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-03T14:26:36.118Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-05-03T15:21:51.026Z",
+      "mood_score": 0.506,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -127,14 +127,6 @@
           "excerpt": "A great place for a bike is Alviso Marina park. Free parking, good security. No shade, so prepare for that, but there’s something like 9 miles of level gravel trails. And, if you h"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick layer of fog drapes over the city, swallowing the tops of the skyscrapers and leaving a cool chill in the air.. Frustration simmers at BART stations, where a palpable tensi"
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -157,11 +149,19 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": 0.005,
+        "average_valence": 0.017,
         "dominant_themes": [
           "general",
           "transit",
@@ -172,8 +172,8 @@
     },
     {
       "city_id": "london",
-      "captured_at": "2026-05-03T14:26:36.118Z",
-      "mood_score": 0.307,
+      "captured_at": "2026-05-03T15:21:51.026Z",
+      "mood_score": 0.314,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -185,7 +185,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 4,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -222,32 +222,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier customer incident at Brixton."
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "Really, Really Good Events And Things To Do In London In May 2025 - Time Out Worldwide. Really, Really Good Events And Things To Do In London In May 2025"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.126,
+        "source_item_count": 51,
+        "average_valence": -0.107,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.802
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-03T14:26:36.118Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-03T15:21:51.026Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
       "dominant_sentiment": "neutral",
@@ -285,33 +285,33 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all locals love paella. In Gràcia, you’re more likely to find folks raving about calçots and a good xató, especi"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a heavy slate gray, threatening rain, while a brisk wind carries the scent of damp earth and wet pavement.. Commuters on the Rodalies are visibly frustrated, with many c"
+        },
+        {
           "source_family": "social",
           "source_origin": "telegram_group",
           "language": "ru",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
-        },
-        {
-          "source_family": "social",
-          "source_origin": "telegram_group",
-          "language": "ru",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs lazily over Barcelona, casting warm, golden light, while a soft breeze carries the scent of roasted chestnuts from the stalls around Plaça de Catalunya.. A restless m"
         }
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "tourism",
