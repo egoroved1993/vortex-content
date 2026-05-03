@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-03T05:16:19.884Z",
+    "capturedAt": "2026-05-03T07:02:31.212Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 335
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-03T05:16:19.884Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-05-03T07:02:31.212Z",
+      "mood_score": 0.309,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 4,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 9,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -64,14 +64,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 3 May, until 0740, no service between Paddington and Ealing Broadway. Please use Central line con"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Liberty: Planned Closure LIBERTY LINE: Sunday 3 May, until 1030, no service between Romford and Upminster. Please use local London Buses services"
         },
         {
@@ -81,25 +73,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Kilburn High Road and Euston. Pleas"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Part Closure METROPOLITAN LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Harrow-on-the-Hill and Amersha"
         }
       ],
       "metadata": {
-        "source_item_count": 61,
-        "average_valence": -0.154,
+        "source_item_count": 58,
+        "average_valence": -0.121,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-03T05:16:19.884Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-05-03T07:02:31.212Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -125,6 +125,14 @@
           "excerpt": "The South Bay is a lot more family oriented. Central park up in Fremont is always packed with families and I would say is decently comparable if the SF people were 10 years old and"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by their ability to seamlessly navigate BART delays and still show up at Dolores Park with takeo"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -133,45 +141,37 @@
           "excerpt": "Funny, my 20 year old son is visiting and all we wanna do is play pool. The Bitter End in Richmond district was fine but the table and sticks were trash. We went to the back of Fre"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of fog hangs over the city, muffling sounds and casting a ghostly glow on the streets.. BART stations are unusually crowded, with commuters fidgeting and checking t"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "Warm Thursday in the Bay Area - KRON4. Warm Thursday in the Bay Area"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 52,
-        "average_valence": 0.002,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.797
+        "freshness_score": 0.8
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-03T05:16:19.884Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-05-03T07:02:31.212Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -184,7 +184,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -201,22 +200,6 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, RE7, RE2: Delays 3 trips delayed"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. In Kreuzberg, it’s not uncommon to spot a spontaneous dance party at a U-Bahn stop, fueled by street musicians and good vibes."
-        },
-        {
           "source_family": "world",
           "source_origin": "committed_world_fallback",
           "language": "en",
@@ -231,25 +214,41 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "city_guide_snippet",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.029,
+        "source_item_count": 88,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.916
+        "freshness_score": 0.915
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-03T05:16:19.884Z",
-      "mood_score": 0.394,
+      "captured_at": "2026-05-03T07:02:31.212Z",
+      "mood_score": 0.391,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
@@ -285,12 +284,12 @@
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think every corner café is for them, but some locals still play cards in the back, hiding the good conversations from "
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a mottled canvas of grey with the occasional beam of sunlight piercing through, hinting at an impending rain shower.. The atmosphere in the metro stations is tense and r"
         },
         {
           "source_family": "social",
@@ -311,11 +310,11 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.019,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "tourism"
         ],
         "freshness_score": 0.63
       }
