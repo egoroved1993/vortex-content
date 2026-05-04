@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-04T03:18:41.646Z",
+    "capturedAt": "2026-05-04T05:17:46.015Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 344
+    "totalItems": 350
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-04T03:18:41.646Z",
-      "mood_score": 0.282,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-04T05:17:46.015Z",
+      "mood_score": 0.468,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,13 +35,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays following a late finish of engineering work. Tickets are being accepted on London Buses, Mil"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -73,30 +81,22 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "48-hour London Underground strike on 7–8 May set to snarl business travel - VisaHQ. 48-hour London Underground strike on 7–8 May set to snarl business travel"
         }
       ],
       "metadata": {
         "source_item_count": 56,
-        "average_valence": -0.054,
+        "average_valence": -0.095,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.829
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-04T03:18:41.646Z",
+      "captured_at": "2026-05-04T05:17:46.015Z",
       "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
@@ -111,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -161,25 +161,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.041,
+        "source_item_count": 95,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.92
+        "freshness_score": 0.922
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-04T03:18:41.646Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-05-04T05:17:46.015Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -207,15 +207,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Pretty sure Atelier Crenn is one of the most expensive of the three stars in the Bay Area. $500/person right now. You might be thinking of Bar Crenn?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I have experience doing that drive since 2013. The 5 has gotten substantially worse over the years. There’s never not traffic. My fiancé lives in SF while I live in Los Angeles. He"
+          "excerpt": "Los Angeles stays up. Even Orange County has more late night spots than SF. People hate to hear it but tech destroyed the nightlife here. The Mission became a bedroom community for"
         },
         {
           "source_family": "forum",
@@ -226,28 +218,36 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You know they're locals when they know which taco trucks only serve birria after 10 PM and how to jump BART delays by"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+          "excerpt": "This is such a good idea. 6 weeks of community service OR 2 weeks and you get your GED"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "If you Caltrain (and Stanford has good transpo from the station) it opens up a few more neighborhoods, understand that it might not be so great for night shifts."
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.081,
+        "source_item_count": 62,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.845
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-04T03:18:41.646Z",
+      "captured_at": "2026-05-04T05:17:46.015Z",
       "mood_score": 0.341,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
@@ -318,7 +318,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.63
+        "freshness_score": 0.628
       }
     }
   ]
