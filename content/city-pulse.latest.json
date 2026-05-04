@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-03T23:23:11.295Z",
+    "capturedAt": "2026-05-04T01:02:27.099Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 351
+    "totalItems": 343
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-03T23:23:11.295Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-05-04T01:02:27.099Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 7,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -56,14 +56,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Kilburn High Road and Euston. Pleas"
         },
         {
@@ -75,34 +67,42 @@
           "excerpt": "London transit Metropolitan: Part Closure METROPOLITAN LINE: Saturday 2, Sunday 3 and Bank Holiday Monday 4 May, no service between Harrow-on-the-Hill and Amersha"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 3 May, from 2215, no service between Camden Road and Stratford. Last through trains operate at 2126"
+          "excerpt": "48-hour London Underground strike on 7–8 May set to snarl business travel - VisaHQ. 48-hour London Underground strike on 7–8 May set to snarl business travel"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "OP this is an awful lot of coffee. I'm gonna go against the grain on this one with a lot of people in the thread though. All these people saying one teaspoon is enough - what kind "
         }
       ],
       "metadata": {
-        "source_item_count": 62,
-        "average_valence": -0.157,
+        "source_item_count": 55,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-03T23:23:11.295Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-04T01:02:27.099Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -111,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,12 +128,12 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "There was a 73 year old woman in Lichtenberg who was raped and robbed last week. My English is not good so you could help me find a word and I will edit my post right away. I could"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N8: Delays 1 trips delayed"
         },
         {
           "source_family": "world",
@@ -154,31 +155,31 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.463,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The clouds hang low, casting a muted gray over the city, while a sporadic drizzle adds a rhythmic patter to the streets.. The mood on the U-Bahn is a mix of relief and anticipation"
+          "excerpt": "The sky is a grey canvas, punctuated by sudden bursts of rain that speckle the pavement with glistening reflections.. With the recent strike now lifted, the buses and trams are run"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.013,
+        "source_item_count": 94,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.927
+        "freshness_score": 0.923
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-03T23:23:11.295Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-04T01:02:27.099Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,9 +197,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "100% illegal and totally outrageous. Just make sure your MDsxletter meets all the requirements of current California law. If it does, your landlord is not entitled to anything else"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yes, you're not reading it correctly. 1482 isn't relevant because you're under SF rent control which supersedes it, so ignore the 8.5% cap you've imagined. That's also based on fla"
+          "excerpt": "Pretty sure Atelier Crenn is one of the most expensive of the three stars in the Bay Area. $500/person right now. You might be thinking of Bar Crenn?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I have experience doing that drive since 2013. The 5 has gotten substantially worse over the years. There’s never not traffic. My fiancé lives in SF while I live in Los Angeles. He"
         },
         {
           "source_family": "forum",
@@ -207,22 +224,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. You know they're locals when they know which taco trucks only serve birria after 10 PM and how to jump BART delays by"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "That’s like literally the point I am making. Muni is extremely underfunded right now and New York shows us how good public transit in US city can be. Lurie has been pushing anti tr"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "If you’re not using high-value BART, and you’re not eligible for a special situation like disabled, senior, youth, or commuter benefits, I suppose you’re all set using a regular cr"
         },
         {
           "source_family": "review",
@@ -234,23 +235,23 @@
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.007,
+        "source_item_count": 57,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.82
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-03T23:23:11.295Z",
-      "mood_score": 0.491,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-04T01:02:27.099Z",
+      "mood_score": 0.341,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
         "forum": 4,
@@ -290,7 +291,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs low with a heavy gray blanket, threatening rain that whispers in the cool breeze.. Rodalies trains are packed but silent, with commuters exchanging weary glances, the"
+          "excerpt": "The afternoon sun bathes the streets in a golden glow, with a pleasant breeze rustling the palm fronds.. Trains are running at reduced capacity, and the air is thick with frustrati"
         },
         {
           "source_family": "social",
@@ -317,7 +318,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.632
+        "freshness_score": 0.631
       }
     }
   ]
