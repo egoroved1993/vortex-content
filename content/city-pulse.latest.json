@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-04T11:40:52.881Z",
+    "capturedAt": "2026-05-04T12:47:44.750Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 343
+    "totalItems": 340
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-04T11:40:52.881Z",
-      "mood_score": 0.277,
+      "captured_at": "2026-05-04T12:47:44.750Z",
+      "mood_score": 0.275,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 5,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -84,25 +84,101 @@
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.068,
+        "source_item_count": 53,
+        "average_valence": -0.074,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.808
+      }
+    },
+    {
+      "city_id": "berlin",
+      "captured_at": "2026-05-04T12:47:44.750Z",
+      "mood_score": 0.498,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 6,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "nightlife": 40,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "de",
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "social",
+          "source_origin": "x_post",
+          "language": "de",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "You must be living in a good area. E. g. Berlin Prenzlauer Berg or Wilmersdorf fits your description :) spent a day in a lower or middle class area and you'll see it will be very d"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "As I kind of alluded to in my other post in this thread, the divisions between Wedding and Gesundbrunnen are somewhat contested, at least in a colloquial sense. Buuuut, since 2001 "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I lived in the Eulerkiez but moved 4 years ago, and I think it really depends. I thought Badstrasse was very lively and open, the surroundings are alright with Humboldtpark and the"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 94,
+        "average_valence": -0.006,
+        "dominant_themes": [
+          "general",
+          "routine",
+          "events"
+        ],
+        "freshness_score": 0.934
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-04T11:40:52.881Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-05-04T12:47:44.750Z",
+      "mood_score": 0.436,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -133,14 +209,6 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You know they're locals when they know which taco trucks only serve birria after 10 PM and how to jump BART delays by"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "If you Caltrain (and Stanford has good transpo from the station) it opens up a few more neighborhoods, understand that it might not be so great for night shifts."
-        },
-        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -155,98 +223,30 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
-        "source_item_count": 60,
-        "average_valence": -0.025,
+        "source_item_count": 56,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.845
-      }
-    },
-    {
-      "city_id": "berlin",
-      "captured_at": "2026-05-04T11:40:52.881Z",
-      "mood_score": 0.485,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "nightlife": 40,
-        "trends": 8,
-        "transport": 2,
-        "weather": 1
-      },
-      "languages": [
-        "de",
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "de",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Knapp 600 Euro Miete für acht Quadratmeter - rbb24.de. Knapp 600 Euro Miete für acht Quadratmeter"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.043,
-        "dominant_themes": [
-          "general",
-          "routine",
-          "events"
-        ],
-        "freshness_score": 0.921
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-04T11:40:52.881Z",
+      "captured_at": "2026-05-04T12:47:44.750Z",
       "mood_score": 0.341,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
@@ -317,7 +317,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.628
+        "freshness_score": 0.629
       }
     }
   ]
