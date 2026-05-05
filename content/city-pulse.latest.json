@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-05T12:37:59.081Z",
+    "capturedAt": "2026-05-05T13:44:18.892Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 333
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-05T12:37:59.081Z",
-      "mood_score": 0.433,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-05T13:44:18.892Z",
+      "mood_score": 0.397,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 1,
         "review": 2,
@@ -35,13 +35,29 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 3,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Baker Street and Aldgate due to an earlier fire alert at Farringdon.MINOR DELAY"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Baker Street and Aldgate due to an earlier fire alert at Farringdon.MINOR DELAY"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -56,48 +72,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to an earlier fire alert at Farringdon."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Airport/Reading while we fix a faulty train at Hayes and Harlington. Ticke"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.05,
+        "source_item_count": 56,
+        "average_valence": -0.157,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.802
+        "freshness_score": 0.814
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-05T12:37:59.081Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-05-05T13:44:18.892Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -111,7 +111,6 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -126,14 +125,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -158,25 +149,33 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a grey canvas, punctuated by sudden bursts of rain that speckle the pavement with glistening reflections.. With the recent strike now lifted, the buses and trams are run"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.045,
+        "source_item_count": 90,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.929
+        "freshness_score": 0.928
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-05T12:37:59.081Z",
+      "captured_at": "2026-05-05T13:44:18.892Z",
       "mood_score": 0.4,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 10,
@@ -240,18 +239,18 @@
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "weather"
         ],
         "freshness_score": 0.828
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-05T12:37:59.081Z",
-      "mood_score": 0.291,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-05T13:44:18.892Z",
+      "mood_score": 0.49,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
@@ -259,7 +258,6 @@
         "news": 25,
         "social": 91,
         "world": 5,
-        "trends": 8,
         "weather": 1
       },
       "languages": [
@@ -311,14 +309,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 137,
-        "average_valence": -0.028,
+        "source_item_count": 129,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.63
+        "freshness_score": 0.602
       }
     }
   ]
