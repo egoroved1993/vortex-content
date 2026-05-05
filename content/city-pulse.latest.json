@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-05T06:58:42.606Z",
+    "capturedAt": "2026-05-05T07:47:29.785Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 340
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-05T06:58:42.606Z",
-      "mood_score": 0.433,
+      "captured_at": "2026-05-05T07:47:29.785Z",
+      "mood_score": 0.428,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
@@ -56,7 +56,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Aldgate southbound only, due to an earlier customer incid"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and Kennington via Bank while we fix a faulty train at Bank. MINOR dela"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Severe delays between Camden Town and Kennington via Bank while we fix a faulty train at Bank. MINOR dela"
         },
         {
           "source_family": "world",
@@ -73,19 +81,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.051,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
@@ -96,8 +96,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-05T06:58:42.606Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-05-05T07:47:29.785Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -111,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -125,6 +126,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248, RE2, RE7: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
@@ -149,19 +158,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Knapp 600 Euro Miete für acht Quadratmeter - rbb24.de. Knapp 600 Euro Miete für acht Quadratmeter"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.043,
+        "source_item_count": 90,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "events",
@@ -172,11 +173,11 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-05T06:58:42.606Z",
-      "mood_score": 0.446,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-05T07:47:29.785Z",
+      "mood_score": 0.396,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 12,
         "review": 2,
@@ -241,12 +242,12 @@
           "transit",
           "weather"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.832
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-05T06:58:42.606Z",
+      "captured_at": "2026-05-05T07:47:29.785Z",
       "mood_score": 0.291,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
