@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-06T05:14:17.747Z",
+    "capturedAt": "2026-05-06T07:08:16.461Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 330
+    "totalItems": 332
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-06T05:14:17.747Z",
-      "mood_score": 0.382,
+      "captured_at": "2026-05-06T07:08:16.461Z",
+      "mood_score": 0.377,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -35,6 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -48,6 +49,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we help a person ill on a train at King's Cross St. Pancras."
         },
         {
           "source_family": "news",
@@ -72,30 +81,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
-        "source_item_count": 52,
-        "average_valence": -0.052,
+        "source_item_count": 53,
+        "average_valence": -0.067,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.804
+        "freshness_score": 0.824
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-06T05:14:17.747Z",
+      "captured_at": "2026-05-06T07:08:16.461Z",
       "mood_score": 0.385,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
@@ -110,7 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -132,7 +133,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1, RE7: Delays 4 trips delayed"
+          "excerpt": "Berlin transit M5, RE1: Delays 3 trips delayed"
         },
         {
           "source_family": "news",
@@ -160,8 +161,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.045,
+        "source_item_count": 91,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "events",
@@ -172,11 +173,11 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-06T05:14:17.747Z",
-      "mood_score": 0.395,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-06T07:08:16.461Z",
+      "mood_score": 0.495,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
         "review": 2,
@@ -246,7 +247,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-06T05:14:17.747Z",
+      "captured_at": "2026-05-06T07:08:16.461Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
