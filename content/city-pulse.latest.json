@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-06T15:03:09.917Z",
+    "capturedAt": "2026-05-06T16:39:55.347Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,88 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 332
+    "totalItems": 338
   },
   "rows": [
     {
+      "city_id": "london",
+      "captured_at": "2026-05-06T16:39:55.347Z",
+      "mood_score": 0.375,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
+      "source_counts": {
+        "public": 3,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 25,
+        "social": 2,
+        "world": 5,
+        "trends": 8,
+        "transport": 3,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "social",
+          "source_origin": "x_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between South Acton and Richmond, and NO SERVICE between Clapham Junction and Shepherd's Bush d"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Apartments for Rent in London: Demand Surges Amid Ongoing Supply Constraints - OCNJ Daily. Apartments for Rent in London: Demand Surges Amid Ongoing Supply Constraints"
+        },
+        {
+          "source_family": "world",
+          "source_origin": "committed_world_fallback",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 54,
+        "average_valence": -0.073,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "money"
+        ],
+        "freshness_score": 0.836
+      }
+    },
+    {
       "city_id": "berlin",
-      "captured_at": "2026-05-06T15:03:09.917Z",
-      "mood_score": 0.388,
+      "captured_at": "2026-05-06T16:39:55.347Z",
+      "mood_score": 0.39,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -58,7 +133,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, RE7: Delays 2 trips delayed"
+          "excerpt": "Berlin transit U2, 248, M5: Delays 3 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin, Chancenkarte -> Blue Card transition, application via LEA, received today after 4.5 months of waiting and only after hiring lawyers and their letters. Who is still waiting "
         },
         {
           "source_family": "world",
@@ -75,19 +158,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a grey canvas, punctuated by sudden bursts of rain that speckle the pavement with glistening reflections.. With the recent strike now lifted, the buses and trams are run"
         }
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.037,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "events",
@@ -98,13 +173,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-06T15:03:09.917Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-06T16:39:55.347Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -119,14 +194,6 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I moved to SF also from the central coast in my late 30s. Ended up meeting my wife here and now have a child. Badabing badaboom"
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -140,7 +207,15 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I just moved to SF for first time in January at 41. My only regret is not moving here sooner. I grew up in the south and I find San Franciscans very welcoming and of course it is a"
+          "excerpt": "I made $85k and lived in a tiny ADU in my early 20s here in San Francisco. Paper thin walls and an electric skillet to cook with - sometimes I'd use an electric grill in the backya"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "Bay Area weather shifts from wet to warm before big change - San Francisco Chronicle. Bay Area weather shifts from wet to warm before big change"
         },
         {
           "source_family": "review",
@@ -160,93 +235,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.03,
+        "source_item_count": 54,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.802
-      }
-    },
-    {
-      "city_id": "london",
-      "captured_at": "2026-05-06T15:03:09.917Z",
-      "mood_score": 0.366,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
-      "source_counts": {
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 25,
-        "social": 2,
-        "world": 5,
-        "trends": 8,
-        "transport": 1,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays eastbound only due to train cancellations."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Houses for Rent in London: What International Renters Need to Know - Estate Agent Today. Houses for Rent in London: What International Renters Need to Know"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Apartments for Rent in London: Demand Surges Amid Ongoing Supply Constraints - OCNJ Daily. Apartments for Rent in London: Demand Surges Amid Ongoing Supply Constraints"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 49,
-        "average_valence": -0.099,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "money"
-        ],
-        "freshness_score": 0.808
+        "freshness_score": 0.81
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-06T15:03:09.917Z",
+      "captured_at": "2026-05-06T16:39:55.347Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
@@ -317,7 +318,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.631
+        "freshness_score": 0.63
       }
     }
   ]
