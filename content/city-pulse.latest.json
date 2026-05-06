@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-06T01:43:59.532Z",
+    "capturedAt": "2026-05-06T03:17:59.892Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 341
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-06T01:43:59.532Z",
+      "captured_at": "2026-05-06T03:17:59.892Z",
       "mood_score": 0.382,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine.",
@@ -95,8 +95,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-06T01:43:59.532Z",
-      "mood_score": 0.388,
+      "captured_at": "2026-05-06T03:17:59.892Z",
+      "mood_score": 0.385,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -110,6 +110,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -124,6 +125,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -148,33 +157,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a grey canvas, punctuated by sudden bursts of rain that speckle the pavement with glistening reflections.. With the recent strike now lifted, the buses and trams are run"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.035,
+        "source_item_count": 93,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.921
+        "freshness_score": 0.925
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-06T01:43:59.532Z",
-      "mood_score": 0.387,
+      "captured_at": "2026-05-06T03:17:59.892Z",
+      "mood_score": 0.388,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 12,
@@ -238,14 +239,14 @@
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-06T01:43:59.532Z",
+      "captured_at": "2026-05-06T03:17:59.892Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
