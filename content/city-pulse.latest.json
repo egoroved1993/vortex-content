@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-06T18:44:46.997Z",
+    "capturedAt": "2026-05-06T19:39:51.098Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 337
+    "totalItems": 330
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-06T18:44:46.997Z",
-      "mood_score": 0.374,
+      "captured_at": "2026-05-06T19:39:51.098Z",
+      "mood_score": 0.361,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -35,7 +35,7 @@
         "social": 2,
         "world": 5,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -56,7 +56,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to an earlier trespasser on the track at Hackney Central."
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between Leytonstone and Epping/Hainault via Newbury Park due to an earlier faulty train at Q"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between Leytonstone and Epping/Hainault via Newbury Park due to an earlier faulty train at Q"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge due to a trespasser on the track earlier at Sudbury Hill."
         },
         {
           "source_family": "news",
@@ -65,41 +81,25 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Houses for Rent in London: What International Renters Need to Know - Estate Agent Today. Houses for Rent in London: What International Renters Need to Know"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Apartments for Rent in London: Demand Surges Amid Ongoing Supply Constraints - OCNJ Daily. Apartments for Rent in London: Demand Surges Amid Ongoing Supply Constraints"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
         }
       ],
       "metadata": {
-        "source_item_count": 53,
-        "average_valence": -0.078,
+        "source_item_count": 54,
+        "average_valence": -0.114,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-06T18:44:46.997Z",
-      "mood_score": 0.388,
+      "captured_at": "2026-05-06T19:39:51.098Z",
+      "mood_score": 0.387,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 3,
@@ -110,7 +110,6 @@
         "social": 2,
         "world": 5,
         "nightlife": 40,
-        "trends": 8,
         "transport": 2,
         "weather": 1
       },
@@ -133,7 +132,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S7, RE2, S9: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -161,20 +160,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.035,
+        "source_item_count": 85,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.93
+        "freshness_score": 0.915
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-06T18:44:46.997Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-06T19:39:51.098Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -214,7 +213,7 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "Bay Area weather shifts from wet to warm before big change - San Francisco Chronicle. Bay Area weather shifts from wet to warm before big change"
         },
         {
@@ -236,18 +235,18 @@
       ],
       "metadata": {
         "source_item_count": 54,
-        "average_valence": -0.001,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.81
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-06T18:44:46.997Z",
+      "captured_at": "2026-05-06T19:39:51.098Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
