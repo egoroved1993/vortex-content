@@ -122,6 +122,9 @@ function analyseRow(row) {
 
   // 7. Ends with ellipsis (truncated)
   if (c.trim().endsWith("...")) issues.push("truncated");
+  if (/\b(the other just|and then just|then just|just kind of|sort of|kind of|because|while|with|to|in|of|from|for|on|at|by|the|a|an|near|through|into|as if|if|when|where|than|that|another|still|already|was|were|is|are|like|he looked|she looked|they looked|it felt|i tried|they said)$/i.test(c.trim())) {
+    issues.push("truncated");
+  }
 
   // 8. Starts with "I feel like" / "Sometimes I"
   if (/^(i feel like|sometimes i|there was a time)/i.test(c.trim())) issues.push("banned_opener");

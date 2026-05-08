@@ -10,7 +10,7 @@ on:
       model:
         description: "Model to use for upload-capable runs"
         required: false
-        default: "claude-haiku-4-5-20251001"
+        default: "deepseek-v4-flash"
       upload:
         description: "Upload approved payload to Supabase"
         type: boolean
@@ -28,7 +28,7 @@ on:
       mix:
         description: "Comma-separated source families"
         required: false
-        default: "launch,public,review,forum,signals,news"
+        default: "public,review,forum,news"
       city_focus:
         description: "Optional city focus"
         required: false
@@ -53,6 +53,8 @@ jobs:
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.CLAUDE }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       MODEL_COST_GPT_4O_INPUT_PER_1M_USD: "2.5"
@@ -61,6 +63,10 @@ jobs:
       MODEL_COST_GPT_4O_MINI_OUTPUT_PER_1M_USD: "0.6"
       MODEL_COST_CLAUDE_HAIKU_4_5_20251001_INPUT_PER_1M_USD: "1"
       MODEL_COST_CLAUDE_HAIKU_4_5_20251001_OUTPUT_PER_1M_USD: "5"
+      MODEL_COST_DEEPSEEK_V4_FLASH_INPUT_PER_1M_USD: "0.14"
+      MODEL_COST_DEEPSEEK_V4_FLASH_OUTPUT_PER_1M_USD: "0.28"
+      OPENROUTER_INPUT_COST_PER_1M_USD: "0.10"
+      OPENROUTER_OUTPUT_COST_PER_1M_USD: "0.30"
 
     steps:
       - name: Checkout
@@ -75,9 +81,9 @@ jobs:
         id: cfg
         shell: bash
         run: |
-          MANUAL_MODEL="${{ inputs.model || 'claude-haiku-4-5-20251001' }}"
+          MANUAL_MODEL="${{ inputs.model || 'deepseek-v4-flash' }}"
           MANUAL_UPLOAD="${{ inputs.upload && 'true' || 'false' }}"
-          MANUAL_MIX="${{ inputs.mix || 'launch,public,review,forum,signals,news' }}"
+          MANUAL_MIX="${{ inputs.mix || 'public,review,forum,news' }}"
 
           if [ "$MANUAL_UPLOAD" = "true" ] && [ "$MANUAL_MODEL" = "gpt-4o-mini" ]; then
             echo "gpt-4o-mini upload runs are disabled: quality was below the production bar." >&2
@@ -89,10 +95,34 @@ jobs:
             exit 1
           fi
 
+          if [ "$MANUAL_UPLOAD" = "true" ] && [[ ",$MANUAL_MIX," =~ ,launch, ]]; then
+            echo "Upload runs cannot use launch anymore; production content must be sourced transformation only." >&2
+            exit 1
+          fi
+
           if [[ "$MANUAL_MODEL" == gpt-* ]]; then
             MANUAL_PROVIDER=openai
           elif [[ "$MANUAL_MODEL" == claude-* ]]; then
             MANUAL_PROVIDER=anthropic
+          elif [[ "$MANUAL_MODEL" == deepseek-* ]]; then
+            if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
+              if [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+                echo "DEEPSEEK_API_KEY is missing; falling back to Claude Haiku for this run." >&2
+                MANUAL_MODEL=claude-haiku-4-5-20251001
+                MANUAL_PROVIDER=anthropic
+              else
+                echo "DEEPSEEK_API_KEY is required for DeepSeek runs." >&2
+                exit 1
+              fi
+            else
+              MANUAL_PROVIDER=deepseek
+            fi
+          elif [[ "$MANUAL_MODEL" == qwen/* || "$MANUAL_MODEL" == qwen-* ]]; then
+            if [ -z "${OPENROUTER_API_KEY:-}" ]; then
+              echo "OPENROUTER_API_KEY is required for Qwen/OpenRouter runs." >&2
+              exit 1
+            fi
+            MANUAL_PROVIDER=openrouter
           elif [[ "$MANUAL_MODEL" == grok-* ]]; then
             echo "Grok/xAI runs are disabled in this pipeline; use Claude or GPT-4o." >&2
             exit 1
@@ -157,17 +187,19 @@ jobs:
               --upload
               --upload-city-pulse
               --upload-state content/pipeline-upload-state.json
+              --approved-bank content/approved-bank.json
+              --approved-examples content/approved-bank-examples.json
+              --approved-rejected content/approved-bank-rejected.json
               --upload-ttl-hours "${{ steps.cfg.outputs.upload_ttl_hours }}"
               --created-at-mode now
-              --fail-on-empty-upload
             )
           fi
 
           if [ "${{ steps.cfg.outputs.expire_existing }}" = "true" ] && [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
             if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
-              ARGS+=( --expire-existing --min-upload-total 12 --min-upload-per-city 12 --max-per-city 16 --max-total 16 )
+              ARGS+=( --expire-existing --fail-on-empty-upload --min-upload-total 12 --min-upload-per-city 12 --max-per-city 25 --max-total 25 )
             else
-              ARGS+=( --expire-existing --min-upload-total 60 --min-upload-per-city 12 --max-per-city 16 --max-total 80 )
+              ARGS+=( --expire-existing --fail-on-empty-upload --min-upload-total 60 --min-upload-per-city 12 --max-per-city 25 --max-total 100 )
             fi
           fi
 
@@ -340,6 +372,9 @@ jobs:
             content/pipeline-payload.json
             content/pipeline-quality-report.json
             content/pipeline-upload-state.json
+            content/approved-bank.json
+            content/approved-bank-examples.json
+            content/approved-bank-rejected.json
             content/city-pulse.latest.json
             content/place-discovery-jobs.json
             content/place-discovery-candidates.json

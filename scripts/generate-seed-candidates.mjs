@@ -291,6 +291,9 @@ async function generateCandidateOnce(job, { provider: activeProvider, model: act
   if (activeProvider === "xai") {
     return generateWithXAI(job, activeModel);
   }
+  if (activeProvider === "deepseek" || activeProvider === "openrouter" || activeProvider === "qwen") {
+    return generateWithOpenAICompatible(job, activeModel, activeProvider);
+  }
   return generateWithOpenAI(job, activeModel);
 }
 
@@ -300,6 +303,9 @@ async function generateRepairCandidate(job, { provider: activeProvider, model: a
   }
   if (activeProvider === "xai") {
     return generateRepairWithXAI(job, activeModel, weakDraft, assessment);
+  }
+  if (activeProvider === "deepseek" || activeProvider === "openrouter" || activeProvider === "qwen") {
+    return generateRepairWithOpenAICompatible(job, activeModel, weakDraft, assessment, activeProvider);
   }
   return generateRepairWithOpenAI(job, activeModel, weakDraft, assessment);
 }
@@ -333,7 +339,7 @@ async function fetchWithRetry(fn, maxRetries = 6) {
         err.cause?.code === "UND_ERR_HEADERS_TIMEOUT" ||
         err.cause?.code === "UND_ERR_CONNECT_TIMEOUT" ||
         message.includes("fetch failed") ||
-        /\b(OpenAI|Anthropic|XAI|xAI) error (408|409|425|429|500|502|503|504|529)\b/i.test(message) ||
+        /\b(OpenAI|Anthropic|XAI|xAI|DeepSeek|OpenRouter) error (408|409|425|429|500|502|503|504|529)\b/i.test(message) ||
         /\b(overloaded|overloaded_error|temporarily unavailable|rate.?limit)\b/i.test(message);
       if (attempt < maxRetries - 1 && isRetryable) {
         const delay = 2000 * Math.pow(2, attempt) + Math.floor(Math.random() * 1000);
@@ -672,6 +678,46 @@ async function generateWithOpenAI(job, modelName) {
   });
 }
 
+async function generateWithOpenAICompatible(job, modelName, providerName) {
+  const config = openAICompatibleConfig(providerName);
+  const profile = generationProfile(job, providerName);
+
+  return fetchWithRetry(async () => {
+    const response = await fetch(chatCompletionsUrl(config.baseUrl), {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${config.apiKey}`,
+        "Content-Type": "application/json",
+        ...config.headers,
+      },
+      body: JSON.stringify({
+        model: modelName,
+        temperature: profile.temperature,
+        max_tokens: profile.maxTokens,
+        response_format: { type: "json_object" },
+        messages: [
+          {
+            role: "system",
+            content: buildSystemPrompt(job, providerName, modelName),
+          },
+          { role: "user", content: job.prompt },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`${config.label} error ${response.status}: ${await response.text()}`);
+    }
+
+    const payload = await response.json();
+    const text = payload.choices?.[0]?.message?.content?.trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeOpenAIUsage(payload.usage),
+      systemFingerprint: payload.system_fingerprint ?? null,
+    });
+  });
+}
+
 async function generateWithXAI(job, modelName) {
   const apiKey = process.env.XAI_API_KEY;
   if (!apiKey) throw new Error("XAI_API_KEY is required for provider=xai");
@@ -782,6 +828,48 @@ async function generateRepairWithOpenAI(job, modelName, weakDraft, assessment) {
     const text = payload.choices?.[0]?.message?.content?.trim();
     return normalizeModelJson(job, text, {
       usage: normalizeOpenAIUsage(payload.usage),
+    });
+  });
+}
+
+async function generateRepairWithOpenAICompatible(job, modelName, weakDraft, assessment, providerName) {
+  const config = openAICompatibleConfig(providerName);
+
+  return fetchWithRetry(async () => {
+    const response = await fetch(chatCompletionsUrl(config.baseUrl), {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${config.apiKey}`,
+        "Content-Type": "application/json",
+        ...config.headers,
+      },
+      body: JSON.stringify({
+        model: modelName,
+        temperature: 0.22,
+        max_tokens: repairMaxTokens(job),
+        response_format: { type: "json_object" },
+        messages: [
+          {
+            role: "system",
+            content: buildRepairSystemPrompt(job, assessment, providerName, modelName),
+          },
+          {
+            role: "user",
+            content: buildRepairUserPrompt(job, weakDraft, assessment),
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`${config.label} error ${response.status}: ${await response.text()}`);
+    }
+
+    const payload = await response.json();
+    const text = payload.choices?.[0]?.message?.content?.trim();
+    return normalizeModelJson(job, text, {
+      usage: normalizeOpenAIUsage(payload.usage),
+      systemFingerprint: payload.system_fingerprint ?? null,
     });
   });
 }
@@ -2143,6 +2231,8 @@ function countBy(items, getKey) {
 }
 
 function inferProvider() {
+  if (process.env.DEEPSEEK_API_KEY && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY && !process.env.XAI_API_KEY) return "deepseek";
+  if (process.env.OPENROUTER_API_KEY && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY && !process.env.XAI_API_KEY) return "openrouter";
   if (process.env.XAI_API_KEY && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY) return "xai";
   if (process.env.ANTHROPIC_API_KEY) return "anthropic";
   return "openai";
@@ -2151,7 +2241,44 @@ function inferProvider() {
 function defaultModelForProvider(activeProvider) {
   if (activeProvider === "anthropic") return "claude-haiku-4-5-20251001";
   if (activeProvider === "xai") return "grok-3-fast";
+  if (activeProvider === "deepseek") return "deepseek-v4-flash";
+  if (activeProvider === "openrouter" || activeProvider === "qwen") return "qwen/qwen3-30b-a3b-instruct-2507";
   return "gpt-4o-mini";
+}
+
+function openAICompatibleConfig(providerName) {
+  if (providerName === "deepseek") {
+    const apiKey = process.env.DEEPSEEK_API_KEY;
+    if (!apiKey) throw new Error("DEEPSEEK_API_KEY is required for provider=deepseek");
+    return {
+      label: "DeepSeek",
+      apiKey,
+      baseUrl: process.env.DEEPSEEK_BASE_URL ?? "https://api.deepseek.com",
+      headers: {},
+    };
+  }
+
+  if (providerName === "openrouter" || providerName === "qwen") {
+    const apiKey = process.env.OPENROUTER_API_KEY;
+    if (!apiKey) throw new Error("OPENROUTER_API_KEY is required for provider=openrouter/qwen");
+    return {
+      label: "OpenRouter",
+      apiKey,
+      baseUrl: process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1",
+      headers: {
+        "HTTP-Referer": process.env.OPENROUTER_HTTP_REFERER ?? "https://github.com/egoroved1993/vortex-content",
+        "X-Title": process.env.OPENROUTER_APP_TITLE ?? "Vortex Content Pipeline",
+      },
+    };
+  }
+
+  throw new Error(`Unsupported OpenAI-compatible provider: ${providerName}`);
+}
+
+function chatCompletionsUrl(baseUrl) {
+  const clean = String(baseUrl ?? "").replace(/\/+$/, "");
+  if (clean.endsWith("/chat/completions")) return clean;
+  return `${clean}/chat/completions`;
 }
 
 function normalizeOpenAIUsage(usage) {
@@ -2231,7 +2358,15 @@ function summarizeUsage(candidates, { provider, model, useMock }) {
 }
 
 function resolveModelRates({ provider, model }) {
-  const envPrefix = provider === "anthropic" ? "ANTHROPIC" : provider === "xai" ? "XAI" : "OPENAI";
+  const envPrefix = provider === "anthropic"
+    ? "ANTHROPIC"
+    : provider === "xai"
+      ? "XAI"
+      : provider === "deepseek"
+        ? "DEEPSEEK"
+        : provider === "openrouter" || provider === "qwen"
+          ? "OPENROUTER"
+          : "OPENAI";
   const specificModelKey = normalizeModelEnvKey(model);
 
   const inputSpecific = parseRate(process.env[`MODEL_COST_${specificModelKey}_INPUT_PER_1M_USD`]);

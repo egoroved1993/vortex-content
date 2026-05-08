@@ -992,6 +992,7 @@ function looksTruncatedOutput(content, contentLower) {
   if (/\b(he|she|they|it|i|we|you)\s+(looked|felt|seemed|thought|wanted|needed|started|kept|tried|asked|said|told|went|got|had)$/i.test(trimmed)) return true;
   if (/\b(but|and|because|while|though|honestly),?\s+(who|what|where|why|how|he|she|they|it|i|we|you)(?:'s|’s)?$/i.test(trimmed)) return true;
   if (/\blike\s+(i['’]?m|we['’]?re|it['’]?s|he['’]?s|she['’]?s|they['’]?re|you['’]?re)\s+(applying|waiting|trying|looking|asking|arguing|paying|checking)\s+(for|to|at|with|in)\s+(a|an|the)?\s*\w{2,24}$/i.test(trimmed)) return true;
+  if (/\b(the other just|and then just|then just|just kind of|sort of|kind of)$/i.test(trimmed)) return true;
   if (/\b(foreca|contro)\b/i.test(trimmed)) return true;
 
   const incompletePlaceCopy = [

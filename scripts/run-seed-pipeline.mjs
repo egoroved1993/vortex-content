@@ -13,7 +13,7 @@ const upload = Boolean(args.upload);
 const provider = args.provider ?? process.env.MODEL_PROVIDER ?? null;
 const model = args.model ?? null;
 const cityFocus = args["city-focus"] ?? null;
-const mix = parseMix(args.mix ?? "launch,public,review,forum,signals,news");
+const mix = parseMix(args.mix ?? "public,review,forum,news");
 const usesSocial = mix.includes("social");
 const usesWorld = mix.includes("world") || mix.includes("bridge");
 const jobsPerSignalSnapshot = Number(args["signal-jobs-per-snapshot"] ?? 3);
@@ -27,6 +27,9 @@ const jobsPath = args.jobs ? path.resolve(process.cwd(), args.jobs) : resolvePro
 const candidatesPath = args.candidates ? path.resolve(process.cwd(), args.candidates) : resolveProjectPath("content", "pipeline-candidates.json");
 const reportPath = args.report ? path.resolve(process.cwd(), args.report) : resolveProjectPath("content", "pipeline-candidates.report.json");
 const payloadPath = args.payload ? path.resolve(process.cwd(), args.payload) : resolveProjectPath("content", "pipeline-payload.json");
+const approvedBankPath = args["approved-bank"] ? path.resolve(process.cwd(), args["approved-bank"]) : resolveProjectPath("content", "approved-bank.json");
+const approvedExamplesPath = args["approved-examples"] ? path.resolve(process.cwd(), args["approved-examples"]) : resolveProjectPath("content", "approved-bank-examples.json");
+const approvedRejectedPath = args["approved-rejected"] ? path.resolve(process.cwd(), args["approved-rejected"]) : resolveProjectPath("content", "approved-bank-rejected.json");
 const cityPulsePath = args["city-pulse-out"] ? path.resolve(process.cwd(), args["city-pulse-out"]) : resolveProjectPath("content", "city-pulse.latest.json");
 const uploadStatePath = args["upload-state"] ? path.resolve(process.cwd(), args["upload-state"]) : null;
 
@@ -87,13 +90,19 @@ runNode(path.join(projectRoot, "scripts", "validate-seed-candidates.mjs"), [
   reportPath,
 ]);
 
-runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
+runNode(path.join(projectRoot, "scripts", "build-approved-bank.mjs"), [
   "--candidates",
   candidatesPath,
   "--report",
   reportPath,
   "--out",
+  approvedBankPath,
+  "--payload-out",
   payloadPath,
+  "--examples-out",
+  approvedExamplesPath,
+  "--rejected-out",
+  approvedRejectedPath,
   "--expires-hours",
   args["expires-hours"] ?? args["upload-ttl-hours"] ?? "48",
   "--min-mindprint",
@@ -111,11 +120,15 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   "--allowed-families",
   mix.join(","),
   "--max-per-city",
-  args["max-per-city"] ?? (cityFocus ? "4" : "5"),
+  args["max-per-city"] ?? (cityFocus ? "25" : "25"),
   "--max-total",
-  args["max-total"] ?? (cityFocus ? "4" : "20"),
+  args["max-total"] ?? (cityFocus ? "25" : "100"),
+  "--min-per-city",
+  args["min-per-city"] ?? (cityFocus ? "0" : "12"),
   "--reviewer-buckets",
   args["reviewer-buckets"] ?? "ship_now,strong_candidate",
+  "--representative-count",
+  args["representative-count"] ?? "8",
 ]);
 
 runNode(path.join(projectRoot, "scripts", "check-content-quality.mjs"), [
@@ -432,15 +445,15 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
-    launch: 0.2,
-    public: 0.14,
-    review: 0.04,
-    forum: 0.06,
-    signals: 0.04,
-    news: 0.18,
-    social: 0.12,
-    world: 0.1,
-    bridge: 0.12,
+    launch: 0.0,
+    public: 0.45,
+    review: 0.15,
+    forum: 0.15,
+    signals: 0.05,
+    news: 0.20,
+    social: 0.0,
+    world: 0.0,
+    bridge: 0.0,
   };
   const counts = {};
   let remaining = Number(totalCount);

@@ -56,9 +56,9 @@ jobs:
             --repo "${{ github.repository }}" \
             --ref main \
             -f count="${{ steps.pick.outputs.count }}" \
-            -f model=claude-haiku-4-5-20251001 \
+            -f model=deepseek-v4-flash \
             -f upload=true \
             -f expire_existing=false \
             -f upload_ttl_hours=120 \
             -f city_focus="${{ steps.pick.outputs.city }}" \
-            -f mix=launch,public,review,forum,signals,news
+            -f mix=public,review,forum,news
