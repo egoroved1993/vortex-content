@@ -59,6 +59,6 @@ jobs:
             -f model=claude-haiku-4-5-20251001 \
             -f upload=true \
             -f expire_existing=false \
-            -f upload_ttl_hours=72 \
+            -f upload_ttl_hours=120 \
             -f city_focus="${{ steps.pick.outputs.city }}" \
             -f mix=launch,public,review,forum,signals,news
