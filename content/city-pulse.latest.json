@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-08T22:27:55.666Z",
+    "capturedAt": "2026-05-08T23:27:40.205Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 213
+    "totalItems": 215
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-08T22:27:55.666Z",
-      "mood_score": 0.289,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-08T23:27:40.205Z",
+      "mood_score": 0.488,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
         "review": 2,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 25,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still look for a parking spot instead of embracing the chaos of the double yellow lines. It’s like a rite of passage "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Airport due to an earlier signal failure at Acton Town. M"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Heathrow Airport / Rayners Lane and between Acton Town and Cockfost"
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Airport due to an earlier signal failure at Acton Town. M"
         },
         {
           "source_family": "public",
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 46,
-        "average_valence": -0.032,
+        "source_item_count": 47,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-08T22:27:55.666Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-08T23:27:40.205Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 25,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,20 +124,20 @@
           "excerpt": "So teuer ist Wohnen am Wasser: Neues Quartier entsteht in Berlin-Köpenick - Berliner Kurier. So teuer ist Wohnen am Wasser: Neues Quartier entsteht in Berlin-Köpenick"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of grey clouds hangs low, threatening rain but only occasionally releasing a light drizzle that keeps the streets shiny and reflective.. The mood on the U-Bahn seem"
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "recency_weight": 0.88,
+          "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
         },
         {
           "source_family": "public",
@@ -156,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.019,
+        "source_item_count": 83,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.943
+        "freshness_score": 0.944
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-08T22:27:55.666Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-08T23:27:40.205Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -200,7 +201,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local when they don’t flinch at a BART delay but groan when they see tourists fumbling "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they complain about the BART delays like it’s a rite of passage, not just a nuisance. I"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of fog swirls through the streets, wrapping buildings in a cool embrace as the sun struggles to peek through.. BART riders wear expressions of frustration and confu"
         },
         {
           "source_family": "news",
@@ -209,27 +226,11 @@
           "valence": 0.5,
           "recency_weight": 1,
           "excerpt": "Bay Area temperatures will climb for Mother’s Day weekend — then the real heat arrives - San Francisco Chronicle. Bay Area temperatures will climb for Mother’s Day weekend — then t"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 44,
-        "average_valence": -0.03,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-08T22:27:55.666Z",
+      "captured_at": "2026-05-08T23:27:40.205Z",
       "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
@@ -264,7 +265,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with clouds, threatening rain, yet the afternoon sun occasionally breaks through, casting a golden hue on the bustling streets.. The air is thick with frustrati"
+          "excerpt": "A thick blanket of grey clouds looms overhead, threatening rain but holding back, making the air feel heavy and expectant.. The usually bustling Cercanías platforms have an underly"
         },
         {
           "source_family": "review",
@@ -288,7 +289,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just grab a 'café amb llet' when in fact, locals often want it with a slice of pa amb tomàquet on the s"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all locals flock to Parc Güell, but most of us prefer the cozy sardanas at Plaça del Sol—much better vibe."
         },
         {
           "source_family": "forum",
@@ -296,7 +297,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a newcomer by their wide-eyed amazement at the street performers in Plaça del Sol—locals barely glance their way anymore."
+          "excerpt": "How to spot a recent arrival. Gràcia. You can spot a recent arrival by their hesitant use of the metro—still fumbling with the T-10 card and unsure of the stations."
         }
       ],
       "metadata": {
