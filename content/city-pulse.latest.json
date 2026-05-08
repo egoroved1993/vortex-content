@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-08T21:29:33.535Z",
+    "capturedAt": "2026-05-08T22:27:55.666Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 214
+    "totalItems": 213
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-08T21:29:33.535Z",
-      "mood_score": 0.284,
+      "captured_at": "2026-05-08T22:27:55.666Z",
+      "mood_score": 0.289,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -83,22 +83,22 @@
       ],
       "metadata": {
         "source_item_count": 46,
-        "average_valence": -0.047,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-08T21:29:33.535Z",
-      "mood_score": 0.292,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-08T22:27:55.666Z",
+      "mood_score": 0.493,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 1,
         "review": 2,
@@ -107,7 +107,6 @@
         "news": 25,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -138,6 +129,14 @@
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "public",
@@ -157,20 +156,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.025,
+        "source_item_count": 82,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.948
+        "freshness_score": 0.943
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-08T21:29:33.535Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-05-08T22:27:55.666Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -201,15 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can spot a local when they know to dodge the BART delays like it's a game of Frogger, especially on Frid"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a chilly breeze that carries the faint smell of salt from the bay, hinting at rain to come.. BART platforms are crowded and restless, with passengers "
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they complain about the BART delays like it’s a rite of passage, not just a nuisance. I"
         },
         {
           "source_family": "news",
@@ -226,25 +217,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 44,
-        "average_valence": -0.045,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.805
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-08T21:29:33.535Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-08T22:27:55.666Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -265,7 +264,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks through a veil of clouds, casting a muted glow on the damp streets from last night's rain.. The train station buzzes with a palpable tension as commuters shuffle, on "
+          "excerpt": "The sky hangs heavy with clouds, threatening rain, yet the afternoon sun occasionally breaks through, casting a golden hue on the bustling streets.. The air is thick with frustrati"
         },
         {
           "source_family": "review",
@@ -289,7 +288,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just grab a churro and go. Locals know it’s all about the tranquil moments at the plaça, savoring every"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just grab a 'café amb llet' when in fact, locals often want it with a slice of pa amb tomàquet on the s"
         },
         {
           "source_family": "forum",
@@ -297,7 +296,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can always tell by their reluctance to dodge the pigeons in Plaça del Sol. The locals glide through like it’s an Olympic sport."
+          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a newcomer by their wide-eyed amazement at the street performers in Plaça del Sol—locals barely glance their way anymore."
         }
       ],
       "metadata": {
@@ -305,10 +304,10 @@
         "average_valence": -0.011,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.772
+        "freshness_score": 0.768
       }
     }
   ]
