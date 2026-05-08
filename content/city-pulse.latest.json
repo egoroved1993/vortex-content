@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-08T05:08:02.361Z",
+    "capturedAt": "2026-05-08T06:47:31.849Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,11 +21,11 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-08T05:08:02.361Z",
-      "mood_score": 0.277,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-08T06:47:31.849Z",
+      "mood_score": 0.475,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
         "review": 2,
@@ -43,14 +43,6 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Barking and Earls Court due to a late finish to engineering work in the Upminster a"
-        },
-        {
           "source_family": "social",
           "source_origin": "x_post",
           "language": "en",
@@ -62,9 +54,25 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays westbound only following a late finish of engineering work. GOOD SERVICE on the rest of the l"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between Leytonstone and White City westbound only due to an earlier faulty train at Oxford C"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier customer incident at Tooting Bec."
         },
         {
           "source_family": "news",
@@ -73,31 +81,23 @@
           "valence": 0.5,
           "recency_weight": 1.08,
           "excerpt": "The weather forecast in London this weekend with warm temps changing to showers - London Now. The weather forecast in London this weekend with warm temps changing to showers"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Houses for Rent in London: What International Renters Need to Know - Estate Agent Today. Houses for Rent in London: What International Renters Need to Know"
         }
       ],
       "metadata": {
         "source_item_count": 55,
-        "average_valence": -0.066,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-08T05:08:02.361Z",
-      "mood_score": 0.287,
+      "captured_at": "2026-05-08T06:47:31.849Z",
+      "mood_score": 0.283,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -128,6 +128,14 @@
           "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
@@ -150,30 +158,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Travel frustration is back in the global bloodstream. airport energy leaking into normal life. one more platform change and i'm becoming ideological. delays and rolling bags make h"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.04,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.948
+        "freshness_score": 0.936
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-08T05:08:02.361Z",
+      "captured_at": "2026-05-08T06:47:31.849Z",
       "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
@@ -242,12 +242,12 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.799
+        "freshness_score": 0.798
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-08T05:08:02.361Z",
+      "captured_at": "2026-05-08T06:47:31.849Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
