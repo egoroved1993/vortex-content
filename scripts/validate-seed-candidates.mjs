@@ -642,6 +642,8 @@ function normalizeLatinToken(value) {
 
 function normalizeCandidateLanguage(value, content = "") {
   const raw = String(value ?? "").trim().toLowerCase();
+  const text = String(content ?? "");
+  if ((raw === "ru" || raw === "russian") && !/[а-яё]/iu.test(text) && /[a-z]{3,}/i.test(text)) return inferLanguageFromText(text);
   if (raw === "ru" || raw === "russian") return "ru";
   if (raw === "en" || raw === "english" || raw === "eng" || raw === "american english" || raw === "british english") return "en";
   if (raw === "es" || raw === "spanish" || raw === "español" || raw === "espanol") return "es";
@@ -649,6 +651,14 @@ function normalizeCandidateLanguage(value, content = "") {
   if (raw === "de" || raw === "german" || raw === "deutsch") return "de";
   if (/[а-яё]/iu.test(String(content ?? "")) && (!raw || raw === "en" || raw === "english")) return "ru";
   return raw;
+}
+
+function inferLanguageFromText(text) {
+  if (/[а-яё]/iu.test(text)) return "ru";
+  if (/[àèéíòóúüç·]/i.test(text)) return "ca";
+  if (/[ñáéíóú¿¡]/i.test(text)) return "es";
+  if (/[äöüß]/i.test(text)) return "de";
+  return "en";
 }
 
 function looksEventCliche(contentLower) {

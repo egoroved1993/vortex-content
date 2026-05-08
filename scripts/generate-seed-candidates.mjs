@@ -2172,6 +2172,10 @@ function normalizeLinks(value) {
 
 function normalizeDetectedLanguage(value, content = "") {
   const raw = String(value ?? "en").trim().toLowerCase();
+  const inferredFromContent = inferLanguageFromContent(content);
+  if ((raw === "ru" || raw === "russian" || raw.includes("russian")) && !/[а-яё]/i.test(String(content ?? "")) && /[a-z]{3,}/i.test(String(content ?? ""))) {
+    return inferredFromContent;
+  }
   if (!raw) return "en";
 
   const aliases = {
@@ -2205,7 +2209,6 @@ function normalizeDetectedLanguage(value, content = "") {
   if (raw.includes("russian")) return "ru";
   if (raw.includes("french") || raw.includes("français")) return "fr";
 
-  const inferredFromContent = inferLanguageFromContent(content);
   if (raw === "en" && inferredFromContent !== "en") return inferredFromContent;
 
   if (/^[a-z]{2}$/.test(raw)) return raw;

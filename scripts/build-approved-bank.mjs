@@ -427,6 +427,8 @@ function detectHardReject(content, candidate) {
 
 function normalizeDetectedLanguage(value, content = "") {
   const raw = String(value ?? "en").trim().toLowerCase();
+  const text = String(content ?? "");
+  if ((raw === "ru" || raw === "russian") && !/[а-яё]/iu.test(text) && /[a-z]{3,}/i.test(text)) return inferLanguageFromText(text);
   if (/[а-яё]/i.test(String(content ?? "")) && (!raw || raw === "en" || raw === "english")) return "ru";
   if (!raw) return "en";
   const aliases = {
@@ -444,6 +446,14 @@ function normalizeDetectedLanguage(value, content = "") {
   const compact = raw.replace(/[\s_-]+/g, "");
   if (aliases[compact]) return aliases[compact];
   if (/^[a-z]{2}/.test(raw)) return raw.slice(0, 2);
+  return "en";
+}
+
+function inferLanguageFromText(text) {
+  if (/[а-яё]/iu.test(text)) return "ru";
+  if (/[àèéíòóúüç·]/i.test(text)) return "ca";
+  if (/[ñáéíóú¿¡]/i.test(text)) return "es";
+  if (/[äöüß]/i.test(text)) return "de";
   return "en";
 }
 
