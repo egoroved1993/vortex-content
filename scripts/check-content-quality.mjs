@@ -135,6 +135,7 @@ function analyseRow(row) {
   if (PLACE_TEMPLATE_PATTERNS.some((re) => re.test(c))) issues.push("place_template");
   if (NOSTALGIA_SLOP_PATTERNS.some((re) => re.test(c))) issues.push("nostalgia_slop");
   if (detectedLanguage === "ru" && !/[а-яё]/iu.test(c) && /[a-z]{3,}/i.test(c)) issues.push("language_script_mismatch");
+  if (detectedLanguage === "ru" && hasRussianLongLatinPhrase(c)) issues.push("ru_latin_phrase_leakage");
   if (/[а-яё]/iu.test(c) && /\b(завжди|людськи)\b/iu.test(c)) issues.push("ukrainian_leak_in_russian");
   if (/^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(c.trim())) issues.push("weak_hearsay_opener");
   if (/\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(c)) issues.push("low_signal_payoff");
@@ -185,6 +186,20 @@ function containsTokenOrPhrase(content, needle) {
 
 function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function hasRussianLongLatinPhrase(content) {
+  if (!/[а-яё]/iu.test(String(content ?? ""))) return false;
+  const phrases = String(content ?? "").match(/[\p{Script=Latin}][\p{Script=Latin}\p{M}\d'’.-]*(?:\s+[\p{Script=Latin}][\p{Script=Latin}\p{M}\d'’.-]*)+/gu) ?? [];
+  return phrases.some((phrase) => {
+    const tokens = phrase
+      .split(/\s+/)
+      .map((token) => token.toLowerCase().replace(/[’']/g, "").replace(/^[^\p{Script=Latin}\d]+|[^\p{Script=Latin}\d]+$/gu, ""))
+      .filter(Boolean);
+    if (tokens.length < 2) return false;
+    if (tokens.every((token) => token.length <= 2)) return false;
+    return true;
+  });
 }
 
 // ─── main ─────────────────────────────────────────────────────────────────────

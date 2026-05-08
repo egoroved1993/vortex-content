@@ -124,7 +124,6 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     detectedLanguage === "ru" &&
     hasRussianLatinLeakage(candidate, content);
   const ruLatinPhraseLeakage =
-    candidate.sourceFamily === "event_discovery" &&
     detectedLanguage === "ru" &&
     hasRussianLongLatinPhrase(content);
   const pipelineSeam = looksPipelineSeam(content, contentLower, candidate.cityId);

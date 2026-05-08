@@ -314,6 +314,7 @@ function detectContentHardReject(content, candidate) {
   if (PLACE_TEMPLATE_RE.test(trimmed)) return "place_review_template";
   if (NOSTALGIA_SLOP_RE.test(trimmed)) return "nostalgia_slop";
   if (detectedLanguage === "ru" && !/[а-яё]/iu.test(text) && /[a-z]{3,}/i.test(text)) return "language_script_mismatch";
+  if (detectedLanguage === "ru" && hasRussianLongLatinPhrase(text)) return "ru_latin_phrase_leakage";
   if (/[а-яё]/iu.test(text) && /\b(завжди|людськи)\b/iu.test(text)) return "ukrainian_leakage";
   if (/^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(trimmed)) return "weak_hearsay_opener";
   if (/\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(text)) return "low_signal_payoff";
@@ -371,6 +372,20 @@ function inferLanguageFromContent(text) {
   if (/[äöüß]/i.test(text)) return "de";
 
   return "en";
+}
+
+function hasRussianLongLatinPhrase(content) {
+  if (!/[а-яё]/iu.test(String(content ?? ""))) return false;
+  const phrases = String(content ?? "").match(/[\p{Script=Latin}][\p{Script=Latin}\p{M}\d'’.-]*(?:\s+[\p{Script=Latin}][\p{Script=Latin}\p{M}\d'’.-]*)+/gu) ?? [];
+  return phrases.some((phrase) => {
+    const tokens = phrase
+      .split(/\s+/)
+      .map((token) => token.toLowerCase().replace(/[’']/g, "").replace(/^[^\p{Script=Latin}\d]+|[^\p{Script=Latin}\d]+$/gu, ""))
+      .filter(Boolean);
+    if (tokens.length < 2) return false;
+    if (tokens.every((token) => token.length <= 2)) return false;
+    return true;
+  });
 }
 
 function readJson(filePath) {

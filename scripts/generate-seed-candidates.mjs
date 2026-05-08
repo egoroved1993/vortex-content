@@ -351,6 +351,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   const pulse = cityPulseMap[job.cityId];
   let base = "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
   base += "\nReturn compact JSON only, with no markdown fences. Keep why_human, why_ai, and read_value_hook under 14 words each. Keep sentiment under 4 words. detected_language must be an ISO code such as en, es, ca, de, or ru.";
+  base += "\nIf content is in Russian, do not keep long venue, event, or street names in Latin inside the post. Paraphrase them naturally in Russian or use a short Cyrillic-style mention; exact Latin names are allowed only in links/labels.";
 
   // Inject model persona early — always fire for non-salvage families so the voice anchors generation
   if (!isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "social") {
@@ -948,6 +949,7 @@ function buildRepairSystemPrompt(job, assessment, providerHint = null, activeMod
   const effectiveModel = activeModel ?? model;
   let base = "You repair weak anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
   base += "\nReturn compact JSON only, with no markdown fences. Keep why_human, why_ai, and read_value_hook under 14 words each. Keep sentiment under 4 words. detected_language must be an ISO code such as en, es, ca, de, or ru.";
+  base += "\nIf content is in Russian, do not keep long venue, event, or street names in Latin inside the post. Paraphrase them naturally in Russian or use a short Cyrillic-style mention; exact Latin names are allowed only in links/labels.";
   base += "\nFix the draft without making it sound polished, literary, or article-like.";
   base += "\nKeep the same scene, same source pressure, and same local detail.";
   base += "\nThe repaired version must stay under 2 sentences and under the lane character cap.";
