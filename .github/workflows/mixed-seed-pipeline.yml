@@ -220,6 +220,7 @@ jobs:
             --candidates content/place-discovery-candidates.json \
             --report content/place-discovery-candidates.report.json \
             --out content/place-discovery-payload.json \
+            --expires-hours "${{ steps.cfg.outputs.upload_ttl_hours }}" \
             --min-score 3 \
             --min-mindprint 4 \
             --min-stickiness 4 \
@@ -286,6 +287,7 @@ jobs:
             --candidates content/russian-candidates.json \
             --report content/russian-candidates.report.json \
             --out content/russian-payload.json \
+            --expires-hours "${{ steps.cfg.outputs.upload_ttl_hours }}" \
             --min-score 3 \
             --min-mindprint 4 \
             --min-stickiness 4 \

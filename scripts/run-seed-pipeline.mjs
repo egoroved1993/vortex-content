@@ -94,6 +94,8 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   reportPath,
   "--out",
   payloadPath,
+  "--expires-hours",
+  args["expires-hours"] ?? args["upload-ttl-hours"] ?? "48",
   "--min-mindprint",
   args["min-mindprint"] ?? "4",
   "--min-stickiness",
