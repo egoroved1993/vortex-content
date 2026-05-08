@@ -13,10 +13,13 @@ const upload = Boolean(args.upload);
 const provider = args.provider ?? process.env.MODEL_PROVIDER ?? null;
 const model = args.model ?? null;
 const cityFocus = args["city-focus"] ?? null;
-const mix = parseMix(args.mix ?? "launch");
+const mix = parseMix(args.mix ?? "launch,public,review,forum,signals,news");
+const usesSocial = mix.includes("social");
+const usesWorld = mix.includes("world") || mix.includes("bridge");
 const jobsPerSignalSnapshot = Number(args["signal-jobs-per-snapshot"] ?? 3);
-const socialProvider =
-  args["social-provider"] ?? process.env.SOCIAL_PROVIDER ?? (provider && provider !== "openai" ? null : "openai");
+const socialProvider = usesSocial
+  ? args["social-provider"] ?? process.env.SOCIAL_PROVIDER ?? (provider && provider !== "openai" ? null : "openai")
+  : null;
 const generationConcurrency = Number(args["generation-concurrency"] ?? (provider === "anthropic" ? 1 : 2));
 const generationThrottleMs = Number(args["generation-throttle-ms"] ?? (provider === "anthropic" ? 4000 : 0));
 
@@ -30,7 +33,7 @@ const uploadStatePath = args["upload-state"] ? path.resolve(process.cwd(), args[
 console.log(JSON.stringify({
   modelProvider: provider ?? "auto",
   model: model ?? process.env.MODEL_NAME ?? "provider_default",
-  socialProvider: socialProvider ?? "same_as_model_provider",
+  socialProvider: usesSocial ? socialProvider ?? "same_as_model_provider" : "disabled",
   generationConcurrency,
   generationThrottleMs,
 }, null, 2));
@@ -45,6 +48,8 @@ runNode(path.join(projectRoot, "scripts", "build-city-pulse.mjs"), [
   ...(args["news-input"] ? ["--news-input", path.resolve(process.cwd(), args["news-input"])] : []),
   ...(args["social-input"] ? ["--social-input", path.resolve(process.cwd(), args["social-input"])] : []),
   ...(args["world-input"] ? ["--world-input", path.resolve(process.cwd(), args["world-input"])] : []),
+  ...(!usesSocial ? ["--no-social"] : []),
+  ...(!usesWorld ? ["--no-world"] : []),
 ]);
 
 const sourceConfig = buildSourceConfig(args, count, mix, jobsPerSignalSnapshot);
@@ -89,20 +94,38 @@ runNode(path.join(projectRoot, "scripts", "prepare-seed-payload.mjs"), [
   reportPath,
   "--out",
   payloadPath,
+  "--min-mindprint",
+  args["min-mindprint"] ?? "4",
+  "--min-stickiness",
+  args["min-stickiness"] ?? "4",
   "--min-ambiguity",
-  "1",
+  args["min-ambiguity"] ?? "3",
+  "--min-freshness",
+  args["min-freshness"] ?? "3",
   "--min-news-fit",
-  "1",
+  args["min-news-fit"] ?? "3",
   "--min-composite-score",
-  "1",
+  args["min-composite-score"] ?? "4",
   "--allowed-families",
-  "launch,public,news,social,world,bridge,signals,review,forum",
+  mix.join(","),
   "--max-per-city",
-  "20",
+  args["max-per-city"] ?? (cityFocus ? "4" : "5"),
   "--max-total",
-  "80",
+  args["max-total"] ?? (cityFocus ? "4" : "20"),
   "--reviewer-buckets",
-  "ship_now,strong_candidate,candidate",
+  args["reviewer-buckets"] ?? "ship_now,strong_candidate",
+]);
+
+runNode(path.join(projectRoot, "scripts", "check-content-quality.mjs"), [
+  "--payload",
+  payloadPath,
+  "--place-payload",
+  "/tmp/nonexistent-place-payload.json",
+  "--out",
+  resolveProjectPath("content", "pipeline-quality-report.json"),
+  "--fail-on-issues",
+  "--max-issue-pct",
+  args["max-issue-pct"] ?? "0",
 ]);
 
 const payload = readJson(payloadPath);

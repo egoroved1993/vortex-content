@@ -1,9 +1,6 @@
 name: Premium Seed Pipeline
 
 on:
-  schedule:
-    - cron: "0 17 * * 2"
-    - cron: "0 17 * * 5"
   workflow_dispatch:
     inputs:
       count:
@@ -18,7 +15,7 @@ on:
       mix:
         description: "Comma-separated source families"
         required: false
-        default: "launch,public,review,forum,signals,news,social"
+        default: "launch,public,review,forum,signals,news"
       city_focus:
         description: "Optional city focus"
         required: false
@@ -39,7 +36,6 @@ jobs:
       MODEL_PROVIDER: openai
       MODEL_NAME: gpt-4o
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      # XAI_API_KEY: ${{ secrets.XAI_API_KEY }}  # disabled — credits exhausted
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       MODEL_COST_GPT_4O_INPUT_PER_1M_USD: "2.5"
@@ -60,21 +56,17 @@ jobs:
         id: cfg
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "count=60" >> "$GITHUB_OUTPUT"
-            # Keep scheduled generation as a dry run while the curated golden feed is active.
-            # Manual dispatch can still upload by setting upload=true.
-            echo "upload=false" >> "$GITHUB_OUTPUT"
-            echo "mix=launch,public,review,forum,signals,news,social,world,bridge" >> "$GITHUB_OUTPUT"
-            echo "city_focus=" >> "$GITHUB_OUTPUT"
-            echo "seed=premium-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
-          else
-            echo "count=${{ inputs.count || '60' }}" >> "$GITHUB_OUTPUT"
-            echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
-            echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social,world,bridge' }}" >> "$GITHUB_OUTPUT"
-            echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
-            echo "seed=premium-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+          MIX="${{ inputs.mix || 'launch,public,review,forum,signals,news' }}"
+          UPLOAD="${{ inputs.upload && 'true' || 'false' }}"
+          if [ "$UPLOAD" = "true" ] && [[ ",$MIX," =~ ,(social|world|bridge), ]]; then
+            echo "Upload runs cannot use social/world/bridge while the X/Grok layer is disabled/stale." >&2
+            exit 1
           fi
+          echo "count=${{ inputs.count || '60' }}" >> "$GITHUB_OUTPUT"
+          echo "upload=${UPLOAD}" >> "$GITHUB_OUTPUT"
+          echo "mix=${MIX}" >> "$GITHUB_OUTPUT"
+          echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
+          echo "seed=premium-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
 
       - name: Refresh public comment corpus
         continue-on-error: true
@@ -84,19 +76,9 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-city-news.mjs --out content/news-snippets.json
 
-      - name: Refresh city social from X
-        if: env.XAI_API_KEY != ''
-        continue-on-error: true
-        run: node scripts/refresh-social-snippets.mjs --out content/social-snippets.json
-
-      - name: Refresh world trends from X
-        if: env.XAI_API_KEY != ''
-        continue-on-error: true
-        run: node scripts/refresh-world-trends.mjs --out content/world-trends.json
-
       - name: Show source corpus sizes
         run: |
-          node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json','content/news-snippets.json','content/social-snippets.json','content/world-trends.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
+          node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json','content/news-snippets.json','content/events-snippets.json','content/google-trends.json','content/transport-signals.json','content/weather-signals.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
 
       - name: Run premium seed pipeline
         shell: bash
@@ -111,18 +93,11 @@ jobs:
             --forum-input content/forum-snippets.json
             --signals-input content/city-signals.json
             --news-input content/news-snippets.json
-            --social-input content/social-snippets.json
-            --world-input content/world-trends.json
           )
 
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
             ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
           fi
-
-          # xAI credits exhausted — use OpenAI for all lanes
-          # if [ -n "${XAI_API_KEY:-}" ]; then
-          #   ARGS+=( --mind-post-provider xai --mind-post-model grok-3-fast )
-          # fi
 
           if [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
             ARGS+=( --upload --upload-city-pulse )
@@ -149,5 +124,6 @@ jobs:
             content/pipeline-candidates.json
             content/pipeline-candidates.report.json
             content/pipeline-payload.json
+            content/pipeline-quality-report.json
             content/city-pulse.latest.json
           if-no-files-found: warn

@@ -2,8 +2,8 @@ name: City Feed Top-Up
 
 on:
   schedule:
-    # One city every two hours; each city gets a fresh append roughly every 8 hours.
-    - cron: "20 */2 * * *"
+    # One city every three hours; each city gets a small high-quality append twice a day.
+    - cron: "20 */3 * * *"
   workflow_dispatch:
     inputs:
       city_focus:
@@ -13,7 +13,7 @@ on:
       count:
         description: "Mixed job count before city filtering"
         required: false
-        default: "200"
+        default: "40"
 
 jobs:
   dispatch:
@@ -33,7 +33,7 @@ jobs:
           if [ -n "$manual_city" ]; then
             city="$manual_city"
           else
-            slot=$(( (10#$(date -u +%H) / 2) % 4 ))
+            slot=$(( (10#$(date -u +%H) / 3) % 4 ))
             case "$slot" in
               0) city="barcelona" ;;
               1) city="berlin" ;;
@@ -42,7 +42,7 @@ jobs:
             esac
           fi
 
-          count="${{ inputs.count || '200' }}"
+          count="${{ inputs.count || '40' }}"
           echo "city=${city}" >> "$GITHUB_OUTPUT"
           echo "count=${count}" >> "$GITHUB_OUTPUT"
           echo "Dispatching top-up for ${city} with count=${count}"
@@ -61,4 +61,4 @@ jobs:
             -f expire_existing=false \
             -f upload_ttl_hours=72 \
             -f city_focus="${{ steps.pick.outputs.city }}" \
-            -f mix=launch,public,review,forum,signals,news,social
+            -f mix=launch,public,review,forum,signals,news

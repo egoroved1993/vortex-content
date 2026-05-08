@@ -13,10 +13,13 @@ import { resolveProjectPath } from "./path-utils.mjs";
 
 const args = process.argv.slice(2);
 const getArg = (flag, def) => { const i = args.indexOf(flag); return i !== -1 ? args[i + 1] : def; };
+const hasFlag = (flag) => args.includes(flag);
 
 const payloadPath   = getArg("--payload",   resolveProjectPath("content", "pipeline-payload.json"));
 const placePayload  = getArg("--place-payload", resolveProjectPath("content", "place-discovery-payload.json"));
 const outPath       = getArg("--out",        resolveProjectPath("content", "quality-report.json"));
+const failOnIssues  = hasFlag("--fail-on-issues");
+const maxIssuePct   = Number(getArg("--max-issue-pct", "30"));
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
@@ -51,6 +54,35 @@ const CITY_CHECKS = {
   sf:        { wrongWords: ["tube", "underground", "oyster card", "quid", "boris", "s-bahn", "u-bahn", "bvg", "metro l", "rodalies", "renfe"] },
 };
 
+const HEADLINE_LEAK_PATTERNS = [
+  /watch the latest .* forecast/i,
+  /\bhouses for rent in [A-Z]/,
+  /\bSo teuer ist Wohnen\b|\bNeues Quartier entsteht\b/i,
+  /\bsummerlike weather forecast\b/i,
+  /\bBay Area weather shifts from wet to warm\b/i,
+  /\bITV weather forecast\b/i,
+  /\bRead more\b|\bSubscribe now\b/i,
+  /(?:^|[.!?]\s+)[A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+){4,}/,
+];
+
+const PIPELINE_SEAM_PATTERNS = [
+  /^(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b/i,
+  /\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/i,
+  /\b(this morning|today|tonight|heute|hoy|avui)\b.{0,80}\bthe\b.{0,120}\bthing (made me|had me|still turned it into)\b/i,
+];
+
+const PLACE_TEMPLATE_PATTERNS = [
+  /^just (left|walked out of)\b/i,
+  /\bsmell of\b.{0,80}\bstill (clings|on|in)\b/i,
+  /\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b/i,
+  /\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b/i,
+];
+
+const NOSTALGIA_SLOP_PATTERNS = [
+  /\b(год назад|тогда .*теперь|ощущение то же самое)\b/i,
+  /\b(first time in my life|i used to spend a lot of time|used to be .* now)\b/i,
+];
+
 // ─── analysis ─────────────────────────────────────────────────────────────────
 
 function analyseRow(row) {
@@ -82,7 +114,7 @@ function analyseRow(row) {
   // 5. No link but mentions specific place name (heuristic)
   const hasLink = rowLinks(row).length > 0;
   const mentionsPlace = /\b(bar|café|cafe|restaurant|club|market|gallery|shop|museum|bakery|cinema|theatre|theater|bookshop)\b/i.test(c);
-  if (mentionsPlace && !hasLink) issues.push("place_mentioned_no_link");
+  // In a balanced feed, casual place mentions without links are acceptable.
 
   // 6. Too short (<40 chars) or too long (>280 chars)
   if (c.length < 40) issues.push(`too_short:${c.length}`);
@@ -96,6 +128,16 @@ function analyseRow(row) {
 
   // 9. Emoji
   if (/\p{Emoji_Presentation}/u.test(c)) issues.push("has_emoji");
+
+  // 10. Real regressions seen in production.
+  if (HEADLINE_LEAK_PATTERNS.some((re) => re.test(c))) issues.push("headline_or_seo_leak");
+  if (PIPELINE_SEAM_PATTERNS.some((re) => re.test(c))) issues.push("pipeline_seam");
+  if (PLACE_TEMPLATE_PATTERNS.some((re) => re.test(c))) issues.push("place_template");
+  if (NOSTALGIA_SLOP_PATTERNS.some((re) => re.test(c))) issues.push("nostalgia_slop");
+  if (detectedLanguage === "ru" && !/[а-яё]/iu.test(c) && /[a-z]{3,}/i.test(c)) issues.push("language_script_mismatch");
+  if (/[а-яё]/iu.test(c) && /\b(завжди|людськи)\b/iu.test(c)) issues.push("ukrainian_leak_in_russian");
+  if (/^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(c.trim())) issues.push("weak_hearsay_opener");
+  if (/\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(c)) issues.push("low_signal_payoff");
 
   return issues;
 }
@@ -119,12 +161,20 @@ function summarise(rows) {
       flagged.push({ city, content: row.content?.slice(0, 120), issues });
       for (const i of issues) {
         issueCounts[i] = (issueCounts[i] ?? 0) + 1;
-        if (i === "place_mentioned_no_link") withPlaceAndNoLink++;
       }
     }
+
+    if (mentionsPlaceWithoutLink(row)) withPlaceAndNoLink++;
   }
 
-  return { byCity, withLinks, withPlaceAndNoLink, totalIssues, total: rows.length, issueCounts, flagged };
+  const issuePct = rows.length > 0 ? Math.round((totalIssues / rows.length) * 100) : 0;
+  return { byCity, withLinks, withPlaceAndNoLink, totalIssues, total: rows.length, issuePct, issueCounts, flagged };
+}
+
+function mentionsPlaceWithoutLink(row) {
+  const c = row.content ?? "";
+  if (rowLinks(row).length > 0) return false;
+  return /\b(bar|café|cafe|restaurant|club|market|gallery|shop|museum|bakery|cinema|theatre|theater|bookshop)\b/i.test(c);
 }
 
 // ─── main ─────────────────────────────────────────────────────────────────────
@@ -207,6 +257,8 @@ if (all.issueCounts["truncated"] > 0) {
 if (suggestions.length > 0) {
   console.log("\n💡 Suggestions:");
   for (const s of suggestions) console.log(`   → ${s}`);
+} else if (all.totalIssues > 0) {
+  console.log("\n⚠️  No automatic suggestion matched; inspect flagged messages above.");
 } else {
   console.log("\n✅ No major issues found.");
 }
@@ -260,6 +312,9 @@ if (summaryPath) {
   if (suggestions.length > 0) {
     lines.push("### Suggestions");
     for (const s of suggestions) lines.push(`- ${s}`);
+  } else if (all.totalIssues > 0) {
+    lines.push("### Suggestions");
+    lines.push("- No automatic suggestion matched; inspect flagged messages above.");
   } else {
     lines.push("### ✅ No major issues found");
   }
@@ -286,8 +341,11 @@ fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
 console.log(`📄 Report saved to ${outPath}\n`);
 
-// Exit non-zero if >30% messages have issues (makes it visible in GH UI)
-if (all.issuePct > 30) {
-  console.warn(`⚠️  Quality warning: ${all.issuePct}% of messages flagged.`);
-  process.exit(0); // still 0 — don't block the pipeline
+if (all.issuePct > maxIssuePct) {
+  const message = `Quality warning: ${all.issuePct}% of messages flagged (max ${maxIssuePct}%).`;
+  if (failOnIssues) {
+    console.error(`❌ ${message}`);
+    process.exit(1);
+  }
+  console.warn(`⚠️  ${message}`);
 }

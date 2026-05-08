@@ -1,19 +1,16 @@
 name: Mixed Seed Pipeline
 
 on:
-  schedule:
-    - cron: "0 14 * * *"
-    - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
       count:
         description: "Total mixed job count before generation"
         required: false
-        default: "480"
+        default: "80"
       model:
-        description: "Model to use (e.g. gpt-4o-mini, grok-3-fast, claude-haiku-4-5-20251001)"
+        description: "Model to use for upload-capable runs"
         required: false
-        default: "gpt-4o-mini"
+        default: "claude-haiku-4-5-20251001"
       upload:
         description: "Upload approved payload to Supabase"
         type: boolean
@@ -27,15 +24,20 @@ on:
       upload_ttl_hours:
         description: "How long uploaded balanced posts stay active"
         required: false
-        default: "48"
+        default: "72"
       mix:
         description: "Comma-separated source families"
         required: false
-        default: "launch,public,review,forum,signals,news,social"
+        default: "launch,public,review,forum,signals,news"
       city_focus:
         description: "Optional city focus"
         required: false
         default: ""
+      include_russian_step:
+        description: "Optional extra Russian-only upload step"
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: mixed-seed-pipeline-${{ github.ref }}
@@ -50,15 +52,15 @@ jobs:
 
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      # XAI_API_KEY: ${{ secrets.XAI_API_KEY }}  # disabled — credits exhausted, causes pipeline noise
       ANTHROPIC_API_KEY: ${{ secrets.CLAUDE }}
-      ENABLE_OPENAI_SCHEDULE: ${{ vars.ENABLE_OPENAI_SCHEDULE || 'false' }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       MODEL_COST_GPT_4O_INPUT_PER_1M_USD: "2.5"
       MODEL_COST_GPT_4O_OUTPUT_PER_1M_USD: "10"
       MODEL_COST_GPT_4O_MINI_INPUT_PER_1M_USD: "0.15"
       MODEL_COST_GPT_4O_MINI_OUTPUT_PER_1M_USD: "0.6"
+      MODEL_COST_CLAUDE_HAIKU_4_5_20251001_INPUT_PER_1M_USD: "1"
+      MODEL_COST_CLAUDE_HAIKU_4_5_20251001_OUTPUT_PER_1M_USD: "5"
 
     steps:
       - name: Checkout
@@ -73,53 +75,41 @@ jobs:
         id: cfg
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            # OpenAI currently returns insufficient_quota in scheduled runs.
-            # Prefer Claude for cron if available; set ENABLE_OPENAI_SCHEDULE=true to restore rotation.
-            if [ "${ENABLE_OPENAI_SCHEDULE:-false}" != "true" ] && [ -n "${ANTHROPIC_API_KEY:-}" ]; then
-              SCHED_PROVIDER=anthropic
-              SCHED_MODEL=claude-haiku-4-5-20251001
-            else
-              DAY_SLOT=$(( 10#$(date -u +%j) % 4 ))
-              case $DAY_SLOT in
-                0) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o-mini ;;
-                1) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o-mini ;;
-                2) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o ;;
-                3) SCHED_PROVIDER=openai; SCHED_MODEL=gpt-4o-mini ;;
-              esac
-            fi
-            echo "provider=${SCHED_PROVIDER}" >> "$GITHUB_OUTPUT"
-            # count=240 keeps monthly cost under ~$20 (2 runs/day × 30 days × $0.30/run)
-            echo "count=240" >> "$GITHUB_OUTPUT"
-            echo "model=${SCHED_MODEL}" >> "$GITHUB_OUTPUT"
-            # Scheduled balanced feed refreshes the curated base without risking a low-count replacement.
-            echo "upload=true" >> "$GITHUB_OUTPUT"
-            echo "expire_existing=false" >> "$GITHUB_OUTPUT"
-            echo "upload_ttl_hours=48" >> "$GITHUB_OUTPUT"
-            echo "mix=launch,public,review,forum,signals,news,social" >> "$GITHUB_OUTPUT"
-            echo "city_focus=" >> "$GITHUB_OUTPUT"
-            echo "seed=mixed-cron-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
-          else
-            MANUAL_MODEL="${{ inputs.model || 'gpt-4o-mini' }}"
-            if [[ "$MANUAL_MODEL" == gpt-* ]]; then
-              MANUAL_PROVIDER=openai
-            elif [[ "$MANUAL_MODEL" == grok-* ]]; then
-              MANUAL_PROVIDER=xai
-            elif [[ "$MANUAL_MODEL" == claude-* ]]; then
-              MANUAL_PROVIDER=anthropic
-            else
-              MANUAL_PROVIDER=openai
-            fi
-            echo "provider=${MANUAL_PROVIDER}" >> "$GITHUB_OUTPUT"
-            echo "count=${{ inputs.count || '480' }}" >> "$GITHUB_OUTPUT"
-            echo "model=${MANUAL_MODEL}" >> "$GITHUB_OUTPUT"
-            echo "upload=${{ inputs.upload && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
-            echo "expire_existing=${{ inputs.expire_existing && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
-            echo "upload_ttl_hours=${{ inputs.upload_ttl_hours || '48' }}" >> "$GITHUB_OUTPUT"
-            echo "mix=${{ inputs.mix || 'launch,public,review,forum,signals,news,social' }}" >> "$GITHUB_OUTPUT"
-            echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
-            echo "seed=mixed-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+          MANUAL_MODEL="${{ inputs.model || 'claude-haiku-4-5-20251001' }}"
+          MANUAL_UPLOAD="${{ inputs.upload && 'true' || 'false' }}"
+          MANUAL_MIX="${{ inputs.mix || 'launch,public,review,forum,signals,news' }}"
+
+          if [ "$MANUAL_UPLOAD" = "true" ] && [ "$MANUAL_MODEL" = "gpt-4o-mini" ]; then
+            echo "gpt-4o-mini upload runs are disabled: quality was below the production bar." >&2
+            exit 1
           fi
+
+          if [ "$MANUAL_UPLOAD" = "true" ] && [[ ",$MANUAL_MIX," =~ ,(social|world|bridge), ]]; then
+            echo "Upload runs cannot use social/world/bridge while the X/Grok layer is disabled/stale." >&2
+            exit 1
+          fi
+
+          if [[ "$MANUAL_MODEL" == gpt-* ]]; then
+            MANUAL_PROVIDER=openai
+          elif [[ "$MANUAL_MODEL" == claude-* ]]; then
+            MANUAL_PROVIDER=anthropic
+          elif [[ "$MANUAL_MODEL" == grok-* ]]; then
+            echo "Grok/xAI runs are disabled in this pipeline; use Claude or GPT-4o." >&2
+            exit 1
+          else
+            MANUAL_PROVIDER=openai
+          fi
+
+          echo "provider=${MANUAL_PROVIDER}" >> "$GITHUB_OUTPUT"
+          echo "count=${{ inputs.count || '80' }}" >> "$GITHUB_OUTPUT"
+          echo "model=${MANUAL_MODEL}" >> "$GITHUB_OUTPUT"
+          echo "upload=${MANUAL_UPLOAD}" >> "$GITHUB_OUTPUT"
+          echo "expire_existing=${{ inputs.expire_existing && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
+          echo "upload_ttl_hours=${{ inputs.upload_ttl_hours || '72' }}" >> "$GITHUB_OUTPUT"
+          echo "mix=${MANUAL_MIX}" >> "$GITHUB_OUTPUT"
+          echo "city_focus=${{ inputs.city_focus }}" >> "$GITHUB_OUTPUT"
+          echo "include_russian_step=${{ inputs.include_russian_step && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
+          echo "seed=mixed-manual-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
 
       - name: Refresh public comment corpus
         continue-on-error: true
@@ -129,19 +119,9 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-city-news.mjs --out content/news-snippets.json
 
-      - name: Refresh city social from X
-        if: env.XAI_API_KEY != ''
-        continue-on-error: true
-        run: node scripts/refresh-social-snippets.mjs --out content/social-snippets.json
-
-      - name: Refresh world trends from X
-        if: env.XAI_API_KEY != ''
-        continue-on-error: true
-        run: node scripts/refresh-world-trends.mjs --out content/world-trends.json
-
       - name: Show source corpus sizes
         run: |
-          node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json','content/news-snippets.json','content/social-snippets.json','content/world-trends.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
+          node -e "const fs=require('fs'); const files=['content/public-human-comments.json','content/place-review-snippets.json','content/forum-snippets.json','content/city-signals.json','content/news-snippets.json','content/events-snippets.json','content/google-trends.json','content/transport-signals.json','content/weather-signals.json']; const out={}; for (const f of files){try{const raw=JSON.parse(fs.readFileSync(f,'utf8')); out[f]=Array.isArray(raw)?raw.length:'not-array';}catch(e){out[f]='missing';}} console.log(JSON.stringify(out,null,2));"
 
       - name: Fetch fresh places (Foursquare + Google)
         continue-on-error: true
@@ -166,8 +146,6 @@ jobs:
             --forum-input content/forum-snippets.json
             --signals-input content/city-signals.json
             --news-input content/news-snippets.json
-            --social-input content/social-snippets.json
-            --world-input content/world-trends.json
           )
 
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
@@ -186,9 +164,9 @@ jobs:
 
           if [ "${{ steps.cfg.outputs.expire_existing }}" = "true" ] && [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
             if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
-              ARGS+=( --expire-existing --min-upload-total 12 --min-upload-per-city 12 )
+              ARGS+=( --expire-existing --min-upload-total 12 --min-upload-per-city 12 --max-per-city 16 --max-total 16 )
             else
-              ARGS+=( --expire-existing --min-upload-total 60 --min-upload-per-city 12 )
+              ARGS+=( --expire-existing --min-upload-total 60 --min-upload-per-city 12 --max-per-city 16 --max-total 80 )
             fi
           fi
 
@@ -215,9 +193,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # Build 6 place-discovery jobs per city (24 total) — targets ~15% of final feed
+          # Keep links as a small layer: useful, not an events/place billboard.
           PLACE_ARGS=(
-            --max-per-city 6
+            --max-per-city 4
             --out content/place-discovery-jobs.json
           )
 
@@ -241,13 +219,21 @@ jobs:
             --candidates content/place-discovery-candidates.json \
             --report content/place-discovery-candidates.report.json \
             --out content/place-discovery-payload.json \
-            --min-score 1 \
-            --min-mindprint 1 \
-            --min-ambiguity 1 \
-            --min-composite-score 1 \
-            --max-per-city 2 \
-            --max-total 8 \
-            --reviewer-buckets ship_now,strong_candidate,candidate
+            --min-score 3 \
+            --min-mindprint 4 \
+            --min-stickiness 4 \
+            --min-ambiguity 3 \
+            --min-composite-score 4 \
+            --max-per-city 1 \
+            --max-total 4 \
+            --reviewer-buckets ship_now,strong_candidate
+
+          node scripts/check-content-quality.mjs \
+            --payload /tmp/nonexistent-seed-payload.json \
+            --place-payload content/place-discovery-payload.json \
+            --out content/place-discovery-quality-report.json \
+            --fail-on-issues \
+            --max-issue-pct 0
 
           # Upload to Supabase
           node scripts/upload-seed-payload.mjs \
@@ -256,7 +242,7 @@ jobs:
             --created-at-mode now
 
       - name: Generate Russian content via Claude
-        if: ${{ steps.cfg.outputs.upload == 'true' && env.ANTHROPIC_API_KEY != '' && (steps.cfg.outputs.expire_existing != 'true' || steps.main_upload_state.outputs.main_uploaded == 'true') }}
+        if: ${{ steps.cfg.outputs.upload == 'true' && steps.cfg.outputs.include_russian_step == 'true' && env.ANTHROPIC_API_KEY != '' && (steps.cfg.outputs.expire_existing != 'true' || steps.main_upload_state.outputs.main_uploaded == 'true') }}
         # Russian step uses Anthropic which can run out of credits.
         # Don't fail the whole pipeline — main content is already uploaded by this point.
         continue-on-error: true
@@ -299,13 +285,21 @@ jobs:
             --candidates content/russian-candidates.json \
             --report content/russian-candidates.report.json \
             --out content/russian-payload.json \
-            --min-score 1 \
-            --min-mindprint 1 \
-            --min-ambiguity 1 \
-            --min-composite-score 1 \
-            --max-per-city 3 \
-            --max-total 10 \
-            --reviewer-buckets ship_now,strong_candidate,candidate
+            --min-score 3 \
+            --min-mindprint 4 \
+            --min-stickiness 4 \
+            --min-ambiguity 3 \
+            --min-composite-score 4 \
+            --max-per-city 2 \
+            --max-total 6 \
+            --reviewer-buckets ship_now,strong_candidate
+
+          node scripts/check-content-quality.mjs \
+            --payload content/russian-payload.json \
+            --place-payload /tmp/nonexistent-place-payload.json \
+            --out content/russian-quality-report.json \
+            --fail-on-issues \
+            --max-issue-pct 0
 
           # Upload
           node scripts/upload-seed-payload.mjs \
@@ -341,15 +335,18 @@ jobs:
             content/pipeline-candidates.json
             content/pipeline-candidates.report.json
             content/pipeline-payload.json
+            content/pipeline-quality-report.json
             content/pipeline-upload-state.json
             content/city-pulse.latest.json
             content/place-discovery-jobs.json
             content/place-discovery-candidates.json
             content/place-discovery-candidates.report.json
             content/place-discovery-payload.json
+            content/place-discovery-quality-report.json
             content/quality-report.json
             content/russian-jobs.json
             content/russian-candidates.json
             content/russian-candidates.report.json
             content/russian-payload.json
+            content/russian-quality-report.json
           if-no-files-found: warn

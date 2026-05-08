@@ -23,7 +23,6 @@ jobs:
       contents: write
 
     env:
-      # XAI_API_KEY: ${{ secrets.XAI_API_KEY }}  # disabled — credits exhausted
       TG_WORK_API_ID: ${{ secrets.TG_WORK_API_ID }}
       TG_WORK_API_HASH: ${{ secrets.TG_WORK_API_HASH }}
       TG_WORK_SESSION: ${{ secrets.TG_WORK_SESSION }}
@@ -88,23 +87,13 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-telegram-pulse.mjs
 
-      - name: Refresh city social from X
-        if: env.XAI_API_KEY != ''
-        continue-on-error: true
-        run: node scripts/refresh-social-snippets.mjs
-
-      - name: Refresh world trends from X
-        if: env.XAI_API_KEY != ''
-        continue-on-error: true
-        run: node scripts/refresh-world-trends.mjs
-
       - name: Refresh static corpora
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/refresh-static-corpora.mjs --skip-social
 
       - name: Build city pulse
-        run: node scripts/build-city-pulse.mjs --world-input content/world-trends.json
+        run: node scripts/build-city-pulse.mjs --no-social --no-world
 
       - name: Show pulse summary
         run: |
@@ -142,7 +131,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/city-pulse.latest.json content/news-snippets.json content/fetched-places.json content/city-signals.json content/forum-snippets.json content/social-snippets.json content/world-trends.json content/telegram-uploaded-hashes.json || true
+          git add content/city-pulse.latest.json content/news-snippets.json content/fetched-places.json content/city-signals.json content/forum-snippets.json content/telegram-uploaded-hashes.json || true
           git add content/ra-berlin-events.json content/google-trends.json content/transport-signals.json content/weather-signals.json content/sports-signals.json content/events-snippets.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"

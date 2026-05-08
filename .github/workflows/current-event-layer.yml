@@ -2,7 +2,7 @@ name: Current Event Layer
 
 on:
   schedule:
-    - cron: "30 0,6,12,18 * * *"
+    - cron: "30 8,20 * * *"
   workflow_dispatch:
     inputs:
       upload:
@@ -17,7 +17,7 @@ on:
       max_per_city:
         description: "Max generated event jobs per city"
         required: false
-        default: "2"
+        default: "1"
       variants_per_event:
         description: "Generated variants per selected event"
         required: false
@@ -25,7 +25,7 @@ on:
       expires_hours:
         description: "How long event posts stay active"
         required: false
-        default: "18"
+        default: "12"
       replace_existing:
         description: "Replace active AI feed in uploaded cities before upload"
         type: boolean
@@ -55,6 +55,8 @@ jobs:
       ENABLE_OPENAI_SCHEDULE: ${{ vars.ENABLE_OPENAI_SCHEDULE || 'false' }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      MODEL_COST_CLAUDE_HAIKU_4_5_20251001_INPUT_PER_1M_USD: "1"
+      MODEL_COST_CLAUDE_HAIKU_4_5_20251001_OUTPUT_PER_1M_USD: "5"
 
     steps:
       - name: Checkout
@@ -82,9 +84,9 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "upload=true" >> "$GITHUB_OUTPUT"
             echo "date_range=this_month" >> "$GITHUB_OUTPUT"
-            echo "max_per_city=2" >> "$GITHUB_OUTPUT"
+            echo "max_per_city=1" >> "$GITHUB_OUTPUT"
             echo "variants_per_event=1" >> "$GITHUB_OUTPUT"
-            echo "expires_hours=18" >> "$GITHUB_OUTPUT"
+            echo "expires_hours=12" >> "$GITHUB_OUTPUT"
             echo "replace_existing=false" >> "$GITHUB_OUTPUT"
             echo "city_focus=" >> "$GITHUB_OUTPUT"
           else
@@ -191,15 +193,15 @@ jobs:
             --report content/event-discovery-candidates.report.json \
             --out content/event-discovery-payload.json \
             --expires-hours "${{ steps.cfg.outputs.expires_hours }}" \
-            --min-score 1 \
-            --min-mindprint 1 \
-            --min-stickiness 3 \
-            --min-ambiguity 1 \
-            --min-composite-score 3 \
-            --min-per-city 1 \
+            --min-score 3 \
+            --min-mindprint 4 \
+            --min-stickiness 4 \
+            --min-ambiguity 3 \
+            --min-composite-score 4 \
+            --min-per-city 0 \
             --max-per-city "${{ steps.cfg.outputs.max_per_city }}" \
             --max-total "$MAX_TOTAL" \
-            --reviewer-buckets ship_now,strong_candidate,candidate
+            --reviewer-buckets ship_now,strong_candidate
           status=$?
           if [ "$status" -ne 0 ]; then
             echo "::warning::Event payload preparation failed or produced too little usable content; skipping event upload for this run."
@@ -222,7 +224,9 @@ jobs:
           node scripts/check-content-quality.mjs \
             --payload content/event-discovery-payload.json \
             --place-payload content/missing-place-payload.json \
-            --out content/event-discovery-quality-report.json
+            --out content/event-discovery-quality-report.json \
+            --fail-on-issues \
+            --max-issue-pct 0
           quality_status=$?
           if [ "$event_status" -ne 0 ] || [ "$quality_status" -ne 0 ]; then
             echo "::warning::Event payload quality checks failed; skipping event upload for this run."

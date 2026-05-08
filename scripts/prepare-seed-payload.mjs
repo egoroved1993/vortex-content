@@ -66,6 +66,10 @@ for (const candidate of candidates) {
 
 const TRANSIT_RE = /\b(tube|overground|victoria line|elizabeth line|u-bahn|u8|ringbahn|s-bahn|muni|bart|metro|l3|tmb|rodalies|tram|platform|delay|delayed)\b/i;
 const HEADLINE_INJECTION_RE = /\b(this morning|heute|hoy|avui)\b.{0,40}\bthe\b\s+[A-Z][a-z]*(?:\s+[A-Z][a-z]*){2,}/;
+const HEADLINE_OR_SEO_RE = /watch the latest .* forecast|\bhouses for rent in [A-Z]|\bSo teuer ist Wohnen\b|\bNeues Quartier entsteht\b|\bsummerlike weather forecast\b|\bBay Area weather shifts from wet to warm\b|\bITV weather forecast\b|\bRead more\b|\bSubscribe now\b/i;
+const PIPELINE_SEAM_RE = /^(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b|\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/i;
+const PLACE_TEMPLATE_RE = /^just (left|walked out of)\b|\bsmell of\b.{0,80}\bstill (clings|on|in)\b|\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b|\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b/i;
+const NOSTALGIA_SLOP_RE = /\b(год назад|тогда .*теперь|ощущение то же самое|first time in my life|i used to spend a lot of time|used to be .* now)\b/i;
 const maxTransitPerCity = 2;
 
 const cityCounts = new Map();
@@ -125,6 +129,11 @@ function trySelect(entry) {
   }
   if (HEADLINE_INJECTION_RE.test(content)) {
     rejected.push({ id: entry.candidate.id, reason: "headline_injection" });
+    return false;
+  }
+  const hardReject = detectContentHardReject(content, entry.candidate);
+  if (hardReject) {
+    rejected.push({ id: entry.candidate.id, reason: `content_hard_reject:${hardReject}` });
     return false;
   }
   const openingKey = content.trim().toLowerCase().slice(0, 30);
@@ -249,6 +258,14 @@ function shouldInclude(candidate, review, options) {
     "atmospheric_poetry",
     "stereotype_bundle",
     "pipeline_seam",
+    "headline_or_seo_leak",
+    "seo_query_leakage",
+    "place_review_template",
+    "language_script_mismatch",
+    "ukrainian_leakage",
+    "nostalgia_slop",
+    "weak_hearsay_opener",
+    "low_signal_payoff",
   ]);
   const issueHit = (review.issues ?? []).find((issue) => blockedIssues.has(issue));
   if (issueHit) {
@@ -281,6 +298,23 @@ function shouldInclude(candidate, review, options) {
 
 function requiresLiveContext(sourceFamily) {
   return ["news", "social", "world", "bridge", "signals"].includes(sourceFamily);
+}
+
+function detectContentHardReject(content, candidate) {
+  const text = String(content ?? "");
+  const trimmed = text.trim();
+  const detectedLanguage = normalizeDetectedLanguage(candidate.detected_language ?? candidate.detectedLanguage, text);
+
+  if (HEADLINE_OR_SEO_RE.test(text)) return "headline_or_seo_leak";
+  if (PIPELINE_SEAM_RE.test(trimmed)) return "pipeline_seam";
+  if (PLACE_TEMPLATE_RE.test(trimmed)) return "place_review_template";
+  if (NOSTALGIA_SLOP_RE.test(trimmed)) return "nostalgia_slop";
+  if (detectedLanguage === "ru" && !/[а-яё]/iu.test(text) && /[a-z]{3,}/i.test(text)) return "language_script_mismatch";
+  if (/[а-яё]/iu.test(text) && /\b(завжди|людськи)\b/iu.test(text)) return "ukrainian_leakage";
+  if (/^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(trimmed)) return "weak_hearsay_opener";
+  if (/\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(text)) return "low_signal_payoff";
+
+  return null;
 }
 
 function normalizeDetectedLanguage(value, content = "") {

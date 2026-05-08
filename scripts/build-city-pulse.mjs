@@ -6,6 +6,8 @@ import { cleanText, looksSyntheticPlaceholder, normalizeSourceLanguage } from ".
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "city-pulse.latest.json");
 const capturedAt = new Date().toISOString();
+const includeSocial = !Boolean(args["no-social"]);
+const includeWorld = !Boolean(args["no-world"]);
 
 const sourceFiles = {
   public: args["public-input"] ? path.resolve(process.cwd(), args["public-input"]) : resolveProjectPath("content", "public-human-comments.json"),
@@ -32,8 +34,8 @@ const items = [
   ...readForum(sourceFiles.forum),
   ...readSignals(sourceFiles.signals),
   ...readNews(sourceFiles.news),
-  ...readSocial(sourceFiles.social),
-  ...readWorld(sourceFiles.world),
+  ...(includeSocial ? readSocial(sourceFiles.social) : []),
+  ...(includeWorld ? readWorld(sourceFiles.world) : []),
   ...readEvents(sourceFiles.events),
   ...readNightlife(sourceFiles.nightlife),
   ...readTrends(sourceFiles.trends),

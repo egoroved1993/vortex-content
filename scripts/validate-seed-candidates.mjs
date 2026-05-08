@@ -129,6 +129,13 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     hasRussianLongLatinPhrase(content);
   const pipelineSeam = looksPipelineSeam(content, contentLower, candidate.cityId);
   const truncatedOutput = looksTruncatedOutput(content, contentLower);
+  const headlineOrSeoLeak = looksHeadlineOrSeoLeak(content);
+  const placeReviewTemplate = looksPlaceReviewTemplate(content);
+  const languageScriptMismatch = hasLanguageScriptMismatch(detectedLanguage, content);
+  const ukrainianLeakage = hasUkrainianLeakage(content);
+  const nostalgiaSlop = looksNostalgiaSlop(contentLower);
+  const weakHearsayOpener = /^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(content.trim());
+  const lowSignalPayoff = /\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(content);
 
   const issues = [];
   if (!content) issues.push("empty_content");
@@ -166,6 +173,13 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (ruLatinPhraseLeakage) issues.push("ru_latin_phrase_leakage");
   if (pipelineSeam) issues.push("pipeline_seam");
   if (truncatedOutput) issues.push("truncated_output");
+  if (headlineOrSeoLeak) issues.push("headline_or_seo_leak");
+  if (placeReviewTemplate) issues.push("place_review_template");
+  if (languageScriptMismatch) issues.push("language_script_mismatch");
+  if (ukrainianLeakage) issues.push("ukrainian_leakage");
+  if (nostalgiaSlop) issues.push("nostalgia_slop");
+  if (weakHearsayOpener) issues.push("weak_hearsay_opener");
+  if (lowSignalPayoff) issues.push("low_signal_payoff");
   if (!stickySignal) issues.push("low_stickiness");
   if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
   if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
@@ -237,7 +251,9 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "repetitive_anchor", "instruction_leakage", "article_voice", "rhetorical_question",
     "instructional_advice", "generic_event_reference", "event_cliche", "banned_opener", "synthetic_collective",
     "event_listing_voice", "city_language_mismatch", "ru_latin_leakage", "ru_latin_phrase_leakage",
-    "pipeline_seam", "truncated_output", "too_long",
+    "pipeline_seam", "truncated_output", "headline_or_seo_leak", "place_review_template",
+    "language_script_mismatch", "ukrainian_leakage", "nostalgia_slop", "weak_hearsay_opener",
+    "low_signal_payoff", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
 
@@ -285,6 +301,13 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("ru_latin_phrase_leakage") &&
     !issues.includes("pipeline_seam") &&
     !issues.includes("truncated_output") &&
+    !issues.includes("headline_or_seo_leak") &&
+    !issues.includes("place_review_template") &&
+    !issues.includes("language_script_mismatch") &&
+    !issues.includes("ukrainian_leakage") &&
+    !issues.includes("nostalgia_slop") &&
+    !issues.includes("weak_hearsay_opener") &&
+    !issues.includes("low_signal_payoff") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long") &&
@@ -808,10 +831,49 @@ function looksRawHeadlineInjection(content) {
   return false;
 }
 
+function looksHeadlineOrSeoLeak(content) {
+  const text = String(content ?? "");
+  if (/watch the latest .* forecast/i.test(text)) return true;
+  if (/\bhouses for rent in [A-Z]/.test(text)) return true;
+  if (/\bSo teuer ist Wohnen\b|\bNeues Quartier entsteht\b/i.test(text)) return true;
+  if (/\bsummerlike weather forecast\b|\bBay Area weather shifts from wet to warm\b|\bITV weather forecast\b/i.test(text)) return true;
+  if (/\bRead more\b|\bSubscribe now\b/i.test(text)) return true;
+  return false;
+}
+
+function looksPlaceReviewTemplate(content) {
+  const text = String(content ?? "").trim();
+  if (/^just (left|walked out of)\b/i.test(text)) return true;
+  if (/\bsmell of\b.{0,80}\bstill (clings|on|in)\b/i.test(text)) return true;
+  if (/\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b/i.test(text)) return true;
+  if (/\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b/i.test(text)) return true;
+  return false;
+}
+
+function hasLanguageScriptMismatch(detectedLanguage, content) {
+  const text = String(content ?? "");
+  return detectedLanguage === "ru" && !/[а-яё]/iu.test(text) && /[a-z]{3,}/i.test(text);
+}
+
+function hasUkrainianLeakage(content) {
+  const text = String(content ?? "");
+  return /[а-яё]/iu.test(text) && /\b(завжди|людськи)\b/iu.test(text);
+}
+
+function looksNostalgiaSlop(contentLower) {
+  return /\b(год назад|тогда .*теперь|ощущение то же самое|first time in my life|i used to spend a lot of time|used to be .* now)\b/i.test(
+    contentLower
+  );
+}
+
 function looksPipelineSeam(content, contentLower, cityId) {
   const trimmed = content.trim();
 
   if (trimmed.includes("|")) return true;
+
+  if (/^(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b/i.test(trimmed)) {
+    return true;
+  }
 
   if (/\bi noticed\s+(everyone|the internet|people keep|a bunch of|travel frustration|sports discourse)\b/i.test(trimmed)) {
     return true;
