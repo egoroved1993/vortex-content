@@ -277,3 +277,25 @@ jobs:
             content/event-discovery-payload.json
             content/event-discovery-quality-report.json
           if-no-files-found: ignore
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # Rename payload to a path the notify script understands
+          if [ -f content/event-discovery-payload.json ]; then
+            cp content/event-discovery-payload.json content/current-event-layer-payload.json
+          fi
+          if [ "${{ job.status }}" = "success" ]; then
+            node scripts/notify-telegram.mjs \
+              --workflow "Current Event Layer" \
+              --status success
+          else
+            node scripts/notify-telegram.mjs \
+              --workflow "Current Event Layer" \
+              --status failure \
+              --reason "Job status: ${{ job.status }}"
+          fi

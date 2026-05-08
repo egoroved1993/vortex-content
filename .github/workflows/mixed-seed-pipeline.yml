@@ -353,3 +353,22 @@ jobs:
             content/russian-payload.json
             content/russian-quality-report.json
           if-no-files-found: warn
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            node scripts/notify-telegram.mjs \
+              --workflow "Mixed Seed Pipeline" \
+              --status success \
+              ${{ steps.cfg.outputs.city_focus && format('--city-focus "{0}"', steps.cfg.outputs.city_focus) || '' }}
+          else
+            node scripts/notify-telegram.mjs \
+              --workflow "Mixed Seed Pipeline" \
+              --status failure \
+              --reason "Job status: ${{ job.status }} — see GitHub Actions for details"
+          fi

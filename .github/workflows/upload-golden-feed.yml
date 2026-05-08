@@ -65,3 +65,18 @@ jobs:
             args+=(--replace-existing)
           fi
           node scripts/upload-seed-payload.mjs "${args[@]}"
+          # Copy payload so notify-telegram can read it
+          cp /tmp/golden-feed-payload.json content/golden-feed-payload.json || true
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            node scripts/notify-telegram.mjs --workflow "Golden Feed Upload" --status success
+          else
+            node scripts/notify-telegram.mjs --workflow "Golden Feed Upload" --status failure --reason "Job status: ${{ job.status }}"
+          fi
