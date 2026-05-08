@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-08T17:38:59.774Z",
+    "capturedAt": "2026-05-08T18:41:44.572Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 215
+    "totalItems": 217
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-08T17:38:59.774Z",
-      "mood_score": 0.301,
+      "captured_at": "2026-05-08T18:41:44.572Z",
+      "mood_score": 0.293,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,12 +33,21 @@
         "signals": 1,
         "news": 25,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Rayners Lane and Arnos Grove eastbound only while we fix a signal failure at Acton"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -70,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 0.56,
           "excerpt": "Really, Really Good Events And Things To Do In London In May 2025 - Time Out Worldwide. Really, Really Good Events And Things To Do In London In May 2025"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "This comment has been removed as it's deemed in breach of the rules and considered offensive or hateful. These aren't accepted within the r/London community. Continuing to try and "
         }
       ],
       "metadata": {
-        "source_item_count": 43,
-        "average_valence": 0.004,
+        "source_item_count": 45,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-08T17:38:59.774Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-05-08T18:41:44.572Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -128,6 +129,14 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy on a packed bus using a selfie stick for a group photo—while waiting for the next stop. The crowd just embraced it like an"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A dreary fog blankets the city, lending a sepulchral ambiance to the streets that feels both suffocating and familiar.. BART stations are buzzing with frustration as riders impatie"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -142,19 +151,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
         "source_item_count": 49,
-        "average_valence": -0.053,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
@@ -165,10 +166,10 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-08T17:38:59.774Z",
-      "mood_score": 0.29,
+      "captured_at": "2026-05-08T18:41:44.572Z",
+      "mood_score": 0.293,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "review": 2,
@@ -191,7 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100, RE1: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 248, RE2, S7: Delays 3 trips delayed"
         },
         {
           "source_family": "news",
@@ -213,9 +214,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with the scent of impending rain curling through the air, promising a chill as the afternoon wears on.. Despite the recent strike ending, the U-Bahn platfo"
+          "excerpt": "The sky is a patchwork of gray and blue, with cool breezes rustling the leaves of the trees lining the streets.. A sense of relief hangs in the air as buses and trams are finally b"
         },
         {
           "source_family": "review",
@@ -228,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.029,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "weather"
         ],
         "freshness_score": 0.96
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-08T17:38:59.774Z",
+      "captured_at": "2026-05-08T18:41:44.572Z",
       "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
@@ -271,7 +272,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks from behind scattered clouds, casting a golden glow on the bustling street cafés.. Commuters at Plaça Catalunya are visibly frustrated, checking their watches as trai"
+          "excerpt": "The sun blazes down through a thin veil of clouds, warming the air and casting sharp shadows on the bustling streets of the Eixample.. The usually vibrant sound of the metro is muf"
         },
         {
           "source_family": "review",
@@ -295,7 +296,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Eixample. They still look puzzled at the Metro map, especially on a Monday morning when the strikes kick in. You can spot them a mile away."
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is all about Gaudí, but the real charm is in the hidden plazas where locals gather for a quiet vermut, aw"
         }
       ],
       "metadata": {
