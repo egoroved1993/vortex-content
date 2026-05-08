@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-08T09:43:15.919Z",
+    "capturedAt": "2026-05-08T10:41:16.167Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 338
+    "totalItems": 222
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-08T09:43:15.919Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-08T10:41:16.167Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 8,
@@ -32,9 +32,8 @@
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 2,
-        "world": 5,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -42,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "social",
-          "source_origin": "x_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between West Ruislip and North Acton due to an earlier person ill on a train at Northolt. GO"
         },
         {
           "source_family": "public",
@@ -70,33 +69,33 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Houses for Rent in London: What International Renters Need to Know - Estate Agent Today. Houses for Rent in London: What International Renters Need to Know"
+          "recency_weight": 0.56,
+          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         },
         {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low with a thick layer of gray clouds, threatening rain any minute, while a cool breeze carries the faint scent of wet pavement.. The mood at the Tube stations is ten"
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.015,
+        "source_item_count": 50,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-08T09:43:15.919Z",
-      "mood_score": 0.282,
+      "captured_at": "2026-05-08T10:41:16.167Z",
+      "mood_score": 0.289,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
@@ -106,8 +105,6 @@
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 2,
-        "world": 5,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -119,20 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "de",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "ringbahn wieder chaos und trotzdem stehen alle da als wäre das nur eine weitere Wetterlage. berlin macht aus allem ein Klima"
-        },
-        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5, RE2, 200, RE1: Delays 4 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -151,29 +140,37 @@
           "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
         },
         {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs low with a thick blanket of gray clouds, occasionally letting out a drizzle that glistens on the pavements.. With the recent strike just ending, there's a palpable se"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. people are doing philo"
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.052,
+        "source_item_count": 84,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.937
+        "freshness_score": 0.956
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-08T09:43:15.919Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-08T10:41:16.167Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -183,8 +180,6 @@
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 2,
-        "world": 5,
         "trends": 8,
         "weather": 1
       },
@@ -234,90 +229,86 @@
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.032,
+        "source_item_count": 47,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.815
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-08T09:43:15.919Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-08T10:41:16.167Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
-        "social": 91,
-        "world": 5,
         "trends": 8,
         "weather": 1
       },
       "languages": [
         "ca",
-        "en",
-        "es",
-        "ru"
+        "en"
       ],
       "drivers": [
-        {
-          "source_family": "social",
-          "source_origin": "x_post",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "otra mañana escuchando maletas por el Raval como si el barrio tuviera check-in. luego te dicen que exageras con el tema turístico"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. locals and expats are "
-        },
-        {
-          "source_family": "social",
-          "source_origin": "telegram_group",
-          "language": "ru",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Везде просили за 3 месяца, но именно пэйслипы) В банках и арендодатели. Нравится им эта бумажка уж очень"
-        },
-        {
-          "source_family": "social",
-          "source_origin": "telegram_group",
-          "language": "ru",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Забудьте про испанский документ) Просто загуглите \"пэйслип\", это довольно простая бумага. Ни один арендодатель не жаловался, а прошли мы через многих"
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a pale grey, heavy with clouds, holding back the sun and giving the city a muted, almost melancholic hue.. The train stations are buzzing, with commuters' frustration pa"
+          "excerpt": "The sky is a muted grey, heavy with the threat of rain, as a chilly breeze sweeps through the streets of Barcelona.. With the ongoing train strike, commuters are visibly frustrated"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
+        },
+        {
+          "source_family": "review",
+          "source_origin": "travel_forum_snippet",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "brunch cafe. El Born. Perfect place to watch twelve people cosplay moving to Barcelona for six months. Food fine, prices targeted at people who say barrio like they invented the wo"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists always ask for 'tapas' but miss the incredible bocadillos at the corner bars. It's like asking for a sandwich in Paris"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "How to spot a recent arrival. Gràcia. You can always spot a newcomer by their bewilderment at the local grocery store’s lack of peanut butter options. Classic dead giveaway."
         }
       ],
       "metadata": {
-        "source_item_count": 137,
-        "average_valence": -0.024,
+        "source_item_count": 41,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.634
+        "freshness_score": 0.779
       }
     }
   ]
