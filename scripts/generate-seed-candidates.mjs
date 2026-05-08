@@ -350,6 +350,7 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
   const effectiveModel = activeModel ?? model;
   const pulse = cityPulseMap[job.cityId];
   let base = "You generate short anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
+  base += "\nReturn compact JSON only, with no markdown fences. Keep why_human, why_ai, and read_value_hook under 14 words each. Keep sentiment under 4 words. detected_language must be an ISO code such as en, es, ca, de, or ru.";
 
   // Inject model persona early — always fire for non-salvage families so the voice anchors generation
   if (!isMinimalSalvageFamily(job.sourceFamily) && job.sourceFamily !== "social") {
@@ -909,7 +910,7 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
       job.lane === "mind_post" ? "clear angle with social diagnosis" : "lived scene with one sticky detail"
     ),
     sentiment: normalizeSentiment(parsed.sentiment),
-    detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? job.rawSnippetLanguage ?? "en"),
+    detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? job.rawSnippetLanguage ?? "en", sanitizedContent),
     links: normalizeLinks(parsed.links) ?? normalizeLinks(job.links ?? null),
     rawModelResponse: rawText,
     usage,
@@ -946,6 +947,7 @@ function extractJsonStringField(rawText, key) {
 function buildRepairSystemPrompt(job, assessment, providerHint = null, activeModel = null) {
   const effectiveModel = activeModel ?? model;
   let base = "You repair weak anonymous city posts for a difficult human-vs-AI game. Return strict JSON only.";
+  base += "\nReturn compact JSON only, with no markdown fences. Keep why_human, why_ai, and read_value_hook under 14 words each. Keep sentiment under 4 words. detected_language must be an ISO code such as en, es, ca, de, or ru.";
   base += "\nFix the draft without making it sound polished, literary, or article-like.";
   base += "\nKeep the same scene, same source pressure, and same local detail.";
   base += "\nThe repaired version must stay under 2 sentences and under the lane character cap.";
@@ -2078,7 +2080,7 @@ function normalizeLinks(value) {
   return cleaned.length > 0 ? cleaned : null;
 }
 
-function normalizeDetectedLanguage(value) {
+function normalizeDetectedLanguage(value, content = "") {
   const raw = String(value ?? "en").trim().toLowerCase();
   if (!raw) return "en";
 
@@ -2107,9 +2109,26 @@ function normalizeDetectedLanguage(value) {
   const compact = raw.replace(/[\s_-]+/g, "");
   if (aliases[compact]) return aliases[compact];
 
+  if (raw.includes("catalan") || raw.includes("català")) return "ca";
+  if (raw.includes("spanish") || raw.includes("español") || raw.includes("espanol")) return "es";
+  if (raw.includes("german") || raw.includes("deutsch")) return "de";
+  if (raw.includes("russian")) return "ru";
+  if (raw.includes("french") || raw.includes("français")) return "fr";
+
+  const inferredFromContent = inferLanguageFromContent(content);
+  if (raw === "en" && inferredFromContent !== "en") return inferredFromContent;
+
   if (/^[a-z]{2}$/.test(raw)) return raw;
   if (/^[a-z]{2}-[a-z]{2}$/.test(raw)) return raw.slice(0, 2);
 
+  return inferredFromContent;
+}
+
+function inferLanguageFromContent(text) {
+  if (/[а-яё]/i.test(String(text ?? ""))) return "ru";
+  if (/[àèéíòóúüç·]/i.test(String(text ?? ""))) return "ca";
+  if (/[ñáéíóú¿¡]/i.test(String(text ?? ""))) return "es";
+  if (/[äöüß]/i.test(String(text ?? ""))) return "de";
   return "en";
 }
 

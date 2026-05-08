@@ -243,6 +243,7 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
       (currentContext.newsTokens.length > 0 && newsContextOverlap > 0 ? 1 : 0) +
       (/(strike|delay|rent|housing|tourism|tourists|weather|startup|founder|waymo|muni|tube|bart|metro|election|council|fare|fog|barça|giants)/i.test(content) ? 1 : 0)
   );
+  const coreScore = averageNumbers([mindprint, cityness, stickiness, ambiguity]);
 
   const hardBlocks = [
     "generic_city_copy", "essay_like", "forum_advice_framing", "stereotype_bundle",
@@ -323,9 +324,10 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     signals,
     humanSignals,
     aiSignals,
+    scores_detail: { core: coreScore },
     issues,
     passed,
-    reviewerBucket: pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit),
+    reviewerBucket: pickReviewerBucket(randFn, candidate, passed, coreScore, ambiguity, freshness, newsFit),
   };
 }
 
@@ -1299,12 +1301,27 @@ function requiresNewsFit(candidate) {
   return ["news", "world", "bridge"].includes(candidate.sourceFamily);
 }
 
-function pickReviewerBucket(randFn, passed, ambiguity, freshness, newsFit) {
+function pickReviewerBucket(randFn, candidate, passed, coreScore, ambiguity, freshness, newsFit) {
   if (!passed) return "reject";
-  if (ambiguity >= 4 && freshness >= 4 && newsFit >= 3 && randFn() > 0.35) return "ship_now";
-  if (ambiguity >= 4 && freshness >= 3) return "strong_candidate";
+
+  const live = requiresFreshContext(candidate) || requiresNewsFit(candidate);
+  if (live) {
+    if (ambiguity >= 4 && freshness >= 4 && newsFit >= 3 && randFn() > 0.35) return "ship_now";
+    if (ambiguity >= 4 && freshness >= 3) return "strong_candidate";
+    if (ambiguity >= 3) return "candidate";
+    return "needs_human_edit";
+  }
+
+  if (coreScore >= 4.35 && ambiguity >= 4 && randFn() > 0.35) return "ship_now";
+  if (coreScore >= 4 && ambiguity >= 3) return "strong_candidate";
   if (ambiguity >= 3) return "candidate";
   return "needs_human_edit";
+}
+
+function averageNumbers(values) {
+  const numeric = values.filter((value) => Number.isFinite(value));
+  if (numeric.length === 0) return 0;
+  return Math.round((numeric.reduce((sum, value) => sum + value, 0) / numeric.length) * 100) / 100;
 }
 
 export function summarize(report) {

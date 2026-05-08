@@ -281,7 +281,7 @@ function shouldInclude(candidate, review, options) {
     }
   }
 
-  const compositeScore = averageScore(scores);
+  const compositeScore = compositeScoreForCandidate(candidate, scores);
   if (compositeScore < options.minCompositeScore) {
     return { include: false, reason: "composite_below_threshold" };
   }
@@ -298,6 +298,10 @@ function shouldInclude(candidate, review, options) {
 
 function requiresLiveContext(sourceFamily) {
   return ["news", "social", "world", "bridge", "signals"].includes(sourceFamily);
+}
+
+function requiresNewsFit(sourceFamily) {
+  return ["news", "world", "bridge"].includes(sourceFamily);
 }
 
 function detectContentHardReject(content, candidate) {
@@ -345,8 +349,26 @@ function normalizeDetectedLanguage(value, content = "") {
   const compact = raw.replace(/[\s_-]+/g, "");
   if (aliases[compact]) return aliases[compact];
 
+  if (raw.includes("catalan") || raw.includes("català")) return "ca";
+  if (raw.includes("spanish") || raw.includes("español") || raw.includes("espanol")) return "es";
+  if (raw.includes("german") || raw.includes("deutsch")) return "de";
+  if (raw.includes("russian")) return "ru";
+  if (raw.includes("french") || raw.includes("français")) return "fr";
+
+  const text = String(content ?? "");
+  const inferredFromContent = inferLanguageFromContent(text);
+  if (raw === "en" && inferredFromContent !== "en") return inferredFromContent;
+
   if (/^[a-z]{2}$/.test(raw)) return raw;
   if (/^[a-z]{2}-[a-z]{2}$/.test(raw)) return raw.slice(0, 2);
+
+  return inferredFromContent;
+}
+
+function inferLanguageFromContent(text) {
+  if (/[àèéíòóúüç·]/i.test(text)) return "ca";
+  if (/[ñáéíóú¿¡]/i.test(text)) return "es";
+  if (/[äöüß]/i.test(text)) return "de";
 
   return "en";
 }
@@ -373,6 +395,21 @@ function averageScore(scores) {
     scores.news_fit ?? 0,
   ];
   return Math.round((values.reduce((sum, value) => sum + value, 0) / values.length) * 100) / 100;
+}
+
+function compositeScoreForCandidate(candidate, scores) {
+  const coreValues = [
+    scores.mindprint ?? 0,
+    scores.cityness ?? 0,
+    scores.stickiness ?? 0,
+    scores.ambiguity ?? 0,
+  ];
+
+  if (requiresLiveContext(candidate.sourceFamily) || requiresNewsFit(candidate.sourceFamily)) {
+    return averageScore(scores);
+  }
+
+  return Math.round((coreValues.reduce((sum, value) => sum + value, 0) / coreValues.length) * 100) / 100;
 }
 
 function replaceExtension(filePath, nextExtension) {

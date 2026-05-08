@@ -159,6 +159,7 @@ jobs:
               --upload-state content/pipeline-upload-state.json
               --upload-ttl-hours "${{ steps.cfg.outputs.upload_ttl_hours }}"
               --created-at-mode now
+              --fail-on-empty-upload
             )
           fi
 

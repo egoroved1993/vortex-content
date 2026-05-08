@@ -134,6 +134,7 @@ const payloadRows = Array.isArray(payload.rows) ? payload.rows : [];
 const expireExisting = Boolean(args["expire-existing"]);
 const minUploadTotal = Number(args["min-upload-total"] ?? 1);
 const minUploadPerCity = Number(args["min-upload-per-city"] ?? 0);
+const failOnEmptyUpload = Boolean(args["fail-on-empty-upload"]);
 const uploadTtlHours = args["upload-ttl-hours"] ? String(args["upload-ttl-hours"]) : null;
 const createdAtMode = args["created-at-mode"] ? String(args["created-at-mode"]) : null;
 const cityCounts = countBy(payloadRows, (row) => row.city_id ?? row.cityId ?? "unknown");
@@ -166,6 +167,11 @@ if (upload) {
   } else {
     uploadState.reason = "empty_payload";
     console.warn("Prepared payload is empty; keeping current generated feed in place and skipping upload");
+    if (failOnEmptyUpload) {
+      writeUploadState(uploadStatePath, uploadState);
+      console.error("Failing upload run because --fail-on-empty-upload was set");
+      process.exit(1);
+    }
   }
   writeUploadState(uploadStatePath, uploadState);
   if (Boolean(args["upload-city-pulse"])) {
