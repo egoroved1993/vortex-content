@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-08T03:15:34.679Z",
+    "capturedAt": "2026-05-08T05:08:02.361Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 339
+    "totalItems": 334
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-08T03:15:34.679Z",
-      "mood_score": 0.286,
+      "captured_at": "2026-05-08T05:08:02.361Z",
+      "mood_score": 0.277,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 3,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -35,12 +35,21 @@
         "social": 2,
         "world": 5,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Barking and Earls Court due to a late finish to engineering work in the Upminster a"
+        },
         {
           "source_family": "social",
           "source_origin": "x_post",
@@ -50,58 +59,50 @@
           "excerpt": "victoria line delay hit at the exact point in the morning where everyone has already decided not to be dramatic about it"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays westbound only following a late finish of engineering work. GOOD SERVICE on the rest of the l"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "The weather forecast in London this weekend with warm temps changing to showers - London Now. The weather forecast in London this weekend with warm temps changing to showers"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "Houses for Rent in London: What International Renters Need to Know - Estate Agent Today. Houses for Rent in London: What International Renters Need to Know"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "AI safety drama spilling back into ordinary timelines. everyone loves safe ai until the launch date moves. another open letter economy cycle. people are reading Bay Area AI drama o"
-        },
-        {
-          "source_family": "world",
-          "source_origin": "committed_world_fallback",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "The internet is tired of paying premium prices for mediocre basics. premium pricing for ordinary disappointment. the product is now just being charged twice. every queue looks one "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
-        "source_item_count": 51,
-        "average_valence": -0.041,
+        "source_item_count": 55,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-08T03:15:34.679Z",
-      "mood_score": 0.286,
+      "captured_at": "2026-05-08T05:08:02.361Z",
+      "mood_score": 0.287,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 2,
+        "public": 1,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -110,6 +111,7 @@
         "world": 5,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -166,18 +168,18 @@
           "events",
           "routine"
         ],
-        "freshness_score": 0.944
+        "freshness_score": 0.948
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-08T03:15:34.679Z",
+      "captured_at": "2026-05-08T05:08:02.361Z",
       "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -205,7 +207,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "those threads have some good info but damn $330 is wild, even for sf standards mission location might be smaller but you're still looking at least $200+ monthly from what i've seen"
+          "excerpt": "I am not in Oakland proper but I have kinda been scoping the East Bay social scene since relocating to the Bay and honestly the bar trivia spots here have such a different vibe tha"
         },
         {
           "source_family": "public",
@@ -213,7 +215,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I disagree. That gay kid example saves so many lives. It's also a lifeline for abused kids and women who need to be able to reach out beyond their local community for help. When yo"
+          "excerpt": "The Oakland hills are a joke. My parents had gotten a house in Woodminster that we could only ever actually get a good look at the Bay if the people living across our house cut the"
         },
         {
           "source_family": "review",
@@ -233,19 +235,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 61,
-        "average_valence": 0.003,
+        "source_item_count": 52,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.799
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-08T03:15:34.679Z",
+      "captured_at": "2026-05-08T05:08:02.361Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
@@ -310,13 +312,13 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.027,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.633
+        "freshness_score": 0.632
       }
     }
   ]
