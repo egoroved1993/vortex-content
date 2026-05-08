@@ -104,7 +104,7 @@ function analyseRow(row) {
   // 3. Wrong city references
   const wrongWords = CITY_CHECKS[city]?.wrongWords ?? [];
   for (const w of wrongWords) {
-    if (c.toLowerCase().includes(w)) { issues.push(`wrong_city_ref:${w}`); break; }
+    if (containsTokenOrPhrase(c, w)) { issues.push(`wrong_city_ref:${w}`); break; }
   }
 
   // 4. Cyrillic text is allowed when the payload declares Russian.
@@ -175,6 +175,16 @@ function mentionsPlaceWithoutLink(row) {
   const c = row.content ?? "";
   if (rowLinks(row).length > 0) return false;
   return /\b(bar|café|cafe|restaurant|club|market|gallery|shop|museum|bakery|cinema|theatre|theater|bookshop)\b/i.test(c);
+}
+
+function containsTokenOrPhrase(content, needle) {
+  const escaped = escapeRegExp(String(needle ?? "").trim());
+  if (!escaped) return false;
+  return new RegExp(`(^|[^\\p{L}\\p{N}_])${escaped}([^\\p{L}\\p{N}_]|$)`, "iu").test(String(content ?? ""));
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 // ─── main ─────────────────────────────────────────────────────────────────────
