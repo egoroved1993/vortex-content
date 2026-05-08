@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-08T11:38:29.592Z",
+    "capturedAt": "2026-05-08T12:43:04.215Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,23 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 222
+    "totalItems": 219
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-08T11:38:29.592Z",
-      "mood_score": 0.499,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-08T12:43:04.215Z",
+      "mood_score": 0.303,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 8,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 25,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -41,27 +40,19 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between West Ruislip and North Acton due to an earlier person ill on a train at Northolt. GO"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "was in Romford recently and came across good old fashion chav kids, the proper white english ones. The sort who are called Lacy Mae etc. They were on the top deck of the bus shouti"
+          "excerpt": "this guy in particular: anime branded sweatpants, unkempt pink hair, few extra Lbs The kind of guy that wouldn't blink twice at a racial slur but could rant for 10 minutes about th"
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "The weather forecast in London this weekend with warm temps changing to showers - London Now. The weather forecast in London this weekend with warm temps changing to showers"
         },
         {
@@ -79,28 +70,36 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of grey clouds looms overhead, with sporadic drizzles breaking the damp chill in the air.. The mood on the Tube is tense, with commuters discussing the upcoming str"
         }
       ],
       "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.002,
+        "source_item_count": 45,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-08T11:38:29.592Z",
-      "mood_score": 0.289,
+      "captured_at": "2026-05-08T12:43:04.215Z",
+      "mood_score": 0.29,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 1,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +120,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -140,42 +139,42 @@
           "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork quilt of gray clouds with occasional bursts of sunlight sneaking through, giving a soft glow to the damp streets.. With the recent strike lifting, a cautious"
+          "excerpt": "Gray clouds loomed over Berlin, occasionally parting to let weak sunlight seep through, casting a muted glow over the bustling streets.. With the recent end of the BVG strike, a ca"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "If you want to work in Germany you need to speak german. At least A2 if you're happy with a cleaning job or just cleaning the dishes. But if you want a job where it's necessary to "
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.032,
+        "source_item_count": 85,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.958
+        "freshness_score": 0.964
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-08T11:38:29.592Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-05-08T12:43:04.215Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,6 +195,22 @@
           "excerpt": "You could also check with coworking spaces around SOMA or Mission - most of them rent out their event areas for stuff like this. Universities in area sometimes do job fairs too whe"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I am in Hawaii right now. I used to spend a lot of time here and it was more expensive to eat and live than the Bay Area. Restaurants in Hawaii are substantially than the Bay Area "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a heavy grey, with a chill seeping into the streets, hinting at rain that never quite arrives.. BART’s platform is a sea of frustrated faces, the air thick with impatien"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -204,45 +219,29 @@
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a gray fog, occasionally revealing shy patches of sunlight that barely warm the cool air.. BART platforms are packed with restless commuters, their faces r"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         }
       ],
       "metadata": {
-        "source_item_count": 47,
-        "average_valence": -0.04,
+        "source_item_count": 48,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-08T11:38:29.592Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-05-08T12:43:04.215Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -263,9 +262,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs heavily over Barcelona, casting a golden glow that hints at both warmth and the impending late-afternoon chill.. The mood on the trains is tense and frustrated as com"
+          "excerpt": "The skies are a steel gray, with a damp chill hanging in the air, hinting at rain just around the corner.. Rodalies trains are running less frequently due to the ongoing strike, le"
         },
         {
           "source_family": "review",
@@ -289,7 +288,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is all about Gaudí, but it’s really the small plazas and local bars that make it vibrant—like the charm o"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think plaça de la Vila is just for photos, but real locals gather for morning coffee and to catch up on gossip. It's w"
         },
         {
           "source_family": "forum",
@@ -297,18 +296,18 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. They always ask for 'patatas bravas' to be served with ketchup instead of alioli. You can spot them a mile away!"
+          "excerpt": "How to spot a recent arrival. Eixample. They always stop to take photos of the street signs. It’s like a scavenger hunt for the Catalan names they can’t quite pronounce."
         }
       ],
       "metadata": {
         "source_item_count": 41,
-        "average_valence": 0.005,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.779
+        "freshness_score": 0.776
       }
     }
   ]
