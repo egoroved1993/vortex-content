@@ -28,7 +28,7 @@ on:
       mix:
         description: "Comma-separated source families"
         required: false
-        default: "public,review,forum,news"
+        default: "public,review,forum"
       city_focus:
         description: "Optional city focus"
         required: false
@@ -83,7 +83,7 @@ jobs:
         run: |
           MANUAL_MODEL="${{ inputs.model || 'deepseek-v4-flash' }}"
           MANUAL_UPLOAD="${{ inputs.upload && 'true' || 'false' }}"
-          MANUAL_MIX="${{ inputs.mix || 'public,review,forum,news' }}"
+          MANUAL_MIX="${{ inputs.mix || 'public,review,forum' }}"
 
           if [ "$MANUAL_UPLOAD" = "true" ] && [ "$MANUAL_MODEL" = "gpt-4o-mini" ]; then
             echo "gpt-4o-mini upload runs are disabled: quality was below the production bar." >&2
@@ -97,6 +97,11 @@ jobs:
 
           if [ "$MANUAL_UPLOAD" = "true" ] && [[ ",$MANUAL_MIX," =~ ,launch, ]]; then
             echo "Upload runs cannot use launch anymore; production content must be sourced transformation only." >&2
+            exit 1
+          fi
+
+          if [ "$MANUAL_UPLOAD" = "true" ] && [[ ",$MANUAL_MIX," =~ ,news, ]]; then
+            echo "Upload runs cannot use news directly yet; news must go through candidate review/approved bank curation." >&2
             exit 1
           fi
 
@@ -207,14 +212,16 @@ jobs:
               --approved-rejected content/approved-bank-rejected.json
               --created-at-mode now
             )
+
+            if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 15 --min-upload-per-city 15 --min-per-city 15 --max-per-city 25 --max-total 25 )
+            else
+              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 60 --min-upload-per-city 15 --min-per-city 15 --max-per-city 25 --max-total 100 )
+            fi
           fi
 
           if [ "${{ steps.cfg.outputs.expire_existing }}" = "true" ] && [ "${{ steps.cfg.outputs.upload }}" = "true" ]; then
-            if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
-              ARGS+=( --expire-existing --fail-on-empty-upload --min-upload-total 12 --min-upload-per-city 12 --max-per-city 25 --max-total 25 )
-            else
-              ARGS+=( --expire-existing --fail-on-empty-upload --min-upload-total 60 --min-upload-per-city 12 --max-per-city 25 --max-total 100 )
-            fi
+            ARGS+=( --expire-existing )
           fi
 
           node scripts/run-seed-pipeline.mjs "${ARGS[@]}"
@@ -225,14 +232,16 @@ jobs:
         shell: bash
         run: |
           if [ -f content/pipeline-upload-state.json ]; then
-            node -e "const fs=require('fs'); const state=JSON.parse(fs.readFileSync('content/pipeline-upload-state.json','utf8')); console.log(JSON.stringify(state,null,2)); console.log('main_uploaded=' + (state.uploadedMain ? 'true' : 'false'));" | tee /tmp/pipeline-upload-state.log
+            node -e "const fs=require('fs'); const state=JSON.parse(fs.readFileSync('content/pipeline-upload-state.json','utf8')); console.log(JSON.stringify(state,null,2)); console.log('main_uploaded=' + (state.uploadedMain ? 'true' : 'false')); console.log('upload_reason=' + (state.reason || 'unknown'));" | tee /tmp/pipeline-upload-state.log
             grep '^main_uploaded=' /tmp/pipeline-upload-state.log >> "$GITHUB_OUTPUT"
+            grep '^upload_reason=' /tmp/pipeline-upload-state.log >> "$GITHUB_OUTPUT"
           else
             echo "main_uploaded=false" >> "$GITHUB_OUTPUT"
+            echo "upload_reason=missing_upload_state" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run place-discovery pipeline
-        if: ${{ steps.cfg.outputs.upload == 'true' && (steps.cfg.outputs.expire_existing != 'true' || steps.main_upload_state.outputs.main_uploaded == 'true') }}
+        if: ${{ steps.cfg.outputs.upload == 'true' && steps.main_upload_state.outputs.main_uploaded == 'true' }}
         continue-on-error: true
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
@@ -290,7 +299,7 @@ jobs:
             --created-at-mode now
 
       - name: Generate Russian content via Claude
-        if: ${{ steps.cfg.outputs.upload == 'true' && steps.cfg.outputs.include_russian_step == 'true' && env.ANTHROPIC_API_KEY != '' && (steps.cfg.outputs.expire_existing != 'true' || steps.main_upload_state.outputs.main_uploaded == 'true') }}
+        if: ${{ steps.cfg.outputs.upload == 'true' && steps.cfg.outputs.include_russian_step == 'true' && env.ANTHROPIC_API_KEY != '' && steps.main_upload_state.outputs.main_uploaded == 'true' }}
         # Russian step uses Anthropic which can run out of credits.
         # Don't fail the whole pipeline — main content is already uploaded by this point.
         continue-on-error: true
@@ -418,8 +427,12 @@ jobs:
               --status success \
               ${{ steps.cfg.outputs.city_focus && format('--city-focus "{0}"', steps.cfg.outputs.city_focus) || '' }}
           else
+            REASON="Job status: ${{ job.status }} — see GitHub Actions for details"
+            if [ -n "${{ steps.main_upload_state.outputs.upload_reason }}" ]; then
+              REASON="Upload blocked: ${{ steps.main_upload_state.outputs.upload_reason }}"
+            fi
             node scripts/notify-telegram.mjs \
               --workflow "Mixed Seed Pipeline" \
               --status failure \
-              --reason "Job status: ${{ job.status }} — see GitHub Actions for details"
+              --reason "$REASON"
           fi

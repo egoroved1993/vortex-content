@@ -13,7 +13,7 @@ const upload = Boolean(args.upload);
 const provider = args.provider ?? process.env.MODEL_PROVIDER ?? null;
 const model = args.model ?? null;
 const cityFocus = args["city-focus"] ?? null;
-const mix = parseMix(args.mix ?? "public,review,forum,news");
+const mix = parseMix(args.mix ?? "public,review,forum");
 const usesSocial = mix.includes("social");
 const usesWorld = mix.includes("world") || mix.includes("bridge");
 const jobsPerSignalSnapshot = Number(args["signal-jobs-per-snapshot"] ?? 3);
@@ -150,6 +150,7 @@ const expireExisting = Boolean(args["expire-existing"]);
 const minUploadTotal = Number(args["min-upload-total"] ?? 1);
 const minUploadPerCity = Number(args["min-upload-per-city"] ?? 0);
 const failOnEmptyUpload = Boolean(args["fail-on-empty-upload"]);
+const failOnUploadMinimums = Boolean(args["fail-on-upload-minimums"] ?? args["fail-on-empty-upload"]);
 const uploadTtlHours = args["upload-ttl-hours"] ? String(args["upload-ttl-hours"]) : null;
 const createdAtMode = args["created-at-mode"] ? String(args["created-at-mode"]) : null;
 const cityCounts = countBy(payloadRows, (row) => row.city_id ?? row.cityId ?? "unknown");
@@ -164,9 +165,14 @@ const uploadState = {
 if (upload) {
   if (payloadRows.length > 0) {
     const minimums = checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity, cityFocus });
-    if (expireExisting && !minimums.ok) {
+    if (!minimums.ok) {
       uploadState.reason = minimums.reason;
-      console.warn(`Prepared payload did not meet replacement minimums (${minimums.reason}); keeping current generated feed in place and skipping main upload`);
+      console.warn(`Prepared payload did not meet upload minimums (${minimums.reason}); keeping current generated feed in place and skipping main upload`);
+      writeUploadState(uploadStatePath, uploadState);
+      if (failOnUploadMinimums) {
+        console.error("Failing upload run because --fail-on-upload-minimums was set");
+        process.exit(1);
+      }
     } else {
       runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
         "--input",
