@@ -21,11 +21,13 @@ const args = parseArgs(process.argv.slice(2));
 const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolveProjectPath("content", "public-human-comments.json");
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "public-human-snippet-jobs.json");
 const limit = Number(args.limit ?? 200);
-const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 4);
+const cityFocus = args["city-focus"] ?? null;
+const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? (cityFocus ? 0 : 4));
 const seed = args.seed ?? "public-human-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
+  .filter((snippet) => !cityFocus || snippet.cityId === cityFocus)
   .filter((snippet) => !looksForumAdviceSnippet(snippet.body))
   .map((snippet) => ({
     ...snippet,
@@ -171,17 +173,104 @@ function looksForumAdviceSnippet(body) {
   const adviceFragments = [
     "would appreciate hearing",
     "would love to hear",
+    "would love some recommendations",
     "any recommendations",
     "any advice",
+    "any tips",
+    "any recs",
+    "recs for",
+    "thanks for the recommendations",
+    "recommend stopping",
+    "highly recommend",
+    "i'd recommend",
+    "id recommend",
     "what's it like",
     "what is it like",
     "general sentiment",
+    "general information",
     "would you recommend",
+    "can anyone suggest",
+    "can you give me",
+    "has anyone stayed",
+    "does anyone know",
+    "what should i do",
+    "where can i",
+    "where should i",
+    "how far is it",
+    "how big is",
+    "how much do",
+    "will i have a hard time",
+    "will i be able",
+    "check in for the flight",
+    "drop off our luggage",
+    "help me pick",
+    "pick my hotel",
+    "one night stay",
+    "cruise",
+    "debarkation",
+    "visitor here",
+    "would it be valid",
+    "is this a scam",
+    "this is a silly question",
     "thinking of moving",
     "just moved to",
     "looking at an apartment",
     "close to the ",
     "seems close to the ",
+    "we are going to",
+    "we're going to",
+    "we will be arriving",
+    "we are staying",
+    "i'll be staying",
+    "first time in",
+    "bucket-listing",
+    "bucket listing",
+    "layover",
+    "airport hotel",
+    "from the airport",
+    "trip to",
+    "visiting barcelona",
+    "traveling to",
+    "travelling to",
+    "i was wondering if someone could",
+    "anyone who's going",
+    "anyone who is going",
+    "do i go to",
+    "i want to know where",
+    "i want to know how",
+    "forgot something in",
+    "moving soon",
+    "coming to upf",
+    "coming to barcelona",
+    "going to barcelona",
+    "going to bcn",
+    "i am going to barcelona",
+    "i'm going to barcelona",
+    "will be living near bcn",
+    "seeking employment",
+    "searching for a job",
+    "looking for a job",
+    "handyman needed",
+    "currently searching for a job",
+    "lease is coming to an end",
+    "busco pis",
+    "buscant habitació",
+    "buscant habitacion",
+    "busco habitación",
+    "busco habitacion",
+    "em trasllado per feina",
+    "my partner and i",
+    "my family and",
+    "thanks in advance",
+    "removed for being",
+    "low-effort request",
+    "use the search function",
+    "self-serving questions",
+    "widely relevant to residents",
+    "will be removed",
+    "question is very broad",
+    "i mainly work with",
+    "building my client base",
   ];
 
   const asksForInput =
@@ -193,11 +282,13 @@ function looksForumAdviceSnippet(body) {
 
 function inferTopic(snippet) {
   const lower = snippet.body.toLowerCase();
-  if (/\b(rent|expensive|price|afford)\b/.test(lower)) return "cost_of_living";
-  if (/\b(train|bus|tram|tube|bart|muni|metro|platform)\b/.test(lower)) return "commute_thought";
-  if (/\b(bar|coffee|cafe|beer|spati|bakery|food)\b/.test(lower)) return "food_moment";
-  if (/\b(language|german|english|spanish|catalan|translate|accent|post office)\b/.test(lower)) return "language_barrier";
-  if (/\b(tourist|visitors|airbnb|suitcase)\b/.test(lower)) return "tourist_vs_local";
+  if (/\b(rent|renting|housing|expensive|price|afford|alquiler|lloguer|piso|pis|habitaci[oó]n|habitacio|shoebox|taxes)\b/.test(lower)) return "cost_of_living";
+  if (/\b(train|bus|tram|tube|bart|muni|metro|platform|rodalies|fgc|tmb|station)\b/.test(lower)) return "commute_thought";
+  if (/\b(bar|coffee|cafe|caf[eèé]|beer|spati|bakery|food|terraza|terrassa)\b/.test(lower)) return "food_moment";
+  if (/\b(language|german|english|spanish|catalan|catal[aà]|castell[aà]|translate|accent|post office|idioma)\b/.test(lower)) return "language_barrier";
+  if (/\b(tourist|tourists|visitors|airbnb|suitcase|expat|expats|guiri|guiris|turista|turistes)\b/.test(lower)) return "tourist_vs_local";
+  if (/\b(polen|plataneros|plataners|allergy|alergia|rain|paraigua|weather|temps)\b/.test(lower)) return "weather_mood";
+  if (/\b(raval|poblenou|gr[aà]cia|eixample|barri|barrio|parque|parc|plaça|placa)\b/.test(lower)) return "neighborhood_vibe";
   if (/\b(club|pub|night|date|dating)\b/.test(lower)) return "night_out";
   if (/\b(work|office|slack|calendar|job|remote)\b/.test(lower)) return "work_stress";
   if (/\b(used to|anymore|miss|remember)\b/.test(lower)) return "nostalgia";

@@ -21,24 +21,40 @@ const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolve
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "news-snippet-jobs.json");
 const limit = Number(args.limit ?? 200);
 const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 8);
+const cityFocus = args["city-focus"] ?? null;
+const fallbackMinLiveAlignmentScore = Number(args["fallback-min-live-alignment"] ?? (cityFocus ? 0 : minLiveAlignmentScore));
 const seed = args.seed ?? "news-snippets";
 const rand = createSeededRandom(seed);
 
-const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
+const scoredSnippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
   .map(normalizeSnippet)
+  .filter((snippet) => !cityFocus || snippet.cityId === cityFocus)
   .filter((snippet) => snippet.body.length > 0 || snippet.headline.length > 0)
   .map((snippet) => ({
     ...snippet,
     sourceSignalScore: scoreNewsSnippet(snippet),
     liveAlignment: scoreNewsSnippetLiveAlignment(snippet),
   }))
-  .filter((snippet) => snippet.sourceSignalScore >= 4)
+  .filter((snippet) => snippet.sourceSignalScore >= (cityFocus ? 2 : 4));
+
+const primarySnippets = scoredSnippets
   .filter((snippet) => snippet.liveAlignment.score >= minLiveAlignmentScore)
   .sort((left, right) => compareBySignal(left, right, rand))
   .slice(0, limit);
 
+const primaryKeys = new Set(primarySnippets.map(newsSnippetKey));
+const fallbackSnippets = cityFocus && primarySnippets.length < limit
+  ? scoredSnippets
+      .filter((snippet) => !primaryKeys.has(newsSnippetKey(snippet)))
+      .filter((snippet) => snippet.liveAlignment.score >= fallbackMinLiveAlignmentScore)
+      .sort((left, right) => compareBySignal(left, right, rand))
+      .slice(0, limit - primarySnippets.length)
+  : [];
+
+const snippets = [...primarySnippets, ...fallbackSnippets];
+
 // Cap commute_thought at 25% per city to ensure topic diversity
-const commuteCapPerCity = Math.max(1, Math.ceil(limit * 0.25 / 4));
+const commuteCapPerCity = Math.max(1, Math.ceil(limit * 0.25 / (cityFocus ? 1 : 4)));
 const commuteCountByCity = {};
 const snippetsBalanced = snippets.filter((snippet) => {
   const topic = inferTopic(snippet);
@@ -165,6 +181,10 @@ function normalizeSnippet(raw) {
     publishedAt: cleanText(raw.publishedAt ?? raw.observedAt ?? ""),
     language: normalizeSourceLanguage(raw.language ?? raw.sourceLanguage ?? "en"),
   };
+}
+
+function newsSnippetKey(snippet) {
+  return `${snippet.cityId}:${comparable(snippet.headline || snippet.body).slice(0, 90)}`;
 }
 
 function inferLane(snippet) {
@@ -462,4 +482,3 @@ function shuffle(items, randFn) {
   }
   return copy;
 }
-

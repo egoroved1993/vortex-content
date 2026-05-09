@@ -21,11 +21,13 @@ const inputPath = args.input ? path.resolve(process.cwd(), args.input) : resolve
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "forum-snippet-jobs.json");
 const limit = Number(args.limit ?? 200);
 const minLiveAlignmentScore = Number(args["min-live-alignment"] ?? 4);
+const cityFocus = args["city-focus"] ?? null;
 const seed = args.seed ?? "forum-snippets";
 const rand = createSeededRandom(seed);
 
 const snippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), rand)
   .map(normalizeSnippet)
+  .filter((snippet) => !cityFocus || snippet.cityId === cityFocus)
   .filter((snippet) => snippet.body.length > 0)
   .map((snippet) => ({
     ...snippet,

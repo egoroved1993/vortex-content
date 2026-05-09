@@ -19,13 +19,15 @@ export const CITY_SOURCES = [
   },
   {
     id: "barcelona",
-    subs: ["barcelona", "barcelonaexpats", "SpainExpats", "digitalnomad"],
+    subs: ["barcelona", "barcelonaexpats", "SpainExpats", "digitalnomad", "Catalunya"],
     keyword: "barcelona",
     cityWords: ["barcelona", "bcn", "gothic quarter", "barri gòtic", "gràcia", "gracia", "eixample", "el raval", "raval", "poblenou", "sants", "montjuïc", "montjuic", "sagrada", "passeig de gràcia", "rambla", "barceloneta", "el born", "poble sec", "lesseps", "rodalies", "fgc", "tmb", "boqueria", "parc güell", "guell", "tibidabo", "catalan", "català"],
   },
 ];
 
 const EN_WORDS = ["the ", " and ", " is ", " in ", " it ", " was ", " for ", " you ", " are ", " that "];
+const ES_WORDS = [" que ", " de ", " en ", " la ", " el ", " los ", " las ", " una ", " un ", " para ", " con ", " pero ", " porque ", " como "];
+const CA_WORDS = [" que ", " de ", " en ", " la ", " el ", " els ", " les ", " una ", " un ", " per ", " amb ", " però ", " perquè ", " com "];
 
 const BLOCK_WORDS = [
   "ukraine", "russia", "military", "killed", "attack", "war", "troops",
@@ -45,6 +47,11 @@ const BLOCK_WORDS = [
   // Website/link artifacts
   "this website is", "visit our", "follow us", "dm us", "dm me",
   "www.", "http", ".com", ".net", ".org", ".io",
+  "automoderator", "i am a bot", "this action was performed automatically",
+  "contact the moderators", "message the moderators", "subreddit",
+  "removed for being", "low-effort request", "use the search function",
+  "self-serving questions", "widely relevant to residents", "will be removed",
+  "question is very broad", "i mainly work with", "building my client base",
 ];
 
 const ADVICE_STARTS = [
@@ -54,6 +61,43 @@ const ADVICE_STARTS = [
   "anyone recommend", "recommendations for", "recommend a ", "recommend me ",
   "anyone have a", "is there a good", "what are the best", "which is better",
   "how much does", "how much is", "is it worth",
+  "how much do", "is this a scam", "help.",
+  "donde puedo", "dónde puedo", "alguien sabe", "recomendaciones",
+  "me recomiendan", "que recomiendan", "qué recomiendan", "busco ",
+  "necesito ayuda", "ayuda con", "consejos para", "vale la pena",
+  "algu sap", "algú sap", "recomanacions", "on puc", "busco ",
+  "necessito ajuda", "consells per", "val la pena",
+];
+
+const ADVICE_FRAGMENTS = [
+  "has anyone stayed", "can you give me", "general information about",
+  "would appreciate", "would love", "any tips", "any recs", "recs for",
+  "recommendations for", "can anyone suggest", "does anyone know",
+  "thanks for the recommendations", "recommend stopping", "highly recommend",
+  "i'd recommend", "id recommend", "will i be able", "check in for the flight",
+  "drop off our luggage", "help me pick", "pick my hotel", "one night stay",
+  "cruise", "debarkation", "visitor here", "would it be valid",
+  "what should i do", "where should i", "where can i", "how far is it",
+  "how big is", "will i have a hard time", "i'm thinking about staying",
+  "im thinking about staying", "we are going to", "we're going to",
+  "we will be arriving", "we are staying", "i'll be staying",
+  "first time in", "bucket-listing", "bucket listing", "layover",
+  "airport hotel", "from the airport", "trip to", "visiting barcelona",
+  "traveling to", "travelling to", "heading to bcn", "heading to barcelona",
+  "i was wondering if someone could", "anyone who's going", "anyone who is going",
+  "do i go to", "i want to know where", "i want to know how",
+  "forgot something in", "moving soon", "coming to upf", "coming to barcelona",
+  "going to barcelona", "going to bcn", "i am going to barcelona",
+  "i'm going to barcelona", "will be living near bcn",
+  "seeking employment", "searching for a job", "looking for a job",
+  "handyman needed", "currently searching for a job", "lease is coming to an end",
+  "busco pis", "buscant habitació", "buscant habitacion", "busco habitación",
+  "busco habitacion", "em trasllado per feina",
+  "my partner and i", "my family and", "thanks in advance",
+  "alguien sabe", "me recomendáis", "me recomiendan", "qué me recomendáis",
+  "que me recomendais", "alguna recomendación", "alguna recomendacion",
+  "voy a viajar", "viajo a", "primera vez en", "estaré en barcelona",
+  "estare en barcelona", "on puc trobar", "algú sap", "recomanacions per",
 ];
 
 const PERSONAL_WORDS = [
@@ -64,6 +108,13 @@ const PERSONAL_WORDS = [
   "amazing", "beautiful", "weird", "strange", "funny", "honestly",
   "always", "never", "sometimes", "actually", "really", "living",
   "grew up", "years ago", "last week", "noticed", "surprised",
+  "yo ", "mi ", "mis ", "me ", "nos ", "nuestro ", "nuestra ",
+  "hoy", "ayer", "mañana", "manana", "esta mañana", "esta manana",
+  "gente", "calle", "barrio", "vecino", "vecina", "odio", "me encanta",
+  "me parece", "siento", "siempre", "nunca", "a veces", "vivir",
+  "jo ", "em ", "meu ", "meva ", "nostre ", "nostra ", "avui", "ahir",
+  "demà", "dema", "gent", "carrer", "barri", "veí", "veina", "odio",
+  "m'agrada", "em sembla", "sempre", "mai", "a vegades", "viure",
 ];
 
 const DIRECT_MINDPOST_MARKERS = [
@@ -135,12 +186,37 @@ export function isEnglish(text) {
   return hits >= 3;
 }
 
+export function detectSourceLanguage(text, fallback = "en") {
+  const lower = ` ${String(text ?? "").toLowerCase()} `;
+  const cyrillic = (lower.match(/[а-яё]/giu) ?? []).length;
+  if (cyrillic >= 3) return "ru";
+
+  const caAccentHits = (lower.match(/[àèéíïòóúüç·]/giu) ?? []).length;
+  const esAccentHits = (lower.match(/[áéíñóú¿¡]/giu) ?? []).length;
+  const caHits = CA_WORDS.filter((word) => lower.includes(word)).length +
+    (/\b(avui|ahir|demà|dema|això|aixo|aquí|aqui|barri|carrer|lloguer|veïns|veins|rodalies|tmb|fgc|gent)\b/i.test(lower) ? 2 : 0) +
+    (caAccentHits > 0 ? 1 : 0);
+  const esHits = ES_WORDS.filter((word) => lower.includes(word)).length +
+    (/\b(hoy|ayer|mañana|manana|aquí|aqui|barrio|calle|alquiler|vecinos|metro|gente|guiris)\b/i.test(lower) ? 2 : 0) +
+    (esAccentHits > 0 ? 1 : 0);
+  const enHits = EN_WORDS.filter((word) => lower.includes(word)).length;
+
+  if (caHits >= 3 && caHits >= esHits) return "ca";
+  if (esHits >= 3 && esHits > caHits) return "es";
+  if (enHits >= 3) return "en";
+  return fallback;
+}
+
 export function isObservation(text) {
   const lower = text.toLowerCase().trim();
   if (ADVICE_STARTS.some((prefix) => lower.startsWith(prefix))) return false;
+  if (ADVICE_FRAGMENTS.some((fragment) => lower.includes(fragment))) return false;
   if (text.includes("](")) return false;
   const sentences = text.split(/(?<=[.!?])\s+/).filter((sentence) => sentence.length > 8);
   if (sentences.length > 0 && sentences.every((sentence) => sentence.trim().endsWith("?"))) return false;
+  const questionCount = (text.match(/\?/g) ?? []).length;
+  const travelOrAdviceFrame = /\b(recommend|suggest|advice|tips|hotel|airport|station|stay|staying|visit|visiting|travel|trip|layover|arriving|booked|planning|first time|restaurant|anniversary|beach|museum)\b/i.test(lower);
+  if (questionCount >= 2 && travelOrAdviceFrame) return false;
   return true;
 }
 
@@ -155,7 +231,7 @@ export function hasMindpostSignal(text) {
 }
 
 export function hasCityTexture(text) {
-  return /(\d|€|\$|£|queue|rent|coffee|tram|bus|train|metro|tube|bart|muni|sp[aä]ti|pub|barista|landlord|roommate|post office|bike lane|station|platform)/i.test(text);
+  return /(\d|€|\$|£|queue|rent|alquiler|lloguer|coffee|cafe|caf[eèé]|tram|bus|train|tren|metro|tube|bart|muni|rodalies|fgc|tmb|sp[aä]ti|pub|bar|barista|terrace|terraza|terrassa|landlord|roommate|piso|pis|post office|bike lane|carril bici|station|platform|calle|carrer|barrio|barri|tourist|turista|guiri|airbnb)/i.test(text);
 }
 
 export function hasCityConnection(text, citySource) {
@@ -166,10 +242,11 @@ export function hasCityConnection(text, citySource) {
 
 export function isHighSignalPublicText(text, { allowMindpost = true } = {}) {
   const lower = text.toLowerCase();
-  if (!isEnglish(text)) return false;
+  const language = detectSourceLanguage(text, "unknown");
+  if (!["en", "es", "ca"].includes(language)) return false;
   if (BLOCK_WORDS.some((word) => lower.includes(word))) return false;
   if (!isObservation(text)) return false;
-  const realWords = text.split(/\s+/).filter((word) => /^[a-zA-Z]{2,}/.test(word));
+  const realWords = text.split(/\s+/).filter((word) => /^\p{L}{2,}/u.test(word));
   if (realWords.length < 9) return false;
   if (!hasPersonalSignal(text) && !(allowMindpost && hasMindpostSignal(text))) return false;
   const atCount = (text.match(/@\w+/g) ?? []).length;

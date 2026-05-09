@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import { resolveProjectPath } from "./path-utils.mjs";
+
+const execFileAsync = promisify(execFile);
+const USER_AGENT = "VortexApp/1.0 (city pulse builder)";
 
 // Google News RSS — free, no API key, returns today's top stories per city
 const CITY_NEWS_QUERIES = [
@@ -92,17 +97,19 @@ const LOCAL_RSS_FEEDS = [
   { cityId: "london",    url: "https://www.standard.co.uk/rss",                       language: "en", publisher: "Evening Standard" },
   { cityId: "berlin",    url: "https://www.rbb24.de/content/rbb/r24/nachrichten/index.feed", language: "de", publisher: "rbb24" },
   { cityId: "sf",        url: "https://sfist.com/atom.xml",                           language: "en", publisher: "SFist" },
-  { cityId: "barcelona", url: "https://www.ara.cat/rss.xml",                          language: "ca", publisher: "Ara" },
+  { cityId: "barcelona", url: "https://beteve.cat/feed/",                              language: "ca", publisher: "beteve" },
+  { cityId: "barcelona", url: "https://www.ara.cat/rss/",                             language: "ca", publisher: "Ara" },
 ];
 
 const args = parseArgs(process.argv.slice(2));
 const outPath = args.out ? path.resolve(process.cwd(), args.out) : resolveProjectPath("content", "news-snippets.json");
-const maxPerQuery = Number(args["max-per-query"] ?? 4);
-const maxPerCity = Number(args["max-per-city"] ?? 25);
+const cityFocus = args["city-focus"] ?? null;
+const maxPerQuery = Number(args["max-per-query"] ?? (cityFocus ? 8 : 5));
+const maxPerCity = Number(args["max-per-city"] ?? (cityFocus ? 100 : 50));
 
 const allSnippets = [];
 
-for (const cityConfig of CITY_NEWS_QUERIES) {
+for (const cityConfig of CITY_NEWS_QUERIES.filter((entry) => !cityFocus || entry.cityId === cityFocus)) {
   console.log(`\nFetching news for ${cityConfig.cityId}...`);
   const citySnippets = [];
 
@@ -200,22 +207,33 @@ fs.writeFileSync(outPath, `${JSON.stringify(allSnippets, null, 2)}\n`);
 console.log(`\nWrote ${allSnippets.length} news snippets to ${outPath}`);
 
 async function fetchDirectRss(url, limit) {
-  const response = await fetch(url, {
-    headers: { "User-Agent": "VortexApp/1.0 (city pulse builder)" },
-  });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const xml = await response.text();
+  const xml = await fetchText(url);
   return parseRssItems(xml).slice(0, limit);
 }
 
 async function fetchGoogleNewsRss(query, hl, gl, ceid, limit) {
   const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=${hl}&gl=${gl}&ceid=${ceid}`;
-  const response = await fetch(url, {
-    headers: { "User-Agent": "VortexApp/1.0 (city pulse builder)" },
-  });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const xml = await response.text();
+  const xml = await fetchText(url);
   return parseRssItems(xml).slice(0, limit);
+}
+
+async function fetchText(url) {
+  try {
+    const response = await fetch(url, {
+      headers: { "User-Agent": USER_AGENT },
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.text();
+  } catch (fetchError) {
+    try {
+      const { stdout } = await execFileAsync("curl", ["-fsSL", "--max-time", "25", "-A", USER_AGENT, url], {
+        maxBuffer: 8 * 1024 * 1024,
+      });
+      return stdout;
+    } catch (curlError) {
+      throw new Error(`${fetchError.message}; curl fallback failed: ${curlError.message}`);
+    }
+  }
 }
 
 function parseRssItems(xml) {
@@ -249,6 +267,8 @@ function stripHtml(text) {
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(Number.parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, decimal) => String.fromCodePoint(Number.parseInt(decimal, 10)))
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -261,6 +281,11 @@ function normalizeDescription(title, description, source) {
     const sourcePattern = new RegExp(`\\b${escapeRegExp(cleanedSource)}\\b`, "ig");
     cleanedDescription = cleanedDescription.replace(sourcePattern, " ").trim();
   }
+  cleanedDescription = cleanedDescription
+    .replace(/\bAfegeix betev[ée] com a font preferida\b/gi, " ")
+    .replace(/\bThe post .*? appeared first on .*?$/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
   const comparableTitle = comparable(cleanedTitle);
   const comparableDescription = comparable(cleanedDescription);
   if (!comparableDescription || comparableDescription === comparableTitle || comparableDescription.startsWith(comparableTitle)) {

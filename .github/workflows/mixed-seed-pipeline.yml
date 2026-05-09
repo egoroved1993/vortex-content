@@ -143,11 +143,25 @@ jobs:
 
       - name: Refresh public comment corpus
         continue-on-error: true
-        run: node scripts/fetch-reddit-comments.mjs --per-city 80 --out content/public-human-comments.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARGS=( --per-city 160 --limit-per-sub 100 --post-limit-per-sub 100 --out content/public-human-comments.json )
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+          node scripts/fetch-reddit-comments.mjs "${ARGS[@]}"
 
       - name: Refresh city news
         continue-on-error: true
-        run: node scripts/fetch-city-news.mjs --out content/news-snippets.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARGS=( --max-per-query 8 --max-per-city 100 --out content/news-snippets.json )
+          if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
+            ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
+          fi
+          node scripts/fetch-city-news.mjs "${ARGS[@]}"
 
       - name: Show source corpus sizes
         run: |
@@ -176,6 +190,7 @@ jobs:
             --forum-input content/forum-snippets.json
             --signals-input content/city-signals.json
             --news-input content/news-snippets.json
+            --upload-ttl-hours "${{ steps.cfg.outputs.upload_ttl_hours }}"
           )
 
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
@@ -190,7 +205,6 @@ jobs:
               --approved-bank content/approved-bank.json
               --approved-examples content/approved-bank-examples.json
               --approved-rejected content/approved-bank-rejected.json
-              --upload-ttl-hours "${{ steps.cfg.outputs.upload_ttl_hours }}"
               --created-at-mode now
             )
           fi
@@ -375,6 +389,8 @@ jobs:
             content/approved-bank.json
             content/approved-bank-examples.json
             content/approved-bank-rejected.json
+            content/public-human-comments.json
+            content/news-snippets.json
             content/city-pulse.latest.json
             content/place-discovery-jobs.json
             content/place-discovery-candidates.json

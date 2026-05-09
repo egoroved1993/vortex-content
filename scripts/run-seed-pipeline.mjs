@@ -331,6 +331,7 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
         sourceLimit(allocations.public ?? 0, cityFocus),
         "--seed",
         `${seed}:public`,
+        ...(cityFocus ? ["--city-focus", cityFocus] : []),
       ],
     },
     review: {
@@ -346,6 +347,7 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
         sourceLimit(allocations.review ?? 0, cityFocus),
         "--seed",
         `${seed}:review`,
+        ...(cityFocus ? ["--city-focus", cityFocus] : []),
       ],
     },
     forum: {
@@ -361,6 +363,7 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
         sourceLimit(allocations.forum ?? 0, cityFocus),
         "--seed",
         `${seed}:forum`,
+        ...(cityFocus ? ["--city-focus", cityFocus] : []),
       ],
     },
     signals: {
@@ -393,6 +396,7 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
         sourceLimit(allocations.news ?? 0, cityFocus),
         "--seed",
         `${seed}:news`,
+        ...(cityFocus ? ["--city-focus", cityFocus] : []),
       ],
     },
     social: {
