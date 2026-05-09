@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T20:21:51.928Z",
+    "capturedAt": "2026-05-09T22:22:19.137Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 406
+    "totalItems": 407
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T20:21:51.928Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-05-09T22:22:19.137Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays northbound only and MINOR DELAYS southbound only due to train cancellations. Tickets are be"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and Edgware while we fix a signal failure at Chalk Farm. Tickets are be"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Severe delays northbound only and MINOR DELAYS southbound only due to train cancellations. Tickets are be"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Shenfield and Whitechapel while we fix a faulty train at Stratford. London Buses, London Undergrou"
         },
         {
           "source_family": "transport",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.077,
+        "source_item_count": 90,
+        "average_valence": -0.073,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T20:21:51.928Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-09T22:22:19.137Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S9, RE1, S7: Delays 6 trips delayed"
         },
         {
           "source_family": "public",
@@ -130,14 +130,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Its also not comparable. Like at all. Estonia is way smaller making it 100 times easier to get stuff done. Like.....it has less then half of the inhabitants of Berlin alone. Münche"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is an overcast grey, with a gentle drizzle that adds a sheen to the cobblestones, making the city pulse with a muted vitality.. With the BVG strike recently lifted, the pla"
         },
         {
           "source_family": "news",
@@ -154,23 +146,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "A grey sky looms over Berlin, drizzling lightly, giving the city a washed-out appearance that is strangely melancholic yet soothing.. With the BVG strike just lifted, the mood at U"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.014,
+        "source_item_count": 120,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T20:21:51.928Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-09T22:22:19.137Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -187,6 +187,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. SoMa. Saw a guy in a full business suit napping on a Muni seat next to a woman in a tie-dye dress, both oblivious to the rush hour chaos around "
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -218,31 +226,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Columbus Ave has lots of bars and decent eating spots. Close to Chinatown too. Decent burritos you can find at El Farolito without breaking the bank. One of my fav Chinese spots is"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Tenants Union for initial advice, but expect them to recommend lawyering up when issues get more than slightly technical or complex; also the Rent Board office itself can give you "
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.015,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "money",
           "belonging"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T20:21:51.928Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-05-09T22:22:19.137Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -281,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The overcast sky hangs low, with a gentle, persistent drizzle that keeps the streets glistening in muted tones.. People shuffle reluctantly through the rain, with a few hurried con"
+          "excerpt": "The sky is a patchwork of clouds, with bursts of sunlight scattering across the bustling streets, offering a brief warmth amidst the winter chill.. Commuters are exchanging frustra"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 78,
-        "average_valence": -0.018,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.764
+        "freshness_score": 0.768
       }
     }
   ]
