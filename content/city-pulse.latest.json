@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T14:31:14.037Z",
+    "capturedAt": "2026-05-09T15:27:18.641Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 388
+    "totalItems": 387
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T14:31:14.037Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-05-09T15:27:18.641Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Liverpool Street eastbound only due to an earlier faulty train at St.P"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "This north London football stadium is officially home to the most expensive pints - here's how much a beer will set you back at each Premier League ground - Secret London. This nor"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.06,
+        "source_item_count": 89,
+        "average_valence": -0.063,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.844
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T14:31:14.037Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-09T15:27:18.641Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -116,12 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Friedrichshain can you find a Kombucha café next to a punk rock bar, both open until 2 AM. It's the only place wh"
+        },
+        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5, RE2: Delays 2 trips delayed"
+          "excerpt": "Berlin transit RE1, RE7, RE2: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,14 +148,6 @@
           "excerpt": "Is Ilmenau that bad ?. I got admitted to Ilmenau RCSE, but almost everyone I talk to keeps discouraging me from going there 😭 I genuinely haven’t heard many positive experiences y"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg do you find kebab shops with vegan döner that taste just as good as the real thing. It’s a culinary revoluti"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
@@ -158,7 +158,7 @@
       ],
       "metadata": {
         "source_item_count": 113,
-        "average_valence": 0,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "events",
@@ -169,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T14:31:14.037Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-05-09T15:27:18.641Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 110,
-        "average_valence": -0.041,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T14:31:14.037Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-05-09T15:27:18.641Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -278,12 +278,20 @@
           "excerpt": "Al margen de lo que opines de otras regulaciones, lo del alquiler de temporada es claramente una truco de trilero para colar ciertas cosas. A mi hermana le dijeron hace poco que er"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "How to spot a recent arrival. Gràcia. You can spot a recent arrival in Gràcia by the way they still buy bottled water from the corner shop, oblivious to the sweet taste of tap wate"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the clouds, casting a warm glow on the damp streets from last night's rain.. The mood at the train stations is tense, with commuters checking their phones an"
+          "excerpt": "The sun fights through a patchy sky, casting a warm glow on the damp streets from last night's rain.. The atmosphere in Plaça de Catalunya feels tense, with frustrated commuters sh"
         },
         {
           "source_family": "public",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Visita al Museu del Videojoc de Catalunya (MUVIC). Als amants de les consoles i videojocs retro us animo a visitar el Museu del Videojoc de Catalunya (MUVIC), un espai petit però p"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Originalment l'edifici es va construir per emmagatzemar fins a 10.000 tones d'aigua que alimentaven a cascada annexa al Parc de la Ciutadella. Normalment es pot visitar durant el ["
         }
       ],
       "metadata": {
         "source_item_count": 75,
-        "average_valence": -0.025,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.751
+        "freshness_score": 0.758
       }
     }
   ]
