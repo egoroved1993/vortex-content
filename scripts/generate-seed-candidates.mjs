@@ -403,6 +403,14 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
       "\nDo not write a promo, calendar listing, flyer, recommendation, or nightlife guide." +
       "\nNo exact times, no ticket-sales language, no 'you should go' framing." +
       "\nThe post should sound like logistics, irritation, anticipation, overheard chatter, or a tiny plan around the event.";
+  } else if (job.sourceFamily === "place_discovery") {
+    base +=
+      "\n\nFor place-discovery snippets, turn real venue facts into one resident-sized phone post." +
+      "\nDo not output a venue listing, fact sheet, Google summary, caption, review, or recommendation." +
+      "\nNever mention ratings, Google, price level, opening status, or address fragments." +
+      "\nThe content must include a human trace: first person, overheard speech, a tiny annoyance, or a small desire." +
+      "\nIf the target language is Russian, do not keep long Latin venue names in content; use the neighborhood or a natural Cyrillic description and keep exact names only in links." +
+      "\nNo 'worth it', 'worth every cent', 'hidden gem', 'must try', or 'highly recommend'.";
   } else if (["world", "bridge", "signals"].includes(job.sourceFamily)) {
     base +=
       "\n\nUse world/signal context only as pressure on routine, friction, or one overheard-feeling moment." +

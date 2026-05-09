@@ -77,6 +77,9 @@ const PLACE_TEMPLATE_PATTERNS = [
   /\bsmell of\b.{0,80}\bstill (clings|on|in)\b/i,
   /\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b/i,
   /\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b/i,
+  /\b(worth every cent|worth it|no regrets|hidden gem|must[- ]try|highly recommend)\b/i,
+  /\brated \d(?:\.\d)?\/5\b|\bprice level\b|\bcurrently closed\b|\bon Google\b/i,
+  /\b(basement venue|ranked world top|prepared tableside|open since \d{4})\b/i,
 ];
 
 const NOSTALGIA_SLOP_PATTERNS = [
@@ -142,7 +145,11 @@ function analyseRow(row) {
   if (detectedLanguage === "ru" && hasRussianLongLatinPhrase(c)) issues.push("ru_latin_phrase_leakage");
   if (/[а-яё]/iu.test(c) && /\b(завжди|людськи)\b/iu.test(c)) issues.push("ukrainian_leak_in_russian");
   if (/^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(c.trim())) issues.push("weak_hearsay_opener");
-  if (/\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(c)) issues.push("low_signal_payoff");
+  if (/\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle|so there(?:'|’)s hope)\b/i.test(c)) issues.push("low_signal_payoff");
+  if (/\bguirilandia\b/i.test(c)) issues.push("tourist_slogan");
+  if (/\b(interesting people around|pretty shy when it comes|beautiful city)\b/i.test(c)) issues.push("generic_city_copy");
+  if (/^(has changed|s,|and\b|but\b|,\s*)/i.test(c.trim())) issues.push("fragment_opener");
+  if (/:\s*$/.test(c.trim())) issues.push("meme_caption");
 
   return issues;
 }

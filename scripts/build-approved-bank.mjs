@@ -23,7 +23,7 @@ const minFreshness = Number(args["min-freshness"] ?? 3);
 const minNewsFit = Number(args["min-news-fit"] ?? 3);
 const minCompositeScore = Number(args["min-composite-score"] ?? 4);
 const allowedFamilies = parseCsv(args["allowed-families"] ?? "public,review,forum,place_discovery,news,signals,event_discovery");
-const reviewerBuckets = new Set(parseCsv(args["reviewer-buckets"] ?? "ship_now,strong_candidate"));
+const reviewerBuckets = new Set(parseCsv(args["reviewer-buckets"] ?? "ship_now,strong_candidate,candidate"));
 const quotaWeights = parseQuotaWeights(args["source-quotas"] ?? "public:0.52,review:0.12,forum:0.16,place_discovery:0.20,news:0.05,signals:0.05,event_discovery:0.05");
 
 const BLOCKED_ISSUES = new Set([
@@ -65,18 +65,27 @@ const BLOCKED_ISSUES = new Set([
   "headline_or_seo_leak",
   "seo_query_leakage",
   "place_review_template",
+  "place_listing_voice",
   "language_script_mismatch",
   "ukrainian_leakage",
   "nostalgia_slop",
   "weak_hearsay_opener",
   "low_signal_payoff",
+  "has_emoji",
+  "fragment_opener",
+  "meme_caption",
 ]);
 
 const HEADLINE_OR_SEO_RE = /watch the latest .* forecast|\bhouses for rent in [A-Z]|\bSo teuer ist Wohnen\b|\bNeues Quartier entsteht\b|\bsummerlike weather forecast\b|\bBay Area weather shifts from wet to warm\b|\bITV weather forecast\b|\bRead more\b|\bSubscribe now\b/i;
 const PIPELINE_SEAM_RE = /^(?:(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b|(in|en|a|por|per|by|bei)\s+(barcelona|london|berlin|san francisco|sf),\s)|\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/i;
-const PLACE_TEMPLATE_RE = /^just (left|walked out of)\b|\bsmell of\b.{0,80}\bstill (clings|on|in)\b|\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b|\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b/i;
+const PLACE_TEMPLATE_RE = /^just (left|walked out of)\b|\bsmell of\b.{0,80}\bstill (clings|on|in)\b|\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b|\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b|\b(worth every cent|worth it|no regrets|hidden gem|must[- ]try|highly recommend)\b/i;
+const PLACE_LISTING_RE = /\brated \d(?:\.\d)?\/5\b|\bprice level\b|\bcurrently closed\b|\bon Google\b|\b(basement venue|ranked world top|prepared tableside|open since \d{4})\b|^[^.!?]{2,40}\.\s+[^.!?]{2,40}\.\s+/i;
 const NOSTALGIA_SLOP_RE = /\b(год назад|тогда .*теперь|ощущение то же самое|first time in my life|i used to spend a lot of time|used to be .* now)\b/i;
-const DANGLING_END_RE = /\b(the other just|and then just|then just|just kind of|sort of|kind of|because|while|with|to|in|of|from|for|on|at|by|the|a|an|near|through|into|as if|if|when|where|than|that|another|still|already|was|were|is|are|like|he looked|she looked|they looked|it felt|i tried|they said)$/i;
+const LOW_SIGNAL_PAYOFF_RE = /\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle|so there(?:'|’)s hope)\b/i;
+const TOURIST_SLOGAN_RE = /\bguirilandia\b/i;
+const GENERIC_BAD_RE = /\b(interesting people around|pretty shy when it comes|beautiful city)\b/i;
+const FRAGMENT_OPENER_RE = /^(has changed|s,|and\b|but\b|,\s*)/i;
+const DANGLING_END_RE = /\b(the other just|and then just|then just|just kind of|sort of|kind of|because|while|with|to|in|of|from|for|on|at|by|the|a|an|near|through|into|as if|if|when|where|than|that|another|still|already|was|were|is|are|like|carrer|calle|he looked|she looked|they looked|it felt|i tried|they said)$/i;
 
 const candidates = readJson(candidatesPath);
 const reportRaw = readJson(reportPath);
@@ -195,15 +204,16 @@ function decideCandidate(candidate, review) {
   if (hardReject) return { include: false, reason: `content_hard_reject:${hardReject}` };
 
   const scores = review.scores ?? {};
-  if ((scores.mindprint ?? 0) < minMindprint) return { include: false, reason: "mindprint_below_threshold" };
-  if ((scores.stickiness ?? 0) < minStickiness) return { include: false, reason: "stickiness_below_threshold" };
-  if ((scores.ambiguity ?? 0) < minAmbiguity) return { include: false, reason: "ambiguity_below_threshold" };
+  const thresholds = thresholdsFor(candidate);
+  if ((scores.mindprint ?? 0) < thresholds.minMindprint) return { include: false, reason: "mindprint_below_threshold" };
+  if ((scores.stickiness ?? 0) < thresholds.minStickiness) return { include: false, reason: "stickiness_below_threshold" };
+  if ((scores.ambiguity ?? 0) < thresholds.minAmbiguity) return { include: false, reason: "ambiguity_below_threshold" };
   if (requiresLiveContext(candidate.sourceFamily) && (scores.freshness ?? 0) < minFreshness) return { include: false, reason: "freshness_below_threshold" };
   if (requiresNewsFit(candidate.sourceFamily) && (scores.news_fit ?? 0) < minNewsFit) return { include: false, reason: "news_fit_below_threshold" };
 
   const compositeScore = compositeScoreForCandidate(candidate, scores);
-  if (compositeScore < minCompositeScore) {
-    return { include: false, borderline: compositeScore >= minCompositeScore - 0.75, reason: "composite_below_threshold" };
+  if (compositeScore < thresholds.minCompositeScore) {
+    return { include: false, borderline: compositeScore >= thresholds.minCompositeScore - 0.75, reason: "composite_below_threshold" };
   }
 
   return { include: true, reason: "approved", compositeScore };
@@ -398,6 +408,27 @@ function requiresNewsFit(sourceFamily) {
   return ["news", "world", "bridge"].includes(sourceFamily);
 }
 
+function thresholdsFor(candidate) {
+  const sourceFamily = candidate.sourceFamily ?? "";
+  if (["public", "review", "forum"].includes(sourceFamily)) {
+    return {
+      minMindprint: Math.min(minMindprint, 3),
+      minStickiness: Math.min(minStickiness, 2),
+      minAmbiguity: Math.min(minAmbiguity, 2),
+      minCompositeScore: Math.min(minCompositeScore, 3.5),
+    };
+  }
+  if (sourceFamily === "place_discovery") {
+    return {
+      minMindprint: Math.min(minMindprint, 3),
+      minStickiness: Math.min(minStickiness, 3),
+      minAmbiguity: Math.min(minAmbiguity, 2),
+      minCompositeScore: Math.min(minCompositeScore, 3.75),
+    };
+  }
+  return { minMindprint, minStickiness, minAmbiguity, minCompositeScore };
+}
+
 function quotaBucket(candidate) {
   if (candidate.sourceFamily === "review" || candidate.sourceFamily === "place_discovery") return "places";
   if (candidate.sourceFamily === "event_discovery") return "events";
@@ -416,7 +447,14 @@ function detectHardReject(content, candidate) {
   if (HEADLINE_OR_SEO_RE.test(text)) return "headline_or_seo_leak";
   if (PIPELINE_SEAM_RE.test(trimmed)) return "pipeline_seam";
   if (PLACE_TEMPLATE_RE.test(trimmed)) return "place_review_template";
+  if (candidate.sourceFamily === "place_discovery" && PLACE_LISTING_RE.test(trimmed)) return "place_listing_voice";
   if (NOSTALGIA_SLOP_RE.test(trimmed)) return "nostalgia_slop";
+  if (LOW_SIGNAL_PAYOFF_RE.test(text)) return "low_signal_payoff";
+  if (TOURIST_SLOGAN_RE.test(text)) return "tourist_slogan";
+  if (GENERIC_BAD_RE.test(text)) return "generic_city_copy";
+  if (/\p{Emoji_Presentation}/u.test(text)) return "has_emoji";
+  if (FRAGMENT_OPENER_RE.test(trimmed)) return "fragment_opener";
+  if (/:\s*$/.test(trimmed)) return "meme_caption";
   if (detectedLanguage === "ru" && !/[а-яё]/iu.test(text) && /[a-z]{3,}/i.test(text)) return "language_script_mismatch";
   if (detectedLanguage === "ru" && hasRussianLongLatinPhrase(text)) return "ru_latin_phrase_leakage";
   if (/[а-яё]/iu.test(text) && /\b(завжди|людськи)\b/iu.test(text)) return "ukrainian_leakage";

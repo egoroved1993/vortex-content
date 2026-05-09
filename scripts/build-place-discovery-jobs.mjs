@@ -48,6 +48,7 @@ const allPlaces = shuffle([...fetchedPlaces, ...curatedPlaces], rand);
 const seen = new Set();
 const places = allPlaces.filter((p) => {
   if (cityFocus && p.cityId !== cityFocus) return false;
+  if (!isUsablePlace(p)) return false;
   const key = `${p.cityId}:${p.name.toLowerCase().slice(0, 30)}`;
   if (seen.has(key)) return false;
   seen.add(key);
@@ -215,6 +216,8 @@ function buildPlacePrompt({ place, city, style, mapsUrl, targetLanguage }) {
     "- One concrete specific detail: price, dish, object, moment, line of dialogue",
     "- Do NOT write a review, recommendation, or 'hidden gem' copy",
     "- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary",
+    "- Never output a listing/fact sheet: no ratings, no Google score, no price level, no 'currently closed', no address fragments",
+    "- The content must include a human trace: first person, overheard speech, or one tiny annoyance/desire",
     "- Write entirely in the target language; do not mix English glue into Spanish/Catalan/Russian/German",
     "- If target language is Russian, do not keep the exact Latin venue name inside content unless it is very short; describe it naturally or use Cyrillic. Exact links/labels keep the real name.",
     "- Sound like you typed it on the way home, not like you're writing a caption",
@@ -230,6 +233,21 @@ function buildPlacePrompt({ place, city, style, mapsUrl, targetLanguage }) {
 
 function buildRawSnippet(place) {
   return [place.name, place.neighborhood, place.fact].filter(Boolean).join(". ");
+}
+
+function isUsablePlace(place) {
+  const name = String(place.name ?? "");
+  const category = String(place.category ?? "");
+  const neighborhood = String(place.neighborhood ?? "");
+  const fact = String(place.fact ?? "");
+  const combined = `${name} ${category} ${neighborhood} ${fact}`.toLowerCase();
+
+  if (!place.cityId || !name.trim()) return false;
+  if (/\b(hotel|hostel|aparthotel|generator|abba)\b/i.test(combined)) return false;
+  if (/^\d+(?:-\d+)?$/.test(neighborhood.trim())) return false;
+  if (/\brated \d(?:\.\d)?\/5\b/i.test(fact)) return false;
+  if (/\b(price level|currently closed|google)\b/i.test(fact)) return false;
+  return true;
 }
 
 function buildMapsUrl(place) {

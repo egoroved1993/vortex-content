@@ -126,7 +126,7 @@ runNode(path.join(projectRoot, "scripts", "build-approved-bank.mjs"), [
   "--min-per-city",
   args["min-per-city"] ?? (cityFocus ? "0" : "12"),
   "--reviewer-buckets",
-  args["reviewer-buckets"] ?? "ship_now,strong_candidate",
+  args["reviewer-buckets"] ?? "ship_now,strong_candidate,candidate",
   "--representative-count",
   args["representative-count"] ?? "8",
 ]);

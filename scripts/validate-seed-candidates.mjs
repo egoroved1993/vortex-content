@@ -132,11 +132,15 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   const truncatedOutput = looksTruncatedOutput(content, contentLower);
   const headlineOrSeoLeak = looksHeadlineOrSeoLeak(content);
   const placeReviewTemplate = looksPlaceReviewTemplate(content);
+  const placeListingVoice = candidate.sourceFamily === "place_discovery" && looksPlaceDiscoveryListing(content);
   const languageScriptMismatch = hasLanguageScriptMismatch(detectedLanguage, content);
   const ukrainianLeakage = hasUkrainianLeakage(content);
   const nostalgiaSlop = looksNostalgiaSlop(contentLower);
   const weakHearsayOpener = /^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(content.trim());
-  const lowSignalPayoff = /\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(content);
+  const lowSignalPayoff = /\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle|so there(?:'|’)s hope)\b/i.test(content);
+  const hasEmoji = /\p{Emoji_Presentation}/u.test(content);
+  const fragmentOpener = /^(has changed|s,|and\b|but\b|,\s*)/i.test(content.trim());
+  const memeCaption = /:\s*$/.test(content.trim());
 
   const issues = [];
   if (!content) issues.push("empty_content");
@@ -176,11 +180,15 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
   if (truncatedOutput) issues.push("truncated_output");
   if (headlineOrSeoLeak) issues.push("headline_or_seo_leak");
   if (placeReviewTemplate) issues.push("place_review_template");
+  if (placeListingVoice) issues.push("place_listing_voice");
   if (languageScriptMismatch) issues.push("language_script_mismatch");
   if (ukrainianLeakage) issues.push("ukrainian_leakage");
   if (nostalgiaSlop) issues.push("nostalgia_slop");
   if (weakHearsayOpener) issues.push("weak_hearsay_opener");
   if (lowSignalPayoff) issues.push("low_signal_payoff");
+  if (hasEmoji) issues.push("has_emoji");
+  if (fragmentOpener) issues.push("fragment_opener");
+  if (memeCaption) issues.push("meme_caption");
   if (!stickySignal) issues.push("low_stickiness");
   if (requiresFreshContext(candidate) && !signals.liveContext && !signals.freshnessMarker) issues.push("low_freshness");
   if (requiresNewsFit(candidate) && !signals.newsCycleFit) issues.push("detached_from_news_cycle");
@@ -253,9 +261,9 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     "repetitive_anchor", "instruction_leakage", "article_voice", "rhetorical_question",
     "instructional_advice", "generic_event_reference", "event_cliche", "banned_opener", "synthetic_collective",
     "event_listing_voice", "city_language_mismatch", "ru_latin_leakage", "ru_latin_phrase_leakage",
-    "pipeline_seam", "truncated_output", "headline_or_seo_leak", "place_review_template",
+    "pipeline_seam", "truncated_output", "headline_or_seo_leak", "place_review_template", "place_listing_voice",
     "language_script_mismatch", "ukrainian_leakage", "nostalgia_slop", "weak_hearsay_opener",
-    "low_signal_payoff", "too_long",
+    "low_signal_payoff", "has_emoji", "fragment_opener", "meme_caption", "too_long",
   ];
   const hasHardBlock = hardBlocks.some((b) => issues.includes(b));
 
@@ -305,11 +313,15 @@ export function scoreCandidate(candidate, index = 0, cityAnchorsLower = cityAnch
     !issues.includes("truncated_output") &&
     !issues.includes("headline_or_seo_leak") &&
     !issues.includes("place_review_template") &&
+    !issues.includes("place_listing_voice") &&
     !issues.includes("language_script_mismatch") &&
     !issues.includes("ukrainian_leakage") &&
     !issues.includes("nostalgia_slop") &&
     !issues.includes("weak_hearsay_opener") &&
     !issues.includes("low_signal_payoff") &&
+    !issues.includes("has_emoji") &&
+    !issues.includes("fragment_opener") &&
+    !issues.includes("meme_caption") &&
     !issues.includes("low_freshness") &&
     !issues.includes("detached_from_news_cycle") &&
     !issues.includes("too_long") &&
@@ -394,6 +406,11 @@ function looksGeneric(contentLower) {
     "hipster or overpriced",
     "only in kreuzberg",
     "late-night snack and local art",
+    "interesting people around",
+    "pretty shy when it comes",
+    "beautiful city",
+    "so there's hope",
+    "so there’s hope",
   ];
   return genericPhrases.some((phrase) => contentLower.includes(phrase));
 }
@@ -587,6 +604,9 @@ function looksInstructionalAdvice(contentLower) {
     "bring a drink",
     "charge your",
     "avoid the",
+    "apunteu-vos",
+    "us animo a",
+    "os animo a",
     "не забудь",
     "не забудьте",
     "лучше взять",
@@ -860,6 +880,15 @@ function looksPlaceReviewTemplate(content) {
   if (/\bsmell of\b.{0,80}\bstill (clings|on|in)\b/i.test(text)) return true;
   if (/\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b/i.test(text)) return true;
   if (/\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b/i.test(text)) return true;
+  if (/\b(worth every cent|worth it|no regrets|hidden gem|must[- ]try|highly recommend)\b/i.test(text)) return true;
+  return false;
+}
+
+function looksPlaceDiscoveryListing(content) {
+  const text = String(content ?? "");
+  if (/\brated \d(?:\.\d)?\/5\b|\bprice level\b|\bcurrently closed\b|\bon Google\b/i.test(text)) return true;
+  if (/\b(basement venue|ranked world top|prepared tableside|open since \d{4})\b/i.test(text)) return true;
+  if (/^[^.!?]{2,40}\.\s+[^.!?]{2,40}\.\s+/.test(text) && !/\b(i|i’m|i've|me|my|yo|em|vaig|he|я|мне|меня)\b/i.test(text)) return true;
   return false;
 }
 
@@ -1002,7 +1031,7 @@ function looksTruncatedOutput(content, contentLower) {
 
   if (hasUnbalancedQuotes(trimmed)) return true;
   if (/\b(one said|someone said|he said|she said|they said),?\s+['"][^'"]*$/i.test(trimmed)) return true;
-  if (/\b(and|but|because|while|with|to|in|of|from|for|on|at|by|the|a|an|using|near|through|into|onto|over|under|as if|if|when|where|than|that|another|still|already|was|were|is|are|like)$/i.test(trimmed)) return true;
+  if (/\b(and|but|because|while|with|to|in|of|from|for|on|at|by|the|a|an|using|near|through|into|onto|over|under|as if|if|when|where|than|that|another|still|already|was|were|is|are|like|carrer|calle)$/i.test(trimmed)) return true;
   if (/(?:'s|’s)$/i.test(trimmed)) return true;
   if (/\b(who|what|where|why|how)(?:'s|’s)?$/i.test(trimmed)) return true;
   if (/\b(he|she|they|it|i|we|you)\s+(looked|felt|seemed|thought|wanted|needed|started|kept|tried|asked|said|told|went|got|had)$/i.test(trimmed)) return true;
