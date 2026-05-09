@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T01:44:45.426Z",
+    "capturedAt": "2026-05-09T03:17:58.907Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 229
+    "totalItems": 230
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T01:44:45.426Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-09T03:17:58.907Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 25,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -47,6 +47,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 9 and Sunday 10 May, including Friday and Saturday Night Tube, no service between Cockfosters"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
           "source_family": "public",
@@ -71,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "For theatre (especially musical theatre) Theatre Fan (theatrefanofficial) on Instagram is good to follow. Shaun covers pretty much everything from large scale West End to small fri"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Hackney Central. You think you can catch a bus on a Sunday evening and actually make it on time. Good luck with that, mate."
         }
       ],
       "metadata": {
-        "source_item_count": 47,
-        "average_valence": -0.025,
+        "source_item_count": 48,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T01:44:45.426Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-09T03:17:58.907Z",
+      "mood_score": 0.506,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -121,14 +121,6 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni bus today packed so tight, a guy in a tuxedo was sandwiched between a street performer and a dog with a sweater. Only "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know they're from here if they can name the bus route that runs late night better than their gym schedul"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -151,23 +143,31 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Anaheim has a garbage public transit system. The Bay Area has the best public transit system in California by a long shot. Between BART, Muni, and Busses, you’ll be spending max $1"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "An overcast sky looms heavy, punctuated by a damp chill that hints at rain but holds off just enough to allow fleeting moments of brightness.. BART stations are swarming with frust"
         }
       ],
       "metadata": {
         "source_item_count": 59,
-        "average_valence": -0.006,
+        "average_valence": 0.018,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T01:44:45.426Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-09T03:17:58.907Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -187,12 +187,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "So teuer ist Wohnen am Wasser: Neues Quartier entsteht in Berlin-Köpenick - Berliner Kurier. So teuer ist Wohnen am Wasser: Neues Quartier entsteht in Berlin-Köpenick"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit FEX: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -206,9 +206,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun is breaking through a patchy overcast sky, casting a warm glow on the damp streets from last night's rain.. The mood around the bus stops is cautious, with many commuters g"
+          "excerpt": "The sky hangs heavy with dark clouds, threatening rain but remaining stubbornly dry, casting a moody, reflective light across the streets.. The mood on the U-Bahn is a mix of relie"
         },
         {
           "source_family": "review",
@@ -229,21 +229,21 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.011,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.942
+        "freshness_score": 0.945
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T01:44:45.426Z",
+      "captured_at": "2026-05-09T03:17:58.907Z",
       "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "review": 2,
@@ -264,7 +264,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "A cool breeze fluttered through the streets, carrying the scent of rain yet to arrive, under a sky cloaked in grey clouds.. With the ongoing railway strike, commuters huddle togeth"
+          "excerpt": "The sky is a muted gray, heavy with clouds, promising rain at any moment, while a cool breeze carries the scent of damp earth from recent sprinkles.. The mood on the L4 train is un"
         },
         {
           "source_family": "review",
@@ -288,7 +288,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists assume every bar serves tapas. In Gràcia, you'll find more craft cocktails than patatas bravas if you know where to lo"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is just about the Gaudí sights, but the real charm is in the corner bakeries where grandmas still make pa"
         },
         {
           "source_family": "forum",
@@ -296,7 +296,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. They’re the ones asking for directions to La Sagrada Família while holding a paper map, oblivious to the metro stops nearby."
+          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a recent arrival by the way they order a ‘café con leche’—most locals skip the extra milk and just go for a ‘café’."
         }
       ],
       "metadata": {
@@ -305,7 +305,7 @@
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
         "freshness_score": 0.768
       }
