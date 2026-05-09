@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T05:12:54.146Z",
+    "capturedAt": "2026-05-09T06:54:53.109Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 216
+    "totalItems": 217
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T05:12:54.146Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-05-09T06:54:53.109Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 25,
         "trends": 8,
-        "transport": 2,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays between Willesden Junction and Clapham Junction while we fix a track fault at Imperial Wharf."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -65,14 +73,6 @@
           "excerpt": "For theatre (especially musical theatre) Theatre Fan (theatrefanofficial) on Instagram is good to follow. Shaun covers pretty much everything from large scale West End to small fri"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a gray overcast, threatening rain but holding off for now, creating a dull yet comforting embrace over the bustling streets.. The ambient noise of the city"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 47,
-        "average_valence": -0.056,
+        "source_item_count": 49,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T05:12:54.146Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-09T06:54:53.109Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 25,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -127,9 +126,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The late afternoon sun struggles through grey clouds, creating a muted glow that feels both warm and dreary.. Despite the recent disruptions, the U-Bahn is buzzing again, with comm"
+          "excerpt": "The sky hangs low and gray, drizzling a persistent mist that has everyone pulling their coats tighter around themselves.. With the BVG services resuming after a brief strike, the U"
         },
         {
           "source_family": "public",
@@ -157,20 +156,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.007,
+        "source_item_count": 82,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.947
+        "freshness_score": 0.945
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T05:12:54.146Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-09T06:54:53.109Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -188,12 +187,12 @@
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick fog blankets the city, mingling with the chill of the late afternoon, creating an eerie yet cozy atmosphere as the skyline disappears into the haze.. BART platforms are bus"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know a true local when they can navigate the BART delays and still manage to make it to La Taqueria for "
         },
         {
           "source_family": "review",
@@ -217,32 +216,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
+          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "You could also look at the Castro (it's not \\just\\ gay) For North Beach, make sure you won't be commuting to the peninsula. Downtown and FiDi are a quick walk, but the 4th/king Cal"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 45,
-        "average_valence": -0.02,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T05:12:54.146Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-05-09T06:54:53.109Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -263,9 +262,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, heavy with clouds threatening rain, while a cool breeze reminds everyone that winter isn't over yet.. With rail disruptions due to the ongoing strike, pass"
+          "excerpt": "The sky hangs heavy with grey clouds, threatening rain but holding back, leaving the air thick and humid.. Commuters crowd the platforms at Plaça de Catalunya, their faces a mix of"
         },
         {
           "source_family": "review",
@@ -289,7 +288,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Most tourists think Gràcia is just about Gaudí, but the true magic lies in the tiny plazas where locals sip vermut and ignore t"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all the local bars serve only tapas, but the best are the unmarked ones that just do vermut on tap, no frills."
         },
         {
           "source_family": "forum",
@@ -297,12 +296,12 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a newbie by the way they still try to order a 'café con leche' in the smallest bars, where it's just 'café' or 'cortado' that get"
+          "excerpt": "How to spot a recent arrival. Eixample. You’ll notice them standing at every crosswalk, waiting for the light to change even when no cars are in sight."
         }
       ],
       "metadata": {
         "source_item_count": 41,
-        "average_valence": 0.005,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "tourism",
