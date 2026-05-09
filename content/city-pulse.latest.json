@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T11:24:43.308Z",
+    "capturedAt": "2026-05-09T12:31:12.204Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 316
+    "totalItems": 389
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T11:24:43.308Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-05-09T12:31:12.204Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Camden Town and High Barnet and SEVERE DELAYS between Finchley Central and Mill Hill E"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Suspended Northern Line: No service between Camden Town and High Barnet and SEVERE DELAYS between Finchley Central and Mill Hill E"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -63,44 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "\\> We pay £12.50 an hour so we deserve a good job You're trolling, this is absolutely shit tier pay for cleaning around London. Not cleaning the toilet after you take a shit is jus"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "This north London football stadium is officially home to the most expensive pints - here's how much a beer will set you back at each Premier League ground - Secret London. This nor"
         }
       ],
       "metadata": {
-        "source_item_count": 74,
-        "average_valence": -0.06,
+        "source_item_count": 91,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T11:24:43.308Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-09T12:31:12.204Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,15 +121,31 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. The smell of fresh kebabs mixing with the sound of street musicians at Hermannplatz late at night—only then did I know I belo"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "The proposed draft model is indeed a stupid compromise. Finnish, Swiss, and Israeli models are not that bad, though: give people enough training without disadvantaging them against"
+          "excerpt": "Same the same scene, most Sbahn stations are filled with people not in a good state."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Is Ilmenau that bad ?. I got admitted to Ilmenau RCSE, but almost everyone I talk to keeps discouraging me from going there 😭 I genuinely haven’t heard many positive experiences y"
         },
         {
           "source_family": "news",
@@ -138,44 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The skies are a patchwork of gray and blue, with bursts of sunlight casting fleeting shadows on wet pavement from earlier rain.. After a brief strike, people are cautiously optimis"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.021,
+        "source_item_count": 113,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T11:24:43.308Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-09T12:31:12.204Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 44,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,65 +188,66 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only a true local knows the sweet spot for burritos on 24th is near the laundromat, not the fancy taco truck"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "Waymos blocked roads and caused chaos during San Francisco power outage - NBC Bay Area. Waymos blocked roads and caused chaos during San Francisco power outage"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a grim gray blanket, cloaking the city in an unexpected chill, while sharp gusts of wind whip through the streets.. BART stations are crowded and restless, with commuter"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+          "recency_weight": 1.04,
+          "excerpt": "Hi friends, I have a parking spot for monthly rent in Mission Bay, lmk if you interested"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I guess I've lived here too long. I use a hoodie and only a hoodie 365 days a year, regardless of anything. Early morning, late night, rain storm -- hoodie. I love the cold,wet win"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "What all the 28 28R and 29 need for these next 3 days.. Expect heavy delays. Please be extra thankful for the drivers, it’s going to be rough for the weekend. \\-Muni Operator"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How do you vet SF landlords?. Currently in PacHeights and our landlord didn’t have heat for us in the winter due to poor boiler maintenance and still has the nerve to threaten tena"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Good Bar To Find Mother Earth Brewing Cali Creamin'/Creamsicle On Tap?. traveling back into SF and want to get a beer I tried a while back during an internship in college! I think "
         }
       ],
       "metadata": {
-        "source_item_count": 69,
-        "average_valence": -0.026,
+        "source_item_count": 110,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.783
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T11:24:43.308Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-05-09T12:31:12.204Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -256,59 +257,60 @@
       },
       "languages": [
         "ca",
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yes because the homeless people are all catalans who can't afford rent for sure ... Stop the stupid guiri bashing, they're not the ones who caused this systematic issue"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Al margen de lo que opines de otras regulaciones, lo del alquiler de temporada es claramente una truco de trilero para colar ciertas cosas. A mi hermana le dijeron hace poco que er"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The overcast sky hangs heavily above, threatening rain while a brisk wind swirls through the streets, carrying the faint scent of wet asphalt.. With the ongoing strike of Rodalies "
+          "excerpt": "The sky over Barcelona is a steely gray, casting a muted light that seems to amplify the hues of the bustling streets below.. Commuters at the Plaça de Catalunya are visibly frustr"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
+          "excerpt": "Visita al Museu del Videojoc de Catalunya (MUVIC). Als amants de les consoles i videojocs retro us animo a visitar el Museu del Videojoc de Catalunya (MUVIC), un espai petit però p"
         },
         {
-          "source_family": "review",
-          "source_origin": "travel_forum_snippet",
-          "language": "en",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "brunch cafe. El Born. Perfect place to watch twelve people cosplay moving to Barcelona for six months. Food fine, prices targeted at people who say barrio like they invented the wo"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often think they can stroll into a vermut place at 6 PM for a seat, but locals know that’s when they’re packed, especi"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. They’re the ones still fumbling with their SIM cards outside the phone shop, completely ignoring the local 'perdona' before asking for help."
+          "excerpt": "Originalment l'edifici es va construir per emmagatzemar fins a 10.000 tones d'aigua que alimentaven a cascada annexa al Parc de la Ciutadella. Normalment es pot visitar durant el ["
         }
       ],
       "metadata": {
-        "source_item_count": 66,
-        "average_valence": -0.005,
+        "source_item_count": 75,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.705
+        "freshness_score": 0.755
       }
     }
   ]
