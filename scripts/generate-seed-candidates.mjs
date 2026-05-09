@@ -1315,27 +1315,9 @@ function sanitizePublicContent(job, candidateText) {
 function ensurePlainPublicAnchor(job, text) {
   const candidate = cleanGeneratedText(text);
   if (!candidate) return "";
-  if (hasAnchorSignal(job, candidate)) return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 200);
-
-  const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "");
-  if (!cityName) return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 200);
-
-  const language = normalizeLanguageCode(job.rawSnippetLanguage ?? "en");
-  const suffix = language === "ca"
-    ? `a ${cityName}`
-    : language === "es"
-      ? `en ${cityName}`
-      : language === "de"
-        ? `in ${cityName}`
-        : `in ${cityName}`;
-
-  return appendAnchorSuffix(candidate, suffix, job.lane === "mind_post" ? 220 : 200);
-}
-
-function appendAnchorSuffix(text, suffix, maxChars) {
-  const base = cleanGeneratedText(text).replace(/[.!?]+$/g, "").trim();
-  const withSuffix = `${base} ${suffix}`.replace(/\s+/g, " ").trim();
-  return enforceCharacterLimit(withSuffix, maxChars);
+  // Do not append city labels like "... en Barcelona"; validator correctly treats
+  // that as a pipeline seam. If the source has no natural anchor, let review reject it.
+  return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 200);
 }
 
 function normalizeLanguageCode(value) {
@@ -1898,13 +1880,22 @@ function injectAnchor(job, text) {
   if (!candidate) return "";
   const anchor = cleanGeneratedText(job.cityAnchor ?? "");
   const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "");
+  const place = anchor || cityName || "this block";
+  const language = normalizeLanguageCode(job.rawSnippetLanguage ?? "en");
+  const cityLabelRe = cityName ? new RegExp(`^${escapeRegExp(cityName)}$`, "i") : null;
+  const placeIsCity = cityLabelRe?.test(place) ?? false;
 
-  if (job.rawSnippetLanguage === "en") {
-    const place = anchor || cityName || "this block";
-    return `on ${place} ${candidate}`.replace(/\s+/g, " ").trim();
+  if (language === "es") {
+    return `${placeIsCity ? `en ${place}` : `por ${place}`}, ${candidate}`.replace(/\s+/g, " ").trim();
+  }
+  if (language === "ca") {
+    return `${placeIsCity ? `a ${place}` : `per ${place}`}, ${candidate}`.replace(/\s+/g, " ").trim();
+  }
+  if (language === "de") {
+    return `${placeIsCity ? `in ${place}` : `bei ${place}`}, ${candidate}`.replace(/\s+/g, " ").trim();
   }
 
-  return `${candidate} ${cityName || anchor}`.replace(/\s+/g, " ").trim();
+  return `${placeIsCity ? `in ${place}` : `by ${place}`}, ${candidate}`.replace(/\s+/g, " ").trim();
 }
 
 function freshnessPrefixFor(job) {
