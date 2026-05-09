@@ -1145,6 +1145,9 @@ function sanitizeGeneratedContent(job, value) {
   if (jsonWrapMatch) {
     cleaned = jsonWrapMatch[1].replace(/\\n/g, " ").replace(/\\"/g, '"').trim();
   }
+  if (job.sourceFamily === "public") {
+    return sanitizePublicContent(job, cleaned);
+  }
   if (isMinimalSalvageFamily(job.sourceFamily)) {
     return sanitizeMinimalSalvageContent(job, cleaned);
   }
@@ -1266,7 +1269,7 @@ function cleanSourceFallback(job) {
 }
 
 function sanitizeMinimalSalvageContent(job, candidateText) {
-  const maxChars = job.sourceFamily === "public" ? 220 : job.lane === "mind_post" ? 400 : 350;
+  const maxChars = job.lane === "mind_post" ? 400 : 350;
   const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
   if (!candidateText || looksPromptLeaked(candidateText)) {
     return sourceCandidate || fallbackContentForMode(job);
@@ -1284,6 +1287,55 @@ function sanitizeMinimalSalvageContent(job, candidateText) {
   if (countSentences(modelCandidate) > Math.max(2, countSentences(sourceCandidate))) return sourceCandidate;
 
   return modelCandidate.length + 8 < sourceCandidate.length ? modelCandidate : sourceCandidate;
+}
+
+function sanitizePublicContent(job, candidateText) {
+  const maxChars = job.lane === "mind_post" ? 220 : 200;
+  const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
+
+  if (!candidateText || looksPromptLeaked(candidateText)) {
+    return ensurePlainPublicAnchor(job, sourceCandidate) || fallbackContentForMode(job);
+  }
+
+  let modelCandidate = sanitizeSourceLikeText(candidateText, maxChars);
+  if (!modelCandidate) {
+    return ensurePlainPublicAnchor(job, sourceCandidate) || fallbackContentForMode(job);
+  }
+  if (hasUnbalancedQuote(modelCandidate)) {
+    return ensurePlainPublicAnchor(job, sourceCandidate) || fallbackContentForMode(job);
+  }
+
+  if (looksTooComposed(modelCandidate) && sourceCandidate && !looksTooComposed(sourceCandidate)) {
+    modelCandidate = sourceCandidate;
+  }
+
+  return ensurePlainPublicAnchor(job, modelCandidate) || fallbackContentForMode(job);
+}
+
+function ensurePlainPublicAnchor(job, text) {
+  const candidate = cleanGeneratedText(text);
+  if (!candidate) return "";
+  if (hasAnchorSignal(job, candidate)) return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 200);
+
+  const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "");
+  if (!cityName) return enforceCharacterLimit(candidate, job.lane === "mind_post" ? 220 : 200);
+
+  const language = normalizeLanguageCode(job.rawSnippetLanguage ?? "en");
+  const suffix = language === "ca"
+    ? `a ${cityName}`
+    : language === "es"
+      ? `en ${cityName}`
+      : language === "de"
+        ? `in ${cityName}`
+        : `in ${cityName}`;
+
+  return appendAnchorSuffix(candidate, suffix, job.lane === "mind_post" ? 220 : 200);
+}
+
+function appendAnchorSuffix(text, suffix, maxChars) {
+  const base = cleanGeneratedText(text).replace(/[.!?]+$/g, "").trim();
+  const withSuffix = `${base} ${suffix}`.replace(/\s+/g, " ").trim();
+  return enforceCharacterLimit(withSuffix, maxChars);
 }
 
 function normalizeLanguageCode(value) {
@@ -1463,10 +1515,17 @@ function looksPromptLeaked(text) {
 }
 
 function isMinimalSalvageFamily(sourceFamily) {
-  return ["public", "review", "forum", "social"].includes(sourceFamily);
+  return ["review", "forum", "social"].includes(sourceFamily);
 }
 
 function generationProfile(job, providerName) {
+  if (job.sourceFamily === "public") {
+    return {
+      temperature: providerName === "xai" ? 0.42 : 0.34,
+      maxTokens: 220,
+    };
+  }
+
   if (isMinimalSalvageFamily(job.sourceFamily)) {
     return {
       temperature: providerName === "xai" ? 0.28 : 0.2,
