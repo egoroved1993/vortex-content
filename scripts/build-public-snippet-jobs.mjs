@@ -14,7 +14,7 @@ import {
   sourceProfiles,
   tones,
 } from "./seed-config.mjs";
-import { inferRelevantAnchor, normalizeSourceLanguage } from "./source-utils.mjs";
+import { normalizeSourceLanguage } from "./source-utils.mjs";
 import { countOverlap, extractContextTokens, mergeContext } from "./validate-seed-candidates.mjs";
 
 const args = parseArgs(process.argv.slice(2));
@@ -88,7 +88,7 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildSnippetAngle(snippet, lane, format),
     moment: buildMomentFromSnippet(snippet),
-    cityAnchor: inferAnchor(sourceExcerpt || snippet.body, city, topicId),
+    cityAnchor: inferPublicAnchor(sourceExcerpt || snippet.body, city),
     textureId: texture.id,
     textureGuidance: texture.guidance,
     rawSnippet: sourceExcerpt || snippet.body,
@@ -159,6 +159,7 @@ function buildSnippetRewritePrompt(job) {
     "If the source is bilingual or repeats the same idea in two languages, choose exactly one language and drop the duplicate.",
     "If the source has a concrete city anchor already, keep one: neighborhood, station, street, transit system, place, or local issue.",
     "If the excerpt has no local anchor, you may add the provided City anchor once, plainly, without turning it into a travel caption.",
+    "Do not prepend synthetic framing like 'on City anchor' or 'at City anchor'. If you use the anchor, make it sound like a normal human phrase.",
     "Do not add a rhetorical question, metaphor, explanation, or cleaner final sentence.",
     "Preserve the source language unless you only need to remove platform scaffolding.",
     "You may only remove platform scaffolding, usernames, explicit reply framing, and obvious filler.",
@@ -312,6 +313,41 @@ function buildSourceExcerpt(body, city, topicId) {
   );
 }
 
+function inferPublicAnchor(body, city) {
+  const text = String(body ?? "");
+  const lower = text.toLowerCase();
+  const explicitAnchors = [
+    "Arc de Triomf",
+    "Raval",
+    "Gràcia",
+    "Gracia",
+    "Eixample",
+    "Poblenou",
+    "Sants",
+    "Barceloneta",
+    "La Ribera",
+    "El Born",
+    "Gòtic",
+    "Gotic",
+    "Montjuïc",
+    "Montjuic",
+    "Parc Güell",
+    "Park Güell",
+    "Sagrada Familia",
+    "Sagrada Família",
+    "Palau de la Música",
+    "Ciutadella",
+    "Rodalies",
+    "FGC",
+    "TMB",
+    "metro",
+    "Barcelona",
+    "BCN",
+  ];
+  const match = explicitAnchors.find((anchor) => lower.includes(anchor.toLowerCase()));
+  return match ?? city?.name ?? "Barcelona";
+}
+
 function splitSourceChunks(text) {
   const normalized = String(text ?? "").replace(/\s+/g, " ").trim();
   const sentenceChunks = normalized
@@ -412,14 +448,6 @@ function buildMomentFromSnippet(snippet) {
   return snippet.laneHint === "mind_post"
     ? "The speaker is thinking in public rather than merely reporting a scene."
     : "The speaker is reacting to one city moment that stuck to them.";
-}
-
-function inferAnchor(body, city, topicId) {
-  return inferRelevantAnchor({
-    text: body,
-    city,
-    topicId,
-  });
 }
 
 function toneWeight(toneId, text) {

@@ -252,11 +252,11 @@ function looksArticleLinkPost(row) {
 }
 
 function looksToxicOrCultureWarSnippet(lower) {
-  return /(lumpen|mendigos|moros|moro|panchitos|sudacas|ya sabes qui[eé]n|racisme del personatge|racismo del personaje|acabar amb els catalans|acabar con los catalanes|destruir la identitat catalana|coloniz|colonitzat|franquista|vox|pp y vox|pp i vox)/i.test(lower);
+  return /(lumpen|mendigos|moros|moro|panchitos|sudacas|ya sabes qui[eé]n|racisme del personatge|racismo del personaje|acabar amb els catalans|acabar con los catalanes|destruir la identitat catalana|coloniz|colonitzat|franquista|nacionalista|vox|pp y vox|pp i vox|l[eé]rida|marxismo|pol[ií]ticos la hayan destrozado|siempre queda madrid)/i.test(lower);
 }
 
 function looksPersonalEmergencyOrClassified(lower) {
-  return /(need a couch|busco catalans disposats|dm\b|whatsapp|stopped a girl|missed connection|escribidme|escríbeme|casting presencial|càsting presencial|hombres entre|homes entre|seeking employment|looking for a job|busco trabajo|busco feina|website i made|introducing what2book|estoy validando una solución|estic validant|regalo 10|dinar gratu[iï]t|free lunch|deixa'm un comentari|te la comparteixo|responded a este formulario|respon aquest formulari)/i.test(lower);
+  return /(need a couch|busco catalans disposats|dm\b|whatsapp|stopped a girl|missed connection|escribidme|escríbeme|casting presencial|càsting presencial|hombres entre|homes entre|seeking employment|looking for a job|busco trabajo|busco feina|website i made|introducing what2book|estoy validando una solución|estic validant|regalo 10|dinar gratu[iï]t|free lunch|deixa'm un comentari|te la comparteixo|responded a este formulario|respon aquest formulari|si alguien cumple el perfil|conoce a alguien|me ayudar[ií]a much[ií]simo|lo inscribo|porfa alguien|alguien podria escribir|alguien podría escribir|cuadros hecho en barcelona|soy un artista italiano|partit futbol 7|deixo el link|aqui dejo el link|secci[oó]n 102|section 102|rds instead)/i.test(lower);
 }
 
 function looksQuestionOrResearchSnippet(lower) {
@@ -265,7 +265,7 @@ function looksQuestionOrResearchSnippet(lower) {
 }
 
 function looksTouristOrMetaSnippet(lower) {
-  return /\b(my dream to visit|during my visit|not from barcelona|first time in barcelona|visito barcelona|visita a barcelona|this is a community for people who live here|read the rules|tourist photos nonstop|focus closely on any pixel|not sure what you did|different title|i wrote it because i like writing)\b/i.test(lower);
+  return /\b(my dream to visit|during my visit|not from barcelona|first time in barcelona|visito barcelona|visita a barcelona|estar[eé] 5 d[ií]as|estare 5 dias|i'?m glad you could visit|this is a community for people who live here|read the rules|tourist photos nonstop|focus closely on any pixel|not sure what you did|different title|i wrote it because i like writing|el meu comentari|my post was to show love)\b/i.test(lower);
 }
 
 function hasBarcelonaLocalTrace(lower) {
