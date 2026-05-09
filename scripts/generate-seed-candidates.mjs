@@ -1659,8 +1659,10 @@ function buildLocalRepairVariants(job, text) {
   const basis = sourceText || cleanGeneratedText(text);
   const variants = [];
 
-  const anchored = buildFreshAnchoredRepair(job, basis);
-  if (anchored) variants.push(anchored);
+  if (job.sourceFamily !== "public") {
+    const anchored = buildFreshAnchoredRepair(job, basis);
+    if (anchored) variants.push(anchored);
+  }
 
   const overheard = buildOverheardRepair(job, basis);
   if (overheard) variants.push(overheard);

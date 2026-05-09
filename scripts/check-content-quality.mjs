@@ -67,6 +67,7 @@ const HEADLINE_LEAK_PATTERNS = [
 
 const PIPELINE_SEAM_PATTERNS = [
   /^(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b/i,
+  /^(in|en|a|por|per|by|bei)\s+(barcelona|london|berlin|san francisco|sf),\s/i,
   /\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/i,
   /\b(this morning|today|tonight|heute|hoy|avui)\b.{0,80}\bthe\b.{0,120}\bthing (made me|had me|still turned it into)\b/i,
 ];

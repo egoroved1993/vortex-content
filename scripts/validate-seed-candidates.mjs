@@ -888,6 +888,10 @@ function looksPipelineSeam(content, contentLower, cityId) {
     return true;
   }
 
+  if (/^(in|en|a|por|per|by|bei)\s+(barcelona|london|berlin|san francisco|sf),\s/i.test(trimmed)) {
+    return true;
+  }
+
   if (/\bi noticed\s+(everyone|the internet|people keep|a bunch of|travel frustration|sports discourse)\b/i.test(trimmed)) {
     return true;
   }
