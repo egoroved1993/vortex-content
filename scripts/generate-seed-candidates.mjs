@@ -1882,8 +1882,7 @@ function injectAnchor(job, text) {
   const cityName = cleanGeneratedText(job.cityName ?? job.cityId ?? "");
   const place = anchor || cityName || "this block";
   const language = normalizeLanguageCode(job.rawSnippetLanguage ?? "en");
-  const cityLabelRe = cityName ? new RegExp(`^${escapeRegExp(cityName)}$`, "i") : null;
-  const placeIsCity = cityLabelRe?.test(place) ?? false;
+  const placeIsCity = Boolean(cityName && place.toLowerCase() === cityName.toLowerCase());
 
   if (language === "es") {
     return `${placeIsCity ? `en ${place}` : `por ${place}`}, ${candidate}`.replace(/\s+/g, " ").trim();
