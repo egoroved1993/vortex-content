@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T06:54:53.109Z",
+    "capturedAt": "2026-05-09T07:41:37.835Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 217
+    "totalItems": 219
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T06:54:53.109Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-05-09T07:41:37.835Z",
+      "mood_score": 0.477,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 4,
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 25,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "For theatre (especially musical theatre) Theatre Fan (theatrefanofficial) on Instagram is good to follow. Shaun covers pretty much everything from large scale West End to small fri"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Houses for Rent in London: What International Renters Need to Know - Estate Agent Today. Houses for Rent in London: What International Renters Need to Know"
         }
       ],
       "metadata": {
-        "source_item_count": 49,
-        "average_valence": -0.066,
+        "source_item_count": 51,
+        "average_valence": -0.067,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T06:54:53.109Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-09T07:41:37.835Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -126,9 +126,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.536,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs low and gray, drizzling a persistent mist that has everyone pulling their coats tighter around themselves.. With the BVG services resuming after a brief strike, the U"
+          "excerpt": "The late autumn sun filters through grey clouds, casting a soft glow on the damp pavement.. After a rough week, the U-Bahn is packed again, but there's a palpable relief among comm"
         },
         {
           "source_family": "public",
@@ -157,19 +157,19 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.003,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.945
+        "freshness_score": 0.939
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T06:54:53.109Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-05-09T07:41:37.835Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -186,6 +186,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell a local when they still call it the 'BART' and not 'the train'—that love for the broken system "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy pull a full-on yoga routine in the back of a packed Muni bus. Everyone just awkwardly pretended it was normal. Classic San"
+        },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
@@ -209,39 +225,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens protest eviction of 3 disabled seniors from rent-controlled apartment in San Francisco - ABC7 San Francisco. Dozens protest eviction of 3 disabled seniors from rent-controll"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Dozens of S.F. tenants stunned by eviction notices despite paying rent - San Francisco Chronicle. Dozens of S.F. tenants stunned by eviction notices despite paying rent"
         }
       ],
       "metadata": {
         "source_item_count": 45,
-        "average_valence": -0.04,
+        "average_valence": -0.076,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.835
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T06:54:53.109Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-05-09T07:41:37.835Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -262,9 +262,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with grey clouds, threatening rain but holding back, leaving the air thick and humid.. Commuters crowd the platforms at Plaça de Catalunya, their faces a mix of"
+          "excerpt": "The sky is a washed-out gray, heavy with clouds threatening rain, while a brisk wind carries the scent of the nearby sea.. The mood on the Rodalies train is tense, with commuters f"
         },
         {
           "source_family": "review",
@@ -288,7 +288,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all the local bars serve only tapas, but the best are the unmarked ones that just do vermut on tap, no frills."
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all bars have tapas at the same time, but locals know it's all about the after-work pintxos at 8, not at 10."
         },
         {
           "source_family": "forum",
@@ -296,12 +296,12 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Eixample. You’ll notice them standing at every crosswalk, waiting for the light to change even when no cars are in sight."
+          "excerpt": "How to spot a recent arrival. Gràcia. They’re the ones still trying to navigate the tram system without a T10 card, peering at Google Maps like it’s a puzzle that doesn’t match."
         }
       ],
       "metadata": {
         "source_item_count": 41,
-        "average_valence": -0.011,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "tourism",
