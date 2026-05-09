@@ -2234,7 +2234,7 @@ function countBy(items, getKey) {
 }
 
 function inferProvider() {
-  if (process.env.DEEPSEEK_API_KEY && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY && !process.env.XAI_API_KEY) return "deepseek";
+  if ((process.env.DEEPSEEK_API_KEY || process.env.DEEPSEEK) && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY && !process.env.XAI_API_KEY) return "deepseek";
   if (process.env.OPENROUTER_API_KEY && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY && !process.env.XAI_API_KEY) return "openrouter";
   if (process.env.XAI_API_KEY && !process.env.OPENAI_API_KEY && !process.env.ANTHROPIC_API_KEY) return "xai";
   if (process.env.ANTHROPIC_API_KEY) return "anthropic";
@@ -2251,8 +2251,8 @@ function defaultModelForProvider(activeProvider) {
 
 function openAICompatibleConfig(providerName) {
   if (providerName === "deepseek") {
-    const apiKey = process.env.DEEPSEEK_API_KEY;
-    if (!apiKey) throw new Error("DEEPSEEK_API_KEY is required for provider=deepseek");
+    const apiKey = process.env.DEEPSEEK_API_KEY || process.env.DEEPSEEK;
+    if (!apiKey) throw new Error("DEEPSEEK_API_KEY or DEEPSEEK is required for provider=deepseek");
     return {
       label: "DeepSeek",
       apiKey,
