@@ -22,9 +22,9 @@ const minAmbiguity = Number(args["min-ambiguity"] ?? 3);
 const minFreshness = Number(args["min-freshness"] ?? 3);
 const minNewsFit = Number(args["min-news-fit"] ?? 3);
 const minCompositeScore = Number(args["min-composite-score"] ?? 4);
-const allowedFamilies = parseCsv(args["allowed-families"] ?? "public,review,forum,news,signals,event_discovery");
+const allowedFamilies = parseCsv(args["allowed-families"] ?? "public,review,forum,place_discovery,news,signals,event_discovery");
 const reviewerBuckets = new Set(parseCsv(args["reviewer-buckets"] ?? "ship_now,strong_candidate"));
-const quotaWeights = parseQuotaWeights(args["source-quotas"] ?? "public:0.50,review:0.15,forum:0.15,news:0.15,signals:0.05,event_discovery:0.10");
+const quotaWeights = parseQuotaWeights(args["source-quotas"] ?? "public:0.52,review:0.12,forum:0.16,place_discovery:0.20,news:0.05,signals:0.05,event_discovery:0.05");
 
 const BLOCKED_ISSUES = new Set([
   "essay_like",
@@ -399,7 +399,8 @@ function requiresNewsFit(sourceFamily) {
 }
 
 function quotaBucket(candidate) {
-  if (candidate.sourceFamily === "review" || candidate.sourceFamily === "event_discovery") return candidate.sourceFamily === "review" ? "places" : "events";
+  if (candidate.sourceFamily === "review" || candidate.sourceFamily === "place_discovery") return "places";
+  if (candidate.sourceFamily === "event_discovery") return "events";
   if (candidate.sourceFamily === "news") return "news";
   if (candidate.sourceFamily === "signals") return "signals";
   if (candidate.lane === "mind_post") return "weird_human_thought";

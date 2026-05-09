@@ -61,18 +61,18 @@ const PLACE_PROMPT_STYLES = [
     id: "just_left",
     tone: "warm",
     instruction:
-      "Write as someone who just walked out of this place 5 minutes ago. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.",
+      "Write as someone who was at this place very recently. One concrete sensory detail — what they saw, smelled, heard, or paid. No reflection, no conclusion. Just the detail and what it did to them.",
     examples: [
-      "still thinking about the €2.80 vermouth at Calders and I've been home for an hour.",
-      "walked out of that place at Kottbusser Tor with candle wax on my jacket, worth it.",
-      "the espresso at Monmouth was so good I stood outside for a minute before getting on the tube.",
+      "el vermut de 2,80€ me arregló diez minutos del día y luego ya volvió todo a lo normal.",
+      "salí con cera de vela en la manga y nadie en la mesa lo admitió.",
+      "the espresso was so good I stood outside for a minute before getting back on the tube.",
     ],
   },
   {
     id: "specific_dish",
     tone: "warm",
     instruction:
-      "Write about one specific dish or drink at this place. Not a review — more like a confession. The person is slightly obsessed with this one thing and can't stop thinking about it. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).",
+      "Write about one specific dish or drink at this place. Not a review — more like a confession. The person has one thing stuck in their head. Concrete: name the thing, give one detail about it (price, texture, how it's made, what it does to you).",
     examples: [
       "the tortilla francesa at Flash Flash is somehow a whole different thing from every other tortilla francesa I've had. still not sure why.",
       "had the house cava at Xampanyet for €2.20 and now I understand why people come back.",
@@ -129,6 +129,7 @@ for (const [cityId, cityPlaces] of Object.entries(byCity)) {
 
   for (const [i, place] of selected.entries()) {
     const mapsUrl = place.url ?? buildMapsUrl(place);
+    const targetLanguage = pickPlaceLanguage(city, rand);
 
     // Build links array: Instagram + Google Maps (no website links)
     const placeLinks = [];
@@ -172,10 +173,11 @@ for (const [cityId, cityPlaces] of Object.entries(byCity)) {
       placeUrl: mapsUrl,
       placeSource: place.placeSource,
       links: placeLinks,
+      targetLanguage,
       cityAnchor: place.neighborhood || place.name,
       rawSnippet: buildRawSnippet(place),
-      rawSnippetLanguage: inferPlaceLanguage(cityId),
-      prompt: buildPlacePrompt({ place, city, style, mapsUrl }),
+      rawSnippetLanguage: targetLanguage,
+      prompt: buildPlacePrompt({ place, city, style, mapsUrl, targetLanguage }),
     });
   }
 }
@@ -189,7 +191,8 @@ console.log(JSON.stringify(countBy(jobs, (j) => j.cityId), null, 2));
 
 // --- Prompt builder ---
 
-function buildPlacePrompt({ place, city, style, mapsUrl }) {
+function buildPlacePrompt({ place, city, style, mapsUrl, targetLanguage }) {
+  const languageGuidance = languageGuidanceFor(city, targetLanguage);
   const lines = [
     `City: ${city.name}`,
     `Place: ${place.name}`,
@@ -197,6 +200,8 @@ function buildPlacePrompt({ place, city, style, mapsUrl }) {
     place.category ? `Category: ${place.category}` : null,
     place.fact ? `Key detail: ${place.fact}` : null,
     `Maps link: ${mapsUrl}`,
+    `Target language: ${targetLanguage}`,
+    `Language instruction: ${languageGuidance}`,
     "",
     `Write a short first-person city message (1–2 sentences, under 160 characters) about this place.`,
     "",
@@ -210,8 +215,9 @@ function buildPlacePrompt({ place, city, style, mapsUrl }) {
     "- One concrete specific detail: price, dish, object, moment, line of dialogue",
     "- Do NOT write a review, recommendation, or 'hidden gem' copy",
     "- Do NOT say 'you should go', 'highly recommend', 'must-try', 'worth it' as a summary",
+    "- Write entirely in the target language; do not mix English glue into Spanish/Catalan/Russian/German",
+    "- If target language is Russian, do not keep the exact Latin venue name inside content unless it is very short; describe it naturally or use Cyrillic. Exact links/labels keep the real name.",
     "- Sound like you typed it on the way home, not like you're writing a caption",
-    "- Write in the language that fits the city (Barcelona → Catalan/Spanish/English, Berlin → German/English, London/SF → English)",
     "",
     "Return JSON: { content, why_human, why_ai, read_value_hook, sentiment, detected_language, links }",
     place.instagram
@@ -234,10 +240,43 @@ function buildMapsUrl(place) {
   return `https://maps.google.com/?q=${query}`;
 }
 
-function inferPlaceLanguage(cityId) {
-  if (cityId === "berlin") return "de";
-  if (cityId === "barcelona") return "ca";
-  return "en";
+function pickPlaceLanguage(city, rand) {
+  const overrides = {
+    barcelona: [
+      { lang: "es", weight: 0.35 },
+      { lang: "ca", weight: 0.25 },
+      { lang: "en", weight: 0.20 },
+      { lang: "ru", weight: 0.20 },
+    ],
+    berlin: [
+      { lang: "de", weight: 0.40 },
+      { lang: "en", weight: 0.40 },
+      { lang: "ru", weight: 0.20 },
+    ],
+    london: [
+      { lang: "en", weight: 0.82 },
+      { lang: "ru", weight: 0.18 },
+    ],
+    sf: [
+      { lang: "en", weight: 0.60 },
+      { lang: "es", weight: 0.25 },
+      { lang: "ru", weight: 0.15 },
+    ],
+  };
+  const distribution = overrides[city.id] ?? city.languageDistribution ?? [{ lang: "en", weight: 1 }];
+  const total = distribution.reduce((sum, item) => sum + Number(item.weight ?? 0), 0);
+  let roll = rand() * (total || 1);
+  for (const item of distribution) {
+    roll -= Number(item.weight ?? 0);
+    if (roll <= 0) return item.lang;
+  }
+  return distribution[distribution.length - 1]?.lang ?? "en";
+}
+
+function languageGuidanceFor(city, language) {
+  const entry = city.languageDistribution?.find((item) => item.lang === language);
+  if (entry?.guidance) return entry.guidance;
+  return city.languageGuidance ?? `Write in ${language}`;
 }
 
 // --- Helpers ---

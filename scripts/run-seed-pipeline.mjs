@@ -13,7 +13,7 @@ const upload = Boolean(args.upload);
 const provider = args.provider ?? process.env.MODEL_PROVIDER ?? null;
 const model = args.model ?? null;
 const cityFocus = args["city-focus"] ?? null;
-const mix = parseMix(args.mix ?? "public,review,forum");
+const mix = parseMix(args.mix ?? "public,review,forum,place_discovery");
 const usesSocial = mix.includes("social");
 const usesWorld = mix.includes("world") || mix.includes("bridge");
 const jobsPerSignalSnapshot = Number(args["signal-jobs-per-snapshot"] ?? 3);
@@ -298,6 +298,7 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
     public: args["public-count"],
     review: args["review-count"],
     forum: args["forum-count"],
+    place_discovery: args["place-discovery-count"] ?? args["place_discovery-count"],
     signals: args["signal-count"],
     news: args["news-count"],
     social: args["social-count"],
@@ -369,6 +370,20 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
         sourceLimit(allocations.forum ?? 0, cityFocus),
         "--seed",
         `${seed}:forum`,
+        ...(cityFocus ? ["--city-focus", cityFocus] : []),
+      ],
+    },
+    place_discovery: {
+      targetCount: allocations.place_discovery ?? 0,
+      script: path.join(projectRoot, "scripts", "build-place-discovery-jobs.mjs"),
+      outPath: perSourcePath("place_discovery"),
+      args: (seed, cityFocus) => [
+        "--out",
+        perSourcePath("place_discovery"),
+        "--max-per-city",
+        String(Math.max(1, allocations.place_discovery ?? 0)),
+        "--seed",
+        `${seed}:place_discovery`,
         ...(cityFocus ? ["--city-focus", cityFocus] : []),
       ],
     },
@@ -456,9 +471,10 @@ function buildSourceConfig(args, totalCount, selectedSources, jobsPerSnapshot) {
 function allocateCounts(totalCount, selectedSources, explicit) {
   const defaults = {
     launch: 0.0,
-    public: 0.45,
-    review: 0.15,
-    forum: 0.15,
+    public: 0.52,
+    review: 0.12,
+    forum: 0.16,
+    place_discovery: 0.20,
     signals: 0.05,
     news: 0.20,
     social: 0.0,
@@ -501,7 +517,7 @@ function replaceExtension(filePath, suffixExtension) {
 }
 
 function parseMix(raw) {
-  const allowed = new Set(["launch", "public", "review", "forum", "signals", "news", "social", "world", "bridge"]);
+  const allowed = new Set(["launch", "public", "review", "forum", "place_discovery", "signals", "news", "social", "world", "bridge"]);
   const values = String(raw)
     .split(",")
     .map((value) => value.trim())

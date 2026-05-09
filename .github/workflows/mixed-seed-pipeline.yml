@@ -28,7 +28,7 @@ on:
       mix:
         description: "Comma-separated source families"
         required: false
-        default: "public,review,forum"
+        default: "public,review,forum,place_discovery"
       city_focus:
         description: "Optional city focus"
         required: false
@@ -83,7 +83,7 @@ jobs:
         run: |
           MANUAL_MODEL="${{ inputs.model || 'deepseek-v4-flash' }}"
           MANUAL_UPLOAD="${{ inputs.upload && 'true' || 'false' }}"
-          MANUAL_MIX="${{ inputs.mix || 'public,review,forum' }}"
+          MANUAL_MIX="${{ inputs.mix || 'public,review,forum,place_discovery' }}"
 
           if [ "$MANUAL_UPLOAD" = "true" ] && [ "$MANUAL_MODEL" = "gpt-4o-mini" ]; then
             echo "gpt-4o-mini upload runs are disabled: quality was below the production bar." >&2
@@ -240,8 +240,8 @@ jobs:
             echo "upload_reason=missing_upload_state" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Run place-discovery pipeline
-        if: ${{ steps.cfg.outputs.upload == 'true' && steps.main_upload_state.outputs.main_uploaded == 'true' }}
+      - name: Run legacy place-discovery pipeline (disabled; folded into main mix)
+        if: ${{ false }}
         continue-on-error: true
         env:
           MODEL_NAME: ${{ steps.cfg.outputs.model }}
@@ -385,6 +385,7 @@ jobs:
             content/pipeline-jobs.public.json
             content/pipeline-jobs.review.json
             content/pipeline-jobs.forum.json
+            content/pipeline-jobs.place_discovery.json
             content/pipeline-jobs.signals.json
             content/pipeline-jobs.news.json
             content/pipeline-jobs.social.json

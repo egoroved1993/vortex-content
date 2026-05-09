@@ -481,10 +481,14 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
     const cityConfig = cities.find((c) => c.id === job.cityId);
     if (cityConfig) {
       let langGuidance;
+      const targetLanguage = job.targetLanguage ? normalizeLanguageCode(job.targetLanguage) : null;
       if (forceLanguage) {
         // Find guidance for the forced language in this city's distribution
         const entry = cityConfig.languageDistribution?.find((d) => d.lang === forceLanguage);
         langGuidance = entry?.guidance ?? null;
+      } else if (targetLanguage && cityConfig.languageDistribution?.length) {
+        const entry = cityConfig.languageDistribution.find((d) => d.lang === targetLanguage);
+        langGuidance = entry?.guidance ?? cityConfig.languageGuidance;
       } else if (cityConfig.languageDistribution?.length) {
         const total = cityConfig.languageDistribution.reduce((s, d) => s + d.weight, 0);
         let roll = Math.random() * total;
@@ -513,6 +517,20 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
         const entry = cityConfig.languageDistribution?.find((d) => d.lang === forceLanguage);
         base += `\n\nCRITICAL LANGUAGE REQUIREMENT: ${entry?.guidance ?? `Write entirely in language code: ${forceLanguage}`}`;
         base += "\nThe ENTIRE message must be in this language. If you write in English, the message is REJECTED.";
+      } else if (targetLanguage) {
+        const isNonEnglish = langGuidance && !langGuidance.startsWith("Write in casual contemporary English") && !langGuidance.startsWith("Write in modern American English") && !langGuidance.startsWith("Write in English") && !langGuidance.startsWith("Write in casual English") && !langGuidance.startsWith("Write in confident British English") && !langGuidance.startsWith("Write in casual British English") && !langGuidance.startsWith("Write in American English");
+        if (targetLanguage === "ru") {
+          const cityRuName = { barcelona: "Барселоне", berlin: "Берлине", sf: "Сан-Франциско", london: "Лондоне" }[job.cityId] ?? job.cityId;
+          base += `\n\n🇷🇺 ЯЗЫК: ТЫ ПИШЕШЬ ТОЛЬКО ПО-РУССКИ. Весь текст — кириллицей. Ни одного предложения на английском.`;
+          base += `\nПиши как русскоязычный человек, живущий в ${cityRuName}. Разговорный русский, как в чатике.`;
+          base += `\nЛокальные слова оставляй как есть только если русскоязычный человек реально так написал бы; иначе пиши по-русски/кириллицей, даже если это менее “правильно”.`;
+        } else if (isNonEnglish) {
+          base += `\n\nCRITICAL TARGET LANGUAGE REQUIREMENT: ${langGuidance}`;
+          base += "\nThe ENTIRE message must be in this language. Do NOT switch into English glue or preserve foreign titles just to be correct.";
+        } else {
+          base += `\n\nLanguage & currency rules for ${cityConfig.name}: ${langGuidance}`;
+        }
+        base += `\ndetected_language must be "${targetLanguage}".`;
       } else {
         // Normal flow — detect if non-English and add enforcement
         const isNonEnglish = langGuidance && !langGuidance.startsWith("Write in casual contemporary English") && !langGuidance.startsWith("Write in modern American English") && !langGuidance.startsWith("Write in English") && !langGuidance.startsWith("Write in casual English") && !langGuidance.startsWith("Write in confident British English") && !langGuidance.startsWith("Write in casual British English") && !langGuidance.startsWith("Write in American English");
@@ -984,6 +1002,8 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
   }
 
   const sanitizedContent = sanitizeGeneratedContent(job, parsed.content);
+  const parsedLinks = normalizeLinks(parsed.links);
+  const jobLinks = normalizeLinks(job.links);
 
   return {
     id: job.id,
@@ -997,6 +1017,7 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     sourceFamily: job.sourceFamily ?? null,
     sourceOrigin: job.rawSnippetSourceOrigin ?? null,
     rawSnippetLanguage: job.rawSnippetLanguage ?? null,
+    targetLanguage: job.targetLanguage ?? null,
     rawSnippetPlatform: job.rawSnippetPlatform ?? null,
     rawSnippetPostedAt: job.rawSnippetPostedAt ?? job.rawSnippetPublishedAt ?? null,
     cityAnchor: job.cityAnchor ?? null,
@@ -1012,7 +1033,7 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
     ),
     sentiment: normalizeSentiment(parsed.sentiment),
     detected_language: normalizeDetectedLanguage(parsed.detected_language ?? parsed.detectedLanguage ?? job.rawSnippetLanguage ?? "en", sanitizedContent),
-    links: normalizeLinks(parsed.links) ?? normalizeLinks(job.links ?? null),
+    links: parsedLinks.length > 0 ? parsedLinks : jobLinks,
     rawModelResponse: rawText,
     usage,
     systemFingerprint,
