@@ -146,7 +146,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ARGS=( --per-city 160 --limit-per-sub 100 --post-limit-per-sub 100 --out content/public-human-comments.json )
+          ARGS=( --per-city 160 --limit-per-sub 100 --post-limit-per-sub 100 --pages-per-sub 5 --out content/public-human-comments.json )
           if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
             ARGS+=( --city-focus "${{ steps.cfg.outputs.city_focus }}" )
           fi

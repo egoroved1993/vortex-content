@@ -42,6 +42,7 @@ const jobs = snippets.map((snippet, index) => {
   const city = getCity(snippet.cityId);
   const topicId = inferTopic(snippet);
   const topic = getTopic(topicId);
+  const sourceExcerpt = buildSourceExcerpt(snippet.body, city, topicId);
   const sourceProfile = pickWeighted(
     [
       { id: "ambiguous", weight: 0.48 },
@@ -87,21 +88,22 @@ const jobs = snippets.map((snippet, index) => {
     formatPromptShape: format?.promptShape ?? null,
     angle: buildSnippetAngle(snippet, lane, format),
     moment: buildMomentFromSnippet(snippet),
-    cityAnchor: inferAnchor(snippet.body, city, topicId),
+    cityAnchor: inferAnchor(sourceExcerpt || snippet.body, city, topicId),
     textureId: texture.id,
     textureGuidance: texture.guidance,
-    rawSnippet: snippet.body,
+    rawSnippet: sourceExcerpt || snippet.body,
+    rawSnippetFull: snippet.body,
     rawSnippetLanguage: normalizeSourceLanguage(snippet.language ?? snippet.sourceLanguage ?? "en"),
     rawSnippetSourceOrigin: snippet.sourceOrigin,
     rawSnippetSubreddit: snippet.subreddit,
-    transformationMode: "minimal_intervention_salvage",
+    transformationMode: "source_excerpt_compression",
   };
 
   return {
     ...job,
     prompt: buildSnippetRewritePrompt(job),
   };
-});
+}).filter((job) => String(job.rawSnippet ?? "").trim().length >= 45);
 
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, `${JSON.stringify(jobs, null, 2)}\n`);
@@ -147,15 +149,16 @@ function buildSnippetRewritePrompt(job) {
     `Texture target: ${job.textureGuidance}`,
     `City anchor: ${job.cityAnchor}`,
     `Source language: ${job.rawSnippetLanguage}`,
-    `Raw source snippet: ${job.rawSnippet}`,
+    `Raw source excerpt: ${job.rawSnippet}`,
     ...laneInstructions,
     "Default move: compress and anonymize the source into one short city message.",
     "Keep the source's weirdest concrete detail or opinion, not the full argument.",
-    "Use roughly 35-70% of the source wording; do not preserve a long Reddit paragraph.",
+    "Use roughly 35-70% of the source excerpt wording; do not preserve a long Reddit paragraph.",
     "Target length: 70-180 characters. Hard max: 220 characters.",
     "If the source is a long debate, keep one quotable fragment or one petty claim.",
     "If the source is bilingual or repeats the same idea in two languages, choose exactly one language and drop the duplicate.",
     "If the source has a concrete city anchor already, keep one: neighborhood, station, street, transit system, place, or local issue.",
+    "If the excerpt has no local anchor, you may add the provided City anchor once, plainly, without turning it into a travel caption.",
     "Do not add a rhetorical question, metaphor, explanation, or cleaner final sentence.",
     "Preserve the source language unless you only need to remove platform scaffolding.",
     "You may only remove platform scaffolding, usernames, explicit reply framing, and obvious filler.",
@@ -283,6 +286,103 @@ function looksForumAdviceSnippet(body) {
     /\b(recommend|advice|thoughts|opinions|experience)\b/.test(lower);
 
   return adviceFragments.some((fragment) => lower.includes(fragment)) || asksForInput;
+}
+
+function buildSourceExcerpt(body, city, topicId) {
+  const text = String(body ?? "").replace(/\s+/g, " ").trim();
+  if (text.length >= 45 && text.length <= 220 && !looksForumAdviceSnippet(text) && !looksArticleHeadlineChunk(text)) return text;
+
+  const chunks = splitSourceChunks(text)
+    .map((chunk) => chunk.replace(/^(barcelona|bcn|catalunya|catalonia)\s*[-:]\s*/i, "").trim())
+    .filter((chunk) => chunk.length >= 38 && chunk.length <= 260)
+    .filter((chunk) => !looksForumAdviceSnippet(chunk))
+    .filter((chunk) => !looksArticleHeadlineChunk(chunk));
+
+  const scored = chunks
+    .map((chunk, index) => ({ chunk, index, score: scoreExcerptChunk(chunk, city, topicId) }))
+    .sort((left, right) => right.score - left.score || left.index - right.index);
+
+  if (scored.length > 0 && scored[0].score >= 3) {
+    return trimAtBoundary(scored[0].chunk, 220);
+  }
+
+  return trimAtBoundary(
+    text.replace(/^(barcelona|bcn|catalunya|catalonia)\s*[-:]\s*/i, "").trim(),
+    220
+  );
+}
+
+function splitSourceChunks(text) {
+  const normalized = String(text ?? "").replace(/\s+/g, " ").trim();
+  const sentenceChunks = normalized
+    .split(/(?<=[.!?])\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const semicolonChunks = normalized
+    .split(/\s*[;•]\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return [...sentenceChunks, ...semicolonChunks, normalized];
+}
+
+function scoreExcerptChunk(chunk, city, topicId) {
+  const lower = chunk.toLowerCase();
+  let score = 0;
+  if (hasFirstPersonTrace(lower)) score += 3;
+  if (hasLocalTrace(lower, city, topicId)) score += 3;
+  if (hasPublicDetail(lower)) score += 2;
+  if (hasFriction(lower)) score += 2;
+  if (hasHookTrace(lower)) score += 1;
+  if (chunk.length >= 70 && chunk.length <= 180) score += 1;
+  if (/\?/.test(chunk)) score -= 2;
+  if (looksArticleHeadlineChunk(chunk)) score -= 4;
+  return score;
+}
+
+function hasFirstPersonTrace(lower) {
+  return /\b(i|i'm|i’m|i've|my|me|we|our|yo|me|mi|mis|nos|estoy|tengo|odio|vivo|he estado|he visto|he ido|jo|em|meu|meva|tinc|porto|vaig|visc|m'agrada)\b/i.test(lower);
+}
+
+function hasLocalTrace(lower, city, topicId) {
+  const anchors = [
+    ...(city?.defaultAnchors ?? []),
+    ...(topicId ? city?.topicAnchors?.[topicId] ?? [] : []),
+    ...Object.values(city?.topicAnchors ?? {}).flat(),
+  ].map((anchor) => String(anchor).toLowerCase());
+  return anchors.some((anchor) => anchor && lower.includes(anchor));
+}
+
+function hasPublicDetail(lower) {
+  return /\b(alquiler|lloguer|piso|pis|metro|rodalies|fgc|tmb|raval|gr[aà]cia|eixample|poblenou|sants|barceloneta|terraza|terrassa|parque|parc|caf[eèé]|lavabo|baño|bany|polen|plataneros|plataners|guiri|turista|turistes|airbnb|carrer|calle|pla[çc]a|vecin[oa]s?|ve[iï]ns?)\b/i.test(lower);
+}
+
+function hasFriction(lower) {
+  return /\b(caro|cara|caríssim|carisimo|imposible|fraude|fraudulento|estafa|estafaron|harto|fart|merda|mierda|asco|locura|llàstima|lastima|tancat|cerrado|soroll|ruido|saturad[ao]?|colapsad[ao]?|no puedo|no puc|no hay manera|ja podem plegar)\b/i.test(lower);
+}
+
+function hasHookTrace(lower) {
+  return /\b(madre de dios|cagate|cágate|cada vez|cada cop|sempre|siempre|encara|todav[ií]a|me hace gracia|em fa gràcia|no sé|no se|honestly|actually|still|again)\b/i.test(lower);
+}
+
+function looksArticleHeadlineChunk(chunk) {
+  const text = String(chunk ?? "").trim();
+  const lower = text.toLowerCase();
+  if (/\b(3catinfo|nació|nacio|ara\.cat|la vanguardia|el periódico|el periodico|eldiario|europa press)\b/i.test(text)) return true;
+  if (/^[A-ZÀ-Ú][^.!?]{40,180}:\s/.test(text) && !hasFirstPersonTrace(lower)) return true;
+  if (/^(denuncien|el tsjc|la cgt|xavier antich|inquietud vecinal|la policia|els mossos)\b/i.test(lower) && !hasFirstPersonTrace(lower)) return true;
+  return false;
+}
+
+function trimAtBoundary(text, maxChars) {
+  const cleaned = String(text ?? "").replace(/\s+/g, " ").trim();
+  if (cleaned.length <= maxChars) return cleaned;
+  const sentenceBound = cleaned.slice(0, maxChars).match(/^(.+[.!?])(?:\s|$)/);
+  if (sentenceBound?.[1] && sentenceBound[1].length >= 45) return sentenceBound[1].trim();
+  const commaBound = cleaned.slice(0, maxChars).match(/^(.+[,;:])(?:\s|$)/);
+  if (commaBound?.[1] && commaBound[1].length >= 70) return commaBound[1].replace(/[,;:]+$/g, "").trim();
+  const lastSpace = cleaned.lastIndexOf(" ", maxChars - 1);
+  const slicePoint = lastSpace >= 45 ? lastSpace : maxChars;
+  return cleaned.slice(0, slicePoint).replace(/[,:;\-]+$/g, "").trim();
 }
 
 function inferTopic(snippet) {

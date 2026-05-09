@@ -31,7 +31,8 @@ const CA_WORDS = [" que ", " de ", " en ", " la ", " el ", " els ", " les ", " u
 
 const BLOCK_WORDS = [
   "ukraine", "russia", "military", "killed", "attack", "war", "troops",
-  "missile", "drone", "frontline", "breaking:", "[removed]", "[deleted]",
+  "missile", "drone", "frontline", "gaza", "flotilla", "palestine", "israel",
+  "breaking:", "[removed]", "[deleted]",
   "promo", "coupon", "discount", "onlyfans", "bitcoin", "crypto", "nft",
   "subscribe", "click here", "link in bio", "check out my",
   "proud to announce", "visual stories", "programme of", "conferences and meetups",
@@ -101,7 +102,7 @@ const ADVICE_FRAGMENTS = [
 ];
 
 const PERSONAL_WORDS = [
-  "i ", "i'", "i'm", "my ", "me ", "we ", "our ", "you ", "your ",
+  "i ", "i'", "i'm", "my ", "me ", "we ", "our ",
   "today", "yesterday", "morning", "evening", "night", "weekend",
   "feels", "feeling", "love", "miss", "hate", "enjoy", "moved",
   "walking", "coffee", "weather", "city", "people", "street",
@@ -112,9 +113,12 @@ const PERSONAL_WORDS = [
   "hoy", "ayer", "mañana", "manana", "esta mañana", "esta manana",
   "gente", "calle", "barrio", "vecino", "vecina", "odio", "me encanta",
   "me parece", "siento", "siempre", "nunca", "a veces", "vivir",
+  "estoy", "tengo", "vivo", "he estado", "he visto", "he ido",
+  "mi piso", "mi barrio", "mi calle", "mi alquiler",
   "jo ", "em ", "meu ", "meva ", "nostre ", "nostra ", "avui", "ahir",
   "demà", "dema", "gent", "carrer", "barri", "veí", "veina", "odio",
   "m'agrada", "em sembla", "sempre", "mai", "a vegades", "viure",
+  "tinc", "porto", "vaig", "visc", "el meu pis", "el meu barri",
 ];
 
 const DIRECT_MINDPOST_MARKERS = [
@@ -231,7 +235,7 @@ export function hasMindpostSignal(text) {
 }
 
 export function hasCityTexture(text) {
-  return /(\d|€|\$|£|queue|rent|alquiler|lloguer|coffee|cafe|caf[eèé]|tram|bus|train|tren|metro|tube|bart|muni|rodalies|fgc|tmb|sp[aä]ti|pub|bar|barista|terrace|terraza|terrassa|landlord|roommate|piso|pis|post office|bike lane|carril bici|station|platform|calle|carrer|barrio|barri|tourist|turista|guiri|airbnb)/i.test(text);
+  return /(\d|€|\$|£|queue|rent|alquiler|lloguer|coffee|cafe|caf[eèé]|tram|bus|train|tren|metro|tube|bart|muni|rodalies|fgc|tmb|sp[aä]ti|pub|bar|barista|terrace|terraza|terrassa|landlord|roommate|piso|pis|post office|bike lane|carril bici|station|platform|calle|carrer|barrio|barri|tourist|turista|turistes|guiri|airbnb|lavabo|baño|bany|parque|parc|polen|plataneros|plataners|vecino|vecina|veí|veïns|veins|soroll|ruido)/i.test(text);
 }
 
 export function hasCityConnection(text, citySource) {

@@ -87,6 +87,7 @@ for (const city of CITY_SOURCES.filter((entry) => !cityFocus || entry.id === cit
     rawRows
       .filter((row) => row.body.length >= 40 && row.body.length <= 650)
       .filter((row) => isHighSignalPublicText(row.body))
+      .filter((row) => isUsefulPublicSourceRow(row, city))
       .filter((row) => hasCityTexture(row.body) || hasMindpostSignal(row.body))
       .filter((row) => isCitySpecificSubreddit(row.subreddit, city) || hasCityConnection(row.body, city))
       .map((row) => ({
@@ -217,6 +218,62 @@ function scoreRow(row) {
   if (/\b(i |my |we |honestly|actually|keep|still|hate|love|real sign|you can tell|yo |mi |nos |hoy|odio|encanta|siempre|jo |avui|sempre|m'agrada)\b/i.test(row.body)) score += 4;
   if (["es", "ca"].includes(row.sourceLanguage) && row.cityId === "barcelona") score += 3;
   return score;
+}
+
+function isUsefulPublicSourceRow(row, city) {
+  const body = String(row.body ?? "");
+  const lower = body.toLowerCase();
+  if (city.id === "barcelona" && String(row.subreddit ?? "").toLowerCase() === "catalunya" && !hasBarcelonaLocalTrace(lower)) return false;
+  if (looksArticleLinkPost(row)) return false;
+  if (looksToxicOrCultureWarSnippet(lower)) return false;
+  if (looksPersonalEmergencyOrClassified(lower)) return false;
+  if (looksQuestionOrResearchSnippet(lower)) return false;
+  if (looksTouristOrMetaSnippet(lower)) return false;
+
+  if (row.sourceOrigin === "reddit_post") {
+    const hasLivedSignal =
+      hasFirstPersonTrace(lower) ||
+      /\b(hoy|avui|esta mañana|aquest mat[ií]|this morning|yesterday|ayer|ahir|cada vez|cada cop|sempre|siempre)\b/i.test(lower);
+    const hasLocalTexture = hasCityTexture(body) || hasCityConnection(body, city);
+    if (!hasLivedSignal && !hasLocalTexture) return false;
+  }
+
+  return true;
+}
+
+function looksArticleLinkPost(row) {
+  const body = String(row.body ?? "").trim();
+  const lower = body.toLowerCase();
+  if (row.sourceOrigin !== "reddit_post") return false;
+  if (/\b(3catinfo|nació|nacio|ara\.cat|la vanguardia|el periódico|el periodico|eldiario|europa press|font:)\b/i.test(body)) return true;
+  if (/^(denuncien|el tsjc|la cgt|xavier antich|inquietud vecinal|la policia|els mossos)\b/i.test(lower)) return true;
+  if (/^[A-ZÀ-Ú][^.!?]{40,180}:\s/.test(body) && !hasFirstPersonTrace(lower)) return true;
+  return false;
+}
+
+function looksToxicOrCultureWarSnippet(lower) {
+  return /(lumpen|mendigos|moros|moro|panchitos|sudacas|ya sabes qui[eé]n|racisme del personatge|racismo del personaje|acabar amb els catalans|acabar con los catalanes|destruir la identitat catalana|coloniz|colonitzat|franquista|vox|pp y vox|pp i vox)/i.test(lower);
+}
+
+function looksPersonalEmergencyOrClassified(lower) {
+  return /(need a couch|busco catalans disposats|dm\b|whatsapp|stopped a girl|missed connection|escribidme|escríbeme|casting presencial|càsting presencial|hombres entre|homes entre|seeking employment|looking for a job|busco trabajo|busco feina|website i made|introducing what2book|estoy validando una solución|estic validant|regalo 10|dinar gratu[iï]t|free lunch|deixa'm un comentari|te la comparteixo|responded a este formulario|respon aquest formulari)/i.test(lower);
+}
+
+function looksQuestionOrResearchSnippet(lower) {
+  if (!/[?¿]/.test(lower)) return false;
+  return /\b(has anyone|what'?s the best|real estate site|recomaneu|recomiendan|recomend[aá]is|experiencias|experi[eè]ncia|proyecto de investigaci[oó]n|projecte de recerca|estoy validando|alg[uú] sap|alguien sabe|how far|where can|on puc|d[oó]nde puedo|qu[eè] consumeixes|com ha canviat|c[oó]mo ha cambiado)\b/i.test(lower);
+}
+
+function looksTouristOrMetaSnippet(lower) {
+  return /\b(my dream to visit|during my visit|not from barcelona|first time in barcelona|visito barcelona|visita a barcelona|this is a community for people who live here|read the rules|tourist photos nonstop|focus closely on any pixel|not sure what you did|different title|i wrote it because i like writing)\b/i.test(lower);
+}
+
+function hasBarcelonaLocalTrace(lower) {
+  return /\b(barcelona|bcn|barcelon[ae]ta|raval|gr[aà]cia|eixample|poblenou|sants|montju[iï]c|poble sec|born|g[oò]tic|rodalies|fgc|tmb|metro|l[1-5]\b|arc de triomf|palau de la m[uú]sica|ciutadella|tur[oó] del putxet|passeig de gr[aà]cia)\b/i.test(lower);
+}
+
+function hasFirstPersonTrace(lower) {
+  return /\b(i|i'm|i’m|i've|my|me|we|our|yo|me|mi|mis|nos|estoy|tengo|odio|vivo|he estado|he visto|he ido|jo|em|meu|meva|tinc|porto|vaig|visc|m'agrada)\b/i.test(lower);
 }
 
 function countBy(items, getKey) {

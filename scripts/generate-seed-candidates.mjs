@@ -497,7 +497,11 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
         langGuidance = cityConfig.languageGuidance;
       }
 
-      if (forceLanguage === "ru") {
+      if (job.sourceFamily === "public" && job.rawSnippetLanguage && !forceLanguage) {
+        const sourceLang = normalizeLanguageCode(job.rawSnippetLanguage);
+        base += `\n\nCRITICAL SOURCE LANGUAGE: write the message entirely in ${languageName(sourceLang)} because the source excerpt is ${sourceLang}.`;
+        base += "\nDo not switch language for local names or titles. If the source is Catalan, write Catalan; if Spanish, write Spanish; if English, write English.";
+      } else if (forceLanguage === "ru") {
         // Ultra-strong Russian enforcement — system prompt partially in Russian
         const cityRuName = { barcelona: "Барселоне", berlin: "Берлине", sf: "Сан-Франциско", london: "Лондоне" }[job.cityId] ?? job.cityId;
         base += `\n\n🇷🇺 ЯЗЫК: ТЫ ПИШЕШЬ ТОЛЬКО ПО-РУССКИ. Весь текст — кириллицей. Ни одного предложения на английском.`;
@@ -1262,7 +1266,7 @@ function cleanSourceFallback(job) {
 }
 
 function sanitizeMinimalSalvageContent(job, candidateText) {
-  const maxChars = job.lane === "mind_post" ? 400 : 350;
+  const maxChars = job.sourceFamily === "public" ? 220 : job.lane === "mind_post" ? 400 : 350;
   const sourceCandidate = sanitizeSourceLikeText(cleanSourceFallback(job), maxChars);
   if (!candidateText || looksPromptLeaked(candidateText)) {
     return sourceCandidate || fallbackContentForMode(job);
@@ -1280,6 +1284,27 @@ function sanitizeMinimalSalvageContent(job, candidateText) {
   if (countSentences(modelCandidate) > Math.max(2, countSentences(sourceCandidate))) return sourceCandidate;
 
   return modelCandidate.length + 8 < sourceCandidate.length ? modelCandidate : sourceCandidate;
+}
+
+function normalizeLanguageCode(value) {
+  const raw = String(value ?? "en").trim().toLowerCase();
+  if (["ca", "cat", "catalan", "català", "catala"].includes(raw)) return "ca";
+  if (["es", "spa", "spanish", "español", "espanol"].includes(raw)) return "es";
+  if (["de", "deu", "german", "deutsch"].includes(raw)) return "de";
+  if (["ru", "rus", "russian"].includes(raw)) return "ru";
+  if (/^[a-z]{2}/.test(raw)) return raw.slice(0, 2);
+  return "en";
+}
+
+function languageName(code) {
+  const names = {
+    ca: "Catalan",
+    es: "Spanish",
+    en: "English",
+    de: "German",
+    ru: "Russian",
+  };
+  return names[code] ?? code;
 }
 
 function sanitizeNewsContent(job, candidateText) {

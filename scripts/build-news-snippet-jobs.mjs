@@ -35,7 +35,7 @@ const scoredSnippets = shuffle(JSON.parse(fs.readFileSync(inputPath, "utf8")), r
     sourceSignalScore: scoreNewsSnippet(snippet),
     liveAlignment: scoreNewsSnippetLiveAlignment(snippet),
   }))
-  .filter((snippet) => snippet.sourceSignalScore >= (cityFocus ? 2 : 4));
+  .filter((snippet) => snippet.sourceSignalScore >= (cityFocus ? 1 : 4));
 
 const primarySnippets = scoredSnippets
   .filter((snippet) => snippet.liveAlignment.score >= minLiveAlignmentScore)
