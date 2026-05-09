@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T10:29:39.080Z",
+    "capturedAt": "2026-05-09T11:24:43.308Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 314
+    "totalItems": 316
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T10:29:39.080Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-05-09T11:24:43.308Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -47,6 +47,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 9 and Sunday 10 May, including Friday and Saturday Night Tube, no service between Cockfosters"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations"
         },
         {
           "source_family": "transport",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "This north London football stadium is officially home to the most expensive pints - here's how much a beer will set you back at each Premier League ground - Secret London. This nor"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
-        "source_item_count": 73,
-        "average_valence": -0.039,
+        "source_item_count": 74,
+        "average_valence": -0.06,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.802
+        "freshness_score": 0.812
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T10:29:39.080Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-09T11:24:43.308Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -139,25 +148,17 @@
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "city_guide_snippet",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a patchwork of gray and blue, with bursts of sunlight casting fleeting shadows on wet pavement from earlier rain.. After a brief strike, people are cautiously optimis"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.016,
+        "source_item_count": 107,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "events",
@@ -168,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T10:29:39.080Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-05-09T11:24:43.308Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work.",
       "dominant_sentiment": "neutral",
@@ -190,9 +191,9 @@
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy serenading a crowd in front of the Muni stop on Larkin, harmonica in one hand, coffee in the other. Only in SF do bus dela"
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only a true local knows the sweet spot for burritos on 24th is near the laundromat, not the fancy taco truck"
         },
         {
           "source_family": "news",
@@ -208,7 +209,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with low-hanging clouds threatening rain, but the air carries the crispness of an impending chill.. BART's platforms are unusually crowded, with comm"
+          "excerpt": "The sky is a grim gray blanket, cloaking the city in an unexpected chill, while sharp gusts of wind whip through the streets.. BART stations are crowded and restless, with commuter"
         },
         {
           "source_family": "review",
@@ -229,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 69,
-        "average_valence": -0.049,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.782
+        "freshness_score": 0.783
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T10:29:39.080Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-05-09T11:24:43.308Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -262,9 +263,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun is beginning to sink, casting a warm golden hue over the pavements, while a cool breeze stirs the autumn leaves.. Commuters on the Rodalies are visibly frustrated, glancing"
+          "excerpt": "The overcast sky hangs heavily above, threatening rain while a brisk wind swirls through the streets, carrying the faint scent of wet asphalt.. With the ongoing strike of Rodalies "
         },
         {
           "source_family": "review",
@@ -288,7 +289,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think pa amb tomàquet is just a snack, but locals see it as a sacred ritual. Missing the right bread? You might as wel"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often think they can stroll into a vermut place at 6 PM for a seat, but locals know that’s when they’re packed, especi"
         },
         {
           "source_family": "forum",
@@ -296,18 +297,18 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a recent arrival by their fresh excitement for the plaça's hidden corners, while locals casually ignore the same spots."
+          "excerpt": "How to spot a recent arrival. Gràcia. They’re the ones still fumbling with their SIM cards outside the phone shop, completely ignoring the local 'perdona' before asking for help."
         }
       ],
       "metadata": {
         "source_item_count": 66,
-        "average_valence": -0.001,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.71
+        "freshness_score": 0.705
       }
     }
   ]
