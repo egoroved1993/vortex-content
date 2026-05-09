@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T09:39:23.863Z",
+    "capturedAt": "2026-05-09T10:29:39.080Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 315
+    "totalItems": 314
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T09:39:23.863Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-05-09T10:29:39.080Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -40,14 +40,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays between Willesden Junction and Clapham Junction while we fix a track fault at Imperial Wharf."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -77,25 +69,33 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "This north London football stadium is officially home to the most expensive pints - here's how much a beer will set you back at each Premier League ground - Secret London. This nor"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
         "source_item_count": 73,
-        "average_valence": -0.046,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.802
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T09:39:23.863Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-05-09T10:29:39.080Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,28 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "The proposed draft model is indeed a stupid compromise. Finnish, Swiss, and Israeli models are not that bad, though: give people enough training without disadvantaging them against"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Friedrichshain can you find a café that opens at 6 AM, packed with club kids just finished partying and early ris"
         },
         {
           "source_family": "news",
@@ -154,11 +137,27 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "city_guide_snippet",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.035,
+        "source_item_count": 106,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
@@ -169,10 +168,10 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T09:39:23.863Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-05-09T10:29:39.080Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 3,
@@ -196,14 +195,6 @@
           "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy serenading a crowd in front of the Muni stop on Larkin, harmonica in one hand, coffee in the other. Only in SF do bus dela"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s from here if they can tell the difference between a BART delay and a MUNI meltdown withou"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -217,7 +208,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a gray blanket, occasional bursts of chilly wind cutting through the damp air as the clouds threaten rain.. The BART is a swirling chaos of frustrated comm"
+          "excerpt": "The sky is a muted gray, heavy with low-hanging clouds threatening rain, but the air carries the crispness of an impending chill.. BART's platforms are unusually crowded, with comm"
         },
         {
           "source_family": "review",
@@ -226,22 +217,30 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
         "source_item_count": 69,
-        "average_valence": -0.062,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
         "freshness_score": 0.782
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T09:39:23.863Z",
+      "captured_at": "2026-05-09T10:29:39.080Z",
       "mood_score": 0.45,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
@@ -265,7 +264,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun bathes the streets in a warm golden hue, with the occasional breeze ruffling the leaves of the plane trees lining La Diagonal.. The mood at the train stations is "
+          "excerpt": "The sun is beginning to sink, casting a warm golden hue over the pavements, while a cool breeze stirs the autumn leaves.. Commuters on the Rodalies are visibly frustrated, glancing"
         },
         {
           "source_family": "review",
@@ -289,7 +288,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is all about Gaudí, but the heart is really in the small plazas where locals sip vermut and gossip, not i"
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think pa amb tomàquet is just a snack, but locals see it as a sacred ritual. Missing the right bread? You might as wel"
         },
         {
           "source_family": "forum",
@@ -297,7 +296,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a recent arrival by their bewilderment at the tram stops – overly scanning maps, yet somehow still missed the ‘bon dia’ from loca"
+          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a recent arrival by their fresh excitement for the plaça's hidden corners, while locals casually ignore the same spots."
         }
       ],
       "metadata": {
