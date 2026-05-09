@@ -1002,8 +1002,8 @@ function normalizeModelJson(job, rawText, { usage = null, systemFingerprint = nu
   }
 
   const sanitizedContent = sanitizeGeneratedContent(job, parsed.content);
-  const parsedLinks = normalizeLinks(parsed.links);
-  const jobLinks = normalizeLinks(job.links);
+  const parsedLinks = normalizeLinks(parsed.links) ?? [];
+  const jobLinks = normalizeLinks(job.links) ?? [];
 
   return {
     id: job.id,
