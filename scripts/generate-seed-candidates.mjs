@@ -377,6 +377,14 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
       "\nMild profanity is allowed if it fits the mood. Do not fake edge." +
       "\nNo metaphors. No thesis. No tidy ending." +
       "\nThe result should feel like someone typed it on a phone on the way to work.";
+  } else if (job.sourceFamily === "public") {
+    base +=
+      "\n\nFor public source snippets, you are a source-driven compression editor." +
+      "\nDo NOT preserve 85-100% of the source wording. That rule does not apply to public Reddit/forum-like snippets." +
+      "\nExtract one human detail, complaint, overheard-feeling line, or local opinion and compress it into a short anonymous post." +
+      "\nKeep the source language and one existing city anchor when available." +
+      "\nDo not invent new facts, but you may cut aggressively, anonymize, and remove debate scaffolding." +
+      "\nTarget 70-180 characters. Hard max 220 characters. Complete thought, not a dangling quote.";
   } else if (isMinimalSalvageFamily(job.sourceFamily)) {
     base +=
       "\n\nFor this source family you are a minimally invasive editor, not an author." +
@@ -1045,7 +1053,10 @@ function buildRepairSystemPrompt(job, assessment, providerHint = null, activeMod
   base += "\nPrefer one petty inconvenience, small complaint, or embarrassing local reaction over a thesis about the city.";
   base += "\nAvoid opener patterns like 'people say', 'nothing says', 'the weird thing about', 'my rule is', or 'the only way to stay sane'.";
 
-  if (isMinimalSalvageFamily(job.sourceFamily)) {
+  if (job.sourceFamily === "public") {
+    base += "\nFor public source snippets, compress aggressively into one short anonymous post.";
+    base += "\nKeep the same source pressure and one existing local detail, but do not preserve a long Reddit paragraph.";
+  } else if (isMinimalSalvageFamily(job.sourceFamily)) {
     base += "\nFor salvage families, keep at least 70% of the source wording when possible.";
     base += "\nDo not invent a cleaner thought than the source already implied.";
   }
