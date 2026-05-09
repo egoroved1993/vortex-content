@@ -261,10 +261,10 @@ function buildMapsUrl(place) {
 function pickPlaceLanguage(city, rand) {
   const overrides = {
     barcelona: [
-      { lang: "es", weight: 0.35 },
-      { lang: "ca", weight: 0.25 },
-      { lang: "en", weight: 0.20 },
-      { lang: "ru", weight: 0.20 },
+      { lang: "es", weight: 0.40 },
+      { lang: "ca", weight: 0.30 },
+      { lang: "en", weight: 0.18 },
+      { lang: "ru", weight: 0.12 },
     ],
     berlin: [
       { lang: "de", weight: 0.40 },

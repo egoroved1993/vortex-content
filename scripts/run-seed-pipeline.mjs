@@ -6,7 +6,7 @@ import { cities } from "./seed-config.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const projectRoot = detectProjectRoot();
-const count = args.count ?? 40;
+const count = args.count ?? 240;
 const seed = args.seed ?? "launch-pipeline";
 const mock = Boolean(args.mock);
 const upload = Boolean(args.upload);

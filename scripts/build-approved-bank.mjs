@@ -226,7 +226,11 @@ function selectBalanced(entries) {
   const seenOpenings = new Set();
   const cityCounts = new Map();
   const familyCountsByCity = new Map();
+  const languageCountsByCity = new Map();
+  const templateCountsByCity = new Map();
   const cityEntries = groupBy(sorted, (entry) => entry.candidate.cityId ?? "unknown");
+
+  seedLanguageDiversity();
 
   if (minPerCity > 0) {
     for (const [cityId, entriesForCity] of cityEntries.entries()) {
@@ -251,7 +255,22 @@ function selectBalanced(entries) {
 
   return selected;
 
-  function trySelect(entry, { strictQuotas }) {
+  function seedLanguageDiversity() {
+    for (const [cityId, entriesForCity] of cityEntries.entries()) {
+      const byLanguage = groupBy(entriesForCity, languageForEntry);
+      const targetSeeds = Math.min(4, maxPerCity, byLanguage.size);
+      let seeded = 0;
+
+      for (const language of preferredLanguageOrder(cityId, byLanguage.keys())) {
+        if (seeded >= targetSeeds) break;
+        const bestForLanguage = byLanguage.get(language)?.[0];
+        if (!bestForLanguage) continue;
+        if (trySelect(bestForLanguage, { strictQuotas: false, diversitySeed: true })) seeded += 1;
+      }
+    }
+  }
+
+  function trySelect(entry, { strictQuotas, diversitySeed = false }) {
     if (entry.selected) return false;
     const cityId = entry.candidate.cityId ?? "unknown";
     if ((cityCounts.get(cityId) ?? 0) >= maxPerCity) return false;
@@ -262,9 +281,14 @@ function selectBalanced(entries) {
     if (seenContent.has(contentKey)) return false;
     const openingKey = normalizeOpeningKey(content);
     if (seenOpenings.has(openingKey)) return false;
+    const templateKey = normalizeTemplateKey(content);
 
     const family = entry.candidate.sourceFamily ?? "unknown";
+    const language = languageForEntry(entry);
     if (strictQuotas && exceedsFamilyQuota(cityId, family, familyCountsByCity, cityCounts)) return false;
+    if (!strictQuotas && !diversitySeed && exceedsAbsoluteFamilyCap(cityId, family, familyCountsByCity)) return false;
+    if (!diversitySeed && exceedsAbsoluteLanguageCap(cityId, language, languageCountsByCity, cityCounts)) return false;
+    if (templateKey && !diversitySeed && exceedsTemplateCap(cityId, templateKey, templateCountsByCity)) return false;
 
     entry.selected = true;
     selected.push(entry);
@@ -273,8 +297,67 @@ function selectBalanced(entries) {
     cityCounts.set(cityId, (cityCounts.get(cityId) ?? 0) + 1);
     const familyKey = `${cityId}:${family}`;
     familyCountsByCity.set(familyKey, (familyCountsByCity.get(familyKey) ?? 0) + 1);
+    const languageKey = `${cityId}:${language}`;
+    languageCountsByCity.set(languageKey, (languageCountsByCity.get(languageKey) ?? 0) + 1);
+    if (templateKey) {
+      const cityTemplateKey = `${cityId}:${templateKey}`;
+      templateCountsByCity.set(cityTemplateKey, (templateCountsByCity.get(cityTemplateKey) ?? 0) + 1);
+    }
     return true;
   }
+}
+
+function exceedsTemplateCap(cityId, templateKey, templateCountsByCity) {
+  const cap = templateKey === "place_left_pretending" ? 2 : templateKey.includes("place_") ? 1 : 2;
+  const current = templateCountsByCity.get(`${cityId}:${templateKey}`) ?? 0;
+  return current >= cap;
+}
+
+function exceedsAbsoluteLanguageCap(cityId, language, languageCountsByCity, cityCounts) {
+  const cityCount = cityCounts.get(cityId) ?? 0;
+  if (cityCount < Math.min(4, maxPerCity)) return false;
+
+  const targetSize = Math.min(maxPerCity, Math.max(minPerCity, 15));
+  const cap = Math.max(2, Math.ceil(targetSize * languageShareCap(cityId, language)));
+  const current = languageCountsByCity.get(`${cityId}:${language}`) ?? 0;
+  return current >= cap;
+}
+
+function languageShareCap(cityId, language) {
+  const cityCaps = {
+    barcelona: { es: 0.46, ca: 0.46, en: 0.28, ru: 0.25 },
+    berlin: { de: 0.48, en: 0.52, ru: 0.25 },
+    london: { en: 0.88, ru: 0.22 },
+    sf: { en: 0.68, es: 0.34, ru: 0.22 },
+  };
+  return cityCaps[cityId]?.[language] ?? 0.6;
+}
+
+function languageForEntry(entry) {
+  return normalizeDetectedLanguage(entry.candidate.detected_language ?? entry.candidate.detectedLanguage, entry.candidate.content);
+}
+
+function preferredLanguageOrder(cityId, languagesIterable) {
+  const available = new Set(Array.from(languagesIterable));
+  const preferred = {
+    barcelona: ["es", "ca", "en", "ru"],
+    berlin: ["de", "en", "ru"],
+    london: ["en", "ru"],
+    sf: ["en", "es", "ru"],
+  }[cityId] ?? [];
+  return [...preferred.filter((language) => available.has(language)), ...Array.from(available).filter((language) => !preferred.includes(language)).sort()];
+}
+
+function exceedsAbsoluteFamilyCap(cityId, family, familyCountsByCity) {
+  const caps = {
+    place_discovery: Math.max(3, Math.ceil(maxPerCity * 0.36)),
+    event_discovery: Math.max(2, Math.ceil(maxPerCity * 0.16)),
+    news: Math.max(2, Math.ceil(maxPerCity * 0.16)),
+  };
+  const cap = caps[family];
+  if (!cap) return false;
+  const current = familyCountsByCity.get(`${cityId}:${family}`) ?? 0;
+  return current >= cap;
 }
 
 function exceedsFamilyQuota(cityId, family, familyCountsByCity, cityCounts) {
@@ -359,17 +442,27 @@ function toMessagePayloadRow(row) {
 function buildRepresentativeExamples(rows, limit) {
   const perCity = groupBy(rows, (row) => row.city_id ?? "unknown");
   const examples = [];
+  const used = new Set();
+
+  const addExample = (row) => {
+    if (!row || used.has(row.id) || examples.length >= limit) return false;
+    examples.push(row);
+    used.add(row.id);
+    return true;
+  };
+
   for (const cityRows of perCity.values()) {
     const sorted = [...cityRows].sort((a, b) => b.composite_score - a.composite_score);
-    examples.push(...sorted.slice(0, 2));
+    addExample(sorted[0]);
+    addExample(sorted.find((row) => row.links?.length));
+    for (const language of preferredLanguageOrder(sorted[0]?.city_id ?? "unknown", sorted.map((row) => row.detected_language))) {
+      addExample(sorted.find((row) => row.detected_language === language));
+    }
   }
   if (examples.length < limit) {
-    const used = new Set(examples.map((row) => row.id));
     for (const row of [...rows].sort((a, b) => b.composite_score - a.composite_score)) {
       if (examples.length >= limit) break;
-      if (used.has(row.id)) continue;
-      examples.push(row);
-      used.add(row.id);
+      addExample(row);
     }
   }
   return examples.slice(0, limit).map((row) => ({
@@ -421,9 +514,9 @@ function thresholdsFor(candidate) {
   if (sourceFamily === "place_discovery") {
     return {
       minMindprint: Math.min(minMindprint, 3),
-      minStickiness: Math.min(minStickiness, 3),
+      minStickiness: Math.min(minStickiness, 2),
       minAmbiguity: Math.min(minAmbiguity, 2),
-      minCompositeScore: Math.min(minCompositeScore, 3.75),
+      minCompositeScore: Math.min(minCompositeScore, 3.25),
     };
   }
   return { minMindprint, minStickiness, minAmbiguity, minCompositeScore };
@@ -549,6 +642,21 @@ function normalizeOpeningKey(content) {
     .split(/\s+/)
     .slice(0, 8)
     .join(" ");
+}
+
+function normalizeTemplateKey(content) {
+  const lower = String(content ?? "").toLowerCase();
+  if (/left pretending it had been the plan all along/.test(lower)) return "place_left_pretending";
+  if (/fixed about eight minutes of my day/.test(lower)) return "place_fixed_minutes";
+  if (/said they were only staying five minutes|respect(ed)? the lie/.test(lower)) return "place_five_minutes_en";
+  if (/me quedé con .+ fingí que no estaba calculando/.test(lower)) return "place_me_quede_es";
+  if (/m'he quedat amb .+ m'ha fet ràbia/.test(lower)) return "place_quedat_ca";
+  if (/he entrat al .+ he sortit fent veure/.test(lower)) return "place_entrat_ca";
+  if (/опять сказал себе что просто быстро зайду/.test(lower)) return "place_quick_stop_ru";
+  if (/делаю вид, что это была прогулка/.test(lower)) return "place_walk_ru";
+  if (/кто-то сказал: «я на пять минут»/.test(lower)) return "place_five_minutes_ru";
+  if (/не подвиг, но день стал чуть тише/.test(lower)) return "place_quiet_day_ru";
+  return null;
 }
 
 function sourceHash(value) {

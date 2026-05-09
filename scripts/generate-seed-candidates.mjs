@@ -250,6 +250,10 @@ console.log(
 );
 
 async function generateCandidate(job, { provider: activeProvider, model: activeModel }) {
+  if (job.sourceFamily === "place_discovery") {
+    return buildLocalPlaceDiscoveryCandidate(job);
+  }
+
   const initial = await generateCandidateOnce(job, { provider: activeProvider, model: activeModel });
 
   // When forceLanguage is set, bypass repair variants entirely.
@@ -1683,6 +1687,7 @@ function shouldAttemptRepair(job, assessment) {
 
 function buildLocalRepairVariants(job, text) {
   if (job.sourceFamily === "event_discovery") return [];
+  if (job.sourceFamily === "place_discovery") return buildPlaceDiscoveryLocalVariants(job);
 
   const sourceText = cleanSourceFallback(job);
   const basis = sourceText || cleanGeneratedText(text);
@@ -1708,6 +1713,204 @@ function buildLocalRepairVariants(job, text) {
   }
 
   return Array.from(new Set(variants.filter(Boolean)));
+}
+
+function buildLocalPlaceDiscoveryCandidate(job) {
+  const variants = buildPlaceDiscoveryLocalVariants(job);
+  const assessed = variants.map((content) => ({ content, assessment: assessCandidateQuality(job, content) }));
+  const rand = createSeededRandom(`place-local:${TODAY_DATE}:${job.id}`);
+  const rotated = orderPlaceVariantsForStyle(assessed, job.placePromptStyle, rand);
+  const best =
+    rotated.find((item) => item.assessment.review.passed)?.content ??
+    assessed.sort((left, right) => right.assessment.score - left.assessment.score)[0]?.content ??
+    cleanSourceFallback(job);
+
+  return {
+    content: best,
+    why_human: "one sourced place detail with a small personal reaction",
+    why_ai: "compact sourced transformation with controlled wording",
+    read_value_hook: "specific place detail with link",
+    sentiment: "neutral",
+    detected_language: normalizeLanguageCode(job.targetLanguage ?? job.rawSnippetLanguage ?? "en"),
+    links: normalizeLinks(job.links) ?? [],
+    rawModelResponse: null,
+    usage: null,
+    systemFingerprint: "local_place_discovery_v1",
+  };
+}
+
+function buildPlaceDiscoveryLocalVariants(job) {
+  const lang = normalizeLanguageCode(job.targetLanguage ?? job.rawSnippetLanguage ?? "en");
+  const place = cleanGeneratedText(job.placeName ?? "");
+  const neighborhood = cleanGeneratedText(job.placeNeighborhood ?? "");
+  const fact = cleanGeneratedText(job.placeFact ?? job.rawSnippet ?? "");
+  const anchor = neighborhood || place || cleanGeneratedText(job.cityName ?? "Barcelona");
+  const shortPlace = shortPlaceName(place);
+  const detail = placeDetailFor(fact, lang);
+  const price = extractPrice(fact);
+
+  if (lang === "ru") {
+    const ruDetail = placeDetailFor(fact, "ru");
+    const ruAnchor = russianNeighborhood(neighborhood);
+    return [
+      `в ${ruAnchor} зашел за ${ruDetail}${price ? ` за ${price}` : ""}. не подвиг, но день стал чуть тише.`,
+      `зашел в Барсе за ${ruDetail}${price ? ` за ${price}` : ""} и делаю вид, что это была прогулка, а не усталость.`,
+      `в ${ruAnchor} кто-то сказал: «я на пять минут». смешно, конечно.`,
+      `в Барселоне, в ${ruAnchor}, опять сказал себе что просто быстро зайду за ${ruDetail}. ну да.`,
+    ];
+  }
+
+  if (lang === "ca") {
+    return [
+      `a ${anchor} m'he quedat amb ${detail}${price ? ` de ${price}` : ""} i m'ha fet ràbia que funcionés tan bé.`,
+      `he entrat al ${shortPlace || anchor} per ${detail}${price ? ` de ${price}` : ""} i he sortit fent veure que era un pla.`,
+      `al ${shortPlace || anchor} algú ha dit que només entrava cinc minuts. jo també m'ho havia cregut.`,
+      `a ${anchor} ${detail} ha arreglat exactament deu minuts del dia. després Barcelona ha tornat a ser Barcelona.`,
+    ];
+  }
+
+  if (lang === "es") {
+    return [
+      `en ${anchor} me quedé con ${detail}${price ? ` de ${price}` : ""} y fingí que no estaba calculando si repetir.`,
+      `entré en ${shortPlace || anchor} por ${detail}${price ? ` de ${price}` : ""} y salí haciendo como si hubiera sido un plan.`,
+      `en ${shortPlace || anchor} alguien dijo que solo entraba cinco minutos. yo también me lo había creído.`,
+      `por ${anchor}, ${detail}${price ? ` a ${price}` : ""} y esa sensación absurda de haber encontrado una pausa.`,
+    ];
+  }
+
+  return [
+    `i went into ${shortPlace || anchor} for ${detail}${price ? ` for ${price}` : ""} and left pretending it had been the plan all along.`,
+    `the ${detail}${price ? ` for ${price}` : ""} at ${shortPlace || anchor} fixed about eight minutes of my day, which is more than I expected.`,
+    `someone at ${shortPlace || anchor} said they were only staying five minutes. i respected the lie.`,
+    `${shortPlace || anchor} gave me ${detail}${price ? ` for ${price}` : ""} and a weird little pause in the middle of the day.`,
+  ];
+}
+
+function orderPlaceVariantsForStyle(assessed, styleId, rand) {
+  if (!assessed.length) return assessed;
+  const preferredIndex = {
+    specific_dish: 0,
+    just_left: 1,
+    overheard: 2,
+    mild_roast: 3,
+    found_by_accident: 3,
+  }[styleId];
+  const offset = preferredIndex === undefined ? Math.floor(rand() * assessed.length) : Math.min(preferredIndex, assessed.length - 1);
+  return assessed.slice(offset).concat(assessed.slice(0, offset));
+}
+
+function shortPlaceName(value) {
+  const text = cleanGeneratedText(value);
+  if (!text) return "";
+  return text.length <= 28 ? text : "";
+}
+
+function extractPrice(fact) {
+  const text = String(fact ?? "");
+  const match = text.match(/(?:[€$£]\s?\d+(?:[.,]\d+)?|\d+(?:[.,]\d+)?\s?€)/);
+  return match ? match[0].replace(/\s+/g, "") : "";
+}
+
+function russianNeighborhood(value) {
+  const text = cleanGeneratedText(value).toLowerCase();
+  if (text.includes("gràcia") || text.includes("gracia")) return "Грасии";
+  if (text.includes("born")) return "Борне";
+  if (text.includes("barceloneta")) return "Барселонете";
+  if (text.includes("raval")) return "Равале";
+  if (text.includes("poble sec")) return "Побле-Секе";
+  if (text.includes("eixample")) return "Эшампле";
+  if (text.includes("sant antoni")) return "Сант-Антони";
+  if (text.includes("montju")) return "Монжуике";
+  if (text.includes("gòtic") || text.includes("gotic")) return "Готике";
+  if (text.includes("sant pere")) return "Сант-Пере";
+  return "центре";
+}
+
+function placeDetailFor(fact, lang) {
+  const text = String(fact ?? "").toLowerCase();
+  const dictionaries = {
+    ru: [
+      [/vermut|vermouth/i, "вермутом"],
+      [/cava/i, "кавой"],
+      [/coffee|espresso|cortado/i, "кофе"],
+      [/tortilla/i, "тортильей"],
+      [/bomba|bombas/i, "бомбой"],
+      [/wine|vino|vi de la casa|natural wine/i, "вином"],
+      [/jazz/i, "джазом"],
+      [/absinthe/i, "абсентом"],
+      [/cacaolat|suís/i, "какаолатом"],
+      [/montadito|montaditos/i, "монтадитос"],
+      [/brunch/i, "бранчем"],
+      [/gambas/i, "креветками"],
+      [/sandwich|pastrami/i, "сэндвичем"],
+      [/cocktail|martini/i, "коктейлем"],
+      [/bomb marks|bombardment/i, "следами от бомб на стене"],
+      [/mosaic roof/i, "мозаичной крышей"],
+    ],
+    ca: [
+      [/vermut|vermouth/i, "el vermut"],
+      [/cava/i, "el cava de la casa"],
+      [/coffee|espresso|cortado/i, "el cafè"],
+      [/tortilla/i, "la truita"],
+      [/bomba|bombas/i, "la bomba"],
+      [/wine|vino|vi de la casa|natural wine/i, "el vi de la casa"],
+      [/jazz/i, "el jazz"],
+      [/absinthe/i, "l'absenta"],
+      [/cacaolat|suís/i, "el suís amb nata"],
+      [/montadito|montaditos/i, "el montadito"],
+      [/brunch/i, "el brunch"],
+      [/gambas/i, "les gambes"],
+      [/sandwich|pastrami/i, "l'entrepà"],
+      [/cocktail|martini/i, "el còctel"],
+      [/bomb marks|bombardment/i, "les marques de bomba a la paret"],
+      [/mosaic roof/i, "el sostre de mosaic"],
+    ],
+    es: [
+      [/vermut|vermouth/i, "un vermut"],
+      [/cava/i, "una copa de cava"],
+      [/coffee|espresso|cortado/i, "un café"],
+      [/tortilla/i, "la tortilla"],
+      [/bomba|bombas/i, "una bomba"],
+      [/wine|vino|vi de la casa|natural wine/i, "un vino de la casa"],
+      [/jazz/i, "un rato de jazz"],
+      [/absinthe/i, "un absenta"],
+      [/cacaolat|suís/i, "un suís con nata"],
+      [/montadito|montaditos/i, "un montadito"],
+      [/brunch/i, "el brunch"],
+      [/gambas/i, "las gambas"],
+      [/sandwich|pastrami/i, "un sándwich"],
+      [/cocktail|martini/i, "un cóctel"],
+      [/bomb marks|bombardment/i, "las marcas de bombas en la pared"],
+      [/mosaic roof/i, "el techo de mosaico"],
+    ],
+    en: [
+      [/vermut|vermouth/i, "vermut"],
+      [/cava/i, "house cava"],
+      [/coffee|espresso|cortado/i, "coffee"],
+      [/tortilla/i, "tortilla"],
+      [/bomba|bombas/i, "bomba"],
+      [/wine|vino|vi de la casa|natural wine/i, "house wine"],
+      [/jazz/i, "jazz in the corner"],
+      [/absinthe/i, "absinthe"],
+      [/cacaolat|suís/i, "suís amb nata"],
+      [/montadito|montaditos/i, "montadito"],
+      [/brunch/i, "brunch"],
+      [/gambas/i, "gambas"],
+      [/sandwich|pastrami/i, "pastrami sandwich"],
+      [/cocktail|martini/i, "martini"],
+      [/bomb marks|bombardment/i, "bomb marks on the wall"],
+      [/mosaic roof/i, "mosaic roof"],
+    ],
+  };
+  const entries = dictionaries[lang] ?? dictionaries.en;
+  return entries.find(([pattern]) => pattern.test(text))?.[1] ?? fallbackPlaceDetail(lang);
+}
+
+function fallbackPlaceDetail(lang) {
+  if (lang === "ru") return "одной мелочью";
+  if (lang === "ca") return "una cosa petita";
+  if (lang === "es") return "una cosa pequeña";
+  return "one small thing";
 }
 
 function buildFreshAnchoredRepair(job, text) {

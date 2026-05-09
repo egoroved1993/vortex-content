@@ -6,7 +6,7 @@ on:
       count:
         description: "Total mixed job count before generation"
         required: false
-        default: "80"
+        default: "240"
       model:
         description: "Model to use for upload-capable runs"
         required: false
@@ -136,7 +136,7 @@ jobs:
           fi
 
           echo "provider=${MANUAL_PROVIDER}" >> "$GITHUB_OUTPUT"
-          echo "count=${{ inputs.count || '80' }}" >> "$GITHUB_OUTPUT"
+          echo "count=${{ inputs.count || '240' }}" >> "$GITHUB_OUTPUT"
           echo "model=${MANUAL_MODEL}" >> "$GITHUB_OUTPUT"
           echo "upload=${MANUAL_UPLOAD}" >> "$GITHUB_OUTPUT"
           echo "expire_existing=${{ inputs.expire_existing && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
