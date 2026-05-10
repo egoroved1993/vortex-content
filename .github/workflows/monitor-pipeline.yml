@@ -1,0 +1,60 @@
+name: Monitor Pipeline
+
+# Daily health check — sends Telegram alert if pipeline broken or degraded.
+# Checks active messages count, bank size, last publish time, last accumulation
+# time, expired buildup. Each issue includes a fix command.
+#
+# Schedule: every 8 hours (3x/day) — covers a few publish cycles.
+
+on:
+  schedule:
+    - cron: "30 */8 * * *"
+  workflow_dispatch:
+    inputs:
+      min_active_per_city:
+        description: "Min active AI messages per city below which we alert"
+        required: false
+        default: "15"
+      max_expired:
+        description: "Max expired AI rows before unique-constraint warning"
+        required: false
+        default: "5000"
+      dry_run:
+        description: "Print Telegram preview instead of sending"
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run health check
+        run: |
+          ARGS=(
+            --min-active-per-city "${{ inputs.min_active_per_city || '15' }}"
+            --max-expired "${{ inputs.max_expired || '5000' }}"
+          )
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            ARGS+=( --dry-run )
+          fi
+          node scripts/monitor-pipeline.mjs "${ARGS[@]}"
