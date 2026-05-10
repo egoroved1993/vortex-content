@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-10T10:33:53.684Z",
+    "capturedAt": "2026-05-10T11:26:24.595Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 400
+    "totalItems": 397
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-10T10:33:53.684Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-05-10T11:26:24.595Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 19,
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Wembley Park and Aldgate southbound only due to an earlier faulty train at Dolli"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 10 May, no service between Dalston Junction and Highbury & Islington. Please use MILDMAY LINE serv"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Brixton. Caught a late 59 last weekend, and the guy in front was singing 'Wonderwall' to the driver. Never thought I'd see bus karaoke in Brixton at 2 AM."
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.061,
+        "source_item_count": 90,
+        "average_valence": -0.056,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-10T10:33:53.684Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-10T11:26:24.595Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -143,9 +135,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy gray, threatening rain, while a chilly breeze flutters through the streets, making people huddle deeper into their coats.. After a brief period of chaos, buses a"
+          "excerpt": "The sky is a steel gray, with a damp chill that clings to the air, making the cobblestones gleam like wet glass.. Though buses and trams are running again, the mood is tense as com"
         },
         {
           "source_family": "public",
@@ -154,22 +146,30 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Only going to be in Berlin during weekdays, what clubs should I hit?. I am a big Brazilian clubber now based in New York. Looking for some techno and somewhere with people my age ("
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Gun violence in Berlin, article about the current state by Berliner Morgenpost. Newly released article providing an overview of the current situation in Berlin. What are your thoug"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.012,
+        "source_item_count": 117,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-10T10:33:53.684Z",
+      "captured_at": "2026-05-10T11:26:24.595Z",
       "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -236,13 +236,13 @@
           "money",
           "transit"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-10T10:33:53.684Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-10T11:26:24.595Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -281,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sun is bright but a brisk wind is weaving through the streets, hinting at the chilly February air.. Train platforms are a mix of frustrated commuters and hopeful travelers, wai"
+          "excerpt": "The sun spills over the cobblestones, casting long shadows and a warmth that belies the crisp chill in the air.. The train platforms are unusually crowded, with frustrated commuter"
         },
         {
           "source_family": "public",
@@ -304,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 78,
-        "average_valence": -0.027,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "tourism",
