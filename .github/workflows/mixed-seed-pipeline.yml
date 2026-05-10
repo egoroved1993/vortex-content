@@ -85,24 +85,30 @@ jobs:
           MANUAL_UPLOAD="${{ inputs.upload && 'true' || 'false' }}"
           MANUAL_MIX="${{ inputs.mix || 'public,review,forum,place_discovery' }}"
 
-          if [ "$MANUAL_UPLOAD" = "true" ] && [ "$MANUAL_MODEL" = "gpt-4o-mini" ]; then
-            echo "gpt-4o-mini upload runs are disabled: quality was below the production bar." >&2
+          fail_config() {
+            local reason="$1"
+            local message="$2"
+            mkdir -p content
+            printf '{"uploadedMain":false,"reason":"%s","blockedAt":"resolve_run_configuration","model":"%s","upload":"%s","mix":"%s"}\n' \
+              "$reason" "$MANUAL_MODEL" "$MANUAL_UPLOAD" "$MANUAL_MIX" > content/pipeline-upload-state.json
+            echo "$message" >&2
             exit 1
+          }
+
+          if [ "$MANUAL_UPLOAD" = "true" ] && [ "$MANUAL_MODEL" = "gpt-4o-mini" ]; then
+            fail_config "model_quality_blocked_gpt_4o_mini" "gpt-4o-mini upload runs are disabled: quality was below the production bar."
           fi
 
           if [ "$MANUAL_UPLOAD" = "true" ] && [[ ",$MANUAL_MIX," =~ ,(social|world|bridge), ]]; then
-            echo "Upload runs cannot use social/world/bridge while the X/Grok layer is disabled/stale." >&2
-            exit 1
+            fail_config "stale_social_world_bridge_mix" "Upload runs cannot use social/world/bridge while the X/Grok layer is disabled/stale."
           fi
 
           if [ "$MANUAL_UPLOAD" = "true" ] && [[ ",$MANUAL_MIX," =~ ,launch, ]]; then
-            echo "Upload runs cannot use launch anymore; production content must be sourced transformation only." >&2
-            exit 1
+            fail_config "launch_direct_upload_blocked" "Upload runs cannot use launch anymore; production content must be sourced transformation only."
           fi
 
           if [ "$MANUAL_UPLOAD" = "true" ] && [[ ",$MANUAL_MIX," =~ ,news, ]]; then
-            echo "Upload runs cannot use news directly yet; news must go through candidate review/approved bank curation." >&2
-            exit 1
+            fail_config "news_direct_upload_blocked" "Upload runs cannot use news directly yet; news must go through candidate review/approved bank curation."
           fi
 
           if [[ "$MANUAL_MODEL" == gpt-* ]]; then
@@ -116,21 +122,18 @@ jobs:
                 MANUAL_MODEL=claude-haiku-4-5-20251001
                 MANUAL_PROVIDER=anthropic
               else
-                echo "DEEPSEEK_API_KEY is required for DeepSeek runs." >&2
-                exit 1
+                fail_config "missing_deepseek_key" "DEEPSEEK_API_KEY is required for DeepSeek runs."
               fi
             else
               MANUAL_PROVIDER=deepseek
             fi
           elif [[ "$MANUAL_MODEL" == qwen/* || "$MANUAL_MODEL" == qwen-* ]]; then
             if [ -z "${OPENROUTER_API_KEY:-}" ]; then
-              echo "OPENROUTER_API_KEY is required for Qwen/OpenRouter runs." >&2
-              exit 1
+              fail_config "missing_openrouter_key" "OPENROUTER_API_KEY is required for Qwen/OpenRouter runs."
             fi
             MANUAL_PROVIDER=openrouter
           elif [[ "$MANUAL_MODEL" == grok-* ]]; then
-            echo "Grok/xAI runs are disabled in this pipeline; use Claude or GPT-4o." >&2
-            exit 1
+            fail_config "grok_disabled" "Grok/xAI runs are disabled in this pipeline; use Claude or GPT-4o."
           else
             MANUAL_PROVIDER=openai
           fi
