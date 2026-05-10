@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-10T01:06:27.965Z",
+    "capturedAt": "2026-05-10T03:18:45.687Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 396
+    "totalItems": 400
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-10T01:06:27.965Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-10T03:18:45.687Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -49,12 +49,20 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 9 and Sunday 10 May, including Friday and Saturday Night Tube, no service between Cockfosters"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 1,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "Clouds loom overhead, casting a dim light on bustling streets as occasional raindrops punctuate the air.. The mood on the Tube is apprehensive, with commuters glancing at their pho"
+          "excerpt": "The sky hangs heavy with overcast clouds, casting a dull gray light that seems to mute the vibrant colors of the city.. The normally bustling Tube stations feel particularly tense "
         },
         {
           "source_family": "news",
@@ -71,42 +79,35 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "London Underground potential strike days - King's College London. London Underground potential strike days"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'With four jobs in London I couldn't afford rent so I'm going to Manchester' - BBC. 'With four jobs in London I couldn't afford rent so I'm going to Manchester'"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.016,
+        "source_item_count": 85,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.838
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-10T01:06:27.965Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-10T03:18:45.687Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -142,9 +143,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, heavy with the promise of rain while a brisk wind nips at the edges of umbrellas.. With yesterday's strikes over, there’s a mix of relief and impatience am"
+          "excerpt": "The sky is a leaden gray, heavy with the threat of light rain, while the crisp autumn air carries the earthy scent of fallen leaves.. With bus and tram services back on track after"
         },
         {
           "source_family": "public",
@@ -156,22 +157,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.001,
+        "source_item_count": 121,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
         "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-10T01:06:27.965Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-05-10T03:18:45.687Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 49,
@@ -203,6 +204,14 @@
           "excerpt": "How do you vet SF landlords?. Currently in PacHeights and our landlord didn’t have heat for us in the winter due to poor boiler maintenance and still has the nerve to threaten tena"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know you're local when you can guess the BART delays by the time of day, yet still get annoyed when a stop is clo"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -217,33 +226,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Ironic, a politician proposes something that sounds too good to be true, you're not questioning how mind boggling complex that is but you're asking me why it's \"impossible\"? Do you"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I suggest that you take a hard look at the website first. It provides no information about the organization, their 501(c)3 number, the board, the founders, where they're located, t"
         }
       ],
       "metadata": {
         "source_item_count": 115,
-        "average_valence": 0.011,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "weather"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-10T01:06:27.965Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-10T03:18:45.687Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A dense blanket of gray clouds hovers over the city, with intermittent drizzles that create a slick sheen on the cobblestones.. The atmosphere in the metro is charged with impatien"
+          "excerpt": "The sun bathes the streets in a golden hue, but a biting wind sneaks through the alleyways, leaving a chill on exposed skin.. Trains are running irregularly due to the ongoing stri"
         },
         {
           "source_family": "public",
@@ -303,11 +304,11 @@
       ],
       "metadata": {
         "source_item_count": 79,
-        "average_valence": -0.02,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "money"
         ],
         "freshness_score": 0.771
       }
