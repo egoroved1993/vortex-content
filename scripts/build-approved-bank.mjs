@@ -77,14 +77,22 @@ const BLOCKED_ISSUES = new Set([
 ]);
 
 const HEADLINE_OR_SEO_RE = /watch the latest .* forecast|\bhouses for rent in [A-Z]|\bSo teuer ist Wohnen\b|\bNeues Quartier entsteht\b|\bsummerlike weather forecast\b|\bBay Area weather shifts from wet to warm\b|\bITV weather forecast\b|\bRead more\b|\bSubscribe now\b/i;
-const PIPELINE_SEAM_RE = /^(?:(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b|(in|en|a|por|per|by|bei)\s+(barcelona|london|berlin|san francisco|sf),\s)|\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/i;
+const PIPELINE_SEAM_RE = /^(?:(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b|(in|en|a|por|per|by|bei)\s+(barcelona|london|berlin|san francisco|sf),\s|by\s+[A-ZÄÖÜ][\p{L}\s-]{2,35},\s)|\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/iu;
 const LOCAL_ANCHOR_SEAM_RE = /^(?:by|near|around)\s+(?:gràcia|gracia|raval|eixample|barceloneta|el born|poble[-\s]?sec|sant antoni|poblenou|sants)\s*,/i;
 const PLACE_TEMPLATE_RE = /^just (left|walked out of)\b|\bsmell of\b.{0,80}\bstill (clings|on|in)\b|\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b|\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b|\b(left pretending it had been the plan all along|fixed about eight minutes of my day|me quedé con .+ fingí que no estaba calculando|m'he quedat amb .+ m'ha fet ràbia|опять сказал себе что просто быстро зайду)\b|\b(worth every cent|worth it|no regrets|hidden gem|must[- ]try|highly recommend)\b/i;
 const PLACE_LISTING_RE = /\brated \d(?:\.\d)?\/5\b|\bprice level\b|\bcurrently closed\b|\bon Google\b|\b(basement venue|ranked world top|prepared tableside|open since \d{4})\b|^[^.!?]{2,40}\.\s+[^.!?]{2,40}\.\s+/i;
 const NOSTALGIA_SLOP_RE = /\b(год назад|тогда .*теперь|ощущение то же самое|first time in my life|i used to spend a lot of time|used to be .* now|l'any passat|el año pasado|fa anys|hace años|abans .* ara|antes .* ahora)\b/i;
 const LOW_SIGNAL_PAYOFF_RE = /\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle|so there(?:'|’)s hope)\b/i;
-const TOURIST_SLOGAN_RE = /\bguirilandia\b/i;
-const GENERIC_BAD_RE = /\b(interesting people around|pretty shy when it comes|beautiful city)\b/i;
+const EVENT_LISTING_PROMO_RE = /\b(hope you made it out|there'?s still .+ tonight|starts? at \d|tickets? (?:are|on)|lineup|big .* party|you should go|come through)\b/i;
+const TOURIST_POV_RE = /\b(came to sf|came to san francisco|visiting sf|visiting san francisco|first night here|lost (?:her|his|my|their) wallet and id|birthday trip)\b/i;
+const PRODUCT_FLEX_RE = /\b(brand new fuji|logical thing to do|photo walk and actually use it)\b/i;
+const TOURIST_SLOGAN_RE = /\b(guirilandia|tourist charm collide with reality)\b/i;
+const RAW_PUBLIC_SCAFFOLD_RE = /\b(LF Roommates|looking for (?:some )?roommates|DoorDash stipend|Tired of sweetgreen|Shoot me the file|Reviews tab|rough number of how many reviews|not whatever you claimed|don[’']?t put words in my mouth|self centered|district actually has had huge budget cuts|Chromebooks|iPads|SF Schoolhouse|screen-free for lower grades|termed out|second term ends|rent check|huge buyout|landlord his father|landlord wanted to move in|new appartment|average age is \d{2}(?:\.\d)?|Anything smaller than \d+|What[’']?s the best)\b/i;
+const RAW_PUBLIC_REPLY_OPENER_RE = /^(also still old money|prior to that i[’']d been|maybe it[’']s not new|anything smaller than|don[’']?t put words|berlin[’']s average age|my district actually|i heard sf schoolhouse|fidi doordash dinner|lf roommates)\b/i;
+const RAW_ADMIN_STATEMENT_RE = /\b(\d+:1 ratio|grades 5-8|screen-free|budget cuts|average age is \d{2}(?:\.\d)?|second term ends|termed out)\b/i;
+const RAW_REQUEST_OR_LOGISTICS_RE = /\b(if anyone is willing|message me about them|can[’']?t make (?:it|the)|looking for \d+ tickets|have \d+ tickets|i[’']m just guessing|old clipper system|required tapping|SFO employees|Uber to SFO|8 AM flight|BART doesn[’']?t start|power outage notification texts|Good Samaritan|go ahead and interpret|BART Bathrooms|Urinal and a toilet|i built \[|free platform|HIMYM ideal|moving away more and more seriously|just moved here for work|walk through California St|is there a place i can|coin-exchange|official unification|polarising things about the metro|parking spot for monthly rent|Image take from google maps|watch the race|listing prices|xteink reader|3D printer|Logistics Center|destination region)\b/i;
+const RAW_DEBATE_OR_POLICY_RE = /\b(Musk|Tesla cars|AfDs?|foreigners|healthcare|taxes|same depth of argument|not "all money"|state has different budgets|last prosecutor|prosecuting anyone|got recalled|theory 2|fruitless|digable|manicured|best public transportation in the state|played with the symphony|what life was like in Germany|safe, some say it[’']?s not|tech-bros that rent|my point about rent|Brick and Timber|Arab kids|biggest event for mental health)\b/i;
+const GENERIC_BAD_RE = /\b(interesting people around|pretty shy when it comes|beautiful city|side hustles too)\b/i;
 const FRAGMENT_OPENER_RE = /^(has changed|s,|and\b|but\b|,\s*)/i;
 const DANGLING_END_RE = /\b(the other just|and then just|then just|just kind of|sort of|kind of|because|while|with|to|in|of|from|for|on|at|by|the|a|an|near|through|into|as if|if|when|where|than|that|another|still|already|was|were|is|are|like|carrer|calle|he looked|she looked|they looked|it felt|i tried|they said)$/i;
 
@@ -513,7 +521,15 @@ function requiresNewsFit(sourceFamily) {
 
 function thresholdsFor(candidate) {
   const sourceFamily = candidate.sourceFamily ?? "";
-  if (["public", "review", "forum"].includes(sourceFamily)) {
+  if (sourceFamily === "public" || sourceFamily === "forum") {
+    return {
+      minMindprint: Math.min(minMindprint, 3),
+      minStickiness: Math.min(minStickiness, 2),
+      minAmbiguity: Math.min(minAmbiguity, 2),
+      minCompositeScore,
+    };
+  }
+  if (sourceFamily === "review") {
     return {
       minMindprint: Math.min(minMindprint, 3),
       minStickiness: Math.min(minStickiness, 2),
@@ -552,6 +568,12 @@ function detectHardReject(content, candidate) {
   if (LOCAL_ANCHOR_SEAM_RE.test(trimmed)) return "pipeline_seam";
   if (PLACE_TEMPLATE_RE.test(trimmed)) return "place_review_template";
   if (candidate.sourceFamily === "place_discovery" && PLACE_LISTING_RE.test(trimmed)) return "place_listing_voice";
+  if (candidate.sourceFamily === "place_discovery" && hasUnrealisticPlacePrice(text)) return "place_price_anomaly";
+  if (candidate.sourceFamily === "place_discovery" && hasSmallThingPriceAnomaly(text)) return "place_price_anomaly";
+  if (EVENT_LISTING_PROMO_RE.test(text)) return "event_listing_voice";
+  if (TOURIST_POV_RE.test(text)) return "tourist_pov";
+  if (PRODUCT_FLEX_RE.test(text)) return "product_flex";
+  if (isRawPublicScaffold(text, candidate)) return "raw_public_scaffold";
   if (NOSTALGIA_SLOP_RE.test(trimmed)) return "nostalgia_slop";
   if (LOW_SIGNAL_PAYOFF_RE.test(text)) return "low_signal_payoff";
   if (TOURIST_SLOGAN_RE.test(text)) return "tourist_slogan";
@@ -561,11 +583,73 @@ function detectHardReject(content, candidate) {
   if (/:\s*$/.test(trimmed)) return "meme_caption";
   if (detectedLanguage === "ru" && !/[а-яё]/iu.test(text) && /[a-z]{3,}/i.test(text)) return "language_script_mismatch";
   if (detectedLanguage === "ru" && hasRussianLongLatinPhrase(text)) return "ru_latin_phrase_leakage";
+  if (detectedLanguage === "de" && looksEnglishText(text)) return "language_script_mismatch";
+  if (["es", "ca"].includes(detectedLanguage) && looksEnglishText(text)) return "language_script_mismatch";
   if (/[а-яё]/iu.test(text) && /\b(завжди|людськи)\b/iu.test(text)) return "ukrainian_leakage";
   if (/^(just heard someone|i just heard someone|saw a guy|i just watched a guy)\b/i.test(trimmed)) return "weak_hearsay_opener";
   if (/\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle)\b/i.test(text)) return "low_signal_payoff";
 
   return null;
+}
+
+function isRawPublicScaffold(content, candidate) {
+  if (!["public", "forum"].includes(candidate.sourceFamily ?? "")) return false;
+  const text = String(content ?? "");
+  const trimmed = text.trim();
+  return (
+    RAW_PUBLIC_SCAFFOLD_RE.test(text) ||
+    RAW_PUBLIC_REPLY_OPENER_RE.test(trimmed) ||
+    RAW_ADMIN_STATEMENT_RE.test(text) ||
+    RAW_REQUEST_OR_LOGISTICS_RE.test(text) ||
+    RAW_DEBATE_OR_POLICY_RE.test(text)
+  );
+}
+
+function hasUnrealisticPlacePrice(content) {
+  const prices = String(content ?? "").match(/[$€£]\s?\d+(?:[.,]\d+)?|\d+(?:[.,]\d+)?\s?[€£$]/g) ?? [];
+  return prices.some((price) => {
+    const value = Number(String(price).replace(/[^\d.,]/g, "").replace(",", "."));
+    return Number.isFinite(value) && value >= 30;
+  });
+}
+
+function hasSmallThingPriceAnomaly(content) {
+  const text = String(content ?? "");
+  const match = text.match(/\bone small thing for\s*([$€£])\s?(\d+(?:[.,]\d+)?)/i);
+  if (!match) return false;
+  const value = Number(match[2].replace(",", "."));
+  return Number.isFinite(value) && value >= 18;
+}
+
+function looksEnglishText(content) {
+  const text = String(content ?? "").toLowerCase();
+  const tokens = text.match(/[a-z]+/g) ?? [];
+  if (tokens.length < 4) return false;
+  const englishHits = tokens.filter((token) =>
+    [
+      "the",
+      "and",
+      "into",
+      "went",
+      "only",
+      "kill",
+      "minutes",
+      "one",
+      "small",
+      "thing",
+      "made",
+      "sound",
+      "real",
+      "plan",
+      "currently",
+      "stuck",
+      "standing",
+      "still",
+      "between",
+      "stations",
+    ].includes(token)
+  ).length;
+  return englishHits >= 3;
 }
 
 function normalizeDetectedLanguage(value, content = "") {
