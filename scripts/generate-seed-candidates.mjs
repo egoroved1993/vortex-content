@@ -1765,7 +1765,7 @@ function buildPlaceDiscoveryLocalVariants(job) {
       `a ${anchor} m'he quedat amb ${detail}${price ? ` de ${price}` : ""} i m'ha fet ràbia que funcionés tan bé.`,
       `he entrat al ${shortPlace || anchor} per ${detail}${price ? ` de ${price}` : ""} i he sortit fent veure que era un pla.`,
       `al ${shortPlace || anchor} algú ha dit que només entrava cinc minuts. jo també m'ho havia cregut.`,
-      `a ${anchor} ${detail} ha arreglat exactament deu minuts del dia. després Barcelona ha tornat a ser Barcelona.`,
+      `a ${anchor}, ${detail}${price ? ` de ${price}` : ""} m'ha arreglat deu minuts del dia. després Barcelona ha tornat a ser Barcelona.`,
     ];
   }
 
@@ -1774,7 +1774,7 @@ function buildPlaceDiscoveryLocalVariants(job) {
       `en ${anchor} me quedé con ${detail}${price ? ` de ${price}` : ""} y fingí que no estaba calculando si repetir.`,
       `entré en ${shortPlace || anchor} por ${detail}${price ? ` de ${price}` : ""} y salí haciendo como si hubiera sido un plan.`,
       `en ${shortPlace || anchor} alguien dijo que solo entraba cinco minutos. yo también me lo había creído.`,
-      `por ${anchor}, ${detail}${price ? ` a ${price}` : ""} y esa sensación absurda de haber encontrado una pausa.`,
+      `por ${anchor}, ${detail}${price ? ` a ${price}` : ""} me arregló diez minutos del día. luego Barcelona volvió a ser Barcelona.`,
     ];
   }
 

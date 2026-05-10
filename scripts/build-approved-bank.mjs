@@ -78,6 +78,7 @@ const BLOCKED_ISSUES = new Set([
 
 const HEADLINE_OR_SEO_RE = /watch the latest .* forecast|\bhouses for rent in [A-Z]|\bSo teuer ist Wohnen\b|\bNeues Quartier entsteht\b|\bsummerlike weather forecast\b|\bBay Area weather shifts from wet to warm\b|\bITV weather forecast\b|\bRead more\b|\bSubscribe now\b/i;
 const PIPELINE_SEAM_RE = /^(?:(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b|(in|en|a|por|per|by|bei)\s+(barcelona|london|berlin|san francisco|sf),\s)|\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/i;
+const LOCAL_ANCHOR_SEAM_RE = /^(?:by|near|around)\s+(?:gràcia|gracia|raval|eixample|barceloneta|el born|poble[-\s]?sec|sant antoni|poblenou|sants)\s*,/i;
 const PLACE_TEMPLATE_RE = /^just (left|walked out of)\b|\bsmell of\b.{0,80}\bstill (clings|on|in)\b|\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b|\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b|\b(worth every cent|worth it|no regrets|hidden gem|must[- ]try|highly recommend)\b/i;
 const PLACE_LISTING_RE = /\brated \d(?:\.\d)?\/5\b|\bprice level\b|\bcurrently closed\b|\bon Google\b|\b(basement venue|ranked world top|prepared tableside|open since \d{4})\b|^[^.!?]{2,40}\.\s+[^.!?]{2,40}\.\s+/i;
 const NOSTALGIA_SLOP_RE = /\b(год назад|тогда .*теперь|ощущение то же самое|first time in my life|i used to spend a lot of time|used to be .* now)\b/i;
@@ -555,6 +556,7 @@ function detectHardReject(content, candidate) {
   if (/[.。!?…]?\s*$/.test(trimmed) && DANGLING_END_RE.test(trimmed)) return "dangling_ending";
   if (HEADLINE_OR_SEO_RE.test(text)) return "headline_or_seo_leak";
   if (PIPELINE_SEAM_RE.test(trimmed)) return "pipeline_seam";
+  if (LOCAL_ANCHOR_SEAM_RE.test(trimmed)) return "pipeline_seam";
   if (PLACE_TEMPLATE_RE.test(trimmed)) return "place_review_template";
   if (candidate.sourceFamily === "place_discovery" && PLACE_LISTING_RE.test(trimmed)) return "place_listing_voice";
   if (NOSTALGIA_SLOP_RE.test(trimmed)) return "nostalgia_slop";
