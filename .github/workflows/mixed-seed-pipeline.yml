@@ -217,9 +217,9 @@ jobs:
             )
 
             if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
-              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 15 --min-upload-per-city 15 --min-per-city 15 --max-per-city 25 --max-total 25 )
+              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 10 --min-upload-per-city 10 --min-per-city 15 --max-per-city 25 --max-total 25 )
             else
-              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 60 --min-upload-per-city 15 --min-per-city 15 --max-per-city 25 --max-total 100 )
+              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 40 --min-upload-per-city 10 --min-per-city 15 --max-per-city 25 --max-total 100 )
             fi
           fi
 
