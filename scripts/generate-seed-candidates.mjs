@@ -388,6 +388,9 @@ function buildSystemPrompt(job, providerHint = null, activeModel = null) {
       "\nExtract one human detail, complaint, overheard-feeling line, or local opinion and compress it into a short anonymous post." +
       "\nKeep the source language and one existing city anchor when available." +
       "\nDo not invent new facts, but you may cut aggressively, anonymize, and remove debate scaffolding." +
+      "\nNever output a recommendation request, ticket request, meetup invite, help/support answer, product advice, policy argument, or comment-reply argument." +
+      "\nIf the raw snippet has those shapes, salvage only one resident-sized feeling or local consequence; the final content must read like a standalone city feed post." +
+      "\nBad openings: 'as you say', 'I didn't assume', 'how to', 'hey everyone', 'discovering', 'I'm not pretending'." +
       "\nTarget 70-180 characters. Hard max 220 characters. Complete thought, not a dangling quote.";
   } else if (isMinimalSalvageFamily(job.sourceFamily)) {
     base +=
