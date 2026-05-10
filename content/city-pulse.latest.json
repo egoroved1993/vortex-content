@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-10T12:30:47.183Z",
+    "capturedAt": "2026-05-10T13:37:57.215Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 399
+    "totalItems": 404
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-10T12:30:47.183Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-05-10T13:37:57.215Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
@@ -33,12 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5
+        "transport": 6,
+        "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 10 May, no service between Dalston Junction and Highbury & Islington. Please use MILDMAY LINE serv"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Caught a guy on the 59 last night, loudly explaining how he invented a new way to eat Jollof rice. Bus was packed but everyone pretended they weren’"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.06,
+        "source_item_count": 96,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-10T12:30:47.183Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-10T13:37:57.215Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -106,7 +107,8 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1
+        "transport": 1,
+        "weather": 1
       },
       "languages": [
         "de",
@@ -119,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5, RE1: Delays 2 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -149,26 +151,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a moody gray, with light rain occasionally tapping against umbrellas as it weaves through the bustling streets.. With the recent end of the strike, there's a cautious re"
+          "excerpt": "The air is crisp with a chill that hints at the approaching winter, the sky a patchwork of slate and cottony clouds.. With the recent strike news, the U-Bahn feels quieter than usu"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.019,
+        "source_item_count": 117,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-10T12:30:47.183Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-10T13:37:57.215Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +180,8 @@
         "forum": 4,
         "signals": 1,
         "news": 49,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -226,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.003,
+        "source_item_count": 114,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-10T12:30:47.183Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-10T13:37:57.215Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -249,7 +252,8 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -269,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The air is thick with humidity, making the sunlight glisten off the wet pavement after a brief morning shower.. Commuters are visibly frustrated at the crowded train stations, with"
+          "excerpt": "The sun carries a sharp warmth, illuminating the scattered clouds that hang lazily above the rooftops of Eixample.. With the ongoing train strike, the mood in the metro is a mix of"
         },
         {
           "source_family": "public",
@@ -299,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 76,
-        "average_valence": -0.021,
+        "source_item_count": 77,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.765
+        "freshness_score": 0.772
       }
     }
   ]
