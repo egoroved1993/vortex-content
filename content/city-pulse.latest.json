@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-10T17:26:43.769Z",
+    "capturedAt": "2026-05-10T18:29:14.080Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-10T17:26:43.769Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-05-10T18:29:14.080Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and High Barnet northbound only while we help a person ill on a train."
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Watford due to an earlier customer incident at Northwood."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays between Camden Town and High Barnet due to an earlier person ill on a train at Kentish Town."
         },
         {
           "source_family": "transport",
@@ -71,33 +79,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 10 May, no service between Surrey Quays and Clapham Junction. Replacement bus service M operates b"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 10 May, no service between Dalston Junction and Highbury & Islington. Please use MILDMAY LINE serv"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.062,
+        "source_item_count": 101,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-10T17:26:43.769Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-10T18:29:14.080Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
@@ -107,7 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,20 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. Walking past the Kottbusser Tor at 2 AM, I saw a dance-off break out in the middle of the street. Only in Neukölln does chaos"
-        },
-        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1, S3, RE2: Delays 4 trips delayed"
+          "excerpt": "Berlin transit S7, S3: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -154,23 +146,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.14,
+          "recency_weight": 0.72,
+          "excerpt": "The late autumn sun drapes the city in a golden hue, but a crisp wind carries the scent of impending rain.. The mood at U-Bahn stations is a mix of relief and tension, as services "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.029,
+        "source_item_count": 119,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-10T17:26:43.769Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-10T18:29:14.080Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -220,28 +220,28 @@
           "excerpt": "How do you vet SF landlords?. Currently in PacHeights and our landlord didn’t have heat for us in the winter due to poor boiler maintenance and still has the nerve to threaten tena"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by their ability to navigate BART delays without a panic. Visitors just stare at their phones, b"
+          "excerpt": "The golden gate bridge is a good option because you can see him going on the bridge and off and still have more than enough time to get to the finish. As a runner, the loneliest pa"
         }
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.013,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-10T17:26:43.769Z",
+      "captured_at": "2026-05-10T18:29:14.080Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
@@ -267,7 +267,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun is hidden behind a thick blanket of clouds, making the air feel cold and damp, with occasional drizzles that send pedestrians scurrying for cover.. The normally bustling Ro"
+          "excerpt": "The morning sun breaks through a veil of clouds, casting a golden hue over the gritty pavements of Raval.. The usually bustling Renfe stations are eerily subdued, with commuters gl"
         },
         {
           "source_family": "public",
