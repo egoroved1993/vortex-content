@@ -129,6 +129,9 @@ runNode(path.join(projectRoot, "scripts", "build-approved-bank.mjs"), [
   args["reviewer-buckets"] ?? "ship_now,strong_candidate,candidate",
   "--representative-count",
   args["representative-count"] ?? "8",
+  // When --upload is set, sync to Supabase approved_bank table for accumulation.
+  // When --upload is not set (dry-run mode), skip Supabase sync.
+  ...(upload ? [] : ["--no-supabase"]),
 ]);
 
 runNode(path.join(projectRoot, "scripts", "check-content-quality.mjs"), [
@@ -162,60 +165,49 @@ const uploadState = {
   cityCounts,
 };
 
+// === New flow: pipeline only ACCUMULATES into approved_bank (Supabase table). ===
+// build-approved-bank.mjs already wrote candidates to bank table above.
+// Direct messages upload is intentionally disabled — that's now done by
+// publish-from-bank.yml workflow which reads from the bank.
+//
+// The --upload flag here is kept for backwards-compat but no longer triggers
+// a direct write to messages. uploadState reflects bank accumulation result.
+
 if (upload) {
-  if (payloadRows.length > 0) {
-    const minimums = checkUploadMinimums({ payloadRows, cityCounts, minUploadTotal, minUploadPerCity, cityFocus });
-    if (!minimums.ok) {
-      uploadState.reason = minimums.reason;
-      console.warn(`Prepared payload did not meet upload minimums (${minimums.reason}); keeping current generated feed in place and skipping main upload`);
-      writeUploadState(uploadStatePath, uploadState);
-      if (failOnUploadMinimums) {
-        console.error("Failing upload run because --fail-on-upload-minimums was set");
-        process.exit(1);
-      }
-    } else {
-      runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
-        "--input",
-        payloadPath,
-        ...(uploadTtlHours ? ["--ttl-hours", uploadTtlHours] : []),
-        ...(createdAtMode ? ["--created-at-mode", createdAtMode] : []),
-        ...(expireExisting ? ["--replace-existing"] : []),
-        ...(expireExisting && cityFocus ? ["--city", cityFocus] : []),
-      ]);
-      uploadState.uploadedMain = true;
-      uploadState.reason = "uploaded";
-    }
-  } else {
-    uploadState.reason = "empty_payload";
-    console.warn("Prepared payload is empty; keeping current generated feed in place and skipping upload");
-    if (failOnEmptyUpload) {
-      writeUploadState(uploadStatePath, uploadState);
-      console.error("Failing upload run because --fail-on-empty-upload was set");
-      process.exit(1);
-    }
-  }
+  // Bank already populated by build-approved-bank.mjs (with SUPABASE_URL set).
+  uploadState.reason = payloadRows.length > 0
+    ? `accumulated_${payloadRows.length}_into_bank`
+    : "no_candidates_passed_filters";
+  uploadState.uploadedMain = false; // bank accumulation, not direct messages upload
+  uploadState.bankAccumulated = payloadRows.length;
   writeUploadState(uploadStatePath, uploadState);
+
   if (Boolean(args["upload-city-pulse"])) {
     runNode(path.join(projectRoot, "scripts", "upload-city-pulse-payload.mjs"), [
       "--input",
       cityPulsePath,
     ]);
   }
+
+  if (payloadRows.length === 0 && failOnEmptyUpload) {
+    console.error("Failing run because --fail-on-empty-upload was set and no candidates passed filters");
+    process.exit(1);
+  }
 } else {
-  runNode(path.join(projectRoot, "scripts", "upload-seed-payload.mjs"), [
-    "--input",
-    payloadPath,
-    "--dry-run",
-  ]);
   runNode(path.join(projectRoot, "scripts", "upload-city-pulse-payload.mjs"), [
     "--input",
     cityPulsePath,
     "--dry-run",
   ]);
+  uploadState.reason = "dry_run_no_bank_sync";
+  uploadState.bankAccumulated = 0;
   writeUploadState(uploadStatePath, uploadState);
 }
 
 console.log("Seed pipeline finished");
+console.log("");
+console.log("ℹ️  This pipeline only accumulates candidates into approved_bank table.");
+console.log("ℹ️  To publish to messages, run: gh workflow run publish-from-bank.yml");
 
 function buildMixedJobsCorpus({ mix: selectedSources, seed: activeSeed, cityFocus: activeCityFocus, jobsPath: outputPath, sourceConfig: config }) {
   const mergedJobs = [];

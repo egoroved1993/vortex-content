@@ -58,29 +58,41 @@ function readPayloadRows(relativePath) {
 
 // === Determine actual outcome ===
 //
-// jobStatus = github actions job.status — failure means the job itself errored
-// uploadState.uploadedMain — pipeline-upload-state.json says whether content actually
-// reached Supabase. true = real upload, false = blocked/skipped (with reason).
+// Two-stage flow (after refactor):
+//   1) Mixed Seed Pipeline / City Top-Up: accumulate candidates into approved_bank table
+//      → reason="accumulated_N_into_bank" → 🟢 (bank grew)
+//      → reason="no_candidates_passed_filters" → 🟡 (no quality content this run)
+//   2) Publish From Bank: read pending bank entries → write to messages
+//      → reason="uploaded_from_bank" → 🟢 (real publish)
+//      → reason="no_cities_above_threshold" → 🟡 (bank not full enough yet)
+//
+// Old flow reasons (kept for backwards compat):
+//   uploaded → 🟢
+//   total_below_min, city_below_min, empty_payload, dry_run → 🟡
 
 const uploadState = readJson("content/pipeline-upload-state.json");
 
-// Categorize outcome
-let outcome; // "uploaded" | "skipped" | "failed" | "no_state"
+let outcome; // "uploaded" | "accumulated" | "skipped" | "failed" | "no_state"
 let outcomeReason = null;
+let bankCount = null;
 
 if (jobStatus === "failure" || jobStatus === "cancelled") {
   outcome = "failed";
   outcomeReason = reason ?? `Job status: ${jobStatus}`;
 } else if (uploadState) {
-  if (uploadState.uploadedMain === true) {
+  const r = String(uploadState.reason ?? "");
+  if (uploadState.uploadedMain === true || r === "uploaded_from_bank" || r === "uploaded") {
     outcome = "uploaded";
     outcomeReason = uploadState.reason ?? "uploaded";
+  } else if (r.startsWith("accumulated_") && r.endsWith("_into_bank")) {
+    outcome = "accumulated";
+    bankCount = uploadState.bankAccumulated ?? null;
+    outcomeReason = uploadState.reason;
   } else {
     outcome = "skipped";
     outcomeReason = uploadState.reason ?? "skipped";
   }
 } else {
-  // No state file — workflow either doesn't produce one (Premium, dry-run) or fell over before pipeline ran
   outcome = "no_state";
 }
 
@@ -89,7 +101,9 @@ const lines = [];
 const cityTag = cityFocus ? ` · ${escapeHtml(cityFocus)}` : "";
 
 if (outcome === "uploaded") {
-  lines.push(`🟢 <b>${escapeHtml(workflow)}</b>${cityTag}`);
+  lines.push(`🟢 <b>${escapeHtml(workflow)}</b>${cityTag} · published`);
+} else if (outcome === "accumulated") {
+  lines.push(`🟢 <b>${escapeHtml(workflow)}</b>${cityTag} · +${bankCount ?? "?"} to bank`);
 } else if (outcome === "skipped") {
   lines.push(`🟡 <b>${escapeHtml(workflow)}</b>${cityTag} · skipped`);
   if (outcomeReason) lines.push(`<i>${escapeHtml(outcomeReason)}</i>`);
@@ -178,6 +192,23 @@ if (!skipStats && (outcome === "uploaded" || outcome === "no_state")) {
   if (mainRows && mainRows.length > 0) {
     lines.push("");
     lines.push(`📦 <b>${mainRows.length}</b> candidates prepared but not uploaded`);
+  }
+} else if (!skipStats && outcome === "accumulated") {
+  // Show what just got added to bank
+  const mainRows = readPayloadRows("content/pipeline-payload.json");
+  if (mainRows && mainRows.length > 0) {
+    const byCity = {};
+    for (const row of mainRows) {
+      const city = row.city_id ?? "?";
+      byCity[city] = (byCity[city] ?? 0) + 1;
+    }
+    const cityCodes = { barcelona: "BCN", berlin: "BER", london: "LON", sf: "SF" };
+    const citiesLine = Object.entries(byCity)
+      .sort((a, b) => b[1] - a[1])
+      .map(([city, n]) => `${cityCodes[city] ?? city}: +${n}`)
+      .join(" · ");
+    lines.push("");
+    lines.push(`📥 ${citiesLine}`);
   }
 }
 

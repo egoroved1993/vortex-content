@@ -1,0 +1,98 @@
+name: Publish From Bank
+
+# Pulls top approved candidates from Supabase approved_bank table and writes
+# them into messages. This is the only path that creates AI feed entries —
+# Mixed Seed Pipeline only ACCUMULATES into the bank, it does not publish directly.
+#
+# Schedule: every 6 hours. Skips if no city has reached min threshold.
+
+on:
+  schedule:
+    - cron: "10 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      min_per_city:
+        description: "Min pending entries needed to trigger publish for a city"
+        required: false
+        default: "8"
+      max_per_city:
+        description: "Max entries to publish per city per run"
+        required: false
+        default: "16"
+      ttl_hours:
+        description: "TTL for published messages"
+        required: false
+        default: "120"
+      city:
+        description: "Optional: only publish for this city"
+        required: false
+        default: ""
+      dry_run:
+        description: "Don't actually publish, just show what would happen"
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: publish-from-bank
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Resolve config
+        id: cfg
+        shell: bash
+        run: |
+          echo "min_per_city=${{ inputs.min_per_city || '8' }}" >> "$GITHUB_OUTPUT"
+          echo "max_per_city=${{ inputs.max_per_city || '16' }}" >> "$GITHUB_OUTPUT"
+          echo "ttl_hours=${{ inputs.ttl_hours || '120' }}" >> "$GITHUB_OUTPUT"
+          echo "city=${{ inputs.city }}" >> "$GITHUB_OUTPUT"
+          echo "dry_run=${{ inputs.dry_run && 'true' || 'false' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Publish from bank
+        shell: bash
+        run: |
+          ARGS=(
+            --min-per-city "${{ steps.cfg.outputs.min_per_city }}"
+            --max-per-city "${{ steps.cfg.outputs.max_per_city }}"
+            --ttl-hours "${{ steps.cfg.outputs.ttl_hours }}"
+            --upload-state content/pipeline-upload-state.json
+          )
+          if [ -n "${{ steps.cfg.outputs.city }}" ]; then
+            ARGS+=( --city "${{ steps.cfg.outputs.city }}" )
+          fi
+          if [ "${{ steps.cfg.outputs.dry_run }}" = "true" ]; then
+            ARGS+=( --dry-run )
+          fi
+          node scripts/publish-from-bank.mjs "${ARGS[@]}"
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            node scripts/notify-telegram.mjs --workflow "Publish From Bank" --status success ${{ steps.cfg.outputs.city && format('--city-focus "{0}"', steps.cfg.outputs.city) || '' }}
+          else
+            node scripts/notify-telegram.mjs --workflow "Publish From Bank" --status failure --reason "Job status: ${{ job.status }}"
+          fi

@@ -190,11 +190,137 @@ writeJson(rejectedOutPath, {
   borderline,
 });
 
-console.log(`Approved ${bankRows.length}/${candidates.length} candidates into bank`);
+console.log(`Approved ${bankRows.length}/${candidates.length} candidates into bank (this run)`);
 console.log(JSON.stringify(summary, null, 2));
-console.log(`Wrote approved bank to ${outPath}`);
+console.log(`Wrote approved bank snapshot to ${outPath}`);
 console.log(`Wrote publish payload to ${payloadOutPath}`);
 console.log(`Wrote representative examples to ${examplesOutPath}`);
+
+// ── Persist to Supabase approved_bank table for accumulation between runs ──
+//
+// Without this, every run overwrites approved-bank.json from scratch and the
+// "bank" never actually accumulates. Approved candidates land in Supabase
+// approved_bank with status='pending'. A separate publish step takes top N
+// from there and writes to messages table.
+//
+// Skip when --no-supabase flag set (useful for local dry runs or CI without secrets).
+if (!Boolean(args["no-supabase"])) {
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
+  if (!supabaseUrl || !supabaseServiceKey) {
+    console.warn("⚠️  SUPABASE_URL or SUPABASE_SERVICE_KEY missing — skipping bank table sync.");
+  } else {
+    const result = await syncBankToSupabase(bankRows, supabaseUrl, supabaseServiceKey);
+    console.log(`Bank sync to Supabase: inserted=${result.inserted} updated=${result.updated} skipped=${result.skipped}`);
+    console.log(`Bank totals after sync: ${JSON.stringify(result.byCity)}`);
+  }
+}
+
+async function syncBankToSupabase(rows, url, key) {
+  let inserted = 0;
+  let updated = 0;
+  let skipped = 0;
+
+  // Insert each row. ON CONFLICT (approved_bank_content_city_unique) -> update timestamps + see_count.
+  // PostgREST upsert via Prefer: resolution=merge-duplicates with on_conflict.
+  const chunkSize = 50;
+  for (let i = 0; i < rows.length; i += chunkSize) {
+    const chunk = rows.slice(i, i + chunkSize).map((row) => ({
+      city_id: row.city_id,
+      content: row.content,
+      detected_language: row.detected_language,
+      source: row.source ?? "human",
+      source_family: row.source_family ?? null,
+      sentiment: row.sentiment ?? "neutral",
+      scores: row.scores ?? {},
+      composite_score: row.composite_score ?? 0,
+      reviewer_bucket: row.reviewer_bucket ?? null,
+      links: row.links ?? null,
+      tags: row.tags ?? null,
+      provenance: row.provenance ?? null,
+      status: "pending",
+      bank_expires_at: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),
+      last_seen_at: new Date().toISOString(),
+    }));
+
+    const response = await fetch(`${url}/rest/v1/approved_bank?on_conflict=city_id,md5(content)`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        Prefer: "resolution=merge-duplicates,return=representation",
+      },
+      body: JSON.stringify(chunk),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      // md5(content) in on_conflict needs special handling — try regular insert with ignore
+      console.warn(`Upsert with md5 conflict failed: ${response.status} ${errorText.slice(0, 200)}`);
+      console.warn("Falling back to one-by-one insert with conflict suppression");
+      for (const candidate of chunk) {
+        const fallback = await fetch(`${url}/rest/v1/approved_bank`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: key,
+            Authorization: `Bearer ${key}`,
+            Prefer: "return=minimal",
+          },
+          body: JSON.stringify(candidate),
+        });
+        if (fallback.ok) {
+          inserted += 1;
+        } else if (fallback.status === 409 || fallback.status === 400) {
+          // duplicate — try to bump last_seen_at and see_count via RPC
+          const updateResp = await fetch(
+            `${url}/rest/v1/approved_bank?city_id=eq.${encodeURIComponent(candidate.city_id)}&content=eq.${encodeURIComponent(candidate.content)}`,
+            {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+                apikey: key,
+                Authorization: `Bearer ${key}`,
+                Prefer: "return=minimal",
+              },
+              body: JSON.stringify({
+                last_seen_at: new Date().toISOString(),
+              }),
+            },
+          );
+          if (updateResp.ok) {
+            updated += 1;
+          } else {
+            skipped += 1;
+          }
+        } else {
+          skipped += 1;
+        }
+      }
+      continue;
+    }
+
+    const returned = await response.json();
+    inserted += Array.isArray(returned) ? returned.length : chunk.length;
+  }
+
+  // Get bank totals per city
+  const totalsResp = await fetch(
+    `${url}/rest/v1/approved_bank?status=eq.pending&select=city_id`,
+    {
+      method: "GET",
+      headers: { apikey: key, Authorization: `Bearer ${key}` },
+    },
+  );
+  const allPending = totalsResp.ok ? await totalsResp.json() : [];
+  const byCity = {};
+  for (const row of allPending) {
+    byCity[row.city_id] = (byCity[row.city_id] || 0) + 1;
+  }
+
+  return { inserted, updated, skipped, byCity };
+}
 
 function decideCandidate(candidate, review) {
   const content = String(candidate.content ?? "").trim();
