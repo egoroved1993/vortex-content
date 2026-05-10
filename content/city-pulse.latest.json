@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-10T03:18:45.687Z",
+    "capturedAt": "2026-05-10T05:20:59.339Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 400
+    "totalItems": 404
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-10T03:18:45.687Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-05-10T05:20:59.339Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "You’re not hating London, you’re hating your life in London. If you move you’ll probably end up as miserable as you are right now, just abroad. I have not that expensive rent for 2"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 10 May, until 0740, no service between Paddington and Ealing Broadway. Please use Central line co"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -57,57 +73,40 @@
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with overcast clouds, casting a dull gray light that seems to mute the vibrant colors of the city.. The normally bustling Tube stations feel particularly tense "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground potential strike days - King's College London. London Underground potential strike days"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 10 May, no service between Surrey Quays and Clapham Junction. Replacement bus service M operates b"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.042,
+        "source_item_count": 88,
+        "average_valence": -0.071,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-10T03:18:45.687Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-10T05:20:59.339Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 14,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "that’s really good to know that they would indeed transfer the call. What about the other way around? My home phone supports 112 but does not support 110, so I have always wondered"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -145,37 +136,45 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a leaden gray, heavy with the threat of light rain, while the crisp autumn air carries the earthy scent of fallen leaves.. With bus and tram services back on track after"
+          "excerpt": "The skies are a patchwork of gray clouds, casting a muted light over the bustling streets, while a crisp breeze carries the scent of roasted chestnuts from nearby stalls.. After a "
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "She may compare Köln with a city from the country she comes from. Relatively speaking cologne is an amazing city regardless. Really. It has super nice places. The whole city on the"
+          "excerpt": "Only going to be in Berlin during weekdays, what clubs should I hit?. I am a big Brazilian clubber now based in New York. Looking for some techno and somewhere with people my age ("
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Gun violence in Berlin, article about the current state by Berliner Morgenpost. Newly released article providing an overview of the current situation in Berlin. What are your thoug"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.002,
+        "source_item_count": 117,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-10T03:18:45.687Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-05-10T05:20:59.339Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,7 +192,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "for me it gets humid later in the day. (according to my weather station) and when the humidy rises, it feels cold. Weather has actually been really great the last few weeks. Rain i"
+          "excerpt": "Many newcomers have to share. Those who have lived here for awhile either purchased homes years ago before the tech booms, and others live in rent controlled units. It’s unfortunat"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I didn’t have a cat when I got my apartment i am in now but yes after a year of being here i got a cat. My landlord is very chill though and I am pretty sure she knows i have a cat"
         },
         {
           "source_family": "public",
@@ -213,41 +220,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good Bar To Find Mother Earth Brewing Cali Creamin'/Creamsicle On Tap?. traveling back into SF and want to get a beer I tried a while back during an internship in college! I think "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Ironic, a politician proposes something that sounds too good to be true, you're not questioning how mind boggling complex that is but you're asking me why it's \"impossible\"? Do you"
+          "excerpt": "And yes, I don’t think we need a wholesale ban and I’m sure there a good uses for teachers to use YouTube, but I don’t think kids need their own iPad for daily math and homework wh"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.007,
+        "source_item_count": 121,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-10T03:18:45.687Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-10T05:20:59.339Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -281,17 +280,17 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun bathes the streets in a golden hue, but a biting wind sneaks through the alleyways, leaving a chill on exposed skin.. Trains are running irregularly due to the ongoing stri"
+          "excerpt": "The sky hangs heavy with grey clouds, hinting at rain, while a cool breeze carries the scent of moist earth from the parks.. The mood on the crowded metro is restless and frustrate"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Visita al Museu del Videojoc de Catalunya (MUVIC). Als amants de les consoles i videojocs retro us animo a visitar el Museu del Videojoc de Catalunya (MUVIC), un espai petit però p"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
         },
         {
           "source_family": "public",
@@ -303,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 79,
-        "average_valence": -0.028,
+        "source_item_count": 78,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "tourism",
           "money"
         ],
-        "freshness_score": 0.771
+        "freshness_score": 0.766
       }
     }
   ]
