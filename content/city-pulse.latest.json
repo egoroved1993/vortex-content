@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-09T23:23:56.805Z",
+    "capturedAt": "2026-05-10T01:06:27.965Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,46 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 396
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-09T23:23:56.805Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-05-10T01:06:27.965Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to train cancellations. Tickets are being accepted on London Buses, Lioness Line, Thame"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier signal failure at Chalk Farm."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -65,49 +49,64 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 9 and Sunday 10 May, including Friday and Saturday Night Tube, no service between Cockfosters"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "Clouds loom overhead, casting a dim light on bustling streets as occasional raindrops punctuate the air.. The mood on the Tube is apprehensive, with commuters glancing at their pho"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "What's an acceptable level of noise from kids playing outside on sunny days?. Sounds silly but my, somewhat feral, kids have been outside in the garden playing in a paddling pool a"
+          "recency_weight": 0.56,
+          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London Underground potential strike days - King's College London. London Underground potential strike days"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "'With four jobs in London I couldn't afford rent so I'm going to Manchester' - BBC. 'With four jobs in London I couldn't afford rent so I'm going to Manchester'"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.057,
+        "source_item_count": 84,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.838
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-09T23:23:56.805Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-10T01:06:27.965Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,20 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5: Delays 1 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Its also not comparable. Like at all. Estonia is way smaller making it 100 times easier to get stuff done. Like.....it has less then half of the inhabitants of Berlin alone. Münche"
+          "excerpt": "that’s really good to know that they would indeed transfer the call. What about the other way around? My home phone supports 112 but does not support 110, so I have always wondered"
         },
         {
           "source_family": "news",
@@ -151,31 +142,39 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy slate gray, cloaking the city in a moody chill that feels like rain is just holding back.. After a day of disruption, the U-Bahn cars are once again filled with "
+          "excerpt": "The sky is a slate gray, heavy with the promise of rain while a brisk wind nips at the edges of umbrellas.. With yesterday's strikes over, there’s a mix of relief and impatience am"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "She may compare Köln with a city from the country she comes from. Relatively speaking cologne is an amazing city regardless. Really. It has super nice places. The whole city on the"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.012,
+        "source_item_count": 118,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-09T23:23:56.805Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-10T01:06:27.965Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,66 +187,66 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. SoMa. Saw a guy in a full business suit napping on a Muni seat next to a woman in a tie-dye dress, both oblivious to the rush hour chaos around "
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Moved in 30’s. I don’t think there’s much difference between when you move here honestly, as long as you can afford rent and expenses here. Barking/running dogs are always issues i"
+          "excerpt": "for me it gets humid later in the day. (according to my weather station) and when the humidy rises, it feels cold. Weather has actually been really great the last few weeks. Rain i"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How do you vet SF landlords?. Currently in PacHeights and our landlord didn’t have heat for us in the winter due to poor boiler maintenance and still has the nerve to threaten tena"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Good Bar To Find Mother Earth Brewing Cali Creamin'/Creamsicle On Tap?. traveling back into SF and want to get a beer I tried a while back during an internship in college! I think "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It's really tough right now. I found a 500sqft top floor, rent-controlled studio with a view in Nob Hill in 2022 with zero competition for $1800/mo. Now studios on lower floors wit"
+          "excerpt": "Ironic, a politician proposes something that sounds too good to be true, you're not questioning how mind boggling complex that is but you're asking me why it's \"impossible\"? Do you"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I commuted from Tracy to Mountain View 4 times a week for just over a year. 3 days I would usually take public transit (ACE + Caltrain + Bus) and the 4th day I would drive. I don’t"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Columbus Ave has lots of bars and decent eating spots. Close to Chinatown too. Decent burritos you can find at El Farolito without breaking the bank. One of my fav Chinese spots is"
+          "excerpt": "I suggest that you take a hard look at the website first. It provides no information about the organization, their 501(c)3 number, the board, the founders, where they're located, t"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.028,
+        "source_item_count": 115,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
-          "money",
+          "transit",
           "belonging"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-09T23:23:56.805Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-10T01:06:27.965Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -264,26 +263,26 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Al margen de lo que opines de otras regulaciones, lo del alquiler de temporada es claramente una truco de trilero para colar ciertas cosas. A mi hermana le dijeron hace poco que er"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Yes because the homeless people are all catalans who can't afford rent for sure ... Stop the stupid guiri bashing, they're not the ones who caused this systematic issue"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Al margen de lo que opines de otras regulaciones, lo del alquiler de temporada es claramente una truco de trilero para colar ciertas cosas. A mi hermana le dijeron hace poco que er"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.283,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks through a patchy blanket of clouds, casting a warm glow over the bustling streets as a light breeze rustles the leaves of the plane trees.. The mood on the half-full "
+          "excerpt": "A dense blanket of gray clouds hovers over the city, with intermittent drizzles that create a slick sheen on the cobblestones.. The atmosphere in the metro is charged with impatien"
         },
         {
           "source_family": "public",
@@ -303,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 78,
-        "average_valence": -0.024,
+        "source_item_count": 79,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.767
+        "freshness_score": 0.771
       }
     }
   ]
