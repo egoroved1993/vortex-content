@@ -253,6 +253,15 @@ function selectBalanced(entries) {
     }
   }
 
+  if (minPerCity > 0) {
+    for (const [cityId, entriesForCity] of cityEntries.entries()) {
+      for (const entry of entriesForCity) {
+        if ((cityCounts.get(cityId) ?? 0) >= Math.min(minPerCity, maxPerCity)) break;
+        trySelect(entry, { strictQuotas: false, ignoreTemplateCap: true });
+      }
+    }
+  }
+
   return selected;
 
   function seedLanguageDiversity() {
@@ -270,7 +279,7 @@ function selectBalanced(entries) {
     }
   }
 
-  function trySelect(entry, { strictQuotas, diversitySeed = false }) {
+  function trySelect(entry, { strictQuotas, diversitySeed = false, ignoreTemplateCap = false }) {
     if (entry.selected) return false;
     const cityId = entry.candidate.cityId ?? "unknown";
     if ((cityCounts.get(cityId) ?? 0) >= maxPerCity) return false;
@@ -288,7 +297,7 @@ function selectBalanced(entries) {
     if (strictQuotas && exceedsFamilyQuota(cityId, family, familyCountsByCity, cityCounts)) return false;
     if (!strictQuotas && !diversitySeed && exceedsAbsoluteFamilyCap(cityId, family, familyCountsByCity)) return false;
     if (!diversitySeed && exceedsAbsoluteLanguageCap(cityId, language, languageCountsByCity, cityCounts)) return false;
-    if (templateKey && !diversitySeed && exceedsTemplateCap(cityId, templateKey, templateCountsByCity)) return false;
+    if (templateKey && !diversitySeed && !ignoreTemplateCap && exceedsTemplateCap(cityId, templateKey, templateCountsByCity)) return false;
 
     entry.selected = true;
     selected.push(entry);
