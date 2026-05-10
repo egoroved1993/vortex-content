@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-10T09:38:12.872Z",
+    "capturedAt": "2026-05-10T10:33:53.684Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 397
+    "totalItems": 400
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-10T09:38:12.872Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-05-10T10:33:53.684Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Wembley Park and Aldgate southbound only due to an earlier faulty train at Dolli"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,33 +79,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 10 May, no service between Dalston Junction and Highbury & Islington. Please use MILDMAY LINE serv"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Depends also on who Labour put up as their candidate. I don't think Khan wants to run for another term, but equally Labour don't have many who aren't either tainted by association "
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.042,
+        "source_item_count": 92,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-10T09:38:12.872Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-10T10:33:53.684Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 12,
@@ -107,7 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -143,9 +143,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, heavy with impending rain while a chill wind rustles the leaves along the streets of Mitte.. After a brief strike, the U-Bahn is packed, yet the atmosphere"
+          "excerpt": "The sky is a heavy gray, threatening rain, while a chilly breeze flutters through the streets, making people huddle deeper into their coats.. After a brief period of chaos, buses a"
         },
         {
           "source_family": "public",
@@ -157,22 +157,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.018,
+        "source_item_count": 118,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
         "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-10T09:38:12.872Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-05-10T10:33:53.684Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 47,
@@ -230,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 112,
-        "average_valence": -0.039,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
         "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-10T09:38:12.872Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-05-10T10:33:53.684Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -278,20 +278,12 @@
           "excerpt": "Al margen de lo que opines de otras regulaciones, lo del alquiler de temporada es claramente una truco de trilero para colar ciertas cosas. A mi hermana le dijeron hace poco que er"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think Gràcia is all about the plazas, but the real vibe is in the narrow streets where locals sip coffee and laugh at "
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun pierces through the clouds, casting a warm glow on the damp pavements from the morning rain.. The atmosphere at Sants station is charged with frustration as commu"
+          "excerpt": "The sun is bright but a brisk wind is weaving through the streets, hinting at the chilly February air.. Train platforms are a mix of frustrated commuters and hopeful travelers, wai"
         },
         {
           "source_family": "public",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Originalment l'edifici es va construir per emmagatzemar fins a 10.000 tones d'aigua que alimentaven a cascada annexa al Parc de la Ciutadella. Normalment es pot visitar durant el ["
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "This Airbnb fantasy… like the homeless would be able to afford these flats if they weren’t on Airbnb. It’s been written again and again: the Airbnbs in Barcelona represent only 1 t"
         }
       ],
       "metadata": {
         "source_item_count": 78,
-        "average_valence": -0.034,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.776
+        "freshness_score": 0.779
       }
     }
   ]
