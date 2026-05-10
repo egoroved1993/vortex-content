@@ -1719,7 +1719,7 @@ function buildLocalPlaceDiscoveryCandidate(job) {
   const variants = buildPlaceDiscoveryLocalVariants(job);
   const assessed = variants.map((content) => ({ content, assessment: assessCandidateQuality(job, content) }));
   const rand = createSeededRandom(`place-local:${TODAY_DATE}:${job.id}`);
-  const rotated = orderPlaceVariantsForStyle(assessed, job.placePromptStyle, rand);
+  const rotated = orderPlaceVariantsForStyle(assessed, job.placePromptStyle, job, rand);
   const best =
     rotated.find((item) => item.assessment.review.passed)?.content ??
     assessed.sort((left, right) => right.assessment.score - left.assessment.score)[0]?.content ??
@@ -1786,9 +1786,26 @@ function buildPlaceDiscoveryLocalVariants(job) {
   ];
 }
 
-function orderPlaceVariantsForStyle(assessed, styleId, rand) {
+function orderPlaceVariantsForStyle(assessed, styleId, job, rand) {
   if (!assessed.length) return assessed;
-  const preferredIndex = {
+  const lang = normalizeLanguageCode(job.targetLanguage ?? job.rawSnippetLanguage ?? "en");
+  const byLanguage = {
+    en: {
+      specific_dish: 3,
+      just_left: 1,
+      overheard: 2,
+      mild_roast: 0,
+      found_by_accident: 0,
+    },
+    ru: {
+      specific_dish: 0,
+      just_left: 1,
+      overheard: 2,
+      mild_roast: 3,
+      found_by_accident: 3,
+    },
+  };
+  const preferredIndex = byLanguage[lang]?.[styleId] ?? {
     specific_dish: 0,
     just_left: 1,
     overheard: 2,

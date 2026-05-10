@@ -308,7 +308,14 @@ function selectBalanced(entries) {
 }
 
 function exceedsTemplateCap(cityId, templateKey, templateCountsByCity) {
-  const cap = templateKey === "place_left_pretending" ? 2 : templateKey.includes("place_") ? 1 : 2;
+  const relaxedPlaceCaps = new Set([
+    "place_left_pretending",
+    "place_fixed_minutes",
+    "place_me_quede_es",
+    "place_quedat_ca",
+    "place_quick_stop_ru",
+  ]);
+  const cap = relaxedPlaceCaps.has(templateKey) ? 2 : templateKey.includes("place_") ? 1 : 2;
   const current = templateCountsByCity.get(`${cityId}:${templateKey}`) ?? 0;
   return current >= cap;
 }
