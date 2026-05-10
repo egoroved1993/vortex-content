@@ -1720,8 +1720,9 @@ function buildLocalPlaceDiscoveryCandidate(job) {
   const assessed = variants.map((content) => ({ content, assessment: assessCandidateQuality(job, content) }));
   const rand = createSeededRandom(`place-local:${TODAY_DATE}:${job.id}`);
   const rotated = orderPlaceVariantsForStyle(assessed, job.placePromptStyle, job, rand);
+  const passing = rotated.filter((item) => item.assessment.review.passed);
   const best =
-    rotated.find((item) => item.assessment.review.passed)?.content ??
+    pickSeeded(passing, rand)?.content ??
     assessed.sort((left, right) => right.assessment.score - left.assessment.score)[0]?.content ??
     cleanSourceFallback(job);
 
@@ -1751,39 +1752,53 @@ function buildPlaceDiscoveryLocalVariants(job) {
 
   if (lang === "ru") {
     const ruDetail = placeDetailFor(fact, "ru");
+    const ruPlan = russianPlacePlan(fact, price);
     const ruAnchor = russianNeighborhood(neighborhood);
     return [
-      `в ${ruAnchor} зашел за ${ruDetail}${price ? ` за ${price}` : ""}. не подвиг, но день стал чуть тише.`,
-      `зашел в Барсе за ${ruDetail}${price ? ` за ${price}` : ""} и делаю вид, что это была прогулка, а не усталость.`,
-      `в ${ruAnchor} кто-то сказал: «я на пять минут». смешно, конечно.`,
-      `в Барселоне, в ${ruAnchor}, опять сказал себе что просто быстро зайду за ${ruDetail}. ну да.`,
+      `в ${ruAnchor} ${ruPlan}. это не план на вечер, но уже что-то.`,
+      `в ${ruAnchor} кто-то у стойки сказал «на пять минут» и сразу заказал второе. я его понял.`,
+      `свернул в ${ruAnchor} просто переждать шум. ${ruDetail} сработал лучше, чем ожидалось.`,
+      `в ${ruAnchor} пришел «просто посмотреть» и через минуту уже спорил с собой, надо ли оставаться.`,
+      `иногда вся Барса помещается в момент, когда ты в ${ruAnchor} считаешь мелочь и делаешь вид, что не устал.`,
+      `в ${ruAnchor} стол рядом обсуждал цену как семейную драму. я молча согласился.`,
     ];
   }
 
   if (lang === "ca") {
     return [
-      `a ${anchor} m'he quedat amb ${detail}${price ? ` de ${price}` : ""} i m'ha fet ràbia que funcionés tan bé.`,
-      `he entrat al ${shortPlace || anchor} per ${detail}${price ? ` de ${price}` : ""} i he sortit fent veure que era un pla.`,
-      `al ${shortPlace || anchor} algú ha dit que només entrava cinc minuts. jo també m'ho havia cregut.`,
-      `a ${anchor}, ${detail}${price ? ` de ${price}` : ""} m'ha arreglat deu minuts del dia. després Barcelona ha tornat a ser Barcelona.`,
+      `he entrat a ${anchor} a demanar ${detail}${price ? ` de ${price}` : ""} i al final he arribat tard igual.`,
+      `al ${shortPlace || anchor} algú ha dit que només feia una parada ràpida. després ha demanat una altra ronda.`,
+      `${detail}${price ? ` de ${price}` : ""} a ${anchor} no m'ha arreglat el dia, però l'ha deixat en pausa.`,
+      `a ${anchor} he sentit dues persones discutint si era car o si simplement estaven cansades. bastant Barcelona.`,
+      `he passat per ${shortPlace || anchor} sense gana i he sortit amb una excusa nova.`,
+      `a ${anchor} havia de ser una parada de res. després he mirat el rellotge com si fos culpa seva.`,
     ];
   }
 
   if (lang === "es") {
     return [
-      `en ${anchor} me quedé con ${detail}${price ? ` de ${price}` : ""} y fingí que no estaba calculando si repetir.`,
-      `entré en ${shortPlace || anchor} por ${detail}${price ? ` de ${price}` : ""} y salí haciendo como si hubiera sido un plan.`,
-      `en ${shortPlace || anchor} alguien dijo que solo entraba cinco minutos. yo también me lo había creído.`,
-      `por ${anchor}, ${detail}${price ? ` a ${price}` : ""} me arregló diez minutos del día. luego Barcelona volvió a ser Barcelona.`,
+      `entré en ${anchor} por ${detail}${price ? ` de ${price}` : ""} y al final llegué tarde igual.`,
+      `alguien en ${shortPlace || anchor} dijo que era una parada rápida. pidió otra ronda.`,
+      `${detail}${price ? ` de ${price}` : ""} en ${anchor} no me arregló el día, pero lo dejó en pausa.`,
+      `en ${anchor} escuché a dos personas debatir si era caro o si estaban cansadas. ganaba el cansancio.`,
+      `pasé por ${shortPlace || anchor} sin hambre y salí con una excusa nueva.`,
+      `en ${anchor} iba a ser una parada de nada. luego miré el reloj como si él tuviera la culpa.`,
     ];
   }
 
   return [
-    `i went into ${shortPlace || anchor} for ${detail}${price ? ` for ${price}` : ""} and left pretending it had been the plan all along.`,
-    `the ${detail}${price ? ` for ${price}` : ""} at ${shortPlace || anchor} fixed about eight minutes of my day, which is more than I expected.`,
-    `someone at ${shortPlace || anchor} said they were only staying five minutes. i respected the lie.`,
-    `${shortPlace || anchor} gave me ${detail}${price ? ` for ${price}` : ""} and a weird little pause in the middle of the day.`,
+    `i only went into ${shortPlace || anchor} to kill ten minutes. ${detail}${price ? ` for ${price}` : ""} made that sound like a real plan.`,
+    `someone at ${shortPlace || anchor} said they were leaving after one drink. nobody at the table believed them.`,
+    `the ${detail}${price ? ` for ${price}` : ""} at ${shortPlace || anchor} did not fix my day, but it paused it, which counts.`,
+    `stopped at ${anchor} for ${detail}${price ? ` for ${price}` : ""} and immediately became the kind of person who says "quick stop".`,
+    `${shortPlace || anchor} had that small mid-afternoon silence where everyone is pretending they are not avoiding something.`,
+    `went past ${shortPlace || anchor} with no plan and somehow came out with one more tiny reason to be late.`,
   ];
+}
+
+function pickSeeded(items, rand) {
+  if (!items?.length) return null;
+  return items[Math.floor(rand() * items.length)];
 }
 
 function orderPlaceVariantsForStyle(assessed, styleId, job, rand) {
@@ -1841,6 +1856,21 @@ function russianNeighborhood(value) {
   if (text.includes("gòtic") || text.includes("gotic")) return "Готике";
   if (text.includes("sant pere")) return "Сант-Пере";
   return "центре";
+}
+
+function russianPlacePlan(fact, price = "") {
+  const text = String(fact ?? "").toLowerCase();
+  const suffix = price ? ` за ${price}` : "";
+  if (/jazz/i.test(text)) return `остался на джаз${suffix}`;
+  if (/coffee|espresso|cortado/i.test(text)) return `зашел за кофе${suffix}`;
+  if (/wine|vino|vi de la casa|natural wine/i.test(text)) return `зашел за вином${suffix}`;
+  if (/cocktail|martini/i.test(text)) return `зашел за коктейлем${suffix}`;
+  if (/vermut|vermouth/i.test(text)) return `зашел за вермутом${suffix}`;
+  if (/cava/i.test(text)) return `зашел за кавой${suffix}`;
+  if (/brunch/i.test(text)) return `зашел на бранч${suffix}`;
+  if (/sandwich|pastrami/i.test(text)) return `зашел за сэндвичем${suffix}`;
+  if (/absinthe/i.test(text)) return `зашел за абсентом${suffix}`;
+  return `остался из-за ${placeDetailFor(fact, "ru")}${suffix}`;
 }
 
 function placeDetailFor(fact, lang) {

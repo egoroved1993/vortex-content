@@ -79,7 +79,7 @@ const BLOCKED_ISSUES = new Set([
 const HEADLINE_OR_SEO_RE = /watch the latest .* forecast|\bhouses for rent in [A-Z]|\bSo teuer ist Wohnen\b|\bNeues Quartier entsteht\b|\bsummerlike weather forecast\b|\bBay Area weather shifts from wet to warm\b|\bITV weather forecast\b|\bRead more\b|\bSubscribe now\b/i;
 const PIPELINE_SEAM_RE = /^(?:(on|at)\s+(muni|tube|metro|u-bahn|s-bahn|overground|bart)\s+(delay|strike)\b|(in|en|a|por|per|by|bei)\s+(barcelona|london|berlin|san francisco|sf),\s)|\b(global trend theme|phrase fragments seen|source family|news snippet|forum snippet)\b/i;
 const LOCAL_ANCHOR_SEAM_RE = /^(?:by|near|around)\s+(?:gràcia|gracia|raval|eixample|barceloneta|el born|poble[-\s]?sec|sant antoni|poblenou|sants)\s*,/i;
-const PLACE_TEMPLATE_RE = /^just (left|walked out of)\b|\bsmell of\b.{0,80}\bstill (clings|on|in)\b|\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b|\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b|\b(worth every cent|worth it|no regrets|hidden gem|must[- ]try|highly recommend)\b/i;
+const PLACE_TEMPLATE_RE = /^just (left|walked out of)\b|\bsmell of\b.{0,80}\bstill (clings|on|in)\b|\bprices? crept up\b|\bnew management\b.{0,80}\braising prices\b|\bstill lining up\b|\bpaid [£€$]\d+(?:[.,]\d+)?\b.{0,120}\b(can't stop thinking|worth it|queue)\b|\b(left pretending it had been the plan all along|fixed about eight minutes of my day|me quedé con .+ fingí que no estaba calculando|m'he quedat amb .+ m'ha fet ràbia|опять сказал себе что просто быстро зайду)\b|\b(worth every cent|worth it|no regrets|hidden gem|must[- ]try|highly recommend)\b/i;
 const PLACE_LISTING_RE = /\brated \d(?:\.\d)?\/5\b|\bprice level\b|\bcurrently closed\b|\bon Google\b|\b(basement venue|ranked world top|prepared tableside|open since \d{4})\b|^[^.!?]{2,40}\.\s+[^.!?]{2,40}\.\s+/i;
 const NOSTALGIA_SLOP_RE = /\b(год назад|тогда .*теперь|ощущение то же самое|first time in my life|i used to spend a lot of time|used to be .* now)\b/i;
 const LOW_SIGNAL_PAYOFF_RE = /\b(that was a little awkward|just my luck, right as|not sure it was worth the hassle|so there(?:'|’)s hope)\b/i;
@@ -258,7 +258,7 @@ function selectBalanced(entries) {
     for (const [cityId, entriesForCity] of cityEntries.entries()) {
       for (const entry of entriesForCity) {
         if ((cityCounts.get(cityId) ?? 0) >= Math.min(minPerCity, maxPerCity)) break;
-        trySelect(entry, { strictQuotas: false, ignoreTemplateCap: true });
+        trySelect(entry, { strictQuotas: false });
       }
     }
   }
@@ -318,14 +318,7 @@ function selectBalanced(entries) {
 }
 
 function exceedsTemplateCap(cityId, templateKey, templateCountsByCity) {
-  const relaxedPlaceCaps = new Set([
-    "place_left_pretending",
-    "place_fixed_minutes",
-    "place_me_quede_es",
-    "place_quedat_ca",
-    "place_quick_stop_ru",
-  ]);
-  const cap = relaxedPlaceCaps.has(templateKey) ? 2 : templateKey.includes("place_") ? 1 : 2;
+  const cap = templateKey.includes("place_") ? 1 : 2;
   const current = templateCountsByCity.get(`${cityId}:${templateKey}`) ?? 0;
   return current >= cap;
 }
@@ -667,12 +660,26 @@ function normalizeTemplateKey(content) {
   if (/left pretending it had been the plan all along/.test(lower)) return "place_left_pretending";
   if (/fixed about eight minutes of my day/.test(lower)) return "place_fixed_minutes";
   if (/said they were only staying five minutes|respect(ed)? the lie/.test(lower)) return "place_five_minutes_en";
+  if (/kill ten minutes.+real plan/.test(lower)) return "place_kill_ten_en";
+  if (/leaving after one drink/.test(lower)) return "place_one_drink_en";
+  if (/did not fix my day.+paused it/.test(lower)) return "place_paused_day_en";
   if (/me quedé con .+ fingí que no estaba calculando/.test(lower)) return "place_me_quede_es";
+  if (/me quedé diez minutos de más|iba a ser una parada de nada/.test(lower)) return "place_tiny_stop_es";
+  if (/no me arregló el día.+pausa/.test(lower)) return "place_pause_es";
+  if (/escuché a dos personas debatir/.test(lower)) return "place_debate_es";
+  if (/sin hambre.+excusa nueva/.test(lower)) return "place_excuse_es";
   if (/m'he quedat amb .+ m'ha fet ràbia/.test(lower)) return "place_quedat_ca";
   if (/he entrat al .+ he sortit fent veure/.test(lower)) return "place_entrat_ca";
+  if (/he entrat a .+ al final he arribat tard/.test(lower)) return "place_late_ca";
+  if (/havia de ser una parada de res/.test(lower)) return "place_tiny_stop_ca";
+  if (/no m'ha arreglat el dia.+pausa/.test(lower)) return "place_pause_ca";
+  if (/sense gana.+excusa nova/.test(lower)) return "place_excuse_ca";
   if (/опять сказал себе что просто быстро зайду/.test(lower)) return "place_quick_stop_ru";
   if (/делаю вид, что это была прогулка/.test(lower)) return "place_walk_ru";
   if (/кто-то сказал: «я на пять минут»/.test(lower)) return "place_five_minutes_ru";
+  if (/у стойки сказал «на пять минут»/.test(lower)) return "place_five_minutes_ru";
+  if (/это не план на вечер/.test(lower)) return "place_not_plan_ru";
+  if (/просто переждать шум/.test(lower)) return "place_wait_noise_ru";
   if (/не подвиг, но день стал чуть тише/.test(lower)) return "place_quiet_day_ru";
   return null;
 }
