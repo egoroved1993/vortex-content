@@ -91,7 +91,9 @@ const RAW_PUBLIC_SCAFFOLD_RE = /\b(LF Roommates|looking for (?:some )?roommates|
 const RAW_PUBLIC_REPLY_OPENER_RE = /^(also still old money|as you say|the life the celeb chose|i didn[’']t assume|it[’']s different for rail lines|i[’']m not pretending|prior to that i[’']d been|maybe it[’']s not new|anything smaller than|don[’']?t put words|berlin[’']s average age|my district actually|i heard sf schoolhouse|fidi doordash dinner|lf roommates)\b/i;
 const RAW_ADMIN_STATEMENT_RE = /\b(\d+:1 ratio|grades 5-8|screen-free|budget cuts|average age is \d{2}(?:\.\d)?|second term ends|termed out)\b/i;
 const RAW_REQUEST_OR_LOGISTICS_RE = /\b(if anyone is willing|message me about them|can[’']?t make (?:it|the)|looking for \d+ tickets|have \d+ tickets|how to join a band|hey everyone i[’']m \d+|home whitening kits|casual walk\s*&\s*talk|meeting at the entrance|Sunday \d{1,2}(?:st|nd|rd|th)? May|i[’']m just guessing|old clipper system|required tapping|SFO employees|Uber to SFO|8 AM flight|BART doesn[’']?t start|power outage notification texts|Good Samaritan|go ahead and interpret|BART Bathrooms|Urinal and a toilet|i built \[|free platform|HIMYM ideal|moving away more and more seriously|just moved here for work|walk through California St|is there a place i can|coin-exchange|official unification|polarising things about the metro|parking spot for monthly rent|Image take from google maps|watch the race|listing prices|xteink reader|3D printer|Logistics Center|destination region)\b/i;
-const RAW_DEBATE_OR_POLICY_RE = /\b(Musk|Tesla cars|AfDs?|foreigners|healthcare|taxes|same depth of argument|not "all money"|state has different budgets|last prosecutor|prosecuting anyone|got recalled|theory 2|fruitless|digable|manicured|best public transportation in the state|played with the symphony|what life was like in Germany|safe, some say it[’']?s not|tech-bros that rent|my point about rent|Brick and Timber|Arab kids|biggest event for mental health|anti log burner|the poster didn[’']t start|local representation|voting system|FPTP|Havering|Romford|solicitors deal|walking foundation tube|celeb chose|kids are involved)\b/i;
+const RAW_DEBATE_OR_POLICY_RE = /\b(Musk|Tesla cars|AfDs?|foreigners|healthcare|taxes|same depth of argument|not "all money"|state has different budgets|last prosecutor|prosecuting anyone|got recalled|theory 2|fruitless|digable|manicured|best public transportation in the state|played with the symphony|what life was like in Germany|safe, some say it[’']?s not|Germany is a very racist country|so called lefty cities|tech-bros that rent|my point about rent|Brick and Timber|Arab kids|biggest event for mental health|anti log burner|the poster didn[’']t start|local representation|voting system|FPTP|Havering|Romford|solicitors deal|walking foundation tube|celeb chose|kids are involved)\b/i;
+const STAGED_LOCAL_CARTOON_RE = /\b(chef[’']?s apron juggling bratwursts|now that[’']s Neukölln|flaming torches outside|kids cheered him on)\b/i;
+const OFF_CITY_PHOTO_RE = /\b(2000ft|window reflection ruined the geometry|geometry I was aiming for)\b/i;
 const GENERIC_BAD_RE = /\b(interesting people around|pretty shy when it comes|beautiful city|side hustles too)\b/i;
 const FRAGMENT_OPENER_RE = /^(has changed|s,|and\b|but\b|,\s*)/i;
 const DANGLING_END_RE = /\b(the other just|and then just|then just|just kind of|sort of|kind of|because|while|with|to|in|of|from|for|on|at|by|the|a|an|near|through|into|as if|if|when|where|than|that|another|still|already|was|were|is|are|like|carrer|calle|he looked|she looked|they looked|it felt|i tried|they said)$/i;
@@ -574,6 +576,8 @@ function detectHardReject(content, candidate) {
   if (TOURIST_POV_RE.test(text)) return "tourist_pov";
   if (PRODUCT_FLEX_RE.test(text)) return "product_flex";
   if (isRawPublicScaffold(text, candidate)) return "raw_public_scaffold";
+  if (STAGED_LOCAL_CARTOON_RE.test(text)) return "staged_observation";
+  if (OFF_CITY_PHOTO_RE.test(text)) return "generic_city_copy";
   if (NOSTALGIA_SLOP_RE.test(trimmed)) return "nostalgia_slop";
   if (LOW_SIGNAL_PAYOFF_RE.test(text)) return "low_signal_payoff";
   if (TOURIST_SLOGAN_RE.test(text)) return "tourist_slogan";
@@ -628,10 +632,17 @@ function looksEnglishText(content) {
   const englishHits = tokens.filter((token) =>
     [
       "the",
+      "when",
       "and",
+      "that",
       "into",
       "went",
       "only",
+      "saw",
+      "guy",
+      "outside",
+      "while",
+      "now",
       "kill",
       "minutes",
       "one",
@@ -647,6 +658,9 @@ function looksEnglishText(content) {
       "still",
       "between",
       "stations",
+      "country",
+      "likely",
+      "rough",
     ].includes(token)
   ).length;
   return englishHits >= 3;
