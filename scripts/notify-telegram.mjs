@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 // Send a Telegram notification about a content pipeline run.
-// Reads artifacts from content/ to build city/language stats.
+// Authoritative source: pipeline-upload-state.json (uploadedMain + reason).
+// Falls back to payload row counts only when no state file (e.g. dry runs, premium pipeline).
 //
-// Usage:
-//   node scripts/notify-telegram.mjs --workflow "Mixed Seed Pipeline" --status success
-//   node scripts/notify-telegram.mjs --workflow "City Feed Top-Up" --status failure --reason "Anthropic credits low"
-//   node scripts/notify-telegram.mjs --workflow "..." --status success --no-stats   # don't read artifacts
+// States:
+//   🟢 success — uploadedMain === true: real rows landed in Supabase
+//   🟡 skipped — uploadedMain === false with reason: upload blocked by guard, dry run, empty payload, etc
+//   🔴 failure — job-level failure (network, missing creds, exception)
 //
 // Env: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID required (otherwise no-op silently).
 
 import fs from "node:fs";
-import path from "node:path";
 import { resolveProjectPath } from "./path-utils.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const workflow = args.workflow ?? "Unknown workflow";
-const status = args.status ?? "unknown";
+const jobStatus = args.status ?? "unknown"; // success | failure | cancelled
 const reason = args.reason ?? null;
 const customMessage = args.message ?? null;
 const skipStats = Boolean(args["no-stats"]);
@@ -40,26 +40,69 @@ function detectLang(text) {
   return "en";
 }
 
-function readPayload(relativePath) {
+function readJson(relativePath) {
   try {
     const fullPath = resolveProjectPath(...relativePath.split("/"));
     if (!fs.existsSync(fullPath)) return null;
-    const raw = JSON.parse(fs.readFileSync(fullPath, "utf8"));
-    return Array.isArray(raw.rows) ? raw.rows : null;
+    return JSON.parse(fs.readFileSync(fullPath, "utf8"));
   } catch {
     return null;
   }
 }
 
-const lines = [];
+function readPayloadRows(relativePath) {
+  const data = readJson(relativePath);
+  if (!data) return null;
+  return Array.isArray(data.rows) ? data.rows : null;
+}
 
-if (status === "success") {
-  lines.push(`🟢 <b>${escapeHtml(workflow)}</b>${cityFocus ? ` · ${escapeHtml(cityFocus)}` : ""}`);
-} else if (status === "failure") {
-  lines.push(`🔴 <b>${escapeHtml(workflow)}</b> failed`);
-  if (reason) lines.push(`<i>${escapeHtml(reason)}</i>`);
+// === Determine actual outcome ===
+//
+// jobStatus = github actions job.status — failure means the job itself errored
+// uploadState.uploadedMain — pipeline-upload-state.json says whether content actually
+// reached Supabase. true = real upload, false = blocked/skipped (with reason).
+
+const uploadState = readJson("content/pipeline-upload-state.json");
+
+// Categorize outcome
+let outcome; // "uploaded" | "skipped" | "failed" | "no_state"
+let outcomeReason = null;
+
+if (jobStatus === "failure" || jobStatus === "cancelled") {
+  outcome = "failed";
+  outcomeReason = reason ?? `Job status: ${jobStatus}`;
+} else if (uploadState) {
+  if (uploadState.uploadedMain === true) {
+    outcome = "uploaded";
+    outcomeReason = uploadState.reason ?? "uploaded";
+  } else {
+    outcome = "skipped";
+    outcomeReason = uploadState.reason ?? "skipped";
+  }
 } else {
-  lines.push(`⚪ <b>${escapeHtml(workflow)}</b> · ${escapeHtml(status)}`);
+  // No state file — workflow either doesn't produce one (Premium, dry-run) or fell over before pipeline ran
+  outcome = "no_state";
+}
+
+// === Build header ===
+const lines = [];
+const cityTag = cityFocus ? ` · ${escapeHtml(cityFocus)}` : "";
+
+if (outcome === "uploaded") {
+  lines.push(`🟢 <b>${escapeHtml(workflow)}</b>${cityTag}`);
+} else if (outcome === "skipped") {
+  lines.push(`🟡 <b>${escapeHtml(workflow)}</b>${cityTag} · skipped`);
+  if (outcomeReason) lines.push(`<i>${escapeHtml(outcomeReason)}</i>`);
+} else if (outcome === "failed") {
+  lines.push(`🔴 <b>${escapeHtml(workflow)}</b> failed`);
+  if (outcomeReason) lines.push(`<i>${escapeHtml(outcomeReason)}</i>`);
+} else {
+  // no_state — assume success if jobStatus says so, otherwise unknown
+  if (jobStatus === "success") {
+    lines.push(`🟢 <b>${escapeHtml(workflow)}</b>${cityTag}`);
+  } else {
+    lines.push(`⚪ <b>${escapeHtml(workflow)}</b> · ${escapeHtml(jobStatus)}`);
+  }
 }
 
 if (customMessage) {
@@ -67,8 +110,13 @@ if (customMessage) {
   lines.push(escapeHtml(customMessage));
 }
 
-if (!skipStats && status === "success") {
-  // Try common artifact locations
+// === Stats: only for actual uploads ===
+//
+// We only show "+N messages" when content really landed in Supabase. If upload was
+// skipped/blocked, we show how many candidates were prepared (so you see the work
+// happened, but distinguish from real uploads).
+
+if (!skipStats && (outcome === "uploaded" || outcome === "no_state")) {
   const sources = [
     { label: "main", path: "content/pipeline-payload.json" },
     { label: "place", path: "content/place-discovery-payload.json" },
@@ -82,7 +130,7 @@ if (!skipStats && status === "success") {
   const allRows = [];
   const breakdown = {};
   for (const source of sources) {
-    const rows = readPayload(source.path);
+    const rows = readPayloadRows(source.path);
     if (rows && rows.length > 0) {
       allRows.push(...rows);
       breakdown[source.label] = (breakdown[source.label] ?? 0) + rows.length;
@@ -124,6 +172,13 @@ if (!skipStats && status === "success") {
       .join(" / ");
     lines.push(langStr);
   }
+} else if (!skipStats && outcome === "skipped") {
+  // Show how many were prepared but didn't make it
+  const mainRows = readPayloadRows("content/pipeline-payload.json");
+  if (mainRows && mainRows.length > 0) {
+    lines.push("");
+    lines.push(`📦 <b>${mainRows.length}</b> candidates prepared but not uploaded`);
+  }
 }
 
 if (runUrl) {
@@ -151,7 +206,7 @@ if (!response.ok) {
 }
 
 const result = await response.json();
-console.log(`Telegram notification sent (message_id=${result.result?.message_id})`);
+console.log(`Telegram notification sent (outcome=${outcome}, message_id=${result.result?.message_id})`);
 
 function escapeHtml(text) {
   return String(text)
