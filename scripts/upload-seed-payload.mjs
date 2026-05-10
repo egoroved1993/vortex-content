@@ -55,6 +55,7 @@ for (let index = 0; index < rows.length; index += chunkSize) {
       "Content-Type": "application/json",
       apikey: supabaseServiceKey,
       Authorization: `Bearer ${supabaseServiceKey}`,
+      Prefer: "return=minimal",
     },
     body: JSON.stringify({ rows: chunk }),
   });
@@ -63,12 +64,33 @@ for (let index = 0; index < rows.length; index += chunkSize) {
     throw new Error(`Supabase upload failed at chunk ${index / chunkSize + 1}: ${await response.text()}`);
   }
 
+  // Log RPC response body for diagnostics — silent fails (200 OK but no insert) have shown up
+  const responseBody = await response.text();
+  if (responseBody && responseBody !== "null" && responseBody.trim().length > 0) {
+    console.log(`RPC response (chunk ${index / chunkSize + 1}): ${responseBody.slice(0, 200)}`);
+  }
+
   uploaded += chunk.length;
   console.log(`Uploaded ${uploaded}/${rows.length}`);
 }
 
 console.log(`Finished uploading ${uploaded} rows from ${inputPath}`);
 console.log(`Upload batch: ${uploadBatchId}`);
+
+// ── Verify: count actual rows in DB matching this batch ──
+// Catches silent RPC fails: when bulk_insert_messages returns 200 but no rows inserted
+// (e.g. ON CONFLICT DO NOTHING swallowed everything, schema cache stale, malformed payload).
+{
+  const verifyFilter = `payload->>upload_batch_id=eq.${encodeURIComponent(uploadBatchId)}`;
+  const verifyCount = await countRows(supabaseUrl, supabaseServiceKey, verifyFilter);
+  if (verifyCount !== uploaded) {
+    throw new Error(
+      `Upload verification failed: RPC reported ${uploaded} rows uploaded, but DB only contains ${verifyCount} ` +
+      `with upload_batch_id=${uploadBatchId}. This is a silent RPC fail — check Supabase logs and bulk_insert_messages function.`
+    );
+  }
+  console.log(`Verified: ${verifyCount}/${uploaded} rows are visible in DB with batch_id=${uploadBatchId}`);
+}
 
 // ── Repair: fix expires_at that randomize_recent_timestamps (inside the RPC) broke ──
 // The bulk_insert_messages RPC internally calls randomize_recent_timestamps which
