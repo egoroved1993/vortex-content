@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-11T22:30:28.477Z",
+    "capturedAt": "2026-05-11T23:27:07.460Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 410
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-11T22:30:28.477Z",
-      "mood_score": 0.434,
+      "captured_at": "2026-05-11T23:27:07.460Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -41,6 +41,14 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still trust the buses to be on time after seeing them delay since the last Tube strike. Real locals just ride the cha"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Chalfont & Latimer and Chesham due to train cancellations. The next southbound t"
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Monday 11, Tuesday 12, Wednesday 13 and Thursday 14 May, after 2345 each evening, no westbound service fro"
         },
         {
           "source_family": "transport",
@@ -65,37 +73,29 @@
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I'd strongly sugest the three Roman towns that got trashed by Boudicca.. Verulanium (St Albans, Hertfordshire) Camulodulum (Colchester, Essex) Londinium (London, England!) All thre"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is an overcast blanket, threatening rain, while a cool breeze rustles the leaves of the trees lining Oxford Street.. The Tube stations are notably quieter this afternoon as"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Monday 11, Tuesday 12, Wednesday 13 and Thursday 14 May, after 2330 each evening, no service between New"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.047,
+        "average_valence": -0.064,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-11T22:30:28.477Z",
-      "mood_score": 0.394,
+      "captured_at": "2026-05-11T23:27:07.460Z",
+      "mood_score": 0.399,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,32 +136,40 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
+          "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a deep slate gray, pregnant with rain, and the air feels electric with anticipation.. The mood around the bus stops is a mix of relief and frustration, as commuters fina"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin, 08.05.26 14:05 at 2000ft. Was flying yesterday and decided to get a closer look at Berlin. I like the picture from a geometric and proportional perspective, so I thought it"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.016,
+        "source_item_count": 115,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-11T22:30:28.477Z",
-      "mood_score": 0.509,
+      "captured_at": "2026-05-11T23:27:07.460Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -231,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 123,
-        "average_valence": 0.026,
+        "average_valence": 0.024,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-11T22:30:28.477Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-05-11T23:27:07.460Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -282,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun slices through a layer of thin clouds, casting a warm glow against the vibrant facades of Eixample.. Commuters at Plaça Catalunya are visibly frustrated as they navigate th"
+          "excerpt": "The afternoon sun beats down harshly, but a brisk wind carries the salty scent of the sea, offering a fleeting relief.. Despite the ongoing strikes, the stations are buzzing with f"
         },
         {
           "source_family": "public",
@@ -305,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.005,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.781
+        "freshness_score": 0.783
       }
     }
   ]
