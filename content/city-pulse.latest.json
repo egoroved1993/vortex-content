@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-11T05:29:12.767Z",
+    "capturedAt": "2026-05-11T07:29:21.540Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-11T05:29:12.767Z",
-      "mood_score": 0.437,
+      "captured_at": "2026-05-11T07:29:21.540Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 37,
@@ -33,29 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Moor Park and Watford due to train cancellations. Tickets will be accepted on L"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a faulty train at Walthamstow Central."
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -73,29 +57,45 @@
           "excerpt": "Quieter gyms in central?. Have tried few gyms (third space/fitness first/nuffield) but all are packed between 6-9am on weekdays. have to wait a while for a squat rack/bench press m"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Stoke Newington. You still think it's normal to complain about the weather in late April—it’s just a rite of passage here."
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Clapham Junction and Surrey Quays while we fix a signal failure at Denmark Hill. GOOD"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "The NYC subway has its pros and cons too for me compared to the tube. Biggest pro: Ice cold air con in the summer months. Also, plastic seating (our seats are filth). Biggest con: "
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.04,
+        "source_item_count": 104,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-11T05:29:12.767Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-05-11T07:29:21.540Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -115,14 +115,6 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Berlin can you catch a bus that runs on a Sunday, despite a major strike looming. It’s a chaotic miracle that keeps us"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -139,37 +131,45 @@
           "excerpt": "Athina, BØĘRY, LAMMER, Megaira, Noise Mafia, Ozzwald at Lokschuppen Berlin (Berlin) on 2026-05-13T00:00:00.000 [Trance, Techno]"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The air feels crisp with a hint of early autumn, the overcast sky casting a soft gray light over the city.. Despite the recent disruptions, the U-Bahn is bustling again, with passe"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The crisp autumn air carries a hint of rain, and the cloudy sky is a patchwork of grays that casts a soft glow on the streets.. After a brief turmoil from the recent strikes, the U"
         }
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.019,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-11T05:29:12.767Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-11T07:29:21.540Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,21 +229,21 @@
       ],
       "metadata": {
         "source_item_count": 108,
-        "average_valence": -0.032,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "money",
           "weather"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-11T05:29:12.767Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-05-11T07:29:21.540Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 15,
@@ -269,6 +269,14 @@
           "excerpt": "No estoy de acuerdo (aparte de los grafiti en los árboles que eso sí es un asco). Pero en esa pared se puede hacer graffiti de forma legal y está bien que haya un par de paredes as"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The clouds loom heavy, casting a muted gray light over the streets, with a hint of rain that seems just a whisper away.. The mood on the trains is restless, with commuters anxiousl"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "ca",
@@ -291,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "You are 100% right, I need to go back to Torre Glories for a new shot!"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "No sé quines fixacions tenen els guiris tu... Tot sigui per embrutar més la ciutat."
         }
       ],
       "metadata": {
         "source_item_count": 81,
-        "average_valence": 0.009,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "tourism"
         ],
-        "freshness_score": 0.787
+        "freshness_score": 0.783
       }
     }
   ]
