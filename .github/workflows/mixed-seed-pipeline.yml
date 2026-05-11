@@ -216,10 +216,17 @@ jobs:
               --created-at-mode now
             )
 
+            # Mixed Seed Pipeline now only ACCUMULATES into approved_bank
+            # (see scripts/build-approved-bank.mjs, syncBankToSupabase).
+            # Actual publish to messages happens via Publish From Bank workflow
+            # (every 6h). So the legacy direct-upload guards (fail-on-empty,
+            # fail-on-min) are noise — they fire whenever a single run yields
+            # < threshold candidates, even though the bank is happily filling up.
+            # Soft limits stay for shape, but no longer fail the job.
             if [ -n "${{ steps.cfg.outputs.city_focus }}" ]; then
-              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 10 --min-upload-per-city 10 --min-per-city 15 --max-per-city 25 --max-total 25 )
+              ARGS+=( --min-per-city 0 --max-per-city 25 --max-total 25 )
             else
-              ARGS+=( --fail-on-empty-upload --fail-on-upload-minimums --min-upload-total 40 --min-upload-per-city 10 --min-per-city 15 --max-per-city 25 --max-total 100 )
+              ARGS+=( --min-per-city 0 --max-per-city 25 --max-total 100 )
             fi
           fi
 
