@@ -14,7 +14,7 @@ on:
       min_per_city:
         description: "Min pending entries needed to trigger publish for a city"
         required: false
-        default: "8"
+        default: "5"
       max_per_city:
         description: "Max entries to publish per city per run"
         required: false
@@ -61,7 +61,7 @@ jobs:
         id: cfg
         shell: bash
         run: |
-          echo "min_per_city=${{ inputs.min_per_city || '8' }}" >> "$GITHUB_OUTPUT"
+          echo "min_per_city=${{ inputs.min_per_city || '5' }}" >> "$GITHUB_OUTPUT"
           echo "max_per_city=${{ inputs.max_per_city || '16' }}" >> "$GITHUB_OUTPUT"
           echo "ttl_hours=${{ inputs.ttl_hours || '120' }}" >> "$GITHUB_OUTPUT"
           echo "city=${{ inputs.city }}" >> "$GITHUB_OUTPUT"
