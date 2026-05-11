@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-11T20:43:03.861Z",
+    "capturedAt": "2026-05-11T21:36:59.583Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 410
+    "totalItems": 408
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-11T20:43:03.861Z",
-      "mood_score": 0.438,
+      "captured_at": "2026-05-11T21:36:59.583Z",
+      "mood_score": 0.436,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier customer incident at Waterloo."
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -70,32 +78,24 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "A thick layer of clouds hangs over the city, threatening rain while a chilly breeze cuts through the already bustling streets.. Underground stations are packed with commuters, thei"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+          "excerpt": "Grey clouds hang heavily over the city, occasionally unleashing a drizzle that adds a chill to the spring air.. The mood at the Tube stations is thick with anxiety as commuters che"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.035,
+        "source_item_count": 91,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-11T20:43:03.861Z",
-      "mood_score": 0.449,
+      "captured_at": "2026-05-11T21:36:59.583Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray with thick clouds looming above, hinting at rain but not yet delivering; a damp chill hangs in the air.. The mood on the U-Bahn is somewhat tense, with comm"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.004,
+        "source_item_count": 117,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-11T20:43:03.861Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-05-11T21:36:59.583Z",
+      "mood_score": 0.51,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 44,
         "trends": 8,
         "weather": 1
       },
@@ -229,22 +230,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": 0.021,
+        "source_item_count": 118,
+        "average_valence": 0.029,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-11T20:43:03.861Z",
+      "captured_at": "2026-05-11T21:36:59.583Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -281,9 +282,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun shimmers through low-hanging clouds, casting a silvery glow on the rain-soaked streets after an earlier downpour.. The mood in the metro is a blend of impatience and resign"
+          "excerpt": "The sun is filtered through a veil of hazy clouds, casting a muted glow over the bustling streets of Barcelona.. The train stations are buzzing with frustrated commuters, many glue"
         },
         {
           "source_family": "public",
@@ -304,13 +305,13 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.006,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.784
+        "freshness_score": 0.782
       }
     }
   ]
