@@ -192,7 +192,10 @@ if (!tgResp.ok) {
   console.error(`Telegram send failed: ${tgResp.status} ${await tgResp.text()}`);
 }
 
-process.exit(isHealthy ? 0 : 1);
+// Always exit 0 — Telegram already conveys severity (🔴/🟡/✅).
+// Returning non-zero would cause GitHub Actions to mark the workflow "failed"
+// and email about it, duplicating the Telegram alert with less useful content.
+process.exit(0);
 
 // ── Helpers ──
 
