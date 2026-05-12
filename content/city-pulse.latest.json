@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-12T12:54:55.380Z",
+    "capturedAt": "2026-05-12T13:45:21.467Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 397
+    "totalItems": 399
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-12T12:54:55.380Z",
-      "mood_score": 0.389,
+      "captured_at": "2026-05-12T13:45:21.467Z",
+      "mood_score": 0.383,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays anticlockwise while we fix equipment damaged by vandalism at West Ham."
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to earlier equipment damaged by vandalism."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: No service between Liverpool Street and Barking while we fix equipment damaged by vandalism a"
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays between Liverpool Street and Barking due to earlier equipment damaged by vandal"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Finchley Central and High Barnet, and SEVERE DELAYS between Finchley Central and Camd"
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Severe delays between Liverpool Street and Barking due to earlier equipment damaged by vandal"
         },
         {
           "source_family": "transport",
@@ -70,32 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Suspended Northern Line: No service between Finchley Central and High Barnet, and SEVERE DELAYS between Finchley Central and Camd"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Finchley Central and High Barnet, and SEVERE DELAYS between Mill Hill East and Finchle"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Love that we have a culture where getting drunk in the cinema is a thing. Is it just me that thinks £12 for two aperol Spritz isn't bad, shame its at a cinema where everything else"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Finchley Central and High Barnet, and SEVERE DELAYS between Mill Hill East and Finchle"
         }
       ],
       "metadata": {
         "source_item_count": 88,
-        "average_valence": -0.033,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-12T12:54:55.380Z",
-      "mood_score": 0.4,
+      "captured_at": "2026-05-12T13:45:21.467Z",
+      "mood_score": 0.393,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. The night the buskers took over the streets during the BVG strike, I realized this place thrives on its chaos and creativity."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -137,39 +154,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a low, heavy gray, with a relentless drizzle that makes the pavement shimmer like dark glass.. With the recent strikes behind them, commuters appear both relieved and ap"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin, 08.05.26 14:05 at 2000ft. Was flying yesterday and decided to get a closer look at Berlin. I like the picture from a geometric and proportional perspective, so I thought it"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": 0,
+        "source_item_count": 115,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-12T12:54:55.380Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-12T13:45:21.467Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 109,
-        "average_valence": -0.021,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-12T12:54:55.380Z",
+      "captured_at": "2026-05-12T13:45:21.467Z",
       "mood_score": 0.442,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging.",
@@ -282,7 +283,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs high in a brilliant blue sky, with a light breeze carrying the scent of grilled seafood from nearby terraces.. The metro stations are packed, and there's an air of im"
+          "excerpt": "A crisp, sunny afternoon hangs over the city, with golden light reflecting off the bubbling fountains in the park.. The metro stations are buzzing with the chatter of fans eagerly "
         },
         {
           "source_family": "public",
@@ -309,7 +310,7 @@
           "routine",
           "belonging"
         ],
-        "freshness_score": 0.79
+        "freshness_score": 0.794
       }
     }
   ]
