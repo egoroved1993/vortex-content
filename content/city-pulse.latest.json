@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-12T21:35:52.031Z",
+    "capturedAt": "2026-05-12T22:34:34.776Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 396
+    "totalItems": 395
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-12T21:35:52.031Z",
-      "mood_score": 0.387,
+      "captured_at": "2026-05-12T22:34:34.776Z",
+      "mood_score": 0.383,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Monday 11, Tuesday 12, Wednesday 13 and Thursday 14 May, after 2330 each evening, no service between New"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "The value of all the houses in the 10 most expensive London boroughs is greater than the value of all the houses in Wales, NI, and Scotland in the aggregate. London property prices"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Tube strike warning as London Underground drivers set to walk out again - The Independent. Tube strike warning as London Underground drivers set to walk out again"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.038,
+        "source_item_count": 87,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-12T21:35:52.031Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-05-12T22:34:34.776Z",
+      "mood_score": 0.348,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -116,20 +115,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, RE1: Delays 2 trips delayed"
-        },
-        {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Athina, BØĘRY, LAMMER, Megaira, Noise Mafia, Ozzwald at Lokschuppen Berlin (Berlin) on 2026-05-13T00:00:00.000 [Trance, Techno]"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate gray, hanging low, as a light drizzle falls intermittently, making the streets glisten like polished stone.. Despite the recent end to the transit strike, the mo"
         },
         {
           "source_family": "public",
@@ -157,8 +156,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.014,
+        "source_item_count": 110,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "events",
@@ -169,8 +168,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-12T21:35:52.031Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-05-12T22:34:34.776Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -212,40 +211,40 @@
           "excerpt": "Daly City is mainly foggy/windy in the late spring to summer months (May-August). Not too different than most of SF during the rest of the year."
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. Only true locals know to avoid 16th Street BART on weekdays after 5 PM; it’s like a rush hour Bermuda Triangle for de"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "A lot of differing advice in here, I've seen people saying terrible and saying it's good lol. I've seen dovly mentioned around, I like the 2k credit line, will look into it thnx"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Are other 30+ year olds in SF feeling like it’s just one stressor after another?. Maybe it’s just my group of friends, but since the pandemic it’s just been one thing after another"
         }
       ],
       "metadata": {
         "source_item_count": 115,
-        "average_valence": 0.017,
+        "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-12T21:35:52.031Z",
-      "mood_score": 0.443,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-12T22:34:34.776Z",
+      "mood_score": 0.397,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 17,
         "review": 2,
@@ -273,9 +272,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": 0.283,
           "recency_weight": 0.72,
-          "excerpt": "The sun beats down relentlessly, casting sharp shadows on the bustling streets filled with the scent of freshly baked bread from nearby bakeries.. The metro stations are a mix of e"
+          "excerpt": "The sun bathes the city in a warm glow, but a cool breeze sneaks in off the coast, making the air feel fresh yet alive.. The metro platforms are bustling with anticipatory energy a"
         },
         {
           "source_family": "public",
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.019,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.774
+        "freshness_score": 0.773
       }
     }
   ]
