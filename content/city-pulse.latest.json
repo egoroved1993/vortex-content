@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-12T09:09:52.938Z",
+    "capturedAt": "2026-05-12T10:57:39.989Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 390
+    "totalItems": 389
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-12T09:09:52.938Z",
-      "mood_score": 0.396,
+      "captured_at": "2026-05-12T10:57:39.989Z",
+      "mood_score": 0.389,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 13,
@@ -48,6 +48,14 @@
           "excerpt": "Id say there is some hypocrisy in telling people to pay their fair share and then not paying his fair share, whilst also lying about it until he gets caught. For me it's the princi"
         },
         {
+          "source_family": "news",
+          "source_origin": "local_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Driverless taxi firm sorry for early-morning noise. A Waymo car has been waking people with a \"ridiculous mixture of a reversing noise and siren sound\"."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -56,12 +64,12 @@
           "excerpt": "Ranking London Boroughs by how good a name they would be for a child. Rules: eliminated “Royal Borough” and “On Thames” because that would just be silly. Joint names like Barking &"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "Today is overcast with a persistent drizzle that gives the city a muted, reflective sheen.. The atmosphere around the Tube stations is thick with apprehension as Londoners prepare "
         },
         {
           "source_family": "news",
@@ -70,33 +78,25 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "'With four jobs in London I couldn't afford rent so I'm going to Manchester' - BBC. 'With four jobs in London I couldn't afford rent so I'm going to Manchester'"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK - Office for National Statistics. Private rent and house prices, UK"
         }
       ],
       "metadata": {
         "source_item_count": 79,
-        "average_valence": -0.012,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-12T09:09:52.938Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-05-12T10:57:39.989Z",
+      "mood_score": 0.396,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 10,
@@ -106,7 +106,6 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -153,23 +144,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin, 08.05.26 14:05 at 2000ft. Was flying yesterday and decided to get a closer look at Berlin. I like the picture from a geometric and proportional perspective, so I thought it"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.015,
+        "source_item_count": 114,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-12T09:09:52.938Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-12T10:57:39.989Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,19 +228,19 @@
       ],
       "metadata": {
         "source_item_count": 107,
-        "average_valence": -0.001,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-12T09:09:52.938Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-05-12T10:57:39.989Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
@@ -280,9 +279,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "A thin layer of clouds drapes the sky, filtering the sunlight into a soft golden hue that wraps the city in warmth despite the cool breeze.. The mood on the metro feels tense as fr"
+          "excerpt": "The sun beams down, casting warm golden hues on the historic facades, while a gentle breeze carries the scent of freshly baked churros from nearby stalls.. The mood on the metro is"
         },
         {
           "source_family": "public",
@@ -303,13 +302,13 @@
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": 0.003,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.798
+        "freshness_score": 0.796
       }
     }
   ]
