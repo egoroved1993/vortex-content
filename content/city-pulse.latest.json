@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-11T23:27:07.460Z",
+    "capturedAt": "2026-05-12T01:00:25.769Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,23 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 410
+    "totalItems": 405
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-11T23:27:07.460Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-05-12T01:00:25.769Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -57,45 +56,45 @@
           "excerpt": "Exact dates Tube strikes are set to cause travel chaos across London AGAIN - London Now. Exact dates Tube strikes are set to cause travel chaos across London AGAIN"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Monday 11, Tuesday 12, Wednesday 13 and Thursday 14 May, after 2345 each evening, no westbound service fro"
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Brixton. Caught a late 196 bus from Brixton and witnessed a guy passionately arguing with a lamppost. Seemed like it was a long-standing feud."
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "My ex said they had fun running across the motorways just as the lorries came… that was in the 90s, somewhere in Asia. I think the instinct to wreak this kind of havoc is universal"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Monday 11, Tuesday 12, Wednesday 13 and Thursday 14 May, after 2330 each evening, no service between New"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "She’s doing better now. She got lots of support from friends, family, and professionals, especially after she tried to take her own life. It changed her, she never got back to the "
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.064,
+        "source_item_count": 94,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-11T23:27:07.460Z",
-      "mood_score": 0.399,
+      "captured_at": "2026-05-12T01:00:25.769Z",
+      "mood_score": 0.394,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +106,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +115,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin and Munich aren’t that close from Frankfurt (Imagine Toronto to Ottawa by ViaRail, I lived in Ottawa for a while 😅). You can also fly, but it’s more expensive and you have "
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Visited Berlin a couple of times and the one that always gets me is how direct people are. Asked a waiter if the food was good and he just said \"some of it.\" That was the full answ"
+          "excerpt": "If you have only one week I would not go to Munich or Berlin. You would lose so much time to get there. Also you can spend a lot more time than a day in Frankfurt. Have a look at S"
         },
         {
           "source_family": "nightlife",
@@ -137,48 +153,32 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a deep slate gray, pregnant with rain, and the air feels electric with anticipation.. The mood around the bus stops is a mix of relief and frustration, as commuters fina"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin, 08.05.26 14:05 at 2000ft. Was flying yesterday and decided to get a closer look at Berlin. I like the picture from a geometric and proportional perspective, so I thought it"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.004,
+        "source_item_count": 116,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-11T23:27:07.460Z",
-      "mood_score": 0.508,
+      "captured_at": "2026-05-12T01:00:25.769Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 47,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "trends": 8,
         "weather": 1
       },
@@ -193,23 +193,31 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Massage table rent. Hi Bay Area, I’m a LMT and have been practicing for more than 10 years. I’m looking to rent a massage table for the next few days while my new one arrives. My c"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Dinner Party Reccs. Hi all! I'm planning a birthday dinner in June for 6-10 people, and am hoping to find somewhere that has a separate / private room or area available to reserve "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "LPT/maybe common-sense for apartment hunters: have enough cash for 3 months rent readily accessible. Make sure you have cash or cash equivalent readily accessible for two months re"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What do you call the shopping area north of Japantown on Fillmore?. I see it called \"Lower Pac Heights\" or \"Upper Fillmore\" online. I never see it discussed but it feels similar to"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "tbh splash bar in SJ is good for this, but you do run into the issue that tops are hard to find. SF may have more of them, but when I went to like the mix in the castro i dont see "
+          "excerpt": "I love to ride my bicycle from the presidio along the waterfront and across the Colgate bridge to The marin headlands. What a great spot. I think I'd probably live there if I was r"
         },
         {
           "source_family": "public",
@@ -217,37 +225,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Ladies any suggestions on a good colorist that does good quality blonde highlights that is not over $325?. Looking for a colorist in SF that specifically does beautiful blonde. Tha"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Fisherman’s Wharf is a must AVOID, it’s a tourist trap. Theres so much good food in the city elsewhere"
+          "excerpt": "Glass Jar Screen Printer / Engraver. Hello All — I am looking for a local screen printer or engraver who can mark up 4oz and 8oz jars I use for my business. I have about 800 units "
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": 0.024,
+        "source_item_count": 111,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
-          "routine",
+          "transit",
           "money"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-11T23:27:07.460Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-05-12T01:00:25.769Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -281,9 +281,17 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun beats down harshly, but a brisk wind carries the salty scent of the sea, offering a fleeting relief.. Despite the ongoing strikes, the stations are buzzing with f"
+          "excerpt": "The sun beats down on the streets of Barcelona, its warmth contrasting sharply with the restless shadows cast by the towering buildings.. The usual buzz around Plaça de Catalunya i"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "És un problema agreujat per la superpoblació. Hi ha un porc per cada resident a Catalunya. Mentre Barcelona està superpoblada per humans, hi ha un arc de comarques a l'interior amb"
         },
         {
           "source_family": "public",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Estic d'acord amb el que dius de l'espanyolització de tot Però a mi els webs de La Grossa i de l'Ajuntament de Barcelona, en concret, em surten en català. Els acabo de buscar en do"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Sóc de Barna i no he vist mai un carrer amb tanta pintada. Que és, al costat de les vies per la estació de França i el Zoo?"
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.01,
+        "source_item_count": 84,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.783
+        "freshness_score": 0.788
       }
     }
   ]
