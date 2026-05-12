@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-12T01:45:37.666Z",
+    "capturedAt": "2026-05-12T03:18:57.393Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 405
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-12T01:45:37.666Z",
-      "mood_score": 0.495,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-12T03:18:57.393Z",
+      "mood_score": 0.399,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 28,
         "review": 2,
@@ -46,14 +46,6 @@
           "valence": -1,
           "recency_weight": 1,
           "excerpt": "Exact dates Tube strikes are set to cause travel chaos across London AGAIN - London Now. Exact dates Tube strikes are set to cause travel chaos across London AGAIN"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Caught a late 196 bus from Brixton and witnessed a guy passionately arguing with a lamppost. Seemed like it was a long-standing feud."
         },
         {
           "source_family": "public",
@@ -78,23 +70,31 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Clapham North could be a good one - Northern line straight to Moorgate. Finsbury park could also be a good option. Stockwell is an underrated spot imo - really well situated for ge"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London Underground strike action: March – May 2026 | UCL News - UCL - UCL | University College London. London Underground strike action: March – May 2026 | UCL News - UCL"
         }
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.014,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-12T01:45:37.666Z",
-      "mood_score": 0.398,
+      "captured_at": "2026-05-12T03:18:57.393Z",
+      "mood_score": 0.396,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -106,6 +106,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -138,36 +147,28 @@
           "excerpt": "Athina, BØĘRY, LAMMER, Megaira, Noise Mafia, Ozzwald at Lokschuppen Berlin (Berlin) on 2026-05-13T00:00:00.000 [Trance, Techno]"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll vermietet - Berliner Zeitung. Wohnungsmangel treibt Vonovia-Mieten weiter nach oben – Berlin fast voll verm"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": 1,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks through scattered clouds, casting a warm glow over the bustling streets, while a cool breeze carries the scent of fresh pretzels from a nearby stall.. After days of u"
+          "excerpt": "The afternoon sun breaks through scattered clouds, casting a warm glow over the busy streets of Berlin and creating a lively atmosphere despite a slight autumn chill.. With the BVG"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.007,
+        "source_item_count": 116,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-12T01:45:37.666Z",
+      "captured_at": "2026-05-12T03:18:57.393Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -235,13 +236,13 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-12T01:45:37.666Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-05-12T03:18:57.393Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun struggles to break through a blanket of grey, casting a cool, muted light over the bustling streets.. The trains are packed with commuters, their faces a mix of frustration"
+          "excerpt": "A thick blanket of clouds hovers over the city, threatening rain but holding back, casting a muted light across the streets.. Trains are unusually quiet this morning, with many com"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.01,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.787
+        "freshness_score": 0.788
       }
     }
   ]
