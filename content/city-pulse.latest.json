@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-13T16:57:09.910Z",
+    "capturedAt": "2026-05-13T17:48:48.210Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-13T16:57:09.910Z",
+      "captured_at": "2026-05-13T17:48:48.210Z",
       "mood_score": 0.331,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "London Tube chaos looms as drivers prepare to strike again over changes to working week - The Independent. London Tube chaos looms as drivers prepare to strike again over changes t"
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Brixton. Caught the 196 last night, and the driver had a proper chat with an elderly couple about their garden. Never seen that kind of warmth on a night bus"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we deal with a customer incident"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we deal with a customer incident."
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Severe Delays Suffragette Line: Severe delays due to an earlier faulty train at Walthamstow Queen's Road. London Underground are accep"
+          "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: Minor delays due to an earlier faulty train at Walthamstow Queen's Road."
         },
         {
           "source_family": "transport",
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 101,
-        "average_valence": -0.057,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-13T16:57:09.910Z",
-      "mood_score": 0.341,
+      "captured_at": "2026-05-13T17:48:48.210Z",
+      "mood_score": 0.343,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2, RE7: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,22 +146,30 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate-gray blanket, drizzling a fine mist that makes the streets shimmer under the dim light.. Buses are running, but the drivers wear tight faces as the threat of str"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.026,
+        "source_item_count": 117,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.914
+        "freshness_score": 0.912
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-13T16:57:09.910Z",
+      "captured_at": "2026-05-13T17:48:48.210Z",
       "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
@@ -209,6 +209,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a tuxedo trying to woo his date on a crowded Muni bus, all while avoiding a skateboarder weaving through passengers. On"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they can navigate a Muni delay without breaking stride, while tourists stop at every "
         },
         {
@@ -218,31 +226,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Places to learn Dutch / meet Dutch people. Hi! I used to live in the NL and have been trying not to lose my Dutch, even though it’s only at an A2 level but honestly living here has"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "1st Time Visiting from Texas. Hey Friends. I'm visiting San Francisco for my first time. And maybe oakland. I plan on just the weekend to go See a show in santa rosa. I'm a Big Foo"
         }
       ],
       "metadata": {
         "source_item_count": 124,
-        "average_valence": 0.016,
+        "average_valence": 0.015,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.908
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-13T16:57:09.910Z",
-      "mood_score": 0.4,
+      "captured_at": "2026-05-13T17:48:48.210Z",
+      "mood_score": 0.403,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
@@ -273,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun filters through scattered clouds, casting playful shadows on the streets while a mild breeze carries the salty scent of the nearby sea.. The atmosphere at Plaça d"
+          "excerpt": "The sky hangs heavy with clouds, casting a muted grey light that softens the vibrant colors of the city.. The metro is busier than usual, filled with a mix of excited Barça fans an"
         },
         {
           "source_family": "public",
@@ -304,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 79,
-        "average_valence": 0.001,
+        "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "routine",
