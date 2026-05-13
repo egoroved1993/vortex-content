@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-13T07:28:42.946Z",
+    "capturedAt": "2026-05-13T09:14:17.901Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 226
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-13T07:28:42.946Z",
-      "mood_score": 0.353,
+      "captured_at": "2026-05-13T09:14:17.901Z",
+      "mood_score": 0.339,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -41,69 +41,70 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Native area is really interesting! I kind of love the naming convention of parents first name as last name - or what I've also come across which is first name + father's first name"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Camden Town is a good call and Euston/Somers Town too can be pretty grim. I think Barking & Dagenham is best avoided, and parts of suburban south east London (Eltham/Bromley) are s"
-        },
-        {
           "source_family": "news",
-          "source_origin": "local_rss",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1,
-          "excerpt": "London Tube strikes: What you need to know. London Underground drivers who are RMT members are due to strike in May and June over working hours."
+          "excerpt": "London Tube chaos looms as drivers prepare to strike again over changes to working week - The Independent. London Tube chaos looms as drivers prepare to strike again over changes t"
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays eastbound only due to an earlier faulty train at Baker Street. GOOD SERVICE on t"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays while we fix a signal failure at Russell Square. London Buses, Elizabeth Line, Great Nort"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Maybe this will help: Father and son want to vote serpately at different times of the day. Son votes first, at say 10am, by showing his id, unfortunately the clerk makes a mistake "
+          "excerpt": "I drove through Hounslow after an accident on the M25 a few months ago. I'd never seen any of the crappy red-crossed mini roundabout and flag shagging, living in Lambeth. Soon as I"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "YouTube threw up a new speedrun of Portal 2 and I thought it was time to give it another go. What a cracking game. A real build on the original with excellent story and good humour"
         }
       ],
       "metadata": {
-        "source_item_count": 48,
-        "average_valence": 0.01,
+        "source_item_count": 96,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 1.047
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-13T07:28:42.946Z",
-      "mood_score": 0.349,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-13T09:14:17.901Z",
+      "mood_score": 0.498,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -120,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -128,15 +129,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I've lived in Mariendorf for 42 years now. I Like it here and sure I ain't goint nowhere soon. It's pretty green and from U Alt-Marienddorf you have good connection to the City (U6"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "There's not a lot going on but it's pretty calm and pieceful. Culinary desert though. U6 is a pretty good connection. You have Tempelhofer Feld in reach, and Britzer Garten. If you"
+          "excerpt": "We normally tip around ten percent at a restaurant. I would only refrain from a tip if I was really unhappy with the service. Do not tip for any kind of self service at the bar now"
         },
         {
           "source_family": "nightlife",
@@ -147,37 +140,46 @@
           "excerpt": "Athina, BØĘRY, LAMMER, Megaira, Noise Mafia, Ozzwald at Lokschuppen Berlin (Berlin) on 2026-05-13T00:00:00.000 [Trance, Techno]"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sun casts a warm golden hue over the bustling streets, but the occasional chill in the air reminds everyone that autumn is firmly here.. The U-Bahn platforms are unusually crow"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Lol absolutely not. I got so much shit once when I tried to tip a bartender €2 in 10c coins. I honestly had no idea it was such a bad look and I was pretty broke at the time (colle"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I rode my bike up the Brocken in the harz and skated 25km before. We're also talking about biking, not running"
         }
       ],
       "metadata": {
-        "source_item_count": 67,
-        "average_valence": -0.003,
+        "source_item_count": 122,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 1.066
+        "freshness_score": 0.909
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-13T07:28:42.946Z",
-      "mood_score": 0.508,
+      "captured_at": "2026-05-13T09:14:17.901Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -189,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "What makes you think Bart is just for tech workers? Especially late at night. What techies do you think are commuting after 9pm. Cutting Bart will hurt people in poverty. Why are y"
+          "excerpt": "We also recently rented in Outer Sunset (beginning of the year) and same deal. Landlord was screening more for good, reliable tenants that people who can outbid but are transient /"
         },
         {
           "source_family": "public",
@@ -207,7 +209,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Do all the possible combinations to try it out and choose the best one for you. Most likely arriving late and leaving late sounds more doable to me than taking bart + caltrain for "
+          "excerpt": "Moving here without a job will be very difficult as almost all property companies/people will not rent to you unless you have like 6 figures sitting in the bank, but even then. If "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone's a local when they know how to dodge the BART delays and still make it to Dolores Park for sunset."
         },
         {
           "source_family": "public",
@@ -216,40 +226,32 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Myofascial release classes?. Hi everyone, I'm looking for a good group class for self-myofascial release (not a massage therapist or 1:1 therapy). I used to go to a class in anothe"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Glass Jar Screen Printer / Engraver. Hello All — I am looking for a local screen printer or engraver who can mark up 4oz and 8oz jars I use for my business. I have about 800 units "
         }
       ],
       "metadata": {
-        "source_item_count": 65,
-        "average_valence": 0.025,
+        "source_item_count": 113,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-13T07:28:42.946Z",
+      "captured_at": "2026-05-13T09:14:17.901Z",
       "mood_score": 0.398,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -279,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun casts a golden glow over the bustling streets, with warm breezes carrying the scent of fresh paella from vendors.. The metro is packed yet simmering with anticipation, as c"
+          "excerpt": "The sun casts a warm, golden hue across the bustling streets, while a gentle breeze occasionally breaks the heat.. The metro stations are abuzz with whispered conversations about t"
         },
         {
           "source_family": "public",
@@ -301,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 46,
-        "average_valence": -0.007,
+        "source_item_count": 82,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 1.032
+        "freshness_score": 0.777
       }
     }
   ]
