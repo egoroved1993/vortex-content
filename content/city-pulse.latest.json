@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-13T01:05:06.854Z",
+    "capturedAt": "2026-05-13T03:19:35.184Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 410
+    "totalItems": 412
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-13T01:05:06.854Z",
-      "mood_score": 0.338,
+      "captured_at": "2026-05-13T03:19:35.184Z",
+      "mood_score": 0.334,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -82,19 +82,19 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.036,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-13T01:05:06.854Z",
-      "mood_score": 0.351,
+      "captured_at": "2026-05-13T03:19:35.184Z",
+      "mood_score": 0.348,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -106,6 +106,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -113,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -141,34 +150,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun breaks through a lingering layer of grey clouds, casting a warm glow over the damp streets, hinting at an early autumn chill.. With the recent BVG strike over, commuters ar"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Lol absolutely not. I got so much shit once when I tried to tip a bartender €2 in 10c coins. I honestly had no idea it was such a bad look and I was pretty broke at the time (colle"
+          "excerpt": "The morning air is crisp and sharp with clouds swirling above, hinting at potential rain later in the day.. After a brief hiatus, the U-Bahn is buzzing again, but the mood is tense"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": 0.004,
+        "source_item_count": 114,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-13T01:05:06.854Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-13T03:19:35.184Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -228,20 +229,20 @@
       ],
       "metadata": {
         "source_item_count": 132,
-        "average_valence": -0.03,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.911
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-13T01:05:06.854Z",
-      "mood_score": 0.398,
-      "mood_label": "low",
+      "captured_at": "2026-05-13T03:19:35.184Z",
+      "mood_score": 0.4,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -279,9 +280,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": 0.283,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun bathes the streets in a warm glow, punctuated by a gentle breeze carrying the salty scent of the nearby sea.. The metro is buzzing with anxious energy as commuter"
+          "excerpt": "The sky is a vibrant blue, reflecting the buzz of locals enjoying the sunny warmth despite the slight chill in the breeze.. A heavy air of frustration lingers at the metro stations"
         },
         {
           "source_family": "public",
@@ -302,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.005,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.776
+        "freshness_score": 0.778
       }
     }
   ]
