@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-13T05:26:07.279Z",
+    "capturedAt": "2026-05-13T07:28:42.946Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,37 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 394
+    "totalItems": 226
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-13T05:26:07.279Z",
-      "mood_score": 0.345,
+      "captured_at": "2026-05-13T07:28:42.946Z",
+      "mood_score": 0.353,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "London Tube chaos looms as drivers prepare to strike again over changes to working week - The Independent. London Tube chaos looms as drivers prepare to strike again over changes t"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -65,48 +58,55 @@
         },
         {
           "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_origin": "local_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1,
-          "excerpt": "Tube strike warning as London Underground drivers set to walk out again - The Independent. Tube strike warning as London Underground drivers set to walk out again"
+          "excerpt": "London Tube strikes: What you need to know. London Underground drivers who are RMT members are due to strike in May and June over working hours."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'With four jobs in London I couldn't afford rent so I'm going to Manchester' - BBC. 'With four jobs in London I couldn't afford rent so I'm going to Manchester'"
+          "valence": -0.075,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays eastbound only due to an earlier faulty train at Baker Street. GOOD SERVICE on t"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Maybe this will help: Father and son want to vote serpately at different times of the day. Son votes first, at say 10am, by showing his id, unfortunately the clerk makes a mistake "
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.016,
+        "source_item_count": 48,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 1.047
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-13T05:26:07.279Z",
-      "mood_score": 0.352,
+      "captured_at": "2026-05-13T07:28:42.946Z",
+      "mood_score": 0.349,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -139,46 +147,37 @@
           "excerpt": "Athina, BØĘRY, LAMMER, Megaira, Noise Mafia, Ozzwald at Lokschuppen Berlin (Berlin) on 2026-05-13T00:00:00.000 [Trance, Techno]"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Lol absolutely not. I got so much shit once when I tried to tip a bartender €2 in 10c coins. I honestly had no idea it was such a bad look and I was pretty broke at the time (colle"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Ah that does makes sense, didn't think about it. I would feel bad making someone go up 5-6 floors all day though but i guess those pics are worth it"
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sun casts a warm golden hue over the bustling streets, but the occasional chill in the air reminds everyone that autumn is firmly here.. The U-Bahn platforms are unusually crow"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.006,
+        "source_item_count": 67,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 1.066
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-13T05:26:07.279Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-13T07:28:42.946Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -228,29 +227,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.009,
+        "source_item_count": 65,
+        "average_valence": 0.025,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-13T05:26:07.279Z",
-      "mood_score": 0.399,
+      "captured_at": "2026-05-13T07:28:42.946Z",
+      "mood_score": 0.398,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -280,9 +279,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "A restless sky, heavy with clouds threatening rain, casts a grey hue over the bustling streets of the city.. The metro is unusually packed as fans wearing Barça jerseys flood in an"
+          "excerpt": "The sun casts a golden glow over the bustling streets, with warm breezes carrying the scent of fresh paella from vendors.. The metro is packed yet simmering with anticipation, as c"
         },
         {
           "source_family": "public",
@@ -302,14 +301,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.002,
+        "source_item_count": 46,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
-          "routine",
+          "tourism",
           "transit"
         ],
-        "freshness_score": 0.776
+        "freshness_score": 1.032
       }
     }
   ]
