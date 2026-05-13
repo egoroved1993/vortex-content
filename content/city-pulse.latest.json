@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-13T22:34:56.864Z",
+    "capturedAt": "2026-05-13T23:31:59.400Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,10 +21,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-13T22:34:56.864Z",
-      "mood_score": 0.325,
+      "captured_at": "2026-05-13T23:31:59.400Z",
+      "mood_score": 0.268,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 29,
@@ -40,6 +40,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Bermondsey. Caught a night bus to Bermondsey, driver made an impromptu detour to avoid a stag do causing chaos at the stop. Missed my stop but got some free "
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -62,40 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Monday 11, Tuesday 12, Wednesday 13 and Thursday 14 May, after 2345 each evening, no westbound service fro"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Wednesday 13 May, after 2300, no eastbound service from Camden Road to Stratford. Customers should use t"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Monday 11, Tuesday 12, Wednesday 13 and Thursday 14 May, after 2330 each evening, no service between New"
         }
       ],
       "metadata": {
         "source_item_count": 101,
-        "average_valence": -0.072,
+        "average_valence": -0.095,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-13T22:34:56.864Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-05-13T23:31:59.400Z",
+      "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -140,12 +140,12 @@
           "excerpt": "Athina, BØĘRY, LAMMER, Megaira, Noise Mafia, Ozzwald at Lokschuppen Berlin (Berlin) on 2026-05-13T00:00:00.000 [Trance, Techno]"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "NO2 pollution is very local. I don't know where the sensor you show is, but others in Berlin look fine:"
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate gray, heavy with the threat of rain, while a chill breeze cuts through the streets, making people huddle deeper into their jackets.. After days of disruption, th"
         },
         {
           "source_family": "public",
@@ -153,24 +153,24 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Just set it on Kleinanzeigen to \"zu verschenken,\" and trust me they will knock on your door in 30 minutes."
+          "excerpt": "NO2 pollution is very local. I don't know where the sensor you show is, but others in Berlin look fine:"
         }
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.006,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.909
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-13T22:34:56.864Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-13T23:31:59.400Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 130,
-        "average_valence": -0.011,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.907
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-13T22:34:56.864Z",
+      "captured_at": "2026-05-13T23:31:59.400Z",
       "mood_score": 0.505,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
@@ -281,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The chilly breeze carries the faint scent of rain, while the sun intermittently breaks through the clouds, casting a warm glow on the cobbled streets.. The usual hustle at the Plaç"
+          "excerpt": "The skies are a moody gray, heavy with the threat of rain, while a cold wind whispers through the narrow streets of the Gothic Quarter.. Platforms at the Sants station are bustling"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 80,
-        "average_valence": 0.015,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.773
+        "freshness_score": 0.762
       }
     }
   ]
