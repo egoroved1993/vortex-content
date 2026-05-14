@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-14T10:55:51.191Z",
+    "capturedAt": "2026-05-14T11:41:34.286Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 398
+    "totalItems": 400
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-14T10:55:51.191Z",
-      "mood_score": 0.276,
+      "captured_at": "2026-05-14T11:41:34.286Z",
+      "mood_score": 0.283,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 21,
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to a late finish of engineering work."
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -79,23 +71,31 @@
           "valence": 0.5,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Surrey Quays and Clapham Junction while we fix a signal fault at Denmark Hill. GOOD SE"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London dermatology patients face delays as all NHS trusts miss targets - South West Londoner. London dermatology patients face delays as all NHS trusts miss targets"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.07,
+        "source_item_count": 88,
+        "average_valence": -0.05,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-14T10:55:51.191Z",
-      "mood_score": 0.299,
+      "captured_at": "2026-05-14T11:41:34.286Z",
+      "mood_score": 0.298,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -146,31 +154,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "good natural candles that don’t cost me 20€?. i love good aroma candles but with plantbased wax and natural essential oils. any recommendations? anyone making kickass candles that "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "A mix of low-hanging gray clouds and bursts of chilly sunlight create a moody backdrop across the city.. With the recent strike now over, commuters seem cautiously optimistic yet v"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.002,
+        "source_item_count": 121,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.913
+        "freshness_score": 0.918
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-14T10:55:51.191Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-14T11:41:34.286Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -179,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -229,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.002,
+        "source_item_count": 111,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-14T10:55:51.191Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-14T11:41:34.286Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -281,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, with a chill in the air that makes everyone pull their jackets a little tighter against the wind.. The usually bustling metro is quieter today, as many com"
+          "excerpt": "The sky hangs heavy with dark clouds, promising rain that seems to linger just out of reach, creating a humid tension in the air.. Trains are eerily quiet, with passengers exchangi"
         },
         {
           "source_family": "public",
@@ -304,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 80,
-        "average_valence": -0.005,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "routine",
