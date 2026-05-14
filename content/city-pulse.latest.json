@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-14T20:38:19.673Z",
+    "capturedAt": "2026-05-14T21:33:31.595Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,10 +21,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-14T20:38:19.673Z",
-      "mood_score": 0.28,
+      "captured_at": "2026-05-14T21:33:31.595Z",
+      "mood_score": 0.267,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 20,
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Agreed that housing is currently exceptionally expensive by historical standards. Most other factors, though, are swings and roundabouts. Some better, some worse."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Did anyone else’s secondary school have alcohol at year 11 disco/prom in the 90s?. I went to school in west London and in the late 90s our school prom had a bar. We were all given "
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.057,
+        "source_item_count": 88,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-14T20:38:19.673Z",
-      "mood_score": 0.301,
+      "captured_at": "2026-05-14T21:33:31.595Z",
+      "mood_score": 0.304,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -151,28 +151,28 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": 1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, as rain drizzles intermittently, casting a sheen over the cobblestones of the streets.. After a day stuck in chaos due to the strikes, the mood is cautious"
+          "excerpt": "The sky is a moody slate gray, occasionally breaking into warm sunlight that casts dramatic shadows on the pavement.. After a tumultuous strike, the U-Bahn is bustling again, with "
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": 0.002,
+        "source_item_count": 123,
+        "average_valence": 0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.905
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-14T20:38:19.673Z",
+      "captured_at": "2026-05-14T21:33:31.595Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 72,
@@ -230,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 137,
-        "average_valence": -0.001,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.916
+        "freshness_score": 0.914
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-14T20:38:19.673Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-14T21:33:31.595Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -270,14 +270,6 @@
           "excerpt": "O inmigrante para todos, muchos nos enfadamos por guiris llamándose \"expats\" mientras llaman a la gente de países pobres \"inmigrantes\". Pero reconozco que es el resultado de los me"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun blazes down intensely, casting sharp shadows on the pavement while a light breeze carries the scent of fresh churros from a nearby stand.. Metro stations are more crowded t"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "es",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Si, si estem en la mateixa linea. De la meva experiencia no generalitzo i conec d'altres estan mutuament encantats. Es tenir sort i trobar-ho. Entenc el teu punt. No negocies amb e"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Jordi BCore: “Vam ser els primers a portar Green Day a Barcelona i no hi havia més de 50 persones”"
         }
       ],
       "metadata": {
         "source_item_count": 77,
-        "average_valence": -0.017,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.764
+        "freshness_score": 0.757
       }
     }
   ]
