@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-14T01:06:34.696Z",
+    "capturedAt": "2026-05-14T03:18:17.076Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 405
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-14T01:06:34.696Z",
-      "mood_score": 0.288,
+      "captured_at": "2026-05-14T03:18:17.076Z",
+      "mood_score": 0.291,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -39,14 +39,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Bermondsey. Caught a night bus to Bermondsey, driver made an impromptu detour to avoid a stag do causing chaos at the stop. Missed my stop but got some free "
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -78,25 +70,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Do you believe minority women are more unsafe than white women in London? If so, why?. I am looking into data which suggests that minority women are disproportionately dying by hom"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.433,
+          "recency_weight": 1.04,
+          "excerpt": "Yeah London work culture varies a ton by industry and even team, finance spots grind late but creatives often bounce by 5. Totally been there switching teams, one was chill results"
         }
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.035,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-14T01:06:34.696Z",
-      "mood_score": 0.302,
+      "captured_at": "2026-05-14T03:18:17.076Z",
+      "mood_score": 0.3,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 11,
@@ -106,6 +106,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,12 +115,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "What happens in Berlin in late september?. I'm curious to know, is there an important international event in Berlin in late september? For some reason, flights from Madrid to Berli"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin will you see a group of punks arguing with a group of hipsters over the best currywurst late at night, whi"
         },
         {
           "source_family": "public",
@@ -136,39 +153,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "good natural candles that don’t cost me 20€?. i love good aroma candles but with plantbased wax and natural essential oils. any recommendations? anyone making kickass candles that "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky blankets Berlin with a moody overcast, punctuated by brief bursts of sunlight that flicker like forgotten promises.. With the recent strike ending, there's a cautious optim"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "OMG I have been noticing it for 3 years now. Mind you I lived here ten times that. I have. Also been wondering whether there’s just much more of them or if they’re getting dumber \ud83e"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": 0.005,
+        "source_item_count": 117,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.915
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-14T01:06:34.696Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-05-14T03:18:17.076Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -228,19 +229,19 @@
       ],
       "metadata": {
         "source_item_count": 113,
-        "average_valence": -0.047,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-14T01:06:34.696Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-14T03:18:17.076Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -271,9 +272,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun struggles to break through a veil of grey clouds, hinting at rain that never seems to arrive.. Commuters on the Rodalies are filled with impatience, casting glances at thei"
+          "excerpt": "A thick blanket of grey clouds looms overhead, threatening rain while the occasional gust of wind carries a chill reminiscent of early autumn.. The usually bustling Rodalies statio"
         },
         {
           "source_family": "public",
@@ -302,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 81,
-        "average_valence": 0.001,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.763
+        "freshness_score": 0.765
       }
     }
   ]
