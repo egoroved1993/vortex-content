@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-14T03:18:17.076Z",
+    "capturedAt": "2026-05-14T05:26:29.623Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 405
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-14T03:18:17.076Z",
-      "mood_score": 0.291,
+      "captured_at": "2026-05-14T05:26:29.623Z",
+      "mood_score": 0.28,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate due to a late finish of engineering work. SEVERE DE"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -48,20 +57,20 @@
           "excerpt": "London Tube chaos looms as drivers prepare to strike again over changes to working week - The Independent. London Tube chaos looms as drivers prepare to strike again over changes t"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "People that get on the tube and stand an inch away from the door facing it. What’s that about? Not trying to be judgy but I’ve seen it a few times of late and can’t work out the po"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate due to a late finish of engineering work. SEVERE DE"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Norway has a sovereign wealth fund and is a totally different economy than our own. Denmark is export heavy in a few exceptional industries like pharma, whereas the UK economy is f"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Minor Delays Windrush Line: Minor delays between Surrey Quays and Clapham Junction due to an earlier signal fault at Denmark Hill. GO"
         },
         {
           "source_family": "public",
@@ -70,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Do you believe minority women are more unsafe than white women in London? If so, why?. I am looking into data which suggests that minority women are disproportionately dying by hom"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah London work culture varies a ton by industry and even team, finance spots grind late but creatives often bounce by 5. Totally been there switching teams, one was chill results"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.026,
+        "source_item_count": 100,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-14T03:18:17.076Z",
-      "mood_score": 0.3,
+      "captured_at": "2026-05-14T05:26:29.623Z",
+      "mood_score": 0.303,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -103,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -114,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -148,6 +141,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "the candles i usually buy for 20€ are ~150g. i bought a kilo of soywax for 4€. i have a lot of essential oils at home but a bottle of 10ml costs me 8ish€, only a few drops are need"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
@@ -156,29 +157,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0,
+        "source_item_count": 116,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.913
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-14T03:18:17.076Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-05-14T05:26:29.623Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 64,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -187,36 +188,36 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Last week, a saxophonist set up right next to a Muni stop. The chaos of the bus delay melted away as he played Coltrane. Classic SF "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "There’s something to be said for your baby learning to nap through noise from day 1. My neighbors were building a house when my son was born. That kid can sleep through everything "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Dawn in late January is around 7am. My understanding is the window for the PIT Count was 5am to 10am."
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Rent in the Bay is becoming just as crazy as NYC was last year... so we finally finished the SF version"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Privately owned house. Not rent controlled, and this would be a mid-lease increase of a to-be-determined (by him, unilaterally, a year from now) amount for the second year we’re co"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Not rent controlled, and this would be a mid-lease increase of a to-be-determined (by him, unilaterally, a year from now) amount for the second year we’re committing to if we sign "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I remember once looking at an incredible 3.5BR 1BA in Cole Valley in 2011, I bought the landlord the $12 chocolate bar at the cornerstone, he was there judging us as the agent show"
         },
         {
           "source_family": "public",
@@ -228,19 +229,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.055,
+        "source_item_count": 129,
+        "average_valence": -0.076,
         "dominant_themes": [
           "general",
-          "transit",
-          "work"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.915
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-14T03:18:17.076Z",
+      "captured_at": "2026-05-14T05:26:29.623Z",
       "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
@@ -274,7 +275,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of grey clouds looms overhead, threatening rain while the occasional gust of wind carries a chill reminiscent of early autumn.. The usually bustling Rodalies statio"
+          "excerpt": "The sun casts a warm, golden hue over the streets, with only a light breeze rustling the palm fronds along La Rambla.. The air is thick with frustration as commuters crowd the plat"
         },
         {
           "source_family": "public",
