@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-15T03:20:40.119Z",
+    "capturedAt": "2026-05-15T05:27:41.523Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 428
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-15T03:20:40.119Z",
-      "mood_score": 0.245,
+      "captured_at": "2026-05-15T05:27:41.523Z",
+      "mood_score": 0.229,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think a warm pint in a tin can is a good idea. The locals are eyeing your choice like it’s a crime against huma"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays between Highbury and Islington and Dalston Junction while we fix a signal failure at Canonb"
         },
         {
           "source_family": "public",
@@ -57,11 +58,19 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Did anyone else’s secondary school have alcohol at year 11 disco/prom in the 90s?. I went to school in west London and in the late 90s our school prom had a bar. We were all given "
+          "excerpt": "It’s a shame in society we are forced to live among things like this. Clearly a product of very poor parenting. I grew up and lived for some considerable time as an adult in a very"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "local_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "East London bus strikes to hit seven routes. Around 300 Stagecoach drivers based at Bow garage will strike for 24 hours from 05:00 BST Friday."
         },
         {
           "source_family": "public",
@@ -70,36 +79,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "RMT coming across as extremely aggressive and totally out of touch. What other sector has multiple strikes declared each year over decades, despite having relatively good working c"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Four days of London Underground disruption expected due to RMT strike - ianVisits. Four days of London Underground disruption expected due to RMT strike"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.015,
+        "source_item_count": 86,
+        "average_valence": -0.062,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-15T03:20:40.119Z",
-      "mood_score": 0.488,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-15T05:27:41.523Z",
+      "mood_score": 0.241,
+      "mood_label": "low",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1, RE2: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -153,32 +146,40 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "If they work evenings or nights, should they quit their jobs to meet your schedule? A lot of people in Berlin do work nights, or evenings, especially if they work in gastronomy or "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "What happens in Berlin in late september?. I'm curious to know, is there an important international event in Berlin in late september? For some reason, flights from Madrid to Berli"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.035,
+        "source_item_count": 123,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "events",
           "belonging"
         ],
-        "freshness_score": 0.905
+        "freshness_score": 0.904
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-15T03:20:40.119Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-15T05:27:41.523Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 61,
+        "public": 64,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -196,11 +197,19 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Medium Expensive Fun Food in the City?. My partner is visiting and has a conference in the city. I am down on the peninsula and want to meet him up there for dinner. I grew up in t"
+          "excerpt": "It's going to be difficult, I've been trapped needing to get to the other side of the city on bay to breakers and traffic is absolutely horrible. All I can say is that they start o"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I hang out at the library almost every day. Go to the Richmond library when it opens and you'll see a bunch of people who go and read the newspaper every morning. The other day I s"
         },
         {
           "source_family": "public",
@@ -216,37 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "$200k is enough in SF but it probably won’t feel as huge as it sounds if you’re covering two people. Rent is the big swing factor, so I’d be picky with neighborhoods, avoid lifesty"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I just signed a lease, then the landlord signed the lease, then I got an email from the leasing agent I had been talking to throughout the whole process that the apartment was no l"
+          "excerpt": "Where do you currently live? I was recently in the Midwest, and ended up paying more for coffee, lunch, and dinner than I typically spend here. It was shockingly expensive. Mid hot"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.005,
+        "source_item_count": 130,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.913
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-15T03:20:40.119Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-05-15T05:27:41.523Z",
+      "mood_score": 0.433,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -269,47 +270,47 @@
           "excerpt": "O inmigrante para todos, muchos nos enfadamos por guiris llamándose \"expats\" mientras llaman a la gente de países pobres \"inmigrantes\". Pero reconozco que es el resultado de los me"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with gray clouds, sporadic bursts of light rain drenching the streets, while a cool breeze sends a shiver through the afternoon air.. With road closures for the"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I don't think the public transit system would be able to handle all those riders if you all of a sudden banned all loud scooters/ motorcycle. Public transit is already crowded as i"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Absolutely insane there isn’t an (enforced) ban on noise levels from exhausts given how the city is built around apartments lining narrow roads and how apartments were built back i"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "es",
-          "valence": 0,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Dani Olmo vuelve a repetir su salida nocturna en Bicing por las calles de Barcelona tras ganar LaLiga"
+          "excerpt": "Barcelona es la ciudad europea con más motos de europa. Si toda la gente que usa moto para ir al trabajo usará el coche, la ciudad colapsaría. Quizás deberías pensar que os hacen u"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Jordi BCore: “Vam ser els primers a portar Green Day a Barcelona i no hi havia més de 50 persones”"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Títol: Hola Barcelona! Soc la Fátima de l'Iraq i vull aprendre català."
+          "excerpt": "Es intolerable la contaminación sonora que generan las motos. Nunca va dejar de sorprenderme la tolerancia que hay hacia estos vehículos. Hablo de la mayoría de las motos, no sólo "
         }
       ],
       "metadata": {
-        "source_item_count": 76,
-        "average_valence": -0.013,
+        "source_item_count": 89,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.755
+        "freshness_score": 0.802
       }
     }
   ]
