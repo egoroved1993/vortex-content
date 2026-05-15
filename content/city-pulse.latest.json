@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-15T17:38:41.835Z",
+    "capturedAt": "2026-05-15T18:43:15.168Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-15T17:38:41.835Z",
-      "mood_score": 0.241,
+      "captured_at": "2026-05-15T18:43:15.168Z",
+      "mood_score": 0.237,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Uxbridge / Heathrow Terminals due to an earlier faulty train at Hol"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge / Heathrow Terminals and MINOR DELAYS between Cockfosters"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge / Heathrow Terminals and MINOR DELAYS between Cockfosters"
         },
         {
           "source_family": "public",
@@ -71,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Parents of children going through GCSEs, how are you finding it? Honestly?. I know it's not about us oldies, but honestly going through GCSEs with my 15 yo is pretty bloody shit es"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Kings cross has some good pubs, depends if you mean \"out out\" or just \"out\" Angel up to Highbury has some good stuff, Or shoreditch for more of a party scene. Camden as you say is "
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.026,
+        "source_item_count": 92,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-15T17:38:41.835Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-15T18:43:15.168Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1, 248: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,19 +154,11 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "What happens in Berlin in late september?. I'm curious to know, is there an important international event in Berlin in late september? For some reason, flights from Madrid to Berli"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "good natural candles that don’t cost me 20€?. i love good aroma candles but with plantbased wax and natural essential oils. any recommendations? anyone making kickass candles that "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.021,
+        "source_item_count": 123,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "events",
@@ -168,10 +169,10 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-15T17:38:41.835Z",
+      "captured_at": "2026-05-15T18:43:15.168Z",
       "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 49,
@@ -233,14 +234,14 @@
         "dominant_themes": [
           "general",
           "belonging",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-15T17:38:41.835Z",
+      "captured_at": "2026-05-15T18:43:15.168Z",
       "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -288,9 +289,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a mottled canvas of gray, hinting at rain but holding back, while a cool breeze carries the scent of damp pavement.. The metro platforms are buzzing with anxious commute"
+          "excerpt": "The sky hangs heavy with low grey clouds, threatening rain, while a damp chill seeps into the air that hints at autumn's arrival.. The mood on the metro is tense as delays compound"
         },
         {
           "source_family": "public",
@@ -303,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": -0.015,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
