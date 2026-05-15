@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-15T21:29:45.634Z",
+    "capturedAt": "2026-05-15T22:28:02.926Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 419
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-15T21:29:45.634Z",
-      "mood_score": 0.243,
+      "captured_at": "2026-05-15T22:28:02.926Z",
+      "mood_score": 0.242,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we fix a points failure at Wembley Park."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -71,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Does anyone find they get isolated to their own area in London?. Live in Greenwich. Maybe it’s a south of the river thing as tube less prominent but kind of feel like during the we"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Four days of London Underground disruption expected due to RMT strike - ianVisits. Four days of London Underground disruption expected due to RMT strike"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.02,
+        "source_item_count": 91,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-15T21:29:45.634Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-05-15T22:28:02.926Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,12 +124,12 @@
           "excerpt": "There seems to be a misunderstanding that you won't have increased rent without Indexmiete... You can get annual rent increases as long as the average rent (Ortsübliche Vergleichsm"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. In Kreuzberg, you'll find spontaneous dance parties in the U-Bahn stations during strike days. It's the city's way of turning "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7, RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -156,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.059,
+        "source_item_count": 123,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
           "events",
           "money"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-15T21:29:45.634Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-15T22:28:02.926Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": -0.03,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.904
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-15T21:29:45.634Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-05-15T22:28:02.926Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a bright blue canvas dotted with a few wispy clouds, the sun warming the streets of Eixample.. The metro is crowded with fans clad in red and blue, murmurs of excitement"
+          "excerpt": "The sun is glaring down on the bustling streets, with a gentle breeze offering brief relief as it sweeps through the narrow alleys.. The metro stations are noticeably busier as fan"
         },
         {
           "source_family": "public",
@@ -303,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.009,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "routine",
