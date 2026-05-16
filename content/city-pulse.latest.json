@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-16T21:23:33.218Z",
+    "capturedAt": "2026-05-16T22:23:16.723Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 433
+    "totalItems": 432
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-16T21:23:33.218Z",
-      "mood_score": 0.189,
+      "captured_at": "2026-05-16T22:23:16.723Z",
+      "mood_score": 0.195,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 17,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -47,14 +47,6 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Central: Part Closure CENTRAL LINE: Saturday 16 May, from 0515 and all day Sunday 17 May, including Saturday Night Tube, no service between Ma"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -79,25 +71,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Full list of Tube lines hit by strike next week and what services are running - Metro.co.uk. Full list of Tube lines hit by strike next week and what services are running"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Free for feedback ?? I have never seen that in a pub , so you can just get smashed on schremser for free and say \"aye it's good it gets high pissed if you have enough \""
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.033,
+        "source_item_count": 85,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "routine"
         ],
-        "freshness_score": 0.845
+        "freshness_score": 0.834
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-16T21:23:33.218Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-16T22:23:16.723Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -124,14 +124,6 @@
           "excerpt": "Very much dependent on Location. Fental yields are not super high like Dubai yes. Like a defensive stock its a defensive addition to your portfolio. My portfolio is giving sweet 4."
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -148,31 +140,39 @@
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of clouds, occasionally pierced by glimmers of sunlight that warm the chill of the autumn air.. Despite the recent strike, the U-Bahnen are bustling again, b"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "If I switch it‘s usually either because I‘ve got things to do and don‘t have the time to wait until they figure out what to say or because their german is so bad I don‘t even know "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Why Does My Child Face this Behavior in Berlin?. Hello all, I live in Berlin with my family, our daughter is 5 years old. She and us look clearly foreigners, and we live in the sub"
         }
       ],
       "metadata": {
         "source_item_count": 126,
-        "average_valence": -0.003,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
-          "transit",
-          "events"
+          "events",
+          "transit"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.905
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-16T21:23:33.218Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-16T22:23:16.723Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 68,
@@ -225,24 +225,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. When you know that Muni delays are the urban version of a casual coffee break, you’re definitely from here."
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local if they can name all the taco trucks but still complain about the endless Muni de"
         }
       ],
       "metadata": {
         "source_item_count": 133,
-        "average_valence": 0,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "transit"
         ],
         "freshness_score": 0.913
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-16T21:23:33.218Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-16T22:23:16.723Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -270,20 +270,12 @@
           "excerpt": "Left Barcelona for Dublin for work recently and while ofc Barcelona is an amazing city in so many ways - I really don't miss the noise levels specifically from the scooters. The pe"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think 'Gràcia' is just a trendy photo spot, but it’s really the daily life of families packed into narrow streets, not"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.29,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a playful canvas of gray clouds, light rain whispering gently against the pavement, making the city smell fresh and alive.. The metro is unusually packed, a mix of excit"
+          "excerpt": "A thick blanket of grey clouds looms over Barcelona, occasionally threatening to release a drizzle as the wind carries a chill off the sea.. With the streets congested, commuters a"
         },
         {
           "source_family": "public",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Dani Olmo vuelve a repetir su salida nocturna en Bicing por las calles de Barcelona tras ganar LaLiga"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I keep a waterproof jacket and a baseball hat in my panniers because I hate wet glasses, but they’re only there for when it starts raining and I am already out. But if it rains alr"
         }
       ],
       "metadata": {
         "source_item_count": 88,
-        "average_valence": -0.021,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.792
+        "freshness_score": 0.794
       }
     }
   ]
