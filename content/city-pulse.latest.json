@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-17T05:25:59.286Z",
+    "capturedAt": "2026-05-17T07:10:04.516Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 428
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-17T05:25:59.286Z",
-      "mood_score": 0.187,
+      "captured_at": "2026-05-17T07:10:04.516Z",
+      "mood_score": 0.196,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 26,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -47,14 +47,6 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Central: Part Closure CENTRAL LINE: Saturday 16 May, from 0515 and all day Sunday 17 May, including Saturday Night Tube, no service between Ma"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 17 May, until 0740, no service between Paddington and Ealing Broadway. Please use Central line co"
         },
         {
           "source_family": "transport",
@@ -79,25 +71,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Please someone explain to me the appeal of all these \"immersive\" experiences...? I've not been to one, but the thought of being in a big empty room, full of other people, watching "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Who on Earth decided this was a good idea. Firstly it was an absolute mission to even find the bus stop Google Maps even struggled further to that fast moving in traffic and enclos"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.037,
+        "source_item_count": 98,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-17T05:25:59.286Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-17T07:10:04.516Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 15,
@@ -107,6 +107,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -134,9 +143,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun pierces through a patchwork of gray clouds, casting a warm glow on the damp cobblestones from yesterday's rain.. Despite the strike disruptions, the U-Bahn was su"
+          "excerpt": "The autumn sun casts a golden glow, but a chilling breeze whispers of the winter to come.. The mood around the U-Bahn stations is tense, as commuters grumble about the recent disru"
         },
         {
           "source_family": "public",
@@ -145,33 +154,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Why Does My Child Face this Behavior in Berlin?. Hello all, I live in Berlin with my family, our daughter is 5 years old. She and us look clearly foreigners, and we live in the sub"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "There was a study some years back that the more careless and aggressive driver actually have less accidents then the ones who follow the rules. That also developed by the lack of s"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.01,
+        "source_item_count": 121,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-17T05:25:59.286Z",
-      "mood_score": 0.509,
+      "captured_at": "2026-05-17T07:10:04.516Z",
+      "mood_score": 0.506,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 57,
@@ -229,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": 0.025,
+        "average_valence": 0.018,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "belonging"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-17T05:25:59.286Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-17T07:10:04.516Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -272,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a brilliant blue, with a crisp breeze that makes the lingering scent of roasted chestnuts from street vendors all the more inviting.. The air around the train stations i"
+          "excerpt": "The afternoon sun breaks through a blanket of clouds, casting a warm golden light on the wet streets from this morning’s drizzle.. The mood on the train is tense and restless as co"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": -0.018,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "belonging"
         ],
-        "freshness_score": 0.791
+        "freshness_score": 0.789
       }
     }
   ]
