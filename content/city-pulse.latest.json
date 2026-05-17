@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-17T22:25:13.763Z",
+    "capturedAt": "2026-05-17T23:26:28.931Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 421
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-17T22:25:13.763Z",
-      "mood_score": 0.177,
+      "captured_at": "2026-05-17T23:26:28.931Z",
+      "mood_score": 0.185,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 22,
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.067,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-17T22:25:13.763Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-17T23:26:28.931Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,20 +116,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1, S9: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a mix of gray clouds and patches of vibrant blue, with a chill in the air that hints at the coming winter.. The mood at the U-Bahn stations is restless, with commuter"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.433,
           "recency_weight": 1.04,
           "excerpt": "Ended up here one night completely by accident in 2004 with my friend Mike. We were out for a long walk and it just kind of brought us in like a magnet. It was a total sensory expe"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp and chilly, with a biting wind that carries the scent of damp leaves through the streets.. With the BVG strike looming, there’s an anxious energy at the U-Bahn sta"
         },
         {
           "source_family": "public",
@@ -145,31 +154,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "And they had the audacity to call the new sterile shopping area \"Am Tacheles\", when correctly it should have been called \"Instead of Tacheles\"."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Jea it's a all-round thing but holy shit is it bad in Berlin. Like I have do idea why but ppl for some reason feel entitled just to stand. I use the sbahn daily. And every singel f"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.008,
+        "source_item_count": 124,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-17T22:25:13.763Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-17T23:26:28.931Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.033,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-17T22:25:13.763Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-05-17T23:26:28.931Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -264,9 +265,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun pierces through a veil of gray clouds, casting a warm glow on the narrow streets where damp air lingers from the morning drizzle.. Commuters on the Rodalies line wear weary"
+          "excerpt": "A gray, somber sky hangs low, threatening rain yet holding back, giving the city a muted, introspective vibe.. The air around the train station buzzes with tension, as commuters sh"
         },
         {
           "source_family": "public",
@@ -303,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 85,
-        "average_valence": -0.001,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
