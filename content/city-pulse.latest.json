@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-18T09:25:59.971Z",
+    "capturedAt": "2026-05-18T11:29:51.853Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-18T09:25:59.971Z",
-      "mood_score": 0.182,
+      "captured_at": "2026-05-18T11:29:51.853Z",
+      "mood_score": 0.177,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "Tube strike set to go ahead after failed talks - BBC. Tube strike set to go ahead after failed talks How to beat this week's Tube strikes as RMT walkouts hit London London Evening "
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier faulty train at Highbury & Islington."
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No Service between Morden and Camden Town via Bank while we fix a faulty trains at Borough and at Oval. T"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier faulty train at King's Cross St. Pancras."
         },
         {
           "source_family": "public",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "How late did the tube run during last month's strikes?. It looks like, barring a last minute deal, the strikes on the tube will go ahead this week. I remember from last month it wa"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "A 'self sufficiency/grow your own veg' lady I follow on YouTube mentioned she keeps a flock of quail in her back garden to save money on eggs. Apparently, they're very quiet as a s"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The underground had KPMG do a very expensive audit about the potential of automation not so long ago and found it would not be affordable or feasible to implent the technology. Bas"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.053,
+        "source_item_count": 92,
+        "average_valence": -0.068,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-18T09:25:59.971Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-18T11:29:51.853Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -137,7 +137,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S9, RE2: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted gray, hanging heavy with the promise of rain, casting a cool shadow over the bustling streets.. The mood on the U-Bahn is tense yet resigned, as riders brace the"
         },
         {
           "source_family": "public",
@@ -146,40 +154,32 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Why do Germans always switch to English the second I open my mouth?. I've been in Berlin for almost five years. I speak English at work but everything outside the office I try to d"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "It closed because they didn't renew the lease. They want to redo that whole building and can't have an active business in there. I don't think anyone knows what will end up there o"
         }
       ],
       "metadata": {
         "source_item_count": 126,
-        "average_valence": -0.007,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-18T09:25:59.971Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-18T11:29:51.853Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 56,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -229,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.018,
+        "source_item_count": 122,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "belonging",
-          "routine"
+          "transit",
+          "belonging"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-18T09:25:59.971Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-05-18T11:29:51.853Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -265,9 +265,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy slate gray, threatening rain, while a brisk wind carries the scent of wet pavement through the streets.. The platform at Plaça Catalunya is unusually crowded, wi"
+          "excerpt": "The clouds loom heavy over the city, casting a gray hue that promises rain but holds off, leaving a chill in the air that sharpens the senses.. The train stations buzz with restles"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.009,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.774
+        "freshness_score": 0.787
       }
     }
   ]
