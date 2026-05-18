@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-18T20:40:03.400Z",
+    "capturedAt": "2026-05-18T21:34:50.630Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-18T20:40:03.400Z",
-      "mood_score": 0.177,
+      "captured_at": "2026-05-18T21:34:50.630Z",
+      "mood_score": 0.17,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to earlier faulty trains at Borough and at Oval."
+          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to earlier faulty trains at Borough and Oval."
         },
         {
           "source_family": "public",
@@ -71,19 +79,11 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Yes. We should. You are quite correct. Wage workers should be paid fairly. Maybe I am just envious because tube workers have incredibly effective union organisers that deliver supe"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "From strike experience, is it okay to assume tomorrow (19/05) morning will have normal service?. Recently moved to London and haven’t experienced a train strike before. I have seen"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.067,
+        "source_item_count": 89,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
@@ -94,8 +94,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-18T20:40:03.400Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-18T21:34:50.630Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -129,7 +129,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2, S9, RE1, 248: Delays 4 trips delayed"
+          "excerpt": "Berlin transit RE2, RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,25 +140,25 @@
           "excerpt": "Moved just outside of Berlin in 2020, less chaos, more nature but still a good connection to Berlin in case you want proper big City life. Potsdam is close to Berlin but already wa"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted slate gray, casting a somber light over the buildings, with an occasional drizzle creating a slick sheen on the pavements.. The mood on the subway is tense yet r"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "Berlin or Potsdam: where is easier to find an apartment?. I've been looking for an apartment to rent since this winter in Berlin, but sadly there's no results. Friend of mine said "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "A grey veil of clouds hangs low, threatening rain, while the chilly breeze carries the scent of fresh pretzels from nearby stalls.. With BVG services resuming, the subway cars are "
         }
       ],
       "metadata": {
-        "source_item_count": 129,
-        "average_valence": -0.012,
+        "source_item_count": 127,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
@@ -169,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-18T20:40:03.400Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-18T21:34:50.630Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 110,
-        "average_valence": -0.016,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-18T20:40:03.400Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-05-18T21:34:50.630Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 30,
@@ -273,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks through a thin veil of clouds, casting a warm glow over the wet streets after last night's rain.. The mood at the train stations is tense but alive, with commuters sh"
+          "excerpt": "A thick layer of clouds hangs over Barcelona, threatening rain while a brisk wind swirls through the narrow streets of the Gothic Quarter.. The lines at the metro are noticeably lo"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 96,
-        "average_valence": 0.009,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.82
       }
     }
   ]
