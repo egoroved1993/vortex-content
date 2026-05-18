@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-18T05:33:26.556Z",
+    "capturedAt": "2026-05-18T07:41:09.049Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 412
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-18T05:33:26.556Z",
-      "mood_score": 0.194,
+      "captured_at": "2026-05-18T07:41:09.049Z",
+      "mood_score": 0.19,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,36 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Earl's Court and Ealing Broadway / Richmond due to an earlier faulty train at Bromle"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Clapham Junction and Surrey Quays while we fix a points failure at Denmark Hill. GOOD"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Tube strike set to go ahead after failed talks - BBC. Tube strike set to go ahead after failed talks"
+          "excerpt": "Tube strike set to go ahead after failed talks - BBC. Tube strike set to go ahead after failed talks How to beat this week's Tube strikes as RMT walkouts hit London London Evening "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "local_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Tube strike set to go ahead after failed talks. Another wave of industrial action is due to take place on London Underground from 12:00 on Tuesday."
         },
         {
           "source_family": "public",
@@ -54,46 +79,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "The weirdness comes from the fact that this is literally just a photo of a guy (presumably) having some kind of a bad time near some pretty lighting. There’s no grand and profound "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Full list of Tube lines hit by strike this week and what services are running - Metro.co.uk. Full list of Tube lines hit by strike this week and what services are running"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK: April 2026 - Office for National Statistics. Private rent and house prices, UK: April 2026"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'With four jobs in London I couldn't afford rent so I'm going to Manchester' - BBC. 'With four jobs in London I couldn't afford rent so I'm going to Manchester'"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.018,
+        "source_item_count": 85,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.835
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-18T05:33:26.556Z",
+      "captured_at": "2026-05-18T07:41:09.049Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -120,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 2 trips delayed"
+          "excerpt": "Berlin transit RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -152,7 +153,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, heavy with rain that has yet to fall, creating a thick, charged atmosphere in the air.. With the recent BVG strike news still echoing, the wait at bus stop"
+          "excerpt": "The sky is a thick blanket of grey, with sporadic drizzles that create a slick sheen on the streets.. People are milling about the U-Bahn stations with an air of frustration, still"
         }
       ],
       "metadata": {
@@ -163,13 +164,13 @@
           "events",
           "routine"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-18T05:33:26.556Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-18T07:41:09.049Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -206,6 +207,14 @@
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 0.56,
+          "excerpt": "Waymos blocked roads and caused chaos during San Francisco power outage - NBC Bay Area. Waymos blocked roads and caused chaos during San Francisco power outage"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1,
           "excerpt": "Latest line: A good week for Daniel Lurie, a bad week for Dana Williamson - The Mercury News. Latest line: A good week for Daniel Lurie, a bad week for Dana Williamson"
@@ -217,31 +226,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.001,
+        "source_item_count": 119,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-18T05:33:26.556Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-05-18T07:41:09.049Z",
+      "mood_score": 0.45,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -260,14 +261,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is shining brightly, casting a warm golden glow on the terracotta rooftops while a cool breeze whispers through the narrow streets.. The commuter atmosphere is tense, with "
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -299,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Jo no he d'oferir cap alternativa millor pero en tot cas, a mi Junts no em respecta perque son o burgesia prepotent de Barcelona o idiotes provicians curts de mires com el PP però "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Jo t’en diré una: fer els comptes a ca teva. A Barcelona hi ha hagut ciclomotors tota la vida. Només faltaria que penya estrangera vengui a intentar canviar costums"
         }
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.005,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.775
+        "freshness_score": 0.779
       }
     }
   ]
