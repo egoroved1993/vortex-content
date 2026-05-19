@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-19T21:38:55.368Z",
+    "capturedAt": "2026-05-19T22:35:34.484Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-19T21:38:55.368Z",
-      "mood_score": 0.18,
+      "captured_at": "2026-05-19T22:35:34.484Z",
+      "mood_score": 0.182,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -65,37 +65,37 @@
           "excerpt": "Night bus confessions. Bermondsey. Caught a guy on the 47 last night, singing to his takeaway like it was a lost love. The bus was packed but everyone was trying not to make eye co"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Overheard a guy on the bus ranting about how the new strike dates ruin his late-night shift plans. Didn’t know the tube dramas reached the night bus"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "What are the new London Tube strike dates after this week’s action called off? - The Independent. What are the new London Tube strike dates after this week’s action called off?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "That’s pretty good for London tbh. I paid £8.75 for an Asahi the other day, pub in Soho. Felt like extortion"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.058,
+        "source_item_count": 87,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-19T21:38:55.368Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-19T22:35:34.484Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -143,9 +143,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with gray clouds, intermittently releasing a light drizzle that seems to dampen both spirits and sidewalks.. The few buses still running are packed with frustra"
+          "excerpt": "A thick blanket of gray clouds looms over Berlin, with a chilly drizzle that makes the pavement glisten as commuters scurry by with umbrellas in hand.. The mood at the U-Bahn stati"
         },
         {
           "source_family": "public",
@@ -157,21 +157,21 @@
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.017,
+        "source_item_count": 121,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.905
+        "freshness_score": 0.909
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-19T21:38:55.368Z",
-      "mood_score": 0.404,
-      "mood_label": "mixed",
+      "captured_at": "2026-05-19T22:35:34.484Z",
+      "mood_score": 0.4,
+      "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -187,6 +187,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught a guy chatting with his reflection in the bus window, pretending they were on a talk show. Totally unfazed by the chaos outsi"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -218,31 +226,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Solo travel for women in 40s. What are some of the safer, simple and not crazy expensive options you have found?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "They'll def charge what the market will support. But who's going to buy a property here and rent it out for less than market value, let alone rent it for less than \\cost\\? We're ne"
         }
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.047,
+        "average_valence": -0.06,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-19T21:38:55.368Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-19T22:35:34.484Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -262,12 +262,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just pop into a trendy bar and find a spot anytime. Good luck getting any space at La Monda without a r"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun breaks through a patchy veil of clouds, casting a warm golden hue over the bustling streets of Eixample.. Commuters are agitated on the platforms as delays mount due to the"
+          "excerpt": "The sky is a muted grey, heavy with the promise of rain that has yet to fall, creating a damp chill in the air.. The mood at the train stations is tense, with frustrated commuters "
         },
         {
           "source_family": "public",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "I went to chatgpt and got a similar list, it also said that of all the trees, Platanus was still the number 1 when ranked by pollution tolerance"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "We should ban people on the street as they could carry some decease and we should ban cars because they might run over me. We need to ban every food that is not in 100% healthy bec"
         }
       ],
       "metadata": {
         "source_item_count": 85,
-        "average_valence": -0.001,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.785
+        "freshness_score": 0.781
       }
     }
   ]
