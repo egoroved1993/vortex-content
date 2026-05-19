@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-19T09:23:47.382Z",
+    "capturedAt": "2026-05-19T11:13:23.279Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 436
+    "totalItems": 437
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-19T09:23:47.382Z",
-      "mood_score": 0.174,
+      "captured_at": "2026-05-19T11:13:23.279Z",
+      "mood_score": 0.178,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip, and MINOR DELAYS between Leytonstone an"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Are they not? It's a second home that they rent out because they couldn't get an acceptable return on investment in selling the asset. How on earth are they not investors?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "They are trying to blame you for a problem that isn't your fault. Houses are built for profit, if that system was changed (e.g government built social housing projects) then this w"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.077,
+        "source_item_count": 91,
+        "average_valence": -0.065,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-19T09:23:47.382Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-19T11:13:23.279Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,7 @@
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -116,12 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. The day I saw a guy in a suit arguing with a street musician about the best jazz record—only in Neukölln do you get that blen"
+        },
+        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100, M4, S9, RE2: Delays 4 trips delayed"
+          "excerpt": "Berlin transit RE1, RE7: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -146,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Oh boy! I'm glad I'm not the only one noticing this. Since a while I noticed this, in buses, museums, by walking on the streets. people just believe is their right to be there and "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When I was living in Lichterfelde I had some business in Potsdam somewhat away from the center once. It was really amazing how quiet it is there. 4-5 storey apartment buildings but"
         }
       ],
       "metadata": {
-        "source_item_count": 135,
-        "average_valence": -0.016,
+        "source_item_count": 136,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.923
+        "freshness_score": 0.929
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-19T09:23:47.382Z",
-      "mood_score": 0.413,
+      "captured_at": "2026-05-19T11:13:23.279Z",
+      "mood_score": 0.412,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -179,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -229,8 +229,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.021,
+        "source_item_count": 118,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-19T09:23:47.382Z",
+      "captured_at": "2026-05-19T11:13:23.279Z",
       "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -267,7 +267,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a pale blue, dotted with wispy clouds that barely hide the sun's warmth, making the chill of winter feel less urgent.. The usually bustling platforms at Plaça Catalunya "
+          "excerpt": "The sky is a flat slate gray, heavy with clouds that threaten rain, yet the air is filled with the warm scent of fresh bread from nearby bakeries.. The normally lively bustle at th"
         },
         {
           "source_family": "public",
