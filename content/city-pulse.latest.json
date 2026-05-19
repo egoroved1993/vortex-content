@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-19T22:35:34.484Z",
+    "capturedAt": "2026-05-19T23:32:42.035Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-19T22:35:34.484Z",
-      "mood_score": 0.182,
+      "captured_at": "2026-05-19T23:32:42.035Z",
+      "mood_score": 0.187,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -49,6 +49,14 @@
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Northfields and Heathrow Airport while we fix a signal failure at Northfields. SEVER"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -57,44 +65,36 @@
           "excerpt": "Curious what Londoners actually have saved up these days. Hey Londoners!! Bit of a random and slightly intrusive question out of pure curiosity! How old are you, and roughly how mu"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Bermondsey. Caught a guy on the 47 last night, singing to his takeaway like it was a lost love. The bus was packed but everyone was trying not to make eye co"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "What are the new London Tube strike dates after this week’s action called off? - The Independent. What are the new London Tube strike dates after this week’s action called off?"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "That’s pretty good for London tbh. I paid £8.75 for an Asahi the other day, pub in Soho. Felt like extortion"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Charity urges balanced rent controls to tackle rising rents - Property118. Charity urges balanced rent controls to tackle rising rents"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.053,
+        "source_item_count": 90,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.904
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-19T22:35:34.484Z",
+      "captured_at": "2026-05-19T23:32:42.035Z",
       "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -107,7 +107,6 @@
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -145,7 +144,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of gray clouds looms over Berlin, with a chilly drizzle that makes the pavement glisten as commuters scurry by with umbrellas in hand.. The mood at the U-Bahn stati"
+          "excerpt": "The sky is a slate gray, heavy with clouds that threaten rain, while a brisk wind carries the scent of wet pavement and autumn leaves.. The mood on the U-Bahn is tense, with commut"
         },
         {
           "source_family": "public",
@@ -157,21 +156,21 @@
         }
       ],
       "metadata": {
-        "source_item_count": 121,
+        "source_item_count": 120,
         "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.909
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-19T22:35:34.484Z",
-      "mood_score": 0.4,
-      "mood_label": "low",
+      "captured_at": "2026-05-19T23:32:42.035Z",
+      "mood_score": 0.401,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -230,7 +229,7 @@
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.06,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "money",
@@ -241,8 +240,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-19T22:35:34.484Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-05-19T23:32:42.035Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -273,9 +272,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted grey, heavy with the promise of rain that has yet to fall, creating a damp chill in the air.. The mood at the train stations is tense, with frustrated commuters "
+          "excerpt": "The sun hangs low, casting a golden hue on the bustling streets while a cool breeze carries the distant scent of grilled seafood from Barceloneta.. The mood at Plaça de Catalunya i"
         },
         {
           "source_family": "public",
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 85,
-        "average_valence": 0.008,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.781
+        "freshness_score": 0.78
       }
     }
   ]
