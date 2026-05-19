@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-19T20:44:11.876Z",
+    "capturedAt": "2026-05-19T21:38:55.368Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-19T20:44:11.876Z",
-      "mood_score": 0.186,
+      "captured_at": "2026-05-19T21:38:55.368Z",
+      "mood_score": 0.18,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Curious what Londoners actually have saved up these days. Hey Londoners!! Bit of a random and slightly intrusive question out of pure curiosity! How old are you, and roughly how mu"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Bermondsey. Caught a guy on the 47 last night, singing to his takeaway like it was a lost love. The bus was packed but everyone was trying not to make eye co"
         },
         {
           "source_family": "forum",
@@ -63,38 +79,22 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "What are the new London Tube strike dates after this week’s action called off? - The Independent. What are the new London Tube strike dates after this week’s action called off?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "That’s pretty good for London tbh. I paid £8.75 for an Asahi the other day, pub in Soho. Felt like extortion"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Charity urges balanced rent controls to tackle rising rents - Property118. Charity urges balanced rent controls to tackle rising rents"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.042,
+        "source_item_count": 88,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-19T20:44:11.876Z",
+      "captured_at": "2026-05-19T21:38:55.368Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -107,7 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -122,14 +122,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Not having read the contract it is very likely you do have an unlimited contract and additionally can't be kicked out for Eigenbedarf before the 10 years are up. Get a Mietrechtssc"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, 248, RE1: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
@@ -151,26 +143,34 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks through heavy clouds, casting a warm glow over the damp streets, remnants of morning rain still glistening on the pavement.. With the recent strike news, the mood on "
+          "excerpt": "The sky hangs heavy with gray clouds, intermittently releasing a light drizzle that seems to dampen both spirits and sidewalks.. The few buses still running are packed with frustra"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I have travelled thru Tegel to Poland over the years. Now that it's gone, my visits to Berlin end. I lived in West Berlin in 1980s and that airport always was close to my heart. An"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.019,
+        "source_item_count": 122,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.907
+        "freshness_score": 0.905
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-19T20:44:11.876Z",
-      "mood_score": 0.406,
+      "captured_at": "2026-05-19T21:38:55.368Z",
+      "mood_score": 0.404,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -230,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.041,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "money",
@@ -241,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-19T20:44:11.876Z",
+      "captured_at": "2026-05-19T21:38:55.368Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
@@ -267,7 +267,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted pastel gray, threatening rain, while the air carries a chill that nudges jackets closer around shoulders.. Frustration simmers on the platforms as commuters shar"
+          "excerpt": "The sun breaks through a patchy veil of clouds, casting a warm golden hue over the bustling streets of Eixample.. Commuters are agitated on the platforms as delays mount due to the"
         },
         {
           "source_family": "public",
@@ -310,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.781
+        "freshness_score": 0.785
       }
     }
   ]
