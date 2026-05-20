@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-20T01:10:46.940Z",
+    "capturedAt": "2026-05-20T03:20:02.845Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 419
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-20T01:10:46.940Z",
-      "mood_score": 0.188,
-      "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-05-20T03:20:02.845Z",
+      "mood_score": 0.485,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 27,
         "review": 2,
@@ -82,30 +82,31 @@
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.036,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.905
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-20T01:10:46.940Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-05-20T03:20:02.845Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -120,6 +121,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "When you knew you were actually living here. Neukölln. When the sound of the late-night kebab shop's orders blended with the distant sirens. That's when I knew this chaos was home."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S3, S7: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -144,30 +153,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I have seldom U-lock brand: OnGuard (looks a bit like a Kryptonite knock-off, is a tad cheaper). My math is: big U-lock of a rare brand (most thieves know how to open the common br"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I've extensively researched bike locks and can say for sure yours is an easy target that would take maybe 15 sec to crack for professional. All you need is to push those pins out. "
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": 0.001,
+        "source_item_count": 125,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.904
+        "freshness_score": 0.908
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-20T01:10:46.940Z",
+      "captured_at": "2026-05-20T03:20:02.845Z",
       "mood_score": 0.412,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -228,21 +229,21 @@
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.023,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-20T01:10:46.940Z",
+      "captured_at": "2026-05-20T03:20:02.845Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 19,
@@ -265,7 +266,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a washed-out grey, with a light drizzle making the pavement glisten under the muted afternoon light.. The atmosphere at Sants station is thick with frustration, as commu"
+          "excerpt": "The sky is a muted grey, heavy with clouds that threaten rain, contrasting sharply with the vibrant colors of street art sprawled across the buildings.. With the train strikes affe"
         },
         {
           "source_family": "public",
@@ -305,10 +306,10 @@
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.785
+        "freshness_score": 0.79
       }
     }
   ]
