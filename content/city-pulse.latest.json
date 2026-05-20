@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-20T05:31:35.363Z",
+    "capturedAt": "2026-05-20T07:28:17.801Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-20T05:31:35.363Z",
-      "mood_score": 0.185,
+      "captured_at": "2026-05-20T07:28:17.801Z",
+      "mood_score": 0.186,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Terminals due to an earlier faulty train at Northfields."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -65,25 +73,17 @@
           "excerpt": "What they really want is to push out the less well off from the inner zones and onto the outskirts. Apparently people in Peckham should be happy that their area is now full of £500"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "18c100 coffees 200 days is 360 000 just for flat whites, and that’s profit so after all costs, and he likely mentioned the good on which he makes the least profit. Ok it means he c"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Charity urges balanced rent controls to tackle rising rents - Property118. Charity urges balanced rent controls to tackle rising rents"
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Part Suspended District Line: No service between Parsons Green and Wimbledon while we fix a signal failure at Wimbledon. GOOD SERVICE o"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.045,
+        "source_item_count": 94,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "money",
@@ -94,8 +94,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-20T05:31:35.363Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-05-20T07:28:17.801Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -158,22 +158,22 @@
       ],
       "metadata": {
         "source_item_count": 124,
-        "average_valence": 0.009,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-20T05:31:35.363Z",
-      "mood_score": 0.409,
+      "captured_at": "2026-05-20T07:28:17.801Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 62,
         "review": 2,
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 128,
-        "average_valence": -0.033,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-20T05:31:35.363Z",
+      "captured_at": "2026-05-20T07:28:17.801Z",
       "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -267,7 +267,7 @@
           "language": "en",
           "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The skies over Barcelona are a muted gray, with a chilly breeze making the late afternoon feel more like early spring than mid-February.. The usually bustling Plaça de Catalunya is"
+          "excerpt": "The sky is a washed-out gray, thick with clouds that threaten rain but haven't yet delivered on their promise.. The mood on the trains is tense, with disgruntled commuters exchangi"
         },
         {
           "source_family": "public",
@@ -307,10 +307,10 @@
         "average_valence": -0.003,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.796
+        "freshness_score": 0.8
       }
     }
   ]
