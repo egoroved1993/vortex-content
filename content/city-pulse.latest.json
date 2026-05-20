@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-20T21:41:08.318Z",
+    "capturedAt": "2026-05-20T22:37:58.956Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 444
+    "totalItems": 445
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-20T21:41:08.318Z",
+      "captured_at": "2026-05-20T22:37:58.956Z",
       "mood_score": 0.189,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 24,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction while we fix a track fault at Clapham Juncti"
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to an earlier faulty train at Gloucester Road."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Ealing Broadway/Richmond due to an earlier faulty train at Glouce"
         },
         {
           "source_family": "transport",
@@ -71,43 +79,35 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I ate 1.5 pizzas the night before I had surgery. Was on a fentanyl PCA pump post op. Didn't shit for over a week; pretty grim with that giant ball of dough sitting in my gut"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Whats good at a Turkish supermarket?. Just moved close to one and bought some eggplant bayildi in a can, which goes unreasonably hard for £2.15, and some rose tea which was weak an"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.032,
+        "source_item_count": 93,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-20T21:41:08.318Z",
-      "mood_score": 0.444,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-05-20T22:37:58.956Z",
+      "mood_score": 0.392,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S5: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,37 +140,37 @@
           "excerpt": "Hi! I know I'm a little late to this but thought I would ask anyway. When searching on the DB website for routes from Dachau to Nuremberg that are within the Deutschland-ticket it "
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Berlin will you find a döner kebab shop with a dance floor, packed with locals busting moves at 3 AM. It's a real Kreu"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Don't know about the whole team, but for one of the staff members it was easier to help me in English than German. Probably depends on the time you want to go there. I went there w"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding slate gray, with intermittent drizzle that makes the pavements glisten under the dim light.. With the rumble of buses replaced by the chatter of frustrated co"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.019,
+        "source_item_count": 127,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-20T21:41:08.318Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-20T22:37:58.956Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 125,
-        "average_valence": -0.006,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.904
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-20T21:41:08.318Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-20T22:37:58.956Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -297,14 +297,14 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of grey clouds, occasionally letting sunbeams pierce through, casting a hesitant warmth on the bustling streets.. Trains are running sporadically, and the at"
+          "excerpt": "An overcast sky hangs heavy, with an occasional drizzle that makes the cobblestones glisten and the air feel fresh yet chilly.. The mood at Plaça Catalunya is tense as commuters sh"
         }
       ],
       "metadata": {
         "source_item_count": 100,
-        "average_valence": -0.003,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
