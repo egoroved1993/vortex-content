@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-21T09:20:32.010Z",
+    "capturedAt": "2026-05-21T11:14:06.869Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 428
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-21T09:20:32.010Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-21T11:14:06.869Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1,
-          "excerpt": "Raucous celebrations erupt in North London as Arsenal seals Premier League title after 22-year wait - NBC News. Raucous celebrations erupt in North London as Arsenal seals Premier "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays while we fix a signal failure at Haggerston. London Underground and London Buses are accept"
         },
         {
           "source_family": "public",
@@ -54,6 +55,14 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I think for the UK you'll have to get out of London to find some nice country pubs with good food. Granted many will be shite but some are actually great."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "London tube strike confirmed after last-minute talks collapse, 4 days of disruption expected - The Times of India. London tube strike confirmed after last-minute talks collapse, 4 "
         },
         {
           "source_family": "news",
@@ -70,30 +79,22 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "The best things to do in London for the late May Bank Holiday - from the best music festivals in the city to food festivals - Secret London. The best things to do in London for the"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Charity urges balanced rent controls to tackle rising rents - Property118. Charity urges balanced rent controls to tackle rising rents"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.017,
+        "source_item_count": 92,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-21T09:20:32.010Z",
+      "captured_at": "2026-05-21T11:14:06.869Z",
       "mood_score": 0.399,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -103,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -120,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, S7: Delays 3 trips delayed"
+          "excerpt": "Berlin transit S5, S3, 248, RE7: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -139,25 +140,25 @@
           "excerpt": "M.Eng. Mechatronics & Robotics at Hochschule Schmalkalden – Part-time Jobs & Career Prospects?. Hey everyone, I recently got admitted to the M.Eng. Mechatronics & Robotics program "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray, with occasional sun peeking through, creating a moody ambiance that feels oddly reflective.. People are cautiously optimistic as buses and trams ret"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a slate gray, thick with impending rain, creating a damp chill that whispers of autumn's arrival.. After a week of strikes, the usually bustling U-Bahn platforms feel"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.004,
+        "source_item_count": 121,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "routine",
@@ -168,10 +169,10 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-21T09:20:32.010Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-21T11:14:06.869Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 54,
@@ -186,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni bus today where the driver tried to calm a guy yelling about pigeons stealing his snacks. Classic S.F. chaos on a Tues"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -225,25 +218,33 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "god help us if he does! he’s always saying stuff like “it’s not legal to increase the rent by that much,” or “you can’t evict people during a pandemic” or “you shouldn’t be allowed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I’m guessing OP you are a middle aged woman - there is something called “menopausal rage” where peri and menopausal women get super angry with declining estrogen. I have a big dog "
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.033,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.909
+        "freshness_score": 0.911
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-21T09:20:32.010Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-21T11:14:06.869Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 30,
@@ -296,20 +297,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun struggles to break through thick, grey clouds, casting a muted glow over the streets as a light drizzle begins to fall.. Train stations are buzzing with frustrated commuter"
+          "excerpt": "The sun peeks through a blanket of grey clouds, casting a silvery sheen on the wet pavement after a morning drizzle.. Rodalies stations buzz with frustrated commuters, their anxiou"
         }
       ],
       "metadata": {
         "source_item_count": 96,
-        "average_valence": -0.006,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "tourism"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.826
       }
     }
   ]
