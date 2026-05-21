@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-21T05:35:31.291Z",
+    "capturedAt": "2026-05-21T07:32:33.455Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 435
+    "totalItems": 436
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-21T05:35:31.291Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-05-21T07:32:33.455Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -33,7 +33,6 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -82,20 +81,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": 0.006,
+        "source_item_count": 86,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-21T05:35:31.291Z",
-      "mood_score": 0.401,
+      "captured_at": "2026-05-21T07:32:33.455Z",
+      "mood_score": 0.4,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +106,7 @@
         "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,12 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. When I walked past the kiosk and saw the owner arguing passionately about the latest BVG strike gossip over his coffee. That’"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 300, S9, S3: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
@@ -147,29 +147,29 @@
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Why are there so many Döner but so few Banh Mi shops in Germany?. I saw Döner Kebap and Dürüm shops everywhere, but very few Vietnamese Banh Mi shops. Why is that? Is it because Dö"
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a persistent drizzle that paints the streets in a glossy sheen, muffling the usual city sounds.. Despite the recent resumption of services, the moo"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": 0.002,
+        "source_item_count": 128,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.912
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-21T05:35:31.291Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-05-21T07:32:33.455Z",
+      "mood_score": 0.506,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -186,6 +186,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni bus today where the driver tried to calm a guy yelling about pigeons stealing his snacks. Classic S.F. chaos on a Tues"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -217,33 +225,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Steyer has shown us what kind of person he is. He wants to buy his way into political power. Went straight to the top without bothering to generate any grass roots movement. He ran"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Sadly Porter is the only viable candidate on the entire ballot. Becerra and Steyer are 68 (past the point where you'd expect cognitive decline). I don't know why anyone would vote "
         }
       ],
       "metadata": {
         "source_item_count": 124,
-        "average_valence": 0.02,
+        "average_valence": 0.017,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.914
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-21T05:35:31.291Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-21T07:32:33.455Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 32,
@@ -296,20 +296,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "A thick layer of clouds blankets Barcelona, weaving a chill that cuts through the vibrant colors of the street art.. The mood at the train stations is heavy, with frustrated commut"
+          "excerpt": "The sun casts a piercing light over the bustling streets, while a cool breeze carries the scent of fresh churros from a nearby café.. With the train strike in full swing, frustrate"
         }
       ],
       "metadata": {
         "source_item_count": 98,
-        "average_valence": -0.006,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "tourism",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.828
       }
     }
   ]
