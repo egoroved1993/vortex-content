@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-21T01:10:57.451Z",
+    "capturedAt": "2026-05-21T03:20:59.134Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,10 +21,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-21T01:10:57.451Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-05-21T03:20:59.134Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
@@ -45,7 +45,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1,
-          "excerpt": "North London goes wild after Arsenal crowned Premier League champions - ITVX. North London goes wild after Arsenal crowned Premier League champions Raucous celebrations erupt in No"
+          "excerpt": "Raucous celebrations erupt in North London as Arsenal seals Premier League title after 22-year wait - NBC News. Raucous celebrations erupt in North London as Arsenal seals Premier "
         },
         {
           "source_family": "public",
@@ -54,14 +54,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "When I go to hospital for appointments I will sometimes pick up a bottle or two of water, or a hot tea or coffee if it's cold out, and give it to someone sleeping rough or similar "
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Last night on the 59, a guy serenaded us with opera. The bus was packed but we all ended up clapping as we rolled past Effra Road."
         },
         {
           "source_family": "public",
@@ -78,34 +70,43 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I think it is because lots of people push tower blocks which are generally stupid and don't really create as much density cost more and fail on a whole lot of reasons. We need dens"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "Charity urges balanced rent controls to tackle rising rents - Property118. Charity urges balanced rent controls to tackle rising rents"
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.037,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-21T01:10:57.451Z",
-      "mood_score": 0.4,
+      "captured_at": "2026-05-21T03:20:59.134Z",
+      "mood_score": 0.397,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +114,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. When I walked past the kiosk and saw the owner arguing passionately about the latest BVG strike gossip over his coffee. That’"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -133,42 +150,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, hanging heavy with the promise of rain, while a sharp wind cuts through the streets.. After a tumultuous week, the mood in the buses is one of relief, a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Why are there so many Döner but so few Banh Mi shops in Germany?. I saw Döner Kebap and Dürüm shops everywhere, but very few Vietnamese Banh Mi shops. Why is that? Is it because Dö"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Oh yeah true also! I am just a bit pessimistic looking both at the shortages (demand) and high selling prices of current houses (refinancing through rent). But certainly hoping tha"
+          "excerpt": "The sky is a slate gray, heavy with the promise of rain, while a brisk wind swirls through the streets, carrying the scent of nearby bakeries and damp pavement.. The buses are runn"
         }
       ],
       "metadata": {
         "source_item_count": 126,
-        "average_valence": 0,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.903
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-21T01:10:57.451Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-21T03:20:59.134Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -194,14 +195,6 @@
           "excerpt": "My friend is moving out of a knob Hill apartment that he was paying 3100 for and now they're listing the apartment for 7000. Granted he moved in in 2021 so that was a bit of a lull"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know a local when they curse at the BART delays like it's an old friend let them down again, not a stranger's fau"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -224,11 +217,19 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Good moving company suggestions- LA to SF. So i'll be moving to SF in 2 months and i'm doing my research on budget friendly movers as i have spend so much money on furniture (i kno"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "What is middle class in Bay Area?. Read this on another sub-reddit: “You know $6M NW with house is middle class in SF Bay area though it might be a big amount converted to other pl"
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": 0.001,
+        "average_valence": 0.015,
         "dominant_themes": [
           "general",
           "transit",
@@ -239,8 +240,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-21T01:10:57.451Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-21T03:20:59.134Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -295,20 +296,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with the promise of rain that has yet to fall, creating a cool, damp atmosphere that hangs over the streets.. The tension is palpable at the train st"
+          "excerpt": "The morning air is a crisp 12°C, with overcast skies threatening rain but holding back for now.. The Rodalies stations are buzzing with a mix of frustration and resignation as comm"
         }
       ],
       "metadata": {
         "source_item_count": 98,
-        "average_valence": -0.003,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.827
       }
     }
   ]
