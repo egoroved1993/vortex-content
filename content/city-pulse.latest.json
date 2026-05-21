@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-21T21:38:45.574Z",
+    "capturedAt": "2026-05-21T22:36:31.075Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-21T21:38:45.574Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-21T22:36:31.075Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,29 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays anticlockwise while we fix a faulty train"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -73,32 +57,48 @@
           "excerpt": "Before the dating apps, which bars were spots where solo men and solo women in their early 30’s would go to meet people to date?. I live in SW, recently moved to London. I own an o"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Part Suspended District Line: No service between Parsons Green and Wimbledon while we fix a signal failure at Wimbledon Park. GOOD SERV"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Thousands of protesters take over Central London in march for rent controls and council housing - South West Londoner. Thousands of protesters take over Central London in march for"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "What are thunderstorms like in your part of the UK?. Was thinking to myself that I haven't experienced a proper good thunderstorm in my neck of the woods (North London) years. Mayb"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.027,
+        "source_item_count": 89,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-21T21:38:45.574Z",
-      "mood_score": 0.402,
+      "captured_at": "2026-05-21T22:36:31.075Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 6,
         "review": 2,
@@ -107,6 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,12 +124,20 @@
           "excerpt": "Utterly boring and contemptuous design. I think building on tempelhof can be done if: The design is good There is an exchange of serious political collateral in exchange A one off "
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.283,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of cloud hangs low, threatening rain, while a brisk wind rustles through the autumn leaves littering the sidewalks.. With the recent strike behind them, commuters a"
+          "excerpt": "The sky is a murky gray, with a light drizzle dampening the cobblestone streets and painting the city in a soft sheen.. With the recent strike lifted, the U-Bahn is abuzz with caut"
         },
         {
           "source_family": "public",
@@ -145,31 +154,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Beautiful Köpenick in the Early Morning | Spree | Fire Station. 11.07.2023, 05:36 Early in the morning, on the way to work (viewed from 'Am Krusenick') — the water was so still tha"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Accomodation for summer. Hii guys,i will be berlin from 22th june to 22th august.I was looking for accomodation that is cheapest.My budget is 400 euro.Do you have and house or advi"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": 0.006,
+        "source_item_count": 111,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-21T21:38:45.574Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-05-21T22:36:31.075Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -228,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": 0.016,
+        "source_item_count": 126,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "belonging",
           "transit"
         ],
-        "freshness_score": 0.904
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-21T21:38:45.574Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-21T22:36:31.075Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun spills golden light over the streets, but a crisp chill in the air reminds everyone that winter is still clinging on.. With the train strikes causing delays, commuters are "
+          "excerpt": "The sun is hidden behind a veil of thick clouds, creating a soft, diffused light that chills the air ever so slightly.. The platforms are noticeably less crowded, as the ongoing st"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.023,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.804
       }
     }
   ]
