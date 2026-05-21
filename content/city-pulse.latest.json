@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-21T20:44:38.974Z",
+    "capturedAt": "2026-05-21T21:38:45.574Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-21T20:44:38.974Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-21T21:38:45.574Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays anticlockwise while we fix a faulty train"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From Monday 12 January to Thursday 28 May, on Monday to Thursday evenings (including Bank Holidays, but n"
         },
         {
           "source_family": "public",
@@ -63,40 +79,24 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Thousands of protesters take over Central London in march for rent controls and council housing - South West Londoner. Thousands of protesters take over Central London in march for"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "News - Clarion revises development plans to deliver 100% social rent housing scheme - Inside Housing. News - Clarion revises development plans to deliver 100% social rent housing s"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What are thunderstorms like in your part of the UK?. Was thinking to myself that I haven't experienced a proper good thunderstorm in my neck of the woods (North London) years. Mayb"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.018,
+        "source_item_count": 92,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-21T20:44:38.974Z",
-      "mood_score": 0.398,
-      "mood_label": "low",
+      "captured_at": "2026-05-21T21:38:45.574Z",
+      "mood_score": 0.402,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -107,7 +107,6 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, S7, S5: Delays 3 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -132,20 +123,12 @@
           "excerpt": "Utterly boring and contemptuous design. I think building on tempelhof can be done if: The design is good There is an exchange of serious political collateral in exchange A one off "
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a heavy slate gray, threatening rain but oddly comforting as the cool air brushes against the skin.. With the recent BVG strike finally lifted, commuters are cautious"
+          "excerpt": "A thick blanket of cloud hangs low, threatening rain, while a brisk wind rustles through the autumn leaves littering the sidewalks.. With the recent strike behind them, commuters a"
         },
         {
           "source_family": "public",
@@ -154,23 +137,39 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Why are there so many Döner but so few Banh Mi shops in Germany?. I saw Döner Kebap and Dürüm shops everywhere, but very few Vietnamese Banh Mi shops. Why is that? Is it because Dö"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Beautiful Köpenick in the Early Morning | Spree | Fire Station. 11.07.2023, 05:36 Early in the morning, on the way to work (viewed from 'Am Krusenick') — the water was so still tha"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Accomodation for summer. Hii guys,i will be berlin from 22th june to 22th august.I was looking for accomodation that is cheapest.My budget is 400 euro.Do you have and house or advi"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.005,
+        "source_item_count": 110,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-21T20:44:38.974Z",
-      "mood_score": 0.509,
+      "captured_at": "2026-05-21T21:38:45.574Z",
+      "mood_score": 0.506,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -220,17 +219,17 @@
           "excerpt": "Mold lawyer recommendations. Sleazy landlord never responded to our multiple requests to remediate mold, leaving my partner and myself without a home for 2 months. We ended up just"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "To protect and swerve. To be fair, CHP just has a different understanding of what a protected bike lane means. /s That was yesterday at 5:30pm in front of Valencia and 17th police "
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can spot a true local when they confidently navigate the BART delays and still manage to grab a burrito "
         }
       ],
       "metadata": {
         "source_item_count": 125,
-        "average_valence": 0.026,
+        "average_valence": 0.016,
         "dominant_themes": [
           "general",
           "belonging",
@@ -241,10 +240,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-21T20:44:38.974Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-21T21:38:45.574Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
@@ -281,9 +280,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun casts a warm golden hue on the streets, while a brisk wind dances through the narrow alleys, carrying the scent of fresh bread from nearby bakeries.. A palpable t"
+          "excerpt": "The sun spills golden light over the streets, but a crisp chill in the air reminds everyone that winter is still clinging on.. With the train strikes causing delays, commuters are "
         },
         {
           "source_family": "public",
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.019,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.81
       }
     }
   ]
