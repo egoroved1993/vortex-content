@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-22T15:12:08.634Z",
+    "capturedAt": "2026-05-22T16:53:53.190Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 444
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-22T15:12:08.634Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-05-22T16:53:53.190Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Edgware and Camden Town and SEVERE DELAYS on the rest of the line due to a points fail"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Whitechapel and Shenfield while we fix a fault with the signalling system at Seven Kings. London U"
         },
         {
           "source_family": "transport",
@@ -70,37 +70,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Suspended Northern Line: No service between Edgware and Camden Town and SEVERE DELAYS on the rest of the line due to a points fail"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Baker Street while we fix a points failure at Baker Stree"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "lol what a completely rose-tinted view of his time as mayor. He's been absolutely terrible, for the economy, for crime (knife crime, phone theft, 24% more homicides since he became"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.075,
+        "source_item_count": 104,
+        "average_valence": -0.062,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.904
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-22T15:12:08.634Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-22T16:53:53.190Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,23 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2, 248, RE1: Delays 3 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "because there arent many places in berlin where you get \"great\". and sometimes i dont want to travel for 30-45min just to eat doner. so good is great."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Which then also caused locals to go elsewhere, because no matter if you think they’re the best, the queue is not worth it compared to another kebab which might not be just as good "
+          "excerpt": "Berlin transit RE7, 248: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -148,34 +132,50 @@
           "excerpt": "Also a pretty hyped place nowadays but I think Nefis (both the Hermannplatz and Kotti locations) are pretty good and there’s never a queue in my experience"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Based on the absolutely horrendous tourist trap ones I've had in Berlin id say it's the absolute worst quality sausage with grainy curry powder sprinkled on top with a drizzle of k"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": 0.001,
+        "source_item_count": 126,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "events",
           "money"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-22T15:12:08.634Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-22T16:53:53.190Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 45,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,36 +188,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a dinosaur costume on the 49 bus, totally unphased by the chaos around him. Just another day in the Tenderloin, I guess"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I grew up with Eric & he was not violent at all & was sweet, playful & one the most hilarious people I've ever known. That photo is late 80s, early 90s, just being a goofball. RIP"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I did the SF → LA move recently and honestly Reddit reviews were way more useful than Google 😅 Biggest lesson: the cheapest quote usually ends up costing more because of random ex"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "This! When I got laid off from Microsoft it was so shocking to learn that the UBI max was less than rent in the Bay Area…"
+          "excerpt": "how late can you like take the bart and walk back safely? I don't have a car so that's ok"
         },
         {
           "source_family": "public",
@@ -226,28 +202,52 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "State of car break-ins. Hi San Franciscans! I live in the peninsula and will be coming to SF around 8 pm on a weekday for a date! My car has been broken in twice in the past - last"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "19th Avenue Closure 5/23. I need to drop someone off at SFO Saturday morning for a 11:30 AM flight, coming from the Outer Richmond. Any thoughts on how early I should leave/best al"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "To protect and swerve. To be fair, CHP just has a different understanding of what a protected bike lane means. /s That was yesterday at 5:30pm in front of Valencia and 17th police "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Banh Mi Op La. I used to get a breakfast banh mi at Lee's Sandwiches that consisted of pate and a perfectly-cooked over easy fried egg. It was an absolute hangover buster. Does any"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.018,
+        "source_item_count": 124,
+        "average_valence": 0.024,
         "dominant_themes": [
           "general",
-          "belonging",
-          "transit"
+          "transit",
+          "weather"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-22T15:12:08.634Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-22T16:53:53.190Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 23,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -281,9 +281,17 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, promising rain, and the air is brisk with a hint of salt from the nearby sea.. The platforms at Plaça de Catalunya are unusually crowded as com"
+          "excerpt": "A cool breeze carries the scent of rain-soaked pavement, hinting at yesterday's showers but now the sun peeks through the clouds.. The mood on the platforms is tense, with commuter"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
         },
         {
           "source_family": "public",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Barsalona ha dit basta. No mes soroll No mes discoteques al casc antic No mes turisme massive No mes inmigració irregular Voteu Signar Per la millora del barri i de la ciutat Per c"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Buscando amigas :). Hola! Me mudo en unos meses al Maresme y aunque soy de allí hace años que vivo por esa zona. Quiero hacer amigas por la zona o Barcelona para hacer planes, toma"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.022,
+        "source_item_count": 90,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.804
       }
     }
   ]
