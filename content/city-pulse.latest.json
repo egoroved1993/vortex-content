@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-22T01:09:25.212Z",
+    "capturedAt": "2026-05-22T03:20:33.770Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 424
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-22T01:09:25.212Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-05-22T03:20:33.770Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -82,19 +82,19 @@
       ],
       "metadata": {
         "source_item_count": 95,
-        "average_valence": -0.006,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-22T01:09:25.212Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-22T03:20:33.770Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -103,9 +103,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -113,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1, 200: Delays 2 trips delayed"
+        },
         {
           "source_family": "forum",
           "source_origin": "local_forum",
@@ -133,9 +142,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a dull gray, with a persistent drizzle creating a shimmer on the cobblestones of Mitte.. After a week of disruption, the mood on the Berlin U-Bahn is cautious yet reliev"
+          "excerpt": "A gray cloud blanket hangs low, threatening rain but holding back, the humidity wrapping around the streets like a restless ghost.. With most buses and trams back in service, the a"
         },
         {
           "source_family": "public",
@@ -144,33 +153,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Why are there so many Döner but so few Banh Mi shops in Germany?. I saw Döner Kebap and Dürüm shops everywhere, but very few Vietnamese Banh Mi shops. Why is that? Is it because Dö"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "As an American who's spent a lot of time in various European countries and lived in Germany for 6 years: yes."
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.011,
+        "source_item_count": 111,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-22T01:09:25.212Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-22T03:20:33.770Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 59,
@@ -228,19 +229,19 @@
       ],
       "metadata": {
         "source_item_count": 125,
-        "average_valence": -0.018,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "belonging",
-          "money"
+          "transit"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-22T01:09:25.212Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-22T03:20:33.770Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -279,9 +280,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of grey clouds hangs low over the city, hinting at a possibility of rain that feels oppressive yet familiar.. The normally bustling platforms of Plaça Catalunya are"
+          "excerpt": "The sun peeks through a thin veil of clouds, casting a warm glow on the cobblestone streets of El Born.. People are anxiously checking their phones at the train stations, the air t"
         },
         {
           "source_family": "public",
@@ -302,7 +303,7 @@
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.022,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "tourism",
