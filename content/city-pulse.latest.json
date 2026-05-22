@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-22T03:20:33.770Z",
+    "capturedAt": "2026-05-22T05:31:39.633Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-22T03:20:33.770Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-22T05:31:39.633Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 35,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Leytonstone eastbound only following a late finish of engineering work"
+        },
+        {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Before the dating apps, which bars were spots where solo men and solo women in their early 30’s would go to meet people to date?. I live in SW, recently moved to London. I own an o"
+          "excerpt": "I legitimately see it every day I travel on the tube. Often work late and into the evenings it's rampant. Especially at places like London Bridge where they just open the gates."
         },
         {
           "source_family": "public",
@@ -61,7 +70,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It a partly behavioural as well. We don’t do anything differently even when it gets to 35. We just stoically plough on as normal. If you slow down, wear as suitable clothing as pos"
+          "excerpt": "I have a terrible fear of dentists too, and tend to never go until ii am im real pain, so typically only go every few years. I recently went to one called Happy smiles who are in W"
         },
         {
           "source_family": "news",
@@ -70,43 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Thousands of protesters take over Central London in march for rent controls and council housing - South West Londoner. Thousands of protesters take over Central London in march for"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "News - Clarion revises development plans to deliver 100% social rent housing scheme - Inside Housing. News - Clarion revises development plans to deliver 100% social rent housing s"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.012,
+        "source_item_count": 104,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-22T03:20:33.770Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-22T05:31:39.633Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -120,15 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1, 200: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. In Kreuzberg, you can catch a bus driver singing karaoke over the intercom during a strike. Only here do the delays come with "
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -139,12 +132,20 @@
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "A gray cloud blanket hangs low, threatening rain but holding back, the humidity wrapping around the streets like a restless ghost.. With most buses and trams back in service, the a"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Why are there so many Döner but so few Banh Mi shops in Germany?. I saw Döner Kebap and Dürüm shops everywhere, but very few Vietnamese Banh Mi shops. Why is that? Is it because Dö"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "As an American who's spent a lot of time in various European countries and lived in Germany for 6 years: yes."
         },
         {
           "source_family": "public",
@@ -152,29 +153,29 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Why are there so many Döner but so few Banh Mi shops in Germany?. I saw Döner Kebap and Dürüm shops everywhere, but very few Vietnamese Banh Mi shops. Why is that? Is it because Dö"
+          "excerpt": "World Goth Day!. Berlin, May 22 is world goth day! It’s a Friday this year, how are we marking the occasion?"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.015,
+        "source_item_count": 113,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-22T03:20:33.770Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-22T05:31:39.633Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 59,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -190,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Well, I am a major transit enthusiast, supporter of urbanism and beautiful infrastructure, hate any kind of area that is car-dependent (SF seems like a very walkable city, so that "
+          "excerpt": "Mass layoffs are distributed across the US not solely focused on the Bay Area. People aren't moving away. Rent and housing is only getting more expensive."
         },
         {
           "source_family": "public",
@@ -200,53 +201,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I believe the minimum age to rent a car in CA is 21. But you'll have to check with each rental car company to confirm."
+          "excerpt": "Rent an Airbnb and apartment hunt… yesterday. It’s super competitive right now. Also driving from South Bay to the city is hell on earth if you’re goal is to be in the city. You al"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The standard in the US is you must be 25 to rent a car. You can rent at 21 by paying an extra $25-$50/day. Your best bet is to stick to Uber."
+          "excerpt": "State of car break-ins. Hi San Franciscans! I live in the peninsula and will be coming to SF around 8 pm on a weekday for a date! My car has been broken in twice in the past - last"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Check to see if your employer is part of any program. Some employer programs allow employees to rent without paying a surcharge under the age of 21. I think Budget will actually re"
+          "excerpt": "Mold lawyer recommendations. Sleazy landlord never responded to our multiple requests to remediate mold, leaving my partner and myself without a home for 2 months. We ended up just"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "i think you need to check if your drivers license is enough for driving in the us, if not get IDP. and you’ll need a credit card in your name. you can rent a car if you’re under 25"
+          "excerpt": "19th Avenue Closure 5/23. I need to drop someone off at SFO Saturday morning for a 11:30 AM flight, coming from the Outer Richmond. Any thoughts on how early I should leave/best al"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.025,
+        "source_item_count": 118,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "belonging",
+          "money",
           "transit"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-22T03:20:33.770Z",
+      "captured_at": "2026-05-22T05:31:39.633Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 27,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -277,14 +278,6 @@
           "excerpt": "Any digital nomad in Barcelona want to rent a room or couch to me for five days this week ? Passing through and don’t want to stay in hostel. Hey and hola :-) women from the Americ"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sun peeks through a thin veil of clouds, casting a warm glow on the cobblestone streets of El Born.. People are anxiously checking their phones at the train stations, the air t"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
@@ -294,22 +287,30 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
+          "source_origin": "reddit_post",
+          "language": "es",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "No m'agrada. El rework que necessitem és mental. El que s'ha dindependitzar és el país, no inventar-nos 4 paraules per fer ballar la troca"
+          "excerpt": "Buscando amigas :). Hola! Me mudo en unos meses al Maresme y aunque soy de allí hace años que vivo por esa zona. Quiero hacer amigas por la zona o Barcelona para hacer planes, toma"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "No not visa but for career paths. For example, I knew an Italian native speaker who was mostly fluent in Spanish but couldn't get a higher paying admin role in Barcelona because fl"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.018,
+        "source_item_count": 95,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "tourism",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.81
       }
     }
   ]
