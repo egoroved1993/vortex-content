@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-23T10:37:37.766Z",
+    "capturedAt": "2026-05-23T11:32:48.727Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 412
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-23T10:37:37.766Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-05-23T11:32:48.727Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 17,
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Hyde Park Corner and Northfields/Uxbridge due to planned engineering works. SEVERE D"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.027,
+        "source_item_count": 89,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-23T10:37:37.766Z",
-      "mood_score": 0.454,
+      "captured_at": "2026-05-23T11:32:48.727Z",
+      "mood_score": 0.456,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S5, 100: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,12 +140,12 @@
           "excerpt": "They totally lost the appeal by moving in the new glass shop! now it look like any other doner shop..first time I saw last week no long que and I am sure they will move back to Tra"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a gray canvas, but the autumn chill is sharp enough that it snaps your fingers awake as the wind bites through your coat.. With the BVG strike now over, the U-Bahn is cr"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "news",
@@ -153,26 +153,26 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.017,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "belonging"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-23T10:37:37.766Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-23T11:32:48.727Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 54,
@@ -230,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.03,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "money",
-          "routine"
+          "routine",
+          "money"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-23T10:37:37.766Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-23T11:32:48.727Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -278,12 +278,20 @@
           "excerpt": "Porque los guiris están jodiendo la vida a la gente por culpa del alquiler. Normalmente el salario medio en espelta suele ser de unos 1300€ al mes y un alquiler promedio en Barcelo"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all the street fiestas are planned—most just erupt spontaneously, fueled by a few tinto de verano and good vibes"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun pierces through a thin veil of clouds, casting a warm glow over the bustling streets of Eixample.. The air is thick with impatience as commuters navigate crowded platforms,"
+          "excerpt": "The sky is a patchwork of silver clouds, occasionally pierced by weak sunlight that struggles to warm the chilly air, hinting at spring yet feeling like winter's last stand.. The a"
         },
         {
           "source_family": "public",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Barsalona ha dit basta. No mes soroll No mes discoteques al casc antic No mes turisme massive No mes inmigració irregular Voteu Signar Per la millora del barri i de la ciutat Per c"
         }
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.021,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.788
+        "freshness_score": 0.787
       }
     }
   ]
