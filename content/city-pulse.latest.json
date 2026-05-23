@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-23T01:06:02.415Z",
+    "capturedAt": "2026-05-23T03:17:26.158Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 399
+    "totalItems": 401
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-23T01:06:02.415Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-05-23T03:17:26.158Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 23 May, between 0200 and 0430, no service between Hyde Park Corner and Heathrow Terminal 5. Re"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -71,33 +79,25 @@
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "Thousands of protesters take over Central London in march for rent controls and council housing - South West Londoner. Thousands of protesters take over Central London in march for"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Private rent and house prices, UK: May 2026 - Office for National Statistics. Private rent and house prices, UK: May 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 80,
-        "average_valence": -0.045,
+        "source_item_count": 81,
+        "average_valence": -0.06,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-23T01:06:02.415Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-23T03:17:26.158Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 15,
@@ -107,6 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,12 +124,12 @@
           "excerpt": "If you are renting, you have to ask your landlord first. Just copying a key is a breach of contract. And they will probably have someone in mind to go to."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A crisp, overcast morning blankets the city, with the faint scent of rain lingering in the air.. The atmosphere at the bus stops is tense, with commuters eyeing the clock anxiously"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. I knew I was really here when I saw a group of kids using a broken bench as a stage for their rap battle, effortlessly blendi"
         },
         {
           "source_family": "news",
@@ -147,29 +148,29 @@
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "People say \"they don't care\" but I've never seen any place that will copy proper security keys, I think in many cases it's because you would need equipment much in excess of what w"
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A damp chill hangs in the air, with scattered clouds casting fleeting shadows on the cobblestone streets of Kreuzberg.. The mood on public transport is tense and quiet, with many c"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.018,
+        "source_item_count": 120,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-23T01:06:02.415Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-05-23T03:17:26.158Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": -0.036,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "money",
@@ -240,8 +241,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-23T01:06:02.415Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-23T03:17:26.158Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -260,14 +261,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often assume the noise in Gràcia is just party vibes. They don’t realize it’s also the sound of artisans working late "
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -288,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun is casting sharp shadows as clouds linger like scattered thoughts above the city.. Commuters are visibly frustrated at the station, glancing at their watches as delays pile"
+          "excerpt": "A hazy sunshine blankets the city, casting a warm glow on the cobblestone streets while a cool breeze sweeps through the narrow alleys.. The usually bustling Plaça de Catalunya ech"
         },
         {
           "source_family": "public",
@@ -299,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Barsalona ha dit basta. No mes soroll No mes discoteques al casc antic No mes turisme massive No mes inmigració irregular Voteu Signar Per la millora del barri i de la ciutat Per c"
         }
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.027,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.792
+        "freshness_score": 0.794
       }
     }
   ]
