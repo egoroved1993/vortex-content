@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-23T15:31:59.813Z",
+    "capturedAt": "2026-05-23T16:28:29.020Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 408
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-23T15:31:59.813Z",
-      "mood_score": 0.43,
+      "captured_at": "2026-05-23T16:28:29.020Z",
+      "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Yesterday was so beautiful. Not from London, but came up on a day trip yesterday. Train chaos aside, it was such a beautiful day. I visited the Sea Life Aquarium, and on my way out"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,36 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 23 May, from 0430 and all day Sunday 24 and Bank Holiday Monday 25 May, including Saturday Nig"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.089,
+        "source_item_count": 91,
+        "average_valence": -0.118,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-23T15:31:59.813Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-23T16:28:29.020Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S3, 200, RE1, S5, 300: Delays 9 trips delayed"
+          "excerpt": "Berlin transit S9, 200, U5, U2, RE7: Delays 8 trips delayed"
         },
         {
           "source_family": "public",
@@ -130,6 +130,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Fads come and go. Just the same as Curry 36 before. Not that they were bad, I was there a couple of times, late at night, because they were open 24h and their Currywurst was really"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "what have people opposing new market-rate housing to do with my comment? where did I said we shouldn't build houses? All I'm saying is that all the houses are owned by 2/3 private "
         },
         {
           "source_family": "public",
@@ -146,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.015,
+        "source_item_count": 121,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-23T15:31:59.813Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-05-23T16:28:29.020Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 43,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "As a Bay Area native I also got tired of the 3 months upfront rent to move. Moved to sac a few years ago and found that almost no one is looking for 3 months up front - it’s usuall"
+          "excerpt": "\"I am only the master tenant because it allows me to keep my rent the same.\" Translation: you subsidize your cheap rent by charging the other tenants when the rent goes up and then"
         },
         {
           "source_family": "public",
@@ -201,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yes ofcourse. Everyone is different, but yeah sometimes it hurts to be generalized . Hence the dating apps are just horrible imo. I have tried them ,I never got any matches . I am "
+          "excerpt": "We were about to rent a U Haul for the day and start loading stuff into it then just bring it right back …"
         },
         {
           "source_family": "public",
@@ -217,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I spent my 20s in SF and recently moved to Virginia. It sucks. I can’t believe people live here. I hate it so much. It is expensive but a ton of people make it work even though it’"
+          "excerpt": "I’m the only one on the lease with my landlord. When I moved in w 2 other girls we got covid rent and they moved out but for me to keep it I stayed on the same lease"
         },
         {
           "source_family": "public",
@@ -225,29 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "the Mission district gonna be packed but worth it if you can deal with crowds. parking is nightmare though so maybe take bart instead"
+          "excerpt": "I so envy you folks these days. No BART to the airport when I was flying in and out in the 90s. Cabs only or that shuttle that crammed in folks and was usually late for the flight "
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.047,
+        "source_item_count": 109,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-23T15:31:59.813Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-23T16:28:29.020Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -278,14 +278,6 @@
           "excerpt": "Porque los guiris están jodiendo la vida a la gente por culpa del alquiler. Normalmente el salario medio en espelta suele ser de unos 1300€ al mes y un alquiler promedio en Barcelo"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the clouds, casting a golden hue over the mosaic of rooftops while a cool breeze stirs through the narrow streets.. The platforms are buzzing with frustrated"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Barsalona ha dit basta. No mes soroll No mes discoteques al casc antic No mes turisme massive No mes inmigració irregular Voteu Signar Per la millora del barri i de la ciutat Per c"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.024,
+        "source_item_count": 85,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.787
+        "freshness_score": 0.785
       }
     }
   ]
