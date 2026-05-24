@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T09:46:31.368Z",
+    "capturedAt": "2026-05-24T10:40:09.708Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 428
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T09:46:31.368Z",
-      "mood_score": 0.389,
+      "captured_at": "2026-05-24T10:40:09.708Z",
+      "mood_score": 0.392,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -46,15 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's Park and Elephant & Castle due to an earlier faulty train at Paddington. GOO"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -79,26 +71,34 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 23 May, from 0430 and all day Sunday 24 and Bank Holiday Monday 25 May, including Saturday Nig"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.091,
+        "source_item_count": 98,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T09:46:31.368Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-24T10:40:09.708Z",
+      "mood_score": 0.414,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 19,
         "review": 2,
@@ -132,6 +132,14 @@
           "excerpt": "This is probably why. Same thing happened in my hof last year: the bird parents got upset and very noisy because a raccoon spent an afternoon munching the contents of their nest."
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you hop on a tram, but if it’s a strike day, just grab a paddle board and take to the Spree for your c"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -146,31 +154,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "That new style is what we have in Turkey. You have two options red meat or white meat aka chicken. AFAIK chicken döner became popular after the 90s because it was cheaper than red "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
         "source_item_count": 125,
-        "average_valence": -0.01,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "money"
         ],
         "freshness_score": 0.89
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T09:46:31.368Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-05-24T10:40:09.708Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -212,12 +212,12 @@
           "excerpt": "It closed after Covid. The holdup is that the building is owned by the National Park Service. They don't seem to be in a hurry to rent it out, I heard there were talks 2 years ago "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they casually mention how the BART delays altered their dinner plans, not just their co"
+          "excerpt": "i honestly believe the people who say it's very disruptive are also the kind of people who refuse to change their habits and go to a different part of the park than they normally g"
         },
         {
           "source_family": "public",
@@ -225,12 +225,12 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "i honestly believe the people who say it's very disruptive are also the kind of people who refuse to change their habits and go to a different part of the park than they normally g"
+          "excerpt": "There's a takeout sushi place on Geary near 17th that opened after I lived in the area but I've heard good things about. It's called Hokkaido Sashimi Marketplace, if you are into s"
         }
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": -0.032,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
@@ -241,8 +241,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T09:46:31.368Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-24T10:40:09.708Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -281,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun is peeking through the clouds, casting warm golden patches on the bustling streets, while a slight chill lingers in the air.. Commuters at the Plaça de Catalunya station ar"
+          "excerpt": "The sun pierces through a thin layer of clouds, bathing the bustling streets of Barcelona in a warm, golden glow that hints at spring's approach.. Commuters crowd the platforms as "
         },
         {
           "source_family": "public",
@@ -304,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.018,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "tourism",
