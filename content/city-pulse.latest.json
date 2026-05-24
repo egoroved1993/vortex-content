@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T19:35:36.244Z",
+    "capturedAt": "2026-05-24T20:28:12.987Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 430
+    "totalItems": 449
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T19:35:36.244Z",
-      "mood_score": 0.38,
+      "captured_at": "2026-05-24T20:28:12.987Z",
+      "mood_score": 0.384,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -40,6 +40,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "If you commute into a big city (especially London) how do you pay?. I am currently job-hunting. A good chunk of jobs are in London (tottenham court road/paddington/whitecity). Look"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,42 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Watford due to train cancellations. After the 19:53 the"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.119,
+        "source_item_count": 107,
+        "average_valence": -0.107,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T19:35:36.244Z",
+      "captured_at": "2026-05-24T20:28:12.987Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U5, S7: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -128,15 +137,15 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "The RE1 goes there, then a quick bus over the border. They shelter arranges the EU passport, microchips and the cats are already vaccinated and castrated. Our experience was so pos"
+          "excerpt": "I mean it isn’t on all the time, and it’s off pretty much all summer. I’d average out +10€/m in electricity if that. I breath so much easier in winter and never had mold again - th"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The skies above Berlin are a mottled gray, with a cool breeze nudging fallen leaves across cobblestone streets.. After a long night of strikes, commuters seem cautiously optimistic"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "The RE1 goes there, then a quick bus over the border. They shelter arranges the EU passport, microchips and the cats are already vaccinated and castrated. Our experience was so pos"
         },
         {
           "source_family": "news",
@@ -145,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": 0,
+        "source_item_count": 121,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T19:35:36.244Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-05-24T20:28:12.987Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 69,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,66 +188,66 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yes I don't rent and I'm under the age of 35 and not in the tech field."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I vaguely remember a band of that name that were thought to be a local band off and on and they were attempting to be multimedia. My memory isn't reliable though, because there was"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Depends on where you are in Nob Hill. I used to rent the monthly parking at Masonic garage when I lived on Jackson and Jones. It’s a short trek but with a small hill. I believe the"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I’ve lived in the trinity buildings (8th and mission) for 2 years now. Modern, has a gym, walking distance to a lot of the city and right next to BART. Only downside is that it’s i"
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy playing classical guitar on the 19 bus, while a toddler danced next to him. Muni magic, even amidst the chaos of delays."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s a local when they can name the BART delays before the alerts pop up. Can't miss that signature gru"
+          "excerpt": "How did more density make NYC cheaper?. I always hear \"let's Manhattanize SF\" which is an ironic term because Manhattan rents and housing prices are literally more expensive than S"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The key is pricing dictated by rent boards. We don’t have that in any way. San Francisco also has some weird workarounds depending on age, how many dwellings on a unit, single fami"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I’m in my late 50s and have never been held back because of not having a college degree. The founder at my current company doesn’t not have a college degree. I think it works for s"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Community darkroom/photo scene in sf. Hi! I’m a college student studying photo and I’ll be in sf for a month this June. I’m looking to continue my practice and hopefully get involv"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.046,
+        "source_item_count": 134,
+        "average_valence": -0.064,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T19:35:36.244Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-24T20:28:12.987Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -260,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Sure, but you're not going to reverse decades of economics overnight. The authorities of Barcelona can't control macroeconomics, but they can influence the rent situation. What sho"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -280,36 +289,28 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs high but a chill breeze whispers through the streets, hinting that winter isn’t quite done with us yet.. The usual cadence of commuters is broken, with frustrated fac"
+          "excerpt": "The sun is casting a warm, golden hue over the cobblestone streets, while a brisk wind carries whispers of sea salt from the nearby beach.. Commuters on the metro seem anxious and "
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0,
+          "valence": -0.075,
           "recency_weight": 1.04,
-          "excerpt": "Thank you barcelona ❤️. Our family spent 4 nights enjoying your city's beauty, energy, delicious food and people's hospitality. We visited the major attractions and toured the coun"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
+          "excerpt": "But those taxes wouldn't go into the pockets of people with lower incomes, so how would that help? A renovated apartment they can never afford is of no benefit. Anyway if the landl"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.026,
+        "source_item_count": 87,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.779
+        "freshness_score": 0.791
       }
     }
   ]
