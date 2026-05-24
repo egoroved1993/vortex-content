@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T11:35:43.981Z",
+    "capturedAt": "2026-05-24T12:35:48.284Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 430
+    "totalItems": 437
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T11:35:43.981Z",
-      "mood_score": 0.391,
+      "captured_at": "2026-05-24T12:35:48.284Z",
+      "mood_score": 0.379,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 39,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "In a lot of cases you need to be both. Even being in the 40% tax bracket trying to rent + save up for a deposit means you are forced to live on a few hundred pound a month in the m"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "It’s a buyers market now too, while recent sales have lost some of the resale value sellers might have hoped for, generally they’re still making a bit of money, beating inflation, "
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays between Stanmore and Finchley Road due to train cancellations. Tickets will be accepted on l"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to train cancellations. London Buses are accepting ticket via any reasonable route."
         },
         {
           "source_family": "transport",
@@ -70,44 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Severe delays between Stanmore and Finchley Road due to train cancellations. Tickets will be accepted on l"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge due to train cancellations. Minor delays between"
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to train cancellations. London Underground are accepting tickets via any reasonable rout"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.086,
+        "source_item_count": 115,
+        "average_valence": -0.12,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T11:35:43.981Z",
-      "mood_score": 0.413,
+      "captured_at": "2026-05-24T12:35:48.284Z",
+      "mood_score": 0.419,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -119,33 +119,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "you are liable for the rent : UNLESS - The landlord finds someone to move in within that period. Legally a landlord cannot collect double income. So if you move out end of June and"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5, 200: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This is probably why. Same thing happened in my hof last year: the bird parents got upset and very noisy because a raccoon spent an afternoon munching the contents of their nest."
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you hop on a tram, but if it’s a strike day, just grab a paddle board and take to the Spree for your c"
+          "excerpt": "The rental housing industry is not particularly concentrated. Here I compared it with the grocery industry and found that one estimate of market consolidation put the Berlin housin"
         },
         {
           "source_family": "public",
@@ -154,28 +130,52 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Olympiastadion view. Hello everyone, I am going to Bruno Mars concert in June and got a ticket in Block 24area (the most back row) From the seating map it doesn't look very promisi"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. I realized I was home when I saw the same Turkish grandmother making gözleme every Sunday at the market, always with a smile "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.022,
+        "source_item_count": 121,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "events",
           "belonging"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T11:35:43.981Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-24T12:35:48.284Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 55,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "E Biking in sf. Can u guys tell me the cheapest best way to get around the city on an e-bike? Is it Lyft, divvy or a bike shop? I want to rent it for a full day . Thank you"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -209,42 +201,50 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It closed after Covid. The holdup is that the building is owned by the National Park Service. They don't seem to be in a hurry to rent it out, I heard there were talks 2 years ago "
+          "excerpt": "Did anyone say otherwise? It's older housing that needs to compete on price when lots of new housing is built. New Housing Slows Rent Growth Most for Older, More Affordable Units \""
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.56,
+          "excerpt": "Waymos blocked roads and caused chaos during San Francisco power outage - NBC Bay Area. Waymos blocked roads and caused chaos during San Francisco power outage"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "i honestly believe the people who say it's very disruptive are also the kind of people who refuse to change their habits and go to a different part of the park than they normally g"
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "There's a takeout sushi place on Geary near 17th that opened after I lived in the area but I've heard good things about. It's called Hokkaido Sashimi Marketplace, if you are into s"
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The Best Late Night Restaurants In San Francisco - The Infatuation. The Best Late Night Restaurants In San Francisco"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.024,
+        "source_item_count": 118,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
-          "routine",
-          "belonging"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T11:35:43.981Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-24T12:35:48.284Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 17,
@@ -281,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.72,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, reflecting the somber mood of the day.. Commuters are packed tightly on the platforms as rumors of train delays swirl"
+          "excerpt": "The sun pierces through scattered clouds, casting a warm golden hue over the bustling streets of Barcelona.. Trains at Plaça de Catalunya are operating at reduced capacity, with co"
         },
         {
           "source_family": "public",
@@ -304,11 +304,11 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.027,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
         "freshness_score": 0.781
       }
