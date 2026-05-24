@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T07:18:35.746Z",
+    "capturedAt": "2026-05-24T09:01:58.254Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T07:18:35.746Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-05-24T09:01:58.254Z",
+      "mood_score": 0.392,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Yesterday was so beautiful. Not from London, but came up on a day trip yesterday. Train chaos aside, it was such a beautiful day. I visited the Sea Life Aquarium, and on my way out"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: No service between Northolt and West Ruislip while we fix a faulty train at Ruislip Gardens. MINOR DELAYS"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Part Suspended Central Line: No service between Northolt and West Ruislip while we fix a faulty train at Ruislip Gardens. MINOR DELAYS"
         },
         {
           "source_family": "transport",
@@ -62,52 +70,44 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 23 May, from 0430 and all day Sunday 24 and Bank Holiday Monday 25 May, including Saturday Nig"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Hyde Park Corner and Northfields/Uxbridge due to planned engineering work. SEVERE DE"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.075,
+        "source_item_count": 98,
+        "average_valence": -0.083,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T07:18:35.746Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-24T09:01:58.254Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 14,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "you are liable for the rent : UNLESS - The landlord finds someone to move in within that period. Legally a landlord cannot collect double income. So if you move out end of June and"
         },
         {
           "source_family": "public",
@@ -129,23 +129,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Hey, if i were you i would move out of the apartement and rent it to the first random redditor that proposes to take over ( i'm interested btw if you want to rent it out )"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Chill. They won't eat you over the weekend. Keep the baathroom door shut. (Maybe put a rolled towel for extra protection.) Call your landlord on Tuesday."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Funny how you think reddit is a better place for this request rsther than your landlord or an exterminator"
+          "excerpt": "This is probably why. Same thing happened in my hof last year: the bird parents got upset and very noisy because a raccoon spent an afternoon munching the contents of their nest."
         },
         {
           "source_family": "public",
@@ -154,28 +138,44 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Olympiastadion view. Hello everyone, I am going to Bruno Mars concert in June and got a ticket in Block 24area (the most back row) From the seating map it doesn't look very promisi"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "That new style is what we have in Turkey. You have two options red meat or white meat aka chicken. AFAIK chicken döner became popular after the 90s because it was cheaper than red "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.019,
+        "source_item_count": 125,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "events",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T07:18:35.746Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-05-24T09:01:58.254Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 68,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,28 +188,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Whoa this is so unhinged I don’t even know where to begin. Loony People like me? What kind of person do you think you’re interacting with? See, there it is, true colors. Thanks for"
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Muni moments that define this city. Tenderloin. Yesterday, a saxophonist set up shop next to a broken Muni bus, playing soulful tunes while people waited. Only in SF can delays spa"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Rent first, until your kid gets closer to school age, by then you will know the area, and be able to make a better decision. You will love it here."
         },
         {
           "source_family": "public",
@@ -225,29 +209,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Thank you! If gas gets crazy expensive and I have to commute more, I rather ride Bart and my bicycle for the last mile, lmao."
+          "excerpt": "In that case, the tenants can sue their former landlord for wrongful eviction. I've seen it done a number of times."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "It closed after Covid. The holdup is that the building is owned by the National Park Service. They don't seem to be in a hurry to rent it out, I heard there were talks 2 years ago "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they casually mention how the BART delays altered their dinner plans, not just their co"
         }
       ],
       "metadata": {
-        "source_item_count": 134,
-        "average_valence": -0.035,
+        "source_item_count": 121,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "routine",
+          "belonging"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T07:18:35.746Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-24T09:01:58.254Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -278,6 +278,14 @@
           "excerpt": "Porque los guiris están jodiendo la vida a la gente por culpa del alquiler. Normalmente el salario medio en espelta suele ser de unos 1300€ al mes y un alquiler promedio en Barcelo"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a mix of gray clouds and bright patches, promising rain that holds off as if in negotiation with the sun.. The mood at the train stations is tense; commuters keep checki"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Barsalona ha dit basta. No mes soroll No mes discoteques al casc antic No mes turisme massive No mes inmigració irregular Voteu Signar Per la millora del barri i de la ciutat Per c"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.021,
+        "source_item_count": 83,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.78
+        "freshness_score": 0.777
       }
     }
   ]
