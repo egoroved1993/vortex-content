@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T20:28:12.987Z",
+    "capturedAt": "2026-05-24T21:25:58.940Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 449
+    "totalItems": 446
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T20:28:12.987Z",
-      "mood_score": 0.384,
+      "captured_at": "2026-05-24T21:25:58.940Z",
+      "mood_score": 0.392,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 15,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
@@ -47,14 +47,6 @@
           "valence": 1,
           "recency_weight": 1.04,
           "excerpt": "If you commute into a big city (especially London) how do you pay?. I am currently job-hunting. A good chunk of jobs are in London (tottenham court road/paddington/whitecity). Look"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to an earlier fire alert at Leytonstone."
         },
         {
           "source_family": "transport",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Watford / Amersham and Uxbridge due to train cancellation"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.107,
+        "source_item_count": 104,
+        "average_valence": -0.082,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T20:28:12.987Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-24T21:25:58.940Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,10 +104,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5, S7: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -148,6 +139,14 @@
           "excerpt": "The RE1 goes there, then a quick bus over the border. They shelter arranges the EU passport, microchips and the cats are already vaccinated and castrated. Our experience was so pos"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.72,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a muted grey, heavy with clouds threatening rain, while sporadic patches of sunlight pierce through, casting a soft glow on the wet pavements.. With the recent strike st"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
@@ -158,21 +157,21 @@
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": 0.001,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T20:28:12.987Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-05-24T21:25:58.940Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 69,
@@ -230,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 134,
-        "average_valence": -0.064,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "money",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T20:28:12.987Z",
+      "captured_at": "2026-05-24T21:25:58.940Z",
       "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
@@ -291,7 +290,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun is casting a warm, golden hue over the cobblestone streets, while a brisk wind carries whispers of sea salt from the nearby beach.. Commuters on the metro seem anxious and "
+          "excerpt": "The afternoon sun casts a golden hue over the bustling streets, while a brisk wind carries a hint of salt from the nearby sea.. The metro platforms are unusually crowded, with comm"
         },
         {
           "source_family": "public",
