@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T21:25:58.940Z",
+    "capturedAt": "2026-05-24T22:27:16.308Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 446
+    "totalItems": 445
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T21:25:58.940Z",
-      "mood_score": 0.392,
+      "captured_at": "2026-05-24T22:27:16.308Z",
+      "mood_score": 0.388,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 12,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -78,35 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Watford / Amersham and Uxbridge due to train cancellation"
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-hill and Watford due to train cancellations. After 23:08 the next"
         }
       ],
       "metadata": {
-        "source_item_count": 104,
-        "average_valence": -0.082,
+        "source_item_count": 103,
+        "average_valence": -0.093,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T21:25:58.940Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-05-24T22:27:16.308Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U8, RE1: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -139,14 +148,6 @@
           "excerpt": "The RE1 goes there, then a quick bus over the border. They shelter arranges the EU passport, microchips and the cats are already vaccinated and castrated. Our experience was so pos"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.72,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted grey, heavy with clouds threatening rain, while sporadic patches of sunlight pierce through, casting a soft glow on the wet pavements.. With the recent strike st"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
@@ -157,19 +158,19 @@
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": 0.007,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T21:25:58.940Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-05-24T22:27:16.308Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -186,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy playing classical guitar on the 19 bus, while a toddler danced next to him. Muni magic, even amidst the chaos of delays."
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -225,23 +218,31 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Community darkroom/photo scene in sf. Hi! I’m a college student studying photo and I’ll be in sf for a month this June. I’m looking to continue my practice and hopefully get involv"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Any methods of how to potentially reduce congestion on the highway 1 reluctant coastside?!. Because of a lack of public transit support in the strip of the peninsula that is laying"
         }
       ],
       "metadata": {
         "source_item_count": 134,
-        "average_valence": -0.058,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "money",
           "routine"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T21:25:58.940Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-05-24T22:27:16.308Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
       "dominant_sentiment": "neutral",
@@ -285,31 +286,31 @@
           "excerpt": "Porque los guiris están jodiendo la vida a la gente por culpa del alquiler. Normalmente el salario medio en espelta suele ser de unos 1300€ al mes y un alquiler promedio en Barcelo"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun casts a golden hue over the bustling streets, while a brisk wind carries a hint of salt from the nearby sea.. The metro platforms are unusually crowded, with comm"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "But those taxes wouldn't go into the pockets of people with lower incomes, so how would that help? A renovated apartment they can never afford is of no benefit. Anyway if the landl"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Thank you barcelona ❤️. Our family spent 4 nights enjoying your city's beauty, energy, delicious food and people's hospitality. We visited the major attractions and toured the coun"
         }
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": -0.039,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "tourism",
           "money"
         ],
-        "freshness_score": 0.791
+        "freshness_score": 0.789
       }
     }
   ]
