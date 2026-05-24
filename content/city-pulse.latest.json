@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T16:29:35.037Z",
+    "capturedAt": "2026-05-24T17:28:16.731Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 428
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T16:29:35.037Z",
-      "mood_score": 0.385,
+      "captured_at": "2026-05-24T17:28:16.731Z",
+      "mood_score": 0.384,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 106,
-        "average_valence": -0.104,
+        "average_valence": -0.105,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T16:29:35.037Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-05-24T17:28:16.731Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U5: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a soft gray, with a light drizzle that paints the streets and makes the autumn leaves glisten with a melancholic shine.. After the recent strike, there's a tentative rel"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": 0.005,
+        "source_item_count": 124,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "events",
           "language"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T16:29:35.037Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-05-24T17:28:16.731Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -219,17 +220,17 @@
           "excerpt": "I’ve lived in the trinity buildings (8th and mission) for 2 years now. Modern, has a gym, walking distance to a lot of the city and right next to BART. Only downside is that it’s i"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know a local when they can effortlessly navigate BART delays while non-locals just stare at their phones, waiting"
+          "excerpt": "D is actively harmful though. Just doing it without any understanding is just the same kinda of stupid populism that got trump elected. Simple solutions that cause more hard that g"
         }
       ],
       "metadata": {
         "source_item_count": 117,
-        "average_valence": -0.051,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,8 +241,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T16:29:35.037Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-24T17:28:16.731Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The day is draped in a thick blanket of gray clouds, casting a muted light over the bustling streets, hinting at rain but holding off for now.. The mood at the Sants station is ten"
+          "excerpt": "The sun is breaking through the clouds, casting a warm golden light across the pavement, while a crisp breeze carries the scent of freshly baked bread from nearby bakeries.. The us"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.029,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.782
+        "freshness_score": 0.784
       }
     }
   ]
