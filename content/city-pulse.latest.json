@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T05:28:58.895Z",
+    "capturedAt": "2026-05-24T07:18:35.746Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 429
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T05:28:58.895Z",
-      "mood_score": 0.393,
+      "captured_at": "2026-05-24T07:18:35.746Z",
+      "mood_score": 0.395,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: No service between Hyde Park Corner and Northfields/Uxbridge due to planned engineering work. MINOR DEL"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Hyde Park Corner and Northfields/Uxbridge due to planned engineering work. SEVERE DE"
         },
         {
           "source_family": "transport",
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.08,
+        "source_item_count": 90,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T05:28:58.895Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-24T07:18:35.746Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -146,19 +154,11 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Olympiastadion view. Hello everyone, I am going to Bruno Mars concert in June and got a ticket in Block 24area (the most back row) From the seating map it doesn't look very promisi"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Was in the same situation before, 4th floor in NK with cockroaches. It’s not pretty but you‘ll be ok, especially if your apartment is super clean and they don’t find stuff around t"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.012,
+        "source_item_count": 121,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "events",
@@ -169,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T05:28:58.895Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-24T07:18:35.746Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -196,6 +196,14 @@
           "excerpt": "Whoa this is so unhinged I don’t even know where to begin. Loony People like me? What kind of person do you think you’re interacting with? See, there it is, true colors. Thanks for"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Yesterday, a saxophonist set up shop next to a broken Muni bus, playing soulful tunes while people waited. Only in SF can delays spa"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -218,30 +226,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Thank you! If gas gets crazy expensive and I have to commute more, I rather ride Bart and my bicycle for the last mile, lmao."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "You can find a local parking garage that has monthly rates. There's public ones & private ones. Its pretty expensive since you're in a VHCOL area. Parking in the street is a gamble"
         }
       ],
       "metadata": {
         "source_item_count": 134,
-        "average_valence": -0.02,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T05:28:58.895Z",
+      "captured_at": "2026-05-24T07:18:35.746Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
@@ -278,14 +278,6 @@
           "excerpt": "Porque los guiris están jodiendo la vida a la gente por culpa del alquiler. Normalmente el salario medio en espelta suele ser de unos 1300€ al mes y un alquiler promedio en Barcelo"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The day is cloaked in a thick, dreary cloud cover, punctuated by bursts of cool gusts that carry the scent of rain on the horizon.. The platforms are unusually sparse, with commute"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -300,6 +292,14 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Barsalona ha dit basta. No mes soroll No mes discoteques al casc antic No mes turisme massive No mes inmigració irregular Voteu Signar Per la millora del barri i de la ciutat Per c"
         }
       ],
       "metadata": {
