@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-25T15:13:02.476Z",
+    "capturedAt": "2026-05-25T16:51:16.541Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 442
+    "totalItems": 432
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-25T15:13:02.476Z",
-      "mood_score": 0.33,
+      "captured_at": "2026-05-25T16:51:16.541Z",
+      "mood_score": 0.344,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 13,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,25 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: No service between Earl's Court and Ealing Broadway/Richmond due to planned engineering work. MINOR DELAY"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone due to an earlier points failure at Wembley Ce"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations"
         },
         {
           "source_family": "transport",
@@ -62,49 +78,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: No service between Earl's Court and Ealing Broadway/Richmond due to planned engineering work. SEVERE DELA"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier fire alert at Stanmore. Tickets are being accepted on London Buses, London"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Severe Delays Lioness Line: Severe delays while we fix a points failure at Stonebridge Park."
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.146,
+        "source_item_count": 98,
+        "average_valence": -0.106,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-25T15:13:02.476Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-25T16:51:16.541Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, RE1: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 300, RE1, RE7, 248: Delays 5 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Many european countries have pretty good public transportation in cities, I don't find the german system better. Just the vehicle names are in the local language, as in Germany, so"
         },
         {
           "source_family": "public",
@@ -132,33 +140,25 @@
           "excerpt": "Olympiastadion view. Hello everyone, I am going to Bruno Mars concert in June and got a ticket in Block 24area (the most back row) From the seating map it doesn't look very promisi"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Idk know of anybody whose done that in the last 20 years and actually made being a musician their consistent day job, but good luck 🤷🏽‍♀️"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": 0.5,
-          "recency_weight": 0.56,
-          "excerpt": "Das Wetter in Berlin heute: Sonne satt und angenehm warm - wetter.com. Das Wetter in Berlin heute: Sonne satt und angenehm warm"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.006,
+        "source_item_count": 117,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "events",
@@ -169,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-25T15:13:02.476Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-25T16:51:16.541Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 76,
+        "public": 56,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -197,14 +197,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yea I agree. Just imagine Sunset District turns to Tenderloin 2.0. And again, if they really densify that district with high rises, rent eluding benefit the middle class at all."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -223,31 +215,39 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "16 mission is a high drig area. As someone with a dog you would be walking through an area where they openly disperse needles and pipes. There is broken glass on the ground. Is tha"
+          "excerpt": "I said this in a different comment, but why what AOC says matters is because, as his employer, she's the only one who could corroborate the parts of his record that we might care a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Reasonably priced tattoo shops?. Sup yall. A friend and I were planning to get some smaller not particularly detailed tattoos next week, crude sketches honestly. Most of the tattoo"
         }
       ],
       "metadata": {
-        "source_item_count": 141,
-        "average_valence": -0.019,
+        "source_item_count": 121,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-25T15:13:02.476Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-25T16:51:16.541Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 27,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -286,31 +286,31 @@
           "excerpt": "Digo el salario porque es lo que se usa para pagar el alquiler. Si el alquiler ha subido X% y los salarios también entonces estamos igual que antes. Pero si han subido más que el s"
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often miss how late the locals eat dinner. While they grub at 7, we’re just starting to think about it around 9 or 10!"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "If it is Barcelona or any place in Spain (I’m Spanish) the probability of the permanent lost of your bag is almost 100% because some Spanish people or the people who lives in Spain"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "A thick, gray blanket of clouds looms overhead, threatening rain, while the air hums with the chill of late winter in the city.. With the ongoing strike affecting Rodalies, commute"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.023,
+        "source_item_count": 96,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "tourism",
           "money"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.813
       }
     }
   ]
