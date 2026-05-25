@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-24T23:28:53.527Z",
+    "capturedAt": "2026-05-25T01:11:55.815Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 445
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-24T23:28:53.527Z",
-      "mood_score": 0.351,
+      "captured_at": "2026-05-25T01:11:55.815Z",
+      "mood_score": 0.362,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -54,14 +54,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 23, Sunday 24 and Bank Holiday Monday 25 May, no service between Earls Court and Ealing Broadway"
         },
         {
@@ -70,43 +62,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 23 May, from 0430 and all day Sunday 24 and Bank Holiday Monday 25 May, including Saturday Nig"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-hill and Watford due to train cancellations. After 23:08 the next"
+          "recency_weight": 1.04,
+          "excerpt": "Me and my wife purchased flat in north Finchley last year. As you said, it’s cheaper than rent (although we overpay a lot), and we only needed 5% deposit."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Please leave your dogs at home. If you’re taking your dog out in 32 degree heat you are stupid and cruel. Please leave your dogs at home in the heat of the day. Walk them early in "
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.087,
+        "source_item_count": 89,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-24T23:28:53.527Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-05-25T01:11:55.815Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -144,37 +153,29 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": 0.014,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "events",
-          "language"
+          "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-24T23:28:53.527Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-05-25T01:11:55.815Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 69,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,15 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The key is pricing dictated by rent boards. We don’t have that in any way. San Francisco also has some weird workarounds depending on age, how many dwellings on a unit, single fami"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I’m in my late 50s and have never been held back because of not having a college degree. The founder at my current company doesn’t not have a college degree. I think it works for s"
+          "excerpt": "Yes I asked AI to recommend some similar to Denver, and the marina was the first one to pop up. Do you think it’s better to rent a studio for 4K or just rent a small house somewher"
         },
         {
           "source_family": "public",
@@ -220,6 +213,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I feel so blessed to live in a place where cartel members pollute the air and make obnoxious noise in 50 year old cars and we call it a culture of anti-gentrification"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -228,25 +229,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 134,
-        "average_valence": -0.047,
+        "source_item_count": 127,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "money",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-24T23:28:53.527Z",
+      "captured_at": "2026-05-25T01:11:55.815Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -293,23 +294,23 @@
           "excerpt": "But those taxes wouldn't go into the pockets of people with lower incomes, so how would that help? A renovated apartment they can never afford is of no benefit. Anyway if the landl"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Thank you barcelona ❤️. Our family spent 4 nights enjoying your city's beauty, energy, delicious food and people's hospitality. We visited the major attractions and toured the coun"
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "A thin layer of clouds blankets the sky, diffusing the morning sun into a soft, warm glow that hints at the arrival of spring.. The metro is unusually quiet, with passengers glanci"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.031,
+        "source_item_count": 89,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "tourism",
           "money"
         ],
-        "freshness_score": 0.789
+        "freshness_score": 0.795
       }
     }
   ]
