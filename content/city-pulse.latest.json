@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-26T21:38:24.597Z",
+    "capturedAt": "2026-05-26T22:36:12.267Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 436
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-26T21:38:24.597Z",
-      "mood_score": 0.309,
+      "captured_at": "2026-05-26T22:36:12.267Z",
+      "mood_score": 0.307,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -32,7 +32,8 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "transport": 6,
+        "trends": 8,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,6 +47,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to train cancellations. Tickets are being accepted on London Buses and London Overground"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -69,41 +78,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Camden Town and Kennington via Bank due to planned engineering work. SEVERE DELAYS on"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge due to an earlier points failure at Ealing Common. MINOR"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Camden Town and Kennington via Bank due to planned engineering work. MINOR DELAYS on t"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.09,
+        "source_item_count": 100,
+        "average_valence": -0.097,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-26T21:38:24.597Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-05-26T22:36:12.267Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -150,28 +151,28 @@
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "Howoge startet die Vermietung von 148 neuen Wohnungen – ab 420 Euro warm - Berliner Kurier. Howoge startet die Vermietung von 148 neuen Wohnungen – ab 420 Euro warm"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.034,
+        "source_item_count": 130,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "money",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.909
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-26T21:38:24.597Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-26T22:36:12.267Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 54,
@@ -208,6 +209,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local by how they navigate the bus delays—grabbing a taco and rolling their eyes at yet another 14-Mis"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local when they happily dodge the BART delays but still know the best taco spot within a two-block rad"
         },
         {
@@ -217,33 +226,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "In the bay, its always progressive virtue signaling... always... [–]madalienmonk 81 points 3 months ago* People will cite \"maintenance costs\" without knowing - it's because the bri"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It’s near a huge hospital…figure sirens to ER. That said, I would go for it. There’s a Whole food there a sweet deli, Limoncello, on Sutter. There’s a walk to Fillmore st and Japan"
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.006,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "routine"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-26T21:38:24.597Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-05-26T22:36:12.267Z",
+      "mood_score": 0.459,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -261,20 +262,20 @@
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "A warm breeze carries the scent of orange blossoms, while a hazy sun peeks through scattered clouds, providing a comforting glow over the city.. The platforms at Sants station are "
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "It's great in there. There's a ton of cool stuff tucked away. Don't be out alone late at night if you don't have to, don't leave your phone on a patio table, don't have your wallet"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is breaking through the clouds, casting a warm glow on the buzzing streets, while a cool breeze carries the scent of fresh churros from a nearby café.. Train carriages are "
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": 0.003,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.815
       }
     }
   ]
