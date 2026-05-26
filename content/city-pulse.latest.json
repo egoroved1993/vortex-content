@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-26T05:31:36.164Z",
+    "capturedAt": "2026-05-26T07:27:55.559Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 414
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-26T05:31:36.164Z",
-      "mood_score": 0.462,
+      "captured_at": "2026-05-26T07:27:55.559Z",
+      "mood_score": 0.406,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
         "review": 2,
@@ -33,7 +33,8 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6
+        "transport": 7,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -45,7 +46,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: No service between Earl's Court and Ealing Broadway / Richmond due to a late finish of engineering works"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays following a late finish of engineering work. Tickets will be accepted on London Buses, Eliz"
         },
         {
           "source_family": "transport",
@@ -53,7 +54,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Barons Court and Boston Manor / South Harrow due to a late finish of engineering wor"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to a late finish of engineering work. Tickets will be accepted on London Buses, Eliza"
         },
         {
           "source_family": "public",
@@ -69,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping /"
         },
         {
           "source_family": "transport",
@@ -77,24 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Part Suspended District Line: No service between Earl's Court and Ealing Broadway / Richmond due to a late finish of engineering works"
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping /"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.111,
+        "source_item_count": 89,
+        "average_valence": -0.128,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.841
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-26T05:31:36.164Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-26T07:27:55.559Z",
+      "mood_score": 0.453,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -106,13 +107,22 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1
+        "transport": 1,
+        "weather": 1
       },
       "languages": [
         "de",
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S7, RE2: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -130,47 +140,39 @@
           "excerpt": "Olympiastadion view. Hello everyone, I am going to Bruno Mars concert in June and got a ticket in Block 24area (the most back row) From the seating map it doesn't look very promisi"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with clouds, a damp chill lingers in the air as light rain falls intermittently.. Despite the end of the BVG strike, there’s an air of cautious skepticism among"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The air is brisk with a hint of autumn crispness, clouds occasionally parting to reveal fleeting moments of sunlight.. After yesterday's chaos, there's a mix of relief and cautious"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.008,
+        "source_item_count": 118,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-26T05:31:36.164Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-26T07:27:55.559Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 57,
@@ -178,20 +180,13 @@
         "forum": 4,
         "signals": 1,
         "news": 49,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni driver stopping to help a lost tourist with a map today. Not something you see every day in the chaos of the Tenderloi"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -223,25 +218,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "28F in Oakland looking to meet new people locally and have good conversation. I’m not really looking for anything romantic, just trying to expand my social circle and connect with "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I’ve lived here my whole life and only used Hinge once before and I was with that person for 2 years. The other serious relationships were through organic meeting. I think nowadays"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.013,
+        "source_item_count": 122,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
-          "transit",
-          "belonging"
+          "belonging",
+          "transit"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-26T05:31:36.164Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-26T07:27:55.559Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
@@ -249,7 +252,8 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -282,31 +286,31 @@
           "excerpt": "If it is Barcelona or any place in Spain (I’m Spanish) the probability of the permanent lost of your bag is almost 100% because some Spanish people or the people who lives in Spain"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun breaks through a patchy sky, casting a warm golden hue over the bustling streets of Barcelona.. The metro platforms are unusually crowded, with a palpable tension"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "It's great in there. There's a ton of cool stuff tucked away. Don't be out alone late at night if you don't have to, don't leave your phone on a patio table, don't have your wallet"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sun hangs lazily in a crystal blue sky, casting golden hints over the bustling streets of Eixample.. The mood at the metro stations is tense, with commuters glancing anxiously "
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.008,
+        "source_item_count": 90,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.811
       }
     }
   ]
