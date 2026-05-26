@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-26T18:58:51.114Z",
+    "capturedAt": "2026-05-26T19:46:38.343Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 420
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-26T18:58:51.114Z",
-      "mood_score": 0.312,
+      "captured_at": "2026-05-26T19:46:38.343Z",
+      "mood_score": 0.307,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Suffragette: Severe Delays Suffragette Line: Severe delays due to an earlier broken down freight train at Woodgrange Park. London Underground are a"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone while we fix a signal failure at Harrow & Weal"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,40 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays while we fix a signal systems failure. Tickets are being on London Buses, DLR and Elizabeth"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Severe Delays Lioness Line: Severe delays due to a points failure at Euston."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to points failures at Golders Green, Morden and East Finchley. Tickets are being accept"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier signal systems failure."
         }
       ],
       "metadata": {
-        "source_item_count": 109,
-        "average_valence": -0.083,
+        "source_item_count": 107,
+        "average_valence": -0.098,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-26T18:58:51.114Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-05-26T19:46:38.343Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,20 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE7, 248: Delays 2 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Olympiastadion view. Hello everyone, I am going to Bruno Mars concert in June and got a ticket in Block 24area (the most back row) From the seating map it doesn't look very promisi"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp and cool, with clouds scudding across the sky, hinting at the first signs of autumn's approach.. After days of disruption, the metro is running again, but the vibe"
         },
         {
           "source_family": "news",
@@ -147,29 +148,29 @@
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Can we say Germany doing better at having public transportation systems in cities, than other countries?. First of all, I am not talking about DB. It’s a mixed bag. I am talking ab"
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The air is crisp and carries the faint scent of rain from earlier, leaving puddles that reflect the mottled gray sky.. With the recent strike finally over, people are cautiously op"
         }
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": -0.006,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-26T18:58:51.114Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-05-26T19:46:38.343Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 44,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -211,12 +212,12 @@
           "excerpt": "If you're moving in 4 weeks, your timing is way off period. People usually post the place 1-2 weeks before the end of the month (people then move in same week or on the 1st). You n"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can spot a local by how they know the best alley for taco trucks—while tourists are stuck at that one cr"
+          "excerpt": "This is the way. And honestly any kind of date that's not the standard here would be fun—everything here in California seems to be either medjool or deglet noor. The Middle East ha"
         },
         {
           "source_family": "public",
@@ -224,23 +225,23 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "This is the way. And honestly any kind of date that's not the standard here would be fun—everything here in California seems to be either medjool or deglet noor. The Middle East ha"
+          "excerpt": "Weird, I was there 2 days ago and saw none of that. Just good vibes. Maybe the Botox is affecting the brain?"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.034,
+        "source_item_count": 108,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-26T18:58:51.114Z",
+      "captured_at": "2026-05-26T19:46:38.343Z",
       "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
