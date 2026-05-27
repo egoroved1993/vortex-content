@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-27T07:41:40.059Z",
+    "capturedAt": "2026-05-27T09:22:13.412Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-27T07:41:40.059Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-05-27T09:22:13.412Z",
+      "mood_score": 0.461,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+          "valence": -1,
+          "recency_weight": 0.88,
+          "excerpt": "Heatwave chaos as key train services cancelled in and out of London - Metro.co.uk. Heatwave chaos as key train services cancelled in and out of London"
         },
         {
           "source_family": "transport",
@@ -62,6 +62,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier faulty train at Finchley Road."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
@@ -70,44 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we deal with a trespasser on the track at Kilburn."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to an earlier faulty train at Finchley Road."
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.084,
+        "source_item_count": 90,
+        "average_valence": -0.114,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-27T07:41:40.059Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-27T09:22:13.412Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,15 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2, RE1: Delays 3 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg will you find a kebab shop next to a gallery showcasing contemporary art, both packed at 3 AM on a Saturday."
+          "excerpt": "I'd vote for that as well, I've lived here for about 14 years now and I still hate sundays here. It just feels dead and empty. In my home country we have reduced opening hours on s"
         },
         {
           "source_family": "nightlife",
@@ -153,26 +153,26 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.023,
+        "source_item_count": 119,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-27T07:41:40.059Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-05-27T09:22:13.412Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 57,
@@ -193,7 +193,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Back in the late .......s thru 1981 the power brokers played poker on the second floor.. My Marin doctor was one...."
+          "excerpt": "Mine is rent controlled. After my first year I went month to month and the rent went up $9/mo."
         },
         {
           "source_family": "public",
@@ -201,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Well those 80% are fucked too: they are stuck. Moving means getting fucked. Can't have kids, can't move closer to work, can't have a partner, have to suck it up with roommates and "
+          "excerpt": "Do not — under any circumstances — rent from John J. Dito & Son (JJD) Property management. They're impossible to deal with, get sued regularly, and changed their name a few years a"
         },
         {
           "source_family": "public",
@@ -209,45 +209,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I almost never use BART since I rarely leave the city. I do ride SF Muni (light rail and bus) all over though. Public transit here does not run very often late night and can be lim"
+          "excerpt": "Not true! Newer buildings under 15 years old don't count under the rent control laws... so newer buildings can basically increase rents as much as they want! I live in a 12 year ol"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Interesting. I've recently talked with one if their representatives who was pushing me to become a client, the very expensive 6 or 12 dates package. How many dates did you have and"
+          "excerpt": "Month to month rent. Went month to month rent on a 2 bed apartment Rent is currently $4500 and in my same area its $7000 now... management was suppose to give me a new lease by now"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "this is absolutely illegal under california labor law - employers can't make you front expenses like this without timely reimbursement 😤 department of labor standards enforcement "
+          "excerpt": "What do you always check before renting an apartment in SF?. Apartment hunting again and trying not to repeat past mistakes. Besides the usual tour, I’ve been paying way more atten"
         }
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.042,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-27T07:41:40.059Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-05-27T09:22:13.412Z",
+      "mood_score": 0.46,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,14 +261,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun pierces through the scattered clouds, casting a warm glow on the cobblestone streets while a cool breeze dances through the alleyways.. The platforms of Plaça Cat"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -295,6 +287,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Vaig veure que el rodalies de les 6.14 me deixa en bona hora a l'estació i el bus de l'estació espera als estudiants del tren per anar al centre de Amposta. Així que no crec tenir "
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.005,
+        "source_item_count": 88,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.822
       }
     }
   ]
