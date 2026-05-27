@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-27T03:21:41.863Z",
+    "capturedAt": "2026-05-27T05:39:02.325Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 407
+    "totalItems": 418
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-27T03:21:41.863Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-05-27T05:39:02.325Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "most people rent in london and most landlords are dickheads and won’t let you make changes to the property eg. installing air con."
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Minor Delays Waterloo and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -53,23 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I get that- I lived in London for a year and experienced the heatwave during the summer of 2018. I also rent in the US in a non air conditioned flat (very common in my city) and he"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "They really are and easy to down. They can get you tipsy after one. I had 3 of them and bunch of other doubles and shots and I never felt more rough in the morning 😭😖"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Last Sunday, mildmay line was crap. Dont get me started with the fire in Hackney Central. TFL is just taking a piss. So many delays and cancelations because of No staff working. Ca"
+          "excerpt": "You do realise those people have been priced out of other more expensive areas of London themselves? This is how it works - “local working class people” don’t have an inherent righ"
         },
         {
           "source_family": "public",
@@ -77,35 +70,44 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I know some people in the same old 50s-60s council block and I'd say between the tenants and the flat owners the tenants are happier I'd say, true enough. Plus with secure tenancie"
+          "excerpt": "Seems like a good deal for TfL then. Assuming they drive 250 days per year in the congestion zone they’re paying £4.5k alone in congestion fees, and probably an additional 2-3k in "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Andy Burnham faces landlord hypocrisy row over London flat - Property118. Andy Burnham faces landlord hypocrisy row over London flat"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.069,
+        "source_item_count": 84,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.837
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-27T03:21:41.863Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-27T05:39:02.325Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, RE2: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg will you find a kebab shop next to a gallery showcasing contemporary art, both packed at 3 AM on a Saturday."
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -135,49 +153,33 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 1.04,
-          "excerpt": "What is your solution? The humane thing would be investing in help for them. That’s expensive and it takes time. We’ve kind of stopped the whole locking up people who are different"
+          "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.008,
+        "source_item_count": 125,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-27T03:21:41.863Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-05-27T05:39:02.325Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -187,11 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "[CA] Landlord served a 60-Day Notice promising a final month rent waiver (AB 1482), but now says via email it \"doesn't apply\" and demands rent. But now says via email it \"doesn't a"
+          "excerpt": "Back in the late .......s thru 1981 the power brokers played poker on the second floor.. My Marin doctor was one...."
         },
         {
           "source_family": "public",
@@ -199,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This is for signing a new rental lease, actual rents are significantly lower. Similar to NYC (median rent of 1650 in 2023), many units are rent controlled or rent stabilized which "
+          "excerpt": "Well those 80% are fucked too: they are stuck. Moving means getting fucked. Can't have kids, can't move closer to work, can't have a partner, have to suck it up with roommates and "
         },
         {
           "source_family": "public",
@@ -207,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Older multi-unit buildings in the city are rent controlled, and that's a huge factor if you're looking to settle somewhere for the long term."
+          "excerpt": "I almost never use BART since I rarely leave the city. I do ride SF Muni (light rail and bus) all over though. Public transit here does not run very often late night and can be lim"
         },
         {
           "source_family": "public",
@@ -215,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I was reading some legal filings thru the city website and it states that they are \"are subject to the Rent Stabilization and Arbitration Ordinance\" in the legal filings a number o"
+          "excerpt": "Interesting. I've recently talked with one if their representatives who was pushing me to become a client, the very expensive 6 or 12 dates package. How many dates did you have and"
         },
         {
           "source_family": "public",
@@ -223,26 +225,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It is on the expensive side and some stores have a higher markup than others. I wouldn’t say it’s any more expensive than other touristy parts of the city though. Some of the shops"
+          "excerpt": "this is absolutely illegal under california labor law - employers can't make you front expenses like this without timely reimbursement 😤 department of labor standards enforcement "
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.074,
+        "source_item_count": 122,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-27T03:21:41.863Z",
-      "mood_score": 0.46,
+      "captured_at": "2026-05-27T05:39:02.325Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -260,6 +262,14 @@
       ],
       "drivers": [
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The mid-afternoon sun pierces through a veil of clouds, casting a warm glow over the bustling streets of Barcelona.. Frustration hangs thick in the air at the train station where c"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -274,14 +284,6 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Thank you barcelona ❤️. Our family spent 4 nights enjoying your city's beauty, energy, delicious food and people's hospitality. We visited the major attractions and toured the coun"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Barcelona is the most beautiful place I have ever visited! I’m so happy to you that all Airbnb will stop in 2028! It’s a win!!"
         },
         {
           "source_family": "public",
@@ -302,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": -0.001,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.819
+        "freshness_score": 0.823
       }
     }
   ]
