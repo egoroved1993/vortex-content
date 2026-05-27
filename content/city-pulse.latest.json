@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-27T19:48:40.844Z",
+    "capturedAt": "2026-05-27T20:51:27.000Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 407
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-27T19:48:40.844Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-05-27T20:51:27.000Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 14,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -62,14 +62,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Severe Delays Lioness Line: Severe delays due to an earlier faulty train at Harrow & Wealdstone."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Clapham Junction and Willesden Junction and SEVERE DELAYS on the rest of the line due t"
         },
         {
@@ -79,34 +71,43 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Clapham Junction and Willesden Junction and SEVERE DELAYS on the rest of the line due t"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "Andy Burnham faces landlord hypocrisy row over London flat - Property118. Andy Burnham faces landlord hypocrisy row over London flat"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.071,
+        "source_item_count": 93,
+        "average_valence": -0.052,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-27T19:48:40.844Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-27T20:51:27.000Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,65 +117,65 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Camping in dark areas query. Hi there, I'm wondering if there's a good place to camp in a tent with a handful of friends reachable from Berlin by train (ideally not too far) which "
+          "excerpt": "I'm not even talking about recent rent control initiatives, I meant more how most old contracts just.. don't increase over time. That seems unusual worldwide, but can definitely al"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Personally, I don’t use a bike and have been taking the U8 every day for eight years now, and it’s always been the same. I’m used to it, and it’s mostly the same people there. If y"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Digitalism at Rough Trade Berlin (Berlin) on 2026-05-28T00:00:00.000 [Electronica]"
+          "recency_weight": 1.04,
+          "excerpt": "Yes, my mother got an apartment with WBS 20 years ago, I live there now and the rent is still ridiculously cheap in comparison"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": 0.5,
-          "recency_weight": 0.88,
-          "excerpt": "Howoge startet die Vermietung von 148 neuen Wohnungen – ab 420 Euro warm - Berliner Kurier. Howoge startet die Vermietung von 148 neuen Wohnungen – ab 420 Euro warm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.612,
-          "recency_weight": 0.72,
-          "excerpt": "Berlin wakes to a crisp autumn morning, with the sun fighting to break through a veil of low-hanging clouds, leaving a shimmery fog that clings to the cobblestones.. The mood at th"
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yes, my gf parents got one 10 years ago and now they earn like 5k net and only pay 500€ rent for a 4-room apartment in Berlin"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I'm up to 2 physical altercations in a month, that's like twice as much as usual on my normal commute. So yeah, it's definitely something going on. All of them have been completely"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The nightmare is having everyone else paying market price for rent while subsidizing these system abusers"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": 0.001,
+        "source_item_count": 133,
+        "average_valence": -0.05,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "money",
+          "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.909
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-27T19:48:40.844Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-05-27T20:51:27.000Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 43,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,27 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I lived in a 1 br apartment on Burnett street in Twin Peaks in 1986. It had a panoramic view of the city. Rent was $900 a month. Always wondered what it rents for now."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Do not — under any circumstances — rent from John J. Dito & Son (JJD) Property management. They're impossible to deal with, get sued regularly, and changed their name a few years a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Not true! Newer buildings under 15 years old don't count under the rent control laws... so newer buildings can basically increase rents as much as they want! I live in a 12 year ol"
+          "excerpt": "How often can rent be raised per year?. I live in a non rent controlled unit, on month to month, and my rent was increased 2 months ago. I’ve received notice that my rent is going "
         },
         {
           "source_family": "public",
@@ -220,33 +205,49 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Name and shame. Also, always require a 33%-50% deposit. Even when working hourly, you should make estimate based on the scope of work outlined in your contract. If they increase th"
+          "excerpt": "What do you always check before renting an apartment in SF?. Apartment hunting again and trying not to repeat past mistakes. Besides the usual tour, I’ve been paying way more atten"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell a local by their ability to seamlessly dodge the persistent BART delays while juggling burritos"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy on the 31 out-dancing everyone during a packed commute. Muni's the stage; you just never know who's dropping a performance"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.005,
+        "source_item_count": 108,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-27T19:48:40.844Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-05-27T20:51:27.000Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -264,9 +265,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.72,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a moody slate gray, heavy with the promise of rain, as a brisk wind rustles the palm fronds lining Passeig de Gràcia.. The usually bustling Rodalies trains are sparse"
+          "excerpt": "The sky hangs heavily grey, with intermittent drizzle that creates a reflective sheen on the cobbled streets.. Rodalies trains are running irregularly due to the ongoing strike, le"
         },
         {
           "source_family": "public",
@@ -287,29 +288,29 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I've been living here for two years, nothing has ever happened to me, just be careful with your stuff and try not to look too much like a tourist and you will be fine."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Vaig veure que el rodalies de les 6.14 me deixa en bona hora a l'estació i el bus de l'estació espera als estudiants del tren per anar al centre de Amposta. Així que no crec tenir "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Collboni i Junts endolceixen les relacions en el tram final del mandat a Barcelona"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.005,
+        "source_item_count": 88,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.837
       }
     }
   ]
