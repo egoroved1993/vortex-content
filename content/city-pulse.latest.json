@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-27T18:59:17.153Z",
+    "capturedAt": "2026-05-27T19:48:40.844Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 406
+    "totalItems": 407
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-27T18:59:17.153Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-05-27T19:48:40.844Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier faulty train at Harrow & Wealdstone. Tickets will be accepted on London B"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minors delays due to an earlier faulty train at Harrow & Wealdstone."
         },
         {
           "source_family": "transport",
@@ -62,15 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Earl's Court and Ealing Broadway / Richmond due to an earlier fire alert at West Ken"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Severe Delays Lioness Line: No service between Willesden Junction and Watford Junction while we fix a faulty train at Harrow & Wealdst"
+          "excerpt": "London transit Lioness: Severe Delays Lioness Line: Severe delays due to an earlier faulty train at Harrow & Wealdstone."
         },
         {
           "source_family": "transport",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Clapham Junction and Willesden Junction and SEVERE DELAYS on the rest of the line due t"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Clapham Junction and Willesden Junction and SEVERE DELAYS on the rest of the line due t"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.082,
+        "source_item_count": 85,
+        "average_valence": -0.071,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-27T18:59:17.153Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-27T19:48:40.844Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, 100: Delays 3 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,23 +145,31 @@
           "valence": 0.5,
           "recency_weight": 0.88,
           "excerpt": "Howoge startet die Vermietung von 148 neuen Wohnungen – ab 420 Euro warm - Berliner Kurier. Howoge startet die Vermietung von 148 neuen Wohnungen – ab 420 Euro warm"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "Berlin wakes to a crisp autumn morning, with the sun fighting to break through a veil of low-hanging clouds, leaving a shimmery fog that clings to the cobblestones.. The mood at th"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.004,
+        "source_item_count": 112,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-27T18:59:17.153Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-05-27T19:48:40.844Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -179,7 +178,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 44,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -229,20 +228,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0,
+        "source_item_count": 123,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-27T18:59:17.153Z",
-      "mood_score": 0.459,
+      "captured_at": "2026-05-27T19:48:40.844Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -265,9 +264,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.72,
           "recency_weight": 0.72,
-          "excerpt": "The morning air is crisp and carries the lingering scent of fresh croissants from nearby bakeries, as sunlight filters through a sparse veil of clouds.. The mood at Plaça de Catalu"
+          "excerpt": "The skies are a moody slate gray, heavy with the promise of rain, as a brisk wind rustles the palm fronds lining Passeig de Gràcia.. The usually bustling Rodalies trains are sparse"
         },
         {
           "source_family": "public",
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": -0.004,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.834
       }
     }
   ]
