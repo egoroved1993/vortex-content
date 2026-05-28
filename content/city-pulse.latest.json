@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-28T07:37:16.301Z",
+    "capturedAt": "2026-05-28T09:28:51.571Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 419
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-28T07:37:16.301Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-05-28T09:28:51.571Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -44,17 +44,9 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to a late finish of engineering works. Tickets being accepted by London Buses."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Earl's Court and Ealing Broadway / Richmond due to an earlier faulty train at Victor"
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to an earlier fault with the overhead power lines at Dalston Kingsland."
         },
         {
           "source_family": "transport",
@@ -73,6 +65,14 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "But the food - the food is so, so much better. Some random stuff from 7-11 or Family Mart is better than most expensive restaurants in London..."
+        },
+        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -82,31 +82,32 @@
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.039,
+        "source_item_count": 96,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-28T07:37:16.301Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-28T09:28:51.571Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I'm not even talking about recent rent control initiatives, I meant more how most old contracts just.. don't increase over time. That seems unusual worldwide, but can definitely al"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE2: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -128,23 +129,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "\\> I don't see why people with better incomes shouldn't pay at least the Mietspiegel price, so that someone with greater need can benefit from a subsidized WBS rent so I start pay "
+          "excerpt": "I might be off here, but afaik, the valuation of an object depends on the rent of that object. By lowering the rent, it would reflect as a massive loss in the owners books, so leav"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "But the same thing is happening everywhere regardless if there's rent control. What happens in the UK? No rent control but there is the gerontocracy with triple lock benefits and p"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. The moment I stepped onto the U7, packed with kids blasting their playlists and a stray cat lounging on the platform. Only in"
+          "excerpt": "As a Barkeeper, I can displace some people or do/say some things and I can change you the dynamic or mood of the room. So it's not only about \"bad\" experience, also the good one, t"
         },
         {
           "source_family": "public",
@@ -153,28 +146,36 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Camping in dark areas query. Hi there, I'm wondering if there's a good place to camp in a tent with a handful of friends reachable from Berlin by train (ideally not too far) which "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Modern 6-Bedroom Apartment for Sale/rent in Berlin. 🏡 6-Bedroom House for Sale/rent Location:Berlin I’m offering a spacious 6-bedroom house for sale/rent . The property is suitabl"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.03,
+        "source_item_count": 127,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "events",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-28T07:37:16.301Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-05-28T09:28:51.571Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 43,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a dude in a full suit calmly reading a newspaper while Muni sat dead in the tunnel. Only in SF does the chaos seem so serene."
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -225,25 +218,33 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local by the way they navigate around the BART delays without missing a beat—while newcomers stand aro"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Ok that makes sense. $75 x 5 seems hella high to me but get your money honey, and if the customer doesn't mind paying that for a good quality trustworthy dog walker everybody wins."
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": 0.009,
+        "source_item_count": 108,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
-          "routine",
+          "transit",
           "money"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-28T07:37:16.301Z",
-      "mood_score": 0.417,
+      "captured_at": "2026-05-28T09:28:51.571Z",
+      "mood_score": 0.418,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 20,
@@ -264,9 +265,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun struggles to break through a thick layer of clouds, casting a muted light over the bustling streets.. Frustration simmers on the crowded platforms as commuters wait longer "
+          "excerpt": "The sky is overcast, casting a muted light over the streets, with occasional drizzles adding a chill to the morning air.. Commuters are visibly frustrated as they crowd around the "
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.008,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.829
       }
     }
   ]
