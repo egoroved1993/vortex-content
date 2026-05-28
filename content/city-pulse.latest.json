@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-28T15:19:48.155Z",
+    "capturedAt": "2026-05-28T17:26:23.265Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,22 +16,22 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 401
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-28T15:19:48.155Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-05-28T17:26:23.265Z",
+      "mood_score": 0.429,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 23,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 44,
+        "news": 50,
         "trends": 8,
         "transport": 9,
         "weather": 1
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to an earlier points failure at Whitechapel."
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier points failure at Whitechapel."
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between West Ham and Earl's Court due to an earlier points failure at Whitechapel. London B"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to an earlier points failure at Whitechapel. London Buses, DLR, Elizabeth Line and C2C"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier points fault at Whitechapel. London Buses, DLR, Elizabeth Lin"
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to an earlier points failure at Whitechapel."
         },
         {
           "source_family": "transport",
@@ -82,29 +82,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.058,
+        "source_item_count": 86,
+        "average_valence": -0.092,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.971
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-28T15:19:48.155Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-28T17:26:23.265Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 38,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -116,28 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I would kove to rent an office but offices are more expensive in germnay as compared to apartments.. I don't understand the reason.."
-        },
-        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, RE1: Delays 3 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I know a few non boomers in their thirties considering themselves as leftist who are also doing that. There should be a law that as soon as you lived in the WBS flat for 3 years ea"
+          "excerpt": "Berlin transit RE1, M5, RE2: Delays 3 trips delayed"
         },
         {
           "source_family": "forum",
@@ -148,53 +132,62 @@
           "excerpt": "When you knew you were actually living here. Neukölln. The moment I found a bright orange vinyl in a secondhand shop while dodging U-Bahn delays – it felt like a hidden treasure ju"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berliner Mietspiegel 2026: Was besonders auffällig ist – und was besonders teuer - Berliner Morgenpost. Berliner Mietspiegel 2026: Was besonders auffällig ist – und was besonders t"
+        },
+        {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "\\>The only reason strict door policies work to some degree is that they are so strict that they result in an insane number of False Negatives. Of course you get fewer problems if y"
+          "excerpt": "Camping in dark areas query. Hi there, I'm wondering if there's a good place to camp in a tent with a handful of friends reachable from Berlin by train (ideally not too far) which "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Modern 6-Bedroom Apartment for Sale/rent in Berlin. 🏡 6-Bedroom House for Sale/rent Location:Berlin I’m offering a spacious 6-bedroom house for sale/rent . The property is suitabl"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.022,
+        "source_item_count": 117,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.914
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-28T15:19:48.155Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-05-28T17:26:23.265Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 47,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
       "languages": [
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Go to Bay Area in the evening, rent a hotel as close to the office as possible, go to the office the next day, stay as long as you can, drive back in the late evening. Enjoy Calave"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -202,6 +195,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "What do you always check before renting an apartment in SF?. Apartment hunting again and trying not to repeat past mistakes. Besides the usual tour, I’ve been paying way more atten"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "You do realize that a “6 figure salary” still makes you low income in the Bay Area by the Federal standard, right? The low income level starts at over 100k in the Bay Area. It’s ex"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I am impressed. And my like me. When 1% of a population pays 50% of the bills, that is commendable, not a travesty. Just because you are angry doesn't make you right. Imagine I com"
         },
         {
           "source_family": "public",
@@ -218,36 +227,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Month to month rent. Went month to month rent on a 2 bed apartment Rent is currently $4500 and in my same area its $7000 now... management was suppose to give me a new lease by now"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "depends what vibe she's going for really. if she likes cocktail bars with energy maybe try mission or castro areas - lots of places there have that fun atmosphere without being too"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.019,
+        "source_item_count": 118,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
-          "routine",
+          "transit",
           "money"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-28T15:19:48.155Z",
-      "mood_score": 0.419,
+      "captured_at": "2026-05-28T17:26:23.265Z",
+      "mood_score": 0.414,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -262,20 +263,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How to spot a recent arrival. Gràcia. You can tell by their excitement over getting a brunch spot at 11am on a Sunday when locals know it's packed and often reserved."
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low over the city, occasionally allowing bursts of muted sunlight to flicker through, dampening the vibrant colors of the streets.. The mood on the "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Thank you barcelona ❤️. Our family spent 4 nights enjoying your city's beauty, energy, delicious food and people's hospitality. We visited the major attractions and toured the coun"
+          "excerpt": "A thin veil of clouds hangs above the city, softening the sunlight and casting a muted glow on the colorful streets of Gràcia.. Trains are running late due to the ongoing strike, w"
         },
         {
           "source_family": "public",
@@ -287,30 +288,30 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Vaig veure que el rodalies de les 6.14 me deixa en bona hora a l'estació i el bus de l'estació espera als estudiants del tren per anar al centre de Amposta. Així que no crec tenir "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Collboni i Junts endolceixen les relacions en el tram final del mandat a Barcelona"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Si ya Pompeu Fabra la lió, viene un parguela a... \"Contractat per al Institut de la Llengua!\" \"Ascendiu-li a vice-gerent\""
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.003,
+        "source_item_count": 85,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.836
       }
     }
   ]
