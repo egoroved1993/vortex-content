@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-28T19:04:23.072Z",
+    "capturedAt": "2026-05-28T20:55:54.782Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-28T19:04:23.072Z",
-      "mood_score": 0.428,
+      "captured_at": "2026-05-28T20:55:54.782Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -62,14 +62,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to an earlier points failure at Whitechapel."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May, no service between Rayners Lane and Uxbridge. Pl"
         },
         {
@@ -79,35 +71,43 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Four days of London Underground disruption expected due to RMT strike - ianVisits. Four days of London Underground disruption expected due to RMT strike"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.095,
+        "source_item_count": 103,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.922
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-28T19:04:23.072Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-28T20:55:54.782Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 41,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 200, S3: Delays 3 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Renting a Booster Seat While Traveling. We will be staying with a family while in Germany for two weeks, and some amount of our travel will be in their car. Our car seats will not "
         },
         {
           "source_family": "forum",
@@ -130,14 +138,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "When you knew you were actually living here. Neukölln. Caught the scent of fresh currywurst while walking past the Kottbusser Tor late at night—it was the moment I knew this place "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berliner Mietspiegel 2026: Was besonders auffällig ist – und was besonders teuer - Berliner Morgenpost. Berliner Mietspiegel 2026: Was besonders auffällig ist – und was besonders t"
         },
         {
           "source_family": "public",
@@ -149,33 +149,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Modern 6-Bedroom Apartment for Sale/rent in Berlin. 🏡 6-Bedroom House for Sale/rent Location:Berlin I’m offering a spacious 6-bedroom house for sale/rent . The property is suitabl"
+          "excerpt": "Doen Doen - I like their yufka more than the döner but you can’t go wrong with either Sanctuary Cafe neundrei (not all their cakes are vegan but all their vegan cakes are delicious"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
+        "source_item_count": 123,
         "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-28T19:04:23.072Z",
-      "mood_score": 0.438,
+      "captured_at": "2026-05-28T20:55:54.782Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -184,8 +184,7 @@
         "weather": 1
       },
       "languages": [
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
@@ -194,23 +193,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "What do you always check before renting an apartment in SF?. Apartment hunting again and trying not to repeat past mistakes. Besides the usual tour, I’ve been paying way more atten"
+          "excerpt": "Noise level on Mason Street & (Bush, Pine, California). Hi all, I’m looking at a few apartments on Mason Street, near Bush, Pine, and California (Know it's a busy area). I lived on"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "You do realize that a “6 figure salary” still makes you low income in the Bay Area by the Federal standard, right? The low income level starts at over 100k in the Bay Area. It’s ex"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I am impressed. And my like me. When 1% of a population pays 50% of the bills, that is commendable, not a travesty. Just because you are angry doesn't make you right. Imagine I com"
+          "excerpt": "Month to month rent. Went month to month rent on a 2 bed apartment Rent is currently $4500 and in my same area its $7000 now... management was suppose to give me a new lease by now"
         },
         {
           "source_family": "public",
@@ -222,33 +213,41 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Month to month rent. Went month to month rent on a 2 bed apartment Rent is currently $4500 and in my same area its $7000 now... management was suppose to give me a new lease by now"
+          "excerpt": "Your conspiracy theory makes no sense. Most companies don’t own their office buildings. That rent them. It’s in their direct interest to reduce their office footprint as much as ph"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I’m right around there. It’s going to be noisy but it’s just city noise. The ambulance sirens from the hospital nearby can be a bit intense sometimes depending if your window faces"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.034,
+        "source_item_count": 112,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-28T19:04:23.072Z",
-      "mood_score": 0.415,
+      "captured_at": "2026-05-28T20:55:54.782Z",
+      "mood_score": 0.418,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -263,20 +262,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell by their excitement over getting a brunch spot at 11am on a Sunday when locals know it's packed and often reserved."
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "Today, a thick blanket of clouds hangs over Barcelona, dampening the vibrant colors of the city and promising rain that lingers just out of reach.. The mood on the R1 line is grim "
+          "excerpt": "The sun breaks through a patchy sky, casting warm light on the cobblestones while a refreshing breeze stirs the fallen leaves.. Commuters eye the sporadic train schedules with a mi"
         },
         {
           "source_family": "public",
@@ -301,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Si ya Pompeu Fabra la lió, viene un parguela a... \"Contractat per al Institut de la Llengua!\" \"Ascendiu-li a vice-gerent\""
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Ja sabem que es pels porcs senglars que esta tancat el parc. Però quina necessitat hi ha de que l'Ajuntament pixi fora de test intentant vendre a la ciutadania que el tancament es "
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.014,
+        "source_item_count": 84,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 0.801
       }
     }
   ]
