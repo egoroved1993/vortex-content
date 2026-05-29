@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-29T03:21:21.595Z",
+    "capturedAt": "2026-05-29T05:37:16.792Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 404
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-29T03:21:21.595Z",
-      "mood_score": 0.431,
+      "captured_at": "2026-05-29T05:37:16.792Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 23,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -57,44 +65,36 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "affordable housing is so important tbh, so many of the new build developments are expensive and it’s stopping people from being able to move on from precarious renting/homeless sit"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I've seen people miss their stop on crowded trains because they couldn't squeeze through to get off. Any situation where doing the right thing has a chance of really inconveniencin"
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Night bus confessions. Bermondsey. Caught the 188 late last night, and the driver was blasting classic disco. Only in Bermondsey would the night bus turn into a dance party."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Harrow-on-the Hill and Uxbridge while we fix a faulty train at Rayners Lane. GOOD"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.056,
+        "source_item_count": 97,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-29T03:21:21.595Z",
+      "captured_at": "2026-05-29T05:37:16.792Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, RE1: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -146,19 +154,11 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I’m from Chicago, all my favorite dive bars are still cash-only! It was confirmation that we were in the right kind of place, haha. And, I’m a child of Polish immigrants so I don’t"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Berliner Mietspiegel 2026: Was besonders auffällig ist – und was besonders teuer - Berliner Morgenpost. Berliner Mietspiegel 2026: Was besonders auffällig ist – und was besonders t"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.013,
+        "source_item_count": 123,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "events",
@@ -169,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-29T03:21:21.595Z",
-      "mood_score": 0.431,
+      "captured_at": "2026-05-29T05:37:16.792Z",
+      "mood_score": 0.437,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 36,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,30 +189,6 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "\\> But often the landlord treats a property as \"their\" home and views the tenants as nothing more than a money pot, not actual people. Uh, it IS there home. Imagine renting out you"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah I don't live in the city but I go up there a lot to ride my bike. When you're a construction worker you've got to escape the heat of the South bay. I take a ride starting at t"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "\\> I agree there's a balance, but I think that once a landlord starts renting out their property, the property ceases to fully be \"their\" home until every tenant is moved out. What"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -221,33 +197,57 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Canopy.space rent out conference rooms without a membership commitment for a few hours or a full day. They have a few locations in the city."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yeah going with Oakland much more to do and walkability. Might try Berkeley or Lake Merritt. I don’t think the commute would be that bad since you are going the opposite way traffi"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "How often can rent be raised per year?. I live in a non rent controlled unit, on month to month, and my rent was increased 2 months ago. I’ve received notice that my rent is going "
+          "excerpt": "Pride Weekend flights - how crowded is SFO Monday 11pm?. Trying to book a flight the Monday after Pride Weekend 6/27-28. For anyone who’s traveled then, how crowded would SFO be fo"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they’ve plotted routes to avoid the BART delays that seem to happen every Friday like c"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.056,
+        "source_item_count": 102,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-29T03:21:21.595Z",
-      "mood_score": 0.377,
+      "captured_at": "2026-05-29T05:37:16.792Z",
+      "mood_score": 0.376,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -262,12 +262,20 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "spain is solid if you want reliable infrastructure, decent coworking spots, and a social scene that’s easy to tap into. cities like barcelona or valencia have enough expats and dec"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a washed-out gray, punctuated by a biting chill that drifts through the narrow streets.. Commuters at Sants station display a mix of impatience and resilience as they"
+          "excerpt": "The sun beats down fiercely, wrapping the city in a warm embrace, yet a cool breeze whispers through the narrow streets.. The trains are overcrowded with frustrated commuters, thei"
         },
         {
           "source_family": "public",
@@ -280,37 +288,29 @@
         {
           "source_family": "public",
           "source_origin": "reddit_post",
+          "language": "es",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "GuB saltándose las normas a la ligera. Estaba andando por la vía laietana hace 10 minutos, y en sentido montaña venían dos scooters de la GuB, lento, hablando. Llegan a la cola del"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Collboni i Junts endolceixen les relacions en el tram final del mandat a Barcelona"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Lo mismo aplica a \"compro tu coche, aunque este embargado\". Es abuso de gente financieramente vulnerable."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Si ya Pompeu Fabra la lió, viene un parguela a... \"Contractat per al Institut de la Llengua!\" \"Ascendiu-li a vice-gerent\""
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.008,
+        "source_item_count": 82,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.8
+        "freshness_score": 0.795
       }
     }
   ]
