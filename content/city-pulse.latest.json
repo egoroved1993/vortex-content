@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-29T19:03:44.841Z",
+    "capturedAt": "2026-05-29T20:56:45.287Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 402
+    "totalItems": 418
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-29T19:03:44.841Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-05-29T20:56:45.287Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to a track fault at Aldgate East."
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -71,43 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May, no service between Rayners Lane and Uxbridge. Pl"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.063,
+        "source_item_count": 91,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-29T19:03:44.841Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-05-29T20:56:45.287Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -116,20 +116,28 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Berlin do people celebrate a bus strike with picnics on the roads, making the most of transit chaos like it’s a public"
+        },
+        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, S9, RE7, S7: Delays 5 trips delayed"
+          "excerpt": "Berlin transit S3, RE7, 200: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I don´t think that there is a specific \"Arsenal Bar\" but many Bars will show the CL Finale regardless of who is playing. Could be very crowded though, so maybe try to call some bar"
+          "excerpt": "If you don't get any first hand experiences, you can get a lot of information and a school inspection report from 2019 here: The schools should soon announce their \"Tag der offenen"
         },
         {
           "source_family": "news",
@@ -146,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The air is thick with the scent of damp earth as a light drizzle falls, casting a chill that catches you off guard despite the mild October temperatures.. After a day of service di"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.021,
+        "source_item_count": 122,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.904
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-29T19:03:44.841Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-05-29T20:56:45.287Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 54,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,7 +193,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "You can rent bikes. Getting around the City on one is fun, just remember we drive on the right side of the road :) Across the GG Bridge and maybe ferry back. As noted, the gun thin"
+          "excerpt": "You definitely should have moved when rents were just recovering from COVID drops. That said I locked in a rent controlled 2bd for $3400 earlier this year. Keep an eye open, and ju"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Why is so hard / expensive to live in bay area even with a \"good\" salary. Maybe is just me? Food is pretty expensive specially to get the \"high quality\" / healthy ones It's hard to"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Does anyone here actually live on treasure island?. I've been to TI a few times for concerts at Gold Bar and that field. I don't think I've seen a single resident walking around, o"
         },
         {
           "source_family": "public",
@@ -209,45 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Check what your coverage is for crowns with MetLife. It will fall under the “major” category. Then I would ask what is your maximum and deductible for the year. A crown without ins"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Pride Weekend flights - how crowded is SFO Monday 11pm?. Trying to book a flight the Monday after Pride Weekend 6/27-28. For anyone who’s traveled then, how crowded would SFO be fo"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local if they can name the taco truck behind the laundromat but still can’t figure out "
+          "excerpt": "Even after the pandemic BART‘s ridership recover completely stalled before they got serious about fare enforcement. And as soon as they did that their ridership exploded and their "
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.03,
+        "source_item_count": 120,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-29T19:03:44.841Z",
-      "mood_score": 0.382,
+      "captured_at": "2026-05-29T20:56:45.287Z",
+      "mood_score": 0.38,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -273,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in a flat blue sky, casting long shadows on the warm cobblestones of La Rambla.. Commuters are visibly frustrated as they swap stories of delays caused by the ong"
+          "excerpt": "The sky is a patchwork of gray clouds, threatening rain yet holding back, creating a damp chill that lingers in the air.. Commuters on the Rodalies train are exchanging glances of "
         },
         {
           "source_family": "public",
@@ -303,12 +303,12 @@
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": 0.005,
+        "source_item_count": 85,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
         "freshness_score": 0.815
       }
