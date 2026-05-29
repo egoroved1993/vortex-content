@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-29T07:35:35.920Z",
+    "capturedAt": "2026-05-29T09:23:24.479Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,33 +21,25 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-29T07:35:35.920Z",
+      "captured_at": "2026-05-29T09:23:24.479Z",
       "mood_score": 0.434,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,35 +71,43 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: No service between Acton Town and Heathrow Airport and between Rayners Lane and Uxbridge due to planned"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "You might get some folk who will try to gatekeep that Chromebooks are useless but honestly, and a bit of bias, they're actually pretty damn good to use. Okay, they're essentially a"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.047,
+        "source_item_count": 92,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "routine"
         ],
-        "freshness_score": 0.907
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-29T07:35:35.920Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-29T09:23:24.479Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,20 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, RE1: Delays 4 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I also will always be a defender of DB! I am always surprised that people get so annoyed with being late, I don’t understand how that can be so difficult for someone. For me it’s a"
+          "excerpt": "That's also my question. I assume that 20 Euro/sqm rent or 800 for a room in a WG is still cheap compared to other cities like London, NYC, Amsterdam, Paris, Barcelona etc"
         },
         {
           "source_family": "public",
@@ -153,12 +145,20 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I’m from Chicago, all my favorite dive bars are still cash-only! It was confirmation that we were in the right kind of place, haha. And, I’m a child of Polish immigrants so I don’t"
+          "excerpt": "Depends on what they are planning. If it's the typical standard buffet and the occasional wine in a not-too-fancy environment, you're good to go with 50 per person. If it's more on"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "it is not a contradiction. two things can be true 1) you can have ethics around inclusiveness and 2) you can cater events for a certain crowd (wich means exclude everyone else). in"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.015,
+        "source_item_count": 121,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "events",
@@ -169,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-29T07:35:35.920Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-05-29T09:23:24.479Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 36,
+        "public": 44,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -194,6 +194,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni bus today with a man arguing with himself about the weather; had a surprising clarity in the chaos of the Tenderloin's"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "But it's not the landlord's home. A home is where you live. It's a property the landlord own as a business venture, but it's the tenant's home. (Not including sharing a unit with a"
         },
         {
           "source_family": "public",
@@ -217,37 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yeah going with Oakland much more to do and walkability. Might try Berkeley or Lake Merritt. I don’t think the commute would be that bad since you are going the opposite way traffi"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Pride Weekend flights - how crowded is SFO Monday 11pm?. Trying to book a flight the Monday after Pride Weekend 6/27-28. For anyone who’s traveled then, how crowded would SFO be fo"
+          "excerpt": "It's located on one of the main north/south routes through the city. I'd expect traffic noise and parking issues. If you don't own a car then you'll find that the area is well serv"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.044,
+        "source_item_count": 110,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-29T07:35:35.920Z",
-      "mood_score": 0.376,
+      "captured_at": "2026-05-29T09:23:24.479Z",
+      "mood_score": 0.377,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -262,20 +262,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "spain is solid if you want reliable infrastructure, decent coworking spots, and a social scene that’s easy to tap into. cities like barcelona or valencia have enough expats and dec"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in a clear blue sky, casting sharp shadows over the bustling streets of Barcelona, where the air is thick with warmth and a hint of salt from the nearby sea.. Wit"
+          "excerpt": "The sun hangs low in the sky, casting a golden hue over the bustling streets, but a crisp breeze hints at the coolness of the evening to come.. The mood in the crowded metro is ten"
         },
         {
           "source_family": "public",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Collboni i Junts endolceixen les relacions en el tram final del mandat a Barcelona"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Lo mismo aplica a \"compro tu coche, aunque este embargado\". Es abuso de gente financieramente vulnerable."
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.011,
+        "source_item_count": 83,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 0.808
       }
     }
   ]
