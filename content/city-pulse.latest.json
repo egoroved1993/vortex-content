@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-29T05:37:16.792Z",
+    "capturedAt": "2026-05-29T07:35:35.920Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-29T05:37:16.792Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-29T07:35:35.920Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -65,36 +73,28 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Bermondsey. Caught the 188 late last night, and the driver was blasting classic disco. Only in Bermondsey would the night bus turn into a dance party."
-        },
-        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Harrow-on-the Hill and Uxbridge while we fix a faulty train at Rayners Lane. GOOD"
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: No service between Acton Town and Heathrow Airport and between Rayners Lane and Uxbridge due to planned"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.027,
+        "source_item_count": 99,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-29T05:37:16.792Z",
+      "captured_at": "2026-05-29T07:35:35.920Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100, RE1: Delays 2 trips delayed"
+          "excerpt": "Berlin transit M5, RE1: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -158,19 +158,19 @@
       ],
       "metadata": {
         "source_item_count": 123,
-        "average_valence": -0.014,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-29T05:37:16.792Z",
-      "mood_score": 0.437,
+      "captured_at": "2026-05-29T07:35:35.920Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -187,6 +187,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni bus today with a man arguing with himself about the weather; had a surprising clarity in the chaos of the Tenderloin's"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -218,19 +226,11 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Pride Weekend flights - how crowded is SFO Monday 11pm?. Trying to book a flight the Monday after Pride Weekend 6/27-28. For anyone who’s traveled then, how crowded would SFO be fo"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they’ve plotted routes to avoid the BART delays that seem to happen every Friday like c"
         }
       ],
       "metadata": {
         "source_item_count": 102,
-        "average_valence": -0.039,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,10 +241,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-29T05:37:16.792Z",
+      "captured_at": "2026-05-29T07:35:35.920Z",
       "mood_score": 0.376,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
@@ -275,7 +275,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun beats down fiercely, wrapping the city in a warm embrace, yet a cool breeze whispers through the narrow streets.. The trains are overcrowded with frustrated commuters, thei"
+          "excerpt": "The sun hangs low in a clear blue sky, casting sharp shadows over the bustling streets of Barcelona, where the air is thick with warmth and a hint of salt from the nearby sea.. Wit"
         },
         {
           "source_family": "public",
@@ -310,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.795
+        "freshness_score": 0.803
       }
     }
   ]
