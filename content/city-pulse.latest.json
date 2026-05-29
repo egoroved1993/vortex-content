@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-29T11:15:48.603Z",
+    "capturedAt": "2026-05-29T13:22:04.040Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 406
+    "totalItems": 398
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-29T11:15:48.603Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-05-29T13:22:04.040Z",
+      "mood_score": 0.436,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -40,6 +40,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to a track fault at Aldgate East. Tickets are being accepted on London buses via any reas"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -63,48 +79,32 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Severe Delays Suffragette Line: Severe delays due to an earlier signal failure."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "You might get some folk who will try to gatekeep that Chromebooks are useless but honestly, and a bit of bias, they're actually pretty damn good to use. Okay, they're essentially a"
         }
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.043,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.914
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-29T11:15:48.603Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-05-29T13:22:04.040Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 44,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -121,15 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, S9, RE1, S7, S5: Delays 8 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "That's also my question. I assume that 20 Euro/sqm rent or 800 for a room in a WG is still cheap compared to other cities like London, NYC, Amsterdam, Paris, Barcelona etc"
+          "excerpt": "Berlin transit S5, S9, M5, RE7: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -148,34 +140,42 @@
           "excerpt": "Camping in dark areas query. Hi there, I'm wondering if there's a good place to camp in a tent with a handful of friends reachable from Berlin by train (ideally not too far) which "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Depends on what they are planning. If it's the typical standard buffet and the occasional wine in a not-too-fancy environment, you're good to go with 50 per person. If it's more on"
+          "excerpt": "When you knew you were actually living here. Neukölln. The old lady at the bakery yelling at the pigeons to get lost while handing me a warm Brötchen felt oddly like home."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.009,
+        "source_item_count": 115,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-29T11:15:48.603Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-29T13:22:04.040Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 44,
+        "public": 39,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -209,14 +209,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Canopy.space rent out conference rooms without a membership commitment for a few hours or a full day. They have a few locations in the city."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "It's located on one of the main north/south routes through the city. I'd expect traffic noise and parking issues. If you don't own a car then you'll find that the area is well serv"
         },
         {
@@ -226,28 +218,36 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Pride Weekend flights - how crowded is SFO Monday 11pm?. Trying to book a flight the Monday after Pride Weekend 6/27-28. For anyone who’s traveled then, how crowded would SFO be fo"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Like any neighborhood, depends on your personal experience. We lived in Noe 2021-2025 renting a flat in a cute Victorian and found it to be isolating. Surrounded by large multi-mil"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.019,
+        "source_item_count": 105,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-29T11:15:48.603Z",
-      "mood_score": 0.375,
+      "captured_at": "2026-05-29T13:22:04.040Z",
+      "mood_score": 0.38,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -270,12 +270,12 @@
           "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can find quiet spots in Gràcia during fiesta de Gràcia. The locals have the same idea, and it gets packed w"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun blazes down, casting a golden hue on the cobblestone streets, while a gentle sea breeze teases the crowds along La Rambla.. The normally bustling Rodalies trains are eerily"
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Está bien pero hoy en día no se ven tantos en comparación a los 2000s que sí que eran una plaga."
         },
         {
           "source_family": "public",
@@ -303,8 +303,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.015,
+        "source_item_count": 85,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "routine",
