@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-29T15:18:23.720Z",
+    "capturedAt": "2026-05-29T17:22:30.850Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,25 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 399
+    "totalItems": 390
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-29T15:18:23.720Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-05-29T17:22:30.850Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
-        "weather": 1
+        "transport": 6
       },
       "languages": [
         "en"
@@ -54,15 +53,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to a track fault at Aldgate East."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Chesham due to train cancellations. The next service to depart Che"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to a track fault at Aldgate East."
         },
         {
           "source_family": "transport",
@@ -79,34 +70,41 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May, no service between Rayners Lane and Uxbridge. Pl"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.067,
+        "source_item_count": 87,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
-        "freshness_score": 0.926
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-29T15:18:23.720Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-05-29T17:22:30.850Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 14,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 41,
+        "news": 47,
         "nightlife": 40,
-        "trends": 8,
         "transport": 1,
         "weather": 1
       },
@@ -121,23 +119,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, S7, RE1, 100: Delays 5 trips delayed"
+          "excerpt": "Berlin transit RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Renting a Booster Seat While Traveling. We will be staying with a family while in Germany for two weeks, and some amount of our travel will be in their car. Our car seats will not "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Camping in dark areas query. Hi there, I'm wondering if there's a good place to camp in a tent with a handful of friends reachable from Berlin by train (ideally not too far) which "
+          "excerpt": "I don´t think that there is a specific \"Arsenal Bar\" but many Bars will show the CL Finale regardless of who is playing. Could be very crowded though, so maybe try to call some bar"
         },
         {
           "source_family": "news",
@@ -154,32 +144,40 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.56,
+          "excerpt": "Das Wetter in Berlin heute: Warm durch den Tag - nachts etwas Regen - wetter.com. Das Wetter in Berlin heute: Warm durch den Tag - nachts etwas Regen"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.012,
+        "source_item_count": 109,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-29T15:18:23.720Z",
+      "captured_at": "2026-05-29T17:22:30.850Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 39,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 45,
         "trends": 8,
         "weather": 1
       },
@@ -193,7 +191,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "But it's not the landlord's home. A home is where you live. It's a property the landlord own as a business venture, but it's the tenant's home. (Not including sharing a unit with a"
+          "excerpt": "You can rent bikes. Getting around the City on one is fun, just remember we drive on the right side of the road :) Across the GG Bridge and maybe ferry back. As noted, the gun thin"
         },
         {
           "source_family": "public",
@@ -209,7 +207,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It's located on one of the main north/south routes through the city. I'd expect traffic noise and parking issues. If you don't own a car then you'll find that the area is well serv"
+          "excerpt": "Check what your coverage is for crowns with MetLife. It will fall under the “major” category. Then I would ask what is your maximum and deductible for the year. A crown without ins"
         },
         {
           "source_family": "public",
@@ -225,29 +223,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Like any neighborhood, depends on your personal experience. We lived in Noe 2021-2025 renting a flat in a cute Victorian and found it to be isolating. Surrounded by large multi-mil"
+          "excerpt": "If it was actually historic, it’d be protected already. They’re literally just grasping at straws in an attempt to stop development. North Beach can fuck especially off in their at"
         }
       ],
       "metadata": {
-        "source_item_count": 105,
-        "average_valence": -0.022,
+        "source_item_count": 110,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-29T15:18:23.720Z",
-      "mood_score": 0.383,
+      "captured_at": "2026-05-29T17:22:30.850Z",
+      "mood_score": 0.38,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -273,9 +271,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a pastel canvas, streaked with soft wisps of cloud, while a warm sun bathes the streets in golden light.. Despite the ongoing train strikes, a small crowd at the Plaça d"
+          "excerpt": "The sun hangs low in the sky, casting a golden hue over the bustling streets, while a cool breeze carries the faint scent of olives from nearby vendors.. The platforms of Plaça Cat"
         },
         {
           "source_family": "public",
@@ -303,14 +301,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": 0.008,
+        "source_item_count": 84,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.8
       }
     }
   ]
