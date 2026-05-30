@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-30T05:26:17.551Z",
+    "capturedAt": "2026-05-30T07:13:17.007Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-30T05:26:17.551Z",
-      "mood_score": 0.414,
+      "captured_at": "2026-05-30T07:13:17.007Z",
+      "mood_score": 0.425,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
         "review": 2,
@@ -33,29 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays following a late finish of engineering works."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays following a late finish of engineering work."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Part Suspended District Line: No service between Earl's Court and Wimbledon due to a late finish of engineering work. London Buses and"
+          "excerpt": "London transit Elizabeth line: Minor Delays No service between Hayes & Harlington and Heathrow Airport due to a signal failure caused by flooding at Heathrow Termin"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -79,25 +71,33 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Planned Closure LIONESS LINE: Saturday 30 and Sunday 31 May, no service between Euston and Watford Junction. There will also be no BAKER"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May, no service between Rayners Lane and Uxbridge. Pl"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.135,
+        "source_item_count": 96,
+        "average_valence": -0.103,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.915
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-30T05:26:17.551Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-05-30T07:13:17.007Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -115,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg can you find currywurst served with a side of techno beats at a street vendor late at night—pure Berlin chao"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -138,38 +154,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "To be fair, this was supposed to be a train station at some point, but the train line was never built. It's been used as a set for a bunch of movies, like Bourne Supremacy, Hunger "
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Orlando Rosé, Yoofee, yungfya, Ken Okuda at Marmorbar (Berlin) on 2026-05-30T00:00:00.000 [House, Broken Beat]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": -0.015,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-30T05:26:17.551Z",
+      "captured_at": "2026-05-30T07:13:17.007Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -230,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.001,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-30T05:26:17.551Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-05-30T07:13:17.007Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -281,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a mix of heavy gray clouds, threatening rain, with a cool breeze that carries the scent of wet pavement.. Trains are running late due to the ongoing strike, and commu"
+          "excerpt": "The sky hangs heavy with clouds, casting a muted gray light over the bustling streets of Barcelona, hinting at rain yet to come.. The mood at the train station is a mix of frustrat"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 88,
-        "average_valence": 0.013,
+        "average_valence": 0.015,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.834
       }
     }
   ]
