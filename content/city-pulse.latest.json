@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-30T16:30:00.977Z",
+    "capturedAt": "2026-05-30T17:30:11.729Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 431
+    "totalItems": 436
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-30T16:30:00.977Z",
-      "mood_score": 0.433,
+      "captured_at": "2026-05-30T17:30:11.729Z",
+      "mood_score": 0.431,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
@@ -54,6 +54,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
@@ -62,15 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Tower Hill and Earl's Court westbound only due to an earlier points failure at Tower"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to train cancellations."
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -82,8 +82,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.078,
+        "source_item_count": 106,
+        "average_valence": -0.085,
         "dominant_themes": [
           "general",
           "transit",
@@ -94,8 +94,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-30T16:30:00.977Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-05-30T17:30:11.729Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,7 @@
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 300, RE1, S7, S5: Delays 4 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -132,44 +140,36 @@
           "excerpt": "Since when is it okay to do road work inside the city at 630 in the morning on a freaking Saturday?. I live on Rosa Luxemburg Strasse and was woken up at 630 by the loud noises of "
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin do you get a public transport strike that feels like everyone suddenly remembers their bikes exist, right "
+        },
+        {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Orlando Rosé, Yoofee, yungfya, Ken Okuda at Marmorbar (Berlin) on 2026-05-30T00:00:00.000 [House, Broken Beat]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.025,
+        "source_item_count": 119,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-30T16:30:00.977Z",
+      "captured_at": "2026-05-30T17:30:11.729Z",
       "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -179,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -229,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.055,
+        "source_item_count": 118,
+        "average_valence": -0.056,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-30T16:30:00.977Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-05-30T17:30:11.729Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -273,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "A cool breeze dances through the streets, carrying the scent of rain-soaked asphalt from last night’s downpour.. The usually bustling Terrassa train station feels eerily quiet as c"
+          "excerpt": "The sun breaks through thick clouds, casting a warm glow on the wet pavements left from a morning drizzle.. A palpable anxiety hangs over commuters waiting for delayed Rodalies tra"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": 0.003,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.836
       }
     }
   ]
