@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-30T01:07:50.173Z",
+    "capturedAt": "2026-05-30T03:17:59.432Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 398
+    "totalItems": 400
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-30T01:07:50.173Z",
-      "mood_score": 0.426,
+      "captured_at": "2026-05-30T03:17:59.432Z",
+      "mood_score": 0.43,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -71,33 +79,25 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "How did elephant get such an amazing LGBTQ community. I've been living here for 15+ years. And I love how the community has developed. The rising was so impressive, even before it'"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Are there consequences for paying Thames water a few days late?. I have to pay a Thames water bill for the past 6 months by today, and due to a holiday in my home country, I probab"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.072,
+        "source_item_count": 87,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-30T01:07:50.173Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-05-30T03:17:59.432Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 12,
@@ -107,6 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -147,29 +148,29 @@
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the clouds intermittently, casting fleeting shadows on the damp pavement from last night's rain.. With the BVG strike over, commuters shuffle onto trams and "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.56,
+          "excerpt": "Das Wetter in Berlin heute: Warm durch den Tag - nachts etwas Regen - wetter.com. Das Wetter in Berlin heute: Warm durch den Tag - nachts etwas Regen"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.007,
+        "source_item_count": 117,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-30T01:07:50.173Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-05-30T03:17:59.432Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -186,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy juggling on the 19 bus today while a toddler giggled. That’s San Francisco – chaos and charm all in one ride."
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -225,25 +218,33 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Same! I only make 85k but found my own spot during pandemic. It’s a huge chunk of my paycheck tho and the yearly (albeit capped) rent increases are inching up. Funny my income does"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Is it just me or does the MUNI suck more than usual lately?. It feels like the MUNI has become much more unreliable than normal and obviously my experience is completely anecdotal "
         }
       ],
       "metadata": {
         "source_item_count": 109,
-        "average_valence": -0.051,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-30T01:07:50.173Z",
+      "captured_at": "2026-05-30T03:17:59.432Z",
       "mood_score": 0.505,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -282,7 +283,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a persistent drizzle painting the streets, making the colorful tiles of La Rambla shine like freshly polished gems.. The mood on the metro is tense, a"
+          "excerpt": "The sky hangs heavy with clouds, the kind that threaten rain but only offer a chilly breeze that sends shivers through the afternoon.. The atmosphere at the train station is tense "
         },
         {
           "source_family": "public",
@@ -306,10 +307,10 @@
         "average_valence": 0.016,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.829
       }
     }
   ]
