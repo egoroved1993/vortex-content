@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-30T15:33:54.567Z",
+    "capturedAt": "2026-05-30T16:30:00.977Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 431
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-30T15:33:54.567Z",
-      "mood_score": 0.422,
+      "captured_at": "2026-05-30T16:30:00.977Z",
+      "mood_score": 0.433,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 27,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 12,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -62,6 +62,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Tower Hill and Earl's Court westbound only due to an earlier points failure at Tower"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to train cancellations."
         },
         {
@@ -70,44 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier signal system failure and an earlier fire alert at Wembley Park. Tickets a"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Planned Closure LIONESS LINE: Saturday 30 and Sunday 31 May, no service between Euston and Watford Junction. There will also be no BAKER"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier signal system failure and an earlier fire alert at Wembley Park."
         }
       ],
       "metadata": {
-        "source_item_count": 105,
-        "average_valence": -0.113,
+        "source_item_count": 103,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-30T15:33:54.567Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-05-30T16:30:00.977Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300, 100, RE1: Delays 3 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "So you agree, that i am right? The law specifically states exactly what i said. But this is a specialty to Berlin, that in Berlin a kitchen needs to have a stove. Other than that, "
         },
         {
           "source_family": "public",
@@ -157,29 +157,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.024,
+        "source_item_count": 118,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-30T15:33:54.567Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-05-30T16:30:00.977Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 45,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "trends": 8,
         "weather": 1
       },
@@ -191,9 +191,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "It’s really not worth buying out a tenant. And most people will not accept the buyout unless they’re moving somewhere far away because the rent saved by staying is probably more th"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I remember touring a massive 1 bed 1 bath near Alamo sq back in late 2023 and it was going for $1900… I didn’t take it because it had grates on every window 🤦🏼‍♂️"
+          "excerpt": "Before I bought a house in the bay, I was living in Laurel heights in a 3br rent controlled apt for 1400 a month — no roommates. Once I left they shot the price up to 3,800."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "They can buy out the tenant in that cause. But we know they don’t want to do that. They’d rather lose money on rent than pay someone $$$$$ to leave before renovating and selling."
         },
         {
           "source_family": "public",
@@ -210,44 +226,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Does anyone here actually live on treasure island?. I've been to TI a few times for concerts at Gold Bar and that field. I don't think I've seen a single resident walking around, o"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Oof yeah, luckily laundry is a block away but it’s a pain in the ass. I used to have in unit laundry but also roommates. That’s the hardest transition. Overall I prefer it too thou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Is it just me or does the MUNI suck more than usual lately?. It feels like the MUNI has become much more unreliable than normal and obviously my experience is completely anecdotal "
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.018,
+        "source_item_count": 117,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-30T15:33:54.567Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-05-30T16:30:00.977Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -264,14 +264,6 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Está bien pero hoy en día no se ven tantos en comparación a los 2000s que sí que eran una plaga."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
@@ -281,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The winter sun filters through a hazy sky, casting a warm glow on the cobblestones of the Born district.. With the ongoing strike, the platforms are buzzing with restless commuters"
+          "excerpt": "A cool breeze dances through the streets, carrying the scent of rain-soaked asphalt from last night’s downpour.. The usually bustling Terrassa train station feels eerily quiet as c"
         },
         {
           "source_family": "public",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Ayuda. Hola gente, estoy a la espera de que salga mi permiso de trabajo. Lamentablemente agote mis ahorros y estoy al borde de quedar en la calle. Estoy buscando cualquier tipo de "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Exacte. Si una pegatina i un cartell mig destrossat dun d'aquests locals t'indigna, anem malament. Que per cert a tots els ploramiques afectats aixo era ahir a les 23.00 i avui 8.1"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": 0.018,
+        "source_item_count": 93,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.837
       }
     }
   ]
