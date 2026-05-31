@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-31T09:12:46.160Z",
+    "capturedAt": "2026-05-31T10:46:55.194Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-31T09:12:46.160Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-05-31T10:46:55.194Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays between Wembley Park and Stanmore and MINOR DELAYS due to train cancellations. Tickets will"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Severe delays between Wembley Park and Stanmore and MINOR DELAYS due to train cancellations. Tickets will"
         },
         {
           "source_family": "transport",
@@ -70,34 +78,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Clapham Junction and Stratford while we fix an electrical fault in the Euston area."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May, no service between Rayners Lane and Uxbridge. Pl"
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to congestion caused by an event."
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.042,
+        "source_item_count": 102,
+        "average_valence": -0.071,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-31T09:12:46.160Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-05-31T10:46:55.194Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 18,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 2 trips delayed"
+          "excerpt": "Berlin transit S9, RE1, RE7: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -148,29 +148,29 @@
           "excerpt": "When coming back from a long trip with heavy luggage, a nice man helped me carry it down to the U-Bahn coz there were no Rolltreppe During that same trip, I needed help figuring ou"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun cuts through a scattered blanket of grey clouds, casting patches of golden light on the damp streets.. Buses and trams are finally running again after the recent strike, bu"
         }
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.023,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-31T09:12:46.160Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-05-31T10:46:55.194Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -231,21 +231,21 @@
       ],
       "metadata": {
         "source_item_count": 115,
-        "average_valence": -0.051,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-31T09:12:46.160Z",
+      "captured_at": "2026-05-31T10:46:55.194Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 28,
@@ -284,7 +284,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds looms over Barcelona, casting a soft, gray hue on the bustling streets while a light drizzle creates a reflective sheen on the pavements.. The mood at the"
+          "excerpt": "The sky hangs heavy with gray clouds, promising rain that lingers just out of reach, leaving a humid breath on the city streets.. The mood on the metro is tense, with commuters gla"
         },
         {
           "source_family": "public",
@@ -309,9 +309,9 @@
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "tourism"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.831
       }
     }
   ]
