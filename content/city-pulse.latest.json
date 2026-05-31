@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-31T17:31:12.546Z",
+    "capturedAt": "2026-05-31T18:35:03.842Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 440
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-31T17:31:12.546Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-05-31T18:35:03.842Z",
+      "mood_score": 0.459,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 17,
+        "transport": 19,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "Tube strikes June 2026 live: Dates and lines affected as London set for chaos - The Mirror. Tube strikes June 2026 live: Dates and lines affected as London set for chaos"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -78,24 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Turnham Green and Richmond and MINOR DELAYS on the rest of the line due to a earlie"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to a earlier points failure at Tower Hill."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Abbey Wood and MINOR DELAYS between Whitechapel and Shenfield due to an earlier saf"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.102,
+        "source_item_count": 115,
+        "average_valence": -0.12,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-31T17:31:12.546Z",
-      "mood_score": 0.449,
+      "captured_at": "2026-05-31T18:35:03.842Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 42,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -132,47 +140,39 @@
           "excerpt": "To escalate it, you need proof of some kind that it was stolen. Like you can prove you were in the line, meanwhile the wristband was paying for drinks in another location. Overall "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is breaking through scattered clouds, casting a warm glow over the bustling streets of Mitte.. The U-Bahn is unusually packed this afternoon, with commuters jostling for sp"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Got this reel and gathered quite honestly the most out of touch comments... I don't directly live in Berlin but what the hell?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Anyone with experience with the \"Hauptmann-von-Köpenick Grundschule\"?. Starting to look around for primary schools for my daughter and the public school she's attached to is the \"H"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.003,
+        "source_item_count": 118,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-31T17:31:12.546Z",
+      "captured_at": "2026-05-31T18:35:03.842Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 49,
@@ -233,15 +233,15 @@
         "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-31T17:31:12.546Z",
+      "captured_at": "2026-05-31T18:35:03.842Z",
       "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -291,7 +291,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of gray clouds hangs low over the city, threatening rain but holding back to cast a moody, muted light on the streets.. Crowded platforms at Plaça de Catalunya buzz"
+          "excerpt": "The sky hangs heavy with clouds, threatening rain, as a cool breeze carries the scent of damp earth through the streets.. The mood in the metro is visibly tense, with commuters cas"
         },
         {
           "source_family": "public",
@@ -310,7 +310,7 @@
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.819
       }
     }
   ]
