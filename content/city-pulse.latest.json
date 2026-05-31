@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-05-30T23:29:15.305Z",
+    "capturedAt": "2026-05-31T01:14:57.884Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 400
+    "totalItems": 403
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-05-30T23:29:15.305Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-05-31T01:14:57.884Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 13,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -54,60 +54,59 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Ealing Broadway/ Richmond and Tower Hill eastbound due to an earlier points failure"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to train cancellations and an earlier signal system failure. London Buses, C2C, Mildmay"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Planned Closure LIONESS LINE: Saturday 30 and Sunday 31 May, no service between Euston and Watford Junction. There will also be no BAKER"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May, no service between Rayners Lane and Uxbridge. Pl"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Thursday 28, Friday 29, Saturday 30 and Sunday 31 May (including Friday and Saturday Night Tube), no se"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Hackney. You still look for a seat on the bus rather than squeezing in; locals know it's a standing only kind of ride most days."
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.139,
+        "source_item_count": 85,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-05-30T23:29:15.305Z",
+      "captured_at": "2026-05-31T01:14:57.884Z",
       "mood_score": 0.444,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -132,20 +123,12 @@
           "excerpt": "Since when is it okay to do road work inside the city at 630 in the morning on a freaking Saturday?. I live on Rosa Luxemburg Strasse and was woken up at 630 by the loud noises of "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "just certain kind of people are doing that and honestly i have nothing to say about it except that‘s their culture. i once lived in a wg with two people from the same country movin"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Orlando Rosé, Yoofee, yungfya, Ken Okuda at Marmorbar (Berlin) on 2026-05-30T00:00:00.000 [House, Broken Beat]"
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The autumn sun peeks through a veil of gray clouds, casting a soft glow on the damp pavements of Kreuzberg.. With the recent strike fresh in everyone's mind, commuters wait patient"
         },
         {
           "source_family": "news",
@@ -154,32 +137,48 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Got this reel and gathered quite honestly the most out of touch comments... I don't directly live in Berlin but what the hell?"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
+        "source_item_count": 112,
         "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
-          "belonging"
+          "transit"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-05-30T23:29:15.305Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-05-31T01:14:57.884Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 38,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "trends": 8,
         "weather": 1
       },
@@ -189,35 +188,35 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Were you able to get an answer? My landlord recently increased rent by \\~6% - it is a single family home owned by the landlord and I have the in-law unit. Landlord doesn't live in "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "They get just as greedy as the corporate ones. I bought my house because I got tired of taking my little old lady landlord to court for all her rent violations. I lived in West Oak"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Do you know if you qualify for rent control? Is the unit legal? If not, 6% is low so honestly, feel grateful. Mine is going up 30%."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Does anyone here actually live on treasure island?. I've been to TI a few times for concerts at Gold Bar and that field. I don't think I've seen a single resident walking around, o"
+          "excerpt": "Feeling guilty over my rent controlled apartment. So I’ve been living in my apartment in Lower Haight in SF since covid and my landlord has never raised my rent since, not even by "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "There's is NO FUCKING WAY IN HELL a landlord in San Francisco will add a new tenant to the lease. When the last tenant on the lease moves out, the landlord will throw a grand party"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "You can legally have someone live with you, yes (given under people) and the landlord cannot legally raise rent, however, they are NOT required to add them to the lease, and if you"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy juggling on the 27 bus to the tune of a ‘90s pop hit, while the usual chaos swirled around. Only in San Francisco, man."
         },
         {
           "source_family": "public",
@@ -225,29 +224,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "People’s perception of this city is so out of whack. Yes it is expensive but come on, not everyone is making 100k+ just like everywhere else in the world."
+          "excerpt": "Bruh, this is shady as fk. We are short on housing as it is. What's going to happen if every tenant just passes down the rental unit to their friends and if you don't anyone here y"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.056,
+        "source_item_count": 110,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-05-30T23:29:15.305Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-05-31T01:14:57.884Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -262,12 +261,20 @@
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs heavily in the sky, glistening off the cobblestones while a light breeze teases the edges of sunbathers in the parks.. The atmosphere at Sants station is tense, with "
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Honestly, I'm going to give you what might sound like a pessimistic reply but I do believe it to be the truth. Good remote white collar jobs, particularly in tech but also across t"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "La gente no vende si no quiere, digo yo que si vende será porque quieren o necesitan venderlo no porque venga el especulador con una pistola. Pero vamos, que me parece bien que qui"
         },
         {
           "source_family": "public",
@@ -292,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "This post was removed for breaking the rule: 'Keep content related to Barcelona' --- Aquesta publicació s'ha eliminat per infringir la regla: 'Mantenir el contingut relacionat amb "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "GuB saltándose las normas a la ligera. Estaba andando por la vía laietana hace 10 minutos, y en sentido montaña venían dos scooters de la GuB, lento, hablando. Llegan a la cola del"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.004,
+        "source_item_count": 96,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.838
       }
     }
   ]
