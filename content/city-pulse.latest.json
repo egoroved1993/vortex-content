@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-02T11:38:55.035Z",
+    "capturedAt": "2026-06-02T13:33:53.028Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,46 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-02T11:38:55.035Z",
-      "mood_score": 0.337,
+      "captured_at": "2026-06-02T13:33:53.028Z",
+      "mood_score": 0.346,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 25,
+        "public": 34,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 17,
+        "transport": 15,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: No service between White City and Liverpool Street and MINOR DELAYS on the rest of the line due to strike"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Part Suspended Central Line: No service between White City and Liverpool Street and MINOR DELAYS on the rest of the line due to strike"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,34 +63,51 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Baker Street and Aldgate and MINOR DELAYS on the rest of the line due to strike ac"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to strike action. Services are operating approximately every 15 minutes."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to strike action. Services are operating approximately every 4 minutes."
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.185,
+        "source_item_count": 115,
+        "average_valence": -0.159,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.912
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-02T11:38:55.035Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-06-02T13:33:53.028Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "That might be a bit expensive for the sole purpose of beeing home 20 min earlier."
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -136,15 +137,15 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "The same used to happen to me when waiting for 142. Sometimes he didn't come, and then there were literally two in a row. 40 minutes of waiting to drive 5 minutes. Ah the good old "
+          "excerpt": "just buy your weed from apotheke. you get good shit for 5-6€ a gram, you're 100% sure of it's provenience and you're not sponsoring this shit."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs low with a thick blanket of gray clouds, occasionally releasing drizzles that glisten on the pavement.. After the chaos of the recent strikes, the platforms are buzzi"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "What do the German people think of walther wenck?. Instead of reliving berlin in ww2 him and the 12th army got civilians out of berlin. Do you guys hate him or do you think that he"
         },
         {
           "source_family": "news",
@@ -156,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.02,
+        "source_item_count": 114,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-02T11:38:55.035Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-02T13:33:53.028Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 44,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,22 +189,6 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "It's expensive but honestly everything is expensive in the Bay Area. Exploratorium is $39.95, just $10 cheaper for adults than CAS. You put together an trip plan for a family and i"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "It's not a bad idea as long as your luggage is in the trunk. But it is an expensive idea. Expect to pay at least $50."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -214,39 +199,55 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It was expensive when it opened and in the early years, but that's really par for the course for anything Bay Area. A kids museum like Curiodyssey is $30 these days, so these price"
+          "excerpt": "Thank you, this is where I'm trending - exactly this. If I stay two nights in my final destination, I would need to be able to get to SFO by 7 AM easily. Sounds like south of the a"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 49 last week, packed with tourists trying to figure out how to pronounce 'Civic Center.' Classic San Francisco confusion."
+          "excerpt": "Gay friends/hangouts/dinners?. Newly minted 30yo gay guy in Mission. Started exploring recently after coming out to my very religious folks back in Feb. Have good support system an"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "It was a great place. Dumplings were 70% hits and 30% missed which is a really good rate, IMO."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "public commute options. hii im trying to get from redwood city (by the caltrain) to the union city kaiser office for an internship, i dont have a car and the commute one way is \\~2"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.012,
+        "source_item_count": 109,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-02T11:38:55.035Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-06-02T13:33:53.028Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -269,28 +270,28 @@
           "excerpt": "I agree tbh. I'm sure many locals assume I'm a rich remote worker based on how I look, while I rent an apartment with a roommate in a local area and work for a Spanish company."
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all locals enjoy the beach, but you’ll find most of us prefer the terrace bars and shady plazas in Gràcia over t"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "My list of places to go eat in Barcelona halved within three years of the pandemic. This could be the natural cycle of the restaurant scene in Barcelona, but the interesting part i"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell a recent arrival by how they still scan the menu for a good ten minutes, lost on the local dishes, while the waiters look on with"
+          "excerpt": "well I used it to make the argument easier but technically isn't correct. Avinguda Meridiana and its (almost not existent) parallels would be the one that go north to south and vic"
         },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun is dipping low, casting orange hues across the cobbled streets, while a cool breeze carries the scent of fresh pan con tomate from nearby cafes.. With the Rodalies train se"
+          "excerpt": "A thick blanket of grey clouds looms overhead, with occasional drizzles that catch the bustling streets like scattered droplets of silver.. The mood on the platforms is tense, as c"
         },
         {
           "source_family": "public",
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": 0.002,
+        "source_item_count": 92,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.817
       }
     }
   ]
