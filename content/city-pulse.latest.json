@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-02T05:45:05.401Z",
+    "capturedAt": "2026-06-02T07:54:19.967Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-02T05:45:05.401Z",
-      "mood_score": 0.335,
+      "captured_at": "2026-06-02T07:54:19.967Z",
+      "mood_score": 0.336,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -46,22 +46,6 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone due to strike action. MINOR DELAYS on the rest of"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Part Suspended Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone due to strike action. MINOR DELAYS on the rest of"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
           "excerpt": "London transit Central: Minor Delays Central Line: No service between White City and Liverpool Street and MINOR DELAYS on the rest of the line due to strike"
         },
         {
@@ -78,26 +62,42 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to strike action."
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to strike action. Services are operating approximately every 10 minutes."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to strike action. Services are operating approximately every 15 minutes."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: No service between Baker Street and Aldgate and MINOR DELAYS on the rest of the line due to strike ac"
         }
       ],
       "metadata": {
         "source_item_count": 102,
-        "average_valence": -0.191,
+        "average_valence": -0.188,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-02T05:45:05.401Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-02T07:54:19.967Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 18,
@@ -107,6 +107,7 @@
         "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -131,45 +140,37 @@
           "excerpt": "That’s especially annoying when the busses are kind of in tact with another bus / tram / s- or u-Bahn. Even worse when it happens at night."
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a slate gray, with low-hanging clouds threatening rain, but the cool air feels refreshing against the bustle of the streets.. After a rough morning of strikes, the U-Bah"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun filters through a light haze, casting a warm glow on the cobblestone streets as a slight breeze carries the faint scent of freshly baked pretzels.. After a long d"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.007,
+        "source_item_count": 122,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "events",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.909
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-02T05:45:05.401Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-06-02T07:54:19.967Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -228,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": 0.008,
+        "source_item_count": 122,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-02T05:45:05.401Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-02T07:54:19.967Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The skies over Barcelona are a patchwork of grey clouds, occasionally letting in beams of sunlight that dance on the wet streets from earlier rain.. The mood on the Rodalies platfo"
+          "excerpt": "The sun blazes down fiercely, casting sharp shadows on the cobblestones of the Gothic Quarter while a mild breeze carries hints of orange blossoms from nearby trees.. With the trai"
         },
         {
           "source_family": "public",
@@ -303,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 97,
-        "average_valence": -0.005,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
