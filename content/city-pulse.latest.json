@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-02T01:16:59.057Z",
+    "capturedAt": "2026-06-02T03:23:16.191Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 437
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-02T01:16:59.057Z",
-      "mood_score": 0.362,
+      "captured_at": "2026-06-02T03:23:16.191Z",
+      "mood_score": 0.346,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11,
+        "transport": 21,
         "weather": 1
       },
       "languages": [
@@ -54,6 +54,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Suspended Bakerloo Line: No service on the entire line due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Central: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take two full days of strike action on Tuesday 2 and T"
         },
         {
@@ -62,40 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Central: Suspended Central Line: No service on the entire line due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Circle: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take two full days of strike action on Tuesday 2 and T"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take two full days of strike action on Tuesday 2 and T"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Special Service TUBE STRIKE: Some London Underground Tube drivers are planning to take two full days of strike action on Tuesday 2 and T"
         }
       ],
       "metadata": {
-        "source_item_count": 105,
-        "average_valence": -0.112,
+        "source_item_count": 115,
+        "average_valence": -0.158,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-02T01:16:59.057Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-06-02T03:23:16.191Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of grey clouds with occasional rays of weak sunlight breaking through, casting a muted silver glow over the streets.. After a tense weekend marked by strikes"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.008,
+        "source_item_count": 119,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-02T01:16:59.057Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-06-02T03:23:16.191Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, work, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -228,22 +229,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": 0.001,
+        "source_item_count": 107,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "work",
           "transit"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-02T01:16:59.057Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-02T03:23:16.191Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, language. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 30,
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun pierces through low-hanging clouds, casting a golden hue over the streets of Barcelona, making the pavement shimmer with promise.. Amid the strike disruptions, frustrated c"
+          "excerpt": "The sun is bright but cool, casting long shadows across the bustling streets as a crisp breeze carries the scent of fresh churros from nearby stalls.. The ongoing strike has left c"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 96,
-        "average_valence": -0.002,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
-          "language"
+          "routine"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.825
       }
     }
   ]
