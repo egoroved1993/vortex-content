@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-03T09:50:49.546Z",
+    "capturedAt": "2026-06-03T11:46:40.905Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 410
+    "totalItems": 409
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-03T09:50:49.546Z",
-      "mood_score": 0.335,
+      "captured_at": "2026-06-03T11:46:40.905Z",
+      "mood_score": 0.326,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -46,6 +47,22 @@
           "valence": -1,
           "recency_weight": 0.88,
           "excerpt": "Delays and suspensions for commuters as Tube strikes continue across London - BBC. Delays and suspensions for commuters as Tube strikes continue across London London Tube strikes g"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "Arsenal fans line London streets in Premier League victory parade - BBC. Arsenal fans line London streets in Premier League victory parade Six people stabbed in London after Arsena"
         },
         {
           "source_family": "public",
@@ -62,51 +79,34 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Because the demand to live in London is far higer than Cardiff and the wages are also higer... I am sure the 250k home in Cardiff is still considered expensive for area and people "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I do. It costs just over £60 a month but my company pays half. I've had awful experiences with the NHS so I consider it essential now. For what I get, it's very good value."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Then you just bulldoze a few more communities to replace with mid quality mid density flats. Rinse, repeat ad infinitum. Silly thing is that people who live or have lived in London"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.045,
+        "source_item_count": 90,
+        "average_valence": -0.07,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-03T09:50:49.546Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-06-03T11:46:40.905Z",
+      "mood_score": 0.453,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -150,28 +142,36 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.283,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray and blue, with autumn leaves swirling in the brisk wind, adding a touch of vibrancy to the day.. After a tumultuous period of strikes, the U-Bahn is "
+          "excerpt": "The sky hangs heavy with grey clouds, a damp chill weaving through the air as occasional raindrops speckle the pavement.. With the recent strike finally lifted, weary commuters shu"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I created moviesberlin.de so everyone can find their preferred movie experience!. I absolutely love going to the movies but I don't have the time to always find the exact experienc"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.001,
+        "source_item_count": 119,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "events",
-          "language"
+          "routine"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-03T09:50:49.546Z",
+      "captured_at": "2026-06-03T11:46:40.905Z",
       "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 47,
@@ -233,15 +233,15 @@
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-03T09:50:49.546Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-06-03T11:46:40.905Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -285,31 +285,31 @@
           "excerpt": "well I used it to make the argument easier but technically isn't correct. Avinguda Meridiana and its (almost not existent) parallels would be the one that go north to south and vic"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The afternoon sun breaks through a blanket of clouds, casting a warm glow on the damp pavement after last night's rain.. With a wave of uncertainty hanging in the air, commuters cr"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Qui ens expulsa dels nostres barris?. Us deixo unes dades demogràfiques de la ciutat de Barcelona, publicades per l'Ajuntament de la ciutat. ||1997|2026| |:-|:-|:-| |Nascuts a Barc"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Not a single free bicing spot where to park in Poblenou. Every single station on this screenshit is taken. People are queuing to leave their bike."
         }
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": -0.009,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.807
       }
     }
   ]
