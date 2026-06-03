@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-03T03:22:56.298Z",
+    "capturedAt": "2026-06-03T05:49:10.507Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 412
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-03T03:22:56.298Z",
-      "mood_score": 0.331,
+      "captured_at": "2026-06-03T05:49:10.507Z",
+      "mood_score": 0.329,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -48,12 +49,20 @@
           "excerpt": "Yeah, back office can still get away with WFH. Most do at least 1-2 days a week - this week being the strike days. My only saving grace is that I live on the Lizzie line so haven’t"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Caught the 45 last night; a guy was singing opera while the driver just sighed. Never a dull moment on these late buses."
+          "excerpt": "Actually in conjunction with the landlord laws that Labor introduced last year, that’s not true."
         },
         {
           "source_family": "news",
@@ -70,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Clarion appoints The Hill Group to deliver 145 new social rent homes at Clare House in Tower Hamlets - London TV. Clarion appoints The Hill Group to deliver 145 new social rent hom"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I mean there is an argument that all zoos are unethical. But that entirely depends on your definition of the ethicality of keeping animals. London has some great city farms. Small "
         }
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.055,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-03T03:22:56.298Z",
-      "mood_score": 0.456,
+      "captured_at": "2026-06-03T05:49:10.507Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -103,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1, S7, RE7: Delays 3 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -138,46 +148,38 @@
           "excerpt": "Well, when doing something in public service, like driving a bus, it can align. That includes a basic understanding what good your work does. You’re responsible for thousands of pe"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the scattered clouds, creating a warm glow that contrasts with the crisp autumn air swirling around the streets.. After days of disruption, the hustle of peo"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. I knew I was home when the sound of kids playing in the street perfectly mingled with the aroma of Döner from the corner shop"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": 0.017,
+        "source_item_count": 122,
+        "average_valence": 0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-03T03:22:56.298Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-06-03T05:49:10.507Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -185,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The Cali housing prices are outrageous tho …have you ever been to the Midwest? I am from PA and the mortgages are two times cheaper than some of these Cali rent prices. Insanity!"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -203,46 +197,54 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "2b2b is possible. Look for apartments or condos for rent that has 2 master bedrooms and have a roommate. You can also take the high frequency bus 22 or 522 if your workplace is nea"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "So dumb. Clipper 1 could work offline, by design, in case a big earthquake.took out the communication. Clipper 2.0 should have never been approved. The MTC needs to be broken up. I"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I wish someone would write more about Yucatec migration to the SF. Kind of a lot of restaurants specializing in yucatec cuisine and also a ton of folks cooking out of their homes a"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "good place to buy affordable and good quality furniture - mostly a bed, 2 seater sofa and a adjustable desk. I'm looking at ikea, but not sure how good the quality is? I'm not look"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What are your fave upscale kid-friendly restaurants?. Shout out to Foreign Cinema and their amazing \"fancy\" kids menu. My husband's bday is coming up and I want to make a family th"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Gay friends/hangouts/dinners?. Newly minted 30yo gay guy in Mission. Started exploring recently after coming out to my very religious folks back in Feb. Have good support system an"
         }
       ],
       "metadata": {
         "source_item_count": 115,
-        "average_valence": 0.01,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-03T03:22:56.298Z",
+      "captured_at": "2026-06-03T05:49:10.507Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 22,
@@ -279,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.612,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun is piercing through a thin veil of clouds, casting a warm glow on the bustling streets of Barcelona.. With the ongoing strike of Rodalies maquinistes, the mood at the crowd"
+          "excerpt": "The sun is blazing down, casting a sharp glare on the tiled façades of Eixample, making the air shimmer with a heat haze.. The mood in the metro is tense, as commuters shuffle anxi"
         },
         {
           "source_family": "public",
@@ -302,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 88,
-        "average_valence": -0.006,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "transit",
-          "tourism"
+          "routine"
         ],
-        "freshness_score": 0.806
+        "freshness_score": 0.805
       }
     }
   ]
