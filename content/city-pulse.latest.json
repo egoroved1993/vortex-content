@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-04T11:12:58.516Z",
+    "capturedAt": "2026-06-04T13:22:20.868Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,45 +16,29 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 441
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-04T11:12:58.516Z",
-      "mood_score": 0.431,
+      "captured_at": "2026-06-04T13:22:20.868Z",
+      "mood_score": 0.429,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 15
+        "transport": 18
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone due to strike action. A shuttle service is ope"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone due to strike action. A shuttle service is ope"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -78,32 +62,48 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Severe Delays District Line: Severe delays on the entire line due to strike action. Services are operating approximately every 10 minu"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to strike action. Services are operating approximately every 30 minutes."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Baker Street and Aldgate due to strike action. SEVERE DELAYS between Harrow-on-the"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.204,
+        "source_item_count": 111,
+        "average_valence": -0.209,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-04T11:12:58.516Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-06-04T13:22:20.868Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1
@@ -113,6 +113,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "If the city expropriates expensive apartments and lowers the rent, then the lucky people who are living there will take up more space. If I were living in a two-person WG at 20 €/m"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "We have a very high supply of expensive apartments that nobody can afford. New apartments are useless if nobody in the city can afford to rent them. Expropriating the apartments, w"
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -127,57 +143,41 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE1, RE7, U5, 200, 300: Delays 7 trips delayed"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "i always used runway only as a fallback of sorts and with the last possible timeslot in case of massive train delays etc, usually arriving well before the new scanners are so incre"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Absolutely, BVG are the ones hiring the contractors. And I am not trying to defend them, not least because the closed side of Seestraße station has been a major headache for me. Bu"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "This is so cool!!!!!does anybody here have experience with reporting flats that are offered on Immoscout as furnished with time limited contract? It’s illegal, too, but I reported "
+          "excerpt": "Visa. I have a small slight issue I guess I am on student visa in Berlin I need slight help how to apply for extension of my student visa as still my classes are going on and my vi"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.034,
+        "source_item_count": 123,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-04T11:12:58.516Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-06-04T13:22:20.868Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 35,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8
       },
       "languages": [
@@ -188,25 +188,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "I can't imagine a NP saying they're as qualified as docs and if I heard one say that I'd run screaming out of the office but I have worked with several NPs when my doc was unavaila"
+          "excerpt": "Rent will always be expensive here, it’s just a matter of how much. You can’t roll back the clock on life… live it. Don’t regret not doing it"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "Easy solution: make rent prices lower. If rent prices are higher than what City Hall demands, they should be lowered through a special meeting and special law. Building more housin"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If you wear a backpack on a crowded bus I will walk right through you. I’m 6’3” 210 pounds so enjoy the jolt. And I won’t even say anything to you because you clearly already DGAG "
+          "excerpt": "See 2020 prop C where they passed a similar gross receipts tax thinking “nobody will actually leace” and boom many fintechs and banks all left and we were left in a worse position."
         },
         {
           "source_family": "public",
@@ -214,37 +206,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It’s not easy to figure out the fair bill without a sub meter. Assume the heater and water heater are the main culprits for gas usage, but you don’t know the efficiency for either "
+          "excerpt": "stay in condo, bank your money. a free place that's empty 95% of the time.. use 1% of the copious amount of savings not spent on rent to get the 10m taxi to and from the Marina."
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy in a full suit calmly reading a newspaper while the bus was inching along during a protest. Only in SF can you be late and"
+          "excerpt": "I can't imagine a NP saying they're as qualified as docs and if I heard one say that I'd run screaming out of the office but I have worked with several NPs when my doc was unavaila"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "marina is worth it for the social life especially at your age, just make sure you find solid roommates who arent flaky with rent"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.03,
+        "source_item_count": 111,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
-          "routine",
-          "work"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-04T11:12:58.516Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-04T13:22:20.868Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 31,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -268,10 +268,18 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Point is, electric bikes makes the service considerably more expensive compared to mechanical only 50eur/year flat rate (= 14 cents/day) If I used electric bike twice a day every d"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "es",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yo, es que estoy cansado de tanta propaganda contra Barcelona, debe ser que vivo en otra ciudad diferente al resto de barceloneses o es que tengo el recuerdo de los años 80 y 90, c"
+          "excerpt": "Genial, estas cosas son un fastidio. Vivo en el barrio gótico y la empresa de alquiler a menudo las deja justo delante de nuestra puerta Y tengo que arrastrarlos para apartarlos de"
         },
         {
           "source_family": "public",
@@ -279,15 +287,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "well I used it to make the argument easier but technically isn't correct. Avinguda Meridiana and its (almost not existent) parallels would be the one that go north to south and vic"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The autumn sun casts a warm glow over the bustling streets, providing a stark contrast to the cool breeze that rustles the fallen leaves.. The atmosphere at the train stations is f"
+          "excerpt": "Three times this week I've had to lift one of these bikes to unblock a sidewalk here in Gràcia. I think more bikes is a good idea, but only if they have specific anchor stations li"
         },
         {
           "source_family": "public",
@@ -299,14 +299,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.015,
+        "source_item_count": 96,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.78
+        "freshness_score": 0.837
       }
     }
   ]
