@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-04T22:38:18.307Z",
+    "capturedAt": "2026-06-04T23:34:12.143Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 448
+    "totalItems": 446
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-04T22:38:18.307Z",
-      "mood_score": 0.243,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-04T23:34:12.143Z",
+      "mood_score": 0.459,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
         "review": 2,
@@ -33,29 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 14,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Baker Street and Aldgate and SEVERE DELAYS on the rest of the line due to strike a"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Baker Street and Aldgate and SEVERE DELAYS on the rest of the line due to strike a"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -78,24 +62,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Suspended Circle Line: No service on the entire line due to strike action."
+          "excerpt": "London transit Circle: Suspended Circle Line: No service due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Suspended District Line: No service due to strike action."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Suspended Hammersmith and City Line: No service due to strike action."
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.168,
+        "source_item_count": 99,
+        "average_valence": -0.121,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-04T22:38:18.307Z",
-      "mood_score": 0.343,
+      "captured_at": "2026-06-04T23:34:12.143Z",
+      "mood_score": 0.344,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,10 +104,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -140,37 +139,37 @@
           "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a heavy tapestry of gray, with a few stubborn drops of rain splattering against pavements as the wind carries a chill that hints at autumn's approach.. Despite the earli"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "I'd also like to point out that my home on the free market would rent for around 1,000€ per month (not sure how much exactly). If I were allowed to charge that much I would conside"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a blanket of gray, with a light drizzle intermittently kissing the pavement, making umbrellas bloom like flowers on the sidewalks.. The mood on the U-Bahn is a mix of re"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.02,
+        "source_item_count": 115,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-04T22:38:18.307Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-06-04T23:34:12.143Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -179,7 +178,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -229,19 +228,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 132,
-        "average_valence": 0.016,
+        "source_item_count": 131,
+        "average_valence": 0.023,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-04T22:38:18.307Z",
+      "captured_at": "2026-06-04T23:34:12.143Z",
       "mood_score": 0.396,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism. The signal still feels live today.",
@@ -289,9 +288,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.612,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun is shining brightly, casting sharp shadows on the cobblestones as a warm breeze carries the scent of fresh pastries from nearby bakeries.. People are squeezing into the pac"
+          "excerpt": "The sky is a moody gray, with a light drizzle painting the pavements and making the vibrant tiles of La Rambla glisten like jewels.. The mood at the Estació de Sants is tense; comm"
         },
         {
           "source_family": "public",
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 101,
-        "average_valence": -0.013,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.84
       }
     }
   ]
