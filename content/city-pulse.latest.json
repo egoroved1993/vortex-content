@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-05T13:16:39.688Z",
+    "capturedAt": "2026-06-05T15:10:58.777Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-05T13:16:39.688Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-06-05T15:10:58.777Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,29 +33,12 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
-        "weather": 1
+        "transport": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -78,24 +61,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Clapton. You still think that buskers in the tube are a joy rather than just another reason to avoid the station during strike cha"
+          "excerpt": "Things that instantly reveal you just moved here. Hackney. You still call it the Tube instead of just the ‘underground’ and you’re baffled by how locals navigate the delays with a "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "Severe rush hour disruption for Tube passengers as drivers strike for second time this week - BBC. Severe rush hour disruption for Tube passengers as drivers strike for second time"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Build to Rent highlighted as key part of London's housing delivery - BTR News. Build to Rent highlighted as key part of London's housing delivery"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.072,
+        "source_item_count": 91,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-05T13:16:39.688Z",
-      "mood_score": 0.341,
+      "captured_at": "2026-06-05T15:10:58.777Z",
+      "mood_score": 0.344,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,7 +103,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -121,7 +120,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, 200, RE7: Delays 4 trips delayed"
+          "excerpt": "Berlin transit RE7, RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,39 +139,39 @@
           "excerpt": "Plus rent and insurance (even if it's hidden in the scandalous taxes withdrawn from your paycheck) and everything else. On the plus side, German Boomers get their cushy pensions an"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun peeks through a patchy sky, casting a warm glow on the damp pavement from last night’s rain.. People move cautiously at the U-Bahn station, a mix of relief and wariness as "
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Gray clouds loom overhead, drizzling intermittently, giving the streets a reflective sheen that catches the muted colors of autumn leaves.. With the recent strike resolved, commute"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.025,
+        "source_item_count": 124,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-05T13:16:39.688Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-06-05T15:10:58.777Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, work, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, work, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 50,
@@ -230,21 +229,21 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": 0.011,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "work",
-          "money"
+          "transit"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-05T13:16:39.688Z",
+      "captured_at": "2026-06-05T15:10:58.777Z",
       "mood_score": 0.393,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 26,
@@ -281,9 +280,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun casts a warm golden hue over the crowded streets, while a light breeze attempts to soothe the lingering heat of the day.. Trains are unusually quiet today, with m"
+          "excerpt": "The sun beats down mercilessly, casting golden hues on the bustling streets while a few wispy clouds provide intermittent relief.. The metro is unusually packed due to the ongoing "
         },
         {
           "source_family": "public",
@@ -308,9 +307,9 @@
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.836
       }
     }
   ]
