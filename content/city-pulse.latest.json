@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-05T07:43:48.296Z",
+    "capturedAt": "2026-06-05T09:21:12.870Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 410
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-05T07:43:48.296Z",
-      "mood_score": 0.484,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-06-05T09:21:12.870Z",
+      "mood_score": 0.23,
+      "mood_label": "low",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between King's Cross St Pancras and Arnos Grove eastbound only due to a signalling problem"
+          "excerpt": "London transit Lioness: Severe Delays Lioness Line: Severe delays while we fix a signal failure at Willesden Junction. London Underground are accepting ticket"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays while we fix a points failure at Liverpool Street."
+          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Severe delays between Chingford and Liverpool Street and MINOR DELAYS on the rest of the line while we fix"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays between Chingford and Liverpool Street and MINOR DELAYS on the rest of the line while we fix"
         },
         {
           "source_family": "public",
@@ -71,43 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Finding a HMO flat is the bane of my life. Why is every HMO flat more expensive and if worse quality than non HMO flats. Finding somewhere for myself and 2 friends is actually a ni"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "You have to go for a celebratory sub £3 pint at the local wetherspoons and put at least £20 into the fruit machine. During the course of which, you must strike up conversation with"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.046,
+        "source_item_count": 90,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.85
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-05T07:43:48.296Z",
+      "captured_at": "2026-06-05T09:21:12.870Z",
       "mood_score": 0.346,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,23 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Tuition is not 0 everywhere. Living costs are not** capped. The 12k are just the amount you need to show for visa application but it will not be enough in many places. In Berlin or"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good luck, isn't BVG working hours completely crazy? Like you have let's say 8 hours a day as a workday but it is not a solid 8 hours straight but with hours in-between so you basi"
+          "excerpt": "Berlin transit RE7, RE1: Delays 2 trips delayed"
         },
         {
           "source_family": "news",
@@ -148,38 +132,54 @@
           "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sun breaks through the clouds intermittently, casting a warm glow but leaving a cool breeze that keeps people bundled in light jackets.. After a tumultuous few days of strikes,"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "I'd also like to point out that my home on the free market would rent for around 1,000€ per month (not sure how much exactly). If I were allowed to charge that much I would conside"
+          "excerpt": "It wasn't in the sidewalk but in the Radweg, but there were 2 of these manchild swerving right and left, I ring my bell a few times, they didn't look back but seemed to stop so I g"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "It's the only idea I've come up with about why they avoid bike lanes and streets without just assuming that they're awful anti-social people who think they're the center of the wor"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.012,
+        "source_item_count": 115,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-05T07:43:48.296Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-06-05T09:21:12.870Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 39,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -191,9 +191,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This 100% you probably may have to show paystubs or a bank statement but you can also if you get income from other sources add that in. 130k a month for a 3300k is going to be hard"
+          "excerpt": "Right. Rent control (and prop 13 for that matter) are either wonderful or terrible depending on how long you have lived there. Do they benefit poor people? Yes Do they disadvantage"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "City Hall, do your job. Rent prices are out of control while tenants are being squeezed harder every year. Simply building more developments hasn’t solved the affordability crisis."
         },
         {
           "source_family": "public",
@@ -201,53 +209,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This is the most convincing answer. Rent is going up each year until SF cools down and it's not cooling down anytime soon. Everyone's rents are going up max each year, bet on it."
+          "excerpt": "Actually there is a law that says almost exactly this. AB 2493, enacted in 2024, says that the landlord must review applications in the order they were received and accept the firs"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Better is subjective, but on its current path it will effectively price out all middle and lower middle class families which I don’t think is sustainable. NY is very expensive too "
+          "excerpt": "Good idea on reporting to both departments, I called park police for san Mateo but was sent to voicemail and left a message. I actually posted to a professional dog walking guild o"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I avoid SFO as much as possible (SJC is just 👌 when my flight destinations and schedules allow). Ironically I just flew out of SFO today to Dulles…2 hour delay for scheduled maint"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I know of a few people who provide this service, and the price, last time I checked is typically one month’s rent or 5K, whichever is more. Many renters don’t want to pay that, but"
+          "excerpt": "Move out and get roommates?. I’m in my early 20s. Long story short, I live alone in my mom's condo for free and I'm not allowed to have roommates. She lives in the North Bay and co"
         }
       ],
       "metadata": {
-        "source_item_count": 104,
-        "average_valence": -0.026,
+        "source_item_count": 111,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-05T07:43:48.296Z",
-      "mood_score": 0.392,
+      "captured_at": "2026-06-05T09:21:12.870Z",
+      "mood_score": 0.396,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 32,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -270,20 +270,12 @@
           "excerpt": "Point is, electric bikes makes the service considerably more expensive compared to mechanical only 50eur/year flat rate (= 14 cents/day) If I used electric bike twice a day every d"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Genial, estas cosas son un fastidio. Vivo en el barrio gótico y la empresa de alquiler a menudo las deja justo delante de nuestra puerta Y tengo que arrastrarlos para apartarlos de"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a canvas of deep gray clouds, heavy with the threat of rain, while the air is thick with humidity, making the heat feel more intense.. The trains are unusually quiet tod"
+          "excerpt": "The crisp autumn air carries the scent of roasted chestnuts from street vendors, while the sun casts a warm glow over the colorful façades of Eixample.. The usually bustling Metro "
         },
         {
           "source_family": "public",
@@ -300,11 +292,19 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Qui ens expulsa dels nostres barris?. Us deixo unes dades demogràfiques de la ciutat de Barcelona, publicades per l'Ajuntament de la ciutat. ||1997|2026| |:-|:-|:-| |Nascuts a Barc"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Not a single free bicing spot where to park in Poblenou. Every single station on this screenshit is taken. People are queuing to leave their bike."
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.023,
+        "source_item_count": 94,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "tourism",
