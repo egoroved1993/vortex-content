@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-06T18:37:29.919Z",
+    "capturedAt": "2026-06-06T19:36:48.558Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-06T18:37:29.919Z",
-      "mood_score": 0.418,
+      "captured_at": "2026-06-06T19:36:48.558Z",
+      "mood_score": 0.412,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays anticlockwise due to a customer incident at Sloane Square"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 6 and Sunday 7 June, no service between Turnham Green and Ealing Broadway. Replacement buses ope"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: No service between Turnham Green and Ealing Broadway due to planned engineering work. SEVERE DELAYS on th"
         },
         {
           "source_family": "transport",
@@ -62,40 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to an earlier track fault at Kilburn. Tickets will be accepted on London Buses, Li"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 6 June, from 0045, and all day Sunday 7 June, no service between Hammersmith and Heathrow (All"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to an earlier track fault at Kilburn."
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.093,
+        "source_item_count": 97,
+        "average_valence": -0.113,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-06T18:37:29.919Z",
-      "mood_score": 0.299,
+      "captured_at": "2026-06-06T19:36:48.558Z",
+      "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,8 +104,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 50,
         "nightlife": 40,
+        "trends": 8,
         "transport": 1,
         "weather": 1
       },
@@ -120,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S3, RE1: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin can you find a park party that doubles as a protest against gentrification. Beats and banners coexist on S"
         },
         {
           "source_family": "public",
@@ -142,34 +151,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray with sporadic bursts of sunlight breaking through, casting a hopeful glow on the wet pavement.. After the recent BVG strikes, people are cautiously o"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I am picking up AfD talking points as common German sentiment? AfD is the leading party in Berlin, ranking nearly 30% in national polls and over 40% in some states, of course I lis"
+          "excerpt": "The autumn sun filters through a veil of lingering clouds, casting a warm, golden glow that contrasts sharply with the crisp chill in the air.. After the recent strike, the trains "
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.002,
+        "source_item_count": 112,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "language"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-06T18:37:29.919Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-06-06T19:36:48.558Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 48,
         "trends": 8,
         "weather": 1
       },
@@ -228,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.023,
+        "source_item_count": 118,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-06T18:37:29.919Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-06T19:36:48.558Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
@@ -264,9 +265,17 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun is casting long shadows, with a warm breeze carrying the salty scent of the sea through the bustling streets.. Public transport is a mixed bag today, with crowded buses and"
+          "excerpt": "A thick layer of clouds has rolled in, cloaking the city in a grey hue while the humidity hangs heavy in the air.. With the ongoing strike affecting Rodalies, commuters are glued t"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
         },
         {
           "source_family": "public",
@@ -291,19 +300,11 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Qui ens expulsa dels nostres barris?. Us deixo unes dades demogràfiques de la ciutat de Barcelona, publicades per l'Ajuntament de la ciutat. ||1997|2026| |:-|:-|:-| |Nascuts a Barc"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Hi dormo des-de que vaig marxar de Barcelona, vaig treure a la família d'allà i tinc el pis en venta, imagina't que ni ganes tinc d'especular amb l'habitatge, ben lluny de la Barce"
         }
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.004,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "tourism",
