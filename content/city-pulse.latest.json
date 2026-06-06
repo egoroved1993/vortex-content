@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-06T01:08:58.168Z",
+    "capturedAt": "2026-06-06T03:18:08.980Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 400
+    "totalItems": 376
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-06T01:08:58.168Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-06-06T03:18:08.980Z",
+      "mood_score": 0.436,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -49,12 +49,12 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 6 June, from 0045, and all day Sunday 7 June, no service between Hammersmith and Heathrow (All"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Will there be another London Tube strike as four-day week dispute continues? - My London. Will there be another London Tube strike as four-day week dispute continues?"
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
           "source_family": "public",
@@ -82,31 +82,31 @@
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.045,
+        "source_item_count": 82,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-06T01:08:58.168Z",
-      "mood_score": 0.491,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-06-06T03:18:08.980Z",
+      "mood_score": 0.292,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 44,
         "nightlife": 40,
-        "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. Sitting in the park, I overheard kids arguing over who gets to be a pigeon today. That’s when I realized this place is a blen"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -150,26 +142,34 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a patchwork of gray and blue, with a cool breeze that carries the scent of autumn leaves.. After a chaotic week of strikes, the U-Bahn is running smoothly, though a f"
+          "excerpt": "The sky is a muted gray, heavy with clouds, but a cool breeze carries the crisp scent of impending rain.. After days of uncertainty, the streets are buzzing with commuters relieved"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Alaska is proof that the restaurant will be full regardless of what the patatas cost. I‘m sure there’s eventually a breaking point somehwhere, but I don’t think the owner has to fe"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.027,
+        "source_item_count": 102,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-06T01:08:58.168Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-06T03:18:08.980Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +178,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 45,
         "trends": 8,
         "weather": 1
       },
@@ -228,22 +228,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.015,
+        "source_item_count": 118,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-06T01:08:58.168Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-06T03:18:08.980Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -251,7 +251,6 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
         "weather": 1
       },
       "languages": [
@@ -263,9 +262,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a sharp blue, dotted with cotton candy clouds that cast fleeting shadows over sun-drenched plazas.. Rodalies trains are crowded yet silent, with the hum of passive disse"
+          "excerpt": "The sun casts a bright, shimmering layer over the cobbled streets while a cool breeze rustles through the palm fronds.. Despite the ongoing strike, the metro is unusually packed as"
         },
         {
           "source_family": "public",
@@ -301,14 +300,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.005,
+        "source_item_count": 74,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.8
+        "freshness_score": 0.774
       }
     }
   ]
