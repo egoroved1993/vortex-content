@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-06T11:37:04.332Z",
+    "capturedAt": "2026-06-06T12:39:54.074Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 402
+    "totalItems": 398
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-06T11:37:04.332Z",
-      "mood_score": 0.428,
+      "captured_at": "2026-06-06T12:39:54.074Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -54,14 +54,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: No service between Turnham Green and Ealing Broadway due to planned engineering work and MINOR DELAYS bet"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 6 June, from 0045, and all day Sunday 7 June, no service between Hammersmith and Heathrow (All"
         },
         {
@@ -73,34 +65,42 @@
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays between New Cross Gate and West Croydon while we fix a points failure at Norwood Junction."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "The cost is maintaining a state a state-owned developer that is paid for through council rent"
+          "excerpt": "Yeah to be fair I had flight radar open and waited on the Victoria embankment for like 10mins since I noticed Heathrow arrivals were passing right by the eye. Thought I could line "
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.064,
+        "source_item_count": 89,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-06T11:37:04.332Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-06-06T12:39:54.074Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -116,36 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin does a bus strike turn into a spontaneous street party—everyone embracing the chaos with drinks in hand on"
-        },
-        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100, RE2: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "hm, i am like late a2 and i can pretty clearly hear the difference between saxony, hamburg, bavaria, austrian (close to bavarian but not quite) and like old berlin accent. and i am"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "they should be paying in full “unter vorbehalt” until the problem is resolved, then the lawyer can calculate correctly how much is owed by the landlord"
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -154,23 +130,47 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "It's a sweet festival and you definitely can have a great time there. Have been involved myself for 3 years without mayor regrets. It's on the smaller scale and financially they ar"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The gray sky looms heavy with the promise of rain, casting a muted light over the streets where puddles begin to form.. Despite the resumption of service, the mood on the U-Bahn is"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I feel like this isn’t even that true anymore. All three are pretty dirty, at least in certain parts (just like Berlin!). Even München. South of the Hauptbahnhof doesn’t feel all t"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.028,
+        "source_item_count": 113,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-06T11:37:04.332Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-06-06T12:39:54.074Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -205,14 +205,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Well I got a $6.00 in alameda at Marley G that u apparently think is too expensive for anyone living in the Bay Area to even complain about"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -225,26 +217,34 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "City Hall, do your job. Rent prices are out of control while tenants are being squeezed harder every year. Simply building more developments hasn’t solved the affordability crisis."
+          "excerpt": "I’ve been watching this Jollibee. I should preface this by saying I just walk by her every day. But after such a long time, I have yet to see workers / construction / any noise eve"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Visiting June 15-18: Looking for social things. I'm visiting San Francisco June 15-18 for a work trip. I'm looking for something to do the evenings of June 15 and 16... maybe 17 as"
         }
       ],
       "metadata": {
         "source_item_count": 110,
-        "average_valence": -0.039,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-06T11:37:04.332Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-06T12:39:54.074Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -262,20 +262,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How to spot a recent arrival. Gràcia. You can tell by the way they flinch at the noise of the castellers—locals just cheer them on without a second thought."
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with clouds that threaten rain, yet a warm breeze weaves through the streets, stirring the fallen leaves.. Buses are overcrowded as commuters shuffle"
+          "excerpt": "The afternoon sun blazes over Barcelona, casting long shadows while a warm breeze carries the scent of fresh bread from nearby panaderies.. The usually bustling metro stations are "
         },
         {
           "source_family": "public",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Qui ens expulsa dels nostres barris?. Us deixo unes dades demogràfiques de la ciutat de Barcelona, publicades per l'Ajuntament de la ciutat. ||1997|2026| |:-|:-|:-| |Nascuts a Barc"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Hi dormo des-de que vaig marxar de Barcelona, vaig treure a la família d'allà i tinc el pis en venta, imagina't que ni ganes tinc d'especular amb l'habitatge, ben lluny de la Barce"
         }
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.013,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.806
+        "freshness_score": 0.807
       }
     }
   ]
