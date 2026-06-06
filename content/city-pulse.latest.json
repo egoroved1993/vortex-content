@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-06T22:30:20.960Z",
+    "capturedAt": "2026-06-06T23:29:48.594Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 391
+    "totalItems": 411
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-06T22:30:20.960Z",
-      "mood_score": 0.422,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-06-06T23:29:48.594Z",
+      "mood_score": 0.373,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 22,
         "review": 2,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -54,15 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier faulty track at Kilburn. Tickets are being accepted on London Buses, Eliza"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to an earlier track fault at Kilburn."
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge due to an earlier track fault at Kilburn."
         },
         {
           "source_family": "transport",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.083,
+        "source_item_count": 93,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-06T22:30:20.960Z",
-      "mood_score": 0.245,
+      "captured_at": "2026-06-06T23:29:48.594Z",
+      "mood_score": 0.242,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,8 +104,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
+        "trends": 8,
         "transport": 1,
         "weather": 1
       },
@@ -115,12 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg can you see art students setting up easels in the middle of a kebab shop, capturing the chaos and color of l"
+        },
+        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5, S7, RE2: Delays 3 trips delayed"
+          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -136,7 +145,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks through scattered clouds, casting sharp shadows on damp streets still glistening from an earlier rain.. After a turbulent week of strikes, the buses and U-Bahn are ru"
+          "excerpt": "The early autumn sun breaks through a stubborn veil of clouds, casting a warm glow on the damp pavements after a morning rain.. With the BVG strike just resolved, there's a cautiou"
         },
         {
           "source_family": "public",
@@ -145,30 +154,22 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Anyone been to Skalar festival before?. I was offered some tickets to this festival in exchange for working but I’m not sure if it’s „worth it“. The lineup looks nice and I like th"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "just add to the other comment: \\- do not move officially your old city/ town until you get the new permit. \\- If you know now the ABH in your current town had bad service, you can "
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.013,
+        "source_item_count": 108,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-06T22:30:20.960Z",
+      "captured_at": "2026-06-06T23:29:48.594Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -219,29 +220,29 @@
           "excerpt": "I’ve been watching this Jollibee. I should preface this by saying I just walk by her every day. But after such a long time, I have yet to see workers / construction / any noise eve"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell who's local when they ignore the BART delays and still complain about the heat in the subway. Tourists j"
+          "excerpt": "Yeah, I've been 3 times in the last month or so. They are back. The burger is surprisingly good too."
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.007,
+        "source_item_count": 127,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.903
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-06T22:30:20.960Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-06T23:29:48.594Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
@@ -251,6 +252,7 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
+        "trends": 8,
         "weather": 1
       },
       "languages": [
@@ -263,9 +265,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun blazes down, casting sharp shadows on the bustling pavement while an occasional breeze whispers through the palm trees.. With multiple public transport disruption"
+          "excerpt": "The sky hangs heavy with low-lying clouds, casting a dusky hue over the bustling streets as the humidity thickens the air.. With the subway lines disrupted due to the pope's visit,"
         },
         {
           "source_family": "public",
@@ -301,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 75,
-        "average_valence": -0.004,
+        "source_item_count": 83,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.769
+        "freshness_score": 0.782
       }
     }
   ]
