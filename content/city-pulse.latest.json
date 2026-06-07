@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-07T01:16:32.639Z",
+    "capturedAt": "2026-06-07T03:20:59.449Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 407
+    "totalItems": 409
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-07T01:16:32.639Z",
+      "captured_at": "2026-06-07T03:20:59.449Z",
       "mood_score": 0.379,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 6 June, from 0045, and all day Sunday 7 June, no service between Hammersmith and Heathrow (All"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -71,33 +79,25 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I just imagine to save up a bit of extra cash to eventually buy later? I know 3 lawyers that all live together. They are all on £350k+ and rent a large house together. Each has ple"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah. I basically pearned this going to a developing country 15+ years ago, where i was paying more than i would have in london to get into clubs, and more to buy drinks by the bot"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
+        "source_item_count": 98,
         "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-07T01:16:32.639Z",
-      "mood_score": 0.242,
+      "captured_at": "2026-06-07T03:20:59.449Z",
+      "mood_score": 0.243,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 8,
@@ -107,6 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg can you see art students setting up easels in the middle of a kebab shop, capturing the chaos and color of l"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
         },
         {
           "source_family": "nightlife",
@@ -144,7 +145,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The overcast sky looms heavy, threatening rain, yet a cool breeze carries the scent of roasted chestnuts from nearby stalls.. With the recent strike finally over, the U-Bahn is buz"
+          "excerpt": "The sky is a patchwork of grey clouds and sunbeams, where the crisp autumn air carries the scent of damp leaves.. After the recent strikes, the buses are packed but the commuters s"
         },
         {
           "source_family": "public",
@@ -156,29 +157,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.025,
+        "source_item_count": 114,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-07T01:16:32.639Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-06-07T03:20:59.449Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -228,19 +229,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.006,
+        "source_item_count": 116,
+        "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "money",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-07T01:16:32.639Z",
+      "captured_at": "2026-06-07T03:20:59.449Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
@@ -260,12 +261,20 @@
       ],
       "drivers": [
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with dark clouds, threatening rain, while sporadic bursts of sunshine peek through, casting a moody glow over the bustling streets.. The metro is unusually pack"
+          "excerpt": "The air is thick with humidity, casting a hazy glow over the sun-drenched streets of the Eixample.. Despite the ongoing strike, the usually bustling Plaça de Catalunya echoes with "
         },
         {
           "source_family": "public",
@@ -290,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Qui ens expulsa dels nostres barris?. Us deixo unes dades demogràfiques de la ciutat de Barcelona, publicades per l'Ajuntament de la ciutat. ||1997|2026| |:-|:-|:-| |Nascuts a Barc"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "La quantitat de vegades que he hagut d'apartar bicis perquè estaven enmig del pas expliquen una altre història. Me n'he trobat fins i tot d'aparcades en mig del carril bici, ocupan"
         }
       ],
       "metadata": {
         "source_item_count": 81,
-        "average_valence": -0.009,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.779
+        "freshness_score": 0.781
       }
     }
   ]
