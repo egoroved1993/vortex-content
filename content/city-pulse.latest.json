@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-07T09:12:56.901Z",
+    "capturedAt": "2026-06-07T10:52:29.447Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 401
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-07T09:12:56.901Z",
-      "mood_score": 0.375,
+      "captured_at": "2026-06-07T10:52:29.447Z",
+      "mood_score": 0.385,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -62,51 +62,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: No service between Wembley Park and Aldgate and MINOR DELAYS on the rest of the line while we respond"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Wembley Park and Aldgate and MINOR DELAYS on the rest of the line while we respond"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 7 June, no service between Willesden Junction and Clapham Junction. There will also be no SOUTHERN"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 6 June, from 0045, and all day Sunday 7 June, no service between Hammersmith and Heathrow (All"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.073,
+        "source_item_count": 97,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-07T09:12:56.901Z",
-      "mood_score": 0.239,
+      "captured_at": "2026-06-07T10:52:29.447Z",
+      "mood_score": 0.231,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Berlin can you find a hidden bookshop that doubles as a bar where locals sip cocktails while browsing dusty tomes. It’"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, 248: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -137,39 +154,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. You know it’s a Berlin winter when people start turning U-Bahn stops into outdoor gathering spots. The benches get crowde"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Haensen&Gretel, Late Night Jockel Session, Sinamin at gART.n (Berlin) on 2026-06-07T00:00:00.000 [Disco, Funk / Soul]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
         }
       ],
       "metadata": {
         "source_item_count": 111,
-        "average_valence": -0.032,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-07T09:12:56.901Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-07T10:52:29.447Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -186,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a local when they know to avoid 16th Street BART after 5 PM—it’s a chaos zone with that train brake issu"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -225,25 +218,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Haha I know I came here hoping someone else saw it. Just so crazy. I think the host was just totally out of his element. Not saying it's excusable, but I think everyone on stage wa"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I grew up in the Richmond and hated it for years because I thought it was just boring and foggy but am back living here temporarily and it's really improved on both counts, plus I'"
         }
       ],
       "metadata": {
         "source_item_count": 111,
-        "average_valence": -0.006,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-07T09:12:56.901Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-07T10:52:29.447Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, events.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -268,12 +269,20 @@
           "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can find true tapas in Barelona's packed squares, but the best ones hide in local bars where the locals are"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a washed-out gray, with a light drizzle that kisses the pavement, making the vibrant colors of the buildings stand out even more.. The streets are busy with frustrated c"
+          "excerpt": "The sky is a muted gray, thick with the threat of rain, yet the air carries a warm, sticky humidity that clings to the skin.. Trains are running late today due to the ongoing strik"
         },
         {
           "source_family": "public",
@@ -290,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El Papa Francesc llegint un text a Monserrat el 2023. El Papa Francesc llegint un text pel 800 aniversari de la Confraria de la Mare de Déu de Montserrat: \\- \"Está en Castellano, N"
         }
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.019,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "tourism",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.786
+        "freshness_score": 0.787
       }
     }
   ]
