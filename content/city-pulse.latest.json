@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-08T21:00:52.444Z",
+    "capturedAt": "2026-06-08T21:43:46.666Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-08T21:00:52.444Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-06-08T21:43:46.666Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,8 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6
+        "transport": 6,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -69,32 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Severe Delays Windrush Line: No service between New Cross Gate and West Croydon/Crystal Palace. NO SERVICE between Surrey Quays and Ne"
+          "excerpt": "London transit Windrush: Minor Delays Windrush Line: No service between Surrey Quays and New Cross and MINOR DELAYS between Dalston Junction and Clapham Junct"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Stoke Newington. You still think the Clissold Park café is a secret gem, not just the usual Saturday brunch spot packed with strol"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Surrey Quays and New Cross and MINOR DELAYS between Dalston Junction and Clapham Junct"
         }
       ],
       "metadata": {
-        "source_item_count": 79,
-        "average_valence": -0.071,
+        "source_item_count": 80,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.829
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-08T21:00:52.444Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-08T21:43:46.666Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -103,15 +104,25 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 48,
         "nightlife": 40,
-        "trends": 8
+        "trends": 8,
+        "transport": 2,
+        "weather": 1
       },
       "languages": [
         "de",
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S7, S9, RE2: Delays 4 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -140,34 +151,26 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs low, a blanket of grey threatening rain, but the air is surprisingly warm and humid, hinting at an impending storm.. The mood on the S-Bahn is a mix of relief and fat"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "80ties throwback. Cleaning out the attic at my parents’ house - so many postcards, pictures and dias I need to digitalize Typical Sunday growing up - Spaziergang an der Havel after"
+          "excerpt": "The sky is a muted gray but the air carries a fresh, crisp chill typical of early autumn in Berlin.. After days of disruption, a subtle buzz of relief fills the air as trams and bu"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.003,
+        "source_item_count": 115,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-08T21:00:52.444Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-08T21:43:46.666Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -176,8 +179,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
-        "trends": 8
+        "news": 45,
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -225,22 +229,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 133,
-        "average_valence": -0.032,
+        "source_item_count": 129,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.915
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-08T21:00:52.444Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-08T21:43:46.666Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -248,7 +252,8 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -265,20 +270,12 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun blazes fiercely overhead, casting sharp shadows from the palm trees lining La Diagonal, while a humid breeze pulls at the skirts of passersby.. Commuters are visibly agitat"
+          "excerpt": "The sky is a slate gray, heavy with the scent of impending rain that mingles with the lingering aroma of grilled seafood from nearby tapas bars.. With the ongoing strike of the Rod"
         },
         {
           "source_family": "public",
@@ -295,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.016,
+        "source_item_count": 82,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ],
-        "freshness_score": 0.783
+        "freshness_score": 0.8
       }
     }
   ]
