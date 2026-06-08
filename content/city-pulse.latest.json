@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-08T19:01:34.817Z",
+    "capturedAt": "2026-06-08T19:51:38.963Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 398
+    "totalItems": 407
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-08T19:01:34.817Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-06-08T19:51:38.963Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping / Hainault (via Newbury Park) due to an earlier faulty train a"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping / Hainault via Newbury Park due to an earlier faulty train at"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate and MINOR DELAYS on the rest of the line while w"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate and MINOR DELAYS on the rest of the line while w"
         },
         {
           "source_family": "transport",
@@ -57,45 +73,29 @@
           "excerpt": "London transit Windrush: Severe Delays Windrush Line: No service between New Cross Gate and West Croydon/Crystal Palace. NO SERVICE between Surrey Quays and Ne"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "News - Build-to-rent landlord Quintain expands into third-party management - Inside Housing. News - Build-to-rent landlord Quintain expands into third-party management"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Who sets bus routes/schedules?. Is it TfL or the private operator? I'm on a bus which only goes zone 1 to zone 2 and back, and yet even though it's so busy during rush hour that it"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Hi curious about good bars for a first date in Clapham Not too intimate, but quiet and lowkey so that we can have conversations"
+          "excerpt": "Night bus confessions. Peckham. Last night on the 37, a guy was singing loudly about his cat. Everyone just nodded along. Only in Peckham could you get a concert and a late bus."
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.012,
+        "source_item_count": 90,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-08T19:01:34.817Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-08T19:51:38.963Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 43,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, M5: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -134,9 +143,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "A crisp autumn breeze swirls fallen leaves around, hinting at the chill of approaching winter.. After a tumultuous week of strikes, the U-Bahnen are buzzing with commuters, a mix o"
+          "excerpt": "The sky hangs heavy with gray clouds, threatening rain, while the chill in the air sharpens the scent of wet asphalt.. Despite the buses and U-Bahn rolling back into service, a sen"
         },
         {
           "source_family": "public",
@@ -145,31 +154,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "80ties throwback. Cleaning out the attic at my parents’ house - so many postcards, pictures and dias I need to digitalize Typical Sunday growing up - Spaziergang an der Havel after"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I unknowingly walked by this clown show earlier today and honestly more then half the people there covered in German flags looked like your average asocial or homeless alcoholic’s "
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.011,
+        "source_item_count": 118,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-08T19:01:34.817Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-08T19:51:38.963Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.014,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,10 +241,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-08T19:01:34.817Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-08T19:51:38.963Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 15,
@@ -269,12 +270,20 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a canvas of muted gray, with a cool breeze laced with the scent of rain lingering in the air.. The mood at the train station is a mix of frustration and resignation, wit"
+          "excerpt": "A warm sun blankets Barcelona, mingling with a light breeze that carries the scent of nearby blooming orange trees.. Frustration hangs in the air at the Sants station, where travel"
         },
         {
           "source_family": "public",
@@ -291,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
         }
       ],
       "metadata": {
         "source_item_count": 81,
-        "average_valence": -0.006,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "tourism"
         ],
-        "freshness_score": 0.785
+        "freshness_score": 0.779
       }
     }
   ]
