@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-08T09:50:55.615Z",
+    "capturedAt": "2026-06-08T11:45:50.484Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 396
+    "totalItems": 399
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-08T09:50:55.615Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-06-08T11:45:50.484Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,37 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to an earlier points failure at South Acton."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due an earlier points failure at Camden Town. London Buses are accepting tickets via any re"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -55,47 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "London nightclubs. Me and my friends are going to be in London on 27 June for an event which will finish around half 8/9pm. We want to go clubbing later in the evening and were won"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Hello mate, me again after my weekend at the wave - they were advertising this: Not sure how good it is (or not) but worth a try! I’ll definitely be booking the bus down a few time"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Will there be another London Tube strike as four-day week dispute continues? - My London. Will there be another London Tube strike as four-day week dispute continues?"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.013,
+        "source_item_count": 90,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-08T09:50:55.615Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-08T11:45:50.484Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1, M6, 100, 200: Delays 4 trips delayed"
+          "excerpt": "Berlin transit M5, 200: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -143,9 +143,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "A cool autumn breeze sweeps through the streets, carrying the faint scent of roasting chestnuts from nearby vendors.. With the BVG strike recently ended, a mix of relief and frustr"
+          "excerpt": "The sky is a slate gray, with drizzles interrupting the early autumn chill as commuters hustle beneath their umbrellas.. Many riders are still catching their breath after the recen"
         },
         {
           "source_family": "public",
@@ -157,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.003,
+        "source_item_count": 114,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-08T09:50:55.615Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-06-08T11:45:50.484Z",
+      "mood_score": 0.477,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": -0.063,
+        "average_valence": -0.068,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-08T09:50:55.615Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-08T11:45:50.484Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -273,9 +273,17 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low, casting a warm golden light over the city, while a gentle breeze sweeps through the narrow streets, hinting at the changing seasons.. The platforms are bustling "
+          "excerpt": "The sky hangs heavy with gray clouds threatening rain, but bursts of sunlight break through, illuminating the cobblestone streets below.. The trains are packed but tense; commuters"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
         },
         {
           "source_family": "public",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
         }
       ],
       "metadata": {
         "source_item_count": 79,
-        "average_valence": -0.012,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.773
+        "freshness_score": 0.772
       }
     }
   ]
