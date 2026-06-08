@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-08T01:16:47.850Z",
+    "capturedAt": "2026-06-08T03:23:01.707Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-08T01:16:47.850Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-06-08T03:23:01.707Z",
+      "mood_score": 0.453,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 34,
@@ -82,19 +82,19 @@
       ],
       "metadata": {
         "source_item_count": 100,
-        "average_valence": 0,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
         "freshness_score": 0.829
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-08T01:16:47.850Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-08T03:23:01.707Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -106,6 +106,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,20 +115,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with clouds, threatening rain, yet a cool breeze carries the scent of autumn leaves through the streets.. With the recent strike behind them, commuters appear r"
         },
         {
           "source_family": "public",
@@ -155,8 +156,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.006,
+        "source_item_count": 120,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
@@ -167,8 +168,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-08T01:16:47.850Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-06-08T03:23:01.707Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -228,7 +229,7 @@
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.075,
+        "average_valence": -0.071,
         "dominant_themes": [
           "general",
           "money",
@@ -239,10 +240,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-08T01:16:47.850Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-06-08T03:23:01.707Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
@@ -271,9 +272,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun blazes down harshly, reflecting off the mosaic tiles of Park Güell, while a gentle breeze offers brief moments of relief.. The streets are dotted with frustrated commuters,"
+          "excerpt": "A thick blanket of gray clouds hangs over the city, threatening rain but holding back as the humidity clings to the air.. Public transport is a mixed bag today, with commuters show"
         },
         {
           "source_family": "public",
@@ -302,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 80,
-        "average_valence": 0.009,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.783
+        "freshness_score": 0.767
       }
     }
   ]
