@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-09T13:13:31.806Z",
+    "capturedAt": "2026-06-09T15:17:55.629Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 418
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-09T13:13:31.806Z",
-      "mood_score": 0.382,
+      "captured_at": "2026-06-09T15:17:55.629Z",
+      "mood_score": 0.38,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,12 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Abbey Wood and Heathrow Terminals / Reading while we fix a signal failure at West Ealing. London"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -53,48 +62,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "Doctors to strike at four major north London hospitals next week - London Evening Standard. Doctors to strike at four major north London hospitals next week"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "Doctors strike set to hit several north London hospitals - London Now. Doctors strike set to hit several north London hospitals"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "News - Build-to-rent landlord Quintain expands into third-party management - Inside Housing. News - Build-to-rent landlord Quintain expands into third-party management"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Grey clouds loom overhead, occasionally releasing a fine mist that clings to the streets and adds a sheen to the bustling pavement.. Frustration simmers beneath the surface as comm"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think the market's a quick jaunt, not realizing you’ll need to navigate the endless queues and pop-up stalls fo"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.052,
+        "source_item_count": 87,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-09T13:13:31.806Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-06-09T15:17:55.629Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -103,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 38,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -120,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6, 200, M5, S3: Delays 5 trips delayed"
+          "excerpt": "Berlin transit M5, 100, 248, 200: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -156,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.013,
+        "source_item_count": 115,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-09T13:13:31.806Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-06-09T15:17:55.629Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 128,
-        "average_valence": -0.023,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-09T13:13:31.806Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-06-09T15:17:55.629Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 22,
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun pierces through the clouds today, casting long, dancing shadows on the bustling streets.. The metro stations are brimming with impatience as commuters chat nervously about "
+          "excerpt": "The sun casts a warm golden hue over the plazas, though the chill of early autumn whispers through the air, urging jackets to be pulled out.. Metro cars are packed with lively chat"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 88,
-        "average_valence": -0.023,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.858
       }
     }
   ]
