@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-09T18:55:25.837Z",
+    "capturedAt": "2026-06-09T19:47:48.658Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-09T18:55:25.837Z",
-      "mood_score": 0.375,
+      "captured_at": "2026-06-09T19:47:48.658Z",
+      "mood_score": 0.377,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -83,18 +83,18 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.075,
+        "average_valence": -0.067,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-09T18:55:25.837Z",
+      "captured_at": "2026-06-09T19:47:48.658Z",
       "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -107,6 +107,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE1, 100, 200: Delays 3 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -131,45 +140,37 @@
           "excerpt": "Quite honestly, I do not have the luxury to remain where I am, so I would rather deal with right-wing politics in Germany comparative to what I have to deal with in the Middle East"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is cloaked in a soft, gray blanket, with a light drizzle that leaves a sheen on the cobblestones.. After a tumultuous few days of strikes, the mood on the U-Bahn is a mix o"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, with a light drizzle that glistens on the cobblestones, making the air feel crisp and fresh.. The BVG buses and trams are running, but there'"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "That's a real classic too, started in the 90ies as an alternative to Loveparade when that got too commercial."
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.007,
+        "source_item_count": 120,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-09T18:55:25.837Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-06-09T19:47:48.658Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -228,22 +229,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.028,
+        "source_item_count": 124,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-09T18:55:25.837Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-06-09T19:47:48.658Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 26,
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a veil of gray, as an impending rain carries the scent of damp earth and garlic from nearby tapas bars.. The mood on the metro is a mix of impatience and s"
+          "excerpt": "The afternoon sun filters through wispy clouds, casting a warm glow over the bustling streets as a gentle breeze carries the scent of fresh pastries from nearby bakeries.. The mood"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.022,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.808
       }
     }
   ]
