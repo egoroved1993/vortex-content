@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-09T03:20:13.821Z",
+    "capturedAt": "2026-06-09T05:32:46.183Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 398
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-09T03:20:13.821Z",
-      "mood_score": 0.392,
+      "captured_at": "2026-06-09T05:32:46.183Z",
+      "mood_score": 0.387,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Paddington and Heathrow Terminals / Reading while we fix a signal system failure at Ealing Broadway"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Harrow-on-the-Hill and Wembley Park while we deal with a trespasser on the track a"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Peabody is a Housing Association. It is illegal to rent Peabody rooms out on Air BnB. I would report this to the Police immediately as this could be some sort of exploitation of wh"
+          "excerpt": "Deffo sounds like you're being taken advantage of but also that you moved in without clear boundaries and expectations. It is likely worth looking for alternative living arrangemen"
         },
         {
           "source_family": "public",
@@ -62,44 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "News - Build-to-rent landlord Quintain expands into third-party management - Inside Housing. News - Build-to-rent landlord Quintain expands into third-party management"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.025,
+        "source_item_count": 89,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-09T03:20:13.821Z",
+      "captured_at": "2026-06-09T05:32:46.183Z",
       "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -120,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -139,46 +140,46 @@
           "excerpt": "Eichwalde is a cute little place with a really good döner shop, Bistro Mavi Ay. This weekend is the annual Rosenfest. It's a street fair with food, games, and live music, especiall"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with moody gray clouds, teasing with the threat of rain but holding back for now.. The recently restored bus and tram services have brought a sense of cautious "
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "Clouds blanket the sky, occasionally parting to reveal fleeting glimpses of sunlight that bathe the streets in a soft, golden hue.. Despite the recent BVG strike, buses and trams a"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.014,
+        "source_item_count": 123,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-09T03:20:13.821Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-06-09T05:32:46.183Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -190,17 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "yes definitely they can hover around 2k if you can live in a slightly less attractive neighborhood. TL or mission for example. source, my rent is under 2300 :)"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Happy you enjoyed the experience! I still walk around the city & have, “wow I can’t believe I live here” moments. Hope you come back for a little longer & explore the greater bay a"
+          "excerpt": "That is not how tenant laws work in SF. Landlords cannot simply not renew a lease, even on a month to month — that basically only applies to the rent amount so the landlord can inc"
         },
         {
           "source_family": "public",
@@ -220,28 +213,36 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "turn your electricity for $.50/kwh or more in bay area. spoiler: you dont sell it to pg&e, and you will need some computer rig and network bandwidth. the way you do it is to sell y"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This needs to be so much higher up. OP, do not under any circumstances leave your luggage in the car when you park. Especially if you are going to the touristy places. Your car wil"
+          "excerpt": "That street is fine and you’ll be happy to live in the area. But it will have street noise and police station noise."
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.035,
+        "source_item_count": 127,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-09T03:20:13.821Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-09T05:32:46.183Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
       "dominant_sentiment": "neutral",
@@ -269,20 +270,20 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think we all love the park, but locals know it’s just a good spot to dodge the midday sun and catch a break from the c"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
         },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low, casting a golden hue over the cobblestone streets, while a gentle breeze carries the salty scent of the nearby sea.. The usually bustling metro stations are eeri"
+          "excerpt": "The sun bathes the city in a warm glow, but a crisp breeze whispers through the narrow streets, hinting at the arrival of autumn.. A palpable frustration hangs in the air at Plaça "
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.006,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.785
+        "freshness_score": 0.788
       }
     }
   ]
