@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-09T05:32:46.183Z",
+    "capturedAt": "2026-06-09T07:28:53.834Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-09T05:32:46.183Z",
-      "mood_score": 0.387,
+      "captured_at": "2026-06-09T07:28:53.834Z",
+      "mood_score": 0.385,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -46,15 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Paddington and Heathrow Terminals / Reading while we fix a signal system failure at Ealing Broadway"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Harrow-on-the-Hill and Wembley Park while we deal with a trespasser on the track a"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to an earlier trespasser on the track at Northwick Park."
         },
         {
           "source_family": "public",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "News - Build-to-rent landlord Quintain expands into third-party management - Inside Housing. News - Build-to-rent landlord Quintain expands into third-party management"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Impact of doctors’ strike on local NHS trust ‘extremely challenging’ - Haringey Community Press. Impact of doctors’ strike on local NHS trust ‘extremely challenging’"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.037,
+        "source_item_count": 87,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-09T05:32:46.183Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-06-09T07:28:53.834Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE7, 200, 100: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,36 +140,36 @@
           "excerpt": "Eichwalde is a cute little place with a really good döner shop, Bistro Mavi Ay. This weekend is the annual Rosenfest. It's a street fair with food, games, and live music, especiall"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with moody gray clouds, teasing with the threat of rain but holding back for now.. The recently restored bus and tram services have brought a sense of cautious "
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The crisp autumn air carries the faint scent of roasted chestnuts, with golden leaves swirling in the breeze under a patchy gray sky.. After a tumultuous few days, the U-Bahn is fi"
         }
       ],
       "metadata": {
         "source_item_count": 123,
-        "average_valence": -0.016,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-09T05:32:46.183Z",
+      "captured_at": "2026-06-09T07:28:53.834Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -179,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -229,8 +229,8 @@
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.02,
+        "source_item_count": 128,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,10 +241,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-09T05:32:46.183Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-09T07:28:53.834Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 17,
@@ -270,12 +270,12 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think they can just grab brunch anytime; locals know that the good places in Gràcia close by 4 PM, so we plan our days"
         },
         {
           "source_family": "signals",
@@ -283,7 +283,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun bathes the city in a warm glow, but a crisp breeze whispers through the narrow streets, hinting at the arrival of autumn.. A palpable frustration hangs in the air at Plaça "
+          "excerpt": "The air is heavy with humidity, a lingering warmth clings to the pavement as dark clouds loom overhead.. The trains are crowded yet restless, with commuters glancing nervously at t"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.016,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "tourism"
         ],
-        "freshness_score": 0.788
+        "freshness_score": 0.786
       }
     }
   ]
