@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-08T23:33:30.223Z",
+    "capturedAt": "2026-06-09T01:07:48.006Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,23 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 396
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-08T23:33:30.223Z",
-      "mood_score": 0.378,
+      "captured_at": "2026-06-09T01:07:48.006Z",
+      "mood_score": 0.39,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 8,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -41,73 +40,72 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping / Hainault via Newbury Park due to an earlier faulty train at"
+          "recency_weight": 1.04,
+          "excerpt": "Peabody is a Housing Association. It is illegal to rent Peabody rooms out on Air BnB. I would report this to the Police immediately as this could be some sort of exploitation of wh"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and High Barnet and MINOR DELAYS on the rest of the line due to a point"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Excited commuters taking pictures near London Bridge. Carful out there folks, some of them are actually talking to each other on the train, as they take snaps of the smoke for thei"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Severe delays between Camden Town and High Barnet and MINOR DELAYS on the rest of the line due to a point"
+          "recency_weight": 1,
+          "excerpt": "News - Build-to-rent landlord Quintain expands into third-party management - Inside Housing. News - Build-to-rent landlord Quintain expands into third-party management"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 8, Tuesday 9, Wednesday 10 and Thursday 11 June, after 2245 each evening, no service between Hackney"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A gray sky hangs heavy over the city, with a slight drizzle turning the pavement into a slick mirror reflecting the muted autumn colors of the trees.. The usual hum of the Tube is "
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Minor Delays Windrush Line: No service between Surrey Quays and New Cross and MINOR DELAYS between Dalston Junction and Clapham Junct"
+          "recency_weight": 0.56,
+          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.065,
+        "source_item_count": 81,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.818
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-08T23:33:30.223Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-06-09T01:07:48.006Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7, N5: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -151,35 +141,43 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.283,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with gray clouds, spitting occasional drizzle that keeps the pavement slick and reflective.. With the BVG strike just recently lifted, a palpable sense of relie"
+          "excerpt": "The sky is a patchwork of grey clouds with sporadic glimpses of sunlight that cast a warm glow on the damp streets.. Despite the recent resumption of services, commuters are still "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "80ties throwback. Cleaning out the attic at my parents’ house - so many postcards, pictures and dias I need to digitalize Typical Sunday growing up - Spaziergang an der Havel after"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.012,
+        "source_item_count": 118,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-08T23:33:30.223Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-06-09T01:07:48.006Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 68,
+        "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -189,19 +187,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Easy biking recommendations. I just got bikes for my daughter and myself. She’s 14 but inexperienced and still learning. We did Sunset Dunes today and it was empty as it was late i"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Can I keep my rent controlled apartment in SF and move elsewhere?. I have a really nice rent controlled place in Lower Haight. I have been looking to upgrade my I really see nothin"
+          "excerpt": "yes definitely they can hover around 2k if you can live in a slightly less attractive neighborhood. TL or mission for example. source, my rent is under 2300 :)"
         },
         {
           "source_family": "public",
@@ -209,7 +199,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "We’re staying in Berkeley for a month in an Airbnb for July; if I see any buildings with a sign on them for rent I’ll let you know. Someone suggested that on here and our plan is t"
+          "excerpt": "Happy you enjoyed the experience! I still walk around the city & have, “wow I can’t believe I live here” moments. Hope you come back for a little longer & explore the greater bay a"
         },
         {
           "source_family": "public",
@@ -226,28 +216,36 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Can I keep my rent controlled apartment and move elsewhere?. So I have a really nice rent controlled place in Lower Haight I rent for $2k. Lately have thought about living in NYC f"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "This needs to be so much higher up. OP, do not under any circumstances leave your luggage in the car when you park. Especially if you are going to the touristy places. Your car wil"
         }
       ],
       "metadata": {
-        "source_item_count": 133,
-        "average_valence": -0.028,
+        "source_item_count": 114,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.904
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-08T23:33:30.223Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-09T01:07:48.006Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -270,47 +268,47 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think we all love the park, but locals know it’s just a good spot to dodge the midday sun and catch a break from the c"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun hangs high, casting a golden hue over the Gothic Quarter, while a gentle breeze sways the leaves of the plane trees.. The atmosphere in the metro is charged, with commuters"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "\"L'alcalde de Barcelona, Jaume Collboni, anuncia que l'Ajuntament eliminarà totes les llicències de bicicletes compartides perquè no s'han corregit les infraccions d'aparcament i d"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El Papa Francesc llegint un text a Monserrat el 2023. El Papa Francesc llegint un text pel 800 aniversari de la Confraria de la Mare de Déu de Montserrat: \\- \"Está en Castellano, N"
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.011,
+        "source_item_count": 83,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.784
+        "freshness_score": 0.782
       }
     }
   ]
