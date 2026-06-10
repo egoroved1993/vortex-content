@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-10T01:14:07.654Z",
+    "capturedAt": "2026-06-10T03:20:08.158Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-10T01:14:07.654Z",
-      "mood_score": 0.334,
+      "captured_at": "2026-06-10T03:20:08.158Z",
+      "mood_score": 0.329,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -82,19 +82,19 @@
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.046,
+        "average_valence": -0.063,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-10T01:14:07.654Z",
-      "mood_score": 0.394,
+      "captured_at": "2026-06-10T03:20:08.158Z",
+      "mood_score": 0.393,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -106,7 +106,7 @@
         "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,12 +115,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin will you see kids riding their scooters in the U-Bahn while parents sip coffee, completely unbothered by t"
+        },
+        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE7, M5, FEX, RE1, S5: Delays 6 trips delayed"
         },
         {
           "source_family": "public",
@@ -145,33 +153,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Yeah, I had some idea that the Oktoberfest style wasn't super authentic. But honestly, I wasn't sure if a metropolitan area would preserve cultural dress for festivals and the like"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "As someone who was a regular at NoG for 10+ years, I have to say that nowadays its kinda overpriced, defines itself on a self proclaimed \"special\" Berlin crowd (If thats what you'r"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.017,
+        "source_item_count": 124,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-10T01:14:07.654Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-06-10T03:20:08.158Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 50,
@@ -229,19 +229,19 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": 0.011,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
-          "belonging",
-          "transit"
+          "transit",
+          "belonging"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-10T01:14:07.654Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-06-10T03:20:08.158Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -285,12 +285,12 @@
           "excerpt": "smou started being a bicing commited app i think, and then they decided to broaden serviced. at least when i koined the service, taxis and green area payment wasn't available. tbh "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "\"L'alcalde de Barcelona, Jaume Collboni, anuncia que l'Ajuntament eliminarà totes les llicències de bicicletes compartides perquè no s'han corregit les infraccions d'aparcament i d"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "A hazy sun tries to break through the clouds, casting a soft glow on the busy streets filled with a mix of excitement and apprehension.. Metro stations are packed as people rush to"
         },
         {
           "source_family": "public",
@@ -298,18 +298,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
+          "excerpt": "\"L'alcalde de Barcelona, Jaume Collboni, anuncia que l'Ajuntament eliminarà totes les llicències de bicicletes compartides perquè no s'han corregit les infraccions d'aparcament i d"
         }
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.01,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.812
       }
     }
   ]
