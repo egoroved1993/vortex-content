@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-10T21:02:01.745Z",
+    "capturedAt": "2026-06-10T22:43:05.551Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 431
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-10T21:02:01.745Z",
-      "mood_score": 0.331,
+      "captured_at": "2026-06-10T22:43:05.551Z",
+      "mood_score": 0.325,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: No service between Acton Town and Uxbridge while we fix a faulty train at South Harrow. Tickets will be"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge due to an earlier faulty train at South Harrow. Tickets w"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 8, Tuesday 9, Wednesday 10 and Thursday 11 June, after 2245 each evening, no service between Hackney"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think the 149 goes anywhere useful late at night. The real late-night warriors know it’s all about the 67 to Ne"
         },
         {
           "source_family": "public",
@@ -63,27 +79,11 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "‘I pay £680 a month to rent in London – but my neighbours are prisoners’ - The Telegraph. ‘I pay £680 a month to rent in London – but my neighbours are prisoners’"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Doctors to strike at four major north London hospitals next week - London Evening Standard. Doctors to strike at four major north London hospitals next week"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Doctors strike set to hit several north London hospitals - London Now. Doctors strike set to hit several north London hospitals"
         }
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.055,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
@@ -94,19 +94,20 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-10T21:02:01.745Z",
-      "mood_score": 0.388,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-10T22:43:05.551Z",
+      "mood_score": 0.486,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "There is a parking garage where you can rent a permanent parking spot for your car in Methfesselstraße, it’s 300m from PdL"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "That's just BS and physically implausible. At 100km/h both road and wind noise are vastly louder than any modern car engine. Just before LNY As long as it's not ahead of physics it"
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.037,
+        "source_item_count": 129,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
         "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-10T21:02:01.745Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-10T22:43:05.551Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -219,29 +220,29 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission District. You know you’re local when you’ve seen 16th and Mission buses pass you by daily, and you still choose to wal"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from here if they can navigate the BART delays like it’s a game, not a headache. Tourists panic; w"
+          "excerpt": "Anyone hiring for media ?. My passion is writing, podcasting and creating videos. I have my own Podcast and tiktok page based on the city, but that's not what can pay the bills now"
         }
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.017,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "belonging",
           "money"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-10T21:02:01.745Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-06-10T22:43:05.551Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -269,20 +270,12 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often miss how late shop owners stay open; it's not just the bars but the little bakeries too, sometimes until 2 AM fo"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun is casting a warm golden hue over the city, with a slight breeze carrying the scent of fresh churros from a nearby stall.. The metro is buzzing with a mix of excitement and"
+          "excerpt": "The sun hangs high, casting a golden glow on the bustling streets, while a cool breeze brushes against the faces of pedestrians.. The mood on the crowded metro is restless and frus"
         },
         {
           "source_family": "public",
@@ -299,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "El Papa Francesc llegint un text a Monserrat el 2023. El Papa Francesc llegint un text pel 800 aniversari de la Confraria de la Mare de Déu de Montserrat: \\- \"Está en Castellano, N"
         }
       ],
       "metadata": {
         "source_item_count": 98,
-        "average_valence": -0.016,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.843
       }
     }
   ]
