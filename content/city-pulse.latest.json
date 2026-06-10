@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-10T03:20:08.158Z",
+    "capturedAt": "2026-06-10T05:42:28.172Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-10T03:20:08.158Z",
+      "captured_at": "2026-06-10T05:42:28.172Z",
       "mood_score": 0.329,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -45,15 +46,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "That is sort of how OpenRent handles it for Rent Now contracts, the landlord never receives the deposit - it goes straight into the deposit protection scheme from OpenRent."
+          "excerpt": "Some one I know in London advertised two rooms for lodgers. On spare room. A lovely couple asked to see in video from Birmingham. Liked it, signed the contract, gave copies of thei"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "If you use Rent Now as a landlord you are never paid the deposit directly, OpenRent pay it straight into their deposit protection scheme and the landlord just links their account."
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays between Battersea Power Station and Kennington while we fix a points failure at Camden Town."
         },
         {
           "source_family": "public",
@@ -64,12 +65,12 @@
           "excerpt": "Don't post this here man. Reddit Londoners aren't like Londoners, they'll tell you to leave and 'bye.' Yes it can be rough, but this is a problem of Britain, not London. You'll fin"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Most days, the YouTube algorithm will throw something at me and I'll watch it. For all its faults it is at least a good tool for music discovery."
+          "excerpt": "Night bus confessions. Brixton. Heard a guy on the 3 bus last night ranting about how the tube strike ruined his plans to find the best jollof rice in SE24. He had a whole list."
         },
         {
           "source_family": "public",
@@ -81,32 +82,32 @@
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.063,
+        "source_item_count": 84,
+        "average_valence": -0.062,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-10T03:20:08.158Z",
-      "mood_score": 0.393,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-10T05:42:28.172Z",
+      "mood_score": 0.494,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,22 +124,6 @@
           "excerpt": "Things Berlin does that nowhere else does. Friedrichshain. Only in Berlin will you see kids riding their scooters in the U-Bahn while parents sip coffee, completely unbothered by t"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, M5, FEX, RE1, S5: Delays 6 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Deutsche Städte, in die Millennials und GenZ ziehen: 1. Berlin 2. siehe 1. 3. siehe 2. 4. siehe 3. 5. ... Dazu kommt, dass sie bereit sind, wirklich JEDE Miete zu bezahlen, Hauptsa"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -152,33 +137,49 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Yeah, I had some idea that the Oktoberfest style wasn't super authentic. But honestly, I wasn't sure if a metropolitan area would preserve cultural dress for festivals and the like"
+          "excerpt": "As someone who was a regular at NoG for 10+ years, I have to say that nowadays its kinda overpriced, defines itself on a self proclaimed \"special\" Berlin crowd (If thats what you'r"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The air is brisk and carries a hint of dampness, with low clouds casting a grey blanket over the city.. After the recent BVG strike, commuters are cautiously optimistic as buses an"
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.021,
+        "source_item_count": 123,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-10T03:20:08.158Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-06-10T05:42:28.172Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 50,
+        "public": 40,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -196,6 +197,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I also saw it in Pescadero this late afternoon and they were filming for it off of Hwy 1"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -204,46 +213,38 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Just being jerky? I mean if you’re the only one on the bus, mightn’t he have deduced you didn’t know just as easily as deduced that you did. But, as he’s the regular one on this ro"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Why do you say they’re more likely to back Chan than Weiner? Weiner is closer to Saikat on stuff like housing and the Pelosi endorsement probably hurts more than helps with his vot"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Halo, Good Moraling! I finally finished my documentary on Frank \"Dago\" Barron, a Haight street legend. After a few years in the making, I finally put a lid on it. If you're interes"
+          "excerpt": "Why is it so difficult to rent in the Bay Area??. So I’ve never had issues in my past getting into a lease agreement, but damn is it a pain in the butt to get selected. Have others"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "If they mysteriously raised prices by 7% everyone would just complain (more) about how expensive restaurants are and not understand why. By calling out the line item, everyone comp"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": 0.014,
+        "source_item_count": 105,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-10T03:20:08.158Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-10T05:42:28.172Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 28,
@@ -288,9 +289,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "A hazy sun tries to break through the clouds, casting a soft glow on the busy streets filled with a mix of excitement and apprehension.. Metro stations are packed as people rush to"
+          "excerpt": "The sun blazes down, casting sharp shadows across the cobblestones, while a warm breeze carries the scent of grilled squid from nearby tapas bars.. The usually bustling metro is no"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.014,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "events"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.82
       }
     }
   ]
