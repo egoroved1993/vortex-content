@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-09T23:35:36.720Z",
+    "capturedAt": "2026-06-10T01:14:07.654Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,23 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-09T23:35:36.720Z",
-      "mood_score": 0.329,
+      "captured_at": "2026-06-10T01:14:07.654Z",
+      "mood_score": 0.334,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -41,28 +40,36 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "That is sort of how OpenRent handles it for Rent Now contracts, the landlord never receives the deposit - it goes straight into the deposit protection scheme from OpenRent."
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to a points failure at Camden Town. All northbound Bank branch trains will run to High B"
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "If you use Rent Now as a landlord you are never paid the deposit directly, OpenRent pay it straight into their deposit protection scheme and the landlord just links their account."
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 8, Tuesday 9, Wednesday 10 and Thursday 11 June, after 2245 each evening, no service between Hackney"
+          "recency_weight": 1.04,
+          "excerpt": "Don't post this here man. Reddit Londoners aren't like Londoners, they'll tell you to leave and 'bye.' Yes it can be rough, but this is a problem of Britain, not London. You'll fin"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Most days, the YouTube algorithm will throw something at me and I'll watch it. For all its faults it is at least a good tool for music discovery."
         },
         {
           "source_family": "public",
@@ -71,42 +78,35 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "06/23 Harry Styles pit ticket. Hi! I am traveling in with my partner for this concert and her sister was supposed to come but can't make it due to a job change. Have an extra ticke"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Times Tables. We moved across country. Where I'd been, we hadn't learned our times tables yet (were just about to start). Where we moved to they'd already done those and moved on. "
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.063,
+        "source_item_count": 89,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.844
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-09T23:35:36.720Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-06-10T01:14:07.654Z",
+      "mood_score": 0.394,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 13,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -139,42 +147,34 @@
           "excerpt": "Yeah, I had some idea that the Oktoberfest style wasn't super authentic. But honestly, I wasn't sure if a metropolitan area would preserve cultural dress for festivals and the like"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht - Berliner Zeitung. Berliner Busse und Bahnen fahren wieder: Doch der nächste Streik droht"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of grey clouds drapes over the city, threatening rain but holding back for now, creating a chilly yet still-muggy atmosphere.. People are cautiously optimistic as t"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "As someone who was a regular at NoG for 10+ years, I have to say that nowadays its kinda overpriced, defines itself on a self proclaimed \"special\" Berlin crowd (If thats what you'r"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.014,
+        "source_item_count": 123,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-09T23:35:36.720Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-06-10T01:14:07.654Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -208,7 +208,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Your Lease Agreement doesn’t give you the right to extort money from your Property Provider when they simply want to do something with their property that requires you to move out."
+          "excerpt": "Just being jerky? I mean if you’re the only one on the bus, mightn’t he have deduced you didn’t know just as easily as deduced that you did. But, as he’s the regular one on this ro"
         },
         {
           "source_family": "public",
@@ -216,34 +216,34 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "For real, why are individuals allowed to increase rent more than 10%? I'm ok with a rolling exemption to incentivize construction, but see no reason why an individual who has owned"
+          "excerpt": "Why do you say they’re more likely to back Chan than Weiner? Weiner is closer to Saikat on stuff like housing and the Pelosi endorsement probably hurts more than helps with his vot"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "turn your electricity for $.50/kwh or more in bay area. spoiler: you dont sell it to pg&e, and you will need some computer rig and network bandwidth. the way you do it is to sell y"
+          "excerpt": "Halo, Good Moraling! I finally finished my documentary on Frank \"Dago\" Barron, a Haight street legend. After a few years in the making, I finally put a lid on it. If you're interes"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.022,
+        "source_item_count": 116,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
-          "transit",
-          "belonging"
+          "belonging",
+          "transit"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-09T23:35:36.720Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-10T01:14:07.654Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 28,
@@ -285,12 +285,12 @@
           "excerpt": "smou started being a bicing commited app i think, and then they decided to broaden serviced. at least when i koined the service, taxis and green area payment wasn't available. tbh "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky overhead is a muted grey, with a hint of the sun peeking through as a warm breeze carries the scent of rain-soaked earth.. The train stations are bustling but tense, with c"
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "\"L'alcalde de Barcelona, Jaume Collboni, anuncia que l'Ajuntament eliminarà totes les llicències de bicicletes compartides perquè no s'han corregit les infraccions d'aparcament i d"
         },
         {
           "source_family": "public",
@@ -298,7 +298,7 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "\"L'alcalde de Barcelona, Jaume Collboni, anuncia que l'Ajuntament eliminarà totes les llicències de bicicletes compartides perquè no s'han corregit les infraccions d'aparcament i d"
+          "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
         }
       ],
       "metadata": {
@@ -307,9 +307,9 @@
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.815
+        "freshness_score": 0.826
       }
     }
   ]
