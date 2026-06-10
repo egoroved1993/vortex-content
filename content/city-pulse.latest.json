@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-10T17:16:05.006Z",
+    "capturedAt": "2026-06-10T19:05:07.063Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 420
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-10T17:16:05.006Z",
-      "mood_score": 0.327,
+      "captured_at": "2026-06-10T19:05:07.063Z",
+      "mood_score": 0.331,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -46,15 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays while we fix a signal failure at Lambeth North."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we help a person ill on a train."
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge while we fix a faulty train at South Harrow. GOO"
         },
         {
           "source_family": "news",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Doctors to strike at four major north London hospitals next week - London Evening Standard. Doctors to strike at four major north London hospitals next week"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of grey clouds hangs low over the city, threatening rain as the occasional gust of wind sends leaves skittering along the pavements.. The mood on the streets is fru"
         }
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.069,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-10T17:16:05.006Z",
-      "mood_score": 0.385,
+      "captured_at": "2026-06-10T19:05:07.063Z",
+      "mood_score": 0.386,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,10 +104,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,23 +145,31 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "from your lips to God's ears. And streets like Tempelhofer Damm will be the last to undergo that change. I'm visiting China at least once a year, even if it's usually just for a sh"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "There is a parking garage where you can rent a permanent parking spot for your car in Methfesselstraße, it’s 300m from PdL"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.045,
+        "source_item_count": 126,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-10T17:16:05.006Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-10T19:05:07.063Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -179,7 +178,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -220,31 +219,31 @@
           "excerpt": "Recology provides 2 free pickup/year, up to 10 items per pick-up. If she's having furniture and 20 boxes, it is most likely that she called someone else, like a trash hauling picku"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Ideas to find a “mom”?. Ok this is a weird one, I know. I’m in my mid 30s. I live with my husband and our young baby. My mother was abusive to me as a child, and I don’t speak to h"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s from here if they can navigate the BART delays like it’s a game, not a headache. Tourists panic; w"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.015,
+        "source_item_count": 117,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-10T17:16:05.006Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-06-10T19:05:07.063Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 25,
@@ -270,12 +269,20 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often miss how late shop owners stay open; it's not just the bars but the little bakeries too, sometimes until 2 AM fo"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun blazes down through a thin veil of clouds, casting long shadows against the pavement of La Rambla.. Despite the ongoing strike, there's a peculiar camaraderie amongst commu"
+          "excerpt": "The sun shines brightly with a crisp breeze, making the air feel fresh but hinting at the gathering storm clouds later in the day.. Public transport is abuzz with tension as the on"
         },
         {
           "source_family": "public",
@@ -292,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El Papa Francesc llegint un text a Monserrat el 2023. El Papa Francesc llegint un text pel 800 aniversari de la Confraria de la Mare de Déu de Montserrat: \\- \"Está en Castellano, N"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.013,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.817
       }
     }
   ]
