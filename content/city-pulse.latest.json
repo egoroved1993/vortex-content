@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-11T15:19:08.792Z",
+    "capturedAt": "2026-06-11T17:24:43.628Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 431
+    "totalItems": 428
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-11T15:19:08.792Z",
-      "mood_score": 0.292,
+      "captured_at": "2026-06-11T17:24:43.628Z",
+      "mood_score": 0.282,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: No service between Willesden Junction and Richmond while we fix a points failure at South Acton. MINOR DEL"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,57 +62,49 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Don't bother converting it to CAD, it's giving you a falsely high number due to the purchasing power of GBP which is much higher than CAD. Coffee is not exorbitantly expensive here"
+          "excerpt": "There's nothing to get, you are viewing the words differently to me, I didn't interpret it the way you did and didn't assume he was eating like a pig. Crisps make a noise when you "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yeah, I’ve been on a lot of packed tubes in a lot of places and never had this before. I think it stuck with me because it was like nobody in front could hear, see, or feel me. It "
+          "excerpt": "Night bus confessions. Brixton. Caught a late 333 last week, and a guy started singing ‘Sweet Caroline’ with the driver. Only in Brixton could you find a bus that doubles as karaok"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Chelsea face anxious wait as furious statement leaves Premier League clubs sweating - Football London. Chelsea face anxious wait as furious statement leaves Premier League clubs sw"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I tap people on their shoulders because sides are expected to be nudged accidentally. But yeah, people who aren't actively assuming people need to get out at each stop are the wors"
+          "excerpt": "Things that instantly reveal you just moved here. Hackney Central. You still wait for the bus at stops, while locals just hop on the next train or walk. The right kind of impatienc"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.023,
+        "source_item_count": 84,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-11T15:19:08.792Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-06-11T17:24:43.628Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, 100, M5, 200, RE1: Delays 5 trips delayed"
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -151,31 +151,31 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "A brisk chill fills the air, with grey clouds looming overhead as a light drizzle occasionally falls, soaking the cobblestones.. With the BVG strike looming, the usually bustling U"
+          "excerpt": "The sky is a heavy gray, draping over the city in a soft yet oppressive blanket, hinting at rain that hasn’t quite fallen yet.. Despite the end of the BVG strike, there’s a palpabl"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.019,
+        "source_item_count": 117,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "belonging"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-11T15:19:08.792Z",
-      "mood_score": 0.462,
+      "captured_at": "2026-06-11T17:24:43.628Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 59,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,7 +193,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "i made less and kept an apartment at that price. moving will be more expensive. you gotta make it work! also had no idea late rent tanks your credit? i guess it's never happened to"
+          "excerpt": "If your landlord finds out, you will lose rent control and face eviction. This happened to my master tenant in my first ever city apartment many, many years ago. Similar scenario. "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "If you’re paying rent, I doubt your landlord would care. In fact, they’d probably be happy that they’re collecting rent on a unit that’s getting zero wear and tear in that time. My"
         },
         {
           "source_family": "public",
@@ -201,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Not crazy. You are paying less than 50% of your salary for rent so you are actually doing fairly well by local standards"
+          "excerpt": "I remember balking at the fee and the landlord saying that he charges it to screen out \"serious\" applicants. What a crock of shit. I didn't give him anything. Fuck 'em."
         },
         {
           "source_family": "public",
@@ -209,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The Cardinals are a divisional rival with the 49ers, so that could be why the tickets are more expensive for that game than the Broncos game. Whether the price goes up or down betw"
+          "excerpt": "Geary will have construction on it until late 2027. In the end we will have 100 year old pipes replaced, new trees planted, bus bulbs, sidewalk art, and a newly paved Geary Bouleva"
         },
         {
           "source_family": "public",
@@ -217,37 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "in my opinion white noise is really the only way, and then you will get used to it over time. some of the other options mentioned here can help but they are $$$ and quite frankly, "
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught a local artist rapping about Muni delays on the bus today—turns out nothing unites us like waiting for the 30 to show up."
+          "excerpt": "I have a 1bedroom for around ~2600 rent controlled and you’ll have to pry it from my cold dead hands. Do NOT give up your 2200."
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": 0.007,
+        "source_item_count": 125,
+        "average_valence": -0.054,
         "dominant_themes": [
           "general",
-          "belonging",
+          "transit",
           "money"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-11T15:19:08.792Z",
+      "captured_at": "2026-06-11T17:24:43.628Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 38,
+        "public": 36,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,14 +261,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Deus viure a Gràcia, a on casualment, no hi han mesquites ni awamis a tot arreu, amb el teu serrell recte, la teva pudor a porro i la teva hipocresia de que vingui tothom, però no "
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -286,31 +278,39 @@
           "excerpt": "I am just saying it's a reality of many people in Spain. 160k is a very good salary about anywhere in Europe. The question is out of touch"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Trabajo en una multinacional aqui en barcelona con algunos sueldos de escandalo y precisamente no es que sean brillante esta gente... La gente no es tonta, saben lo que se paga, lo"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun pours down mercilessly, creating a shimmering haze off the cobblestones in the Gothic Quarter.. Rodalies trains are packed, with impatience bubbling in the air as"
+          "excerpt": "The sun beats down relentlessly, casting shimmering heat waves over the bustling streets of the Eixample.. The metro is unusually packed today, with commuters whispering and glanci"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "L'Ajuntament de Barcelona detecta 31 pisos turístics il·legals en un edifici d'Horta-Guinardó"
         }
       ],
       "metadata": {
-        "source_item_count": 104,
-        "average_valence": -0.005,
+        "source_item_count": 102,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.844
       }
     }
   ]
