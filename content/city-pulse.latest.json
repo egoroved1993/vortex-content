@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-11T03:18:57.147Z",
+    "capturedAt": "2026-06-11T05:45:07.946Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 432
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-11T03:18:57.147Z",
-      "mood_score": 0.284,
+      "captured_at": "2026-06-11T05:45:07.946Z",
+      "mood_score": 0.293,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I hope that you get the help you need. From what I understand there's not a huge amount of support for late diagnosed autism, but ADHD is a different story in terms of meds, etc. I"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Walthamstow Central."
         },
         {
           "source_family": "forum",
@@ -61,45 +62,45 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
+          "excerpt": "My back is hurting, didn't get much sleep 😅 Tried looking for something helpful, but YouTube is full of grifters: \"Do this one thing to cure every bone in your body!\" type of shit"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
           "excerpt": "London Transport Museum, if you're into that sort of thing. Always a good mix of parents with small children and men in their 50s who like trains"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "What did you have for your tea today?. I’ve just conjured up an amazing tea for myself tonight. I chucked some teriyaki udon noodles in to the trolley on a Costco trip the other we"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "‘I pay £680 a month to rent in London – but my neighbours are prisoners’ - The Telegraph. ‘I pay £680 a month to rent in London – but my neighbours are prisoners’"
+          "excerpt": "I see homes being built, and I keep on hearing about how the housing market is going to crash, so where’s this going to leave us? I also see perfectly good green belt land being pu"
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.046,
+        "source_item_count": 91,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.853
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-11T03:18:57.147Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-06-11T05:45:07.946Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -120,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 300, S9: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -136,45 +137,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I think you're trying to forcibly construct a point that doesn't need to be made. The fact alone that they're much more silent at low speed is testimonial enough. I can't wait for "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "There is a parking garage where you can rent a permanent parking spot for your car in Methfesselstraße, it’s 300m from PdL"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "That's just BS and physically implausible. At 100km/h both road and wind noise are vastly louder than any modern car engine. Just before LNY As long as it's not ahead of physics it"
+          "recency_weight": 1.08,
+          "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
+        },
+        {
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "at TBA - Rummelsburger Bucht (Berlin) on 2026-06-11T00:00:00.000 [Drum & Bass, Broken Beat]"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.038,
+        "source_item_count": 126,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-11T03:18:57.147Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-11T05:45:07.946Z",
+      "mood_score": 0.512,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -190,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Excuse me, I was a reluctant property manager in Berkeley for 10 years. This shit letter from the landlord is totally illegal. You only have to return the apartment to them in the "
+          "excerpt": "It is not a guaranteed connection, at least it wasn’t on the way back when i travelled and we were late for the train."
         },
         {
           "source_family": "public",
@@ -200,47 +201,47 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yea that's definitely true in some ways, but it's really only for the absolutely most egregious violations. My point is that there's a far vaster set of breakages of the social con"
+          "excerpt": "I know I’m a bummer but you will have an extremely hard time finding someone to rent to you without a job and with a dog/car. Short terms rentals and a travel nurse job are probabl"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Idk, even back before we had all the safety regs we had now, it took NYC four to eight years to complete cut and cover projects in Manhattan. Downtown SF for BART/Muni Metro took 6"
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local when they can spot a BART train delay by the way the crowd shuffles at 16th St. S"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Why is it so difficult to rent in the Bay Area??. So I’ve never had issues in my past getting into a lease agreement, but damn is it a pain in the butt to get selected. Have others"
+          "excerpt": "Anyone hiring for media ?. My passion is writing, podcasting and creating videos. I have my own Podcast and tiktok page based on the city, but that's not what can pay the bills now"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Winchester House: It's really a tourist trap. Overpriced, overcrowded Not worth it Intel Museum: Definitively.. not worth it, unless you're an Intel fan or want to hit the souvenir"
+          "excerpt": "went not long ago for the first time since before the pandy. food was fine but expensive. the crowd (or lack thereof) was kind of strange. it seemed to skew young rich. like laurel"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.018,
+        "source_item_count": 121,
+        "average_valence": 0.036,
         "dominant_themes": [
           "general",
-          "belonging",
-          "transit"
+          "transit",
+          "belonging"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-11T03:18:57.147Z",
+      "captured_at": "2026-06-11T05:45:07.946Z",
       "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun is blazing through a thin veil of clouds, casting playful shadows on the bustling streets of Eixample.. Metro cars are packed tighter than usual, with commuters shifting un"
+          "excerpt": "The sun hangs stubbornly in a bright blue sky, casting warm rays that shimmer off the brick and stone of the buildings.. The usual busy sounds of the metro are punctuated today by "
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.004,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.83
       }
     }
   ]
