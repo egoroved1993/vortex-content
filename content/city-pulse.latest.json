@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-11T05:45:07.946Z",
+    "capturedAt": "2026-06-11T07:57:13.554Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 429
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-11T05:45:07.946Z",
-      "mood_score": 0.293,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-11T07:57:13.554Z",
+      "mood_score": 0.491,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
         "review": 2,
@@ -33,28 +33,35 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
-        "weather": 1
+        "transport": 2
       },
       "languages": [
         "en"
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think you can catch a tube home late on a strike night. Everyone else is walking, but you’re out here waiting f"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Walthamstow Central."
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Severe delays between Seven Sisters and Walthamstow Central and MINOR DELAYS on the rest of the line due"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Caught the 59 late last night, a guy in a full dinosaur costume singing to himself. Only in Brixton would that seem normal."
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays between Seven Sisters and Walthamstow Central and MINOR DELAYS on the rest of the line due"
         },
         {
           "source_family": "public",
@@ -71,31 +78,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "London Transport Museum, if you're into that sort of thing. Always a good mix of parents with small children and men in their 50s who like trains"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I see homes being built, and I keep on hearing about how the housing market is going to crash, so where’s this going to leave us? I also see perfectly good green belt land being pu"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.022,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-11T05:45:07.946Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-06-11T07:57:13.554Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,8 +106,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
-        "weather": 1
+        "transport": 1
       },
       "languages": [
         "de",
@@ -121,7 +119,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300, S9: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 300, RE7: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -157,20 +155,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.025,
+        "source_item_count": 125,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-11T05:45:07.946Z",
-      "mood_score": 0.512,
+      "captured_at": "2026-06-11T07:57:13.554Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -180,8 +178,7 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
         "en"
@@ -209,6 +206,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local when they instinctively know to dodge the BART delays but still complain about the 14 bus being "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local when they can spot a BART train delay by the way the crowd shuffles at 16th St. S"
         },
         {
@@ -218,31 +223,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Anyone hiring for media ?. My passion is writing, podcasting and creating videos. I have my own Podcast and tiktok page based on the city, but that's not what can pay the bills now"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "went not long ago for the first time since before the pandy. food was fine but expensive. the crowd (or lack thereof) was kind of strange. it seemed to skew young rich. like laurel"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.036,
+        "source_item_count": 120,
+        "average_valence": 0.023,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-11T05:45:07.946Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-11T07:57:13.554Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -252,8 +249,7 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
         "ca",
@@ -281,9 +277,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs stubbornly in a bright blue sky, casting warm rays that shimmer off the brick and stone of the buildings.. The usual busy sounds of the metro are punctuated today by "
+          "excerpt": "The sky is a hazy gray, casting a muted light over the bustling streets, as scattered raindrops brush against the warm pavement.. The train stations are filled with a mix of frustr"
         },
         {
           "source_family": "public",
@@ -303,14 +299,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.002,
+        "source_item_count": 93,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.826
       }
     }
   ]
