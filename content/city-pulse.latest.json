@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-11T09:42:59.264Z",
+    "capturedAt": "2026-06-11T11:41:28.271Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-11T09:42:59.264Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-06-11T11:41:28.271Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -39,14 +39,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think you can catch a tube home late on a strike night. Everyone else is walking, but you’re out here waiting f"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -72,29 +64,37 @@
           "excerpt": "‘I pay £680 a month to rent in London – but my neighbours are prisoners’ - The Telegraph. ‘I pay £680 a month to rent in London – but my neighbours are prisoners’"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with grey clouds, casting a muted light over the bustling streets, while a fine drizzle pierces the air, leaving slick pavement beneath weary feet.. The mood on"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Doctors to strike at four major north London hospitals next week - London Evening Standard. Doctors to strike at four major north London hospitals next week"
+          "recency_weight": 0.56,
+          "excerpt": "Private rent and house prices, UK: May 2026 - Office for National Statistics. Private rent and house prices, UK: May 2026"
         }
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.066,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.825
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-11T09:42:59.264Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-06-11T11:41:28.271Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -105,13 +105,23 @@
         "signals": 1,
         "news": 49,
         "nightlife": 40,
-        "trends": 8
+        "trends": 8,
+        "transport": 1,
+        "weather": 1
       },
       "languages": [
         "de",
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE2: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -143,33 +153,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "at TBA - Rummelsburger Bucht (Berlin) on 2026-06-11T00:00:00.000 [Drum & Bass, Broken Beat]"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.034,
+        "source_item_count": 122,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-11T09:42:59.264Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-06-11T11:41:28.271Z",
+      "mood_score": 0.462,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 52,
@@ -177,7 +179,8 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -221,26 +224,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a local when they instinctively know to dodge the BART delays but still complain about the 14 bus being "
+          "excerpt": "Muni moments that define this city. Tenderloin. Watched a guy in the Tenderloin turn a broken Muni bus into a dance stage—full crowd around him, no one caring about the wait. Only "
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.007,
+        "source_item_count": 118,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "belonging",
-          "transit"
+          "money"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-11T09:42:59.264Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-11T11:41:28.271Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 37,
@@ -248,7 +251,8 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -292,20 +296,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs high, casting sharp shadows on the bustling streets while a gentle breeze carries the salty scent of the nearby sea.. With the ongoing railway disruptions, commuters "
+          "excerpt": "The sky is a hazy gray, weighed down by clouds threatening rain but holding off for now, creating a humid, sticky atmosphere.. The trains are crowded and restless, with commuters m"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.006,
+        "source_item_count": 103,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "tourism"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.841
       }
     }
   ]
