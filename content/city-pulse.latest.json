@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-11T21:48:51.063Z",
+    "capturedAt": "2026-06-11T22:44:54.497Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 421
+    "totalItems": 424
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-11T21:48:51.063Z",
-      "mood_score": 0.288,
+      "captured_at": "2026-06-11T22:44:54.497Z",
+      "mood_score": 0.283,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Cockfosters eastbound only while we deal with a customer incident."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "100%. I have small children and never stay out past 10 pm anymore but it is ridiculous that a 2000 people living in Soho kill the vibe for 100s of thousands who visit it. It is lit"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "A friend of mine who works for the tube told me that the automation systems on some lines makes the noise worse be the automated trains break and accelerate in the same way and in "
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.036,
+        "source_item_count": 94,
+        "average_valence": -0.05,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-11T21:48:51.063Z",
-      "mood_score": 0.344,
+      "captured_at": "2026-06-11T22:44:54.497Z",
+      "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit M5, RE2: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -157,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.017,
+        "source_item_count": 115,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-11T21:48:51.063Z",
-      "mood_score": 0.464,
+      "captured_at": "2026-06-11T22:44:54.497Z",
+      "mood_score": 0.46,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -187,6 +187,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Just saw a dude with a pet parrot on the 49. The bird squawked every time the brakes squealed—made me realize we're all just navigat"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -218,19 +226,11 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Before my 2016 Fit, I had a 2005 Scion, and it was also a floor-it-to-go-70 car, lol. My 2016 Fit never had any problems (with horsepower or anything else for that matter). It did "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "yep I've seen that, similar but different. That one is better for getting an idea of options across the whole country, the one I made gives a lot more specific info for the agencie"
         }
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": 0.012,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "belonging",
@@ -241,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-11T21:48:51.063Z",
+      "captured_at": "2026-06-11T22:44:54.497Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -283,7 +283,7 @@
           "language": "en",
           "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, hinting at rain while a warm breeze carries the scent of street food from nearby stalls.. The mood on the Metro is tense as commuters adjust "
+          "excerpt": "A warm breeze carries the scent of blooming orange blossoms, with the sun casting playful shadows on the cobblestone streets of the Gothic Quarter.. The atmosphere at Plaça Catalun"
         },
         {
           "source_family": "public",
@@ -310,7 +310,7 @@
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.845
       }
     }
   ]
