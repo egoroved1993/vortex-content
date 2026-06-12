@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-12T05:45:09.965Z",
+    "capturedAt": "2026-06-12T07:52:35.106Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-12T05:45:09.965Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-06-12T07:52:35.106Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,6 +47,22 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think it's normal to complain about tube strikes instead of just bracing for chaos every other month."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Hammersmith and Heathrow Airport / Rayners Lane westbound only while we deal with"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Walthamstow Central. Tickets are being accepted on London Buses, Lo"
         },
         {
           "source_family": "public",
@@ -62,39 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Would you were a Bay City Rollers T shirt? Yank asking. only asking because of that underage sex scandal the drummer had If I recall? i heard Kurt CoBain liked his songs and honest"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "X2 free tix for the roundhouse tonight. I have two standing tix for Ye Vagabonds in the Roundhouse tonight - under the weather and can’t make it. Free to a good home!"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "None taken - but what about letting them on sounds like a good idea? They may soil the bus with blood, they may get to the other end of the route and be lost, they might be being l"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.034,
+        "source_item_count": 99,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-12T05:45:09.965Z",
-      "mood_score": 0.299,
+      "captured_at": "2026-06-12T07:52:35.106Z",
+      "mood_score": 0.296,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -103,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -120,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S7, M5, RE2: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
@@ -131,20 +132,20 @@
           "excerpt": "i understand your intention and i may have done the same. idk maybe just leave it, or call some kind of animal rescue instead of police. Maybe you stressed the crow parents too bc "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, heavy with the threat of rain, while a brisk wind tugs at the edges of coats and scarves.. After a tumultuous couple of days, commuters are cautiously o"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through sporadic clouds, casting a warm glow over the bustling streets, while a refreshing breeze carries the scent of pretzels and fresh coffee.. With the BVG strik"
         },
         {
           "source_family": "public",
@@ -156,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.003,
+        "source_item_count": 114,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-12T05:45:09.965Z",
-      "mood_score": 0.464,
+      "captured_at": "2026-06-12T07:52:35.106Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -208,6 +209,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they instinctively avoid the BART delays by hopping on a random Muni that’ll take them "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
           "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a real local when they casually mention the BART delays but still opt for the bus, knowing it’s the less"
         },
         {
@@ -217,33 +226,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "i don't even own any stocks in companies ran by Elon (for various reasons), let alone investments. that doesn't negate the fact that it is 1. happening regardless of what you or i "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "SF Bay Area World Cup Merch?. Are there any good places in the City to buy World Cup 26 merch? I know some places sell USA kits and such, but I’m looking for any local spots that h"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": 0.012,
+        "source_item_count": 110,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-12T05:45:09.965Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-06-12T07:52:35.106Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 36,
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun bathes the streets in a golden hue, but a stubborn breeze carries a hint of moisture from the nearby sea.. Trains are running in fits and starts, with passengers "
+          "excerpt": "The sky is a brilliant blue, dotted with cotton-like clouds, making the sunlight dance on the cobblestones of the Gothic Quarter.. Public transport is bustling but strained, with c"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 102,
-        "average_valence": -0.02,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.846
       }
     }
   ]
