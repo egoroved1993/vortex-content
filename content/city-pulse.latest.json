@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-12T21:41:03.918Z",
+    "capturedAt": "2026-06-12T22:40:13.663Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-12T21:41:03.918Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-06-12T22:40:13.663Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Walthamstow Central."
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays due to an earlier signal failure at Bethnal Green."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -71,42 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Salaries going down rent going up. From my previous post I’m learning salaries are currently going down across industries (incl. London) yet I see ROOMS for rent going for £1400. C"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "New hobby. I'm a woman (in my 30’s) based in London. All of my current friends are moving away from the city, so I'm thinking of taking up a new hobby as a way to meet new people. "
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.048,
+        "source_item_count": 94,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-12T21:41:03.918Z",
-      "mood_score": 0.299,
+      "captured_at": "2026-06-12T22:40:13.663Z",
+      "mood_score": 0.245,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,20 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 0.72,
-          "excerpt": "The skies are a muted gray, with a light drizzle occasionally interrupting the bustling streets, making umbrellas pop open like flowers in the damp air.. After a tumultuous couple "
         },
         {
           "source_family": "public",
@@ -157,19 +158,19 @@
       ],
       "metadata": {
         "source_item_count": 112,
-        "average_valence": -0.004,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-12T21:41:03.918Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-06-12T22:40:13.663Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -211,12 +212,12 @@
           "excerpt": "Anyone with a motorcycle trailer able to help in the city?. Hello ya’ll, im just a blue collar worker/student who has had their stolen motorcycle found. It probably won’t start and"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell a local when they don't flinch at the BART delays but still grumble about the 14 bus being late"
+          "excerpt": "Yeah, this sub is insane. It genuinely feels like every psychopath in SF is on this sub based on the number of upvotes these types of comments get. I understand people are tired of"
         },
         {
           "source_family": "public",
@@ -224,26 +225,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yeah, this sub is insane. It genuinely feels like every psychopath in SF is on this sub based on the number of upvotes these types of comments get. I understand people are tired of"
+          "excerpt": "Lived there for 5 years, a walking distance from the San Lorenzo park, was fine nothing exciting, Castro Valley is better but more expensive"
         }
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.044,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-12T21:41:03.918Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-06-12T22:40:13.663Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 35,
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 101,
-        "average_valence": -0.024,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "money"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.835
       }
     }
   ]
