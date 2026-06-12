@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-12T17:09:53.607Z",
+    "capturedAt": "2026-06-12T18:51:15.712Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,10 +21,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-12T17:09:53.607Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-06-12T18:51:15.712Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 23,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London council meeting descends into chaos amid claims cats being beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats bein"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between North Acton and West Ruislip due to train cancellations. Tickets will be accepted on"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between North Acton and West Ruislip due to train cancellations. Tickets will be accepted on"
         },
         {
           "source_family": "transport",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Told someone to turn their loudspeaker off on the bus and I survived to live the tale. I’m hungry, maybe a little hungover, stressed because I am running late for work and one assh"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "You can rent them down at Richmond and kayak relatively safely on the Thames there."
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.042,
+        "source_item_count": 93,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-12T17:09:53.607Z",
-      "mood_score": 0.293,
+      "captured_at": "2026-06-12T18:51:15.712Z",
+      "mood_score": 0.294,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,20 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE7, RE1: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, with a chilly breeze rustling through the trees, hinting at the change of seasons.. After a brief standstill, the buses and trams are running again, but th"
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. When I saw a kid sell homemade lemonade next to the Kottbusser Tor U-Bahn station while the BVG strike had everyone in chaos."
         },
         {
           "source_family": "news",
@@ -138,6 +129,14 @@
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.72,
+          "recency_weight": 0.72,
+          "excerpt": "The late afternoon sun breaks through the clouds, casting a golden glow over the damp streets, remnants of last night's rain lingering in the air.. With the BVG strike just ended, "
         },
         {
           "source_family": "public",
@@ -157,20 +156,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.019,
+        "source_item_count": 113,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-12T17:09:53.607Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-06-12T18:51:15.712Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -196,14 +195,6 @@
           "excerpt": "Anyone with a motorcycle trailer able to help in the city?. Hello ya’ll, im just a blue collar worker/student who has had their stolen motorcycle found. It probably won’t start and"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Chaos and infighting: Inside the implosion of Matt Mahan’s governor’s race - The San Francisco Standard. Chaos and infighting: Inside the implosion of Matt Mahan’s governor’s race"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -226,25 +217,33 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Reading some of your other replies, you might enjoy the Embarcadero area. It’s a little crowded because it’s the waterfront but it’s full of classic SF restaurants and shops and th"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You know a real local when they roll their eyes at a BART delay but still have a backup plan involving a bike and som"
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.01,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-12T17:09:53.607Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-06-12T18:51:15.712Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 37,
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 103,
-        "average_valence": -0.02,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.853
       }
     }
   ]
