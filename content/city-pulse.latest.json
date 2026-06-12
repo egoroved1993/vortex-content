@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-12T07:52:35.106Z",
+    "capturedAt": "2026-06-12T09:36:34.006Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-12T07:52:35.106Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-06-12T09:36:34.006Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 30,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -41,36 +41,28 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think it's normal to complain about tube strikes instead of just bracing for chaos every other month."
-        },
-        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Hammersmith and Heathrow Airport / Rayners Lane westbound only while we deal with"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Walthamstow Central. Tickets are being accepted on London Buses, Lo"
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Walthamstow Central."
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Happened in Berlin in different places, one known for night life (clubs with open air backyard), and one known for continuous street music events like public karaoke. Wealthy peopl"
+          "excerpt": "Told someone to turn their loudspeaker off on the bus and I survived to live the tale. I’m hungry, maybe a little hungover, stressed because I am running late for work and one assh"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Trunky want a bun? Do you know this phrase?. Pretty much what the title says but also interested in where you’re from and rough age if you do. I’m Hampshire, early 50s and it’s def"
         },
         {
           "source_family": "public",
@@ -79,28 +71,36 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Would you were a Bay City Rollers T shirt? Yank asking. only asking because of that underage sex scandal the drummer had If I recall? i heard Kurt CoBain liked his songs and honest"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "X2 free tix for the roundhouse tonight. I have two standing tix for Ye Vagabonds in the Roundhouse tonight - under the weather and can’t make it. Free to a good home!"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.043,
+        "source_item_count": 84,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-12T07:52:35.106Z",
-      "mood_score": 0.296,
+      "captured_at": "2026-06-12T09:36:34.006Z",
+      "mood_score": 0.299,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 9,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7, M5, RE2: Delays 3 trips delayed"
+          "excerpt": "Berlin transit M5, RE2: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -129,15 +129,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "i understand your intention and i may have done the same. idk maybe just leave it, or call some kind of animal rescue instead of police. Maybe you stressed the crow parents too bc "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, heavy with the threat of rain, while a brisk wind tugs at the edges of coats and scarves.. After a tumultuous couple of days, commuters are cautiously o"
+          "excerpt": "I see your point but unfortunately we can’t fairly rate the value of a project based on build costs because the building industry is in dire straights and even the simplest change "
         },
         {
           "source_family": "news",
@@ -146,6 +138,14 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "A hazy gray sky looms over Berlin, casting a muted light that feels heavy but oddly comforting as the first hint of autumn creeps in.. With the recent strike fresh in their minds, "
         },
         {
           "source_family": "public",
@@ -157,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.011,
+        "source_item_count": 116,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
         "freshness_score": 0.868
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-12T07:52:35.106Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-12T09:36:34.006Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -179,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -201,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "STK hands down. My boyfriend ended up throwing up in the restaurant. It is also comically expensive for food that is Applebee's level (maybe even lower). You will see a lot of new "
+          "excerpt": "It’s deeper than that. TJ Bruce the owner of Sacramento Badlands used to be in the construction business and was the contractor Les used. When TJ Bruce opened his second bar in Sac"
         },
         {
           "source_family": "forum",
@@ -212,42 +212,42 @@
           "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they instinctively avoid the BART delays by hopping on a random Muni that’ll take them "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a real local when they casually mention the BART delays but still opt for the bus, knowing it’s the less"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "i don't even own any stocks in companies ran by Elon (for various reasons), let alone investments. that doesn't negate the fact that it is 1. happening regardless of what you or i "
+          "excerpt": "Been to the Mission a bunch of times and there's honestly so many solid spots it's hard to go wrong. Most of the taquerias will have decent beer prices and the food is legit - just"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "SF Bay Area World Cup Merch?. Are there any good places in the City to buy World Cup 26 merch? I know some places sell USA kits and such, but I’m looking for any local spots that h"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.005,
+        "source_item_count": 111,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-12T07:52:35.106Z",
+      "captured_at": "2026-06-12T09:36:34.006Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 36,
+        "public": 39,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -278,39 +278,39 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "No, ha dit Voll Damm. Espero que hagi menjat al menys unes olivetes, és una cervesa forta. De lo del arbre, tu no vas en moto per Barcelona. Cada passeig en moto a la ciutat et don"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "160k is a extreme good salary in any country of Europe for 3. Even in Zurich you would be living okay. Counting that they also got car allowance and extra stocks. The same position"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a brilliant blue, dotted with cotton-like clouds, making the sunlight dance on the cobblestones of the Gothic Quarter.. Public transport is bustling but strained, with c"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.075,
-          "recency_weight": 1.04,
-          "excerpt": "No sé si estás un poco flipando. Un amigo que es expat trabaja dando clases a niños brits online cobrando una pasta, la mete en una revolut y no paga ni autónomos si declara nada a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "No entenc com els guiris no entenen que Barcelona no revolta al seu voltant. M'he posat al sub Reddit de primavera sound ja que com a segon any consecutiu no he pogut agafat entrad"
+          "excerpt": "A blanket of gray clouds hangs heavily over Barcelona, threatening rain as a brisk wind rustles through the trees in Parc de la Ciutadella.. The mood is anxious at the train statio"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
+        "source_item_count": 105,
         "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.852
       }
     }
   ]
