@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-12T03:21:27.953Z",
+    "capturedAt": "2026-06-12T05:45:09.965Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 419
+    "totalItems": 424
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-12T03:21:27.953Z",
-      "mood_score": 0.245,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-12T05:45:09.965Z",
+      "mood_score": 0.488,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -39,6 +39,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think it's normal to complain about tube strikes instead of just bracing for chaos every other month."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -70,30 +78,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "None taken - but what about letting them on sounds like a good idea? They may soil the bus with blood, they may get to the other end of the route and be lost, they might be being l"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Chelsea face anxious wait as furious statement leaves Premier League clubs sweating - Football London. Chelsea face anxious wait as furious statement leaves Premier League clubs sw"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.015,
+        "source_item_count": 96,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-12T03:21:27.953Z",
+      "captured_at": "2026-06-12T05:45:09.965Z",
       "mood_score": 0.299,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -106,6 +106,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -126,54 +135,46 @@
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Probably is true that I'm dumb, because actually I don't understand why people feel entitled to offend people randomly for their own frustration. Honestly they are very embarrassin"
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "The sun breaks through sporadic clouds, casting a warm glow over the bustling streets, while a refreshing breeze carries the scent of pretzels and fresh coffee.. With the BVG strik"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Why would he exactly? Either way, i have to go to sleep. Go, or don't. You can try the Wildvogel Nothilfe that I posted above but you won't find a wild bird pick up service at almo"
+          "excerpt": "Grüner macht schöner - Berlin is turning car parking spaces into green Oasis and I love to see it. Here’s one at Platz der Luftbrücke.. 1. Photo of how it will look 2. Photo of how"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
+        "source_item_count": 115,
         "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-12T03:21:27.953Z",
-      "mood_score": 0.468,
+      "captured_at": "2026-06-12T05:45:09.965Z",
+      "mood_score": 0.464,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -199,7 +200,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "They’re about the same as far as noise - neither are quiet. Post might feel safer but it’s about the same on that aspect as well (Geary is the edge of the Tenderloin.) There’s a 38"
+          "excerpt": "STK hands down. My boyfriend ended up throwing up in the restaurant. It is also comically expensive for food that is Applebee's level (maybe even lower). You will see a lot of new "
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can spot a real local when they casually mention the BART delays but still opt for the bus, knowing it’s the less"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "i don't even own any stocks in companies ran by Elon (for various reasons), let alone investments. that doesn't negate the fact that it is 1. happening regardless of what you or i "
         },
         {
           "source_family": "public",
@@ -207,45 +224,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "How good is the upgraded public WiFi in Alamo square. It’s such a nice day out I’d love to take my laptop over while working remote but don’t want to risk it if the signals terribl"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "The Diablo Valley (Concord, Martinez, Pleasant Hill, Clayton, and about half of Walnut Creek) is relatively affordable (largely because commutes from there to the South Bay and sou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "That budget is tight for SF…but Treasure Island would be a really good option commuting to University of the Pacific (25 min drive at WORST traffic hour) and it’s a lot cheaper to "
+          "excerpt": "SF Bay Area World Cup Merch?. Are there any good places in the City to buy World Cup 26 merch? I know some places sell USA kits and such, but I’m looking for any local spots that h"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.022,
+        "source_item_count": 111,
+        "average_valence": 0.012,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-12T03:21:27.953Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-12T05:45:09.965Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 35,
+        "public": 36,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -276,20 +277,20 @@
           "excerpt": "¿Y si el problema del alquiler en Barcelona no fuera ideológico, sino de pura gestión? Una reflexión necesaria."
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sun bathes the streets in a golden hue, but a stubborn breeze carries a hint of moisture from the nearby sea.. Trains are running in fits and starts, with passengers "
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "es",
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "No sé si estás un poco flipando. Un amigo que es expat trabaja dando clases a niños brits online cobrando una pasta, la mete en una revolut y no paga ni autónomos si declara nada a"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hangs heavily in an azure sky, radiating warmth that dances off the cobblestones of the Gothic Quarter.. Despite the disruptions from the railway strikes, there's a palpabl"
         },
         {
           "source_family": "public",
@@ -301,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.017,
+        "source_item_count": 102,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.849
       }
     }
   ]
