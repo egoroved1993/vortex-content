@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-13T01:16:39.703Z",
+    "capturedAt": "2026-06-13T03:19:35.728Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 421
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-13T01:16:39.703Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-06-13T03:19:35.728Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -45,8 +45,24 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "London council meeting descends into chaos amid claims cats beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats beheaded i"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to the short-notice cancellation of engineering work."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to the short-notice cancellation of engineering work."
         },
         {
           "source_family": "transport",
@@ -57,45 +73,29 @@
           "excerpt": "London transit Piccadilly: Planned Closure PICCADILLY LINE: Saturday 13 June, between 0145 and 0445, no service on the entire line. Replacement buses operate."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Salaries going down rent going up. From my previous post I’m learning salaries are currently going down across industries (incl. London) yet I see ROOMS for rent going for £1400. C"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Sound can always be bad, particularly in a stadium. It's a risk you take. My experience of Wembley Stadium gigs is 1 seated with poor sound, 1 seated with good sound, and 1 standin"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "New hobby. I'm a woman (in my 30’s) based in London. All of my current friends are moving away from the city, so I'm thinking of taking up a new hobby as a way to meet new people. "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.041,
+        "source_item_count": 88,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.834
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-13T01:16:39.703Z",
-      "mood_score": 0.249,
+      "captured_at": "2026-06-13T03:19:35.728Z",
+      "mood_score": 0.247,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -131,45 +140,37 @@
           "excerpt": "Esther Dune, Mila Stern, Oliver Deutschmann, Agent, Sweet G, Kimyøn at Kater (Berlin) on 2026-06-13T00:00:00.000 [Techno, House]"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.72,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sun peeks through gray clouds, casting a soft light on the damp streets after a morning rain.. With the BVG strike recently ended, there's a palpable wave of relief as commuter"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Grüner macht schöner - Berlin is turning car parking spaces into green Oasis and I love to see it. Here’s one at Platz der Luftbrücke.. 1. Photo of how it will look 2. Photo of how"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Flock AI surveillance cameras make tracking mandatory, unavoidable, and accessible at the click of a button. It's the difference between choosing to share your location with Google"
+          "excerpt": "The sky is a leaden gray, casting a muted glow over the city, with the occasional drizzle creating puddles that reflect the slight shimmer of light.. The streets are quieter than u"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.004,
+        "source_item_count": 114,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-13T01:16:39.703Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-06-13T03:19:35.728Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 123,
-        "average_valence": 0.008,
+        "average_valence": 0.02,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-13T01:16:39.703Z",
+      "captured_at": "2026-06-13T03:19:35.728Z",
       "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.839
       }
     }
   ]
