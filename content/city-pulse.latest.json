@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-13T07:31:20.415Z",
+    "capturedAt": "2026-06-13T09:14:31.865Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 444
+    "totalItems": 435
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-13T07:31:20.415Z",
+      "captured_at": "2026-06-13T09:14:31.865Z",
       "mood_score": 0.47,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "(Extremely boring voice) London Centric is 98% funded by readers. The money comes in, I spend it hiring reporters to go and stand by tills in gift shops and other daft things. No a"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
           "recency_weight": 1,
           "excerpt": "London council meeting descends into chaos amid claims cats beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats beheaded i"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No service between Harrow & Wealdstone and Queen's Park while we fix a points failure at Stonebridge Park"
         },
         {
           "source_family": "transport",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Severe Delays District Line: Severe delays due to the short-notice cancellation of engineering work."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to the short-notice cancellation of engineering work."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.089,
+        "source_item_count": 99,
+        "average_valence": -0.09,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.845
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-13T07:31:20.415Z",
-      "mood_score": 0.246,
+      "captured_at": "2026-06-13T09:14:31.865Z",
+      "mood_score": 0.247,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit RE1: Delays 1 trips delayed"
         },
         {
           "source_family": "nightlife",
@@ -140,42 +140,42 @@
           "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "A chill wind sweeps through the streets, carrying the scent of impending rain and the sound of rustling leaves.. With the recent transport strikes, the bus stops are unusually spar"
+          "excerpt": "A brisk autumn chill fills the air, with leaves swirling in a dance of orange and gold under a slate-gray sky.. The streets are a mix of relief and tension as buses and trams resum"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Grüner macht schöner - Berlin is turning car parking spaces into green Oasis and I love to see it. Here’s one at Platz der Luftbrücke.. 1. Photo of how it will look 2. Photo of how"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.011,
+        "source_item_count": 113,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-13T07:31:20.415Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-06-13T09:14:31.865Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 62,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Look for housing in concord or Baypoint (west Pittsburg) Antioch/pittsburg is kind of ghetto. Orinda is very high priced but safe. Concord, Baypoint, Pittsburg, Antioch all have ba"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -225,29 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Stay put in your rent controlled unit. I went through the exact same thing as you. I struggled, I even went hungry as I would have to choose between putting gas in my car to get to"
+          "excerpt": "no one can expect you to sit in the house all day tell them your going for a walk for some exorcise and fresh air you gotta be tired of smelling curry all the time, or just go and "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Back in the day, I would try out different cafes or try to hit all the different library branches in the city. (Or both) A lot of good movies coming out too so you could visit the "
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.045,
+        "source_item_count": 124,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "belonging"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-13T07:31:20.415Z",
+      "captured_at": "2026-06-13T09:14:31.865Z",
       "mood_score": 0.456,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 35,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.012,
+        "source_item_count": 99,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.848
       }
     }
   ]
