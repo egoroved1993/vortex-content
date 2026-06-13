@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-13T19:38:06.245Z",
+    "capturedAt": "2026-06-13T20:36:46.684Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 443
+    "totalItems": 439
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-13T19:38:06.245Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-06-13T20:36:46.684Z",
+      "mood_score": 0.472,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still wait for the 149 bus and look shocked when it’s late. Everyone’s already used to the chaos of the timetable."
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -70,6 +62,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Walthamstow Central. London Underground tickets will be accepted on"
         },
         {
@@ -82,32 +82,31 @@
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.062,
+        "source_item_count": 90,
+        "average_valence": -0.082,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.819
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-13T19:38:06.245Z",
-      "mood_score": 0.242,
+      "captured_at": "2026-06-13T20:36:46.684Z",
+      "mood_score": 0.249,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -116,66 +115,66 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Mainly sensibility for a certain subculture, as in \"Is the line-up interesting and relevant to nerds\". Does the booking show a bit of love for the genre, or is it boring, risk-free"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "100% the donor stand that is in a shack in the middle of a street now takes card. Our Spati also takes card, and the barber shop near us also takes card. It is WILDLY easier to use"
+        },
+        {
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
+          "valence": 0.5,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit RE2, RE7: Delays 2 trips delayed"
+          "excerpt": "Esther Dune, Mila Stern, Oliver Deutschmann, Agent, Sweet G, Kimyøn at Kater (Berlin) on 2026-06-13T00:00:00.000 [Techno, House]"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Normal wear and tear is covered by the rent you pay. To my knowledge, you only have to paint the walls white before you move out when you painted them in a certain colour before."
+          "recency_weight": 0.72,
+          "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Kinda sad that most of the photos in the article are of Chicos Späti on Dieffenbachstr., which has been brilliant in previous tournaments but have said that they won't bother setti"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If it's not in the contract, they can't demand you to return it painted. To me it sounds like their way of having you do their work (and pay for it) so that they can likely rent th"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Just reminding everyone and anyone that painted walls should have no bearing on the maximum allowable rent of an apartment. It’s simply not something that’s accounted for in determ"
+          "valence": -0.433,
+          "recency_weight": 0.72,
+          "excerpt": "The air is crisp with an autumn chill, tinted by the golden hues of falling leaves as sunlight filters through the overcast skies.. Despite the recent disruptions, there's a cautio"
         }
       ],
       "metadata": {
-        "source_item_count": 130,
-        "average_valence": -0.023,
+        "source_item_count": 129,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-13T19:38:06.245Z",
-      "mood_score": 0.419,
+      "captured_at": "2026-06-13T20:36:46.684Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 60,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,33 +190,17 @@
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Is there a difference to rent in Aug or Sep?. I'm moving in as a new grad and can start lease either Aug or Sep. Are the rental market and prices different for mid-August and mid-S"
+          "excerpt": "Anyone here know the deal with the ferry building showing different times on its faces yesterday?. Maybe I'm one of the few that relies on it (occasionally) but I can't imagine why"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Came to say this. If you are a ‘good’ tenant a landlord will be interested to keep you. Yes they want a massive rent increase, however if you communicate and offer your negotiation"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You can tell who’s from here; they shrug off BART chaos while others panic at the train delays, like it's ju"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Chaos and infighting: Inside the implosion of Matt Mahan’s governor’s race - The San Francisco Standard. Chaos and infighting: Inside the implosion of Matt Mahan’s governor’s race"
+          "excerpt": "Available monthly parking in the Sunset?. Hi there, I'm hoping to find a parking spot to rent in the Sunset... whether it be a driveway, garage or empty lot. ...I know there is an "
         },
         {
           "source_family": "public",
@@ -225,29 +208,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "What's your rent now, what's it going to? Legally you're pretty SOL, but, if he's going way above market that's a very different situation than if 45% increase is still below where"
+          "excerpt": "I don't disagree with you on housing supply. But there is absolutely no world in which supply could have kept up with the increase in demand in the last two years in SF. Instead, w"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "You can thank the tenants union for this. Strip all rent control regulations in sf and you’d see less extreme cases like this."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "It’s so strange to me that people expect San Francisco to be dangerous. Even in the rough areas you’ll see 90 year old ladies doing Tai Chi without being bothered."
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.091,
+        "source_item_count": 121,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-13T19:38:06.245Z",
-      "mood_score": 0.457,
+      "captured_at": "2026-06-13T20:36:46.684Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 35,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -297,20 +296,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.612,
           "recency_weight": 0.72,
-          "excerpt": "The sun pours down with an unexpected warmth, catching the crisp edges of dried leaves on the pavement.. Train platforms are unusually crowded today, with murmurs of frustration ri"
+          "excerpt": "The sun is peeking through scattered clouds, casting a warm glow over the streets while a slight breeze carries the scent of fresh pastries from nearby bakeries.. People are discus"
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.008,
+        "source_item_count": 99,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.831
       }
     }
   ]
