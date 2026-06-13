@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-13T20:36:46.684Z",
+    "capturedAt": "2026-06-13T21:34:46.041Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 439
+    "totalItems": 440
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-13T20:36:46.684Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-06-13T21:34:46.041Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.082,
+        "average_valence": -0.075,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.819
+        "freshness_score": 0.815
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-13T20:36:46.684Z",
-      "mood_score": 0.249,
+      "captured_at": "2026-06-13T21:34:46.041Z",
+      "mood_score": 0.247,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U8, U2: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +154,22 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.433,
-          "recency_weight": 0.72,
-          "excerpt": "The air is crisp with an autumn chill, tinted by the golden hues of falling leaves as sunlight filters through the overcast skies.. Despite the recent disruptions, there's a cautio"
         }
       ],
       "metadata": {
-        "source_item_count": 129,
-        "average_valence": -0.002,
+        "source_item_count": 130,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-13T20:36:46.684Z",
+      "captured_at": "2026-06-13T21:34:46.041Z",
       "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -240,10 +241,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-13T20:36:46.684Z",
+      "captured_at": "2026-06-13T21:34:46.041Z",
       "mood_score": 0.458,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 33,
@@ -296,9 +297,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.612,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun is peeking through scattered clouds, casting a warm glow over the streets while a slight breeze carries the scent of fresh pastries from nearby bakeries.. People are discus"
+          "excerpt": "The sun peeks through a blanket of clouds, casting a golden hue over the bustling streets of Eixample.. Despite the usual crowd, the mood on the metro is one of frustration as comm"
         }
       ],
       "metadata": {
@@ -307,9 +308,9 @@
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.829
       }
     }
   ]
