@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-13T03:19:35.728Z",
+    "capturedAt": "2026-06-13T05:40:45.649Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 441
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-13T03:19:35.728Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-06-13T05:40:45.649Z",
+      "mood_score": 0.47,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -47,6 +47,14 @@
           "valence": -1,
           "recency_weight": 1,
           "excerpt": "London council meeting descends into chaos amid claims cats beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats beheaded i"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Planned Closure CIRCLE LINE: Saturday 13 June, until 1030, no service on the entire line."
         },
         {
           "source_family": "transport",
@@ -70,31 +78,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Planned Closure PICCADILLY LINE: Saturday 13 June, between 0145 and 0445, no service on the entire line. Replacement buses operate."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Baker Street and Aldgate, and SEVERE DELAYS between Harrow-on-the-Hill and Baker S"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.061,
+        "source_item_count": 98,
+        "average_valence": -0.089,
         "dominant_themes": [
           "general",
-          "events",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-13T03:19:35.728Z",
+      "captured_at": "2026-06-13T05:40:45.649Z",
       "mood_score": 0.247,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -124,20 +124,20 @@
           "excerpt": "Berlin transit RE2: Delays 1 trips delayed"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
-        },
-        {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
           "language": "de",
           "valence": 0.5,
           "recency_weight": 1.08,
           "excerpt": "Esther Dune, Mila Stern, Oliver Deutschmann, Agent, Sweet G, Kimyøn at Kater (Berlin) on 2026-06-13T00:00:00.000 [Techno, House]"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
         },
         {
           "source_family": "news",
@@ -153,29 +153,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a leaden gray, casting a muted glow over the city, with the occasional drizzle creating puddles that reflect the slight shimmer of light.. The streets are quieter than u"
+          "excerpt": "A stark gray sky looms over the city, with sporadic drizzles creating a slick sheen on the pavements.. With the recent strikes, the buses are noticeably crowded, but there's a hint"
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.008,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-13T03:19:35.728Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-06-13T05:40:45.649Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 57,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,6 +187,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Look for housing in concord or Baypoint (west Pittsburg) Antioch/pittsburg is kind of ghetto. Orinda is very high priced but safe. Concord, Baypoint, Pittsburg, Antioch all have ba"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -205,44 +213,36 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Thank you for the suggestion!!! I looked it up and unfortunately the pet-friendly buildings are too far and not accessible by Caltrain (I have a car but don’t think I could sustain"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "For my last few years in The City, my partner was South Korean, her best friend was Guatemalan, my two favorite cycling buddies were from Bogota and Thailand. I helped run a restau"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Available monthly parking in the Sunset?. Hi there, I'm hoping to find a parking spot to rent in the Sunset... whether it be a driveway, garage or empty lot. ...I know there is an "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Stay put in your rent controlled unit. I went through the exact same thing as you. I struggled, I even went hungry as I would have to choose between putting gas in my car to get to"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": 0.02,
+        "source_item_count": 128,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-13T03:19:35.728Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-06-13T05:40:45.649Z",
+      "mood_score": 0.455,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 101,
-        "average_valence": -0.007,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.845
       }
     }
   ]
