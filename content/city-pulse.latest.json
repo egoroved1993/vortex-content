@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-14T12:52:15.482Z",
+    "capturedAt": "2026-06-14T13:40:13.595Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-14T12:52:15.482Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-06-14T13:40:13.595Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Walthamstow Central."
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Walthamstow Central."
         },
         {
           "source_family": "transport",
@@ -76,27 +76,27 @@
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "‘I pay £680 a month to rent in London – but my neighbours are prisoners’ - The Telegraph. ‘I pay £680 a month to rent in London – but my neighbours are prisoners’"
+          "excerpt": "UK weather: Summer warmth to return for weekend but heatwave chances fade - BBC. UK weather: Summer warmth to return for weekend but heatwave chances fade"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.049,
+        "source_item_count": 82,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.799
+        "freshness_score": 0.784
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-14T12:52:15.482Z",
+      "captured_at": "2026-06-14T13:40:13.595Z",
       "mood_score": 0.2,
-      "mood_label": "low",
+      "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -115,28 +115,20 @@
       ],
       "drivers": [
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A cool breeze carries the scent of damp earth after an earlier drizzle, with clouds hanging low over the city.. With the BVG strike now over, commuters cautiously reboard trains an"
+        },
+        {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
           "language": "de",
           "valence": 0.5,
           "recency_weight": 1.08,
           "excerpt": "Esther Dune, Mila Stern, Oliver Deutschmann, Agent, Sweet G, Kimyøn at Kater (Berlin) on 2026-06-14T00:00:00.000 [Techno, House]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a steely gray, hanging low with the threat of rain, yet the air is surprisingly warm and thick.. After days of chaos, the S-Bahn is packed with commuters who exude a mix"
         },
         {
           "source_family": "public",
@@ -153,23 +145,31 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Lol. Police state I had contact to the police about 100 times and they never did anything illegal to me. I think if the police has a permanent problem with you it's how you interac"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Then accept that I give you the 50€ bill from the atm for my small purchase and don’t cry about change. Btw: handling change sucks"
         }
       ],
       "metadata": {
         "source_item_count": 115,
-        "average_valence": 0,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-14T12:52:15.482Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-06-14T13:40:13.595Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +178,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -193,6 +193,14 @@
           "valence": 1,
           "recency_weight": 1.04,
           "excerpt": "I usually don't agree with people who say politics shouldn't play a role in your friendships. Because \"politics\" can mean \"do you think I should have human rights\" or \"do you belie"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Saw a guy serenading commuters at the Civic Center stop with a ukulele while the bus was delayed. Crowd loved it, even with the chao"
         },
         {
           "source_family": "public",
@@ -216,31 +224,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know someone’s local when they dodge the BART delays like it’s an Olympic sport. Tourists just stand and stare at"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Don’t go to Mission Pet Hospital.. My dog is absolutely traumatized after coming here. I made the mistake of letting them trim my dog’s nails and she left with 8 of her nails cut w"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. Only a true local knows the difference between a BART delay and a BART meltdown. The eye roll when the Civic Center s"
         }
       ],
       "metadata": {
-        "source_item_count": 109,
-        "average_valence": -0.008,
+        "source_item_count": 110,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "belonging",
           "routine"
         ],
-        "freshness_score": 0.85
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-14T12:52:15.482Z",
+      "captured_at": "2026-06-14T13:40:13.595Z",
       "mood_score": 0.417,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -296,20 +296,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.72,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun breaks through a blanket of grey clouds, casting a warm glow on damp pavements where raindrops linger from last night's storm.. The mood on the trains is tense, with commut"
+          "excerpt": "The sun hangs heavy in the sky, casting sharp shadows on the cobblestones while a light breeze teases the scent of fresh churros from nearby stands.. The normally bustling Rodalies"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.008,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.811
       }
     }
   ]
