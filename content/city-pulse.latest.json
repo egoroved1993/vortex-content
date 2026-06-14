@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-14T16:40:41.435Z",
+    "capturedAt": "2026-06-14T17:36:16.297Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-14T16:40:41.435Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-06-14T17:36:16.297Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events.",
       "dominant_sentiment": "neutral",
@@ -41,14 +41,6 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "London council meeting descends into chaos amid claims cats being beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats bein"
-        },
-        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
@@ -65,6 +57,14 @@
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "London council meeting descends into chaos amid claims cats being beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats bein"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -73,30 +73,30 @@
           "excerpt": "Trying to find a loved one who lived in Fulham in 1960s. Hi there - my best friend found a stack of love letters in her grandfathers things after he passed from a woman who lived i"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -1,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy slate gray, drizzling intermittently as the chill permeates the air, urging locals to pull their scarves tighter.. The mood around the tube stations is a mix of "
+          "excerpt": "UK weather: Summer warmth to return for weekend but heatwave chances fade - BBC. UK weather: Summer warmth to return for weekend but heatwave chances fade"
         }
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.067,
+        "average_valence": -0.052,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.797
+        "freshness_score": 0.793
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-14T16:40:41.435Z",
-      "mood_score": 0.2,
-      "mood_label": "dark",
+      "captured_at": "2026-06-14T17:36:16.297Z",
+      "mood_score": 0.203,
+      "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -104,10 +104,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -151,14 +142,22 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, with intermittent bursts of sunlight teasing the damp streets, hinting at a reluctant transition to autumn.. After days of uncertainty, the m"
+          "excerpt": "The sky is a patchwork of grey and blue, with a crisp breeze carrying the scent of damp earth from yesterday's rain.. Despite the resumption of service, commuters are still moving "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Der BER - ein echtes Erfolgsprojekt (im Vergleich zu Stuttgart 21) 😉. Was musste man sich als (Wahl-)Berliner gerade speziell aus dem Südwesten anhören als sich unser BER um läche"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.001,
+        "source_item_count": 116,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "routine",
@@ -169,10 +168,10 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-14T16:40:41.435Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-14T17:36:16.297Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 53,
@@ -230,21 +229,21 @@
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.034,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-14T16:40:41.435Z",
-      "mood_score": 0.411,
+      "captured_at": "2026-06-14T17:36:16.297Z",
+      "mood_score": 0.415,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 26,
@@ -297,17 +296,17 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "A sharp afternoon sun blares down, casting playful shadows on the cobblestones of the Gothic Quarter while a gentle breeze carries the smell of fresh paella from nearby terraces.. "
+          "excerpt": "The sky hangs heavy with gray clouds, threatening rain, while a brisk wind carries the scent of the sea through the bustling streets.. The usually vibrant Metro stations are eerily"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.026,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
-          "tourism",
+          "routine",
           "money"
         ],
         "freshness_score": 0.816
