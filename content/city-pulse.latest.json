@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-14T18:40:46.048Z",
+    "capturedAt": "2026-06-14T19:38:16.201Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-14T18:40:46.048Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-06-14T19:38:16.201Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No Service between Stonebridge Park and Harrow & Wealdstone while we fix a signal failure at Wembley Cent"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,42 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Trying to find a loved one who lived in Fulham in 1960s. Hi there - my best friend found a stack of love letters in her grandfathers things after he passed from a woman who lived i"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a steely gray, with drizzles that intermittently kiss the pavement, making it seem as if the city is holding its breath.. The mood at the bus stops is tense; commuters c"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.06,
+        "source_item_count": 87,
+        "average_valence": -0.065,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.789
+        "freshness_score": 0.796
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-14T18:40:46.048Z",
-      "mood_score": 0.202,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
+      "captured_at": "2026-06-14T19:38:16.201Z",
+      "mood_score": 0.199,
+      "mood_label": "dark",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -139,37 +148,29 @@
           "excerpt": "Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung die Unterbringung wohnungsloser Familien teuer macht - rbb24.de. Tausende Euro für 30 Quadratmeter: Wie eine WBS-Regelung d"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Der BER - ein echtes Erfolgsprojekt (im Vergleich zu Stuttgart 21) 😉. Was musste man sich als (Wahl-)Berliner gerade speziell aus dem Südwesten anhören als sich unser BER um läche"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Anyone else notice a distinct lack of WM vibes?. I've lived in Berlin since summer 2010 and this will be the 5th world cup I witness here. I know the games are at weird times, but "
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with gray clouds, threatening rain as a chill wind sweeps through the streets of Berlin.. With the looming BVG strike, the usual hustle on U-Bahn platforms has "
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.007,
+        "source_item_count": 116,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-14T18:40:46.048Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-14T19:38:16.201Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -228,20 +229,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.034,
+        "source_item_count": 118,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-14T18:40:46.048Z",
-      "mood_score": 0.414,
+      "captured_at": "2026-06-14T19:38:16.201Z",
+      "mood_score": 0.415,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -288,9 +289,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs low in a cobalt sky, casting long shadows on the bustling streets as a chill of early February lingers in the air.. Frustration is palpable among commuters at Sants s"
+          "excerpt": "The sky is a slate gray, heavy with clouds, threatening rain but holding back, creating a cool, damp atmosphere that whispers of winter's arrival.. The mood on the platforms is res"
         },
         {
           "source_family": "public",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.017,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.819
       }
     }
   ]
