@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-14T13:40:13.595Z",
+    "capturedAt": "2026-06-14T15:05:23.742Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 398
+    "totalItems": 221
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-14T13:40:13.595Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-06-14T15:05:23.742Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -41,20 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "London council meeting descends into chaos amid claims cats being beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats bein"
-        },
-        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Walthamstow Central."
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Walthamstow Central. Tickets will be accepted on London Buses, Lond"
         },
         {
           "source_family": "transport",
@@ -65,6 +57,14 @@
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays due to earlier points failure at Liverpool Street."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -73,40 +73,40 @@
           "excerpt": "I'm beyond grateful for the link and info! I'm 43 but couldn't get help on the NHS because I'm \"too young\" to be in peri, lol. I'm glad you went private and hope that the specialis"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "UK weather: Summer warmth to return for weekend but heatwave chances fade - BBC. UK weather: Summer warmth to return for weekend but heatwave chances fade"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Safety after theatre show?. I suppose this is the right sub to ask in. Im going to the theatre and want to get a bit dressed up, in a black corset and long flowy satin skirt with b"
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.042,
+        "source_item_count": 47,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
-          "transit",
-          "events"
+          "events",
+          "transit"
         ],
-        "freshness_score": 0.784
+        "freshness_score": 1.043
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-14T13:40:13.595Z",
-      "mood_score": 0.2,
+      "captured_at": "2026-06-14T15:05:23.742Z",
+      "mood_score": 0.197,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A cool breeze carries the scent of damp earth after an earlier drizzle, with clouds hanging low over the city.. With the BVG strike now over, commuters cautiously reboard trains an"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5, S3: Delays 2 trips delayed"
         },
         {
           "source_family": "nightlife",
@@ -129,6 +129,14 @@
           "valence": 0.5,
           "recency_weight": 1.08,
           "excerpt": "Esther Dune, Mila Stern, Oliver Deutschmann, Agent, Sweet G, Kimyøn at Kater (Berlin) on 2026-06-14T00:00:00.000 [Techno, House]"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The autumn sun casts a golden glow over the fallen leaves, while a brisk wind hints at the approaching chill of winter.. U-Bahn carriages are unusually crowded, with commuters hudd"
         },
         {
           "source_family": "public",
@@ -145,40 +153,31 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Lol. Police state I had contact to the police about 100 times and they never did anything illegal to me. I think if the police has a permanent problem with you it's how you interac"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Then accept that I give you the 50€ bill from the atm for my small purchase and don’t cry about change. Btw: handling change sucks"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.001,
+        "source_item_count": 66,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "belonging"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 1.065
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-14T13:40:13.595Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-06-14T15:05:23.742Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 44,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -193,6 +192,14 @@
           "valence": 1,
           "recency_weight": 1.04,
           "excerpt": "I usually don't agree with people who say politics shouldn't play a role in your friendships. Because \"politics\" can mean \"do you think I should have human rights\" or \"do you belie"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Mission. Caught a guy making a origami crane from a bus transfer while his toddler watched, totally unbothered by the chaos around him. Classic "
         },
         {
           "source_family": "forum",
@@ -217,40 +224,32 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Anyone else with USPS package delays due to World Cup?. Was expecting a couple of priority and ground advantage packages on Thursday, but they’ve been stuck at the San Francisco Di"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. Only a true local knows the difference between a BART delay and a BART meltdown. The eye roll when the Civic Center s"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.022,
+        "source_item_count": 60,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "belonging",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-14T13:40:13.595Z",
+      "captured_at": "2026-06-14T15:05:23.742Z",
       "mood_score": 0.417,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, events. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 7,
         "trends": 8,
         "weather": 1
       },
@@ -296,20 +295,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs heavy in the sky, casting sharp shadows on the cobblestones while a light breeze teases the scent of fresh churros from nearby stands.. The normally bustling Rodalies"
+          "excerpt": "The sun blazes fiercely, casting sharp shadows on the bustling avenues, while the scent of saltwater drifts from the nearby beaches.. The metro is unusually packed, with commuters "
         }
       ],
       "metadata": {
-        "source_item_count": 91,
+        "source_item_count": 48,
         "average_valence": -0.01,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "events"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 1.047
       }
     }
   ]
