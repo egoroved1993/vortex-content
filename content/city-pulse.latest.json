@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-14T01:18:40.022Z",
+    "capturedAt": "2026-06-14T03:21:52.049Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 424
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-14T01:18:40.022Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-14T03:21:52.049Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 18,
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -46,6 +47,14 @@
           "valence": -1,
           "recency_weight": 1,
           "excerpt": "London council meeting descends into chaos amid claims cats being beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats bein"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
           "source_family": "public",
@@ -70,30 +79,22 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "‘I pay £680 a month to rent in London – but my neighbours are prisoners’ - The Telegraph. ‘I pay £680 a month to rent in London – but my neighbours are prisoners’"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.033,
+        "source_item_count": 85,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.799
+        "freshness_score": 0.802
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-14T01:18:40.022Z",
+      "captured_at": "2026-06-14T03:21:52.049Z",
       "mood_score": 0.198,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -103,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -143,7 +144,7 @@
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, heavy with the promise of rain, while a cool breeze carries the scent of damp pavement.. After a brief chaos from the BVG strike, the streets are tentative"
+          "excerpt": "The air is crisp and slightly overcast, with a hint of rain that keeps the streets shimmering like mirrors.. After a tumultuous few days, the trains are running again, but commuter"
         },
         {
           "source_family": "public",
@@ -155,22 +156,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 124,
+        "source_item_count": 125,
         "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-14T01:18:40.022Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-06-14T03:21:52.049Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 53,
@@ -228,19 +229,19 @@
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.084,
+        "average_valence": -0.085,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-14T01:18:40.022Z",
-      "mood_score": 0.417,
+      "captured_at": "2026-06-14T03:21:52.049Z",
+      "mood_score": 0.418,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -295,20 +296,20 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "A thin layer of clouds casts a muted light over the bustling streets, with a hint of humidity in the air promising a late afternoon downpour.. The usual rush-hour crowd is exacerba"
+          "excerpt": "The air is heavy with humidity, thick grey clouds loom overhead, threatening rain at any moment.. Crowds are noticeably tense at the Sants station, with passengers anxiously checki"
         }
       ],
       "metadata": {
         "source_item_count": 95,
-        "average_valence": -0.009,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.824
       }
     }
   ]
