@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-15T03:23:27.851Z",
+    "capturedAt": "2026-06-15T05:59:12.145Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 405
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-15T03:23:27.851Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-06-15T05:59:12.145Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Reading/Heathrow Airport while we fix a fault with the overhead power lines at Hanw"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -70,36 +79,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "What are phrases you will (figuratively) never hear a Brit say??. Just for fun. &#x200B; Examples: &#x200B; \" This rail replacement service is just as good as getting any train!!\" "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "UK weather: Summer warmth to return for weekend but heatwave chances fade - BBC. UK weather: Summer warmth to return for weekend but heatwave chances fade"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.014,
+        "source_item_count": 85,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.798
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-15T03:23:27.851Z",
-      "mood_score": 0.2,
-      "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-15T05:59:12.145Z",
+      "mood_score": 0.499,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 14,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,20 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. Only in Kreuzberg will you find a 24/7 Döner that’s packed at 3 AM with locals debating the best street art. It's a rite of pa"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "No actually I rarely go eat in Korean restaurants. 99% of my experiences were either for work or friend dinners. Can’t really pay that much money for subpar quality food in Berlin,"
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "public",
@@ -152,28 +145,36 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "We are closer to communism than a police state. As I said before. A close friend of mine is police officer. I asked him the same question once ago and he told.me.\"Yes, absolutely. "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Anyone else notice a distinct lack of WM vibes?. I've lived in Berlin since summer 2010 and this will be the 5th world cup I witness here. I know the games are at weird times, but "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.001,
+        "source_item_count": 119,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-15T03:23:27.851Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-06-15T05:59:12.145Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,19 +188,27 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "We did a cash for keys to get the tenants out of the condo we inherited from my mom passed. And they said exactly this. They lost out on several apartments/condos that they wanted "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I hate flying into SFO. I feel like 4/5 times, I get ridiculous delays flying into SFO. Air Traffic Control is delaying the flight by 3.5 hours now. It'll likely get delayed furthe"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "40% rent increase without notice. My original 1 year lease is ending in 2 weeks and LL is trying to increase rent by 40%. Given that this is a new condo, AB 1482 exemption does not"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If the AI folks are cashing out, expect SFH to become more expensive and rental properties to become more available, as they purchase homes."
         },
         {
           "source_family": "public",
@@ -215,37 +224,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "There is great controversy about the best burrito but I’m with the NYTimes in saying it’s La Taquiera on Mission and 25th, plus it always has a nice slice of diverse visitors. I th"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know someone’s a local when they know which BART delays mean they have to take the long walk to 16th ins"
+          "excerpt": "Oh nice, Capital Corridor is definitely way to go for this. You can catch it from Richmond station if your friend meets you there, or if you pick him up in SF first then just head "
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.022,
+        "source_item_count": 112,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "transit"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-15T03:23:27.851Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-06-15T05:59:12.145Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -276,12 +277,20 @@
           "excerpt": "Im OK with stamp duty if it was reasonable and proportional. First homes should be exempt. Second homes should havenit and the more properties under the same family or company the "
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I spend 3 or 4 months a year in Spain and I usually use Airbnb the first time I stay at a place and then work something out with the host off platform for future stays for a better"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "A hazy warmth wraps the city as the sun breaks through clouds, casting a golden hue on the bustling streets of Barcelona.. The mood on the trains is tense yet resigned, with passen"
+          "excerpt": "The sky is a heavy slate gray, pregnant with rain that hasn't yet fallen, giving the air a palpable electric charge.. Commuters are stuck milling around Plaça Catalunya, their impa"
         },
         {
           "source_family": "public",
@@ -290,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Asesinado de un disparo en la cabeza un hombre frente a la comisaría de Policía de la calle Balmes. En pleno centro, delante de una comisaría, en plena visita del Papa. Increíble."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "L’antifeixisme convoca a manifestar-se contra els neonazis Núcleo Nacional a Barcelona 13 de juny"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.02,
+        "source_item_count": 89,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.799
+        "freshness_score": 0.804
       }
     }
   ]
