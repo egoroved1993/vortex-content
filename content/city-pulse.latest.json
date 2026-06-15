@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-15T14:21:29.507Z",
+    "capturedAt": "2026-06-15T16:44:42.525Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 402
+    "totalItems": 405
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-15T14:21:29.507Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-06-15T16:44:42.525Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Walthamstow Central."
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due an earlier trespasser on the track at Paddington."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Abbey Wood and Reading / Heathrow Airport due to an earlier trespasser on the track at Custom Hous"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Walthamstow Central. London Buses, London Overground, Great Norther"
         },
         {
           "source_family": "public",
@@ -63,39 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Another thing is about split tunneling on mobiles is that its very rare to multitask on such a device. On a PC its a lot more acceptably needed because you want good ping in a game"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think it's a 'quick walk' to the tube. In Dalston, it's a 10-minute trek, at least, and that's on a good day."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Bristol is England's least affordable city to rent in - should more be done? - BBC. Bristol is England's least affordable city to rent in - should more be done?"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.024,
+        "source_item_count": 88,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.806
+        "freshness_score": 0.817
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-15T14:21:29.507Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-06-15T16:44:42.525Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -116,14 +116,6 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -140,12 +132,20 @@
           "excerpt": "Speak to a doctor. They can advise you on precautions such as preventative strategies and vaccinations. It’s about risk management and harm reduction. Like you said, the only way t"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, casting a soft light over the city that feels both heavy and contemplative.. With the recent BVG strike just coming to an end, the U-Bahn stations are buzz"
+          "excerpt": "The sky is a dull gray, with a chill that bites a little harder than usual, hinting at rain that might arrive uninvited.. With the recent strikes leaving their mark, the few buses "
         },
         {
           "source_family": "public",
@@ -158,19 +158,19 @@
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": 0.004,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-15T14:21:29.507Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-15T16:44:42.525Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -196,14 +196,6 @@
           "excerpt": "nice one, your dad competing at crossfit games is pretty epic at that level for the week before i'd probably look at half moon bay area - still coastal vibes but way cheaper than s"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You know a local by how they roll their eyes at tourists trying to navigate BART during a breakdown. That chaos is ju"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -226,11 +218,19 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "International travel. Hi everyone! I am based in bay area and enjoy international travel and exploring new cultures. Most of my friends are at different life stages and don’t trave"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Oh nice, Capital Corridor is definitely way to go for this. You can catch it from Richmond station if your friend meets you there, or if you pick him up in SF first then just head "
         }
       ],
       "metadata": {
         "source_item_count": 108,
-        "average_valence": -0.005,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,8 +241,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-15T14:21:29.507Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-15T16:44:42.525Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -286,25 +286,25 @@
           "excerpt": "Thailand heat is humid and hot. More intense than Barcelona for me, but honestly the prices as a foreigner were so good I overlooked it. Japan weather wasn't bad but I wasn't there"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sun hovers brightly under a backdrop of scattered clouds, casting playful shadows on the bustling streets.. Despite the ongoing strike, the platforms at Sants are packed with f"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Soy una nueva visitante en Barcelona y me enamoré de esta ciudad única en cuanto llegué."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "es",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Asesinado de un disparo en la cabeza un hombre frente a la comisaría de Policía de la calle Balmes. En pleno centro, delante de una comisaría, en plena visita del Papa. Increíble."
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.014,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
