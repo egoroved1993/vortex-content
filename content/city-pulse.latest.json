@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-15T05:59:12.145Z",
+    "capturedAt": "2026-06-15T08:25:16.516Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 405
+    "totalItems": 408
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-15T05:59:12.145Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-06-15T08:25:16.516Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 17,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -47,6 +47,22 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Reading/Heathrow Airport while we fix a fault with the overhead power lines at Hanw"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Moor Park and Watford due to train cancellations. After the 08:37 departure fro"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we fix a track fault at Walthamstow Central. Tickets will be accepted on London Buses"
         },
         {
           "source_family": "public",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Trying to find a loved one who lived in Fulham in 1960s. Hi there - my best friend found a stack of love letters in her grandfathers things after he passed from a woman who lived i"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Is vanity a sizing a thing?. OK, I have heard about 'vanity sizing' but not sure if it is actually a thing or not, and is it only related to women's clothes? Only, my usual Next 98"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What are phrases you will (figuratively) never hear a Brit say??. Just for fun. &#x200B; Examples: &#x200B; \" This rail replacement service is just as good as getting any train!!\" "
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.028,
+        "source_item_count": 86,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.798
+        "freshness_score": 0.802
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-15T05:59:12.145Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-15T08:25:16.516Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S3: Delays 3 trips delayed"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -145,31 +154,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "We are closer to communism than a police state. As I said before. A close friend of mine is police officer. I asked him the same question once ago and he told.me.\"Yes, absolutely. "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Anyone else notice a distinct lack of WM vibes?. I've lived in Berlin since summer 2010 and this will be the 5th world cup I witness here. I know the games are at weird times, but "
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.003,
+        "source_item_count": 121,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-15T05:59:12.145Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-15T08:25:16.516Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 112,
-        "average_valence": -0.012,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-15T05:59:12.145Z",
+      "captured_at": "2026-06-15T08:25:16.516Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -290,7 +291,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a heavy slate gray, pregnant with rain that hasn't yet fallen, giving the air a palpable electric charge.. Commuters are stuck milling around Plaça Catalunya, their impa"
+          "excerpt": "Today, the air is thick with humidity, as the sun peeks through gray clouds, threatening rain at any moment.. The mood on the trains is tense, with commuters crowded and fidgety, f"
         },
         {
           "source_family": "public",
@@ -309,7 +310,7 @@
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.804
+        "freshness_score": 0.802
       }
     }
   ]
