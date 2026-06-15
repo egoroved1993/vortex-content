@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-15T18:39:22.534Z",
+    "capturedAt": "2026-06-15T20:15:49.628Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-15T18:39:22.534Z",
-      "mood_score": 0.425,
+      "captured_at": "2026-06-15T20:15:49.628Z",
+      "mood_score": 0.419,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 11,
         "review": 2,
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Hayes & Harlington and Reading/Heathrow Airport due to an earlier trespasser on the track at Custom"
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to train cancellations. Tickets will be accepted on London Buses, Mildmay l"
         },
         {
           "source_family": "transport",
@@ -78,24 +78,24 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "London council meeting descends into chaos amid claims cats being beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats bein"
+          "excerpt": "London council meeting descends into chaos amid claims cats beheaded in local park - London Evening Standard. London council meeting descends into chaos amid claims cats beheaded i"
         }
       ],
       "metadata": {
         "source_item_count": 81,
-        "average_valence": -0.072,
+        "average_valence": -0.092,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
         "freshness_score": 0.795
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-15T18:39:22.534Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-06-15T20:15:49.628Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -140,39 +131,47 @@
           "excerpt": "B1 is nowhere near good enough for either of your kids to go to school in German or English, they won't even be admitted to the schools. You can pay for a private English-speaking "
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs low, a quilt of gray clouds threatening rain as a chilly breeze nudges pedestrians along their paths.. With the recent end of the strike, the mood is a curious mix of"
+          "excerpt": "The sky hangs heavy with a blanket of gray clouds, promising rain that keeps the air cool and a bit electric.. With the recent strike finally over, commuters cautiously board the U"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Anyone else notice a distinct lack of WM vibes?. I've lived in Berlin since summer 2010 and this will be the 5th world cup I witness here. I know the games are at weird times, but "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Hey I just published the update, tell me if you like it and if it feels intuitive. Also open to suggestions."
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.013,
+        "source_item_count": 119,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-15T18:39:22.534Z",
+      "captured_at": "2026-06-15T20:15:49.628Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 50,
@@ -230,21 +229,21 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": -0.02,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-15T18:39:22.534Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-06-15T20:15:49.628Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 31,
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 97,
-        "average_valence": -0.004,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "money",
+          "tourism"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.833
       }
     }
   ]
