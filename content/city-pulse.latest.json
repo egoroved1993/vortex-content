@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-16T16:39:02.256Z",
+    "capturedAt": "2026-06-16T18:36:37.092Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-16T16:39:02.256Z",
-      "mood_score": 0.374,
+      "captured_at": "2026-06-16T18:36:37.092Z",
+      "mood_score": 0.382,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier customer incident at Southwark."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,44 +62,51 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: Minor delays due to an earlier faulty freight train at Wanstead Park."
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a track fault at Walthamstow Central."
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we fix a track fault at Walthamstow Central."
+          "recency_weight": 1.04,
+          "excerpt": "Flight noise. Hi. Just moved to Lewisham from Islington recently. I've noticed the flight noise is way louder here. Is it just me being too noise sensitive? I got woken up at 5am t"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "27 on a Honda CB300R with lots on NCB. It costs about a grand more than SDP insurance on the same bike would. Motorbike insurance is just crazy expensive in London in general now ("
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.076,
+        "source_item_count": 99,
+        "average_valence": -0.054,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-16T16:39:02.256Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-06-16T18:36:37.092Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 15,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -129,53 +128,53 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
+          "excerpt": "Yeah, I honestly take this whole /berlin channel with a grain of salt. 🧂 we live in the mostly beautiful city. Good transit, lots of parks, good jobs security and social benefits "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
           "excerpt": "Yes, reduced by \\~200 Euro per month. If your contract is not \"befristet\" they can't kick you out! I simply wrote a letter, no lawyer needed. Mieterverein or Conny are good options"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Is it safe to buy from Kleinanzeigen?. Hello! I was planning on buying a set of tablewear from the 70s for 250 euro + shipping since I live in denmark and that set is non existent "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Nah i dont accept average. I either try something new or go to the things i love. Neotaste is a good App to try new things out, often giving you 2 for 1 deals"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I used to struggle with this, I think perhaps due to anxiety. So I made a separate bank account that I put €50 into every month (yes, I realize this is a privilege) and the catch f"
+          "recency_weight": 0.56,
+          "excerpt": "Das Wetter in Berlin heute: Viele Wolken am Dienstag, mild und ruhig - wetter.com. Das Wetter in Berlin heute: Viele Wolken am Dienstag, mild und ruhig"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.018,
+        "source_item_count": 118,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-16T16:39:02.256Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-06-16T18:36:37.092Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 41,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,14 +195,6 @@
           "excerpt": "How do most of you justify living in the bay area?. A single SF apartment is over 3500 for a 1b1b here and I am curious; how do people who are past the phase of roommates with no s"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I live in SF SOMA wtf are you on about? Why don’t you reread the thread? The prompt is how to justify living in the Bay Area when rent is so high."
-        },
-        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
@@ -217,7 +208,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "When I first got to SF, I did an Airbnb for 3 months. It was about 1800/month. It allowed me to get my bearings and not end up in a crappy apartment. I have kind of a great apartme"
+          "excerpt": "... is the 1st amendment not for everyone? This is the kind of reaction the right-wingers jump on when criticizing any kind of progressive position. While I don't agree with what t"
         },
         {
           "source_family": "public",
@@ -225,29 +216,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Sure but it’s the all or nothing - let’s force them or else - smell of it that’s off putting. Hundreds of lgtb+ community members got to see their local team play at a beautiful st"
+          "excerpt": "If you drive further into San Jose, and park at one of the blue line stations, you’ll have a much easier time catching the train back to where you parked after the game."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "It’s amazing how much hate you projected onto my comment. There is absolute an LBGT agenda, I helped fight for it. How do you think gay marriage or medical rights for domestic part"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": 0.012,
+        "source_item_count": 111,
+        "average_valence": 0.024,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-16T16:39:02.256Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-06-16T18:36:37.092Z",
+      "mood_score": 0.463,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -265,9 +264,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Im OK with stamp duty if it was reasonable and proportional. First homes should be exempt. Second homes should havenit and the more properties under the same family or company the "
+          "excerpt": "It's way worse here and not progressive at all, with almost no relief for first time buyers, it's honestly barbaric unless you inherit a family property or get help from 'mummy and"
         },
         {
           "source_family": "public",
@@ -278,20 +277,12 @@
           "excerpt": "china does A LOT of good stuff, most ppl regardless of the political side agree on this if only they stopped with the draconian social politics i would move in a heartbeat and i sp"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun blazes through a sparse haze, casting a warm glow on the cobblestones of the Gothic Quarter, while shadows lengthen as the afternoon progresses.. Trains on the Rodalies lin"
+          "excerpt": "The sky is a brooding gray, heavy with the promise of rain that intermittently drizzles, sending a chill through the crowded Plaça Catalunya.. Delays are palpable as frustrated com"
         },
         {
           "source_family": "public",
@@ -300,17 +291,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Soy una nueva visitante en Barcelona y me enamoré de esta ciudad única en cuanto llegué."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Llibres o música en català. Hola a tots! M'he mudat a Barcelona, tinc 23 anys, soc d'Extremadura però fa 1 mes que vaig començar a aprendre català. M'agradaria saber quins tipus de"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.006,
+        "source_item_count": 93,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.809
       }
     }
   ]
