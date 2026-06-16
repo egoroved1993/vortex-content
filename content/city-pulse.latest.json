@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-16T10:45:45.495Z",
+    "capturedAt": "2026-06-16T12:42:04.707Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-16T10:45:45.495Z",
-      "mood_score": 0.371,
+      "captured_at": "2026-06-16T12:42:04.707Z",
+      "mood_score": 0.373,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.084,
+        "source_item_count": 91,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.819
+        "freshness_score": 0.826
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-16T10:45:45.495Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-06-16T12:42:04.707Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S3: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,23 +145,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.56,
+          "excerpt": "Das Wetter in Berlin heute: Viele Wolken am Dienstag, mild und ruhig - wetter.com. Das Wetter in Berlin heute: Viele Wolken am Dienstag, mild und ruhig"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": 0.007,
+        "source_item_count": 118,
+        "average_valence": 0.02,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-16T10:45:45.495Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-06-16T12:42:04.707Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -187,14 +186,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission District. Only a true local knows to avoid the BART Civic Center station when the fog rolls in—smoke and chaos are jus"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -226,22 +217,30 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "When I first got to SF, I did an Airbnb for 3 months. It was about 1800/month. It allowed me to get my bearings and not end up in a crappy apartment. I have kind of a great apartme"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "1. We don’t have any guaranteed good games. Best game is Turkey vs Paraguay currently 2. no exciting teams based camp immediately nearby. 3. If you go to an event or the right bar "
         }
       ],
       "metadata": {
         "source_item_count": 109,
-        "average_valence": 0.008,
+        "average_valence": 0.022,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-16T10:45:45.495Z",
+      "captured_at": "2026-06-16T12:42:04.707Z",
       "mood_score": 0.459,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -281,9 +280,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun hangs brightly in a clear blue sky, its warmth bouncing off the stone facades of the Eixample, while a light breeze nudges the scent of baking bread from a nearby bakery.. "
+          "excerpt": "The sun hangs low, gilding the cobblestones with a warm hue while a gentle breeze carries the salty scent of the sea.. The platforms at Sants are buzzing with frustration as strike"
         },
         {
           "source_family": "public",
@@ -304,7 +303,7 @@
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.002,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
