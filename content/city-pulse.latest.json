@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-17T03:21:24.860Z",
+    "capturedAt": "2026-06-17T05:50:27.718Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-17T03:21:24.860Z",
-      "mood_score": 0.344,
+      "captured_at": "2026-06-17T05:50:27.718Z",
+      "mood_score": 0.34,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Things that instantly reveal you just moved here. Dalston. You still think the Overground is reliable? Wait until you're late for brunch and the trains are stuck due to a 'signal f"
+          "excerpt": "I lost weight and enjoyed the 20 min walk through a rec and park to the overground station in Zone 4. 25 mins to Charing X. When I lived in Zone 2 only 5 mins to Picc line I used t"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London Underground live updates amid severe delays at rush hour - My London. London Underground live updates amid severe delays at rush hour"
         },
         {
           "source_family": "public",
@@ -53,48 +62,40 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I’m 15mins from an overground and it’s alright - not the best but very doable and a decent way to get steps in My partners place is a bus ride to a tube which is a lot easier (espe"
+          "excerpt": "i think 7-10 minutes is the sweet spot. i wouldn't want to live right next to a station because it's usually busier and sometimes feels less safe, but i lived 16 minutes away from "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Not necessarily related to the World Cup but I think the BBC’s football coverage is not in a good place at the moment. The Saturday lunchtime program is gone (to be fair, that was "
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Bristol is England's least affordable city to rent in - should more be done? - BBC. Bristol is England's least affordable city to rent in - should more be done?"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
+          "recency_weight": 1,
+          "excerpt": "Londoners enduring major rush hour delays across several Tube lines - Metro.co.uk. Londoners enduring major rush hour delays across several Tube lines"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.018,
+        "source_item_count": 96,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.845
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-17T03:21:24.860Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-17T05:50:27.718Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -128,15 +129,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun struggles to break through a heavy blanket of clouds, casting a muted light over the damp streets.. With buses and trains finally back in service after a disruptive strike,"
+          "excerpt": "Berlin transit S3: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -147,34 +140,42 @@
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The skies are a piercing gray, with a chill in the air that beckons thick scarves and hasty footsteps.. The mood on the U-Bahn is tense, with many commuters silently checking their"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.075,
           "recency_weight": 1.04,
-          "excerpt": "The only thing that scares me every morning in Berlin. And now I have to go out 2,5 hours before my Termin to come on time, because Hackescher Markt is closed, and U5 has Bauarbeit"
+          "excerpt": "Yeah, blaming the people was always a good concept. There is a demand for flats and renters love raising rent instead of building houses."
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.018,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-17T03:21:24.860Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-06-17T05:50:27.718Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,20 +188,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Mission. Caught the 14 Mission with a busker belting opera at 16th. It felt like SF was trying to show off, even amid the chaos of delays."
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "any korean bar in the richmond district will be absolutely packed for this, great energy and you'll definitely meet people there. sundays are usually crazier but thursday games bri"
+          "excerpt": "How did you find anything under $3-4kin Nob Hill? Is this shared apartment or an efficiency studio? I wish I could move back to Nob Hill but it’s expensive and don’t want to park o"
         },
         {
           "source_family": "public",
@@ -208,7 +201,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "You might want to contact attorneys who are active in the SF Bar Association's Labor and Employment section. If your matter isn't a good fit for any specific firm they might have a"
+          "excerpt": "that's really sweet honestly... wait i can't say that lol a lot of local bakeries will do custom message plates or dessert boards for pretty reasonable price, definitely worth call"
         },
         {
           "source_family": "public",
@@ -216,37 +209,45 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Well, good luck with that. If average San Francisco weather is too much for your group, I got nothing for you. Maybe that newish bar in the Metreon and your group can get some food"
+          "excerpt": "The SF Archers archery club is in Pacifica. They have several practice ranges as well as learn to shoot archery programs for kids and adults. They have have a couple of great walka"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I think you’re being kind of… I won’t say a prick but prick adjacent . So you want a group for Saturday night without a reservation and it’s too cold to be outside at 5 o’clock. Th"
+          "excerpt": "FIFA WC 2026 fever ⚽⚽⚽. Feels so good to see this finally. The Bay Area is lit with all the events. Busy bars, busy restaurants, and lots of tourists exploring our areas. 🫶"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": 0.001,
+        "source_item_count": 115,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-17T03:21:24.860Z",
-      "mood_score": 0.423,
+      "captured_at": "2026-06-17T05:50:27.718Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -280,9 +281,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun beats down fiercely, casting long shadows on the cobblestones while a gentle breeze carries the salty scent of the nearby sea.. The trains are packed with commuters glancin"
+          "excerpt": "The sun filters through a haze, casting a golden hue over the bustling streets, while a gentle breeze carries the scent of fresh pastries from nearby cafes.. Despite the restoratio"
         },
         {
           "source_family": "public",
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": 0.008,
+        "source_item_count": 94,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.819
       }
     }
   ]
