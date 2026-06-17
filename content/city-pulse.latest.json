@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-17T17:58:38.302Z",
+    "capturedAt": "2026-06-17T19:03:51.137Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 427
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-17T17:58:38.302Z",
-      "mood_score": 0.321,
+      "captured_at": "2026-06-17T19:03:51.137Z",
+      "mood_score": 0.323,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's Park and Elephant & Castle southbound only due to an earlier faulty train at"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -70,32 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we fix a track fault at Walthamstow Central. Tickets are being accepted on London Bus"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays between Surrey Quays and Clapham Junction while we deal with a trespasser on the track at P"
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a track fault at Walthamstow Central."
         }
       ],
       "metadata": {
         "source_item_count": 106,
-        "average_valence": -0.086,
+        "average_valence": -0.08,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-17T17:58:38.302Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-06-17T19:03:51.137Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -122,6 +122,14 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Newly Rented Place - 200 euros for cleaning! Is this normal?. Hi all, just trying to rent a place in Berlin, however there's a point in the contract that concerned me a little. In "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The overcast sky looms heavy, casting a muted light over the bustling streets as a chill wind carries the scent of rain.. Despite the recent BVG strike, commuters gather in cluster"
         },
         {
           "source_family": "public",
@@ -146,33 +154,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "I'm in a sublet for 6 months.. so I can't really convince the sublandlord to invest in fiber now.. i need a temporary solution, that doesn't suggest a cafe or a cowworking space pl"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "One ticket for sale for Alexis on fire tonight (below retail). Hi my fiancee can no longer to this event tonight so she's selling her ticket, if anyone wants it happy to do 30 (I t"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.011,
+        "source_item_count": 119,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-17T17:58:38.302Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-17T19:03:51.137Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 51,
@@ -231,18 +231,18 @@
       ],
       "metadata": {
         "source_item_count": 112,
-        "average_valence": -0.012,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-17T17:58:38.302Z",
+      "captured_at": "2026-06-17T19:03:51.137Z",
       "mood_score": 0.424,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -282,9 +282,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.612,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The sun blazes fiercely overhead, igniting the vibrant colors of the buildings and casting sharp shadows on the cobblestone streets.. The atmosphere around Plaça Catalunya is tense"
+          "excerpt": "The sun is blazing down, casting long shadows on the cobblestones while a faint breeze carries the scent of roasting chestnuts from the nearby stalls.. Public transport is chaotic "
         },
         {
           "source_family": "public",
@@ -311,7 +311,7 @@
           "routine",
           "events"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.803
       }
     }
   ]
