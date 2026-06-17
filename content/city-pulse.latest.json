@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-17T10:41:14.870Z",
+    "capturedAt": "2026-06-17T12:30:14.478Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 432
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-17T10:41:14.870Z",
-      "mood_score": 0.339,
+      "captured_at": "2026-06-17T12:30:14.478Z",
+      "mood_score": 0.331,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -63,38 +79,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I didn't want to get into \"why\" there is no money in the system, but I would say that yes, it was extremely foolish to spend 11 years post financial crisis, when money was dirt che"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I find people move to London and rave about Brick Lane for curry. It's better that they stay away from Southall and Tooting, which are plenty busy enough. On the food then I think "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Right, but that's why it's as cheap as it is. The moment you raise the bar on chicken farming the cost will go up. I personally believe raising prices is a good thing as that encou"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.034,
+        "source_item_count": 106,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-17T10:41:14.870Z",
+      "captured_at": "2026-06-17T12:30:14.478Z",
       "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -123,6 +123,14 @@
           "excerpt": "Newly Rented Place - 200 euros for cleaning! Is this normal?. Hi all, just trying to rent a place in Berlin, however there's a point in the contract that concerned me a little. In "
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.283,
+          "recency_weight": 0.72,
+          "excerpt": "A crisp autumn breeze dances through the streets, with golden leaves swirling in the air under a patchy sun.. After days of disruptions, the U-Bahn is operating again, but the mood"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -145,33 +153,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Only 15 years, until the softening demand makes the city more attractive again for German transplants and \"expats\", fueling a new surge and housing crisis! (Only slightly sarcastic"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Thanks for the reminder. I feel like this so often gets overlooked in the discussions. People are living longer, people are pairing-up less frequently and later in life, and people"
         }
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": -0.012,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-17T10:41:14.870Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-06-17T12:30:14.478Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 48,
@@ -186,6 +186,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught a Muni bus today, driver turned up the music—everyone started singing along. For a moment, chaos felt like a community jam se"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -217,31 +225,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Lol if true! Honestly its hard in California. We are a blue state, we vote blue, we are the good guys, etc... But the reality is Democrats are just as corrupt are Republicans Democ"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Ok let me adjust my definition. A perfect example of a \"mid\" beach would be the beach on the Santa Cruz Beach Boardwalk. The weather is usually mid (moderately cloudy), the waves a"
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": 0.014,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-17T10:41:14.870Z",
-      "mood_score": 0.424,
+      "captured_at": "2026-06-17T12:30:14.478Z",
+      "mood_score": 0.422,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -260,6 +260,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all locals love the vermut bars, but many of us prefer a quiet pastís at home instead of the crowded terraces."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -280,9 +288,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun bathes the streets in a golden glow, while a gentle breeze carries the salty scent of the nearby sea.. The trains are running smoothly after the recent disruptions, but the"
+          "excerpt": "The sky is a moody grey, occasionally releasing a light drizzle that sends people scurrying for cover, while the air hangs heavy with the scent of wet pavement and blooming jacaran"
         },
         {
           "source_family": "public",
@@ -291,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Soy una nueva visitante en Barcelona y me enamoré de esta ciudad única en cuanto llegué."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Llibres o música en català. Hola a tots! M'he mudat a Barcelona, tinc 23 anys, soc d'Extremadura però fa 1 mes que vaig començar a aprendre català. M'agradaria saber quins tipus de"
         }
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": 0.012,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.825
       }
     }
   ]
