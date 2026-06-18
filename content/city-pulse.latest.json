@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-18T17:13:14.107Z",
+    "capturedAt": "2026-06-18T18:58:50.849Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-18T17:13:14.107Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-06-18T18:58:50.849Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. After the 18:22 departure fro"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham and between Uxbridge and Harrow-on-the-Hill due to train"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Brixton. London Underground tickets will be accepted on London buse"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Arnos Grove and Acton Town westbound only while we respond to a fire alert at Gre"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Brixton."
         },
         {
           "source_family": "public",
@@ -71,30 +79,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "It's important to understand that people opposing this are alarmed about the ID requirements, it's not because they think social media is great for 12 year olds. Having fewer priva"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a dull gray, heavy with moisture, as if it's about to burst, casting a muted light over the streets.. Frustration echoes through the platforms as commuters shuffle anxio"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.053,
+        "source_item_count": 92,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.85
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-18T17:13:14.107Z",
+      "captured_at": "2026-06-18T18:58:50.849Z",
       "mood_score": 0.452,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -124,14 +124,6 @@
           "excerpt": "Newly Rented Place - 200 euros for cleaning! Is this normal?. Hi all, just trying to rent a place in Berlin, however there's a point in the contract that concerned me a little. In "
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, S7, S3: Delays 3 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -143,9 +135,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a steely gray, thick with clouds that occasionally threaten rain but hold back, making the air feel heavy and electric.. With the BVG strike recently lifted, there's a p"
+          "excerpt": "The skies are a patchwork of gray and blue, with a brisk wind carrying the faint promise of rain and the crisp scent of fall.. After the chaos of the recent strike, the S-Bahn is n"
         },
         {
           "source_family": "public",
@@ -154,23 +146,31 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Sending my thoughts as we just almost suffocated on the tram, thinking the AC is broken, but the driver just left it off. I guess several people almost fainting made him change his"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Study room near Plänterwald. Hello everybody, I'm sorry but I don't speak German, I hope English is fine here. I have a friend who needs to find a quiet place to write a master the"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
+        "source_item_count": 120,
         "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-18T17:13:14.107Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-18T18:58:50.849Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -179,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -229,22 +229,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.006,
+        "source_item_count": 118,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-18T17:13:14.107Z",
+      "captured_at": "2026-06-18T18:58:50.849Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 19,
@@ -273,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.72,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds looms overhead, casting a gray hue that dampens the vibrant colors of the city.. Trains are crammed, with frustrated commuters exchanging glances as they "
+          "excerpt": "A hazy sun filters through a slate of clouds, casting a muted glow on the bustling streets of the city.. Commuters are fidgeting on the platforms, anxiously checking phones as dela"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 85,
-        "average_valence": -0.016,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.794
+        "freshness_score": 0.793
       }
     }
   ]
