@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-18T22:46:19.766Z",
+    "capturedAt": "2026-06-18T23:40:14.802Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 420
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-18T22:46:19.766Z",
-      "mood_score": 0.274,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-18T23:40:14.802Z",
+      "mood_score": 0.43,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 19,
         "review": 2,
@@ -83,18 +83,18 @@
       ],
       "metadata": {
         "source_item_count": 91,
-        "average_valence": -0.077,
+        "average_valence": -0.088,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.845
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-18T22:46:19.766Z",
+      "captured_at": "2026-06-18T23:40:14.802Z",
       "mood_score": 0.413,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -122,14 +121,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Newly Rented Place - 200 euros for cleaning! Is this normal?. Hi all, just trying to rent a place in Berlin, however there's a point in the contract that concerned me a little. In "
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -154,23 +145,31 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "\\> Is it really that way? Nope, you buy one 2h ticket on, let's say Monday, validate it on Wednesday 14:23 and the ticket is good for 2h after 14:23 on that Wednesday. \\>I just val"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a washed-out gray, heavy with the scent of impending rain, while a cool breeze slips through the streets.. With the recent BVG strike fresh in their minds, commuters see"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.019,
+        "source_item_count": 124,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-18T22:46:19.766Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-18T23:40:14.802Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -204,33 +203,33 @@
           "excerpt": "How is hinge for guys in their late 20s?. Is it the best way to get dates here or is it better to go to bars? Im coming from NYC so i’ve heard hinge is really shitty in SF. In NYC "
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell a true local by how they curse at BART delays while still finishing their burrito from La Taqueria."
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 5 in rush hour, packed like sardines. An accordion player jumped on and played ‘La Vie en Rose’. It was surreal amid the "
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Cover up Tattoo Artists ?. I have an underbust tattoo that the previous artist done goofed on the sunflower. &#x200B; I just really want to get it redone/ reworked into something e"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "You have literally no idea what you are talking about, and you are essentially a poster-child for all the clueless people that make up nonsense because it offends their \"law and or"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "for a rework on something like that, probably budget at least $300-400 minimum, cover-ups and reworks take more skill and time than fresh tattoos so artists usually charge accordin"
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.007,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,10 +240,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-18T22:46:19.766Z",
-      "mood_score": 0.456,
+      "captured_at": "2026-06-18T23:40:14.802Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -273,9 +272,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a muted gray, heavy with humidity but still holding off the rain, creating a somewhat oppressive feel as the day drags on.. The atmosphere in the metro is tense, as a"
+          "excerpt": "The afternoon sun spills golden light across the bustling streets, with a slight breeze carrying the salty scent of the nearby Mediterranean.. Frustration simmers as commuters shuf"
         },
         {
           "source_family": "public",
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.01,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "transit"
         ],
-        "freshness_score": 0.8
+        "freshness_score": 0.798
       }
     }
   ]
