@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-18T07:56:58.274Z",
+    "capturedAt": "2026-06-18T09:41:50.086Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-18T07:56:58.274Z",
-      "mood_score": 0.283,
+      "captured_at": "2026-06-18T09:41:50.086Z",
+      "mood_score": 0.277,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Clapham Junction and Willesden Junction due to a fault with the overhead power lines"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No service between Stonebridge Park and Harrow & Wealdstone, and MINOR DELAYS on the rest of the line whi"
         },
         {
           "source_family": "transport",
@@ -62,52 +62,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Brixton. Tickets are being accepted on London Buses, Weaver Line, S"
+          "excerpt": "London transit Bakerloo: Part Suspended Bakerloo Line: No service between Stonebridge Park and Harrow & Wealdstone, and MINOR DELAYS on the rest of the line whi"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Honestly I’d think a ballpark would be $1000/week/person. Completely depends what you want to do, but most places that most tourists would want to see are pretty expensive now, esp"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Brixton."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It's a really good thing to do if you have the space and can put up with having shit all round your garden constantly. Eggs are also 10x better than the shop bought. We rehome 4 ev"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays between Sydenham and West Croydon due to an earlier trespasser on the track at West Croydon"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.051,
+        "source_item_count": 90,
+        "average_valence": -0.069,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-18T07:56:58.274Z",
-      "mood_score": 0.454,
+      "captured_at": "2026-06-18T09:41:50.086Z",
+      "mood_score": 0.45,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "If the late 20s were too old for clubbing in Berlin, no club in the city would exist anymore...except maybe Matrix. If you have the clothes for it, the lakes might be nice. The wat"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -129,23 +137,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S75, S3: Delays 2 trips delayed"
+          "excerpt": "Berlin transit S5: Delays 1 trips delayed"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "The only thing that scares me every morning in Berlin. And now I have to go out 2,5 hours before my Termin to come on time, because Hackescher Markt is closed, and U5 has Bauarbeit"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I don’t know, would you mind a chant about one of the numerous atrocious crimes the British Empire committed, or would you maybe think that things that happened long before you wer"
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a patchwork of grey clouds and fleeting sunbeams, with a cool breeze sweeping through the streets.. After several days of uncertainty, commuters are tentatively returnin"
         },
         {
           "source_family": "public",
@@ -153,29 +153,29 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Hello, I'd love your help. Are tickets for Berlin's public transport only for one specific time? By that I mean, I see that I can buy an S-Bahn ticket from point A to point B, the "
+          "excerpt": "But bavaria is not germany... /s How can Berlin be \"classic\" if it was completely destroyed in ww2 and doesn't everyone actually know that?"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.019,
+        "source_item_count": 122,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-18T07:56:58.274Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-18T09:41:50.086Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 45,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,7 +193,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "As a woman can confirm. this sounds like a dream and it's literally just basic empathy and having a personality. the bar is so so low. if men aren't pulling on hinge it's because w"
+          "excerpt": "Same thing happened to me years ago. There was a delay their system. Office took me off the train. Falsely accused me of hopping the gate. Was extremely rude. Started giving me a c"
         },
         {
           "source_family": "public",
@@ -201,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The change to Clipper 2.0 has problems, since it's now all cloud based servers talking back and forth between vehicle readers and fare inspector devices, there's going to be a shor"
+          "excerpt": "So for all the people commenting about how they don't feel sorry for this couple because they make 500k a year and could afford 14k in rent or whatever. Keep in mind that this fami"
         },
         {
           "source_family": "public",
@@ -220,34 +220,34 @@
           "excerpt": "How is hinge for guys in their late 20s?. Is it the best way to get dates here or is it better to go to bars? Im coming from NYC so i’ve heard hinge is really shitty in SF. In NYC "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I’m a UCSF cancer center CRC. If the position is posted, they are hiring. They recently transitioned the system where jobs are posted, and from what I understand, it’s still not 10"
+          "excerpt": "Real signs someone is from here vs just working here. Mission. You can tell who's local when they dodge the BART delays and recommend the best taco shop, while the newcomers are st"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.011,
+        "source_item_count": 115,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-18T07:56:58.274Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-06-18T09:41:50.086Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -278,6 +278,14 @@
           "excerpt": "china does A LOT of good stuff, most ppl regardless of the political side agree on this if only they stopped with the draconian social politics i would move in a heartbeat and i sp"
         },
         {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The afternoon sun glints off the cobblestones, a harsh reminder of summer's lingering warmth despite the Autumn breeze.. The mood at the Sants station is tense, with people anxious"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Llibres o música en català. Hola a tots! M'he mudat a Barcelona, tinc 23 anys, soc d'Extremadura però fa 1 mes que vaig començar a aprendre català. M'agradaria saber quins tipus de"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "The effect of the ITP on the housing market in YouTube short format. (The video talks about Britain, but the type of the tax is the same so the consequences are the same.). In one "
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": 0.017,
+        "source_item_count": 89,
+        "average_valence": 0.02,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "events"
         ],
-        "freshness_score": 0.798
+        "freshness_score": 0.802
       }
     }
   ]
