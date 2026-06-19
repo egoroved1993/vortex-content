@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-19T03:22:31.402Z",
+    "capturedAt": "2026-06-19T05:53:57.360Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 436
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-19T03:22:31.402Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-06-19T05:53:57.360Z",
+      "mood_score": 0.433,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Night bus confessions. Brixton. Last night on the N37, a group of lads dropped a saxophone solo mid-journey. It turned the usual chaos into a makeshift gig—Brixton nights at their "
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -48,65 +57,56 @@
           "excerpt": "News - Revealed: build-to-rent landlord uses Renters’ Rights Act loophole to demand rent hike - Inside Housing. News - Revealed: build-to-rent landlord uses Renters’ Rights Act loo"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Brixton."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Night bus confessions. Brixton. Last Saturday, the 196 bus was packed with folks singing old reggae tunes. Even the driver was smiling, but I swear I saw a pigeon trying to join in"
+          "excerpt": "Camden Town - even though I used to visit the market a lot during the early 2010s it did still feel as though I was 10 years too late or maybe it's just not my scene."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a thick gray canvas, low-hanging and heavy, with rain slicking the pavements and a chill that bites through coats.. The streets are filled with frustrated commuters, man"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Private rent and house prices, UK: June 2026 - Office for National Statistics. Private rent and house prices, UK: June 2026"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
+          "recency_weight": 1.04,
+          "excerpt": "The windows have gotten taller over the years but on a late January morning when the sky's a dull grey, it's been pissing down for 4 days straight and the windows are steamed up th"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.047,
+        "source_item_count": 90,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.85
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-19T03:22:31.402Z",
-      "mood_score": 0.409,
+      "captured_at": "2026-06-19T05:53:57.360Z",
+      "mood_score": 0.411,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -148,33 +148,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Kreuzberg, Neukolln, Friedrichshain, Prenzlauerberg but realistically gonna be quite expensive unless you have savings to top up the hospo job. Plan for 1200-1600 a month for a dec"
+          "excerpt": "Friday 19.06 Demo “RAW FÜR ALLE”. Join tomorrow in Friedrichshain to protest the eviction and redevelopment of the RAW Gelände, an important area containing many clubs and cultural"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.031,
+        "source_item_count": 129,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "events",
           "money"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-19T03:22:31.402Z",
+      "captured_at": "2026-06-19T05:53:57.360Z",
       "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 70,
+        "public": 47,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,27 +188,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "they made the fatal mistake that their landlord is their friend. when the only things they need to do is not damage anything, don't make noise, and always pay rent."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "YWCA building Powell Street. Hey &#x200B; I'm doing some research into 941 Powell Street, opposite the gorgeous YWCA building on Powell. &#x200B; I'm hoping to find people that liv"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I once rented from getaround and the alternator on the car died in the middle of the redwoods in far NorCal. Worst experience of my entire life. The customer service agents, becaus"
         },
         {
           "source_family": "public",
@@ -220,30 +204,46 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I called their general appointments line and asked for the earliest possible appointment This was late April, and my appointment was for four weeks later. There were appointments a"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "How is hinge for guys in their late 20s?. Is it the best way to get dates here or is it better to go to bars? Im coming from NYC so i’ve heard hinge is really shitty in SF. In NYC "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Cover up Tattoo Artists ?. I have an underbust tattoo that the previous artist done goofed on the sunflower. &#x200B; I just really want to get it redone/ reworked into something e"
         }
       ],
       "metadata": {
-        "source_item_count": 136,
+        "source_item_count": 113,
         "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-19T03:22:31.402Z",
-      "mood_score": 0.461,
+      "captured_at": "2026-06-19T05:53:57.360Z",
+      "mood_score": 0.463,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -261,12 +261,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists often think all the good tapas are in fancy bars, but the best ones are tucked away in tiny shops with just a counter "
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.283,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun beats down fiercely, but a warm breeze whispers through the streets, carrying the scent of fresh churros from a nearby café.. The metro stations are buzzing, with commuters"
+          "excerpt": "The sky hangs heavy with gray clouds, a cool breeze occasionally stirring the warm autumn air, hinting at rain but holding back for now.. The subway stations are bustling, but the "
         },
         {
           "source_family": "public",
@@ -291,23 +299,15 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "The effect of the ITP on the housing market in YouTube short format. (The video talks about Britain, but the type of the tax is the same so the consequences are the same.). In one "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "si ja, però joer. tu imagina que poso un comentari rotllo, m'he aixecat avui a les 12 i no se què i em tatxes d guiri jejejejejeje"
         }
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": 0.002,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "tourism"
         ],
         "freshness_score": 0.8
       }
