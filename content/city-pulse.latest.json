@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-19T10:39:01.219Z",
+    "capturedAt": "2026-06-19T12:25:56.322Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-19T10:39:01.219Z",
-      "mood_score": 0.449,
+      "captured_at": "2026-06-19T12:25:56.322Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 22,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -47,6 +47,14 @@
           "valence": -1,
           "recency_weight": 0.88,
           "excerpt": "News - Revealed: build-to-rent landlord uses Renters’ Rights Act loophole to demand rent hike - Inside Housing. News - Revealed: build-to-rent landlord uses Renters’ Rights Act loo"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Wembley Park and Uxbridge while we fix a signal failure at Northwick Park. If yo"
         },
         {
           "source_family": "transport",
@@ -69,33 +77,25 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.88,
+          "recency_weight": 0.72,
           "excerpt": "Private rent and house prices, UK: June 2026 - Office for National Statistics. Private rent and house prices, UK: June 2026"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.032,
+        "source_item_count": 91,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-19T10:39:01.219Z",
-      "mood_score": 0.41,
+      "captured_at": "2026-06-19T12:25:56.322Z",
+      "mood_score": 0.408,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -138,7 +138,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 2 trips delayed"
+          "excerpt": "Berlin transit S5, S3: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -158,20 +158,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 130,
-        "average_valence": -0.03,
+        "source_item_count": 131,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-19T10:39:01.219Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-19T12:25:56.322Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -188,6 +188,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Inner Sunset. Caught the 43 at 12:03, a kid in a dinosaur costume hopped on, didn't even flinch when it jolted. Only in SF do you see kids embra"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -219,19 +227,11 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "How is everyone actually finding a primary care doctor in SF?. Moved to the city late last month and I still don't have a PCP, which is starting to stress me out. I've got a few ch"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How is hinge for guys in their late 20s?. Is it the best way to get dates here or is it better to go to bars? Im coming from NYC so i’ve heard hinge is really shitty in SF. In NYC "
         }
       ],
       "metadata": {
         "source_item_count": 104,
-        "average_valence": -0.018,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
@@ -242,10 +242,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-19T10:39:01.219Z",
-      "mood_score": 0.459,
+      "captured_at": "2026-06-19T12:25:56.322Z",
+      "mood_score": 0.46,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 22,
@@ -266,9 +266,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sun blazes through wispy clouds, casting sharp shadows on the vibrant tiles of Passeig de Gràcia.. Trains are packed with commuters, their faces reflecting a mix of frustration"
+          "excerpt": "The afternoon sun beats down, casting a warm glow that makes the cobblestones glisten with a hint of heat mirage.. Commuters on the platform shuffle impatiently, glancing at their "
         },
         {
           "source_family": "public",
@@ -305,13 +305,13 @@
       ],
       "metadata": {
         "source_item_count": 88,
-        "average_valence": -0.003,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.84
       }
     }
   ]
