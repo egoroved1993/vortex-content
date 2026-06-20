@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-20T03:19:26.462Z",
+    "capturedAt": "2026-06-20T05:39:26.647Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,10 +21,10 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-20T03:19:26.462Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-06-20T05:39:26.647Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 28,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 20 June, from 0045, and all day Sunday 21 June, no service between Cockfosters and Uxbridge, i"
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -78,27 +78,27 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Brixton."
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 20 June, from 0045, and all day Sunday 21 June, no service between Cockfosters and Uxbridge, i"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.073,
+        "source_item_count": 98,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-20T03:19:26.462Z",
-      "mood_score": 0.378,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-20T05:39:26.647Z",
+      "mood_score": 0.444,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 23,
         "review": 2,
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -117,19 +116,27 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "You are missing the point here, I didn't mean in crowded place, let say sitting next to someone in S-bahn... See it that way.... As a note: I growed up in a bigger than 2 milion Po"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin hasn't been \"super cheap\" for rent for a few years now. Sure it's less that Paris and London but I know people paying 1400 a month for a bedsit/studio apartment. Add to that"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Friday 19.06 Demo “RAW FÜR ALLE”. Join tomorrow in Friedrichshain to protest the eviction and redevelopment of the RAW Gelände, an important area containing many clubs and cultural"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. The day I saw a kid selling homemade lemonade on the corner, while their mom haggled over a bike in broken German. That's Neu"
         },
         {
           "source_family": "public",
@@ -146,36 +153,28 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Wo die DDR ihre Olympiasieger drillte: 441 neue Wohnungen in Lichtenberg – Miete ab 7 Euro - Berliner Zeitung. Wo die DDR ihre Olympiasieger drillte: 441 neue Wohnungen in Lichtenb"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun breaks through the dissipating clouds, casting a warm glow on the drizzling pavements, while the air carries a hint of autumn leaves and damp concrete.. Bus and tram servic"
         }
       ],
       "metadata": {
-        "source_item_count": 130,
-        "average_valence": -0.007,
+        "source_item_count": 129,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "language"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-20T03:19:26.462Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-20T05:39:26.647Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 60,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -205,11 +204,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "YWCA building Powell Street. Hey &#x200B; I'm doing some research into 941 Powell Street, opposite the gorgeous YWCA building on Powell. &#x200B; I'm hoping to find people that liv"
+          "excerpt": "Toyota of Berkeley and Toyota of Albany are better. They're still not awesome, I don't know if they're expensive because they're brand name Toyota certified etc etc or because ever"
         },
         {
           "source_family": "public",
@@ -217,7 +216,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It's always been more expensive than elsewhere, but it was possible to live in SF on a pretty low salary in the 90s. Roommate and I paid $800/mo for a two bedroom flat in outer ric"
+          "excerpt": "Not that guy, but I lived in SF in the 90's, and like you, in the outer Richmond. First on 27th near Geary then I moved out to 43rd and Point Lobos. I think I was paying around $60"
         },
         {
           "source_family": "public",
@@ -229,25 +228,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.033,
+        "source_item_count": 124,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-20T03:19:26.462Z",
-      "mood_score": 0.42,
+      "captured_at": "2026-06-20T05:39:26.647Z",
+      "mood_score": 0.414,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,6 +260,22 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I've been living in Spain and the UK for some years and got used to the prices there. I went to Bucharest and everything was more expensive at the supermarket, with extremely few e"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The air is saturated with humidity, wrapping the city in a warm, heavy embrace as dark clouds loom overhead, threatening rain.. Commuters are visibly frustrated at the Sants statio"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -284,33 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Llibres o música en català. Hola a tots! M'he mudat a Barcelona, tinc 23 anys, soc d'Extremadura però fa 1 mes que vaig començar a aprendre català. M'agradaria saber quins tipus de"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "The effect of the ITP on the housing market in YouTube short format. (The video talks about Britain, but the type of the tax is the same so the consequences are the same.). In one "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "si ja, però joer. tu imagina que poso un comentari rotllo, m'he aixecat avui a les 12 i no se què i em tatxes d guiri jejejejejeje"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": 0,
+        "source_item_count": 86,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.798
+        "freshness_score": 0.803
       }
     }
   ]
