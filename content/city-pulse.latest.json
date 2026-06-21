@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-21T01:20:37.966Z",
+    "capturedAt": "2026-06-21T03:22:09.588Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-21T01:20:37.966Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-06-21T03:22:09.588Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -49,6 +49,14 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 20 June, from 0045, and all day Sunday 21 June, no service between Cockfosters and Uxbridge, i"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -57,12 +65,12 @@
           "excerpt": "Thanks. I'm a '60s kid. And, aged 11, I participated in the national street parties to celebrate HM QEII's Silver Jubilee (tresle tables set up in long rows in streets with bunting"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 0.72,
-          "excerpt": "The skies are a heavy gray, casting a dull light that feels like a soft blanket over the bustling streets.. Frustration lingers in the air as commuters huddle around closed tube st"
+          "excerpt": "Private rent and house prices, UK: June 2026 - Office for National Statistics. Private rent and house prices, UK: June 2026"
         },
         {
           "source_family": "news",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.025,
+        "source_item_count": 86,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-21T01:20:37.966Z",
-      "mood_score": 0.399,
+      "captured_at": "2026-06-21T03:22:09.588Z",
+      "mood_score": 0.4,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, work. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -131,33 +140,25 @@
           "excerpt": "yes it is specifically the Berlin tunnel system that is the problem. Sbahn is enough overground. No matter how much people here pretend otherwise , it isn't feasible for Betlin's u"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "forum",
+          "source_origin": "local_forum",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Mandatory Internship Germany _ Salary. Hi! I am doing my masters in Germany in urban design and I have 5 years Bachelors in Architecture. I will be starting my mandatory internship"
+          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. You can find spontaneous techno parties in abandoned buildings here, just follow the bass. No city matches that kind of underg"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Fire in Lichtenberg again. It started at around 6:45 today. I woke up and went to the balcony for some fresh air only to notice some thick black smoke coming out of one apartment r"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "BVG has historically filed criminal complaints for fare evasion (\"Erschleichen von Leistungen\", § 265a StGB) when a person is caught three times within 12 months. However, this thr"
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "The sky hangs heavy with gray clouds, intermittently releasing a fine drizzle that leaves the streets glistening.. After days of disruption from the BVG strikes, there's a palpable"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.002,
+        "source_item_count": 124,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "events",
@@ -168,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-21T01:20:37.966Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-06-21T03:22:09.588Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 124,
-        "average_valence": 0.004,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-21T01:20:37.966Z",
+      "captured_at": "2026-06-21T03:22:09.588Z",
       "mood_score": 0.38,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 15,
@@ -274,7 +275,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a muted gray, heavy with the scent of damp earth, hinting at rain later in the evening.. The trains at Sants are packed with weary commuters, their faces reflecting the "
+          "excerpt": "The sky hangs heavy with a mix of gray clouds, threatening rain, while a breeze carries the faint scent of wet asphalt from earlier showers.. Despite the chaos of the ongoing train"
         },
         {
           "source_family": "public",
@@ -306,8 +307,8 @@
         "average_valence": 0,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
         "freshness_score": 0.775
       }
