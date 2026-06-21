@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-21T14:54:20.991Z",
+    "capturedAt": "2026-06-21T15:41:34.545Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 431
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-21T14:54:20.991Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-06-21T15:41:34.545Z",
+      "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 24,
         "review": 2,
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.88,
+          "excerpt": "London heatwave: Tube, rail and bus chaos warning amber ‘extreme’ alert issued - London Evening Standard. London heatwave: Tube, rail and bus chaos warning amber ‘extreme’ alert is"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,32 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 21 June, no service between Willesden Junction and Richmond. Use DISTRICT LINE trains between Gunne"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 20 June, from 0045, and all day Sunday 21 June, no service between Cockfosters and Uxbridge, i"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.091,
+        "source_item_count": 101,
+        "average_valence": -0.118,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-21T14:54:20.991Z",
-      "mood_score": 0.398,
+      "captured_at": "2026-06-21T15:41:34.545Z",
+      "mood_score": 0.396,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -116,12 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. Sitting in the park, I watched a group of kids teach a stray dog to fetch sticks—only in Neukölln could chaos look so cozy."
+        },
+        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U8, S3: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -146,31 +154,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "They're called Balkonkraftwerk. It's not an official project, but the city has long provided financial support for the purchase. Two solar panels, a small inverter, and then it's s"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The sky hangs low and heavy with gray clouds, threatening rain at any moment while a chill breeze stirs the fallen leaves on the pavement.. After the recent BVG strike, the trains "
         }
       ],
       "metadata": {
         "source_item_count": 124,
-        "average_valence": -0.005,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-21T14:54:20.991Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-21T15:41:34.545Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 123,
-        "average_valence": -0.032,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,8 +241,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-21T14:54:20.991Z",
-      "mood_score": 0.38,
+      "captured_at": "2026-06-21T15:41:34.545Z",
+      "mood_score": 0.377,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
@@ -265,9 +265,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun blazes down, casting long shadows on the cobbled streets, while a gentle sea breeze wafts in from the Mediterranean, offering a brief respite from the heat.. The "
+          "excerpt": "The sun beams down relentlessly, turning the pavement into a warm, shimmering canvas as a light breeze carries the scent of nearby tapas bars.. The train stations buzz with a mix o"
         },
         {
           "source_family": "public",
@@ -304,7 +304,7 @@
       ],
       "metadata": {
         "source_item_count": 83,
-        "average_valence": -0.001,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
