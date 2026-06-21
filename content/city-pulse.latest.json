@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-21T21:36:46.050Z",
+    "capturedAt": "2026-06-21T22:34:02.539Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-21T21:36:46.050Z",
+      "captured_at": "2026-06-21T22:34:02.539Z",
       "mood_score": 0.427,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
@@ -89,22 +89,22 @@
           "transit",
           "weather"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-21T21:36:46.050Z",
-      "mood_score": 0.397,
+      "captured_at": "2026-06-21T22:34:02.539Z",
+      "mood_score": 0.344,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, work. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -124,12 +124,20 @@
           "excerpt": "The point is that you seem to be kinda late to the show... noisy metal has always been in a thing in Berghain (been to Sleep \\~ 15yrs ago) and Berlins Metal scene never really died"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 0.72,
-          "excerpt": "The overcast sky looms heavily, with a chill breeze that sends leaves swirling in chaotic patterns.. With the recent BVG strikes, a palpable relief and cautious optimism hangs in t"
+          "excerpt": "The sun breaks through a backdrop of scattered clouds, casting a brilliant light that dances on the wet streets after last night's rain.. After days of disruptions, commuters exhal"
         },
         {
           "source_family": "public",
@@ -146,31 +154,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "It was really cold in Berlin all summer last year, so I was praying for some hot weather this year. I didn't really have 38°C in mind though..."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "How is KaDeWe now open on Sundays?. I went to KaDeWe Yesterday to get some air conditioning and Cold water for a few hours. I notice they are now advertising they're open 13-18 on "
         }
       ],
       "metadata": {
-        "source_item_count": 109,
-        "average_valence": -0.01,
+        "source_item_count": 114,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-21T21:36:46.050Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-21T22:34:02.539Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 131,
-        "average_valence": -0.012,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,8 +241,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-21T21:36:46.050Z",
-      "mood_score": 0.376,
+      "captured_at": "2026-06-21T22:34:02.539Z",
+      "mood_score": 0.334,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "negative",
@@ -273,9 +273,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.075,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun beats down fiercely, its warmth bouncing off the colorful tiles of La Rambla, while a teasing breeze offers momentary respite.. Frustration hangs in the air at Plaça Catalu"
+          "excerpt": "The afternoon sun beats down with a relentless heat, making the pavement shimmer with a golden hue.. The ongoing strikes have left the trains running late, creating a palpable tens"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.01,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.796
+        "freshness_score": 0.794
       }
     }
   ]
