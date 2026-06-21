@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-21T03:22:09.588Z",
+    "capturedAt": "2026-06-21T05:46:45.228Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 428
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-21T03:22:09.588Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-06-21T05:46:45.228Z",
+      "mood_score": 0.437,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 21 June, no service between Paddington and Abbey Wood / Stratford. Trains operate between Padding"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 21 June, no service between Willesden Junction and Richmond. Use DISTRICT LINE trains between Gunne"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -57,50 +73,34 @@
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Thanks. I'm a '60s kid. And, aged 11, I participated in the national street parties to celebrate HM QEII's Silver Jubilee (tresle tables set up in long rows in streets with bunting"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Private rent and house prices, UK: June 2026 - Office for National Statistics. Private rent and house prices, UK: June 2026"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 21 June, until 0800, no service between Sydenham and West Croydon. Customers should use local buse"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.037,
+        "source_item_count": 102,
+        "average_valence": -0.069,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-21T03:22:09.588Z",
-      "mood_score": 0.4,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, work. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-06-21T05:46:45.228Z",
+      "mood_score": 0.461,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -148,38 +140,46 @@
           "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. You can find spontaneous techno parties in abandoned buildings here, just follow the bass. No city matches that kind of underg"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 1.04,
+          "excerpt": "Mandatory Internship Germany _ Salary. Hi! I am doing my masters in Germany in urban design and I have 5 years Bachelors in Architecture. I will be starting my mandatory internship"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with gray clouds, intermittently releasing a fine drizzle that leaves the streets glistening.. After days of disruption from the BVG strikes, there's a palpable"
+          "excerpt": "The sky is a patchwork of gray clouds, occasionally splitting to reveal a stubborn sun that feels like a forgotten friend.. With the BVG strike just lifted, there's a palpable reli"
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.001,
+        "source_item_count": 123,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "events",
-          "work"
+          "language"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-21T03:22:09.588Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-06-21T05:46:45.228Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 63,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -189,19 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "I’d say go to a sports bar where they will definitely have a lively crowd. Kezar Pub on Stanyan is one that generally has lot of soccer fans, so it’s a good choice if you want that"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "did i say there would be no more buses? i said \"no more packed buses where elders are hanging on for dear life\" and that it would be included in a MUNI monthly pass and subsidized "
+          "excerpt": "(Mission Dolores) Anyone Recognize This Thief?. Reposting with a verified police report per the rules. This dude stole the center caps off of my 2026 Model 3 Performance while it w"
         },
         {
           "source_family": "public",
@@ -215,9 +207,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Busses running late varies a lot. For example on the 29, mainly a seniors and students Stonestown transporter. Each load is different, if the 2 in front took most of the load, the "
+          "excerpt": "If people have tickets, then selling is bound to happen. Imo I kind of liked the old system better. Come at 9am on Sunday and camp/picnic until the concert."
         },
         {
           "source_family": "public",
@@ -225,29 +217,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Just did this with my friends a couple of days ago and enjoyed it as well! I could only do 2/3 of it and twin peaks almost ruined me but it was very scenic and nice to explore diff"
+          "excerpt": "They're all good but of those options, Exploratorium is unquestionably the best. Especially for the 10yo. If anyone in the group is especially interested in astronomy or astrophysi"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I’m kind of happy that Telsa changed all the lights on the 2026 cars. Model 3 with new lights = shipped after Musk started started buying votes for Trump. Model Y with new lights ="
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": 0.006,
+        "source_item_count": 121,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-21T03:22:09.588Z",
-      "mood_score": 0.38,
+      "captured_at": "2026-06-21T05:46:45.228Z",
+      "mood_score": 0.379,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -262,20 +262,12 @@
       ],
       "drivers": [
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things tourists get wrong about living here. Gràcia. Tourists think all tapas are created equal, but locals know a good esgarrat requires perfect, tender escalivada. It’s the littl"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sky hangs heavy with a mix of gray clouds, threatening rain, while a breeze carries the faint scent of wet asphalt from earlier showers.. Despite the chaos of the ongoing train"
+          "excerpt": "The sun is piercing through a thin layer of clouds, casting a warm golden hue on the bustling streets of Barcelona.. Passengers on the metro seem a bit more impatient today, with t"
         },
         {
           "source_family": "public",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Yeah I got a cracking (albeit distant) view of it from the North from my approaching plane last week that really showed how much it dominates not only the surrounding area but the "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Enquesta per a un treball de l'institut. Hola! Estic fent un treball de recerca sobre microplàstics, nanoplàstics i PFAS a l'entorn de Barcelona i L'Hospitalet. M'ajudaria molt si "
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": 0,
+        "source_item_count": 82,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.775
+        "freshness_score": 0.777
       }
     }
   ]
