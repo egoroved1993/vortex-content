@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-21T22:34:02.539Z",
+    "capturedAt": "2026-06-21T23:36:29.612Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 427
+    "totalItems": 428
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-21T22:34:02.539Z",
-      "mood_score": 0.427,
+      "captured_at": "2026-06-21T23:36:29.612Z",
+      "mood_score": 0.41,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 18,
         "review": 2,
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 12,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier trespasser at Edgware road."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 21 June, no service between Willesden Junction and Richmond. Use DISTRICT LINE trains between Gunne"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Willesden Junction and Richmond due to planned engineering work. NO SERVICE from Gospel"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.097,
+        "source_item_count": 98,
+        "average_valence": -0.117,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-21T22:34:02.539Z",
-      "mood_score": 0.344,
+      "captured_at": "2026-06-21T23:36:29.612Z",
+      "mood_score": 0.345,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -124,20 +123,12 @@
           "excerpt": "The point is that you seem to be kinda late to the show... noisy metal has always been in a thing in Berghain (been to Sleep \\~ 15yrs ago) and Berlins Metal scene never really died"
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun breaks through a backdrop of scattered clouds, casting a brilliant light that dances on the wet streets after last night's rain.. After days of disruptions, commuters exhal"
+          "excerpt": "A gray overcast blanket looms above, with a light drizzle occasionally kissing the pavement.. With buses and trams finally back on schedule after the strike, commuters exhale a col"
         },
         {
           "source_family": "public",
@@ -154,22 +145,30 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "It was really cold in Berlin all summer last year, so I was praying for some hot weather this year. I didn't really have 38°C in mind though..."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "How is KaDeWe now open on Sundays?. I went to KaDeWe Yesterday to get some air conditioning and Cold water for a few hours. I notice they are now advertising they're open 13-18 on "
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.017,
+        "source_item_count": 113,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-21T22:34:02.539Z",
+      "captured_at": "2026-06-21T23:36:29.612Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -230,7 +229,7 @@
       ],
       "metadata": {
         "source_item_count": 131,
-        "average_valence": -0.014,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
@@ -241,8 +240,8 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-21T22:34:02.539Z",
-      "mood_score": 0.334,
+      "captured_at": "2026-06-21T23:36:29.612Z",
+      "mood_score": 0.336,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "negative",
@@ -273,9 +272,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "The afternoon sun beats down with a relentless heat, making the pavement shimmer with a golden hue.. The ongoing strikes have left the trains running late, creating a palpable tens"
+          "excerpt": "The sun hangs stubbornly in a pale blue sky, casting long shadows on the bustling streets where a warm breeze swirls dust and laughter.. Frustration simmers on the platforms as com"
         },
         {
           "source_family": "public",
@@ -304,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.018,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.794
+        "freshness_score": 0.787
       }
     }
   ]
