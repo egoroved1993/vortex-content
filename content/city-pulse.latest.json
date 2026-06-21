@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-21T15:41:34.545Z",
+    "capturedAt": "2026-06-21T16:41:48.452Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,11 +21,11 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-21T15:41:34.545Z",
+      "captured_at": "2026-06-21T16:41:48.452Z",
       "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
         "review": 2,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "London heatwave: Tube, rail and bus chaos warning amber ‘extreme’ alert issued - London Evening Standard. London heatwave: Tube, rail and bus chaos warning amber ‘extreme’ alert is"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to an earlier fire alert at Liverpool Street. London Buses are accepting valid tickets vi"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Paddington and Abbey Wood due to planned engineering work. SEVERE DELAYS between Hayes & Harlington a"
         },
         {
           "source_family": "transport",
@@ -78,36 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Elizabeth line: Minor Delays No service between Paddington and Abbey Wood due to planned engineering work. SEVERE DELAYS between Hayes & Harlington a"
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.118,
+        "source_item_count": 104,
+        "average_valence": -0.117,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-21T15:41:34.545Z",
-      "mood_score": 0.396,
+      "captured_at": "2026-06-21T16:41:48.452Z",
+      "mood_score": 0.391,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,20 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "The point is that you seem to be kinda late to the show... noisy metal has always been in a thing in Berghain (been to Sleep \\~ 15yrs ago) and Berlins Metal scene never really died"
+        },
+        {
           "source_family": "forum",
           "source_origin": "local_forum",
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "When you knew you were actually living here. Neukölln. Sitting in the park, I watched a group of kids teach a stray dog to fetch sticks—only in Neukölln could chaos look so cozy."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -145,37 +145,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Exactly the kind of people shouting until 3am and thinking that everyone absolutely must care about football. You're annoying"
+          "excerpt": "Please explain this, because I don't understand why this would be the case. The lines are closer to the surface, which should make them easier to ventilate, either through existing"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "They're called Balkonkraftwerk. It's not an official project, but the city has long provided financial support for the purchase. Two solar panels, a small inverter, and then it's s"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Wo die DDR ihre Olympiasieger drillte: 441 neue Wohnungen in Lichtenberg – Miete ab 7 Euro - Berliner Zeitung. Wo die DDR ihre Olympiasieger drillte: 441 neue Wohnungen in Lichtenb"
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.013,
+        "source_item_count": 122,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-21T15:41:34.545Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-06-21T16:41:48.452Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 57,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,6 +187,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Real signs someone is from here vs just working here. Mission District. You know a local when they instinctively check the BART schedule for delays before heading to a late match, "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Wow. When my husband and bought our Oakland house in 2007, one morning the week we moved in I was having coffee and I saw some guy attempting to leave my backyard with my husband's"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -209,45 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I used Brother Movers back in 2021 from Sunnyvale to Mountain View. My stuff was already packed (except for furniture). Three guys showed up on time and were lightning fast. It was"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Real signs someone is from here vs just working here. The Mission. Only a local knows not to trust the BART schedule when it's a Giants game night—those special services are all hy"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Muni moments that define this city. Tenderloin. Caught the Muni last week packed full of tourists. One guy had a sandwich so big it didn’t fit in his lap. Everyone was sharing a la"
+          "excerpt": "That area is great. The one block radius area of each Mission BART stop is very rough these days. But thats not where you are thinking of living."
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.027,
+        "source_item_count": 117,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-21T15:41:34.545Z",
-      "mood_score": 0.377,
+      "captured_at": "2026-06-21T16:41:48.452Z",
+      "mood_score": 0.376,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -262,12 +262,20 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How is it illegal tranpassing where the police was parked by the stairs down there and they didn’t prevent me to go up where I took the photo? The other comment is right. Bunkers i"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -1,
+          "valence": -0.433,
           "recency_weight": 0.72,
-          "excerpt": "The sun beams down relentlessly, turning the pavement into a warm, shimmering canvas as a light breeze carries the scent of nearby tapas bars.. The train stations buzz with a mix o"
+          "excerpt": "The sun is breaking through scattered clouds, casting a warm glow over the bustling streets.. The mood on the metro is tense as commuters adjust to delays due to the current strike"
         },
         {
           "source_family": "public",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Yeah I got a cracking (albeit distant) view of it from the North from my approaching plane last week that really showed how much it dominates not only the surrounding area but the "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Enquesta per a un treball de l'institut. Hola! Estic fent un treball de recerca sobre microplàstics, nanoplàstics i PFAS a l'entorn de Barcelona i L'Hospitalet. M'ajudaria molt si "
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.009,
+        "source_item_count": 88,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.782
+        "freshness_score": 0.799
       }
     }
   ]
