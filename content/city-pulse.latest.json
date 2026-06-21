@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-21T05:46:45.228Z",
+    "capturedAt": "2026-06-21T07:52:11.076Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 428
+    "totalItems": 429
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-21T05:46:45.228Z",
-      "mood_score": 0.437,
+      "captured_at": "2026-06-21T07:52:11.076Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 21 June, no service between Paddington and Abbey Wood / Stratford. Trains operate between Padding"
+          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 21 June, no service between Paddington and Abbey Wood due to planned engineering work. Trains wil"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Paddington and Abbey Wood due to planned engineering work. SEVERE DELAYS between Paddington and Readi"
         },
         {
           "source_family": "transport",
@@ -70,35 +78,27 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 21 June, until 0800, no service between Sydenham and West Croydon. Customers should use local buse"
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to a track fault at Brixton."
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.069,
+        "source_item_count": 103,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-21T05:46:45.228Z",
-      "mood_score": 0.461,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-06-21T07:52:11.076Z",
+      "mood_score": 0.398,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, language. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
         "review": 2,
@@ -132,12 +132,12 @@
           "excerpt": "yes it is specifically the Berlin tunnel system that is the problem. Sbahn is enough overground. No matter how much people here pretend otherwise , it isn't feasible for Betlin's u"
         },
         {
-          "source_family": "forum",
-          "source_origin": "local_forum",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Things Berlin does that nowhere else does. Kreuzberg. You can find spontaneous techno parties in abandoned buildings here, just follow the bass. No city matches that kind of underg"
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a high mix of gray clouds and brief, sultry sunshine, creating an oppressive humidity that clings to the air.. With the BVG strike just recently lifted, commuters spill "
         },
         {
           "source_family": "public",
@@ -148,29 +148,29 @@
           "excerpt": "Mandatory Internship Germany _ Salary. Hi! I am doing my masters in Germany in urban design and I have 5 years Bachelors in Architecture. I will be starting my mandatory internship"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a patchwork of gray clouds, occasionally splitting to reveal a stubborn sun that feels like a forgotten friend.. With the BVG strike just lifted, there's a palpable reli"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Fire in Lichtenberg again. It started at around 6:45 today. I woke up and went to the balcony for some fresh air only to notice some thick black smoke coming out of one apartment r"
         }
       ],
       "metadata": {
         "source_item_count": 123,
-        "average_valence": 0.003,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "language"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-21T05:46:45.228Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-06-21T07:52:11.076Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 121,
-        "average_valence": -0.006,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-21T05:46:45.228Z",
-      "mood_score": 0.379,
+      "captured_at": "2026-06-21T07:52:11.076Z",
+      "mood_score": 0.377,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
@@ -265,9 +265,9 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.433,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sun is piercing through a thin layer of clouds, casting a warm golden hue on the bustling streets of Barcelona.. Passengers on the metro seem a bit more impatient today, with t"
+          "excerpt": "The skies over Barcelona are a muted gray, heavy with clouds threatening rain, while a brisk breeze carries the faint smell of wet pavement.. The mood on the metro is thick with im"
         },
         {
           "source_family": "public",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.004,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.777
+        "freshness_score": 0.783
       }
     }
   ]
