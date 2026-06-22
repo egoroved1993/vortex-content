@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-22T16:39:32.085Z",
+    "capturedAt": "2026-06-22T18:28:06.523Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 408
+    "totalItems": 394
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-22T16:39:32.085Z",
-      "mood_score": 0.417,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "captured_at": "2026-06-22T18:28:06.523Z",
+      "mood_score": 0.384,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 11,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's Park and Harrow & Wealdstone due to an earlier signal failure at South Kento"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Neasden."
+          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays while we fix a signal failure at Paddington."
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to an earlier faulty train at Finchley Road & Frognal. London Underground are accepting"
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to an earlier faulty train at Finchley Road & Frognal."
         },
         {
           "source_family": "transport",
@@ -70,41 +78,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Edgware and Golders Green, SEVERE DELAYS between Golders Green and Camden Town and MIN"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Edgware and Golders Green, SEVERE DELAYS between Golders Green and Camden Town and MIN"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Edgware and Colindale, and SEVERE DELAYS between Colindale and Camden Town, and betw"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.096,
+        "source_item_count": 89,
+        "average_valence": -0.106,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-22T16:39:32.085Z",
-      "mood_score": 0.348,
+      "captured_at": "2026-06-22T18:28:06.523Z",
+      "mood_score": 0.347,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 40,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300, U2, 248, M5, S3: Delays 5 trips delayed"
+          "excerpt": "Berlin transit M5, S7: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I had an infestation by those once. Do not wait, call your landlord or if you're the owner an eradicator. They can help to get rid of them. Also throw away all food in open contain"
         },
         {
           "source_family": "public",
@@ -133,49 +141,41 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Oh right, criminals are going to go away as soon as they find a little barrier. This works as good as putting a \"stealing is illegal\" sign in your bag pack, that definitely stop cr"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Does someone have any more infos about this... accident?. All I do know about is that it happened on the U8, but neither when, nor how, why and what else. What kind of black magic "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I once witnessed someone joining a teams call morning huddle on the RB24 when I was going to BER. But as much as I questioned that choice, it didn't bother me beyond wondering what"
         }
       ],
       "metadata": {
-        "source_item_count": 134,
-        "average_valence": -0.007,
+        "source_item_count": 112,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.915
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-22T16:39:32.085Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-06-22T18:28:06.523Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 41,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -194,7 +194,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "This is becoming more of an issue, and quite frankly I'm sick of hearing all the landlord arguments for why it's ok. My sweet, elderly next door neighbor just recently moved after "
+          "excerpt": "All these smug ass replies to OP in here. Have you considered some bus drivers are late to their shifts due to traffic/public transit delays, that then delay their route? Like no s"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "I’d pick the Tendernob over this area a million times over. Unless you like living in pure chaos and squalor. It’s the worst of the city in my opinion. I’d even suggest moving some"
         },
         {
           "source_family": "public",
@@ -202,53 +210,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The firework complaints are wild. I work night shift. Sleep with windows open along the 1 bus line… grow up and go to sleep bro. How loud can it possibly be? Just put some white no"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Does anyone have a discord community for meeting people in your 30’s?. I just moved here from LA and I’m terrified of putting myself out there again. This last year has been one of"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Hosting a bakery run for everyone who is looking to make new friends!. Hey everyone, I have been seeing a lot of posts lately where people new to the city are trying to make friend"
+          "excerpt": "I would think it has something to do with the cable undergrounding rules in SF. Undergrounding has been a thing since the late 90s but I think they passed a new law in 2022."
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I saw Alesso at Bill Graham 2 weeks ago and it was awesome! Sure, im 15 years older than some of the kids there but there were plenty of ppl even older than me. Id say go and have "
+          "excerpt": "I used to live off 3rd and El Camino on Arroyo Court and that noise was ridiculous. I wasn't lucky enough to have double pane windows cuz my apartment was old AF... I heard all the"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "North Oakland/Emeryville is a booming area these days. We live here carfree which saves a lot of money. We are in our late 50s. Always on our bikes, getting groceries along the gre"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.011,
+        "source_item_count": 112,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-22T16:39:32.085Z",
-      "mood_score": 0.334,
+      "captured_at": "2026-06-22T18:28:06.523Z",
+      "mood_score": 0.333,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -304,14 +304,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.017,
+        "source_item_count": 81,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
-          "tourism",
-          "events"
+          "transit",
+          "tourism"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.788
       }
     }
   ]
