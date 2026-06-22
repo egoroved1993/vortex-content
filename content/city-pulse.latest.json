@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-22T14:05:57.522Z",
+    "capturedAt": "2026-06-22T16:39:32.085Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,14 +16,14 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 405
+    "totalItems": 408
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-22T14:05:57.522Z",
-      "mood_score": 0.399,
-      "mood_label": "low",
+      "captured_at": "2026-06-22T16:39:32.085Z",
+      "mood_score": 0.417,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / H"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Wembley Park and Aldgate and MINOR DELAYS on the rest of the line due to an ear"
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to an earlier faulty train at Finchley Road & Frognal. London Underground are accepting"
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Wembley Park and Aldgate and MINOR DELAYS on the rest of the line due to an ear"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Edgware and Golders Green, SEVERE DELAYS between Golders Green and Camden Town and MIN"
         },
         {
           "source_family": "transport",
@@ -70,32 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier signal failure at Brixton."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Broke mine out for the first time yesterday. Set it to 16. Room is about 25/26. Better than nothing I suppose, but definitely a bit disappointing. I had one in the past that was gr"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Edgware and Golders Green, SEVERE DELAYS between Golders Green and Camden Town and MIN"
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.063,
+        "source_item_count": 83,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.823
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-22T14:05:57.522Z",
-      "mood_score": 0.347,
+      "captured_at": "2026-06-22T16:39:32.085Z",
+      "mood_score": 0.348,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, M5: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 300, U2, 248, M5, S3: Delays 5 trips delayed"
         },
         {
           "source_family": "public",
@@ -157,19 +157,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 133,
+        "source_item_count": 134,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-22T14:05:57.522Z",
+      "captured_at": "2026-06-22T16:39:32.085Z",
       "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -237,15 +237,15 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-22T14:05:57.522Z",
+      "captured_at": "2026-06-22T16:39:32.085Z",
       "mood_score": 0.334,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, events.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 18,
@@ -305,13 +305,13 @@
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.018,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "tourism",
           "events"
         ],
-        "freshness_score": 0.794
+        "freshness_score": 0.841
       }
     }
   ]
