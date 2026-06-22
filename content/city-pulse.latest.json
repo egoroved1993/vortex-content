@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-22T01:32:34.242Z",
+    "capturedAt": "2026-06-22T03:22:59.081Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,22 +16,22 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 249
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-22T01:32:34.242Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-06-22T03:22:59.081Z",
+      "mood_score": 0.43,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -39,6 +39,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Things that instantly reveal you just moved here. Hackney Downs. You still look confused when the bus driver actually waits for you to sit down before taking off. Welcome to the ch"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "News - Revealed: build-to-rent landlord uses Renters’ Rights Act loophole to demand rent hike - Inside Housing. News - Revealed: build-to-rent landlord uses Renters’ Rights Act loo"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -51,61 +67,45 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The sky is a slate gray, heavy with clouds promising rain, while a damp chill seeps into the air, wrapping around the shoulders of commuters.. Buses are running late today, their u"
+          "excerpt": "The sky is a muted gray, thick with clouds that threaten rain, casting a subdued light over the bustling streets.. The mood around the tube stations is one of frustration and impat"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Honestly I pass there everyday and It’a actually VERY VERY bright, much more than pics shows.. And lights are on since 2pm even on sunny days. All business in the area are actually"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "My theory is that they put sun dresses on and I’m basically still an orangutan who sees a pretty woman in a feminine dress and loses my mind"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Or worse than tipping. Service charges. That tiny text at the bottom of the menu to say it's there, that doesn't specify how much it is. We already paid £200 and you have the audac"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.016,
+        "source_item_count": 93,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 1.042
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-22T01:32:34.242Z",
+      "captured_at": "2026-06-22T03:22:59.081Z",
       "mood_score": 0.351,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N2: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -141,9 +133,17 @@
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 0.72,
-          "excerpt": "The late autumn sky is an overcast gray, with a sharp bite in the air, hinting at the chill of winter just around the corner.. Trains on the U-Bahn are running slightly late, causi"
+          "excerpt": "The sky is overcast with a chill that makes the bricks of the buildings seem even grayer and more stoic than usual.. The air is thick with impatience as commuters huddle at tram st"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "public",
@@ -155,28 +155,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 71,
-        "average_valence": 0.002,
+        "source_item_count": 120,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "events",
-          "transit"
+          "weather"
         ],
-        "freshness_score": 1.064
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-22T01:32:34.242Z",
-      "mood_score": 0.508,
+      "captured_at": "2026-06-22T03:22:59.081Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -184,6 +185,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Muni moments that define this city. Tenderloin. Caught the 91 with a saxophonist playing 'Amazing Grace'—the city’s chaos felt oddly serene for a moment. That’s classic SF."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -215,40 +224,32 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I had something similar going to TJ’s from Lombard on the 30 or 28 yesterday @ 6:30.. & then it the mission. unusually long waits. The buses were packed each way! At first, I thoug"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Does anyone have a discord community for meeting people in your 30’s?. I just moved here from LA and I’m terrified of putting myself out there again. This last year has been one of"
         }
       ],
       "metadata": {
-        "source_item_count": 71,
-        "average_valence": 0.022,
+        "source_item_count": 120,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-22T01:32:34.242Z",
-      "mood_score": 0.332,
+      "captured_at": "2026-06-22T03:22:59.081Z",
+      "mood_score": 0.334,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, events. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -267,12 +268,12 @@
           "excerpt": "How is it illegal tranpassing where the police was parked by the stairs down there and they didn’t prevent me to go up where I took the photo? The other comment is right. Bunkers i"
         },
         {
-          "source_family": "news",
-          "source_origin": "local_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "El CGPJ estudiarà si expedienta Peinado per posar en dubte la tasca de la policia. Fa mesos que la causa que instrueix el jutge Juan Carlos Peinado contra Begoña Gómez, dona del pr"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, threatening rain, as the air carries a cool, damp chill typical of a late autumn afternoon in Barcelona.. The mood on the trains is tense; comm"
         },
         {
           "source_family": "public",
@@ -300,14 +301,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.024,
+        "source_item_count": 86,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "tourism",
-          "events"
+          "routine"
         ],
-        "freshness_score": 1.038
+        "freshness_score": 0.79
       }
     }
   ]
