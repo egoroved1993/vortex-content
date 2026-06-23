@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-23T17:42:19.265Z",
+    "capturedAt": "2026-06-23T18:53:04.985Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-23T17:42:19.265Z",
-      "mood_score": 0.383,
+      "captured_at": "2026-06-23T18:53:04.985Z",
+      "mood_score": 0.377,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 17,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -62,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we fix a faulty train at Canary Wharf."
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Severe delays between Wembley Park and Stanmore due to an earlier faulty train at Canary Wharf. MINOR DELA"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays between Wembley Park and Stanmore due to an earlier faulty train at Canary Wharf. MINOR DELA"
         },
         {
           "source_family": "transport",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to heat-related temporary speed restrictions. London Underground are accepting tickets v"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "The way I interpret it is, you can undertake as long as it's not your sole intention. If you happen to be in lane 1 and moving at 70mph and lane 2 is moving at 60mph, then undertak"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.05,
+        "source_item_count": 89,
+        "average_valence": -0.068,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-23T17:42:19.265Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-06-23T18:53:04.985Z",
+      "mood_score": 0.459,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -157,19 +158,19 @@
       ],
       "metadata": {
         "source_item_count": 117,
-        "average_valence": -0.005,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-23T17:42:19.265Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-06-23T18:53:04.985Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 123,
-        "average_valence": -0.041,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-23T17:42:19.265Z",
+      "captured_at": "2026-06-23T18:53:04.985Z",
       "mood_score": 0.306,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.797
+        "freshness_score": 0.794
       }
     }
   ]
