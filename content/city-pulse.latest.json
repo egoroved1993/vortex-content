@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-23T07:28:32.920Z",
+    "capturedAt": "2026-06-23T09:20:00.459Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-23T07:28:32.920Z",
-      "mood_score": 0.354,
+      "captured_at": "2026-06-23T09:20:00.459Z",
+      "mood_score": 0.364,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 14,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -46,23 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: No service between Whitechapel and Wimbledon / Kensington (Olympia) / Edgware Road / Ealing Broadway / Ri"
+          "excerpt": "London transit District: Severe Delays District Line: No service between Embankment and Wimbledon / Kensington (Olympia) / Edgware Road / Ealing Broadway / Ric"
         },
         {
           "source_family": "transport",
@@ -79,35 +63,51 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Elizabeth line: Part Suspended No service between Heathrow Terminals 2&3 and Heathrow Terminal 4 due to flooding caused by heavy rain and SEVERE DELAYS"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to an earlier signal system failure."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Aldgate and Moorgate while we fix a signal system failure. SEVERE DELAYS between M"
         }
       ],
       "metadata": {
         "source_item_count": 99,
-        "average_valence": -0.134,
+        "average_valence": -0.106,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-23T07:28:32.920Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-06-23T09:20:00.459Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, 200: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,32 +146,40 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Price range is between 100 - 130 EUR for normal tickets. They also have VIP experience but I couldn't see the prices there"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": 0.001,
+        "source_item_count": 116,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "events",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-23T07:28:32.920Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-23T09:20:00.459Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 57,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -187,6 +187,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "If you're talking about your rent is paid and you have 3k left over you will be very comfortable. I don't see any problem with doing that"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -209,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "So you really don’t think that a tech boom du jour plays any role in raising rents? That’s a crazy belief lol. There’s a reason lawyers separate proximate cause from immediate caus"
+          "excerpt": "What are you spending money on that's over $3k, not including rent, in SF and not comfortable unless you had another mouth to feed? I live in SF and eat out pretty much every meal "
         },
         {
           "source_family": "public",
@@ -217,37 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Have them spend the day in Golden Gate Park. Cal academy of science, Japanese tea garden, paddle boats at the lake, roam around. Then go meet them and go to San Tung in the inner s"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Think even colder than Texas winters. It’ll likely be foggy and windy especially in the evenings. It’s not typically pool weather so there’s few outdoor hotels here if that’s what "
+          "excerpt": "And yet, this shitty rent control system allowed an elderly woman to not be forced out of the city she’s lived in for almost a century. And the cost was a random LLC hundreds of mi"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.017,
+        "source_item_count": 117,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-23T07:28:32.920Z",
-      "mood_score": 0.294,
+      "captured_at": "2026-06-23T09:20:00.459Z",
+      "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -265,9 +265,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I'm German, i was living in Spain for 4 years. I lived in Barcelona. It's expensive to live but nightlife and people are vibrant. Other cities of Spain are more quiet. You can try "
+          "excerpt": "Honestly people will complain about anything these days. They dropped poems - pretty good ones if you go read some - about the risks of failing democracy. They paid artists to do t"
         },
         {
           "source_family": "signals",
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.019,
+        "source_item_count": 84,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.784
+        "freshness_score": 0.79
       }
     }
   ]
