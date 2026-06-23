@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-23T01:06:10.911Z",
+    "capturedAt": "2026-06-23T03:18:30.933Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-23T01:06:10.911Z",
-      "mood_score": 0.452,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-06-23T03:18:30.933Z",
+      "mood_score": 0.389,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 21,
         "review": 2,
@@ -33,12 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Operating at a reduced service due to hot weather mitigation."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -70,30 +79,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I got a projector mounted to the wall. Everything is nice and tucked away, and with some good blackout curtains it can be used any time of day with pretty low power! I’ve got it pr"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "News - Revealed: build-to-rent landlord uses Renters’ Rights Act loophole to demand rent hike - Inside Housing. News - Revealed: build-to-rent landlord uses Renters’ Rights Act loo"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.023,
+        "source_item_count": 88,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.827
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-23T01:06:10.911Z",
+      "captured_at": "2026-06-23T03:18:30.933Z",
       "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
@@ -103,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -155,19 +156,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 118,
+        "source_item_count": 123,
         "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.904
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-23T01:06:10.911Z",
+      "captured_at": "2026-06-23T03:18:30.933Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -235,15 +236,15 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-23T01:06:10.911Z",
+      "captured_at": "2026-06-23T03:18:30.933Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, belonging.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.008,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
           "belonging"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 0.785
       }
     }
   ]
