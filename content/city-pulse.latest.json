@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-24T13:49:09.441Z",
+    "capturedAt": "2026-06-24T15:04:35.952Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 431
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-24T13:49:09.441Z",
-      "mood_score": 0.425,
+      "captured_at": "2026-06-24T15:04:35.952Z",
+      "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, weather, transit. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 23,
         "review": 2,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 13,
         "weather": 1
       },
       "languages": [
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Turnham Green and Richmond and MINOR DELAYS between Tower Hill and Upminster due to"
+          "excerpt": "London transit Central: Minor Delays Central Line: No service between Hainault and Woodford while we fix a points failure at Woodford. SEVERE DELAYS between"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Turnham Green and Richmond and MINOR DELAYS between Tower Hill and Upminster due to"
+          "excerpt": "London transit Central: Severe Delays Central Line: No service between Hainault and Woodford while we fix a points failure at Woodford. SEVERE DELAYS between"
         },
         {
           "source_family": "transport",
@@ -78,23 +78,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Airport / Reading while we fix signal failures at Heathrow Airport and Twy"
+          "excerpt": "London transit Central: Part Suspended Central Line: No service between Hainault and Woodford while we fix a points failure at Woodford. SEVERE DELAYS between"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.104,
+        "source_item_count": 102,
+        "average_valence": -0.119,
         "dominant_themes": [
           "general",
-          "transit",
-          "weather"
+          "weather",
+          "transit"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-24T13:49:09.441Z",
+      "captured_at": "2026-06-24T15:04:35.952Z",
       "mood_score": 0.412,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -129,7 +129,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, 100: Delays 3 trips delayed"
+          "excerpt": "Berlin transit S7, 248: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
@@ -164,13 +164,13 @@
           "events",
           "routine"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-24T13:49:09.441Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-24T15:04:35.952Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": -0.032,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-24T13:49:09.441Z",
+      "captured_at": "2026-06-24T15:04:35.952Z",
       "mood_score": 0.294,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 26,
@@ -308,9 +308,9 @@
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "routine"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.808
       }
     }
   ]
