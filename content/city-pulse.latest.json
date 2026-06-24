@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-24T09:18:16.839Z",
+    "capturedAt": "2026-06-24T11:08:31.805Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 453
+    "totalItems": 452
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-24T09:18:16.839Z",
-      "mood_score": 0.43,
+      "captured_at": "2026-06-24T11:08:31.805Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 27,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 12,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while we"
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone due to an earlier signal failure at Willesden"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Part Suspended Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while we"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone due to an earlier signal failure at Willesden"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: No service between Hammersmith and Edgware Road and, SEVERE DELAYS on the rest of the line while we fix a f"
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays while we fix a faulty train at Edgware Road. Tickets are being accepted on London Buses."
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Part Suspended Circle Line: No service between Hammersmith and Edgware Road and, SEVERE DELAYS on the rest of the line while we fix a f"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Edgware Road / Ealing Broadway while we fix a faulty train at West"
         },
         {
           "source_family": "transport",
@@ -82,31 +82,32 @@
         }
       ],
       "metadata": {
-        "source_item_count": 105,
-        "average_valence": -0.089,
+        "source_item_count": 101,
+        "average_valence": -0.065,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "work"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.85
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-24T09:18:16.839Z",
-      "mood_score": 0.407,
+      "captured_at": "2026-06-24T11:08:31.805Z",
+      "mood_score": 0.405,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "And it's also the law here too, that's what Mietminderungen are based on after all. You not being able to use your apartment in the expected way is a flaw that your landlord is gen"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Telekom outage (?). Is the Telekom network allegedly down all across the city? Our workplace network is suddenly in the 2G era since yesterday and the IT support only sends updates"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.038,
+        "source_item_count": 124,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "money",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-24T09:18:16.839Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-06-24T11:08:31.805Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.04,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-24T09:18:16.839Z",
+      "captured_at": "2026-06-24T11:08:31.805Z",
       "mood_score": 0.304,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.84
       }
     }
   ]
