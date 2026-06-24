@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-24T03:19:02.288Z",
+    "capturedAt": "2026-06-24T05:28:41.488Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-24T03:19:02.288Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-06-24T05:28:41.488Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,72 +41,73 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone northbound only and NO SERVICE between Harrow & W"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone northbound only and NO SERVICE between Harrow & W"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I had a good 1 hour walkies trying to find evidence the next day but my search was a failure. Maybe it was a hallucination :("
+          "excerpt": "You clearly didn't read the post as I'm talking about their affordable rent options which make up around 33% of the apartments in each building."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "recency_weight": 1.04,
+          "excerpt": "Not sure on that. I moved before that came in. I can say that the apartments were not leased on an AST when i lived there, it's a licence agreement that when I was there at least f"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK: June 2026 - Office for National Statistics. Private rent and house prices, UK: June 2026"
+          "recency_weight": 1.04,
+          "excerpt": "It's mostly a stereotype. It has rough areas but so do London and Manchester. The city centre, brindleyplace are quite nice - although I'm not sure how much there is to actually do"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.022,
+        "source_item_count": 92,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.82
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-24T03:19:02.288Z",
-      "mood_score": 0.424,
+      "captured_at": "2026-06-24T05:28:41.488Z",
+      "mood_score": 0.418,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, weather, events. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, weather, events. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "There kinda is such a law in Germany too, which allows you to reduce your rent if it too cold (536 BGB). It is not tied to a specific temperature though but to \"building flaws\". Hi"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -123,57 +141,41 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "In Ontario Canada where I’m from, anything that takes away from “reasonable enjoyment” of your home can be means to submit government mandated orders against landlords or tenants. "
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Does someone have any more infos about this... accident?. All I do know about is that it happened on the U8, but neither when, nor how, why and what else. What kind of black magic "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin techno clubs that let you in alone?. Last time I went a few years ago by myself, Tresor let me in alone and their door vibes were great. I wasn't even dressed the part as a "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What are some good clubs to go to considering me and my girlfriend don’t speak German , we’re 21/20 and Irish if that makes any difference. Any advise would be greatly appreciated!"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Suits for men. Hi all, Can anyone recommend good tailors or places to buy suits in Berlin for taller, broader guys? I’m 191 cm tall with a 40-inch waist, and I often find that off-"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.013,
+        "source_item_count": 127,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "weather",
           "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-24T03:19:02.288Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-06-24T05:28:41.488Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 59,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,7 +193,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "You act as though rent control takes poor unsuspecting landlords by surprise. This landlord bought this building on the cheap with the intent to illegally evict the elderly tenants"
+          "excerpt": "Landlord here, for one, You've got to show up in person. Also we're back in the silly times where offering more for rent and offering to prepay bulk for six to twelve month is defi"
         },
         {
           "source_family": "public",
@@ -205,9 +207,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I’m confused, your landlord raised the rent two years ago but your lease ended in January? So when did you start your lease? Did you originally have a year lease and then resigned "
+          "excerpt": "I used to live in {{major\\_texas\\_city}} and I'd say SF is at least 2x better than living there. Now the prices have caught up: that city became a lot more expensive, and the ratio"
         },
         {
           "source_family": "public",
@@ -215,37 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It’s horrendous right now. In the past six months rents have increased so much. Of course, rent won’t be like it was during COVID, but it’s atrocious atm and I feel your struggle."
+          "excerpt": "My exact unit in Oakland that we rented for net $3200 (with rental concessions) in 2023 is now $4600 (very minimal concessions offered now). Moved to SF in 2025 right before it got"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The rent board is definitely worth a call. I did get charged I think two banked plus the current increase a few years ago and it was legit."
+          "excerpt": "Is Oracle Park supposed to handle this?. Fuerza Regida concert (Saturday night) trash was still in one of the city's major 2 lane bikeways at the 3rd street bridge on Monday evenin"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.083,
+        "source_item_count": 125,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
-          "money",
+          "events",
           "transit"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-24T03:19:02.288Z",
+      "captured_at": "2026-06-24T05:28:41.488Z",
       "mood_score": 0.306,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -294,21 +296,21 @@
         {
           "source_family": "public",
           "source_origin": "reddit_post",
-          "language": "ca",
+          "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Detingut a Sarrià-Sant Gervasi un home que anava pel carrer amb un ganivet de grans dimensions"
+          "excerpt": "A plane dropped poems over the Barcelona Cathedral today. Looked up and saw a small plane circling the Cathedral. Then the flyers started falling. People were climbing trees, chasi"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
+        "source_item_count": 86,
         "average_valence": 0.018,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.786
+        "freshness_score": 0.791
       }
     }
   ]
