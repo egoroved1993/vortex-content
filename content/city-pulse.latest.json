@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-25T03:18:29.357Z",
+    "capturedAt": "2026-06-25T05:30:35.683Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-25T03:18:29.357Z",
-      "mood_score": 0.397,
+      "captured_at": "2026-06-25T05:30:35.683Z",
+      "mood_score": 0.379,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and Kennington via Bank Southbound only due to a late finish of enginee"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays between Cheshunt and Edmonton Green following a late finish of engineering work, and MINOR DEL"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -48,64 +65,49 @@
           "excerpt": "How to use EPC certificates while judging a property on rental websites?. I am moving to London soon from a different country and was looking at flats. The EPC certificates have cu"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How are you doing it? Renting in London is ridiculous expensive in 2026. I had to move out of London but I do miss it! I took another glance at the price for a two bedroom flat in "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Heathrow Terminals 2&3 and Heathrow Terminal 5 due to a signal system failure at Heathrow Airport."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Woman in court over fatal Wimbledon school crash. Repost. Claire Freemantle managed to get some very expensive lawyers to convince everyone she had an epileptic seizure leading to "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Woman [back] in court over fatal Wimbledon school crash. [ Claire Freemantle managed to get some very expensive lawyers to convince everyone she had an epileptic seizure leading to"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Can you point to where anyone has defended her? You might find it a little easier to point to posts suggesting that we don't currently have all the facts and that all this wild unf"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.068,
+        "source_item_count": 99,
+        "average_valence": -0.12,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-25T03:18:29.357Z",
-      "mood_score": 0.382,
+      "captured_at": "2026-06-25T05:30:35.683Z",
+      "mood_score": 0.378,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Cats are originally desert animals. Their origin is in Northern Africa, where it is much hotter than currently in Berlin. They can cope with heat very well. Just provide your cat w"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -136,44 +154,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I've lived in Berlin 17 years and had many bikes. One time when I was making good money I thought id treat myself. I bought a 1.100 euro crossrad. I managed to keep it for a whole "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Suits for men. Hi all, Can anyone recommend good tailors or places to buy suits in Berlin for taller, broader guys? I’m 191 cm tall with a 40-inch waist, and I often find that off-"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": 0.007,
+        "source_item_count": 130,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-25T03:18:29.357Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-06-25T05:30:35.683Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 41,
+        "public": 37,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,65 +189,65 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Can a landlord apply a banked rent increase for years when I was on fixed-term lease?. My current lease ended in Jan, at which point it converted to MTM. The landlord last raised t"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "Waymos blocked roads and caused chaos during San Francisco power outage - NBC Bay Area. Waymos blocked roads and caused chaos during San Francisco power outage"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "‘I am so afraid’: Nob Hill landlord threatens to evict 92-year-old over clutter - The San Francisco Standard. ‘I am so afraid’: Nob Hill landlord threatens to evict 92-year-old ove"
+          "recency_weight": 1.04,
+          "excerpt": "all I know is that they did a hard check on my credit before I even toured and it dinged my credit for two years. Sucked. Now I never give a landlord my ssn until it's almost a don"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+          "recency_weight": 1.04,
+          "excerpt": "I would never rent a place without a kitchen unlessssss there’s a black and decker flattop in the backyard and a sink!"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I have a building full of people who have been here since the 70's. I've been here since 2005. I have close friends, with families, who live in rent controlled properties. Not one "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "rent control means the new people (young and poor) subsidizing the old residents (older and wealthier). I say this as someone who is paying >$2000 below market rate for my apartmen"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "There is a reason people are no longer renting out their in law apartments unless it has been legalised. Tenants can turn around and sue you for rent they have already paid."
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.032,
+        "source_item_count": 103,
+        "average_valence": -0.052,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "belonging"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-25T03:18:29.357Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-06-25T05:30:35.683Z",
+      "mood_score": 0.3,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -265,23 +267,7 @@
           "language": "es",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Cuando he dicho nada de Barcelona cosmopolita, tontito? Tiré petardos muchos años, ahora ya no. Pero no te preocupes, yo tambien pago la seguridad social para que te ayuden con tu "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "Una cosa que leí en un post similar para que no les afecte tanto es darles algún premio cada vez que explota algún petardo, de modo que asocien el ruido con la recompensa. No se qu"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "As sad as it sounds, I think media doesn't care about this kind of \"normal\" events. Otherwise all accidents, crashes or bumps would also get a new, which are many everyday. Not eve"
         },
         {
           "source_family": "public",
@@ -292,23 +278,39 @@
           "excerpt": "Woman hit by bus Calle Marina. Hola a todos, ayer(22/06) hubo una mujer que fue atropellada por un autobús en la Calle de la Marina alrededor de las 12:40. Cerca calle de casp, alg"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "As sad as it sounds, I think media doesn't care about this kind of \"normal\" events. Otherwise all accidents, crashes or bumps would also get a new, which are many everyday. Not eve"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "A plane dropped poems over the Barcelona Cathedral today. Looked up and saw a small plane circling the Cathedral. Then the flyers started falling. People were climbing trees, chasi"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.01,
+        "source_item_count": 87,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 0.795
       }
     }
   ]
