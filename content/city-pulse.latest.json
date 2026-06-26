@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-26T13:47:38.134Z",
+    "capturedAt": "2026-06-26T15:01:57.326Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-26T13:47:38.134Z",
-      "mood_score": 0.348,
+      "captured_at": "2026-06-26T15:01:57.326Z",
+      "mood_score": 0.35,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -44,9 +44,9 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Severe Delays Weaver Line: No service between Edmonton Green and Cheshunt while we fix a signal failure at Hackney Downs. SEVERE DELAY"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping/Hainault via Newbury Park and between North Acton and West Rui"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Edgware Road and Wimbledon due to an earlier signal failure at Parsons Green. MINO"
         },
         {
           "source_family": "transport",
@@ -62,15 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between High Street Kensington and Edgware Road. MINOR delays between Earl's Court and Wimb"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Severe delays between High Street Kensington and Edgware Road. MINOR delays between Earl's Court and Wimb"
+          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Edgware Road and Wimbledon due to an earlier signal failure at Parsons Green. MINO"
         },
         {
           "source_family": "transport",
@@ -79,22 +71,30 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a faulty train at Brixton."
         }
       ],
       "metadata": {
         "source_item_count": 97,
-        "average_valence": -0.095,
+        "average_valence": -0.088,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-26T13:47:38.134Z",
+      "captured_at": "2026-06-26T15:01:57.326Z",
       "mood_score": 0.34,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
@@ -107,6 +107,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -156,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 126,
+        "source_item_count": 127,
         "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-26T13:47:38.134Z",
-      "mood_score": 0.423,
+      "captured_at": "2026-06-26T15:01:57.326Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -235,15 +236,15 @@
           "money",
           "transit"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.905
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-26T13:47:38.134Z",
+      "captured_at": "2026-06-26T15:01:57.326Z",
       "mood_score": 0.303,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 14,
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.795
+        "freshness_score": 0.801
       }
     }
   ]
