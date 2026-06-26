@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-26T11:08:50.073Z",
+    "capturedAt": "2026-06-26T12:55:19.322Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-26T11:08:50.073Z",
-      "mood_score": 0.365,
+      "captured_at": "2026-06-26T12:55:19.322Z",
+      "mood_score": 0.347,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,33 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: No service between Edmonton Green and Cheshunt while we fix a signal failure at Hackney Downs. SEVERE DELAY"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge due to an earlier signal failure at Ealing Common. London"
+          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Turnham Green and Ealing Broadway and MINOR DELAYS between Turnham Green and Earl's"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Turnham Green and Ealing Broadway and MINOR DELAYS between Turnham Green and Earl's"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -55,49 +79,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier points failure at Walthamstow Central."
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Sadiq Khan faces High Court challenge by furious London councils over affordable housing 'scandal' - My London. Sadiq Khan faces High Court challenge by furious London councils ove"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
         "source_item_count": 95,
-        "average_valence": -0.044,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-26T11:08:50.073Z",
-      "mood_score": 0.336,
+      "captured_at": "2026-06-26T12:55:19.322Z",
+      "mood_score": 0.34,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 21,
@@ -107,7 +107,6 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,20 +115,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If you want a big city and \"clean and orderly\" is your criteria, then Munich would be pretty much it. However, you need to afford the price. Otherwise you could aim for medium-size"
+          "excerpt": "It could have been when the overhead lines for the trams were frozen from the freezing rain. That was a rough week My commute into work went from 40 minutes to an hour an a half."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "You don't understand. The Berlin Sauna is good for your health! Why spend lots of money going to an actual sauna when you can just ride the Ubahn and Bus instead."
         },
         {
           "source_family": "public",
@@ -157,25 +156,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.011,
+        "source_item_count": 126,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-26T11:08:50.073Z",
-      "mood_score": 0.467,
+      "captured_at": "2026-06-26T12:55:19.322Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 57,
+        "public": 63,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,25 +190,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "My landlord didn't raise the rent for like six years in a non-rent controlled unit. Just don't say anything..."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "$300/mo while i was living in the mission, attached to my building (was living in a condo). also commuted about 2x a week to santa clara, though my commute was made easier bc it wa"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "This happened to me. 6 years of no rent increases, and then my landlord just banked them all this year. I knew the time would come eventually and I’m thankful for the years of stab"
+          "excerpt": "I’m a landlord. I would rather have a good tenant stay than raise the rent. Honestly- the cost of turning over the apt and rolling the dice on what kind of tenant you will get isn’"
         },
         {
           "source_family": "public",
@@ -226,28 +209,44 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Mine raised the rent at one for 14% after he putchased a 7 unit apartment for $900,000 10 years ago. It is apperently allowed, if the previous landlord didn't raise anything. Now h"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I got lucky and have a garage. $100 a month, they say, but I think it has to be baked into the rent somehow. I live in inner sunset"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I’m a tenant in Rockridge and my landlords haven’t raised the rent in 6 years, but the place is also falling down and they haven’t responded to my emails or texts for 6 months lol"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.097,
+        "source_item_count": 129,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-26T11:08:50.073Z",
+      "captured_at": "2026-06-26T12:55:19.322Z",
       "mood_score": 0.303,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": 0.009,
+        "source_item_count": 80,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.788
       }
     }
   ]
