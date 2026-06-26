@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-26T09:17:06.183Z",
+    "capturedAt": "2026-06-26T11:08:50.073Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-26T09:17:06.183Z",
-      "mood_score": 0.361,
+      "captured_at": "2026-06-26T11:08:50.073Z",
+      "mood_score": 0.365,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays anticlockwise only while we deal with a customer incident."
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge due to an earlier signal failure at Ealing Common. London"
         },
         {
           "source_family": "transport",
@@ -54,15 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Heathrow Terminal 5 due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a points failure at Walthamstow Central."
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier points failure at Walthamstow Central."
         },
         {
           "source_family": "signals",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 0.88,
           "excerpt": "Sadiq Khan faces High Court challenge by furious London councils over affordable housing 'scandal' - My London. Sadiq Khan faces High Court challenge by furious London councils ove"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.055,
+        "source_item_count": 95,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-26T09:17:06.183Z",
-      "mood_score": 0.338,
+      "captured_at": "2026-06-26T11:08:50.073Z",
+      "mood_score": 0.336,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -139,14 +148,6 @@
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm - nd-aktuell.de. Nahverkehr – Streik in Berlin: Verdi legt BVG für zwei Tage lahm"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -156,19 +157,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.007,
+        "source_item_count": 127,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-26T09:17:06.183Z",
+      "captured_at": "2026-06-26T11:08:50.073Z",
       "mood_score": 0.467,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -235,15 +236,15 @@
           "money",
           "transit"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-26T09:17:06.183Z",
+      "captured_at": "2026-06-26T11:08:50.073Z",
       "mood_score": 0.303,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 18,
@@ -306,10 +307,10 @@
         "average_valence": 0.009,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.809
       }
     }
   ]
