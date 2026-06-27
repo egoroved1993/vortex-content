@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-27T21:30:18.205Z",
+    "capturedAt": "2026-06-27T22:29:37.995Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-27T21:30:18.205Z",
-      "mood_score": 0.417,
+      "captured_at": "2026-06-27T22:29:37.995Z",
+      "mood_score": 0.413,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Stonebridge Park and Harrow & Wealdstone due to an earlier signal failure at South K"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: No service between Ealing Broadway and Turnham Green due to planned engineering works. MINOR DELAYS betwe"
+          "excerpt": "London transit District: Severe Delays District Line: No service between Ealing Broadway and Turnham Green due to planned engineering works. SEVERE DELAYS betw"
         },
         {
           "source_family": "transport",
@@ -71,30 +79,22 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Stanmore."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow on the Hill and Uxbridge and between Moor Park and Watford due to train c"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.096,
+        "source_item_count": 102,
+        "average_valence": -0.108,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-27T21:30:18.205Z",
+      "captured_at": "2026-06-27T22:29:37.995Z",
       "mood_score": 0.299,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
@@ -168,7 +168,7 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-27T21:30:18.205Z",
+      "captured_at": "2026-06-27T22:29:37.995Z",
       "mood_score": 0.451,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -229,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": 0.003,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-27T21:30:18.205Z",
+      "captured_at": "2026-06-27T22:29:37.995Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
@@ -309,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.791
+        "freshness_score": 0.794
       }
     }
   ]
