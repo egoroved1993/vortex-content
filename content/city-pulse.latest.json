@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-27T23:29:17.573Z",
+    "capturedAt": "2026-06-28T01:13:20.922Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 418
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-27T23:29:17.573Z",
-      "mood_score": 0.47,
+      "captured_at": "2026-06-28T01:13:20.922Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Stonebridge Park and Harrow & Wealdstone due to an earlier signal failure at South K"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,45 +54,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Stanmore."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow on the Hill and Uxbridge and between Moor Park and Watford due to train c"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 27 June, from 0430 and all day Sunday 28 June, no service between Kings Cross St Pancras and N"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "Warnings of train delays and cancellations as UK temperatures surpass 37C - BBC. Warnings of train delays and cancellations as UK temperatures surpass 37C"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.089,
+        "source_item_count": 89,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-27T23:29:17.573Z",
-      "mood_score": 0.299,
+      "captured_at": "2026-06-28T01:13:20.922Z",
+      "mood_score": 0.3,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, weather, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,6 +114,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Hey, I was there too today and think the situation was poorly managed communication wise. the line was that long not because it took too long to manage admissions / sell the ticket"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Germany should learn from Indonesia regarding the comfort for passengers in train and as well as with punctuality. Despite of being the tropical country, our train has the best ser"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Hey all! I’m visiting your beautiful city for a couple of days and I’m arriving tomorrow. Does anyone have a good tip to escape the heat at the during the evening? I’m staying at t"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -129,47 +153,23 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "If you see people who need water, try and help them! Especially old people/homeless people. Hi all, We all know this weekend is going to be a burner. As a big city it's easy to ign"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "It's incredibly difficult problem. Compute intensive too I think. If parameters change a little the outcomes can be hugely different. I'm not a meteorologist but gave heard it ment"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I guess it depends on where you live. Standing in a queue for 2 hours when the pool is close to your place is not great, but spending an hour each way in public transport isn't eit"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.004,
+        "source_item_count": 129,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
-          "events",
-          "weather"
+          "weather",
+          "transit"
         ],
-        "freshness_score": 0.907
+        "freshness_score": 0.918
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-27T23:29:17.573Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-06-28T01:13:20.922Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -188,6 +188,14 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Good luck. I think SF tenant lawyers like to cherry pick the high payout/owner move in cases which have $$$$$. I understand. It’s a business. But if you don’t have the kind of case"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -196,11 +204,19 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Watching our service, retail, and hourly workers get priced out of SF is heartbreaking. How are you all actually surviving the rent here?"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I lived in a spot like this for a couple years. I moved in with friends, so it was an ongoing situation. It wasn't even rent-controlled and we were paying around 60% market value, "
+          "excerpt": "I replied with this information on the main post but since you said your family was also having issues with your landlord you should know that the SF Bar Association has an Attorne"
         },
         {
           "source_family": "public",
@@ -209,44 +225,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Any places where i can rent a car (for dmv test)?. I have to do the behind-the-wheel test, but my mom’s car would be considered non passing since the brakes are worn down and there"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I'm confused at your confusion. Are you really not understanding that people living in a neighborhood that has cheaper housing and cheaper rent than most of the rest of the city ar"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Xfinity is never good, but I've been getting a lot more momentary outages and clear speed throttling than usual this month, especially ever since that mass outage on June 18 that l"
         }
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": 0.002,
+        "average_valence": 0.012,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-27T23:29:17.573Z",
+      "captured_at": "2026-06-28T01:13:20.922Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -295,21 +295,21 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "ca",
+          "language": "es",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "dir-li a algú que és supremacista per indignar-se per que facis servir el terme d'una colla de supremacistes feixistes que van bombardejar i invaïr aquesta terra jo diria que és pl"
+          "excerpt": "I jo em cago en els guiris dels collons ficant \"Barcelona, Spain\" No cal que m'ho recordeu"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
+        "source_item_count": 85,
         "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.794
+        "freshness_score": 0.792
       }
     }
   ]
