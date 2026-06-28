@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-28T03:20:01.678Z",
+    "capturedAt": "2026-06-28T05:39:20.595Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 418
+    "totalItems": 447
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-28T03:20:01.678Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-06-28T05:39:20.595Z",
+      "mood_score": 0.469,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 36,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Literally none of these things are \"horrifying.\" Public transportation is busy at rush hour. If someone is elbowing you, politely ask them to be careful, or move out of the way. Fo"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "London is two cities pretending to be one. What’s a tiny thing that gives away which one someone lives in?. London’s basically two cities wearing the same coat. The one where a lea"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -63,48 +79,32 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Warnings of train delays and cancellations as UK temperatures surpass 37C - BBC. Warnings of train delays and cancellations as UK temperatures surpass 37C"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.056,
+        "source_item_count": 106,
+        "average_valence": -0.092,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-28T03:20:01.678Z",
+      "captured_at": "2026-06-28T05:39:20.595Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, weather, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 25,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -156,29 +156,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 128,
+        "source_item_count": 129,
         "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "weather",
           "transit"
         ],
-        "freshness_score": 0.914
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-28T03:20:01.678Z",
-      "mood_score": 0.455,
+      "captured_at": "2026-06-28T05:39:20.595Z",
+      "mood_score": 0.456,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 50,
+        "public": 60,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -186,14 +186,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Good luck. I think SF tenant lawyers like to cherry pick the high payout/owner move in cases which have $$$$$. I understand. It’s a business. But if you don’t have the kind of case"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -216,37 +208,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I replied with this information on the main post but since you said your family was also having issues with your landlord you should know that the SF Bar Association has an Attorne"
+          "excerpt": "If you are not lining up until 10:30 there is a high likelihood that you'll get nowhere near the grass, unless you want to be in the overflow area off to the right where you can wa"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Your profile says you’re a proud Scandinavian in California and Canada. You should remove that if you want to act like an angry Australian. Take Caltrain to the Orange Line. You to"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Any places where i can rent a car (for dmv test)?. I have to do the behind-the-wheel test, but my mom’s car would be considered non passing since the brakes are worn down and there"
+          "excerpt": "Recommended Churches in SF. I just moved to SF 2-3 weeks ago and looking for a Catholic/Christian Church. Im Catholic but im open to both. I'm looking for one that has lots of youn"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.015,
+        "source_item_count": 126,
+        "average_valence": 0.017,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-28T03:20:01.678Z",
+      "captured_at": "2026-06-28T05:39:20.595Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 85,
+        "source_item_count": 86,
         "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.788
+        "freshness_score": 0.793
       }
     }
   ]
