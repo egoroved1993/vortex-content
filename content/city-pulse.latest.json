@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-29T03:22:25.166Z",
+    "capturedAt": "2026-06-29T05:45:33.598Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 418
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-29T03:22:25.166Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-06-29T05:45:33.598Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays clockwise only due to train cancellations."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -51,55 +60,47 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Renting a tent and sleeping bag camping over night for Wimbledon? Wondering if anyone knows of a place to rent a tent and sleeping bag for Wimbledon? Here in London and a friend an"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "wtf is this lol “It doesn’t matter who your parents are, what hardships you’ve faced, what disadvantages you had, as long as you speak English, you should be able to afford one of "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I'm a bit weird in the grounds I like - you honestly kind of want a town that's a bit of a shithole in a lovable way for football I find. Big fan of Burnley away for instance. Mode"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Warnings of train delays and cancellations as UK temperatures surpass 37C - BBC. Warnings of train delays and cancellations as UK temperatures surpass 37C"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "excerpt": "Ha! I add New Zealanders to this list 😎 So much more sunshine & daylight hours, healthy food in cafes (like salad bowls, wraps, egg burritos etc) make it easy to make good food ch"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.028,
+        "source_item_count": 84,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.801
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-29T03:22:25.166Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-06-29T05:45:33.598Z",
+      "mood_score": 0.453,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 34,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -146,34 +147,34 @@
           "excerpt": "Good morning lol. The fertility rates dropped below replacement levels back in 1970s. And even without boomers, the millenial/gen Z generations are very small compared to Gen X and"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 133,
-        "average_valence": 0.006,
+        "source_item_count": 138,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "events",
           "weather"
         ],
-        "freshness_score": 0.909
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-29T03:22:25.166Z",
-      "mood_score": 0.514,
+      "captured_at": "2026-06-29T05:45:33.598Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,9 +190,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Yes, and it wasn't the majority straight people from the Castro either, our allies, who enjoy a good party and helped us plan it. I was there and I saw so much terrible shit, year "
+          "excerpt": "Interesting. Our lease says this and when I saw it I lauged, seemed like such an absurd requirement. I never imagined it was required by law. Either way, the landlord has never men"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Watching our service, retail, and hourly workers get priced out of SF is heartbreaking. How are you all actually surviving the rent here?"
         },
         {
           "source_family": "public",
@@ -199,15 +208,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This is why affordability is a trap way of thinking. Now none of these housing units get built and rich high income people will outbid others for the finite amount of housing in th"
+          "excerpt": "I was one of the leather booths right next to a stage. It hurt our sales bad day one. Not only was the noise fucking terrible, but they didn't leave enough room in front of the sta"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Recommended Churches in SF. I just moved to SF 2-3 weeks ago and looking for a Catholic/Christian Church. Im Catholic but im open to both. I'm looking for one that has lots of youn"
+          "excerpt": "I’m a night shift worker and walk my dogs in the 4 o’clock hour sometimes. It’s usually pretty quiet, the occasional unhoused person here or there, a raccoon or two, sometimes anot"
         },
         {
           "source_family": "public",
@@ -215,37 +224,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Wow, I didn't know that they couldn't take notes. If I couldn't take notes at work, I'd probably forget the contents of 80% of my meetings by the end of the day. I always thought I"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "[SF/EAST BAY] secondhand bookshops with good 17/18C lit, history collections?. I'm looking for some good bookshops with large used collections to browse in, particularly ones that "
+          "excerpt": "There is a Brazilian pizzeria called Bernal Heights Pizzeria, it's not at Union Square but a 15-minute uber ride from there. They have Brazilian petiscos and multiple TVs in the ba"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.042,
+        "source_item_count": 116,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
-          "belonging"
+          "transit"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-29T03:22:25.166Z",
+      "captured_at": "2026-06-29T05:45:33.598Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -301,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 82,
+        "source_item_count": 80,
         "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.779
+        "freshness_score": 0.772
       }
     }
   ]
