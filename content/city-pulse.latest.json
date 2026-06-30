@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-06-30T13:44:30.655Z",
+    "capturedAt": "2026-06-30T15:01:41.103Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-06-30T13:44:30.655Z",
-      "mood_score": 0.433,
+      "captured_at": "2026-06-30T15:01:41.103Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -49,22 +49,6 @@
           "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an operational incident. Tickets will be accepted on London buses, Lioness line, Lon"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Upminster and Ealing Broadway/Richmond and MINOR DELAYS on the rest of the line due"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Upminster and Ealing Broadway/Richmond and MINOR DELAYS on the rest of the line due"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -73,28 +57,44 @@
           "excerpt": "First job at 16 (tutoring with a proper tutoring company), moved to waitressing, finished uni and went corporate. First job was around a decade ago. I'm still in touch with people "
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "We rent in the UK's most unaffordable city — and it's not London - Metro.co.uk. We rent in the UK's most unaffordable city — and it's not London"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "yeah i get it, someone got on the train yesterday playing music outloud and i wanted to tell them to turn it off just to reinforce general good train etiquette but i was only on fo"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.051,
+        "source_item_count": 95,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-06-30T13:44:30.655Z",
+      "captured_at": "2026-06-30T15:01:41.103Z",
       "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
@@ -163,13 +163,13 @@
           "events",
           "weather"
         ],
-        "freshness_score": 0.904
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-06-30T13:44:30.655Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-06-30T15:01:41.103Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.019,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-06-30T13:44:30.655Z",
+      "captured_at": "2026-06-30T15:01:41.103Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
@@ -309,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.795
+        "freshness_score": 0.793
       }
     }
   ]
