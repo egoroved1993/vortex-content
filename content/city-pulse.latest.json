@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-01T07:44:39.952Z",
+    "capturedAt": "2026-07-01T11:13:52.609Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 364
+    "totalItems": 418
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-01T07:44:39.952Z",
-      "mood_score": 0.468,
+      "captured_at": "2026-07-01T11:13:52.609Z",
+      "mood_score": 0.47,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Turnham Green and Richmond due to a signal failure at Willesden Junction on the Mild"
+          "excerpt": "London transit Circle: Severe Delays Circle Line: No service clockwise and NO SERVICE anti-clockwise between Edgware Road and Aldgate due to an faulty train"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Richmond / Shepherd's Bush and Gospel Oak while we fix a signal failure at Willesden Ju"
+          "excerpt": "London transit District: Minor Delays District Line: No service between High Street Kensington and Edgware Road while we deal with an obstruction on the track"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge / Heathrow Airport due to an operational incident. MINOR"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Airport / Reading while we fix a signal fault at Hayes & Harlington. Londo"
         },
         {
           "source_family": "transport",
@@ -78,33 +78,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Uxbridge / Heathrow Airport due to an operational incident. MINOR"
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.095,
+        "source_item_count": 100,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-01T07:44:39.952Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-07-01T11:13:52.609Z",
+      "mood_score": 0.456,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, weather, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Restaurant for dinner with vegan & vegetarian gluten-free options. Celebrating my 30th birthday next week, so I'm looking for something new and special. I grew up in Berlin and I f"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,36 +153,28 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Miete für Wohnung in Hamburg: Größter Anstieg aller Großstädte Immowelt Studie - Hamburger Abendblatt. Miete für Wohnung in Hamburg: Größter Anstieg aller Großstädte Immowelt Studi"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": 0.008,
+        "source_item_count": 122,
+        "average_valence": 0.017,
         "dominant_themes": [
           "general",
-          "weather",
+          "routine",
           "events"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-01T07:44:39.952Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-07-01T11:13:52.609Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,65 +188,65 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Recommended Churches in SF. I just moved to SF 2-3 weeks ago and looking for a Catholic/Christian Church. Im Catholic but im open to both. I'm looking for one that has lots of youn"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "secondhand bookshops with good 17/18C lit/history collections?. I'm looking for some good bookshops with large used collections to browse in, particularly ones that have strong sel"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "4-bedroom just posted on Zillow. Helping out my fellow renters… It’s not in the middle of the city like everyone wants, but it’s in a drivable suburban area to get to everywhere. R"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Kid-friendly World Cup Viewing/Dinner?. I have family visiting with 3 kids (ages 8-13) who will be staying in Chinatown / Nob Hill. they are soccer fans and I’m curious about any g"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "San Francisco UN federal building renamed to honor late Senator Dianne Feinstein - ABC7 Bay Area. San Francisco UN federal building renamed to honor late Senator Dianne Feinstein"
+          "recency_weight": 1.04,
+          "excerpt": "This is why utilities should never be included in the rent…. If you’re a landlord 😉"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yes you are!!! I had to leave my home on the NorCal coast (Mendo) four years ago and I’m STILL grieving for it. Currently in the southeast (94 degrees and insanely humid, no breeze"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Marina bars on Wednesdays. My late 20s group of girlfriends are visiting me from out of town. My preferred neighborhood for bars is the marina, but I’ve only ever gone on a Friday "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "If your landlord gives you any trouble, don't hesitate to contact the Eviction Defense Collaborative.. SF has tons of protections for tenants. Landlords are often required to pay f"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I did 10% in my last move ($2k to go from Danville > Concord for a townhome worth of stuff + $200 tip). They packed the kitchen + living room and disassembled the furniture, but we"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": 0.011,
+        "source_item_count": 116,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
-          "events",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-01T07:44:39.952Z",
-      "mood_score": 0.296,
+      "captured_at": "2026-07-01T11:13:52.609Z",
+      "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 2,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -256,7 +256,8 @@
       },
       "languages": [
         "ca",
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
         {
@@ -269,11 +270,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "2 entrades gratis a la piscina - bcn. bon dia! ahir sense voler vaig comprar dues entrades per la piscina del parc de la creueta del coll per avui, però treballo i no podré gaudir-"
+          "excerpt": "Vaig fer el mateix, malauradament un veí va pensar que era la seva oportunitat per queixar-se de tot i res. De fet vaig tenir les obres parades uns mesos (a la espera de uns materi"
         },
         {
           "source_family": "public",
@@ -281,34 +282,34 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Terra radiant a Barcelona durant una onada de calor. Estic pensant a instal·lar terra radiant amb una bomba de calor en una casa al Maresme. També m'agradaria utilitzar-lo per refr"
+          "excerpt": "Sant Joan de l’any 1951: un bon grup de nois del carrer de Sant Rafael de Badalona, preparen el foc que encendran aquella nit"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
+          "excerpt": "Perquè pot sortir malament ser educat? On visc jo els veïns de l'altra acera avisen fins hi tot quan els canvien els vidres, per si el camió et molesta a L'aparcar. És un detall. N"
         },
         {
-          "source_family": "review",
-          "source_origin": "travel_forum_snippet",
-          "language": "en",
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "brunch cafe. El Born. Perfect place to watch twelve people cosplay moving to Barcelona for six months. Food fine, prices targeted at people who say barrio like they invented the wo"
+          "excerpt": "2 entrades gratis a la piscina - bcn. bon dia! ahir sense voler vaig comprar dues entrades per la piscina del parc de la creueta del coll per avui, però treballo i no podré gaudir-"
         }
       ],
       "metadata": {
-        "source_item_count": 68,
-        "average_valence": -0.011,
+        "source_item_count": 80,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.748
+        "freshness_score": 0.79
       }
     }
   ]
