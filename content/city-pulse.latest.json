@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-02T13:01:41.214Z",
+    "capturedAt": "2026-07-02T16:08:41.300Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 403
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-02T13:01:41.214Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-07-02T16:08:41.300Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 34,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an operational incident. Tickets will be accepted on London buses, Lioness line, Tha"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier fire alert at Cockfosters. Tickets will be accepted on London Buses, El"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays while we respond to a fire alert at Westminster. Tickets are being accepted on London Buses,"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Uxbridge / Heathrow Terminals due to an earlier fire alert at Cockf"
         },
         {
           "source_family": "public",
@@ -65,46 +73,38 @@
           "excerpt": "Landlord Trying To Keep Your Deposit in London? Reply Like The Deposit Scheme Will Read It"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "We rent in the UK's most unaffordable city — and it's not London - Metro.co.uk. We rent in the UK's most unaffordable city — and it's not London"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "has to be Guinness Zero. Having one now and it tastes like the real thing. None of the alc free lagers or ales I've had have come close. The german non alc lager in Waitrose called"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.049,
+        "source_item_count": 87,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.819
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-02T13:01:41.214Z",
-      "mood_score": 0.389,
+      "captured_at": "2026-07-02T16:08:41.300Z",
+      "mood_score": 0.39,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -120,15 +120,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The idea of it playing a loud noise or \"ringing\" super loudly so she can take a fake call is actually very good. Apparently anything that startles people or draws attention can hel"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I mean I get your point, but being \"mad\" / irritated about people asking for later move-in dates kinda baffles me. You do realize people can't just leave their home today and move "
+          "excerpt": "If Amazon was to go, people aren’t just going to go out and buy car to make up for it! As if Cars aren’t already too expensive for people and Traffic isn’t already bad enough…Peopl"
         },
         {
           "source_family": "public",
@@ -147,34 +139,42 @@
           "excerpt": "If you have a flight from BER leave SUPER EARLY today.. What is up with BER airport today? Usually I spend less than 5 mins in security, 10 mins max on a bad day. But today I’ve be"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Restaurant for dinner with vegan & vegetarian gluten-free options. Celebrating my 30th birthday next week, so I'm looking for something new and special. I grew up in Berlin and I f"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.033,
+        "source_item_count": 115,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-02T13:01:41.214Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-07-02T16:08:41.300Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 46,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Last week me and four of my friends met a new guy. We all took turns fucking him in the ass and he'd shit out cum and we'd all laugh. Dating is easy. Long term relationships? That'"
+          "excerpt": "I had a tent controlled apartment for 15 years and saved like crazy to buy a house. Really hard to do with market rate, but possible depending on when you got your rent controlled "
         },
         {
           "source_family": "public",
@@ -208,7 +208,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Take these calculators with a grain of salt. I gave up my rent controlled place to purchase, and with this current market my place well exceeds in value what I would have saved in "
+          "excerpt": "Don’t think it’s an imagining, you’re spot on. The biggest benefit I got from my rent control place was time - time to research, time to understand the market, time to interview re"
         },
         {
           "source_family": "public",
@@ -228,25 +228,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.027,
+        "source_item_count": 116,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-02T13:01:41.214Z",
+      "captured_at": "2026-07-02T16:08:41.300Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, belonging, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 88,
+        "source_item_count": 85,
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
-          "transit",
-          "belonging"
+          "belonging",
+          "transit"
         ],
-        "freshness_score": 0.804
+        "freshness_score": 0.794
       }
     }
   ]
