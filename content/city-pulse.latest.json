@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-02T20:23:30.089Z",
+    "capturedAt": "2026-07-02T22:13:13.702Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 385
+    "totalItems": 400
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-02T20:23:30.089Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-07-02T22:13:13.702Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 3,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,61 +46,61 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Westminster."
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an operational incident. Tickets will be accepted on London Buses, Lioness Line, and"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "We rent in the UK's most unaffordable city — and it's not London - Metro.co.uk. We rent in the UK's most unaffordable city — and it's not London"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Baker Street while we fix a track fault at Wembley Park."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Ah fair. Cairo is a very specific experience haha. There’s a good pub in finny park actually, the faltering fullback. I bet they play the games, although not sure about Egyptians :"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "well actually full bars is solid connection and good signal. What it does not indicate is bandwidth or latency."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "You are conflating two things. If you have a good signal then more cell sites are pointless. What you need is a fibre link to the based station so the cell site can pass traffic. I"
         }
       ],
       "metadata": {
-        "source_item_count": 70,
-        "average_valence": -0.057,
+        "source_item_count": 86,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.773
+        "freshness_score": 0.819
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-02T20:23:30.089Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-07-02T22:13:13.702Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Quite informative. But, ssst... have you ever heard of programmmable timers? As a reputated alchemist I could rent you a homunculus who was bred specifically for such a task. Meet "
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -153,28 +145,36 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.036,
+        "source_item_count": 115,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-02T20:23:30.089Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-07-02T22:13:13.702Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 43,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yes, stay! I’ve been in my rent controlled apartment for 18 years and I pay about half of what the other tenants pay for similar units."
+          "excerpt": "Well once they start building housing, rent will go down. We can make it happen, the marina Safeway tower is a start but it has to be the norm not a pants-shitting exception. It ca"
         },
         {
           "source_family": "public",
@@ -200,7 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It's not even fucking close to the same scale. Oh no, a couple restaurants close down? Ok. We can transport goods between states? Economic meltdown. I can't wait to watch this meas"
+          "excerpt": "Just rent a room. I was paying $1500 in Potrero and parking my car was super easy, didn't even need a permit. You can find way cheaper than that too. Lease was for 90 days and you "
         },
         {
           "source_family": "public",
@@ -208,7 +208,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Gucci slipper kids living in rent controlled buildings while the ordinary income folks find it hard to find housing. I know a lot of folks who are millionaires and make 550k/yr, ow"
+          "excerpt": "You should rent an airbnb and then do your housing search when you are here. You should not try to do what you are currently doing. I know literally a dozen people who have all fai"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Rental Help/Asvice. as the title shows, just feeling incredibly overwhelmed by the rental market right now. i scour dozens of sites every day and am feeling so discouraged seeing 5"
         },
         {
           "source_family": "public",
@@ -217,30 +225,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Marina bars on Wednesdays. My late 20s group of girlfriends are visiting me from out of town. My preferred neighborhood for bars is the marina, but I’ve only ever gone on a Friday "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Beaches 4th of July. Hi everyone! Is there a beach in the Bay Area that won’t be packed for 4th of July? I don’t want to watch fireworks I just want to hang out at the beach. If yo"
         }
       ],
       "metadata": {
-        "source_item_count": 109,
-        "average_valence": -0.023,
+        "source_item_count": 111,
+        "average_valence": -0.074,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-02T20:23:30.089Z",
+      "captured_at": "2026-07-02T22:13:13.702Z",
       "mood_score": 0.294,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.803
       }
     }
   ]
