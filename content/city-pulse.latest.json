@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-03T14:23:46.969Z",
+    "capturedAt": "2026-07-03T16:40:29.027Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-03T14:23:46.969Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-07-03T16:40:29.027Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
@@ -33,7 +33,8 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4
+        "transport": 7,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -45,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier fire alert at Queen's Park. Tickets will be accepted on London Buses and"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays, eastbound only, due to an earlier faulty train at Oxford Circus. Tickets are being accepted"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays, eastbound only, due to an earlier faulty train at Oxford Circus. Tickets are being accepted"
         },
         {
           "source_family": "transport",
@@ -54,22 +71,6 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Wembley Park."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Minor Delays Lioness Line: Minor delays due to an earlier customer incident at Harrow & Wealdstone."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Baker Street while we fix a track fault at Wembley Park."
         },
         {
           "source_family": "public",
@@ -81,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.044,
+        "source_item_count": 97,
+        "average_valence": -0.043,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-03T14:23:46.969Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-03T16:40:29.027Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -103,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "de",
@@ -119,6 +121,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "U2, brand new ubahn, and the HEATER IS ON IN SUMMER.. I’m so fucking tired of this amateur hour bullshit. Take the miles cars instead if you have a license."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
         },
         {
           "source_family": "news",
@@ -143,30 +153,22 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "A simple app to track Berlin's public transportation state. Hey all, I just made this somehow \"useless\" web app to check on BVG and DB status in Berlin. Basically check if they hav"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.012,
+        "source_item_count": 117,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-03T14:23:46.969Z",
+      "captured_at": "2026-07-03T16:40:29.027Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -177,7 +179,8 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -225,30 +228,31 @@
         }
       ],
       "metadata": {
-        "source_item_count": 126,
+        "source_item_count": 127,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-03T14:23:46.969Z",
-      "mood_score": 0.493,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-07-03T16:40:29.027Z",
+      "mood_score": 0.293,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -298,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.02,
+        "source_item_count": 82,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.777
+        "freshness_score": 0.787
       }
     }
   ]
