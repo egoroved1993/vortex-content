@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-03T20:19:01.829Z",
+    "capturedAt": "2026-07-03T22:09:54.220Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,27 +16,28 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 395
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-03T20:19:01.829Z",
+      "captured_at": "2026-07-03T22:09:54.220Z",
       "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
+        "ca",
         "en"
       ],
       "drivers": [
@@ -46,7 +47,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier fire alert at Stonebridge Park. Tickets are being accepted on London Buse"
         },
         {
           "source_family": "transport",
@@ -54,7 +55,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier faulty train at Oxford Circus. Tickets are being accepted on London Buses,"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to an earlier faulty train at Oxford Circus."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Lioness: Severe Delays Lioness Line: Severe delays due to an earlier fire alert at Stonebridge Park."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Do you mean people who were brought up by single parents? Because that is not what is being asked here. We are asking why a heterosexual couple is better equipped to give a child a"
         },
         {
           "source_family": "public",
@@ -63,44 +80,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Giving Away 2 FREE Tickets to The Kooks Today!. Good morning ☀️ I have 2 free tickets for The Kooks concert at Tofte Manor (near Bedford) this afternoon, 3rd July. The tickets also"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "We rent in the UK's most unaffordable city — and it's not London - Metro.co.uk. We rent in the UK's most unaffordable city — and it's not London"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
+        "source_item_count": 97,
         "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-03T20:19:01.829Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-07-03T22:09:54.220Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "This should be illegal btw. Its hardly possible to find non-furnished flats/rooms in cities like Berlin nowadays. Those people/companies are buying half of the city and than rent i"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -153,28 +146,36 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Thank you for the nice words and the feedback! I'll add reversal detection. I was under the impression I could not do that because it might lead to faster routes being detected mis"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.02,
+        "source_item_count": 116,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-03T20:19:01.829Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-07-03T22:09:54.220Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 56,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -190,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I just went through the same move and honestly, it would be really hard without getting an Airbnb or some kind of temporary stay (unless you’re super familiar with the neighborhood"
+          "excerpt": "Exactly. The problem with the rent in the Bay Area is that we don't build enough housing. The problem with the CPI is that people voted for the guy promising tariffs."
         },
         {
           "source_family": "public",
@@ -200,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "no, you need to have it be your legal primary home. there isn't a great way to actually enforce this if people just... are somewhere else. and I know this firsthand (I AM NOT DOING"
+          "excerpt": "i already explained to you yesterday that land price per square ft is a stupid metric. tenderloin has a higher land per sq ft metric than sunset, because it is 10x smaller than sun"
         },
         {
           "source_family": "public",
@@ -228,25 +229,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.002,
+        "source_item_count": 128,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-03T20:19:01.829Z",
-      "mood_score": 0.296,
+      "captured_at": "2026-07-03T22:09:54.220Z",
+      "mood_score": 0.293,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 2,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -256,9 +257,18 @@
       },
       "languages": [
         "ca",
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "1. Production in Barcelona has already wrapped and moved to The Netherlands. 2. It's a female-focused production which means jobs for women directors, writers, and producers. But, "
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -266,6 +276,14 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Sant Joan de l’any 1951: un bon grup de nois del carrer de Sant Rafael de Badalona, preparen el foc que encendran aquella nit"
         },
         {
           "source_family": "public",
@@ -282,33 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Terra radiant a Barcelona durant una onada de calor. Estic pensant a instal·lar terra radiant amb una bomba de calor en una casa al Maresme. També m'agradaria utilitzar-lo per refr"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bar. Gracia. Same tiny coffee, same old man already arguing about football, same five minutes where you can believe routine is stronger than rent."
-        },
-        {
-          "source_family": "review",
-          "source_origin": "travel_forum_snippet",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "brunch cafe. El Born. Perfect place to watch twelve people cosplay moving to Barcelona for six months. Food fine, prices targeted at people who say barrio like they invented the wo"
         }
       ],
       "metadata": {
-        "source_item_count": 68,
-        "average_valence": -0.012,
+        "source_item_count": 82,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "transit"
         ],
-        "freshness_score": 0.729
+        "freshness_score": 0.783
       }
     }
   ]
