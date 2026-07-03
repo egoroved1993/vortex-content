@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-03T18:17:26.953Z",
+    "capturedAt": "2026-07-03T20:19:01.829Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 396
+    "totalItems": 395
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-03T18:17:26.953Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-07-03T20:19:01.829Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -57,44 +57,44 @@
           "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier faulty train at Oxford Circus. Tickets are being accepted on London Buses,"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Turnham Green and Richmond due to an earlier fire alert at Gunnersbury. London Buse"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to an earlier fire alert at Gunnersbury. London Underground are accepting valid tickets"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Giving Away 2 FREE Tickets to The Kooks Today!. Good morning ☀️ I have 2 free tickets for The Kooks concert at Tofte Manor (near Bedford) this afternoon, 3rd July. The tickets also"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "We rent in the UK's most unaffordable city — and it's not London - Metro.co.uk. We rent in the UK's most unaffordable city — and it's not London"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.056,
+        "source_item_count": 86,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.828
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-03T18:17:26.953Z",
+      "captured_at": "2026-07-03T20:19:01.829Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -163,13 +163,13 @@
           "events",
           "routine"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-03T18:17:26.953Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-07-03T20:19:01.829Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,21 +229,21 @@
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": -0.005,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-03T18:17:26.953Z",
+      "captured_at": "2026-07-03T20:19:01.829Z",
       "mood_score": 0.296,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 2,
@@ -306,9 +306,9 @@
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "tourism"
         ],
-        "freshness_score": 0.734
+        "freshness_score": 0.729
       }
     }
   ]
