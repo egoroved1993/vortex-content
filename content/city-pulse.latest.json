@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-05T09:14:49.532Z",
+    "capturedAt": "2026-07-05T11:39:58.813Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-05T09:14:49.532Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-07-05T11:39:58.813Z",
+      "mood_score": 0.391,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Thank you to the kind lady on the Metropolitan line ❤️. I just wanted to say thank you to the lovely lady who helped me yesterday on the Metropolitan line. I suddenly started cryin"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Elephant & Castle and Queen's Park while we fix a signal failure at Lambeth North. G"
         },
         {
           "source_family": "transport",
@@ -78,33 +78,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: From 1930 Saturday 4 until 1200 Sunday 5 July, no service between Shepherds Bush and Willesden Junction. T"
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.074,
+        "source_item_count": 91,
+        "average_valence": -0.086,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.828
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-05T09:14:49.532Z",
-      "mood_score": 0.395,
-      "mood_label": "low",
+      "captured_at": "2026-07-05T11:39:58.813Z",
+      "mood_score": 0.401,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -120,23 +120,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If the transfer is in Berlin from the long-distance train (ICE) to local public transport (e.g. suburban train, \"S-Bahn\", ir subway) it's less problematic because they run every 2-"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "One can disagree about the sanctity of private property, but this consent analogy is particularly bad. I could consent with an art thief that I would pay him to rob the Louvre, but"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "Mall of Berlin was often not busy 2016-22 but its been packed all the time the last few. This is where school classes and tourists are going. Also because it’s right next to two fo"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "And look what kind of weather we're getting right now. Rain, clouds and 23c maximum. You said july was looking great with almost perfect weather, right?"
         },
         {
           "source_family": "public",
@@ -153,11 +145,19 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Rode the elusive Test train today on the U8. After seeing this post a while ago, the only large-profile train with a mix of seating arrangements kind of lived in the back of my hea"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.016,
+        "source_item_count": 119,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "routine",
@@ -168,13 +168,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-05T09:14:49.532Z",
-      "mood_score": 0.51,
+      "captured_at": "2026-07-05T11:39:58.813Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -190,9 +190,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I walked for everything tonight. Faster than the bus. The bus at Aquatic Park was stuck behind all the traffic. They had like 20+ buses just waiting for traffic to move. I walked t"
+          "excerpt": "That's unfortunate! We did it once when we moved to the Bay Area. It was cold and crowded and too much hassle for 20 mins of fireworks! But glad we did it."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yeah we saw Waymo gridlock an intersection for like 20 minutes on Lombard. There were a ton of buses that just sat there packed with people not able to move. It definitely wasn’t j"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "There were not plenty of buses. I got onto the 30 at its terminus by the ballpark. The bus was packed and couldn’t even pickup at stop 2. We drove up to Fort Mason never stopping a"
         },
         {
           "source_family": "public",
@@ -209,44 +225,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Hi! I have an 11 year old male who is friendly but is extremely reserved, quiet and chill. I'm 30 years old single female and have also been trying to find someone to trade off dog"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Fancy weekday lunch for wife's birthday?. Hi everyone. Still pretty new to the city. I'm taking my wife's birthday off next week and looking for a good restaurant idea for lunch. T"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Will be in town for Pokemon event. Will be in town some day in August for a Pokemon event. Think for around 5ish days what are some things I should plan to do in the city? Good pla"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": 0.029,
+        "source_item_count": 128,
+        "average_valence": 0.013,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-05T09:14:49.532Z",
+      "captured_at": "2026-07-05T11:39:58.813Z",
       "mood_score": 0.293,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -294,22 +294,22 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "\\- Plaça Catalunya \\- Sagrada Familia \\- Park Güell \\- Casa Batlló \\- Coneix un argentí a la platja \\- El Raval i paellita \\- Festes de Gràcia/Sants \\- Es posa de rules al Shoko i "
+          "excerpt": "Terra radiant a Barcelona durant una onada de calor. Estic pensant a instal·lar terra radiant amb una bomba de calor en una casa al Maresme. També m'agradaria utilitzar-lo per refr"
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.02,
+        "source_item_count": 78,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.77
+        "freshness_score": 0.755
       }
     }
   ]
