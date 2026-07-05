@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-05T15:18:33.052Z",
+    "capturedAt": "2026-07-05T17:19:06.991Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-05T15:18:33.052Z",
-      "mood_score": 0.39,
+      "captured_at": "2026-07-05T17:19:06.991Z",
+      "mood_score": 0.392,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "For council tax you should be able to work this out - look up your address to find out your council tax band, then look up the council to find out annual charges for that band. It "
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,53 +62,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Tower Hill and Richmond westbound only and MINOR DELAYS between Earl's Court and To"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Tower Hill and Richmond westbound only and MINOR DELAYS between Earl's Court and To"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Planned Closure HAMMERSMITH & CITY LINE: Saturday 4 and Sunday 5 July, no service on the entire line. There will also be no c2c services"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: No service between Wembley Park and Stanmore and MINOR DELAYS on the rest of the line while we respond to"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Part Suspended Jubilee Line: No service between Wembley Park and Stanmore and MINOR DELAYS on the rest of the line while we respond to"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Watford and Baker Street while we fix a track fault at Wembley Park and train ca"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.088,
+        "source_item_count": 99,
+        "average_valence": -0.082,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.845
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-05T15:18:33.052Z",
-      "mood_score": 0.405,
+      "captured_at": "2026-07-05T17:19:06.991Z",
+      "mood_score": 0.401,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 10,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "And look what kind of weather we're getting right now. Rain, clouds and 23c maximum. You said july was looking great with almost perfect weather, right?"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -147,6 +139,14 @@
           "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -156,25 +156,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": 0.013,
+        "source_item_count": 122,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-05T15:18:33.052Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-07-05T17:19:06.991Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 60,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,11 +188,27 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Where to see firework tmr. Hi! I’m late 20s female living in soma - I’m planning to see fireworks tmr but wanted to check my plan here. Places I was considering were Alta plaza or "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Pier 39 was the way to go. Still packed but we had our own firework display off Alcatraz, and it took us 40 mins to walk back to Montgomery Station."
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "mission gonna be absolutely chaos in the best way. every taqueria will have a tv and a crowd spilling out the door, you chose right just follow the sound of vuvuzelas and air horns"
+          "excerpt": "Armchair quarterback here. Yes, restrict inbound private car usage (except for handicap placard and locals with proper IDs) starting at 2pm, restrict parking on certain roads, add "
         },
         {
           "source_family": "public",
@@ -204,49 +220,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I knew it was going to be a shitshow, so I tried going to Baker Beach instead, that was a shit show as well, so I drove up to one of the many vantage spots in the Richmond where yo"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Where do you donate gently used clothes(&shoes). Earlier I used to put in the boxes in parking lot but noticed that it's for profit organisation. Then I thought of good Will but I "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Hi! I have an 11 year old male who is friendly but is extremely reserved, quiet and chill. I'm 30 years old single female and have also been trying to find someone to trade off dog"
+          "excerpt": "Fancy weekday lunch for wife's birthday?. Hi everyone. Still pretty new to the city. I'm taking my wife's birthday off next week and looking for a good restaurant idea for lunch. T"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": 0.02,
+        "source_item_count": 128,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-05T15:18:33.052Z",
+      "captured_at": "2026-07-05T17:19:06.991Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 12,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -278,19 +278,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "2 entrades gratis a la piscina - bcn. bon dia! ahir sense voler vaig comprar dues entrades per la piscina del parc de la creueta del coll per avui, però treballo i no podré gaudir-"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Terra radiant a Barcelona durant una onada de calor. Estic pensant a instal·lar terra radiant amb una bomba de calor en una casa al Maresme. També m'agradaria utilitzar-lo per refr"
+          "excerpt": "Si! 👏🏻👏🏻🙌🏻 És una \"llanterna\" que feia furor a Barcelona fa dos segles.Portava dues lents per barrejar imatges i simular efectes de cinema.Gent com l'òptic Dalmau omplia salo"
         },
         {
           "source_family": "public",
@@ -299,17 +291,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "This post was removed for breaking the rule: 'Keep content related to Barcelona' --- Aquesta publicació s'ha eliminat per infringir la regla: 'Mantenir el contingut relacionat amb "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "A ver, no creo que haya ningún \"enigma\", simplemente es una frase tétrica para añádir misterio al sitio. Me gustaría, eso sí, que alguien con más conocimiento de la Barcelona de la"
         }
       ],
       "metadata": {
-        "source_item_count": 78,
+        "source_item_count": 77,
         "average_valence": -0.01,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.753
+        "freshness_score": 0.745
       }
     }
   ]
