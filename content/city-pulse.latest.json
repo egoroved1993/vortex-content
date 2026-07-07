@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-07T00:15:29.441Z",
+    "capturedAt": "2026-07-07T04:58:56.721Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,46 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 428
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-07T00:15:29.441Z",
-      "mood_score": 0.327,
+      "captured_at": "2026-07-07T04:58:56.721Z",
+      "mood_score": 0.335,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Tuesday 7 and Wednesday 8 July, from 0030 each morning to end of service, no service northbound between Liv"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "More Reform council chaos as councillor ditches party just 57 days after being elected - The London Economic. More Reform council chaos as councillor ditches party just 57 days aft"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -79,23 +63,39 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.037,
+        "source_item_count": 91,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.832
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-07T00:15:29.441Z",
-      "mood_score": 0.3,
+      "captured_at": "2026-07-07T04:58:56.721Z",
+      "mood_score": 0.298,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Neuer Mietspiegel heißt nicht automatisch neue Miete - rbb24.de. Neuer Mietspiegel heißt nicht automatisch neue Miete"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,19 +153,11 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.001,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
@@ -168,13 +168,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-07T00:15:29.441Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-07-07T04:58:56.721Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 67,
+        "public": 65,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,14 +196,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Most of the new inventory is larger corporations and rent has gone down. But corporations price fix so the problem should have gotten worse? But it got better? No corporate landlor"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -216,7 +208,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This is just a landlord fishing for some fools at a super high rent. This has been common in SF for decades. I remember renting a 2bd 10 years ago and seeing 1bd's going for the sa"
+          "excerpt": "Hyatt embarcadero. Across the street from the ferry building. The embarcadero center has quick bites and decent restaurants. Right on public transit to various parts of the City. T"
         },
         {
           "source_family": "public",
@@ -224,29 +216,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "No. That would be crazy. They’ve always been rent fixing. Briefly, they were allowed to do it at an accelerated rate. However, they were extracting so much from tenants that they h"
+          "excerpt": "I think that was more a concern if they got on the ballot in June: that could've been lethal. Now though they're dealing with regular turnout AND more time for the angry people to "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Food and drinks tour on Sat 07/11. Hey friends - I need to plan something for a group of 8-10 on Saturday. Yes I'm late as hell. We're supposed to do a \"bar crawl\" but we also have"
         }
       ],
       "metadata": {
-        "source_item_count": 133,
-        "average_valence": -0.024,
+        "source_item_count": 131,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-07T00:15:29.441Z",
+      "captured_at": "2026-07-07T04:58:56.721Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -294,22 +294,22 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Hola Amine, sóc el Marc i treballo amb Arduino. He preguntat internament si coneixen algú. L'ideal seria explorar si hi ha algun Fablab o Makerspace aprop de casa teva, sinó parlar"
+          "excerpt": "Publiquen un anunci per llogar un pis a Barcelona i en una hora es presenten 30 persones per veure'l. Tres quartes parts dels interessats tenen fenotips extracomunitaris, i encara "
         }
       ],
       "metadata": {
-        "source_item_count": 86,
+        "source_item_count": 87,
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 0.812
       }
     }
   ]
