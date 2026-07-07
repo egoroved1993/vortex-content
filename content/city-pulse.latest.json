@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-07T08:33:36.712Z",
+    "capturedAt": "2026-07-07T11:58:00.182Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 430
+    "totalItems": 438
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-07T08:33:36.712Z",
-      "mood_score": 0.328,
+      "captured_at": "2026-07-07T11:58:00.182Z",
+      "mood_score": 0.333,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 36,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -49,12 +49,20 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "This is strange, I was at the concert yesterday but left two songs before the end to avoid the rush and White Hart Lane was open at the time, with signage actively guiding us to th"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Arnos Grove eastbound only due to an earlier customer incident at G"
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Sydenham and West Croydon while we fix a signal failure at West Croydon. GOOD service"
         },
         {
           "source_family": "public",
@@ -71,36 +79,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "F28 Weird massage experience canary wharf. I booked a massage on Treatwell in CW and it had really good reviews. The lady asked me for my age and told me I had a beautiful body whi"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.034,
+        "source_item_count": 105,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-07T08:33:36.712Z",
-      "mood_score": 0.301,
+      "captured_at": "2026-07-07T11:58:00.182Z",
+      "mood_score": 0.295,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -115,12 +115,20 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Neuer Mietspiegel heißt nicht automatisch neue Miete - rbb24.de. Neuer Mietspiegel heißt nicht automatisch neue Miete"
+          "recency_weight": 1.04,
+          "excerpt": "We live in Berlin. We pay 1.3k rent (two rooms, 64 sqm, renovated, within the ring, not an old rental contract) and if we were really trying to optimize our spending, I'm sure we'd"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Kid-friendly venue for watching Argentina-Egypt today?. I need to get out of my own 4 walls today to watch this game. Any ideas for a place where two 7 year olds can do some noise "
         },
         {
           "source_family": "public",
@@ -132,19 +140,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Non-natural Wine Bars. Can anyone recommend wine bars not focused on natural wine? Some natural on the list is fine of course, but would prefer 'traditional' ones most of the time."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "What kind of houses are you looking at that you cannot afford with 8k net per month!? If you are thinking Berlin center then yeah, forget it, but I can see that countryside homes a"
+          "excerpt": "If you’re planning to visit villages in the countryside this makes sense, but if you’re only going to cities you really don’t need a car. It is much easier to get the train between"
         },
         {
           "source_family": "nightlife",
@@ -156,25 +156,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": 0.002,
+        "source_item_count": 115,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-07T08:33:36.712Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-07-07T11:58:00.182Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -228,25 +228,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.018,
+        "source_item_count": 127,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-07T08:33:36.712Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-07-07T11:58:00.182Z",
+      "mood_score": 0.298,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -294,22 +294,22 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Publiquen un anunci per llogar un pis a Barcelona i en una hora es presenten 30 persones per veure'l. Tres quartes parts dels interessats tenen fenotips extracomunitaris, i encara "
+          "excerpt": "La “tabarra” et cau a tu i a ningú més. Sigues una mica menys prepotent."
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.008,
+        "source_item_count": 91,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.825
       }
     }
   ]
