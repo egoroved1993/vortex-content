@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-08T19:55:18.957Z",
+    "capturedAt": "2026-07-08T21:15:42.367Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,22 +16,22 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 255
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-08T19:55:18.957Z",
-      "mood_score": 0.283,
+      "captured_at": "2026-07-08T21:15:42.367Z",
+      "mood_score": 0.275,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 34,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "transport": 5,
         "weather": 1
@@ -54,14 +54,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to an earlier points failure at Whitechapel."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Kingsbury."
         },
         {
@@ -70,42 +62,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Baker Street and Aldgate due to an earlier points failure at Whitechapel."
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Willesden Junction and Richmond due to an earlier fault with the overhead power lines a"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Cockfosters due to an earlier person ill on a train at Cockfosters."
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "A late licence cost money. A lot of money. And are not easy to get. You reckon the 10 of you would have made it worth their while? Because I know you aren't that silly, lol. They a"
+          "excerpt": "Joan Jett Tickets. I have 2 tickets for tonight to see Joan Jett and the Blackhearts at the BA Arc in West London. Sadly I can no longer attend. I’ve seen her twice and she’s absol"
         }
       ],
       "metadata": {
-        "source_item_count": 69,
-        "average_valence": -0.051,
+        "source_item_count": 92,
+        "average_valence": -0.073,
         "dominant_themes": [
           "general",
-          "routine",
-          "belonging"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 1.049
+        "freshness_score": 0.845
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-08T19:55:18.957Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-08T21:15:42.367Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,20 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Kid-friendly venue for watching Argentina-Egypt today?. I need to get out of my own 4 walls today to watch this game. Any ideas for a place where two 7 year olds can do some noise "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Nikuya uses Miyazaki beef that some Japanese people holds on the similar level as Kobe, Omi and Matsusaki in A5. It just doesn't have the same export limitations and can be found a"
         },
         {
           "source_family": "nightlife",
@@ -138,45 +140,46 @@
           "excerpt": "Able Noise at West Germany (Berlin) on 2026-07-08T00:00:00.000 [Experimental, Drone]"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin-Texas. There's apparently a place in Berlin-Köpenick that was named \"Texas\" I found in a 19th century map of Berlin. What is that about?"
         }
       ],
       "metadata": {
-        "source_item_count": 61,
-        "average_valence": -0.012,
+        "source_item_count": 118,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 1.067
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-08T19:55:18.957Z",
-      "mood_score": 0.511,
+      "captured_at": "2026-07-08T21:15:42.367Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 55,
+        "public": 54,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -188,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "You wouldn’t want to park it in public for extended periods. Certainly not overnight. One consideration here is that many SF apartments/homes are ill configured to store an e-bike "
+          "excerpt": "I’ve been in my rent controlled place, luckily, for almost 25 years Regardless of how much you pay, having little space is always challenging for multiple people"
         },
         {
           "source_family": "public",
@@ -198,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "No. It makes the ability to supply more housing more profitable at higher prices. The total number of units needed to house the population is unchanged. And yet we still don't see "
+          "excerpt": "This may sound entitled, but pretty much all gyms in town, no matter how much you pay are mid at best. Way too many machines crammed into a room, way too crowded most of the time, "
         },
         {
           "source_family": "public",
@@ -210,11 +213,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Food and drinks tour on Sat 07/11. Hey friends - I need to plan something for a group of 8-10 on Saturday. Yes I'm late as hell. We're supposed to do a \"bar crawl\" but we also have"
+          "excerpt": "Finding couple friends and keeping them. A lot of ppl move away or we lose them when they have children. Or they want to party like they’re still 23 but my age bracket is mid- late"
         },
         {
           "source_family": "public",
@@ -222,33 +225,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Wow so exciting much disruption oohhh aahhhh Seriously, there's a button in the upper-right corner of the screen that allows you to buy advertising. It really isn't that expensive "
+          "excerpt": "Yeah, I take the 38 after work fairly often when I need to head out to the west side for something. The last couple of times I got on, it was already packed by the time I got on. I"
         }
       ],
       "metadata": {
-        "source_item_count": 71,
-        "average_valence": 0.033,
+        "source_item_count": 120,
+        "average_valence": 0.02,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "routine"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-08T19:55:18.957Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-07-08T21:15:42.367Z",
+      "mood_score": 0.294,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -258,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I dont see how this is even legal in most places. A hotel has to have insurance, policies, and 100 things to be operational legally but any dumba$$ can have a room online and rent "
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -288,26 +299,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Jo sempre havia pensat que venia de les \"chinas\" de hachis ja que era un barri on hi havia molta droga."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Els creadors no s'han enterat encara que Barcelona ja no és el referent de ciutat guai que es tenia fa 15 anys"
+          "excerpt": "Frenada de l' ampliació Si tens 1km i fas 1 km més has doblat els kms de carril bici, es a dir 100% d'ampliació. Si tens 100km i en fas 50 km l'ampliació es de només 50%"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": -0.01,
+        "source_item_count": 91,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
-          "transit",
+          "routine",
           "tourism"
         ],
-        "freshness_score": 1.043
+        "freshness_score": 0.805
       }
     }
   ]
