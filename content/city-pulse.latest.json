@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-08T17:44:43.777Z",
+    "capturedAt": "2026-07-08T19:55:18.957Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 255
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-08T17:44:43.777Z",
-      "mood_score": 0.271,
+      "captured_at": "2026-07-08T19:55:18.957Z",
+      "mood_score": 0.283,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 34,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 6,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to an earlier trespasser on the track at Piccadilly Circus."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays while we fix a points failure at Whitechapel. Tickets are accepted on London buses via reason"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to an earlier points failure at Whitechapel."
         },
         {
           "source_family": "transport",
@@ -70,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays while we fix a points failure at Whitechapel. Tickets will be accepted on London Buses, Mil"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Kingsbury."
         },
         {
           "source_family": "transport",
@@ -78,36 +70,42 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays while we fix a points failure at Whitechapel. Tickets are accepted on London bu"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Baker Street and Aldgate due to an earlier points failure at Whitechapel."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "A late licence cost money. A lot of money. And are not easy to get. You reckon the 10 of you would have made it worth their while? Because I know you aren't that silly, lol. They a"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.084,
+        "source_item_count": 69,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "belonging"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 1.049
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-08T17:44:43.777Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-07-08T19:55:18.957Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, U2, 300: Delays 3 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -148,38 +138,45 @@
           "excerpt": "Able Noise at West Germany (Berlin) on 2026-07-08T00:00:00.000 [Experimental, Drone]"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin-Texas. There's apparently a place in Berlin-Köpenick that was named \"Texas\" I found in a 19th century map of Berlin. What is that about?"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.019,
+        "source_item_count": 61,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 1.067
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-08T17:44:43.777Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-07-08T19:55:18.957Z",
+      "mood_score": 0.511,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -229,29 +226,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.015,
+        "source_item_count": 71,
+        "average_valence": 0.033,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-08T17:44:43.777Z",
+      "captured_at": "2026-07-08T19:55:18.957Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -303,14 +300,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.008,
+        "source_item_count": 54,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
-          "routine",
+          "transit",
           "tourism"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 1.043
       }
     }
   ]
