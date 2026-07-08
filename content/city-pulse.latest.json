@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-08T04:31:34.881Z",
+    "capturedAt": "2026-07-08T07:34:12.963Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 237
+    "totalItems": 409
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-08T04:31:34.881Z",
-      "mood_score": 0.303,
+      "captured_at": "2026-07-08T07:34:12.963Z",
+      "mood_score": 0.286,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,33 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Baker Street following a late finish of engineering work."
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier fire alert at Bromley-by-Bow. London Buses, DLR and C2C are"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "There's some hotels that do it, but we don't call it 'love hotels'. Search for 'rooms by the hour' or 'day use'. Most hotel don't actually let you rent by the hour, it's mostly use"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Sydenham and West Croydon while due to a power supply failure. GOOD SERVICE on the res"
         },
         {
           "source_family": "public",
@@ -54,59 +78,35 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Good question, honestly I think the guy just didn’t care, however I suppose once you had access to your home you could verify via the ID you had within? I was prepared to get my pa"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Hi from Montreal. We recommend throwing them in the river and having city legislature then ban them. We use a public bike share program (Bixi) that requires a credit card. We have "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Tide tables is lovely, or hollyhock I would say has more “date” vibes - it’s about 10 minutes further along the river bank and into terrace gardens. The bakery on Richmond hill wou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Solidarity, genie kidney stone sufferer. It truly is the worse pain. Could you not get morphine from your GP? That’s what I did while on the waiting list for my kidney stone operat"
+          "excerpt": "If people stopped have children they couldn't afford to feed it would also stop all the preventable deaths . How many CEO's of so called humanitarian charities are taking massive s"
         }
       ],
       "metadata": {
-        "source_item_count": 49,
-        "average_valence": 0.008,
+        "source_item_count": 95,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 1.042
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-08T04:31:34.881Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-07-08T07:34:12.963Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6, S5: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -139,45 +131,54 @@
           "excerpt": "Able Noise at West Germany (Berlin) on 2026-07-08T00:00:00.000 [Experimental, Drone]"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "For Foo Fighters last week there was bag deposits on one of the car parks. I believe P4 or P5 but don't quote me on that. May not be the case tomorrow of course..."
         }
       ],
       "metadata": {
-        "source_item_count": 78,
-        "average_valence": -0.025,
+        "source_item_count": 117,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 1.062
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-08T04:31:34.881Z",
-      "mood_score": 0.512,
+      "captured_at": "2026-07-08T07:34:12.963Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 38,
+        "public": 41,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -185,6 +186,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I found a building with a for rent sign near me on College Ave. let me know if you want the phone number and address!"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "My husband and I just walked all over the city today and were laughing at the number of bikes and scooters we walked around on sidewalks. Maybe just rent them for a while at least"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -208,48 +225,32 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Didn’t anyone remember the Golden Gate’s 50th birthday party?. 800,000 people showed up to celebrate, the bridge was so crowded the bridge flattened. Of course back then there was "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Women’s haircut in SF. I’m looking for a stylist who can give me a good layered lob/bob for under 100 (willing to go over 100 if the stylist has great reviews but ideally under 100"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good place to watch Switzerland Colombia game tomorrow 7/7?. Where would be a good place to see this game tomorrow at 1 pm? Any place that serves Colombian/or Latin - Peruvian food"
         }
       ],
       "metadata": {
-        "source_item_count": 54,
-        "average_valence": 0.034,
+        "source_item_count": 107,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.853
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-08T04:31:34.881Z",
+      "captured_at": "2026-07-08T07:34:12.963Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -281,15 +282,15 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Terra radiant a Barcelona durant una onada de calor. Estic pensant a instal·lar terra radiant amb una bomba de calor en una casa al Maresme. També m'agradaria utilitzar-lo per refr"
+          "excerpt": "Buscant un grup. Bones! Sóc un xaval de 22 anys de BCN, i busco un grup per fer excursions per la muntanya, anar el rocòdrom i altres activitats per moure'm una mica. La gent que h"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Si! 👏🏻👏🏻🙌🏻 És una \"llanterna\" que feia furor a Barcelona fa dos segles.Portava dues lents per barrejar imatges i simular efectes de cinema.Gent com l'òptic Dalmau omplia salo"
+          "excerpt": "Terra radiant a Barcelona durant una onada de calor. Estic pensant a instal·lar terra radiant amb una bomba de calor en una casa al Maresme. També m'agradaria utilitzar-lo per refr"
         },
         {
           "source_family": "public",
@@ -301,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": -0.009,
+        "source_item_count": 90,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
-          "transit",
-          "tourism"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 1.034
+        "freshness_score": 0.808
       }
     }
   ]
