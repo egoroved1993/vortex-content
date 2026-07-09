@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-09T03:53:21.562Z",
+    "capturedAt": "2026-07-09T07:53:43.388Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 400
+    "totalItems": 435
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-09T03:53:21.562Z",
-      "mood_score": 0.289,
+      "captured_at": "2026-07-09T07:53:43.388Z",
+      "mood_score": 0.285,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 13,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to a local power supply failure. London Buses, C2C, DLR, Mildmay line, South Western Ra"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to a local power supply failure. London Buses, DLR, C2C and Elizabeth line"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -53,7 +70,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Literally just commented the exact same question. Depending on what you like Waterloo Brewdog shuts at 3am and you kind find a study booth. Go there regularly, don’t have to drink "
+          "excerpt": "This is a very very good point. I reckon with that in mind my house has some degree on direct exposure to the sun from 5am until 8pm at the moment."
         },
         {
           "source_family": "news",
@@ -62,50 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "​​​​​​​London tops list of Europe's most expensive capitals for living costs - mpamag.com. ​​​​​​​London tops list of Europe's most expensive capitals for living costs"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 79,
-        "average_valence": -0.034,
+        "source_item_count": 94,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-09T03:53:21.562Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-09T07:53:43.388Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, M6: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "We had similar situation and it turned out the heating meter ID in our contract was wrong from the beginning. We were charged for another apartment consumption. We have checked the"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -136,27 +154,11 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin-Texas. There's apparently a place in Berlin-Köpenick that was named \"Texas\" I found in a 19th century map of Berlin. What is that about?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Camping sites within ~2hr by train from Berlin. Hi everyone, me and some friends of mine were thinking of going camping for one night this weekend. We are really only looking for a"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.013,
+        "source_item_count": 123,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "events",
@@ -167,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-09T03:53:21.562Z",
-      "mood_score": 0.513,
+      "captured_at": "2026-07-09T07:53:43.388Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 34,
+        "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,9 +191,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "What if said landlord did not properly exempt themselves and sent years of rent increase notices that followed the §1947.12 cap (basically treating the unit as rent-capped this who"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Thanks for this. Unfortunately, it’s a married couple and under their names, I believe. It’s crazy how my life just got exponentially more complicated expensive while gaining nothi"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Brisbane maybe, but you'll hate living there. San Bruno is comparable to San Francisco's outer areas in terms of rent prices. Millbrae not a chance - the schools are great and peop"
+          "excerpt": "Yeah it’s totally blindsided us. I’ve been here since 2009 and was told it was under rent control. Turns out I guess it’s not"
         },
         {
           "source_family": "public",
@@ -199,53 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Avoid getting scammed when sending large sums of rent in advance?. Hi y'all, with SF rent being as crazy as it is, I've started offering to advance 6 months to a year of rent (drai"
+          "excerpt": "Find open pickleball courts, indoor basketball courts, etc. SF recreation. I got tired of manually looking up the indoor basketball schedules for each recreation center and walking"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "honestly, it's been popping ever since they've been having regular fairs and markets in the downtown area. the asian festivals last year were PACKED. one after one after one, week "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Sad about the US out of the World Cup? Come see SF City FC compete for the Championship this Saturday at Kezar.. The squad has had an amazing season, going 10-1-1 to this date (the"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Drinks are crap, decor should have been redone 30 years ago, and then again 15 years ago, and again. It has none of these vibes (view is good though!)"
+          "excerpt": "We had them broken down and stacked to the side and were slowly bringing them down as we unpacked. We also had new packages that arrived that she also pushed into the pile. What I'"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": 0.039,
+        "source_item_count": 114,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-09T03:53:21.562Z",
+      "captured_at": "2026-07-09T07:53:43.388Z",
       "mood_score": 0.298,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 36,
+        "public": 38,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -301,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 102,
+        "source_item_count": 104,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.835
       }
     }
   ]
