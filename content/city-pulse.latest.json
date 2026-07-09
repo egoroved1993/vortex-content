@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-09T15:24:31.666Z",
+    "capturedAt": "2026-07-09T18:02:54.794Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 450
+    "totalItems": 457
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-09T15:24:31.666Z",
-      "mood_score": 0.291,
+      "captured_at": "2026-07-09T18:02:54.794Z",
+      "mood_score": 0.283,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway / West Ruislip and between Leytonstone and Epping / Ha"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,53 +54,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction while we fix a track fault at Kensington (Ol"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between High Street Kensington and Edgware Road while we fix a points failure at Edgware Roa"
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Sydenham and Crystal Palace while we fix a track fault at Crystal Palace. GOOD SERVICE"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Why do you want me to argue? Pretty sure reddit says \"don't be a d*ck\" I'm not denying anything you said.. I'm sure the roads are great. Thanks for all the info. And no, not weak. "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Aldgate and Uxbridge while we fix a signal failure at Hillingdon and earlier po"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays while we fix a track fault at Kensington (Olympia)."
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.026,
+        "source_item_count": 104,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-09T15:24:31.666Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-07-09T18:02:54.794Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, 248: Delays 4 trips delayed"
+          "excerpt": "Berlin transit S5, S3, S9, 248, 200: Delays 6 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "So you're not actually in the inner circle of candidates? Just know from WBM and other Gesellschaften, that you have several rounds of application. Have you applied for just ONE te"
         },
         {
           "source_family": "public",
@@ -146,36 +154,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Where to buy a small, cotton, relatively cheap rucksack in person?. Hi! I am in Berlin for 2 days. Is there a good place to get a small cotton rucksack that is relatively cheap (id"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "TBA at TBA - Rummelsburger Bucht (Berlin) on 2026-07-09T00:00:00.000 [Drum & Bass, Broken Beat]"
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": 0.001,
+        "source_item_count": 128,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-09T15:24:31.666Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-07-09T18:02:54.794Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 71,
+        "public": 69,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,65 +189,65 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "If they’re standing, I usually try and give them a smile - a sympathy kind of “enjoy your high” kind of vibe, treating them like a human. But yeah, if they’re lying down and look r"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I admit I've not been impressed with Tacomania at Stonestown. It's overpriced for the food quality. Fixed rent or 10% of the sales? Maybe that's why \"Ike's sandwiches\" is still ope"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I would be telling her, if it's not fixed by X date, you'll be buying a new fridge (they will deliver, set it up and haul away the old one) and deducting it from next rent"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "In my experience refrigerators are too often disposable goods, not fixable but need to be replaced. I would be throwing a huge fit every single day demanding a working fridge and p"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Find open pickleball courts, indoor basketball courts, etc. SF recreation. I got tired of manually looking up the indoor basketball schedules for each recreation center and walking"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I have had a similar experience and if it helps, the people I know who moved to nyc say that while it is a better city than sf, they love sf more and are very homesick for it. it i"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah I think $300 or $400 would be the top for a symphony concert in San Francisco (saying as someone who buys a lot of tickets, but I never look at the most expensive seats as pro"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "SF symphony prices. I’m really interested in seeing Return of the Jedi in concert this September. Individual tickets don’t go on sale until the 18th. However, I live in Los Angeles"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "sure... old people can and DO live in this city if they bought a home if you want to lower housing costs, you either need to increase supply (by building new housing or removing pr"
         }
       ],
       "metadata": {
-        "source_item_count": 137,
-        "average_valence": 0.006,
+        "source_item_count": 135,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
-          "money",
-          "events"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-09T15:24:31.666Z",
-      "mood_score": 0.295,
+      "captured_at": "2026-07-09T18:02:54.794Z",
+      "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 29,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,14 +261,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "🤣🤣🤣🤣🤣 Ya ves, súper cáncer. Ya ni vienen turistas por su culpa. La gente no puede pagar 2500 euros al mes de alquiler por los carteristas."
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Lo que nos faltaba era la serie esta para acabar con la ciudad."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "DRAMA i CRITS a un BAR de GRÀCIA per culpa de l'Argentina i un gol anul·lat a Egipte⚽1158 #unhomenou"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.015,
+        "source_item_count": 90,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.821
       }
     }
   ]
