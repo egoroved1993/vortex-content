@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-11T13:45:55.115Z",
+    "capturedAt": "2026-07-11T15:01:13.136Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-11T13:45:55.115Z",
-      "mood_score": 0.266,
+      "captured_at": "2026-07-11T15:01:13.136Z",
+      "mood_score": 0.265,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.099,
+        "source_item_count": 96,
+        "average_valence": -0.103,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-11T13:45:55.115Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-07-11T15:01:13.136Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S3: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,23 +145,31 @@
           "valence": 0.5,
           "recency_weight": 0.56,
           "excerpt": "Das Wetter in Berlin heute: Langsam wieder sommerlich warm - wetter.com. Das Wetter in Berlin heute: Langsam wieder sommerlich warm"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": 0.004,
+        "source_item_count": 115,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-11T13:45:55.115Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-07-11T15:01:13.136Z",
+      "mood_score": 0.509,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -231,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 105,
-        "average_valence": 0.022,
+        "average_valence": 0.028,
         "dominant_themes": [
           "general",
           "transit",
@@ -242,10 +241,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-11T13:45:55.115Z",
+      "captured_at": "2026-07-11T15:01:13.136Z",
       "mood_score": 0.294,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 25,
@@ -309,9 +308,9 @@
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "events"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.811
       }
     }
   ]
