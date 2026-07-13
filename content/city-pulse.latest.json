@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-13T03:35:20.218Z",
+    "capturedAt": "2026-07-13T07:28:26.263Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 421
+    "totalItems": 431
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-13T03:35:20.218Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-07-13T07:28:26.263Z",
+      "mood_score": 0.47,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 23,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "I rent in a highrise and go to greggs down the road fairly often, better than a noisy pub or nothing at all"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Yes I have noticed a pattern of consistently higher noise on specific parts of each route, e.g. Victoria Line between Pimlico and Oxford Circus etc. Maybe I’ll do a crude/inaccurat"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -49,62 +65,46 @@
           "excerpt": "Bushfire sparks travel chaos as heatwave predicted to last even longer - LIVE - standard.co.uk. Bushfire sparks travel chaos as heatwave predicted to last even longer - LIVE"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Chaos at London town hall as new Tory leader quits after just 44 days in charge - standard.co.uk. Chaos at London town hall as new Tory leader quits after just 44 days in charge"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It’s the guy who took over Le Caprice. I’d never seen so many good reviews as I had with Simpsons. On the plus side: VERY reasonable cocktails for that area. Plus awesome innovatio"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: All day today there will be no service between Hackney Downs and Chingford while we conduct urgent repairs"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.033,
+        "source_item_count": 95,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-13T03:35:20.218Z",
-      "mood_score": 0.407,
+      "captured_at": "2026-07-13T07:28:26.263Z",
+      "mood_score": 0.415,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 8,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -124,14 +124,6 @@
           "excerpt": "Don’t call the cops, they won’t do anything. Start keeping a log, tell your landlord, and try to figure out which flat it is so you can leave a polite note. If it’s literally 24/7 "
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -141,11 +133,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Let me clarify, rent in major cities like the downtown areas in Düsseldorf, Berlin, München etc is similar to ours. Outskirts and small towns are much more affordable. Programs lik"
+          "excerpt": "Wedding outfit for a German/Polish wedding. Hello, A close friend of mine who is German is getting married in Poland with a Polish lady in 2 months. When I asked for the dress code"
         },
         {
           "source_family": "news",
@@ -154,28 +146,36 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.039,
+        "source_item_count": 123,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-13T03:35:20.218Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-07-13T07:28:26.263Z",
+      "mood_score": 0.506,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 62,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -202,15 +202,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Rent. Curious how much does the average room rent for ? If someone was moving to area what city city or area should they live in if they don't want to spend all their $$$ on rent"
+          "excerpt": "This city nickles and dimes you.. Parking tickets, muni fees, fastrack fees, random fucking whatever omg its so exhausting. Like wdym a parking ticket is over $100??? Not everyone "
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Visiting in mid August, I'm looking for accommodations.. What's a good hotel with easy access to de Young, SFMOMA and Legion of Honor? I will be using public transportation. Thank "
+          "excerpt": "Depends what your rent is. But yes. Most people on here don't hang out with people in lower income brackets and think you need $100k plus to not be on the street. However it really"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Two weeks is barely enough time to react to a 40% increase, especially if they’re acting like it just kicks in once the lease ends. Before responding, it’d be smart to run the leas"
         },
         {
           "source_family": "public",
@@ -218,37 +226,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "MAYRA VALDIVIA @ Dreamers and Make Believers Salon. After cycling through a different stylist every year or two and never being really satisfied, a colleague recommended me to her."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "man finding a good stylist who will actually be straight with you about what works for your face is like finding a needle in a haystack i went through three different places before"
+          "excerpt": "i honestly think almost everything they serve is inedible, but that's more personal preference. the two ive been to both have spotless kitchens and good turnover of product. kfcs a"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": 0.014,
+        "source_item_count": 123,
+        "average_valence": 0.019,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-13T03:35:20.218Z",
+      "captured_at": "2026-07-13T07:28:26.263Z",
       "mood_score": 0.291,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -304,14 +304,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 89,
+        "source_item_count": 90,
         "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.804
+        "freshness_score": 0.807
       }
     }
   ]
