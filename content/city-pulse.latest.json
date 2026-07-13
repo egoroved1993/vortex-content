@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-13T11:20:17.759Z",
+    "capturedAt": "2026-07-13T14:49:00.217Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 434
+    "totalItems": 443
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-13T11:20:17.759Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-07-13T14:49:00.217Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 30,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.88,
+          "excerpt": "Bushfire sparks travel chaos as heatwave predicted to last even longer - LIVE - London Evening Standard. Bushfire sparks travel chaos as heatwave predicted to last even longer - LI"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Minor Delays Weaver Line: All day today there will be no service between Hackney Downs and Chingford while we conduct urgent repairs"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier faulty train at West Hampstead."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: All day today there will be no service between Hackney Downs and Chingford while we conduct urgent repairs"
         },
         {
           "source_family": "news",
@@ -62,51 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "£20 is the rough street price of a hit of Heroin and maybe some crack cocaine. Coincidence maybe…"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I don't see how regions destroyed by Thatcherism are now voting for Arch-Thatcherites. Reform have abandoned raising the tax allowance, abandoned nationalisations, abandoned any we"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I always use the best tools to produce good content and the AI makes it 10* better."
+          "excerpt": "Might just be the parents I know, but it seems like now it’s less common to leave your (older) kids at home alone. Once my friends and I were in secondary it was pretty much accept"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.029,
+        "source_item_count": 95,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-13T11:20:17.759Z",
-      "mood_score": 0.421,
+      "captured_at": "2026-07-13T14:49:00.217Z",
+      "mood_score": 0.418,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 9,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,36 +154,28 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Make it make sense. Honestly how do these signs make sense and why is a fine cheaper then the parking ticket it self I parked on 25 euro fines every day because this saved me 10 eu"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Man auf man, ist mir egal. Just watch that advertisement from the city public transport, translated for you \"everything is fine, just get your ticket\""
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": 0.002,
+        "source_item_count": 123,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-13T11:20:17.759Z",
+      "captured_at": "2026-07-13T14:49:00.217Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 63,
+        "public": 67,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,11 +189,27 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "San Diego had a serious heroin issue in the late 90’s/early aughts. My freshman dorm suite mate ran herself ragged trying to out-drink her heroin addiction. I would be honestly sho"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Power outage in Haight Ashbury/Panhandle?. As of 2:20 my power went out in my apartment complex. I'm wondering if anyone in the area is experiencing the same. Called PGE for update"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Not sure your nationality matters, but any farmer's market, and many smaller markets have great produce. Ferry Building is the most expensive by far, but you can Google others. I l"
         },
         {
           "source_family": "public",
@@ -208,40 +225,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Depends what your rent is. But yes. Most people on here don't hang out with people in lower income brackets and think you need $100k plus to not be on the street. However it really"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "Lots of places in the East Bay where young people can rent a small room in a house and still travel the world. E.g., a studio for $800 in a small town: ; or a top floor in a house "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "My car got broken into in the 90s in SF for that. Some things never change."
         }
       ],
       "metadata": {
-        "source_item_count": 129,
-        "average_valence": -0.009,
+        "source_item_count": 133,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-13T11:20:17.759Z",
-      "mood_score": 0.292,
+      "captured_at": "2026-07-13T14:49:00.217Z",
+      "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -269,14 +270,6 @@
           "excerpt": "What happened at Aticco is a tragedy and should never have taken place. But, it has nothing to do with landlords overcharging for rent in a city where due to the laws and large inv"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Tienes razón Barcelona cada vez da más asco. Aquí hay una invasión y los que hemos nacido en Barcelona a penas podemos vivir en ella dignamente. Está irreconocible y es que yo no v"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -299,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Ad on localised Reddit feeding the machine.. I don’t even care if a company like Airbnb wants to feed these ads to people. But what a kick in the teeth, that we have to see a compa"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Un mamut al cor de Barcelona. El mamut del Parc de la Ciutadella és un dels racons més estimats del parc. El que no tothom sap és que és una femella i que té nom propi: es diu Júli"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.025,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.832
       }
     }
   ]
