@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-14T18:09:50.386Z",
+    "capturedAt": "2026-07-14T20:18:06.741Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-14T18:09:50.386Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-07-14T20:18:06.741Z",
+      "mood_score": 0.433,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -62,40 +62,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Arnos Grove and Cockfosters due to an earlier faulty train at Piccadilly Circus. G"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Weaver: Severe Delays Weaver Line: Until Thursday 16th July, there will be no service between Walthamstow Central and Chingford while we condu"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "Bushfire sparks travel chaos as heatwave predicted to last even longer - LIVE - London Evening Standard. Bushfire sparks travel chaos as heatwave predicted to last even longer - LI"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Old Ford Alarm Noise. I've been hearing this alarm/beep noise for the last half an hour now. I contacted my council, who then told me to go to my housing provider, who then told me"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.09,
+        "source_item_count": 84,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.808
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-14T18:09:50.386Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-07-14T20:18:06.741Z",
+      "mood_score": 0.455,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2, 200: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,26 +146,34 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.007,
+        "source_item_count": 121,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-14T18:09:50.386Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-07-14T20:18:06.741Z",
+      "mood_score": 0.418,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 49,
         "review": 2,
@@ -236,15 +236,15 @@
           "money",
           "routine"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-14T18:09:50.386Z",
+      "captured_at": "2026-07-14T20:18:06.741Z",
       "mood_score": 0.292,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 32,
@@ -308,9 +308,9 @@
         "dominant_themes": [
           "general",
           "routine",
-          "tourism"
+          "events"
         ],
-        "freshness_score": 0.844
+        "freshness_score": 0.843
       }
     }
   ]
