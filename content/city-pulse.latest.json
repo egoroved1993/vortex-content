@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-15T06:32:43.888Z",
+    "capturedAt": "2026-07-15T09:13:39.629Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 239
+    "totalItems": 412
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-15T06:32:43.888Z",
-      "mood_score": 0.4,
+      "captured_at": "2026-07-15T09:13:39.629Z",
+      "mood_score": 0.401,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "local_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Young cybercriminals behind Transport for London hack chaos face jail. Thalha Jubair, 20, and Owen Flowers, 18, hacked TfL’s online network, resulting in a £39 million loss, prosec"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and MINOR DELAYS between Leytonstone and"
         },
         {
           "source_family": "transport",
@@ -73,40 +73,40 @@
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "He said he will be working today. And it's not that I can't go to where he charges his car, he didn't give me a time and how long he'll be there. If he was going to be there in 20 "
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 50,
-        "average_valence": -0.058,
+        "source_item_count": 88,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 1.049
+        "freshness_score": 0.834
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-15T06:32:43.888Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-15T09:13:39.629Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +115,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5, S7, 200: Delays 3 trips delayed"
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.56,
+          "excerpt": "Das Wetter in Berlin heute: Viel Grau, angenehm warm - wetter.com. Das Wetter in Berlin heute: Viel Grau, angenehm warm"
         },
         {
           "source_family": "signals",
@@ -145,39 +153,32 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "This has been happening since ages. I rented a room in a 4 bed apartment on boxhagener str. through housing anywhere in 2021. The rooms were 9m², going for 600 each. It was origina"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Can only second the FBL. There's three divisions within it and it includes anything from pretty much beginners to former/current pros. It's less commitment than a club and also cos"
         }
       ],
       "metadata": {
-        "source_item_count": 68,
-        "average_valence": -0.011,
+        "source_item_count": 117,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 1.065
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-15T06:32:43.888Z",
-      "mood_score": 0.416,
+      "captured_at": "2026-07-15T09:13:39.629Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, routine. The signal is very current.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -227,29 +228,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 64,
-        "average_valence": -0.012,
+        "source_item_count": 114,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
-          "money",
-          "routine"
+          "routine",
+          "money"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-15T06:32:43.888Z",
-      "mood_score": 0.293,
+      "captured_at": "2026-07-15T09:13:39.629Z",
+      "mood_score": 0.295,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -301,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.02,
+        "source_item_count": 93,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 1.034
+        "freshness_score": 0.826
       }
     }
   ]
