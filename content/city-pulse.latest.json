@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-15T03:21:20.084Z",
+    "capturedAt": "2026-07-15T06:32:43.888Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,22 +16,22 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 239
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-15T03:21:20.084Z",
-      "mood_score": 0.405,
+      "captured_at": "2026-07-15T06:32:43.888Z",
+      "mood_score": 0.4,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 25,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "transport": 2,
         "weather": 1
@@ -41,20 +41,20 @@
       ],
       "drivers": [
         {
+          "source_family": "news",
+          "source_origin": "local_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "Young cybercriminals behind Transport for London hack chaos face jail. Thalha Jubair, 20, and Owen Flowers, 18, hacked TfL’s online network, resulting in a £39 million loss, prosec"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Weaver: Severe Delays Weaver Line: Until Thursday 16th July, there will be no service between Walthamstow Central and Chingford while we condu"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Bushfire sparks travel chaos as heatwave predicted to last even longer - LIVE - London Evening Standard. Bushfire sparks travel chaos as heatwave predicted to last even longer - LI"
         },
         {
           "source_family": "public",
@@ -73,38 +73,37 @@
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "He said he will be working today. And it's not that I can't go to where he charges his car, he didn't give me a time and how long he'll be there. If he was going to be there in 20 "
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.043,
+        "source_item_count": 50,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 1.049
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-15T03:21:20.084Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-07-15T06:32:43.888Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -116,20 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I just returned last Sunday from turkey vacation with expired aufenthallt but since I can travel in eu for 90 days visa free they didn’t ask me anything at the berlin airport and I"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5, S7, 200: Delays 3 trips delayed"
         },
         {
           "source_family": "signals",
@@ -154,32 +145,39 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "This has been happening since ages. I rented a room in a 4 bed apartment on boxhagener str. through housing anywhere in 2021. The rooms were 9m², going for 600 each. It was origina"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Can only second the FBL. There's three divisions within it and it includes anything from pretty much beginners to former/current pros. It's less commitment than a club and also cos"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.002,
+        "source_item_count": 68,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 1.065
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-15T03:21:20.084Z",
-      "mood_score": 0.396,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
+      "captured_at": "2026-07-15T06:32:43.888Z",
+      "mood_score": 0.416,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -187,22 +185,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Oh yah totally some landlord real estate company is like LUCKY FOR YOU I HAVE ONE MORE LEFT lol it's so expensive now ;\\_; oh nooo you gotta pay me moneeyyy"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I check available units in the area often and lately we have close to no 2-bed available. My building of 500 units has 2 available. My rent went up 10% and my neighbor’s unit, smal"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -225,33 +207,49 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Taxes are not that expensive when compared to renting. Taxes and maintenance... for a Seacliff house it depends on your standards for maintenance."
+          "excerpt": "That is a problem. Another problem is the insane rent prices which makes everything more expensive."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Median wages to home price ratio is a fine way to compare different cities. Rent and home prices are basically parallel lines."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Honestly use lugg. I had a plan to use them and then I went for the guy who was handing out cards outside the U-Haul store. We agreed on the price, then the guy brought more people"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.07,
+        "source_item_count": 64,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "money",
           "routine"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-15T03:21:20.084Z",
-      "mood_score": 0.295,
+      "captured_at": "2026-07-15T06:32:43.888Z",
+      "mood_score": 0.293,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 29,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -288,29 +286,29 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Barcelona es una ciudad que se ha prostituido. Los alcaldes nos prostituyen."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "This is the problem I've noticed here. Everyone complains and moans and throws their hands up about situations in the city but it is ALWAYS the fault of the flavor of the month oth"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "DRAMA i CRITS a un BAR de GRÀCIA per culpa de l'Argentina i un gol anul·lat a Egipte⚽1158 #unhomenou"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.015,
+        "source_item_count": 57,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 1.034
       }
     }
   ]
