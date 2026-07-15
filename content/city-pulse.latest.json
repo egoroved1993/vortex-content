@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-15T09:13:39.629Z",
+    "capturedAt": "2026-07-15T11:40:11.165Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 412
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-15T09:13:39.629Z",
-      "mood_score": 0.401,
+      "captured_at": "2026-07-15T11:40:11.165Z",
+      "mood_score": 0.406,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -65,48 +65,49 @@
           "excerpt": "What free TV channel is the best to fall asleep to?. Hello, I’ve recently been struggling to sleep more and more and I’ve found that slight background noise is beginning to help, a"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "3 is the one that gets me the most. Cig butts, vape boxes and instructions, the little rubber bits off vapes, sweet wrappers - that's what I hate. Mainly because that COULD go in y"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.055,
+        "source_item_count": 94,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.834
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-15T09:13:39.629Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-07-15T11:40:11.165Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "All studies on this topic show that government rent controls always lead to a decrease in supply, shortages, low tenant mobility, and a black market – which is exactly what we are "
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -137,44 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "This is a bilingual sub, and my written English is better than my written German so I'll stick to that even if it offends you. And what an unwelcoming attitude! I've read the Grudg"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "This has been happening since ages. I rented a room in a 4 bed apartment on boxhagener str. through housing anywhere in 2021. The rooms were 9m², going for 600 each. It was origina"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.001,
+        "source_item_count": 114,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-15T09:13:39.629Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-07-15T11:40:11.165Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +187,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "As a European I'm biting the bullet and buying a car. While many people say SF is doable without a car, realistically it's a pain in the ass to not have one. You make it less likel"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The meat/butcher shop on Geary between Jones and Leavenworth. I think it's called Salaama and they have amazing meat prices plus the store is packed with tons of middle eastern foo"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "You will have to rent a space otherwise you will get ticketed during the day. Also you my not want to move your car every other hour even on your off days. I rent a space for 350 a"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -201,38 +226,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Financial district rents are off the charts. I used to rent a high rise unit there in 2022-23 for \\~$3500 (expensive but had a great view, moved to east bay after a year). I was ju"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "That is a problem. Another problem is the insane rent prices which makes everything more expensive."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Median wages to home price ratio is a fine way to compare different cities. Rent and home prices are basically parallel lines."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Honestly use lugg. I had a plan to use them and then I went for the guy who was handing out cards outside the U-Haul store. We agreed on the price, then the guy brought more people"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.017,
+        "source_item_count": 115,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
-          "routine",
+          "transit",
           "money"
         ],
         "freshness_score": 0.877
@@ -240,13 +241,13 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-15T09:13:39.629Z",
+      "captured_at": "2026-07-15T11:40:11.165Z",
       "mood_score": 0.295,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
+        "source_item_count": 94,
         "average_valence": -0.016,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "tourism",
+          "routine"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.823
       }
     }
   ]
