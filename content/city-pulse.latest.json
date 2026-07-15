@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-15T13:56:00.297Z",
+    "capturedAt": "2026-07-15T15:39:17.023Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,14 +16,14 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-15T13:56:00.297Z",
-      "mood_score": 0.407,
-      "mood_label": "mixed",
+      "captured_at": "2026-07-15T15:39:17.023Z",
+      "mood_score": 0.397,
+      "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,25 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to late running freight trains in the Willesden Junction area. Tickets are being accepte"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Uxbridge due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -63,38 +79,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "What free TV channel is the best to fall asleep to?. Hello, I’ve recently been struggling to sleep more and more and I’ve found that slight background noise is beginning to help, a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "If you are looking for an attractive, white, reasonably successful person under 40, it's pretty poor and well recognised as so, for both men and women. People less attractive than "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.04,
+        "source_item_count": 101,
+        "average_valence": -0.067,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-15T13:56:00.297Z",
+      "captured_at": "2026-07-15T15:39:17.023Z",
       "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7, M4: Delays 2 trips delayed"
+          "excerpt": "Berlin transit M4, 200, 300: Delays 3 trips delayed"
         },
         {
           "source_family": "public",
@@ -164,12 +164,12 @@
           "events",
           "routine"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-15T13:56:00.297Z",
+      "captured_at": "2026-07-15T15:39:17.023Z",
       "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -236,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-15T13:56:00.297Z",
+      "captured_at": "2026-07-15T15:39:17.023Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.008,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.824
       }
     }
   ]
