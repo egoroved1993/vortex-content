@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-15T19:21:09.232Z",
+    "capturedAt": "2026-07-15T21:06:47.981Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 410
+    "totalItems": 404
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-15T19:21:09.232Z",
-      "mood_score": 0.389,
+      "captured_at": "2026-07-15T21:06:47.981Z",
+      "mood_score": 0.391,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to late running freight trains in the Willesden Junction area. Tickets are being accepte"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,28 +71,36 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Weaver: Severe Delays Weaver Line: Until Thursday 16th July, there will be no service between Walthamstow Central and Chingford while we condu"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "So I've heard! 🥲 It's a bit of a double-edged sword - Germany had (and still has) an amazing anime community, and it was part of regular TV programming for ages. We had ways to ge"
         }
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.09,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-15T19:21:09.232Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-07-15T21:06:47.981Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6, M5, M4: Delays 3 trips delayed"
+          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Sorry this happened to you OP, but good job on calling the company out publicly here, so hopefully this guy sees some consequences for his actions."
         },
         {
           "source_family": "news",
@@ -146,40 +154,32 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Okay i just thought it was bcs of the name idk but wtv it is the van said fitness trade 24 so that company"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.009,
+        "source_item_count": 113,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-15T19:21:09.232Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-07-15T21:06:47.981Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 50,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 44,
         "trends": 8,
         "weather": 1
       },
@@ -187,14 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "They can't evict you because they want to sell the building. You don't have to move at all. Talk to the tenants union and the rent board so you understand your rights"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -215,9 +207,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Sell the car and rent one when you need one. Your life and wallet will immediately improve."
+          "excerpt": "Honestly, one of my favorite things about being gay is that it's so much easier to meet new people in a city like SF. Even making platonic friends feels so much easier because so m"
         },
         {
           "source_family": "public",
@@ -225,29 +217,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "That's great honestly. Amenities are kind of a waste of space. It also benefits the city for the residents to visit local gyms, cafes, dog groomers etc.. rather than having these a"
+          "excerpt": "Most of the time and especially when walking on my street. Look them in the eye and say hi or good afternoon. Also 100% of the time when hiking on trails."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I’m from Baltimore where it was completely normal to ask everyone “how you doing?” when passing them. More as a friendly acknowledgement than a real question. Obviously it’s differ"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.014,
+        "source_item_count": 111,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-15T19:21:09.232Z",
+      "captured_at": "2026-07-15T21:06:47.981Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 88,
+        "source_item_count": 86,
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.822
+        "freshness_score": 0.824
       }
     }
   ]
