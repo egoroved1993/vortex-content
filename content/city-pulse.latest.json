@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-16T03:16:27.261Z",
+    "capturedAt": "2026-07-16T06:25:00.238Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-16T03:16:27.261Z",
-      "mood_score": 0.366,
+      "captured_at": "2026-07-16T06:25:00.238Z",
+      "mood_score": 0.365,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "100%. Insane. Look at areas like Kings cross. We are subsidising unemployed people to live walking distance from Anthropic and Depending whilst they tech workers who pay taxes thro"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: No service between Wembley Park and Aldgate due to a track fault at Neasden. Tickets are being accept"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor Delays due to a line side fire near Wood Street on Sunday."
         },
         {
           "source_family": "public",
@@ -53,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It is a luxury for the vast majority of tax payers in London. Yet we give money to unemployed or to Uber drivers to live walking distance from the Parliament, Square mile or the bi"
+          "excerpt": "We should put these up everywhere. 99.9% of homeless In Britain are housed in bnbs and other temporary accomodation. The people begging on the street are rough sleepers who have re"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Absolutely no way England deserved that. I don’t know if they were too tired, too scared, given the wrong tactics, or more concerningly if the players weren’t technically good enou"
         },
         {
           "source_family": "news",
@@ -62,41 +79,25 @@
           "valence": -0.575,
           "recency_weight": 1,
           "excerpt": "News - Housing charity’s plans approved to rebuild Hackney estate with homes for sale and rent - Inside Housing Living. News - Housing charity’s plans approved to rebuild Hackney e"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.042,
+        "source_item_count": 95,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
         "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-16T03:16:27.261Z",
-      "mood_score": 0.455,
+      "captured_at": "2026-07-16T06:25:00.238Z",
+      "mood_score": 0.453,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 11,
@@ -106,7 +107,6 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +115,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, 200: Delays 2 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "One of the most expensive places yet only 700€ for a room? That's not very expensive then. People pay about 900-1000€ for a studio in Berlin or Munich."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Wait times in ABH vary from region to region. In Berlin it could easily be 6+ months, and one sometimes need to get a Termin to get an actual Termin. In Brandenburg I have applied "
         },
         {
           "source_family": "news",
@@ -145,36 +153,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "So you hear someone say \"the police aren't (*isn't) coming?\" and you suspect that she is saying that for 2 hours? 😭 i agree that the police is not the best but your post just seem"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.014,
+        "source_item_count": 116,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-16T03:16:27.261Z",
+      "captured_at": "2026-07-16T06:25:00.238Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 65,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,15 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I think the big blue Pacific takes worries away, go for a big walk or rent a lyft bike at Sunset Dunes then hit the beach to gaze and dream your next phase,"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Rent it at market rate and pay the teachers more with the extra revenue. Telling people, “quite your job, lose your apartment,” is repugnant. FWIW, I also think employer provided h"
+          "excerpt": "Mine are TI, but I think 83 sounds more familiar. In the late 90s when I was required to purchase one for school, they were like a month's rent. Honestly can't remember how I ended"
         },
         {
           "source_family": "public",
@@ -216,37 +208,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I put together a rental resume to attach to the application, that included all information about my current (and previous jobs), current salary, previous addresses with landlord in"
+          "excerpt": "What are you talking about? After St Paul passed their rent control law ... permit requests for new housing dropped \\~80%. Meanwhile Minneapolis was loosening their zoning and saw "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "do they respond quickly though? BART seems to respond quickly even for minor stuff, but I doubt SFPD would be dispatched for Muni for somebody acting suspicious. It's kind of a rar"
+          "excerpt": "You’re celebrating Graham’s death but will probably crawl over broken glass to support corrupt scumbags like Newsom, Pelosi, Swalwell. Graham was in office for over two decades and"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "O’Farrell and Hyde is not nice. But that doesn’t mean you shouldn’t live there. You will 100% deal with people sitting on the sidewalk fucked up out of their mind. Being that you a"
         }
       ],
       "metadata": {
-        "source_item_count": 130,
-        "average_valence": -0.023,
+        "source_item_count": 117,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-16T03:16:27.261Z",
+      "captured_at": "2026-07-16T06:25:00.238Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -286,11 +286,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "DRAMA i CRITS a un BAR de GRÀCIA per culpa de l'Argentina i un gol anul·lat a Egipte⚽1158 #unhomenou"
+          "excerpt": "Està permès anar-hi a animar l'Argentina? Conec uns quants argentins que viuen a Barcelona i els aniria bé"
         },
         {
           "source_family": "public",
@@ -298,18 +298,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Drama i crits a un bar de Gràcia per culpa de l'Argentina - Egipte i un gol anul·lat⚽1158 #unhomenou"
+          "excerpt": "DRAMA i CRITS a un BAR de GRÀCIA per culpa de l'Argentina i un gol anul·lat a Egipte⚽1158 #unhomenou"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
+        "source_item_count": 86,
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.808
       }
     }
   ]
