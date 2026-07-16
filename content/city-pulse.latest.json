@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-16T14:07:43.243Z",
+    "capturedAt": "2026-07-16T16:22:21.329Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 438
+    "totalItems": 436
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-16T14:07:43.243Z",
-      "mood_score": 0.365,
+      "captured_at": "2026-07-16T16:22:21.329Z",
+      "mood_score": 0.366,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier fire alert at Brent Cross."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -63,6 +55,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "How effective would be collective non-violent resistance in solving the housing crisis and costs of living crisis?. For example - tenants would collectively refuse to pay energy bi"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "North London mental health trust staff walk out on strike - Barnet Post. North London mental health trust staff walk out on strike"
         },
         {
           "source_family": "public",
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.043,
+        "source_item_count": 87,
+        "average_valence": -0.041,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-16T14:07:43.243Z",
-      "mood_score": 0.459,
+      "captured_at": "2026-07-16T16:22:21.329Z",
+      "mood_score": 0.462,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,23 +146,31 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.002,
+        "source_item_count": 116,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-16T14:07:43.243Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-07-16T16:22:21.329Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 132,
-        "average_valence": -0.006,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-16T14:07:43.243Z",
+      "captured_at": "2026-07-16T16:22:21.329Z",
       "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, weather. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "routine",
           "weather"
         ],
-        "freshness_score": 0.85
+        "freshness_score": 0.845
       }
     }
   ]
