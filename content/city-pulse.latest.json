@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-16T06:25:00.238Z",
+    "capturedAt": "2026-07-16T09:20:01.909Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 414
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-16T06:25:00.238Z",
-      "mood_score": 0.365,
+      "captured_at": "2026-07-16T09:20:01.909Z",
+      "mood_score": 0.36,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: No service between Wembley Park and Aldgate due to a track fault at Neasden. Tickets are being accept"
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier track fault at Waterloo. Tickets will be accepted on London Buses, Liones"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to an earlier track fault at Neasden. Tickets are being accepted on London Buses, L"
         },
         {
           "source_family": "transport",
@@ -71,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Absolutely no way England deserved that. I don’t know if they were too tired, too scared, given the wrong tactics, or more concerningly if the players weren’t technically good enou"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "News - Housing charity’s plans approved to rebuild Hackney estate with homes for sale and rent - Inside Housing Living. News - Housing charity’s plans approved to rebuild Hackney e"
         }
       ],
       "metadata": {
         "source_item_count": 95,
-        "average_valence": -0.044,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.844
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-16T06:25:00.238Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-07-16T09:20:01.909Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.021,
+        "source_item_count": 118,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-16T06:25:00.238Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-07-16T09:20:01.909Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 117,
-        "average_valence": -0.022,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-16T06:25:00.238Z",
+      "captured_at": "2026-07-16T09:20:01.909Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.808
+        "freshness_score": 0.807
       }
     }
   ]
