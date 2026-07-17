@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-17T10:05:05.901Z",
+    "capturedAt": "2026-07-17T12:15:07.236Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 406
+    "totalItems": 410
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-17T10:05:05.901Z",
-      "mood_score": 0.306,
+      "captured_at": "2026-07-17T12:15:07.236Z",
+      "mood_score": 0.302,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 15,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we fix a points failure at Walthamstow Central. Tickets are being accepted on London"
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Terminals and MINOR DELAYS on the rest of the line while"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Terminals and MINOR DELAYS on the rest of the line while"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a points failure at Walthamstow Central."
         },
         {
           "source_family": "transport",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays due to a line side fire near Wood Street on Sunday."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays due to an earlier trespasser at Whitechapel. Tickets are being accepted on London Undergrou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "We've been in the same monthly walking group for years. At this point, I'm pretty embarrassed that I don't remember any of the human names, and it's probably too late to ask for re"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.101,
+        "source_item_count": 88,
+        "average_valence": -0.112,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.844
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-17T10:05:05.901Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-07-17T12:15:07.236Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,20 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S9: Delays 2 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I don't knpw but these 100m feel like a lot.. It's true what they said that it is in some kind of weird abandoned area"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "news",
@@ -156,19 +157,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.001,
+        "source_item_count": 117,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "belonging"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-17T10:05:05.901Z",
+      "captured_at": "2026-07-17T12:15:07.236Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -241,7 +242,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-17T10:05:05.901Z",
+      "captured_at": "2026-07-17T12:15:07.236Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -310,7 +311,7 @@
           "routine",
           "events"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.822
       }
     }
   ]
