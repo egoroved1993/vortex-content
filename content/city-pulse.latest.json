@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-17T04:12:36.127Z",
+    "capturedAt": "2026-07-17T07:22:28.112Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 414
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-17T04:12:36.127Z",
-      "mood_score": 0.321,
+      "captured_at": "2026-07-17T07:22:28.112Z",
+      "mood_score": 0.296,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
@@ -46,67 +46,68 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays due to a line side fire near Wood Street on Sunday."
+          "excerpt": "London transit District: Severe Delays District Line: No service between West Ham and Whitechapel westbound while we respond to a fire alert at Bromley-by-Bow."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How many of you didn’t go into the office today when you normally would on a Thursday because of the football?. My rush hour tubes today both to and from work were dead, I thought "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: No service between Liverpool Street and Barking, and MINOR DELAYS on the rest of the line whi"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Most generous. I doff my cap. I suspect it seems so much more crowded on the tube now with tourists in all seasons showing up more than it once was."
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Part Suspended Hammersmith and City Line: No service between Liverpool Street and Barking, and MINOR DELAYS on the rest of the line whi"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Free live comedy & beer in Spitalfields Market tonight. I went to the last one and it was kinda weird seeing standup in the middle of a bustling market! But it was pretty good and "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we fix a points failure at Stratford."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "This is the answer. People riding the tube when those cars were first in use for the most part had manners and were concerned about being seen as good citizens. For the most part. "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Hackney Wick and Stratford while we respond to a fire alert at Stratford. Severe delays"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.055,
+        "source_item_count": 94,
+        "average_valence": -0.129,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-17T04:12:36.127Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-07-17T07:22:28.112Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M2: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,36 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "is aktiontier organization any good?. Hello, I was approached by people about organization called aktiontier, specifically about their projekt kitty. It sounds good, since they're "
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.001,
+        "source_item_count": 117,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-17T04:12:36.127Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-07-17T07:22:28.112Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 55,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -183,16 +184,25 @@
         "weather": 1
       },
       "languages": [
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Old curved glass window panes are actually very expensive and difficult to replace. I had to replace one that broke once, and we had to wait over a month for it to be fabricated an"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Buying American doesn't mean buying huge. With $1.5M you should be able to get any truck you want but these guys just can't get over the Paw Patrol fantasy. Even when SF did their "
+          "excerpt": "I don't know about whether a landlord can demand it or not but just know that tint can in fact damage windows. Depending on how it handles the IR/heat it can crack the glass."
         },
         {
           "source_family": "public",
@@ -214,39 +224,31 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Cardboard boxes have to be broken down to a 2ft x 2ft size, and either 1) tied together with string or 2) consolidated into a 2’x2’ box. Recology doesn’t like loose broken down box"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "If you want a cafe, it's a little bit of a walk (four blocks or so) but Finjan Qahwa has good chai and Yemeni coffee and snacks and is open til 10"
+          "excerpt": "Even ai know sarcasm isnt kind \"Sarcasm is inherently a double-edged sword. While it can be a form of clever, playful humor among close friends, it is not traditionally considered "
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.016,
+        "source_item_count": 112,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-17T04:12:36.127Z",
+      "captured_at": "2026-07-17T07:22:28.112Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 30,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +304,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 96,
+        "source_item_count": 94,
         "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.814
       }
     }
   ]
