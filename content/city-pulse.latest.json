@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-17T12:15:07.236Z",
+    "capturedAt": "2026-07-17T14:48:36.699Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 410
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-17T12:15:07.236Z",
-      "mood_score": 0.302,
+      "captured_at": "2026-07-17T14:48:36.699Z",
+      "mood_score": 0.319,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainau"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,23 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Terminals and MINOR DELAYS on the rest of the line while"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Terminals and MINOR DELAYS on the rest of the line while"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a points failure at Walthamstow Central."
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to an earlier signal failure at Osterley."
         },
         {
           "source_family": "transport",
@@ -79,32 +71,40 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays due to a line side fire near Wood Street on Sunday."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How many of you didn’t go into the office today when you normally would on a Thursday because of the football?. My rush hour tubes today both to and from work were dead, I thought "
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.112,
+        "source_item_count": 96,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-17T12:15:07.236Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-07-17T14:48:36.699Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,15 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 2 trips delayed"
+          "excerpt": "Berlin transit U2, M6: Delays 5 trips delayed"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I don't knpw but these 100m feel like a lot.. It's true what they said that it is in some kind of weird abandoned area"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "news",
@@ -157,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.005,
+        "source_item_count": 119,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "events",
-          "belonging"
+          "work"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-17T12:15:07.236Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-07-17T14:48:36.699Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 45,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -184,17 +184,24 @@
         "weather": 1
       },
       "languages": [
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "But surely in that case the tenant would be responsible for the repair costs. Because the landlord told them their behavior would cause damage, and then they continued the behavior"
+          "excerpt": "Landlord is actually right in this case. Window films can cause glass to crack and curved windows are very expensive and difficult to replace. Just get some curtains instead of usi"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "If it’s antique/old/ AND curved. I don’t like landlords either but this landlord is totally within his rights. Old glass can be extremely fragile and expensive to replace, especial"
         },
         {
           "source_family": "public",
@@ -214,41 +221,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Good places for casual evening/lounge vibe coffee and small bites near 24th St mission Bart?. Going to see max cooper at the grey area theater on Friday. Plan to get in by around 9"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "Waymos blocked roads and caused chaos during San Francisco power outage - NBC Bay Area. Waymos blocked roads and caused chaos during San Francisco power outage"
+          "excerpt": "Yes, but I'd guess that the cost of replacing these are more than OPs security deposit, which would be a gigantic pain in the ass to recover from OP, especially with their apparent"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.027,
+        "source_item_count": 112,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-17T12:15:07.236Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-07-17T14:48:36.699Z",
+      "mood_score": 0.294,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -269,14 +268,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Yo creo que una mejor señalización sería suficiente para que la mayoría de la gente no aparcase ahí. En todo caso es cuestión de llamar a las autoridades y en cero coma viene la gr"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "No es legal aparcar motos en Barcelona a menos de 2 metros de un paso de peatones. Está bien quejarte y visibilizar el problema pero yo llamaría a la urbana umh que venga con la gr"
         },
         {
           "source_family": "signals",
@@ -301,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Pràctica d'exorcistes i ministres de l'Església. \"Pràctica d'exorcistes i ministres de l'Església...\" Manual d'exorcismes, imprès a Barcelona el 1688. La segona part parla de la pr"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "In here we call them grúas. He probably didn't know the name for it in English. Plus, this is a BARCELONA sub. So either learn catalan or Spanish, or shut up."
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.009,
+        "source_item_count": 95,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "transit"
         ],
-        "freshness_score": 0.822
+        "freshness_score": 0.83
       }
     }
   ]
