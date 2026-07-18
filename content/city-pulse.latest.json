@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-18T11:09:21.979Z",
+    "capturedAt": "2026-07-18T13:35:27.829Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-18T11:09:21.979Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-07-18T13:35:27.829Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to an earlier signal failure at Elephant & Castle."
+          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Paddington and Abbey Wood due to an earlier obstruction on the overhead power lines at Woolwich. GO"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -62,45 +70,111 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays between Euston and Battersea Power Station via Charing Cross due to an earlier customer inci"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 July, from 0400 and all day Sunday 19 July, including Saturday Night Tube, no service betwe"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Rayners lane and Uxbridge, and SEVERE DELAYS between Acton Town and Rayners lane whi"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Suspended Piccadilly Line: No service between Rayners lane and Uxbridge, and SEVERE DELAYS between Acton Town and Rayners lane whi"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.076,
+        "source_item_count": 106,
+        "average_valence": -0.086,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.869
+      }
+    },
+    {
+      "city_id": "berlin",
+      "captured_at": "2026-07-18T13:35:27.829Z",
+      "mood_score": 0.399,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
+      "source_counts": {
+        "public": 19,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 50,
+        "nightlife": 40,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "de",
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Closing Tegel is still a positive effect- greatly reducing noise pollution and creating an opportunity for urban development. But the idea \"build an airport and they'll come\" was a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I once was in a very nice asian restaurant, nice design, good food, but when I went to the toilet... boom, AI \"art\" pieces everywhere. Welp. I'm still in the \"it's funny because it"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Tbh its a good way to check if something is low quality now for product advertising there should be laws about false publicity as many crappy products are advertised wonderful."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Yeah, no we don’t. It’s inevitable. And some professions, especially technical like coders, will get replaced. We ain’t gonna have a terminator movie though going on so whatever. F"
+        },
+        {
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Decoder, Joline Scheffler, Kangding Ray, machìna, Shoal, Tarkno at RSO.BERLIN (Berlin) on 2026-07-18T00:00:00.000 [Techno, Broken Beat]"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 125,
+        "average_valence": -0.004,
+        "dominant_themes": [
+          "general",
+          "events",
+          "routine"
+        ],
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-18T11:09:21.979Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-18T13:35:27.829Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 56,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -130,14 +204,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yup! This is the way. I don’t have much of a life and can be flexible. I did this in 2023 for Oppenheimer, which had the same hype for 70mm IMAX viewings. I checked often the day o"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -148,31 +214,39 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I was on the Sausalito Ferry. I boarded at 3:35,headed to the Port of SF. Arrived at 4:05pm. We passed Alcatraz as tourists took photos. The water and weather was beautiful. Hard t"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "yeah i dont think we really eat clam chowder lol. Scoma's is good at the pier. Popi's oysterette is in the marina and is yummy too. Also provides a different spot to see things."
+          "excerpt": "The \"yard service\" to Balboa Park or 3rd & 23rd are part of \"normal\" muni service and do appear (kind of) in the feeds SFMTA sends out to 3rd party apps, and some mappings apps wil"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.01,
+        "source_item_count": 118,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-18T11:09:21.979Z",
+      "captured_at": "2026-07-18T13:35:27.829Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -228,87 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 83,
+        "source_item_count": 84,
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.808
-      }
-    },
-    {
-      "city_id": "berlin",
-      "captured_at": "2026-07-18T11:09:21.979Z",
-      "mood_score": 0.394,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
-      "source_counts": {
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 50,
-        "nightlife": 40,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "de",
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Decoder, Joline Scheffler, Kangding Ray, machìna, Shoal, Tarkno at RSO.BERLIN (Berlin) on 2026-07-18T00:00:00.000 [Techno, Broken Beat]"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Vorteks, Noise Not War, SIKXTO, Death of Mars, GAIVEU, Filialleiter at OST (Berlin) on 2026-07-18T00:00:00.000"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.018,
-        "dominant_themes": [
-          "general",
-          "events",
-          "routine"
-        ],
-        "freshness_score": 0.858
+        "freshness_score": 0.803
       }
     }
   ]
