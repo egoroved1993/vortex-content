@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-18T16:05:44.573Z",
+    "capturedAt": "2026-07-18T18:00:24.579Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 434
+    "totalItems": 452
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-18T16:05:44.573Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-07-18T18:00:24.579Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -46,15 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Haina"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -79,35 +71,42 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Uxbridge and MINOR DELAYS between Moor Park and Watford"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 July, from 0400 and all day Sunday 19 July, including Saturday Night Tube, no service betwe"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.084,
+        "source_item_count": 103,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-18T16:05:44.573Z",
-      "mood_score": 0.396,
+      "captured_at": "2026-07-18T18:00:24.579Z",
+      "mood_score": 0.395,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,70 +115,70 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+          "excerpt": "Decoder, Joline Scheffler, Kangding Ray, machìna, Shoal, Tarkno at RSO.BERLIN (Berlin) on 2026-07-18T00:00:00.000 [Techno, Broken Beat]"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Closing Tegel is still a positive effect- greatly reducing noise pollution and creating an opportunity for urban development. But the idea \"build an airport and they'll come\" was a"
+          "recency_weight": 1.08,
+          "excerpt": "Vorteks, Noise Not War, SIKXTO, Death of Mars, GAIVEU, Filialleiter at OST (Berlin) on 2026-07-18T00:00:00.000"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "I once was in a very nice asian restaurant, nice design, good food, but when I went to the toilet... boom, AI \"art\" pieces everywhere. Welp. I'm still in the \"it's funny because it"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Tbh its a good way to check if something is low quality now for product advertising there should be laws about false publicity as many crappy products are advertised wonderful."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah, no we don’t. It’s inevitable. And some professions, especially technical like coders, will get replaced. We ain’t gonna have a terminator movie though going on so whatever. F"
+          "excerpt": "XD (Now I'm just messing with you 🤣) I used it on win 95 and 98 - cutting out images took HOURS and involved a trick with chroma key style. Then win XP came out and removed some f"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.011,
+        "source_item_count": 121,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-18T16:05:44.573Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-07-18T18:00:24.579Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 78,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -197,6 +196,22 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "50 degrees with strong wind is considered freezing here. (And the wind will get you more than you think. But South Dakota is pretty windy too so you probably know that.) I literall"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Who are you quoting? When the station only has e-bikes, you can rent them for the same rate as the regular bikes."
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -205,49 +220,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "got got by muni police 😔. I was taking a short ride on the 5 like 3 stops so I didn’t bother paying but now I really regret that. I noticed them on the bus too late and then tried"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I was on the Sausalito Ferry. I boarded at 3:35,headed to the Port of SF. Arrived at 4:05pm. We passed Alcatraz as tourists took photos. The water and weather was beautiful. Hard t"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "The \"yard service\" to Balboa Park or 3rd & 23rd are part of \"normal\" muni service and do appear (kind of) in the feeds SFMTA sends out to 3rd party apps, and some mappings apps wil"
+          "excerpt": "a one time fee for public space means that the taxpayers ultimately are giving this property to lyft rent free in exchange for the public service provided. clearly not the same as "
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.016,
+        "source_item_count": 143,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-18T16:05:44.573Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-07-18T18:00:24.579Z",
+      "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,6 +260,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Ánimo para que pueda vivir lo bien que vive en Alemania. Que les gusta tanto España y su gente. Pues ellos tienen el país que ellos han construido."
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -292,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "És que és precisament el que volen, que se'ls reconegui públicament. Són psicòpates que busquen atenció, segurament els hi agrada estar en les notícies."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Rastres a prop de Barcelona?. Vaig anar fa poc a un de celra, i la veritat és que perfecte és just el que m'agrada, dispositius electrònics per després poder-los trastejar, però m'"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.008,
+        "source_item_count": 85,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.802
+        "freshness_score": 0.804
       }
     }
   ]
