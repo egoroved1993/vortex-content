@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-18T15:00:49.069Z",
+    "capturedAt": "2026-07-18T16:05:44.573Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 431
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-18T15:00:49.069Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-07-18T16:05:44.573Z",
+      "mood_score": 0.472,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Haina"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Uxbridge and MINOR DELAYS between Moor Park and Watford"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 July, from 0400 and all day Sunday 19 July, including Saturday Night Tube, no service betwe"
         }
       ],
       "metadata": {
-        "source_item_count": 105,
-        "average_valence": -0.085,
+        "source_item_count": 106,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "work"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-18T15:00:49.069Z",
-      "mood_score": 0.399,
+      "captured_at": "2026-07-18T16:05:44.573Z",
+      "mood_score": 0.396,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,19 +154,11 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Yeah, no we don’t. It’s inevitable. And some professions, especially technical like coders, will get replaced. We ain’t gonna have a terminator movie though going on so whatever. F"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Decoder, Joline Scheffler, Kangding Ray, machìna, Shoal, Tarkno at RSO.BERLIN (Berlin) on 2026-07-18T00:00:00.000 [Techno, Broken Beat]"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.004,
+        "source_item_count": 126,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
@@ -168,7 +169,7 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-18T15:00:49.069Z",
+      "captured_at": "2026-07-18T16:05:44.573Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -228,22 +229,22 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
+        "source_item_count": 118,
         "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-18T15:00:49.069Z",
+      "captured_at": "2026-07-18T16:05:44.573Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 18,
@@ -309,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.797
+        "freshness_score": 0.802
       }
     }
   ]
