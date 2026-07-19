@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-18T23:00:10.443Z",
+    "capturedAt": "2026-07-19T00:03:14.418Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-18T23:00:10.443Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-07-19T00:03:14.418Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 13,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays No service between Whitechapel and Stratford, and SEVERE DELAYS between Stratford and Shenfield due to emergency enginee"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -78,24 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Suspended No service between Whitechapel and Stratford, and SEVERE DELAYS between Stratford and Shenfield due to emergency enginee"
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 July, from 0400 and all day Sunday 19 July, including Saturday Night Tube, no service betwe"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between King's Cross St. Pancras and Cockfosters due to planned engineering work. NO SERVICE"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.075,
+        "source_item_count": 101,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-18T23:00:10.443Z",
-      "mood_score": 0.341,
+      "captured_at": "2026-07-19T00:03:14.418Z",
+      "mood_score": 0.346,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,28 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
-        },
-        {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Decoder, Joline Scheffler, Kangding Ray, machìna, Shoal, Tarkno at RSO.BERLIN (Berlin) on 2026-07-18T00:00:00.000 [Techno, Broken Beat]"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Vorteks, Noise Not War, SIKXTO, Death of Mars, GAIVEU, Filialleiter at OST (Berlin) on 2026-07-18T00:00:00.000"
+          "excerpt": "Decoder, Joline Scheffler, Kangding Ray, machìna, Shoal, Tarkno at RSO.BERLIN (Berlin) on 2026-07-19T00:00:00.000 [Techno, Broken Beat]"
         },
         {
           "source_family": "news",
@@ -154,23 +137,39 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "XD (Now I'm just messing with you 🤣) I used it on win 95 and 98 - cutting out images took HOURS and involved a trick with chroma key style. Then win XP came out and removed some f"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.026,
+        "source_item_count": 118,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-18T23:00:10.443Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-07-19T00:03:14.418Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 112,
-        "average_valence": -0.021,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-18T23:00:10.443Z",
+      "captured_at": "2026-07-19T00:03:14.418Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
