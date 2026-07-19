@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-19T20:58:55.580Z",
+    "capturedAt": "2026-07-19T22:02:16.611Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 421
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-19T20:58:55.580Z",
+      "captured_at": "2026-07-19T22:02:16.611Z",
       "mood_score": 0.451,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -89,13 +89,13 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-19T20:58:55.580Z",
-      "mood_score": 0.342,
+      "captured_at": "2026-07-19T22:02:16.611Z",
+      "mood_score": 0.29,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5, M6, M4: Delays 4 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +154,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.024,
+        "source_item_count": 129,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-19T20:58:55.580Z",
+      "captured_at": "2026-07-19T22:02:16.611Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-19T20:58:55.580Z",
+      "captured_at": "2026-07-19T22:02:16.611Z",
       "mood_score": 0.303,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
