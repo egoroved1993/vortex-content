@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-19T11:16:48.792Z",
+    "capturedAt": "2026-07-19T13:37:51.954Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 421
+    "totalItems": 424
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-19T11:16:48.792Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-07-19T13:37:51.954Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Normal tickets are about £50 I think. Bear in mind that it sells out far in advance, especially during holidays - sometimes all that will show as available are the overpriced ticke"
+          "excerpt": "I never said I expected total silence. I said the opposite: I like taking in the sounds of the tourists and locals and the chaos of the city. What I don’t want is to be actively di"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / H"
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Uxbridge / Moor Park and Watford due to train cancellati"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Earl's Court and Wimbledon / Richmond while we respond to a fire alert at Earl's Cou"
         },
         {
           "source_family": "transport",
@@ -70,32 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 18 July, from 0400 and all day Sunday 19 July, including Saturday Night Tube, no service betwe"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Rayners Lane and Uxbridge and SEVERE DELAYS between Acton Town and Rayners Lane whil"
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to train cancellations. London Buses, Lioness Line, London Northwestern Railway, Ch"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.082,
+        "source_item_count": 101,
+        "average_valence": -0.128,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-19T11:16:48.792Z",
-      "mood_score": 0.345,
+      "captured_at": "2026-07-19T13:37:51.954Z",
+      "mood_score": 0.344,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The fact that there is no escalator to reach the trains platform really blows my mind. There is only two elevators which are the slowest elevators in the world. But I have to disag"
+          "excerpt": "Allowing Emirates to fly to Berlin (just to clarify they're already allowed to fly to Berlin - but they'd have give up one of the other 4 German airport to do so) would add exactly"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Question about Artemis. Is it possible to rent prostitutes in Artemis for daytime/nighttime? As an instance: renting them for hanging out outside Artemis. Thanks"
         },
         {
           "source_family": "public",
@@ -128,53 +145,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Not paid propaganda. Just someone who thinks BER has too negative a rep. My experience won’t be everyone’s but that doesn’t mean we have to hate on it 100% of the time. For every a"
+          "excerpt": "It probably depends on where you live. Countryside Vs. city, areas with many or few foreigners. Berlin is pretty international so I'd hope that it's a bit easier there? Bavaria is "
         },
         {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Decoder, Joline Scheffler, Kangding Ray, machìna, Shoal, Tarkno at RSO.BERLIN (Berlin) on 2026-07-19T00:00:00.000 [Techno, Broken Beat]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen - Berliner Zeitung. Miete in Berlin: Das kosten Wohnungen jetzt in allen 97 Ortsteilen"
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Yes. Good example is deutsche Bahn, if the Train doesn’t leave at the exact time or doesn’t arrive at the exact time, diesnt matter the distance, the weather, medical emergencies, "
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.013,
+        "source_item_count": 122,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-19T11:16:48.792Z",
+      "captured_at": "2026-07-19T13:37:51.954Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,14 +194,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Secure parking by the Foundry?. Looking to parking somewhere for a late show where I don't have to stress about a broken window and can access my vehicle after 1am. Any suggestions"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "I think both have their strengths. I’ve heard really good things about the food scene in DC and the fact that it’s so diverse. Also snow is Cool, people that live in California thi"
         },
         {
           "source_family": "public",
@@ -225,28 +218,36 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Van Ness elevator. The dodgy elevator from concourse to street level in Van Ness muni station has broken down since last week. Anyone has info when it will be back in service?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Berkeley area vs Peninsula. Narrowing down my apartment search to these neighborhoods and wanted to know which is better for an active 30 year old that works in downtown SF, spendi"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.015,
+        "source_item_count": 116,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-19T11:16:48.792Z",
+      "captured_at": "2026-07-19T13:37:51.954Z",
       "mood_score": 0.3,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": 0,
+        "source_item_count": 85,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 0.796
       }
     }
   ]
