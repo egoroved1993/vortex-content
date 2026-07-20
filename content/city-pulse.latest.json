@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-20T14:21:29.109Z",
+    "capturedAt": "2026-07-20T16:36:55.835Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 407
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-20T14:21:29.109Z",
+      "captured_at": "2026-07-20T16:36:55.835Z",
       "mood_score": 0.479,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -62,15 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Minor Delays Waterloo and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Heathrow Terminals due to an earlier signal failure at South Ealing"
         },
         {
           "source_family": "public",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Tottenham and Wood Green Now. Grew up in Edmonton in the 90s and used to go Wood Green and Tottenham a lot. Haven’t gone in years until very recently to lordship lane recreation gr"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.062,
+        "source_item_count": 88,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-20T14:21:29.109Z",
-      "mood_score": 0.292,
+      "captured_at": "2026-07-20T16:36:55.835Z",
+      "mood_score": 0.289,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +154,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.025,
+        "source_item_count": 117,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-20T14:21:29.109Z",
+      "captured_at": "2026-07-20T16:36:55.835Z",
       "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-20T14:21:29.109Z",
+      "captured_at": "2026-07-20T16:36:55.835Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.83
       }
     }
   ]
