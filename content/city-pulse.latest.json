@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-20T04:40:09.115Z",
+    "capturedAt": "2026-07-20T08:11:18.234Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-20T04:40:09.115Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-07-20T08:11:18.234Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,28 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Within 10 min walk from archway you have got literally 4/5 very large council estates (elthorne, miranda, new oreleans, andover)are all huge and still majority council tenants. Unl"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I commented on another reply, I got 1 tub of Ovaltine, but it's so expensive now and 5 tea spoons of it in a mug, can't use that much at these prices. lol"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to train cancellations. Tickets will be accepted on London Buses, Lioness line, Lon"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "It's so expensive now, I used to get Horlicks and Ovaltine. Make a few cups with the big tubs and it's gone. I got 1 tub of Ovaltine left I'm dragging out, using a small amount eac"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -73,39 +66,48 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Head to Northcote Road- the pedestrianise it over the weekends in the summer. The restaurants are packed but kids everywhere. You can then head up to Clapham Common for drinks/ cof"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Padel courts to replace London's only full-size indoor skate park. After feedback from 300 customers, come off it 🤣 money is the reason, and thats why they want to stick shite exp"
+          "excerpt": "Tottenham and Wood Green Now. Grew up in Edmonton in the 90s and used to go Wood Green and Tottenham a lot. Haven’t gone in years until very recently to lordship lane recreation gr"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.085,
+        "source_item_count": 90,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-20T04:40:09.115Z",
-      "mood_score": 0.295,
+      "captured_at": "2026-07-20T08:11:18.234Z",
+      "mood_score": 0.292,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -144,36 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "If I cycled all the way to work, I'd take me 1,5 hours. Using train and bike, it takes me just over an hour. So no, I'm not cycling all the way."
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.016,
+        "source_item_count": 127,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-20T04:40:09.115Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-07-20T08:11:18.234Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 41,
+        "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -197,17 +199,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "I think you are SOL but talk to the SF Tenants Union. Are you rent controlled?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Rent control rich. I found out my new neighbor is paying 50% more in rent than me. Not an insignificant amount. Maybe that's why I feel \"rich\" despite all the news of inflation, af"
+          "excerpt": "I feel for you. I share a wall with the saloon. I’m just saying you don’t have much recourse. If it’s a noise violation or some coding thing, that’s a complaint you can make with t"
         },
         {
           "source_family": "public",
@@ -219,33 +213,41 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Solo 40M Traveler - Where to Stay. Traveling in late august - never been to SF. Staying for 2 nights, I enjoy photography, food, hipster stuff/areas. I should probably see the majo"
+          "excerpt": "Well the roof ventilation making noise is a maintenance issue on the building and roof exhaust unit, not the restaurant, from my conversations with my landlord. Is it not?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How did you fight it? The landlord is not on my side in my case."
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.062,
+        "source_item_count": 127,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.845
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-20T04:40:09.115Z",
+      "captured_at": "2026-07-20T08:11:18.234Z",
       "mood_score": 0.303,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -301,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 84,
+        "source_item_count": 86,
         "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "transit",
-          "tourism"
+          "routine"
         ],
-        "freshness_score": 0.788
+        "freshness_score": 0.803
       }
     }
   ]
