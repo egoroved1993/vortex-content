@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-20T16:36:55.835Z",
+    "capturedAt": "2026-07-20T18:57:29.356Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 406
+    "totalItems": 396
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-20T16:36:55.835Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-07-20T18:57:29.356Z",
+      "mood_score": 0.467,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -62,45 +62,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Heathrow Terminals due to an earlier signal failure at South Ealing"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Camden Town and Kennington via Bank southbound only while we fix a signal failure at A"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to a signal failure at South Ealing. London Buses, Elizabeth Line and South Western R"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Tottenham and Wood Green Now. Grew up in Edmonton in the 90s and used to go Wood Green and Tottenham a lot. Haven’t gone in years until very recently to lordship lane recreation gr"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "excerpt": "\\>What were the results of that noise impact assessment? It's public information mate, go and have a look yourself you lazy git. I'm not doing your leg work."
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.061,
+        "source_item_count": 82,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-20T16:36:55.835Z",
-      "mood_score": 0.289,
+      "captured_at": "2026-07-20T18:57:29.356Z",
+      "mood_score": 0.294,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 10,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -129,23 +129,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It is a common scam, so please be careful. It is not at all common in Germany to rent an apartment to someone before they physically look at the apartment. I have seen scams where "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Question about Artemis. Is it possible to rent prostitutes in Artemis for daytime/nighttime? As an instance: renting them for hanging out outside Artemis. Thanks"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "You asked the landlord to translate the contract in this housing market? I've always just used DeepL, and/or paid a bilingual friend to look over it. Berlin is full of broke people"
+          "excerpt": "Started in the 90s as a protest now it became more"
         },
         {
           "source_family": "news",
@@ -154,28 +138,44 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Do controllers go around the London Underground asking to scan your credit card to see if you have a valid ticket? No. The system uses gated entry. That's where this is headed in B"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.032,
+        "source_item_count": 116,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-20T16:36:55.835Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-20T18:57:29.356Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 40,
+        "public": 38,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,11 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Secure parking by the Foundry?. Looking to parking somewhere for a late show where I don't have to stress about a broken window and can access my vehicle after 1am. Any suggestions"
+          "excerpt": "As your kids are older I would also do the Exploratorium ... if they both can ride bikes I would rent bikes and wander around lost (e.g. JFK etc even the city bike lanes if you are"
         },
         {
           "source_family": "public",
@@ -201,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I've seen it 3 times at Metreon IMAX and when was coming back from the bathroom on my second and third viewings, I could probably count on 2 hands the number of empty seats and bot"
+          "excerpt": "the Bay area is amazing. it is also hideously expensive and the job market is challenging. find a job here first so you know exactly how much you will make. then decide if the hit "
         },
         {
           "source_family": "public",
@@ -217,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If you can rent a car, do that. Getting to Sausalito Via UBER is easy enough, leaving? Not so much. There is a shuttle but it has very specific times, you seem to be looking for a "
+          "excerpt": "The place runs off of high teenagers, broken machines, and vibes and we receive shoddy service $5 tuesdays. Apple Cinema is what we deserve and is a gem that should be preserved"
         },
         {
           "source_family": "public",
@@ -225,29 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yes, for every day your pay is late you get one day of pay. It’s pretty big $$$ and in your best interest to not say anything. That’s for your typical W2 salaried employee, not qui"
+          "excerpt": "It's very bad and very ugly for most new comers, unless you're very loaded with cash. It's going to be very hard to find a job, unless you have a very niche and high demand role (d"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.011,
+        "source_item_count": 104,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-20T16:36:55.835Z",
+      "captured_at": "2026-07-20T18:57:29.356Z",
       "mood_score": 0.3,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 29,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 95,
+        "source_item_count": 94,
         "average_valence": -0.001,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.84
       }
     }
   ]
