@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-20T18:57:29.356Z",
+    "capturedAt": "2026-07-20T20:26:58.403Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 396
+    "totalItems": 395
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-20T18:57:29.356Z",
+      "captured_at": "2026-07-20T20:26:58.403Z",
       "mood_score": 0.467,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -46,14 +46,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / H"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to train cancellations and SEVERE DELAYS between Moor Park and Chesham due to an ea"
         },
         {
@@ -62,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Camden Town and Kennington via Bank southbound only while we fix a signal failure at A"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Camden Town and Kennington via Bank southbound only while we fix a signal failure at A"
         },
         {
           "source_family": "transport",
@@ -71,6 +63,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to a signal failure at South Ealing. London Buses, Elizabeth Line and South Western R"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we respond to a fire alert at Green Park. Tickets being accepted on London Buses, Wea"
         },
         {
           "source_family": "public",
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.096,
+        "average_valence": -0.097,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-20T18:57:29.356Z",
-      "mood_score": 0.294,
+      "captured_at": "2026-07-20T20:26:58.403Z",
+      "mood_score": 0.296,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,22 +145,30 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Do controllers go around the London Underground asking to scan your credit card to see if you have a valid ticket? No. The system uses gated entry. That's where this is headed in B"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I don't see anyone mentioning that AI will not stay free/cheap for much longer, otherwise the companies that make it will not be able to profit. So the \"elitist\" argument is quite "
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.018,
+        "source_item_count": 115,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-20T18:57:29.356Z",
+      "captured_at": "2026-07-20T20:26:58.403Z",
       "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -236,12 +235,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-20T18:57:29.356Z",
+      "captured_at": "2026-07-20T20:26:58.403Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.837
       }
     }
   ]
