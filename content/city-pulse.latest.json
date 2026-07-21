@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-21T12:26:37.663Z",
+    "capturedAt": "2026-07-21T15:08:11.214Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-21T12:26:37.663Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-07-21T15:08:11.214Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 34,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -46,23 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Hainault via Newbury Park eastbound only due to an earlier customer i"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading due to an earlier faulty train at Hayes & Harlington."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Watford while we fix a signal failure at Harrow-on-the-Hi"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway / West Ruislip due to an earlier faulty train at Totte"
         },
         {
           "source_family": "public",
@@ -79,34 +63,51 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London hit by second day of Tube strike disruption this week - The Guardian. London hit by second day of Tube strike disruption this week"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "When does today’s London Tube strike end and which lines are affected? - The Independent. When does today’s London Tube strike end and which lines are affected?"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.058,
+        "source_item_count": 103,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-21T12:26:37.663Z",
-      "mood_score": 0.25,
+      "captured_at": "2026-07-21T15:08:11.214Z",
+      "mood_score": 0.248,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -128,7 +137,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Average Berlin experience, thanks for standing up, next time, punch them in the face and let your intrusive thoughts take control, these people deserve to die by hanging imo, I hel"
+          "excerpt": "I love Berlin, get to see all sorts of people, good doctors here, the area that I am is a short ride to everywhere I need, lots of quiet and green despite being in the city and ple"
         },
         {
           "source_family": "public",
@@ -145,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": 0.001,
+        "source_item_count": 121,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "events",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-21T12:26:37.663Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-07-21T15:08:11.214Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, weather, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 47,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -216,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "call the tenants union. if a landlord refuses to fix things that are necessarily covered in your lease, then you have rights (like withholding rent)."
+          "excerpt": "It sucks that people are downvoting you. Rent control is well intentioned but perverse incentive. Price controls inevitably lead to shortages."
         },
         {
           "source_family": "public",
@@ -224,29 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It has been alot less windy from 2020-2026 as far as i remember,between 2009-2018 during childhood and young adult years I remember violent windstorms that downs trees every winter"
+          "excerpt": "call the tenants union. if a landlord refuses to fix things that are necessarily covered in your lease, then you have rights (like withholding rent)."
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.03,
+        "source_item_count": 119,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
-          "weather",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-21T12:26:37.663Z",
-      "mood_score": 0.292,
+      "captured_at": "2026-07-21T15:08:11.214Z",
+      "mood_score": 0.289,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -277,14 +278,6 @@
           "excerpt": "We were thinking to go there - your post made me feel grateful we didn’t! We went to the city center - the Temple Pub. All places were packed and at some point, bouncers didn’t let"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I watched it at home , I will never go to watch a match , I don't care but there were clearly a lot of people that want that and the ayuntamiento should care for the necessity of t"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -299,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Lo de escribir los nombres en un árbol o cualquier sitio se ha hecho de siempre, ya sea rayando lo o escribiéndolo con rotulador. A veces me preguntó si \"Laura y Dani ❤️ 2003\" segu"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Pride Barcelona 2026: programa complet, dates de concerts gratuïts i mapa de la manifestació"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.024,
+        "source_item_count": 90,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.814
       }
     }
   ]
