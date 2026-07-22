@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-22T06:35:33.310Z",
+    "capturedAt": "2026-07-22T09:31:27.866Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-22T06:35:33.310Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-07-22T09:31:27.866Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 35,
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's Park and Elephant & Castle due to an earlier faulty train at Stonebridge Par"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -57,45 +49,53 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway / West Ruislip and between Leytonstone and Hainault vi"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge while we fix a signal failure at Hillingdon. GOO"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Post holiday blues are real. I went on my first holiday in a decade last month, and for the whole month ive been looking up good price package holidays to try and go away again nex"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: No service between Rayners Lane and Uxbridge while we fix a signal failure at Hillingdon. MINOR DELAYS"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "The issue for me is the NHS is often not investigating common issues too. If 1 in 10 women have endometriosis why does it take 7 years to get diagnosed? It’s not a 7 year waiting l"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Suspended Piccadilly Line: No service between Rayners Lane and Uxbridge while we fix a signal failure at Hillingdon. MINOR DELAYS"
+          "recency_weight": 1,
+          "excerpt": "Record rents push renters towards rent controls - Property118. Record rents push renters towards rent controls"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "While employed people remained stuck in shelters due to being unable to pay rent in London, a project manufactured 36 complete apartments of 26 m² and charged about 65% of the mark"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.051,
+        "source_item_count": 103,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.906
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-22T06:35:33.310Z",
-      "mood_score": 0.196,
+      "captured_at": "2026-07-22T09:31:27.866Z",
+      "mood_score": 0.194,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, 100: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,31 +154,23 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "What behavior of other passengers annoys you the most in public transport?. Just wanted to try it this way instead of a rant, to get some approval."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I donated via DKMS a few years ago in London. On the day of the stem cell extraction, everything was super chilled and relaxed, they informed me that my stem cells were going acros"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.011,
+        "source_item_count": 117,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-22T06:35:33.310Z",
-      "mood_score": 0.461,
+      "captured_at": "2026-07-22T09:31:27.866Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-22T06:35:33.310Z",
+      "captured_at": "2026-07-22T09:31:27.866Z",
       "mood_score": 0.303,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
