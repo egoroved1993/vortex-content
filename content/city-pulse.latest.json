@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-25T03:20:05.765Z",
+    "capturedAt": "2026-07-25T06:23:52.071Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 414
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-25T03:20:05.765Z",
-      "mood_score": 0.399,
+      "captured_at": "2026-07-25T06:23:52.071Z",
+      "mood_score": 0.395,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier points failure. Tickets are being accepted on London Buses, DLR, Elizabeth"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's Park and Elephant & Castle while we fix a signal failure at Regent's Park. G"
         },
         {
           "source_family": "transport",
@@ -55,6 +55,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - Inside Housing. News - London landlord acquires Key Worker Living Rent homes in de"
         },
         {
           "source_family": "news",
@@ -71,43 +79,34 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Why would you close the only good thing about the Eurostar lobby. A place to buy beer. We don’t need 2 Pret. Is this too much to ask to get a pale ale while waiting??"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.063,
+        "source_item_count": 82,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-25T03:20:05.765Z",
-      "mood_score": 0.455,
+      "captured_at": "2026-07-25T06:23:52.071Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 14,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,28 +145,36 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Duales Studium - MBA. Does anybody know of any good public Universities that do dual studies for master's, in English? Was looking into an MBA or similar field but had a hard time "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Sorry to hear! I’ve only had good experiences there, but different departments… I have tried raising complaints further up the ladder and in the process with a very detailed one no"
         }
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.013,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-25T03:20:05.765Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-07-25T06:23:52.071Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 55,
+        "public": 65,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,9 +190,33 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Oh yeah, see the California Academy of sciences it was incredible to did a good job with that, yes, do the Bart system it’s much easier"
+          "excerpt": "Ya, you can do it. I have a one bedroom and pay a little under $2700 in a lively, central neighborhood. Def need a car here IMHO. The building is rent stabilized (most of the older"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "People always exclude commercial but think about it. You raise the landlord expense, it'll go on to raise the tenants rent which will go on to increase their prices makin you pay m"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Lol, property taxes have only gone up over time. Looking at my parents own taxes for their house, it's 4900 this year. 10 years ago it was 3800 which is higher than when they bough"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I was a super early round lottery and naw dog, that shit was expensive I got tickets at Paris 2024 for under $100 for the events I wanted to see."
         },
         {
           "source_family": "public",
@@ -202,46 +225,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "my rent went up 10%. inflation is out of contol in sf. the wine and food is too expensive. rents are up again. im noticing less people going out. im now paying $5k per month for 65"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Those who commute to sf how do you plan for traffic to arrive on time?. Seems like no matter what I do I get caught with unexpected traffic. First thing I do when I wake up is chec"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I’ve never lived in a building that wasn’t rent controlled, yet I vote yes every time pro-housing measures are on the ballot. I’ve also been known to speak in support of individual"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The first drop was too expensive for me and hoping for cheaper tickets this time. I got a bunch for Paris and they were all affordable and I heard people bought some really close t"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.003,
+        "source_item_count": 131,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-25T03:20:05.765Z",
+      "captured_at": "2026-07-25T06:23:52.071Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.806
       }
     }
   ]
