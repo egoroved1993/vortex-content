@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-26T07:39:47.255Z",
+    "capturedAt": "2026-07-26T10:06:25.155Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,54 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 412
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-26T07:39:47.255Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-07-26T10:06:25.155Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 27,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: No service between Stanmore and Willesden Green while we respond to a fire alert at Canons Park. Tickets b"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier points failure at Brixton."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -55,47 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 26 July, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Batte"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 26 July, no service between Sydenham and Crystal Palace. Please use local London Buses connections"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "As well as that i think the ASL(the american high school/ACS cobham) area but probably not that expensive area it depends as it is for a work thing with my parents so around 1-3 ye"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Zack Polanski and Angela Rayner clash as she rejects rent controls for London - London Evening Standard. Zack Polanski and Angela Rayner clash as she rejects rent controls for Lond"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.065,
+        "source_item_count": 96,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-26T07:39:47.255Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-07-26T10:06:25.155Z",
+      "mood_score": 0.442,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -147,34 +147,34 @@
           "excerpt": "Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Miete an? Das Land will Ihnen schreiben - Spiegel. Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Mie"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.028,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-26T07:39:47.255Z",
-      "mood_score": 0.508,
+      "captured_at": "2026-07-26T10:06:25.155Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I miss my 2b1b for $4000 with a parking spot in the marina with golden gate views. Moved there during Covid and was rent controlled. 💔"
+          "excerpt": "I had a call with a realtor who specialized in rentals last week and they said 60%+ of the leases they see signed were bid on, rent control or not."
         },
         {
           "source_family": "public",
@@ -204,6 +204,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Do you actually have data to show that market rate rentals have higher vacancy rates? They are priced to rent and most have target occupancy rates in the mid 90's. It was just a fe"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -212,41 +220,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "23, just moved to SF from DC, and making friends here is way harder than I expected. Hey guys, I just moved to SF from Washington D.C. and I'm 23. Back there it was always so easy "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "23, just moved to SF from DC, and it's way harder to make friends here than I expected. Hey guys, I just moved to SF from Washington D.C. and I'm 23. Back there it was always so ea"
+          "excerpt": "That's a lame excuse to lower the affordable housing quota. Developers are not in the business of giving housing to people who are middle to low income. They are in the business of"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": 0.025,
+        "source_item_count": 121,
+        "average_valence": 0.02,
         "dominant_themes": [
           "general",
           "events",
           "belonging"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-26T07:39:47.255Z",
+      "captured_at": "2026-07-26T10:06:25.155Z",
       "mood_score": 0.397,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 82,
+        "source_item_count": 83,
         "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.777
+        "freshness_score": 0.784
       }
     }
   ]
