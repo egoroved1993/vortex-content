@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-26T20:14:40.554Z",
+    "capturedAt": "2026-07-26T22:04:16.610Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 414
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-26T20:14:40.554Z",
-      "mood_score": 0.415,
+      "captured_at": "2026-07-26T22:04:16.610Z",
+      "mood_score": 0.428,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 27,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,36 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 26 July, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Batte"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 26 July, no service between Sydenham and Crystal Palace. Please use local London Buses connections"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.103,
+        "source_item_count": 107,
+        "average_valence": -0.064,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.85
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-26T20:14:40.554Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-07-26T22:04:16.610Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -120,23 +120,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "\"Your Courthouse Will Be Blown Up\": Berlin Man Confesses to Dozens of Bomb Threats. Between between 2022 and 2025 Jörg Z. called in over 35 bomb threats. \"We will blow up your scho"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "Grocery Delivery Services in 2026. So.. What are your experiences and recommendations? I am currently looking for a service to complete the bulk of our shopping, but it proves very"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "that’s honestly really messed up, i’m sorry you had to see that. you did more than most people would, even just calling it out and stepping in matters. also yeah, people freezing o"
         },
         {
           "source_family": "public",
@@ -153,11 +137,27 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Violent Magic Orchestra, The Delay in the Universal Loop at Neue Zukunft (Berlin) on 2026-07-26T00:00:00.000"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Miete an? Das Land will Ihnen schreiben - Spiegel. Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Mie"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.015,
+        "source_item_count": 119,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
@@ -168,13 +168,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-26T20:14:40.554Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-26T22:04:16.610Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 55,
+        "public": 59,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,23 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I mean, that's pretty explicitly not true re: vacancies. There's very little apartment vacancy rate in the market rate world in sf. There's equally little in the rent controlled. R"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "It was the same in the 90's when I was in my late 20's. Very hard to make friends."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Recreational biking in hilly SF. Longtime resident of hilly Nob Hill & have ridden my hybrid bike probably less than 10 times since moving here. Where do locals in hilly areas go f"
+          "excerpt": "I don't disagree with that statement, only pointing out that rent control is a weak justification. Also, since OP works in tech, his fortunes are likely somewhat linked with the re"
         },
         {
           "source_family": "public",
@@ -224,29 +208,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I’m sure the permits to close the roads, support from police, clean up crew, shuttle buses and all the other things they have to pay for add up. For urban races, it’s not just aid "
+          "excerpt": "I don't think FOMOing people into moving is the best approach. More than likely you'll need to move eventually if you want to move in with a partner or upgrade your apartment (whic"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I mean yes the ideal would be for everyone to be responsible for their own mess and maintain it clean. It's great that you do but when you're the only one is unfair and yes a rent "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Living in the city is totally worth it, and in the long run the price always goes up. If you can afford it now, do it now. Even if the place you find isn’t under SF rent control, s"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.013,
+        "source_item_count": 125,
+        "average_valence": 0.016,
         "dominant_themes": [
           "general",
-          "belonging",
-          "money"
+          "money",
+          "events"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-26T20:14:40.554Z",
-      "mood_score": 0.397,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-07-26T22:04:16.610Z",
+      "mood_score": 0.457,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -290,26 +290,26 @@
           "language": "es",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Yo soy el primero en criticar a Collboni, pero en este caso lo está haciendo bien: está quitando el urbanismo táctico (pintura en el asfalto) para hacer la obra (peatonalizando de "
+          "excerpt": "Porque era una chapuza. Vivo al lado y si quieres referencia en teoría va a quedar como la plaza justo antes del mercado Sant Antoni. Eso era una \"peatonalizacion\" pintando cutreme"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "es",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Porque era una chapuza. Vivo al lado y si quieres referencia en teoría va a quedar como la plaza justo antes del mercado Sant Antoni. Eso era una \"peatonalizacion\" pintando cutreme"
+          "excerpt": "Si dic el que caldríafer, vaig a presó. Pero un començament, es la prohibició dels perfils d'aquests viatgers i divulgadors d'indrets a les xarxes socials, cada publicació de posta"
         }
       ],
       "metadata": {
-        "source_item_count": 78,
-        "average_valence": -0.01,
+        "source_item_count": 79,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.757
+        "freshness_score": 0.765
       }
     }
   ]
