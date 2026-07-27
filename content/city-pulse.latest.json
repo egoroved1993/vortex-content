@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-27T17:48:02.581Z",
+    "capturedAt": "2026-07-27T19:43:51.361Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-27T17:48:02.581Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-07-27T19:43:51.361Z",
+      "mood_score": 0.473,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to train cancellations. After 23:00 tonight there will be no service between Gospel Oak a"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -71,30 +79,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "People were trying not to trigger your crazy self anymore, nobody was accommodating. Sick and tired of the city getting ruined by people unable to act in a civilised manner in publ"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I know it’s not a full solution, but noise cancelling headphones are an absolute fucking Godsend when you have shit neighbours, you can just escape it immediately. I got the Sony W"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.07,
+        "source_item_count": 88,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.823
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-27T17:48:02.581Z",
+      "captured_at": "2026-07-27T19:43:51.361Z",
       "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, M4, S9: Delays 6 trips delayed"
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -157,7 +157,7 @@
         }
       ],
       "metadata": {
-        "source_item_count": 116,
+        "source_item_count": 118,
         "average_valence": -0.005,
         "dominant_themes": [
           "general",
@@ -169,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-27T17:48:02.581Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-07-27T19:43:51.361Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 128,
-        "average_valence": -0.011,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-27T17:48:02.581Z",
+      "captured_at": "2026-07-27T19:43:51.361Z",
       "mood_score": 0.453,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
@@ -310,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.795
+        "freshness_score": 0.791
       }
     }
   ]
