@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-28T21:13:41.526Z",
+    "capturedAt": "2026-07-28T23:05:44.882Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 409
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-28T21:13:41.526Z",
-      "mood_score": 0.436,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-07-28T23:05:44.882Z",
+      "mood_score": 0.391,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 22,
         "review": 2,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to a points failure at Wembley Park. Tickets will be accepted on London Buses, Mildmay l"
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays while we deal with a trespasser on the track at Baker Street."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service from South Acton to Richmond and Shepherd's Bush to Clapham Junction, SEVERE DELAYS on the rest"
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays while we deal with a trespasser on the track at Baker Street."
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service from South Acton to Richmond and Shepherd's Bush to Clapham Junction, SEVERE DELAYS on the rest"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to a points failure at Wembley Park."
         },
         {
           "source_family": "transport",
@@ -70,32 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays due to an earlier signal failure at Holborn."
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate while we deal with a trespasser on the tracks at Ba"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Very sad story. However it’s good that someone left the animal in a public place with a bed and even some water."
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to a signal failure at Camden Road and an earlier signal failure at Kentish Town West."
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.07,
+        "source_item_count": 95,
+        "average_valence": -0.085,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-28T21:13:41.526Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-07-28T23:05:44.882Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,7 +104,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,22 +146,30 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Miete an? Das Land will Ihnen schreiben - Spiegel. Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Mie"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.016,
+        "source_item_count": 112,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-28T21:13:41.526Z",
+      "captured_at": "2026-07-28T23:05:44.882Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, belonging. The signal still feels live today.",
@@ -236,14 +236,14 @@
           "money",
           "belonging"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-28T21:13:41.526Z",
-      "mood_score": 0.414,
-      "mood_label": "mixed",
+      "captured_at": "2026-07-28T23:05:44.882Z",
+      "mood_score": 0.374,
+      "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -310,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.793
+        "freshness_score": 0.792
       }
     }
   ]
