@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-28T03:13:43.890Z",
+    "capturedAt": "2026-07-28T06:32:34.268Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 405
+    "totalItems": 418
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-28T03:13:43.890Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-07-28T06:32:34.268Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 23,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Did the council actually agree to that, or was that one person at the housing company saying that? It doesn't change the fact that these are glass buildings, built for aircon use, "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to a points failure at Wembley Park. Tickets will be accepted on London Buses, Mildmay l"
         },
         {
           "source_family": "public",
@@ -61,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "My partner bought her house about 10 years ago, aged 30. 5-6 years ago, she bought the flat she grew up in so her parents could live there rent free. Last year, we bought our house"
+          "excerpt": "I just turned 40, husband is 37. We bought our first flat 11 years ago (a battered 1 bed in Hither Green), refurbished it ourselves (a lot of late nights and no weekends for a year"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "As a young teenager in the late 1950's (I'm male btw) I spent half my life running away from 'old perverts' on railway platforms in London and there was never anyone in attendance "
         },
         {
           "source_family": "public",
@@ -70,42 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "27, just bought a small 1b1b in SW london for 400k solo w 10% down. The rent I was paying was comparable to mortgage payments, so I ended up buying one. The cost of living here is "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good for you. I\\`m from London. In my 50s and think its seriously gone down hill. Each to the their own I suppose"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.057,
+        "source_item_count": 93,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.822
+        "freshness_score": 0.825
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-28T03:13:43.890Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-07-28T06:32:34.268Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U8: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -144,36 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "BER airport security lineups. If you have a departure today requiring EU exit passport control, plan for at least an hour wait at passport control. Only 2 windows were open while I"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.005,
+        "source_item_count": 117,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-28T03:13:43.890Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-07-28T06:32:34.268Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -185,6 +187,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "I’m the eldest sister too and what you are supposed to do is run it with them, beat them at the very end and then make fun of them forever until one of you dies. It’s a different k"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "My dad had a late 50's Mercedes heckflosse. I've only seen it in photos. Mercedes are bulletproof, IMO, especially if you can DIY some of the repairs."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Buy your own eero and set up is easy and you avoid having to rent one from them and just keep it forever, pays itself off"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -200,46 +226,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "What % of cash do you spend on rent?. Assuming you max out 401k (or maybe you don't), what percentage of base pay do you spend on rent? I'm looking as if july / august 2026 and eve"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Need some fun activities/Foods in the bay area!. Were both 23! We have a car and im just taking her out for a late birthday! We dont mind distance and we stay in San Francisco! She"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Tell me how much you pay in rent and for what and then we'll talk."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Moving for work at Google MV – Best places to live for short commute and social life. [, looking for recommendations on where to live that's short commute to work (20 mins drive), "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.023,
+        "source_item_count": 127,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-28T03:13:43.890Z",
+      "captured_at": "2026-07-28T06:32:34.268Z",
       "mood_score": 0.413,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
@@ -308,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.792
+        "freshness_score": 0.79
       }
     }
   ]
