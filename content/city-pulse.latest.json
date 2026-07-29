@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-29T15:11:38.788Z",
+    "capturedAt": "2026-07-29T17:21:43.546Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,46 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 470
+    "totalItems": 481
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-29T15:11:38.788Z",
-      "mood_score": 0.389,
+      "captured_at": "2026-07-29T17:21:43.546Z",
+      "mood_score": 0.377,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Acton Town and Heathrow/Uxbridge due to a points failure at Acton Town. SEVERE DELAY"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Church halls or local community centres sometimes have good rates for this kind of thing. They tend to have kitchens you can use for drinks and washing up plates etc But you need t"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping/Hai"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between North Acton and Ealing Broadway/West Ruislip and MINOR DELAYS on the rest of the lin"
         },
         {
           "source_family": "transport",
@@ -78,36 +62,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier faulty train at Canada Water."
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between North Acton and Ealing Broadway/West Ruislip and MINOR DELAYS on the rest of the lin"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays while we respond to a fire alert at Barking and an earlier points failure at Acton Town. Ti"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays between Liverpool Street and Barking due to an earlier fire alert at Barking. GO"
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.091,
+        "source_item_count": 97,
+        "average_valence": -0.128,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-29T15:11:38.788Z",
-      "mood_score": 0.462,
+      "captured_at": "2026-07-29T17:21:43.546Z",
+      "mood_score": 0.459,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, work, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "1500-1800€ total or for rent? If for rent: there’s this apartment living thing for students that friends of mine have stayed at. It’s pretty expensive for student housing (800€ a m"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -129,7 +137,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5, S7, S3: Delays 4 trips delayed"
+          "excerpt": "Berlin transit S7, S3: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -146,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": 0.006,
+        "source_item_count": 134,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
-          "routine",
-          "work"
+          "work",
+          "routine"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-29T15:11:38.788Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-07-29T17:21:43.546Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 70,
+        "public": 73,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Rent right now is crazy compared to pandemic so you asking people how much they pay won’t help much as the rental market is crazy expensive right now."
+          "excerpt": "I pay 4200 including 475 rent monthly for my car, trash pickup from my front door. Top floor and have a patio single bed room 750 sq foot. Honestly I love my view as well. Moving t"
         },
         {
           "source_family": "public",
@@ -201,15 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If you want to live close to the city , try Daly City , I live in the Daly City hills and I love it , it’s windy but close to the city with affordable rent , Brisbane is another op"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Car rentals. In a bit of a pickle and wondering if anyone has experience dealing with this. I’m in SFO with an international driver’s license (e.g. the document countries in Europe"
+          "excerpt": "I was walking in Ashbury yesterday, I’m new to the city so I’m just doing walking tours in different parts of the neighborhood. How do people rent out places there. It was one of t"
         },
         {
           "source_family": "public",
@@ -217,7 +209,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "B+T made my old one bedroom apartment (400sqft) in the TL into a 2 bedroom apartment, and they raised the rent by at least 1k, last time I checked. I moved into a different one up "
+          "excerpt": "I mean I have all of that, moved last year, and pay 4200... and it's rent controlled. The only downside is that it's a slightly creaky Victorian!"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "2 bedroom flat in outer Richmond, rent is $3750 and unit in need of repairs. I have section 8 voucher so my rent portion is less and based on my income."
         },
         {
           "source_family": "public",
@@ -225,29 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "How much rent yall are paying ?. I moved to SF recently and the rental is crazy. Can you guys please comment, the neighbourhood that you guys are living in and rent you’re paying. "
+          "excerpt": "Rincon Hill. Hi all. I’m moving from the east coast and I signed a lease in rincon hill. I’m hoping it’s an overall quieter, safer neighborhood with some shops and restaurants. Wha"
         }
       ],
       "metadata": {
-        "source_item_count": 136,
-        "average_valence": -0.019,
+        "source_item_count": 139,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "money",
           "routine"
         ],
-        "freshness_score": 0.908
+        "freshness_score": 0.912
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-29T15:11:38.788Z",
+      "captured_at": "2026-07-29T17:21:43.546Z",
       "mood_score": 0.375,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 41,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.014,
+        "source_item_count": 111,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.863
       }
     }
   ]
