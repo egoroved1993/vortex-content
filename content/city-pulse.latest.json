@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-30T05:48:34.189Z",
+    "capturedAt": "2026-07-30T08:37:44.379Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 485
+    "totalItems": 479
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-30T05:48:34.189Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-07-30T08:37:44.379Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Right. I’m kind of surprised by the ignorance in this thread of people thinking this a good idea. It might solve a problem for people in London but it doesn’t help the people being"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays following a late finish of engineering work."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -63,50 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "The lowest cost I know of that are legit are around £30 per hour. Remember, you're paying a real human being to teach you. And teaching is not easy. If £30 is too expensive for you"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It's a common argument levied against laissez -faire free markets being truly free because if the options are: get a job or starve, that's hardly a free choice. There is always som"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Somewhere to study at on weekends?. Recently started studying for a qualification and I haven't studied for anything in nearly a decade. Where is a good place to study at on weeken"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.046,
+        "source_item_count": 104,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-30T05:48:34.189Z",
+      "captured_at": "2026-07-30T08:37:44.379Z",
       "mood_score": 0.416,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 29,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -152,12 +153,12 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - berliner-zeitung.de. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 133,
-        "average_valence": -0.012,
+        "source_item_count": 135,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
@@ -168,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-30T05:48:34.189Z",
-      "mood_score": 0.482,
+      "captured_at": "2026-07-30T08:37:44.379Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 80,
+        "public": 65,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -183,8 +184,7 @@
         "weather": 1
       },
       "languages": [
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
@@ -193,7 +193,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Large owners can and do leave units vacant for longer periods of time than a small landlord who owns 1 or 2 units. A large corporation can bear the additional months of missed rent"
+          "excerpt": "In the late 1980’s, SF was still considered expensive relative to the rest of the Bay Area. The Tenderloin was a hot bed of drugs and prostitution. There was a massive homeless enc"
         },
         {
           "source_family": "public",
@@ -209,15 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Mission Bay apartments are usually newer too. I would personally stay there to keep the bridge commute minimal, even if that’s in BART, especially if you’re also likely to hang out"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "support group for family members of addicts. hi! I am going through a rough period with my family member who is struggling with addiction (narcotics). google isn't being very helpf"
+          "excerpt": "not really, you could rent a 3br for 600 and split it 200$ each. (webster and waller in lower haight 1996 was my first apt when I moved here)"
         },
         {
           "source_family": "public",
@@ -225,29 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Sure, but only when they have high confidence that rents will go up, and primarily just for rent controlled units, this strategy doesn’t make sense if the building isn’t rent contr"
+          "excerpt": "As has been said, S.F. was always more expensive than places around it. Nearly all my co-workers lived in Daly City. A few lived in Oakland. But they came back into the City to par"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I paid $300 for a room in a flat in the mission in the late 90's..."
         }
       ],
       "metadata": {
-        "source_item_count": 146,
-        "average_valence": -0.054,
+        "source_item_count": 131,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-30T05:48:34.189Z",
-      "mood_score": 0.335,
+      "captured_at": "2026-07-30T08:37:44.379Z",
+      "mood_score": 0.333,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 44,
+        "public": 43,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -272,6 +272,14 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "1- Yes. They are also too crowded by tourists. 2- Yes. They are also too crowded by tourists. 3- Yes. They are also too crowded by tourists. Besides that, tourists have already tra"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "es",
           "valence": -0.575,
           "recency_weight": 1.04,
@@ -292,25 +300,17 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Els cafès dels bars del barri sempre han estat normalets tirant a terribles. La qualitat mitja del cafè està al seu pic a Barcelona ara mateix per més que exagereu criticant les ca"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.013,
+        "source_item_count": 109,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.858
       }
     }
   ]
