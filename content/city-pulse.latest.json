@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-07-31T13:01:00.379Z",
+    "capturedAt": "2026-07-31T15:27:12.339Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 447
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-07-31T13:01:00.379Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-07-31T15:27:12.339Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,20 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "I suppose it’s opposite would be private housing. For me when I hear social housing I just think housing owned or used by the council. I suppose you would expect it to be smaller a"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to an earlier track fault at Elephant & Castle and train cancellations."
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Shepherd's Bush and Clapham Junction due to earlier trespassers on the track at Clap"
         },
         {
           "source_family": "transport",
@@ -62,15 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: No service between Highbury & Islington and Brixton and SEVERE DELAYS on the rest of the line while emerg"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Part Suspended Victoria Line: No service between Highbury & Islington and Brixton and SEVERE DELAYS on the rest of the line while emerg"
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to an earlier customer incident. Tickets are being accepted on London Buses, London Ove"
         },
         {
           "source_family": "public",
@@ -82,31 +82,32 @@
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.049,
+        "source_item_count": 97,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-07-31T13:01:00.379Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-07-31T15:27:12.339Z",
+      "mood_score": 0.439,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, M4: Delays 3 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -124,6 +133,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Finding an apartment during probation period. Hi everyone! I recently moved from Berlin to Frankfurt to start a full-time job after finishing my master’s. I’ve managed to get a 3-m"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
@@ -131,50 +148,34 @@
           "excerpt": "I think it’s a big change because immigrants seem to have an insane willingness to pay for housing. Possibly due to visa issues and lack of alternatives too. What I’ve heard from i"
         },
         {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Allynx, Antaares, Bonnie Ford, CaMi, loufo, Caro Vola at Jonny Knüppel (Berlin) on 2026-07-31T00:00:00.000 [Techno, Downtempo]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Miete an? Das Land will Ihnen schreiben - Spiegel. Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Mie"
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Plus for Alex, no doubt, the vibe's great. Minus, half the time it just feels like a giant construction site with some nice energy sprinkled on top. If you actually want a taste of"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.027,
+        "source_item_count": 126,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-07-31T13:01:00.379Z",
+      "captured_at": "2026-07-31T15:27:12.339Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 60,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,14 +197,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Most affordable places in the bay would like be a manufactured house either in San Jose or close by in the East Bay. You can find some for around 50k to 100k. Then you would need t"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -212,11 +205,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Greedy landlords. Lived in same place in berkeley for ten years. Landlords became progressively more harassing and a PITA and long story but I moved out under a lot of stress and p"
+          "excerpt": "That's the apples to apples. Zillow data is not. I don't have a clue what you mean by \"manufactured\" data. You think he made up the rent registry data?"
         },
         {
           "source_family": "public",
@@ -224,29 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "row D is pretty rough for imax, your neck will be screaming after 3 hours of looking up like that. maybe wait for a cancellation or check again in few days"
+          "excerpt": "Berkeley's rent board is one of the best resources for you. You can't do anything now, but if this happens in the future, contact them for advice."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Greedy landlords. Lived in same place in berkeley for ten years. Landlords became progressively more harassing and a PITA and long story but I moved out under a lot of stress and p"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.022,
+        "source_item_count": 126,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-07-31T13:01:00.379Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-07-31T15:27:12.339Z",
+      "mood_score": 0.3,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 29,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -260,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "U can consistently get good coffee for €2-3 all across the city. U can get quick espressos for 1.50-2€ in a lot of small shops for lower price, and u can get specialty drip for 3€ "
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -291,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Ja no es pot pendre un cafè normal. A cada cantonada beach una cafeteria nova. Si no és un vibari, un 365 o un granier, és alguna cafeteria d'especialitat on tot està en anglès amb"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "A mi, em sembla un tema molt interessant i d'actualitat, si es parla amb respecte i llibertat desde la perspectiva de buscar solucions per a un problema real"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.007,
+        "source_item_count": 98,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.841
       }
     }
   ]
