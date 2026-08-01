@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-01T21:03:13.293Z",
+    "capturedAt": "2026-08-01T22:59:47.571Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 447
+    "totalItems": 444
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-01T21:03:13.293Z",
-      "mood_score": 0.469,
+      "captured_at": "2026-08-01T22:59:47.571Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,37 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to train cancellations."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,23 +55,47 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "LONDON LIVING RENT APARTMENTS LAUNCH IN NORTH LONDON HOTSPOT - London TV. LONDON LIVING RENT APARTMENTS LAUNCH IN NORTH LONDON HOTSPOT"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.09,
+        "source_item_count": 91,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-01T21:03:13.293Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-08-01T22:59:47.571Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 46,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Allynx, Antaares, Bonnie Ford, CaMi, loufo, Caro Vola at Jonny Knüppel (Berlin) on 2026-08-01T00:00:00.000 [Techno, Downtempo]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.018,
+        "source_item_count": 114,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-01T21:03:13.293Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-08-01T22:59:47.571Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 146,
-        "average_valence": 0.003,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-01T21:03:13.293Z",
+      "captured_at": "2026-08-01T22:59:47.571Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.822
       }
     }
   ]
