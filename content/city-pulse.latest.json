@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-02T00:06:26.225Z",
+    "capturedAt": "2026-08-02T04:27:44.743Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 444
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-02T00:06:26.225Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-08-02T04:27:44.743Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Planned Closure PICCADILLY LINE: Saturday 1 and Sunday 2 August, between 0030 and 0430 each day, no service throughout the line. Replace"
+          "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Sunday 2 August, before 1200 and after 2030, no service between Euston and Kilburn High Road. Use local bu"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: From 0400 Saturday 1 until 0030 Sunday 2 August, and again from 0400 Sunday 2 August to the end of serv"
         },
         {
           "source_family": "transport",
@@ -65,48 +73,41 @@
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 2 August, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Batt"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "LONDON LIVING RENT APARTMENTS LAUNCH IN NORTH LONDON HOTSPOT - London TV. LONDON LIVING RENT APARTMENTS LAUNCH IN NORTH LONDON HOTSPOT"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "At 23 and in the north west it is pretty good I'd have thought for sure. Decent wedge above average for your age by far and also location for all ages. For a full time salary, acro"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.059,
+        "source_item_count": 100,
+        "average_valence": -0.056,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-02T00:06:26.225Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-08-02T04:27:44.743Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 46,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Allynx, Antaares, Bonnie Ford, CaMi, loufo, Caro Vola at Jonny Knüppel (Berlin) on 2026-08-02T00:00:00.000 [Techno, Downtempo]"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "Felix Jaehn, Kiddy Smile at Uber Eats Music Hall (Berlin) on 2026-08-02T00:00:00.000 [Electro]"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.013,
+        "source_item_count": 113,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-02T00:06:26.225Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-08-02T04:27:44.743Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 80,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "if you live outer richmond the bus is empty when u get on in the AM and fast. When you come home its gonna be crowded and you'll be standing but its still a straight bus ride home."
+          "excerpt": "Mine was 75% for about a year, then I moved and it was 60%. A year after that I found a roomate option and got it down to 50%. Now I moved far away and pay about 40%. Looking at re"
         },
         {
           "source_family": "public",
@@ -208,7 +209,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "For context, I paid $1600 for a 1 bedroom apt in Foster City in 1999. It was considered expensive back then."
+          "excerpt": "Still no place to live for artists who aren’t established, and whose work isn’t commercially-viable, enough to have earned more than $10k from their art in three of the past five y"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "New Tech Transplants on the train & other public spaces.. Twice this week there has been white transplants (young) talking about fixing tech and money and buying property in sf. LO"
         },
         {
           "source_family": "public",
@@ -217,31 +226,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Thoughts. I was on the bus today and saw a young lady in the front with a stroller and bags. I was a little salty seeing someone block the front of the bus but didn’t think much of"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "at ~150k gross annual, what kind of apts am I looking at in SF?. 150k gross annual = \\~12k gross / mo, which I'm assuming will come out to \\~7k take home after 401k and healthcare?"
         }
       ],
       "metadata": {
-        "source_item_count": 146,
-        "average_valence": 0.005,
+        "source_item_count": 128,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.907
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-02T00:06:26.225Z",
-      "mood_score": 0.3,
+      "captured_at": "2026-08-02T04:27:44.743Z",
+      "mood_score": 0.303,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -269,6 +270,14 @@
           "excerpt": "U can consistently get good coffee for €2-3 all across the city. U can get quick espressos for 1.50-2€ in a lot of small shops for lower price, and u can get specialty drip for 3€ "
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Let me tell you as a spaniard jumping to us and back, now living for a couple of years in L.A., that 2k usd turned into euros aren’t going to give u the more than 3k vibes in spain"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -291,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Es busquen Amicsde+de50a. Fem un grup de gent de mes de 50 anys que estigui sola amb ganes de xerrar, fer activitats: caminar, esmorzar els dissabtes pel matí a l'aire lliure,tarde"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Freenow es un despropósito. Acabo de ver el taxi que ha aceptado mi carrera pasar de largo con otro pasajero dentro. Ahora a esperar diez minutos a que acabe el trabajo mientras ot"
         }
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": 0,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.822
+        "freshness_score": 0.818
       }
     }
   ]
