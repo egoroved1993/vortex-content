@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-01T22:59:47.571Z",
+    "capturedAt": "2026-08-02T00:06:26.225Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,7 +21,7 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-01T22:59:47.571Z",
+      "captured_at": "2026-08-02T00:06:26.225Z",
       "mood_score": 0.48,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -46,15 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: From 0400 Saturday 1 until 0030 Sunday 2 August, and again from 0400 Sunday 2 August to the end of serv"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Piccadilly: Planned Closure PICCADILLY LINE: Saturday 1 and Sunday 2 August, between 0030 and 0430 each day, no service throughout the line. Replace"
         },
         {
           "source_family": "transport",
@@ -63,6 +55,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 2 August, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Batt"
         },
         {
           "source_family": "news",
@@ -94,20 +94,19 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-01T22:59:47.571Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-08-02T00:06:26.225Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -153,24 +144,32 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Allynx, Antaares, Bonnie Ford, CaMi, loufo, Caro Vola at Jonny Knüppel (Berlin) on 2026-08-01T00:00:00.000 [Techno, Downtempo]"
+          "excerpt": "Allynx, Antaares, Bonnie Ford, CaMi, loufo, Caro Vola at Jonny Knüppel (Berlin) on 2026-08-02T00:00:00.000 [Techno, Downtempo]"
+        },
+        {
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "Felix Jaehn, Kiddy Smile at Uber Eats Music Hall (Berlin) on 2026-08-02T00:00:00.000 [Electro]"
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.025,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-01T22:59:47.571Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-08-02T00:06:26.225Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 146,
-        "average_valence": 0,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-01T22:59:47.571Z",
+      "captured_at": "2026-08-02T00:06:26.225Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
