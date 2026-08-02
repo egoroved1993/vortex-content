@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-02T04:27:44.743Z",
+    "capturedAt": "2026-08-02T07:35:17.478Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 434
+    "totalItems": 435
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-02T04:27:44.743Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-08-02T07:35:17.478Z",
+      "mood_score": 0.472,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 2 August, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Batt"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "At 23 and in the north west it is pretty good I'd have thought for sure. Decent wedge above average for your age by far and also location for all ages. For a full time salary, acro"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.056,
+        "source_item_count": 99,
+        "average_valence": -0.081,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-02T04:27:44.743Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-08-02T07:35:17.478Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,10 +104,9 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,28 +145,36 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Allynx, Antaares, Bonnie Ford, CaMi, loufo, Caro Vola at Jonny Knüppel (Berlin) on 2026-08-02T00:00:00.000 [Techno, Downtempo]"
+        },
+        {
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "Felix Jaehn, Kiddy Smile at Uber Eats Music Hall (Berlin) on 2026-08-02T00:00:00.000 [Electro]"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.02,
+        "source_item_count": 114,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-02T04:27:44.743Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-08-02T07:35:17.478Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 62,
+        "public": 64,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -201,15 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Mine was 75% for about a year, then I moved and it was 60%. A year after that I found a roomate option and got it down to 50%. Now I moved far away and pay about 40%. Looking at re"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Still no place to live for artists who aren’t established, and whose work isn’t commercially-viable, enough to have earned more than $10k from their art in three of the past five y"
+          "excerpt": "I did, and I prepared visual aids, but the police officer, who was a trainee showed up to the trial and the old traffic court judge just looked at me with her tired dead eyes and w"
         },
         {
           "source_family": "public",
@@ -226,28 +217,36 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Thoughts. I was on the bus today and saw a young lady in the front with a stroller and bags. I was a little salty seeing someone block the front of the bus but didn’t think much of"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Call your landlord and tell them it’s their fine to pay? Obviously you know what you’re doing is illegal… “cannot accommodate the full length of a standard car” parks car there any"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
+        "source_item_count": 130,
         "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-02T04:27:44.743Z",
+      "captured_at": "2026-08-02T07:35:17.478Z",
       "mood_score": 0.303,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
+        "source_item_count": 92,
         "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.809
       }
     }
   ]
