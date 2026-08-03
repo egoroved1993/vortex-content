@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-03T11:33:40.553Z",
+    "capturedAt": "2026-08-03T14:53:26.063Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,54 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 440
+    "totalItems": 436
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-03T11:33:40.553Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-08-03T14:53:26.063Z",
+      "mood_score": 0.45,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Try r/londonsocialclub , none of the events require a separate group chat so it's easier to ghost if the vibe is off. I've met a lot of good people there. Think I'm only at about 5"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway / West Ruislip and between Leytonstone and Epping / Ha"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays while we fix a faulty track at West Ham."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,53 +78,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Travelled to Stansted on FB and NE. They were fine, in fact we arrived EARLY. I did give us a decent amount of delay time in the trip planning though. I can imagine the M11 can get"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I've taken FB and NE to Stansted from Stratford. It's fine, and cheap! - especially as the train has got more and more expensive in recent years."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "We have had a lot of luck at local Tesco stores, the little ones. At least down south they are pretty good and can get packs most times we go. Bloody scalpers make me sick though. "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "excerpt": "I suppose this is open to interpretation but as far as size, regularity, and pain goes, for me it's probably mouth ulcers. I'm really prone to them and when I get an outbreak I can"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.047,
+        "source_item_count": 96,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-03T11:33:40.553Z",
-      "mood_score": 0.462,
+      "captured_at": "2026-08-03T14:53:26.063Z",
+      "mood_score": 0.456,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 15,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -116,20 +116,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "I would think carefully about what sort of excursions you might want to have. Heidelberg isn’t big, but it’s about an hour from the Frankfurt airport, close to Mannheim (which is a"
-        },
-        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5, S9, S7, S3: Delays 10 trips delayed"
+          "excerpt": "Berlin transit 200, 248, S5: Delays 3 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I did the test and got into allergy shots. But my allergies tend to spike in the spring. However, to do the shots one has to do it for 8-12 weeks one shot on site, but this shot wo"
         },
         {
           "source_family": "public",
@@ -157,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.006,
+        "source_item_count": 123,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-03T11:33:40.553Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-08-03T14:53:26.063Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, weather, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 68,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -197,22 +197,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Spicy shrimp generous portion of different kind of rice plates, rice noodle roll are pretty good too. Hunan house has some nice lunch meal, I usually get the Mongolia beef less spi"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "We should only let Americans to be able to rent housing in the bay, like how they did it in Texas."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -225,29 +209,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Karl your giant fog friend comes in late afternoons to give you a chilly hug. It’ll be 70 before then and suddenly windy, damp, cloudy, and cold by 6pm, and you’re shivering in sho"
+          "excerpt": "My understanding is that's pretty rare: the landlord also has to verify that your cashier's check is valid on their end. My current apartment, for example, had me hand over a cashi"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Paid MTA ticket at DMV. When I went to register my car earlier this year, I had to pay off a street sweeping ticket that I had forgotten about. It’s now been over two months since "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Immersive Live Jazz Burlesque show at The Palace Theater 8/28. Hey San Francisco! I'm Thotty McNaughty and I produce live music burlesque shows mostly in Sonoma County. We are havi"
         }
       ],
       "metadata": {
-        "source_item_count": 134,
-        "average_valence": -0.029,
+        "source_item_count": 123,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
-          "weather",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-03T11:33:40.553Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-08-03T14:53:26.063Z",
+      "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "It’s also worth saying that most locals have not been targeted, it’s mainly tourists because they are far easier. Not just easier to steal from but then thieves know that they’ll l"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Freenow es un despropósito. Acabo de ver el taxi que ha aceptado mi carrera pasar de largo con otro pasajero dentro. Ahora a esperar diez minutos a que acabe el trabajo mientras ot"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Ja no es pot pendre un cafè normal. A cada cantonada beach una cafeteria nova. Si no és un vibari, un 365 o un granier, és alguna cafeteria d'especialitat on tot està en anglès amb"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.007,
+        "source_item_count": 94,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.825
       }
     }
   ]
