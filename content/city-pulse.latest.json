@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-03T19:46:19.531Z",
+    "capturedAt": "2026-08-03T21:11:16.560Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 445
+    "totalItems": 441
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-03T19:46:19.531Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-08-03T21:11:16.560Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Thank you for such a lovely reply. I’m really touched. You’re very kind. I only started noticing pigeons during lockdown as when I went to the park, they started to recognise me an"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -65,48 +57,57 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Monday 3 August, no service between Cockfosters and Uxbridge. Trains continue to operate between Acton"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Carriages and the interiors are lined with dust and train grime too, it's a sickening train line. Not to mention the delays and issues with the service. Bakerloo needed new stock w"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: No service between Warren Street and Victoria while we help a person ill on a train at Green Park. SEVERE"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "This is why I don't watch the news. That and the fact it's just a commentary on horrible things going on in the world. I may be less educated on current events and I do resent that"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It’s good that you have all this energy, it’s a precious thing that especially living in London can be channeled in so many different activities. I go to calisthenics classes, Pila"
+          "excerpt": "Charity bookshops with a good collection - open after 5 pm. In the mood to get some second hand or cheaper books, but most charity shops opening times are till 5pm. Anyone have any"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.028,
+        "source_item_count": 104,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-03T19:46:19.531Z",
-      "mood_score": 0.459,
+      "captured_at": "2026-08-03T21:11:16.560Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -124,11 +133,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "For Study and job in germany. I'm planning to study masters in germany just finished my bachelor in computer engineering and I recently research some universities like TU Dresden, "
+          "excerpt": "Ah, no big deal really, bilastin once a day works great for me (as long as I take it). I actually dug up my old blood test results, I was negative for: grass, rye, birch, mugwort, "
         },
         {
           "source_family": "news",
@@ -145,36 +154,28 @@
           "valence": 0.5,
           "recency_weight": 0.56,
           "excerpt": "Das Wetter in Berlin heute: Warm und freundlich mit nur lockeren Wolken - wetter.com. Das Wetter in Berlin heute: Warm und freundlich mit nur lockeren Wolken"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.002,
+        "source_item_count": 122,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-03T19:46:19.531Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-08-03T21:11:16.560Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 74,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,17 +199,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I thought California recently limited how much landlords can collect upfront. From my understanding, in most cases, they can only require up to one month’s rent as a security depos"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "It’s a challenge but easier if you’re rich. The public school system is confusing with a lottery system but a lot of them are good schools, you will deal with conversations about m"
+          "excerpt": "Man I am sorry that has happened to you and I hope the LL will still rent to you, that the money can be recovered and the scammers sent to Alcatraz"
         },
         {
           "source_family": "public",
@@ -216,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I see 18 wheelers all of the time, mostly Safeway, Lucky, other grocery stores. They're mostly around early in the morning or late at night when they are re-stocking groceries. Che"
+          "excerpt": "I’ve recently discovered Yemeni coffee and their cafes are open late (some til midnight). I don’t know what the atmosphere is like after 5 but you could check them out?"
         },
         {
           "source_family": "public",
@@ -225,28 +218,36 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Almost $18 for a steak at TJ's.... Like when did this happen? At this point cooking a dinner with some rice and a salad or fruit is more expensive than picking something up."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Paid MTA ticket at DMV. When I went to register my car earlier this year, I had to pay off a street sweeping ticket that I had forgotten about. It’s now been over two months since "
         }
       ],
       "metadata": {
-        "source_item_count": 140,
-        "average_valence": -0.02,
+        "source_item_count": 123,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "events"
         ],
-        "freshness_score": 0.904
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-03T19:46:19.531Z",
+      "captured_at": "2026-08-03T21:11:16.560Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
+        "source_item_count": 92,
         "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.817
       }
     }
   ]
