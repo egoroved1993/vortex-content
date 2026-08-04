@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-04T12:05:31.444Z",
+    "capturedAt": "2026-08-04T15:27:53.047Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-04T12:05:31.444Z",
-      "mood_score": 0.403,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "captured_at": "2026-08-04T15:27:53.047Z",
+      "mood_score": 0.392,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals/Reading while we fix a signal fault in the Ladbroke Grove area."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainau"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Airport / Reading and MINOR DELAYS between Whitechapel and Shenfield while"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Paddington and Heathrow Airport / Reading and MINOR DELAYS between Whitechapel and Shenfield while"
         },
         {
           "source_family": "public",
@@ -62,39 +78,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I was astonished when I visited Basel in Switzerland, where everyone respects the no loud noises after 10pm rule. There were a few cars and people milling about, but no revving, no"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "they will make a difference for about 2 days, so not really worth it. water softening kit is big, expensive and needs maintenance. You are better just finding shampoos etc that wor"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Charity bookshops with a good collection - open after 5 pm. In the mood to get some second hand or cheaper books, but most charity shops opening times are till 5pm. Anyone have any"
+          "excerpt": "No the point is sound you just don't like it. Being annoyed personally by a sound doesn't make it a legal annoyance. This angry neighbour being annoyed by the pond doesn't mean it "
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.051,
+        "source_item_count": 87,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.844
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-04T12:05:31.444Z",
+      "captured_at": "2026-08-04T15:27:53.047Z",
       "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -121,23 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5, M6: Delays 3 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I guess, I switched to an electric car, where it doesn't matter. I know more expensive cars do this and are able to start the engine real quick. I heard if you need to wait at leas"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Oh those details I don't know!! Good info :) what does 10/2026 means btw. Can I start the process 23rd of October for example? Or does it have to be finalized on September?"
+          "excerpt": "Berlin transit M6: Delays 3 trips delayed"
         },
         {
           "source_family": "news",
@@ -154,6 +138,22 @@
           "valence": 0.5,
           "recency_weight": 0.56,
           "excerpt": "Das Wetter in Berlin heute: Warm und nass, später freundlicher - wetter.com. Das Wetter in Berlin heute: Warm und nass, später freundlicher"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "New bike speed helpers. As seen on Invalidenstrasse between Hauptbahnhof and Luisenstrasse. If you're going 20 kph and the bike is in the green zone, the light ahead will be green "
         }
       ],
       "metadata": {
@@ -164,18 +164,18 @@
           "routine",
           "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-04T12:05:31.444Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-08-04T15:27:53.047Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -209,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "All my rents are paid over either an app, or Zelle. There's no way to hand a check in person because the management company is a few hours away. I actually don't know where they ar"
+          "excerpt": "In 2026 SF is even more expensive because NYC has much better inventory vs. in SF 1000 AI tech people are competing for one $5000 1 bed."
         },
         {
           "source_family": "public",
@@ -217,34 +217,34 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Most SF public library branches are open until 8 a few nights a week. It’s not exactly late night, but it’s something! It’s not the same nights for all branches, either, so you can"
+          "excerpt": "You can rent a car for the weekend or two for that price, and you won't be paying insurance and maintenance."
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Paid MTA ticket at DMV. When I went to register my car earlier this year, I had to pay off a street sweeping ticket that I had forgotten about. It’s now been over two months since "
+          "excerpt": "I got rent control but have and had the place in Daly City for 2400 3B2B since 2013"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.02,
+        "source_item_count": 124,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "money",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-04T12:05:31.444Z",
-      "mood_score": 0.3,
+      "captured_at": "2026-08-04T15:27:53.047Z",
+      "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 21,
@@ -278,14 +278,6 @@
           "excerpt": "I‘d say that that means Ip is giving these people a needed reality check. This is good advise for basically everywhere in Europe where many tourists come together."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It’s also worth saying that most locals have not been targeted, it’s mainly tourists because they are far easier. Not just easier to steal from but then thieves know that they’ll l"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Es busquen Amicsde+de50a. Fem un grup de gent de mes de 50 anys que estigui sola amb ganes de xerrar, fer activitats: caminar, esmorzar els dissabtes pel matí a l'aire lliure,tarde"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Ja no es pot pendre un cafè normal. A cada cantonada beach una cafeteria nova. Si no és un vibari, un 365 o un granier, és alguna cafeteria d'especialitat on tot està en anglès amb"
         }
       ],
       "metadata": {
         "source_item_count": 87,
-        "average_valence": -0.001,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "tourism",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.799
+        "freshness_score": 0.814
       }
     }
   ]
