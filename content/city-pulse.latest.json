@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-04T09:41:52.673Z",
+    "capturedAt": "2026-08-04T12:05:31.444Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-04T09:41:52.673Z",
-      "mood_score": 0.411,
+      "captured_at": "2026-08-04T12:05:31.444Z",
+      "mood_score": 0.403,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Minor Delays Windrush Line: No service between Surrey Quays and Clapham Junction and MINOR DELAYS between New Cross Gate and Sydenham"
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Major Incident on Wood Green High Road. Just off the tube at Turnpike Lane and absolute chaos on the High Road: traffic blocked from Turnpike Lane and from Wood Green as LFB deal w"
         },
         {
           "source_family": "transport",
@@ -54,15 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Surrey Quays and Clapham Junction and MINOR DELAYS between New Cross Gate and Sydenham"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals/Reading while we fix a signal fault in the Ladbroke Grove area."
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "We've been watching The Boroughs, by the guys who made Stranger Things. It's pretty much just Stranger Things except everyone is old and lives in a retirement village, and just one"
+          "excerpt": "I was astonished when I visited Basel in Switzerland, where everyone respects the no loud noises after 10pm rule. There were a few cars and people milling about, but no revving, no"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "they will make a difference for about 2 days, so not really worth it. water softening kit is big, expensive and needs maintenance. You are better just finding shampoos etc that wor"
         },
         {
           "source_family": "public",
@@ -71,42 +79,35 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Charity bookshops with a good collection - open after 5 pm. In the mood to get some second hand or cheaper books, but most charity shops opening times are till 5pm. Anyone have any"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.026,
+        "source_item_count": 95,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-04T09:41:52.673Z",
-      "mood_score": 0.419,
+      "captured_at": "2026-08-04T12:05:31.444Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5, M6: Delays 3 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Many people call them \"beg buttons\" because we second class citizens must beg to cross the roads designed for the almighty automobile. We should count ourselves lucky to have been "
+          "excerpt": "I guess, I switched to an electric car, where it doesn't matter. I know more expensive cars do this and are able to start the engine real quick. I heard if you need to wait at leas"
         },
         {
           "source_family": "public",
@@ -128,7 +137,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Sometimes i play snooker at Pool Inn in Lichtenberg. They have just 1 snooker table and i feel it is a good one."
+          "excerpt": "Oh those details I don't know!! Good info :) what does 10/2026 means btw. Can I start the process 23rd of October for example? Or does it have to be finalized on September?"
         },
         {
           "source_family": "news",
@@ -145,36 +154,28 @@
           "valence": 0.5,
           "recency_weight": 0.56,
           "excerpt": "Das Wetter in Berlin heute: Warm und nass, später freundlicher - wetter.com. Das Wetter in Berlin heute: Warm und nass, später freundlicher"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.002,
+        "source_item_count": 125,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-04T09:41:52.673Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-08-04T12:05:31.444Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 55,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,7 +201,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Well I think you’re taking a shortcut. I had to deal first hand with evicting bad tenants. Now I’m sitting with tons of vacant space that I cannot rent and I’m regularly advised ag"
+          "excerpt": "if you want to keep your car, you'll want to rent a parking space. factor that into your rent and you can decide from there. personally, i don't like to have roommates but I also p"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "All my rents are paid over either an app, or Zelle. There's no way to hand a check in person because the management company is a few hours away. I actually don't know where they ar"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Most SF public library branches are open until 8 a few nights a week. It’s not exactly late night, but it’s something! It’s not the same nights for all branches, either, so you can"
         },
         {
           "source_family": "public",
@@ -209,44 +226,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Paid MTA ticket at DMV. When I went to register my car earlier this year, I had to pay off a street sweeping ticket that I had forgotten about. It’s now been over two months since "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "This is why rentals remain vacant. Cheaper to not rent vs. have to pay a ridiculous buy out later on. Ridiculous this is placed on old buildings and not corporate landlords. SF has"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Little Burgers Embarcadero. Is this a good burger place? I walked by there the other day, the place was busy,mostly suburban looking teenagers…"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.007,
+        "source_item_count": 118,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-04T09:41:52.673Z",
-      "mood_score": 0.303,
+      "captured_at": "2026-08-04T12:05:31.444Z",
+      "mood_score": 0.3,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -260,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I've never been a pickpocket, and the last thing I ever stole was shoplifting a Babybell when I was hungry at 12. That said, there's some shit I see tourists do, especially in the "
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -290,26 +299,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "🚨 S'equivoca de víctima i acaba apallissat després de robar el rellotge a un turista al Raval de Barcelona"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
           "excerpt": "Es busquen Amicsde+de50a. Fem un grup de gent de mes de 50 anys que estigui sola amb ganes de xerrar, fer activitats: caminar, esmorzar els dissabtes pel matí a l'aire lliure,tarde"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": 0.009,
+        "source_item_count": 87,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.799
       }
     }
   ]
