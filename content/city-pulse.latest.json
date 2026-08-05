@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-05T05:52:56.892Z",
+    "capturedAt": "2026-08-05T08:45:24.301Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-05T05:52:56.892Z",
-      "mood_score": 0.437,
+      "captured_at": "2026-08-05T08:45:24.301Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -41,20 +41,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays following a late finish of engineering work."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 1,
           "recency_weight": 1.04,
           "excerpt": "(Official Met source) ON SCENE: Full 130mph Police Chase Captured on Bodycam \"My Girlfriend Just Cheated on Me\". This was posted on the Met's YouTube channel today - some great wor"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Every time my late flights from Aberdeen are delayed, getting me back to London at like 2am, the Hammersmith Broadway McDonalds being 24 hours is a life saver"
         },
         {
           "source_family": "public",
@@ -78,36 +78,36 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Honestly not an anti-London person at all, most of my life’s highlights have been in this city. And i will always come back here because i have a lot here to come back every once i"
+          "excerpt": "We lived in Streatham for 10 years. It's kind of SSW. If you drew a line between SW and SE London, Streatham would be quite close to that line."
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.039,
+        "source_item_count": 94,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.845
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-05T05:52:56.892Z",
-      "mood_score": 0.401,
+      "captured_at": "2026-08-05T08:45:24.301Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -116,20 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "German guy here: It is weird to try and explain it, but you kind of know from your gut when to knock and when to applaud normally. If I had to try and explain, I would say applaudi"
-        },
-        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+          "excerpt": "Berlin transit U5, M4: Delays 8 trips delayed"
         },
         {
           "source_family": "news",
@@ -154,28 +146,36 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "New bike speed helpers. As seen on Invalidenstrasse between Hauptbahnhof and Luisenstrasse. If you're going 20 kph and the bike is in the green zone, the light ahead will be green "
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": 0.004,
+        "source_item_count": 116,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-05T05:52:56.892Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-08-05T08:45:24.301Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 60,
+        "public": 54,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,59 +189,59 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "That box looks great! Maybe I can ask landlord to pay for it since I won't need it after but that's a great idea. Haha yes I can try to rally some friends to work. You're right I t"
+          "excerpt": "Why Are Sam Altman's Eye Scanners in a Richmond District Coffee Shop?. Was just getting coffee at Little Sweet on 3rd Ave and Geary, and noticed there is a World Orb device next to"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "No. I’m just staying on topic. The topic is about Prop 13 somehow drives up home prices. You’re against it but can’t really explain why. Also what you have argued, while irrelevant"
+          "excerpt": "Have you Google mapped the walk to Forest Hill station? Doesn't seem like that far a walk from Twin Peaks. I live by the 36 but often walk down to Glen Park or over to Miraloma mar"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Of course it’s going to be empty for a while. High rent but needs to be affordable, has to go through all the city’s ridiculous requirements and approvals and will probably need to"
+          "excerpt": "Freebirds in Austin, early 2000s are the best burritos that have been. Potle was good originally. 16th street are darned good in the Mission. Mext question"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "used to go to fitnessSF on castro because it was close. almost always crowded, i managed to go at the same time as the crossfit crazies who would have 15 sets of dumbbells that the"
+          "excerpt": "melt me creamery in berkeley! they’re a small business that has a monthly rotating list of different flavors that are primarily asian inspired. they have a set of flavors that are "
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "You kinda have to be there. When my building was for sale 100-150 people came through both units fully unsupervised for hours. Protect your irreplaceables well. And be a dick to yo"
+          "excerpt": "Any good places to study in the evenings?. My post was removed from the SF page so im reposting here I have been frequenting some libraries for my studies but after 5pm where could"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.004,
+        "source_item_count": 120,
+        "average_valence": 0.023,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-05T05:52:56.892Z",
+      "captured_at": "2026-08-05T08:45:24.301Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.816
       }
     }
   ]
