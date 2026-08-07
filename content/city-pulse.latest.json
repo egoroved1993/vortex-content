@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-06T15:24:20.662Z",
+    "capturedAt": "2026-08-07T00:07:54.467Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-06T15:24:20.662Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-08-07T00:07:54.467Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier faulty train at Leytonstone. Tickets are being accepted on London Buses, t"
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Monday 3, Tuesday 4, Wednesday 5 and Thursday 6 August, after 2345 each evening, no service westbound from"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Monday 3, Tuesday 4, Wednesday 5 and Thursday 6 August, after 2330 each evening, no service between New C"
         },
         {
           "source_family": "public",
@@ -63,51 +79,34 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I'm it will provide little consolation to him or his family, as I saod it's a tragedy. I'm not saying the police did a good job and we should forget the mess ever happened. There w"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Sure, but you are assuming someone on 116k has zero as a deposit. By the time you hit 116k you are probably on house 2, or 3, so have built up pretty good equity. And a 200-300k de"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "If you spend a long time in the 125-160k bracket you’re strongly incentivised to retire early because you have a massive pension pot compared to the lifestyle you can afford on 100"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.017,
+        "source_item_count": 96,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-06T15:24:20.662Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-08-07T00:07:54.467Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9, M6, S7: Delays 3 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,23 +145,31 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Have you ever read about the concept of Vor-Bewährung? It gives the DAs office the chance to actively control if s young offender is eligible for parole. To do that, they are allow"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
         "source_item_count": 115,
-        "average_valence": 0.013,
+        "average_valence": 0.024,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-06T15:24:20.662Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-08-07T00:07:54.467Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 126,
-        "average_valence": -0.045,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-06T15:24:20.662Z",
+      "captured_at": "2026-08-07T00:07:54.467Z",
       "mood_score": 0.303,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -310,7 +309,7 @@
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 0.802
       }
     }
   ]
