@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-07T19:05:13.951Z",
+    "capturedAt": "2026-08-07T20:49:01.595Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 418
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-07T19:05:13.951Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-08-07T20:49:01.595Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -41,28 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between Leytonstone and Epping / Hainault via Newbury Park and between North Acton and West"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Whitechapel and Shenfield due to an earlier line side fire at Ilford. Tickets are being accepted o"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Whitechapel and Shenfield due to an earlier line side fire at Ilford. Tickets are being accepted o"
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "‘I just stick my head out the window and make the noise with my mouth’ - can you help me identify the advert?. I vividly remember an advert, perhaps from the late 90’s/ early 00’s,"
         },
         {
           "source_family": "transport",
@@ -79,34 +63,51 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to train cancellations due to unavailability of train drivers."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Rent is 1415, salary is 4100 The amount of money I saved when my ex was living with me and we paid 700 each... I can see why people stay in relationships longer than they should"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.074,
+        "source_item_count": 93,
+        "average_valence": -0.07,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-07T19:05:13.951Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-08-07T20:49:01.595Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "That's a lot of math to say 63 euros a month is not an issue for you and you don't even need to think about it. I'm glad. For me it 63 euros of after rent has already eaten up abou"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -123,58 +140,42 @@
           "excerpt": "Places for Trainspotting near Berlin?. My husband loves trains. Does anyone have a good spot where the ICEs are driving through at speed around Berlin?"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "OKTOBERFEST BERLIN. Hi everyone hope your well, Me and a few friends are coming to Berlin in October in hope to go to Oktoberfest. Is there celebrations in Berlin or is Munich the "
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Find of the week / Fundstück der Woche. Found at Nollendorfplatz on a Red Bull vending machine (which is located on the U2 track to Ruhleben). The sticker say: \"Dear LGBTQ\\* Commun"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "There's the central waiting list every 3 months, yeah. I can't tell you how long you gotta wait, though. Two friends of mine did a private diagnosis, it's not cheap, but it might b"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Today I went on a mission to find these glasses, I went to fielmann, Apollo, mister spex, even tried a few Apothekes and the Deutsche Technik Museum. I eventually found a pair at F"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": 0.006,
+        "source_item_count": 114,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-07T19:05:13.951Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-08-07T20:49:01.595Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 55,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,15 +193,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "equinox has the best gym and if you just want gym equipment, i would go with them. i had to end my subscription bc the class are always over crowded and i am not into gym equipment"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The recipes I see they just use bread flour or some call for 00 flour which is the same as that other famously expensive food, pizza. Flour prices might be up overall, but nothing "
+          "excerpt": "You’re living in one of the most expensive cities in the country – every business in the city knows this and is charging accordingly. Maybe go to a gym in a shittier neighborhood o"
         },
         {
           "source_family": "public",
@@ -216,7 +209,15 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Which Bar to take the boyz. Hola chat!! Looking for a good spot to take some of my friends- we're all 30s and live here lol but we just want some suggestions of bars we've never be"
+          "excerpt": "I want to take my gf to a nice restaurant that closes late. Hey everyone, I don’t live in SF but have a long distance GF there so I visit often. I’m looking for a nice restaurant t"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "SOS Bakeshop in Oakland has the chewiest macarons I’ve had in this area, although they’re a bit less crispy than I like. You can try reaching out to Sandy Kuma who is a microbakery"
         },
         {
           "source_family": "public",
@@ -224,23 +225,23 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I want to take my gf to a nice restaurant that closes late. Hey everyone, I don’t live in SF but have a long distance GF there so I visit often. I’m looking for a nice restaurant t"
+          "excerpt": "Whole lechon belly in Bay Area?. Hello, do you have a recommended place where to get a whole lechon belly? Maybe 5-10 lbs or so? I know Ling Nam sells one and there’s Bai Lechon, b"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.017,
+        "source_item_count": 115,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-07T19:05:13.951Z",
+      "captured_at": "2026-08-07T20:49:01.595Z",
       "mood_score": 0.289,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.838
+        "freshness_score": 0.836
       }
     }
   ]
