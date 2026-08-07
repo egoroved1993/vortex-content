@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-07T03:53:52.265Z",
+    "capturedAt": "2026-08-07T05:45:14.252Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-07T03:53:52.265Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-08-07T05:45:14.252Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 27,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,36 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays while we fix a points failure at Northumberland Park."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "In 2018 over Christmas i was on my way home from uni and someone brought their large christmas tree onto the tube I was impressed not only that they had managed it but also that th"
+          "excerpt": "maybe book a refundable or cheap hostel night in case the show runs late etc. it will be super congested and rowdy so traffic doesn't move well. that drive is 30 mins to 1 hour 10 "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Mania is one thing, it's the transition into depression that really sucks. Just be safe. If you had tripped and fell and broken your shin instead of hurting it, did you have a plan"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Just stay overnight at a cheap airbnb. You don't wanna ruin a good day with the stress of travelling back home. Trust me, been there done that and it's not worth it."
         },
         {
           "source_family": "public",
@@ -54,59 +79,34 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Why was the post about cinema etiquette removed?. The OP of that post was 100% spot on, people at the cinema are absolutely vile nowadays and it's really getting out of control. So"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "when i had early access for a different concert we were given numbered wristbands and people were good with quick loo/food breaks. we were let into the concert bit about 5:30/6pm s"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Saw some pissed wahoos yelling “WOOOHOOOOOOO!!!!” at the top of their lungs before they made a sharp turn into a street I knew was already treacherous for any kind of riding. A few"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah Ealing goes crazy with the trees (in a good way of course). They just planted 100s of trees on the streets where my parents live - not just their street, but the surrounding 1"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.013,
+        "source_item_count": 96,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-07T03:53:52.265Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-08-07T05:45:14.252Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -153,25 +145,33 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I dont think you have many legal options as long as: The poster is high enough, doesnt obstruct a traffic sign, Isnt obstructing the lamppost number or radio receiver, is atleast t"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.003,
+        "source_item_count": 114,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-07T03:53:52.265Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-08-07T05:45:14.252Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 51,
@@ -188,62 +188,62 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I encountered a lot of delays in NYC in June. It seemed worse because my previous two vacations were to Japan and Paris. I have terrible BART karma apparently too."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Vote for me I'm bringing back Playland \"Funland\" from Fulton to Lincoln. Equipped with food trucks that aren't expensive because of ridiculous laws that prevent them from making mo"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "That's good to know that you've found it to be worth it going out of network! Thank you for this! After two Kaiser therapists, I thought I might just not be a therapy-oriented pers"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "If I let my lease go month-to-month how often can the landlord raise my rent? (not under rent control). My lease is renewing in September and I was thinking of letting it go month "
+          "excerpt": "Which Bar to take the boyz. Hola chat!! Looking for a good spot to take some of my friends- we're all 30s and live here lol but we just want some suggestions of bars we've never be"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Prop 13 makes it so the displacement part doesn't happen. Not to mention rent control in SF. You can complain about gentrification anywhere else, but definetly not in California. E"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I can, I have, and I will, because while you have a valid point, it is not an all-encompassing one. Proposition 13 only helps you if your foot is already in the door. It does not h"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Definitely look into SF Rec/Park classes, as linked above. You're not too late for fall registration, which opens at 10am on Saturday August 15. If you have your heart set on getti"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Ah, I see. So many of us are between a rock and a hard place with cost of living in this (and most other) cities. It’s pricey, but so glad that it’s working for you and your family"
+          "excerpt": "Whole lechon belly in Bay Area?. Hello, do you have a recommended place where to get a whole lechon belly? Maybe 5-10 lbs or so? I know Ling Nam sells one and there’s Bai Lechon, b"
         }
       ],
       "metadata": {
         "source_item_count": 117,
-        "average_valence": -0.022,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-07T03:53:52.265Z",
+      "captured_at": "2026-08-07T05:45:14.252Z",
       "mood_score": 0.303,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 24,
@@ -303,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": 0.009,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.806
+        "freshness_score": 0.81
       }
     }
   ]
