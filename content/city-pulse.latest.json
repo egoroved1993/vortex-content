@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-07T16:03:12.195Z",
+    "capturedAt": "2026-08-07T17:52:54.044Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-07T16:03:12.195Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-08-07T17:52:54.044Z",
+      "mood_score": 0.472,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Similar arguments were made in the 1990s about US healthcare versus the NHS: America was supposedly more dynamic and efficient. But decades later, the opioid crisis showed the dang"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between Leytonstone and Epping / Hainault via Newbury Park and between North Acton and West"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Whitechapel and Shenfield, and SEVERE DELAYS on the rest of the line due to an earlier line side fire"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Whitechapel and Shenfield while deal with a line side fire at Ilford. MINOR DELAYS between Padding"
+          "excerpt": "London transit Elizabeth line: Part Suspended No service between Whitechapel and Shenfield, and SEVERE DELAYS on the rest of the line due to an earlier line side fire"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Whitechapel and Shenfield while deal with a line side fire at Ilford. MINOR DELAYS between Padding"
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to train cancellations due to unavailability of train drivers."
         },
         {
           "source_family": "transport",
@@ -78,35 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 104,
-        "average_valence": -0.073,
+        "source_item_count": 92,
+        "average_valence": -0.082,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-07T16:03:12.195Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-08-07T17:52:54.044Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S3, 100: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -144,37 +153,29 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "cheapest, no non-sense option is S-Bahn from airport to Hauptbahnhof, and RE54 from there to Bamberg. All covered by Deutschlandticket, about 3 hours. If you lose the RE, just wait"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I welcome new U Bahn stations, but I think they are more needed in the East rather than to connect Spandau with a non-operating airport."
+          "excerpt": "There's the central waiting list every 3 months, yeah. I can't tell you how long you gotta wait, though. Two friends of mine did a private diagnosis, it's not cheap, but it might b"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": 0.006,
+        "source_item_count": 113,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-07T16:03:12.195Z",
+      "captured_at": "2026-08-07T17:52:54.044Z",
       "mood_score": 0.506,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +193,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I wouldn’t say 40% lol. The fog is mainly seasonal starting in May and letting up in late August/Sept. That’s not set in stone and can vary but it’s guaranteed. The rest of the yea"
+          "excerpt": "equinox has the best gym and if you just want gym equipment, i would go with them. i had to end my subscription bc the class are always over crowded and i am not into gym equipment"
         },
         {
           "source_family": "public",
@@ -200,7 +201,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Any problems that affect the habitability of the dwelling is well within the landlord's responsibility. Which includes health hazards and other nuisances by other tenants. There is"
+          "excerpt": "The recipes I see they just use bread flour or some call for 00 flour which is the same as that other famously expensive food, pizza. Flour prices might be up overall, but nothing "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Where to ticket for the Odyssey in IMAX 70mm?. My wife's brother had an emergency and he can't make it to our tickets to see The Odyssey at the AMC Metreon IMAX. It's sold out I re"
         },
         {
           "source_family": "public",
@@ -212,41 +221,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "YMCA. It’s the same price as the others but they do a lot of good in the community at least. The others are owned by PE whose only reason for being is for you use the facilities ju"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "their from the midwest. it’s kitschy, it has good drinks and it’s been an SF staple for like 80 years. go to a nearby rooftop for drinks after for a cool night panoramic view of th"
+          "excerpt": "I want to take my gf to a nice restaurant that closes late. Hey everyone, I don’t live in SF but have a long distance GF there so I visit often. I’m looking for a nice restaurant t"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
+        "source_item_count": 121,
         "average_valence": 0.017,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-07T16:03:12.195Z",
-      "mood_score": 0.295,
+      "captured_at": "2026-08-07T17:52:54.044Z",
+      "mood_score": 0.289,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 34,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -279,10 +280,10 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0.5,
+          "language": "es",
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Si us interessa el disseny contemporani i la roba basada en criteris ètics I sostenibles, a l'Eixample hi ha una botiga independent molt ben seleccionada que es diu the Good Store "
+          "excerpt": "Lo que más me molesta a mí últimamente son las motos. Creo que en los últimos meses ha aumentado mucho el número de motos con motores potentes. En cada semáforo... es muy desagrada"
         },
         {
           "source_family": "signals",
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.015,
+        "source_item_count": 96,
+        "average_valence": -0.031,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.85
+        "freshness_score": 0.843
       }
     }
   ]
