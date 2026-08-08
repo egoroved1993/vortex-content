@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-08T19:35:08.100Z",
+    "capturedAt": "2026-08-08T20:37:12.423Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-08T19:35:08.100Z",
-      "mood_score": 0.432,
+      "captured_at": "2026-08-08T20:37:12.423Z",
+      "mood_score": 0.422,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "American here; How big was The Crystal Maze?!. Hi friends; currently on vacation and In between exploring the city I put in YouTube more as background and somehow my algorithm has "
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,37 +78,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to train cancellations. Tickets are accepted on London Buses, Greater Anglia, Weaver li"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.083,
+        "source_item_count": 96,
+        "average_valence": -0.11,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-08T19:35:08.100Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-08-08T20:37:12.423Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -116,28 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Let’s say how it is: they are a populist party, much as the AfD. Sure, with completely different, often opposing goals, but they want a lot of things that sound good to a group of "
-        },
-        {
           "source_family": "transport",
           "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7, M6: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "OKTOBERFEST BERLIN. Hi everyone hope your well, Me and a few friends are coming to Berlin in October in hope to go to Oktoberfest. Is there celebrations in Berlin or is Munich the "
+          "excerpt": "Berlin transit S3, M6, M4: Delays 3 trips delayed"
         },
         {
           "source_family": "news",
@@ -154,28 +138,44 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Well, apparently, she needs a dad that cares and can get her a present (Yes I'm assuming boss is a he)"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Lost one ear from my airpods in Duisburg Mitte. Hey, I lost an Airpod in Duisburg tonight around 11:20pm, it was in the way between Duisburg HBF to Zoo/Uni Straßenbahn, i was in my"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.007,
+        "source_item_count": 115,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-08T19:35:08.100Z",
+      "captured_at": "2026-08-08T20:37:12.423Z",
       "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 62,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,19 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Stats don’t matter to people. You can have as many car accidents and if thousands of people die or get seriously injured, it’s just noise and statistics. If someone sees a fight or"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Yep, the last mile problem it is called. Doing that for low density areas is tricky as there isn't a way to affordably provide good public transit in low density areas. Hopefully o"
+          "excerpt": "Dead Tribute Bands. Im in the bay area for the entire month. Looking for some good tribute/cover bands (there's a difference, right ??). Can anyone give me any good spots / shows c"
         },
         {
           "source_family": "public",
@@ -225,29 +217,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "That depends ok what you’re looking for! Stanford Federal Credit Union has some great new car loan rates and 40 year first time home buyer loans, and They also have a $500-$620 bon"
+          "excerpt": "My husband goes to Gents Barber Club in the mission and always has a good experience"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.56,
+          "excerpt": "BART says failure of aging router caused morning rush-hour chaos - San Francisco Chronicle. BART says failure of aging router caused morning rush-hour chaos"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": 0.007,
+        "source_item_count": 117,
+        "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-08T19:35:08.100Z",
-      "mood_score": 0.286,
+      "captured_at": "2026-08-08T20:37:12.423Z",
+      "mood_score": 0.285,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.041,
+        "source_item_count": 89,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.812
       }
     }
   ]
