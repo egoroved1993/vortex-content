@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-09T15:37:46.572Z",
+    "capturedAt": "2026-08-09T16:42:33.625Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 433
+    "totalItems": 441
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-09T15:37:46.572Z",
-      "mood_score": 0.392,
+      "captured_at": "2026-08-09T16:42:33.625Z",
+      "mood_score": 0.393,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -78,36 +78,35 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Amersham / Chesham / Watford and Harrow-on-the-Hill southbound only while we re"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Amersham / Watford due to an earlier fire alert at Northw"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.084,
+        "source_item_count": 107,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-09T15:37:46.572Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-08-09T16:42:33.625Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,22 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Once was in the M27 coming from Moabit with this massive construction side. Bus was full like a sardienbüchse. Bus was very late and the driver had to announce a huge different rou"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,37 +128,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It is totally possible, depending on the region and how big you want your house to be. Most people just are not willing to sacrifice their annual vacations or driving their expensi"
+          "excerpt": "No but a big city 5 years ago Also discouraged because it can lead to being behind on schedule and people getting angry because you did not open them"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Thank you so much, I’ll try this! I don’t want the public beach, I prefer the less crowded sides of the lake where there’s basically forest, it goes downhill, there’s a path and th"
+          "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.031,
+        "source_item_count": 128,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
-          "transit",
+          "events",
           "routine"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-09T15:37:46.572Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-08-09T16:42:33.625Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,22 +188,6 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I took BART from Martinez to Berkeley for a while and it was both slower than driving and more expensive than paying for gas in my truck."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Skyrocketing rent have nothing to do with homeless people in tents on the streets. You really think someone goes from paying $3200 last month and decides to be homeless when the re"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -213,41 +196,57 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I looked it up and this is true. The landlord can force a new contract. Otherwise, the lease goes month to month."
+          "excerpt": "Where to ticket for the Odyssey in IMAX 70mm?. My wife's brother had an emergency and he can't make it to our tickets to see The Odyssey at the AMC Metreon IMAX. It's sold out I re"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Dead Tribute Bands. Im in the bay area for the entire month. Looking for some good tribute/cover bands (there's a difference, right ??). Can anyone give me any good spots / shows c"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Syrians (fisherman’s wharf, a rare exception) is a great Asian fusion breakfast spot, people love it. Mama’s in North Beach is a classic. Sisterita in the Financial Districr/Chinat"
+          "excerpt": "I loved this area when I lived here. Another good spot for your age group is Temescal / Bushrod, lots to do - or even the Berkeley / Oakland border."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Working with a good real estate who can line up a contractors inspection prior to making offers on homes you are interested in is a good starting point. Brining random contractors "
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.008,
+        "source_item_count": 118,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-09T15:37:46.572Z",
-      "mood_score": 0.285,
+      "captured_at": "2026-08-09T16:42:33.625Z",
+      "mood_score": 0.284,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.045,
+        "source_item_count": 88,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.806
       }
     }
   ]
