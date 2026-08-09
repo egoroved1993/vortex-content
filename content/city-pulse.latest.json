@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-08T23:34:48.454Z",
+    "capturedAt": "2026-08-09T02:09:05.324Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-08T23:34:48.454Z",
-      "mood_score": 0.386,
+      "captured_at": "2026-08-09T02:09:05.324Z",
+      "mood_score": 0.399,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -62,14 +62,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to train cancellations. Tickets will be accepted on London Buses, Mildmay line, Elizabet"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Lioness: Planned Closure LIONESS LINE: Saturday 8 and Sunday 9 August, no service between Euston and Watford Junction. There will also be no BAKE"
         },
         {
@@ -78,23 +70,31 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 9 August, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Batt"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I could say the same about brits also. Friday night on a packed tube? Loud brits. Pub after work on a Thursday? Loud brits. Stag holiday in Amsterdam? Loud brits. I could care less"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.1,
+        "source_item_count": 89,
+        "average_valence": -0.062,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-08T23:34:48.454Z",
+      "captured_at": "2026-08-09T02:09:05.324Z",
       "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -163,18 +163,18 @@
           "routine",
           "events"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-08T23:34:48.454Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-08-09T02:09:05.324Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +186,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Is SF Zoo free for kids under 2? I can't find any clarification and it seems pretty darn expensive for a small toddler."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Low income apartments/housing. Are there any low income house communities in San Mateo county, Union City/Fremont/Milpitas, or Santa Clara County. Looking for an apartment to rent "
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -209,38 +225,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I want to take my gf to a nice restaurant that closes late. Hey everyone, I don’t live in SF but have a long distance GF there so I visit often. I’m looking for a nice restaurant t"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "My husband goes to Gents Barber Club in the mission and always has a good experience"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "BART says failure of aging router caused morning rush-hour chaos - San Francisco Chronicle. BART says failure of aging router caused morning rush-hour chaos"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.005,
+        "source_item_count": 115,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-08T23:34:48.454Z",
+      "captured_at": "2026-08-09T02:09:05.324Z",
       "mood_score": 0.285,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -303,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 89,
-        "average_valence": -0.045,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.818
       }
     }
   ]
