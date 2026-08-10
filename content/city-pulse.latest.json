@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-10T16:59:40.908Z",
+    "capturedAt": "2026-08-10T17:57:29.341Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 441
+    "totalItems": 442
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-10T16:59:40.908Z",
-      "mood_score": 0.469,
+      "captured_at": "2026-08-10T17:57:29.341Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -46,23 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between High Street Kensington and Edgware Road due to an earlier fire alert. London buses"
         },
         {
           "source_family": "transport",
@@ -78,24 +62,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Acton Town and Heathrow Airport while we fix a signal failure at Osterley. London"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Late 40s and nothing in the average week. Bottomless brunches are pretty much the only time I drink and I do those every 3-4 months."
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.091,
+        "source_item_count": 97,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-10T16:59:40.908Z",
-      "mood_score": 0.417,
+      "captured_at": "2026-08-10T17:57:29.341Z",
+      "mood_score": 0.413,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,31 +154,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Bengaluru to Germany Movement. Dear Friends, I am working in a product based company at Bengaluru and earning 38 LPA (with variable). I am getting an opportunity in Berlin for 85k."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.009,
+        "source_item_count": 118,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-10T16:59:40.908Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-08-10T17:57:29.341Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 132,
-        "average_valence": -0.018,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-10T16:59:40.908Z",
+      "captured_at": "2026-08-10T17:57:29.341Z",
       "mood_score": 0.289,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.819
       }
     }
   ]
