@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-10T06:14:40.297Z",
+    "capturedAt": "2026-08-10T08:43:57.440Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 424
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-10T06:14:40.297Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-08-10T08:43:57.440Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 22,
@@ -40,6 +40,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays North Acton to West Ruislip / Ealing Broadway and Leytonstone to Hainault via Newbury Park,"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,15 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: No service between Victoria and Brixton while we fix a points failure at Brixton. MINOR DELAYS on the res"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Part Suspended Victoria Line: No service between Victoria and Brixton while we fix a points failure at Brixton. MINOR DELAYS on the res"
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to an earlier points failure at Brixton. London Underground tickets will be accepted on"
         },
         {
           "source_family": "public",
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.072,
+        "average_valence": -0.06,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-10T06:14:40.297Z",
-      "mood_score": 0.415,
+      "captured_at": "2026-08-10T08:43:57.440Z",
+      "mood_score": 0.414,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,10 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5, S3: Delays 2 trips delayed"
+          "excerpt": "Berlin transit S9, S3: Delays 4 trips delayed"
         },
         {
           "source_family": "public",
@@ -157,19 +157,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.016,
+        "source_item_count": 121,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-10T06:14:40.297Z",
+      "captured_at": "2026-08-10T08:43:57.440Z",
       "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -241,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-10T06:14:40.297Z",
+      "captured_at": "2026-08-10T08:43:57.440Z",
       "mood_score": 0.282,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.813
       }
     }
   ]
