@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-10T15:05:05.016Z",
+    "capturedAt": "2026-08-10T16:59:40.908Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 440
+    "totalItems": 441
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-10T15:05:05.016Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-08-10T16:59:40.908Z",
+      "mood_score": 0.469,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: No service between Woodford and Epping/Hainault via Grange Hill while we respond to a fire alert at Woodfo"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between High Street Kensington and Edgware Road due to an earlier fire alert. London buses"
         },
         {
           "source_family": "transport",
@@ -65,65 +73,47 @@
           "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Hayes & Harlington and Heathrow Airport due to a tunnel being closed for safety reasons. Please us"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If anyone is searching as of this minute and has also been on a wild goose chase Finsbury Park don’t bother going until 3-5 there’s been twice delays Bond Street there is none Trea"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Football in South America is a hooligans game played by hooligans tbf. Otherwise obvious one is bare knuckle boxing or any kind of unregulated amateur fighting. Darts can get prett"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.063,
+        "source_item_count": 98,
+        "average_valence": -0.091,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-10T15:05:05.016Z",
-      "mood_score": 0.416,
+      "captured_at": "2026-08-10T16:59:40.908Z",
+      "mood_score": 0.417,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
         "de",
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, S3, M4: Delays 8 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -139,6 +129,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "New Driver car rental options?. For a new driver, what are the car rental options in Berlin? I see that only Sixt & Miles allow drivers with a license less than 1 year old to rent "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Probably some admin problem keeping BSR guys from collecting it. So 100% solveable from your building admin. Reduce rent until problem is fixed, google how much and how exactly... "
         },
         {
           "source_family": "public",
@@ -158,25 +156,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.012,
+        "source_item_count": 116,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-10T15:05:05.016Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-08-10T16:59:40.908Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 63,
+        "public": 66,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -190,19 +188,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "what are you talking about the buyout is to get me to move so the landlord can double the rent for the next renter"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I agree we shouldn’t push people out of the city. But rent control has created strange distortions. A rent-controlled 3-bedroom can cost less than a market-rate studio. That traps "
+          "excerpt": "Is $120/person for electric reasonable? (2 adults + 2 kids). Hi, moving to SF, and we have 24 hours to accept some lease terms- hoping to get a local's input. Base rent for a 700sf"
         },
         {
           "source_family": "public",
@@ -210,7 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Leaving SF and wanted to have my friend move in after. Jacked my rent up from $2475 to $4875 to bring it to “market rates.” Insane."
+          "excerpt": "Are you staying in SF before Napa? If so, rent from a location in the city instead of SFO."
         },
         {
           "source_family": "public",
@@ -218,7 +208,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Wow, the homes in San Francisco are as expensive as Vancouver Canada now where I live live. However, our median i income is pretty much half of those in San Francisco at 65K…"
+          "excerpt": "If you only need a car for 1-2 days and are staying in the city longer, just rent in the city for those days"
         },
         {
           "source_family": "public",
@@ -226,29 +216,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Homes are just as expensive where I live in Vancouver Canada, however our medium income is half of San Francisco’s at only $64.5k a year"
+          "excerpt": "Rent control harms poor people in the long run. It drives the cost of living up for everybody. It increases tenant harassment. It is a net bad in the long run."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Parking in SF can get very expensive. when you are in SF are you staying in the City? if so, ride share or public transit might be better and then rent a car for the days you go to"
         }
       ],
       "metadata": {
-        "source_item_count": 129,
-        "average_valence": -0.055,
+        "source_item_count": 132,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-10T15:05:05.016Z",
+      "captured_at": "2026-08-10T16:59:40.908Z",
       "mood_score": 0.289,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -284,34 +282,34 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "An imam wakes at 4 am for morning prayers so they need to go to bed around 10ish.. if you take that as an insult , it shows your lack of culture sunshine .... Dude its bustling cit"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+          "excerpt": "Just broken. Nowadays heat makes it even worse You can press the button at the station, left to the front wheel, to mark it as broken. Whenever 2 persons do this Bicing labels it a"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Tarda de pluges torrencials que provoquen talls a Rodalies i afectacions a diverses carreteres. L'aigua ha envaït l'Eix Transversal a l'altura de Rajadell i diverses línies de Roda"
+          "excerpt": "An imam wakes at 4 am for morning prayers so they need to go to bed around 10ish.. if you take that as an insult , it shows your lack of culture sunshine .... Dude its bustling cit"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Shitty service, thats it. Im very dissapointed that they decided to work with current provider instead of ditching them and adopting Nextbike solution which already works quite goo"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.033,
+        "source_item_count": 95,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
-          "routine",
-          "tourism"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.819
+        "freshness_score": 0.82
       }
     }
   ]
