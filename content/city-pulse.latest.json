@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-10T02:14:17.063Z",
+    "capturedAt": "2026-08-10T04:44:13.483Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-10T02:14:17.063Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-08-10T04:44:13.483Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -40,64 +41,64 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between Leytonstone and Epping / Hainault via Newbury Park and between Woodford and Hainault"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Hayes & Harlington and Heathrow Terminals and SEVERE DELAYS between Hayes & Harlington and Paddington"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Part Suspended No service between Hayes & Harlington and Heathrow Terminals and SEVERE DELAYS between Hayes & Harlington and Paddington"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Part Suspended Victoria Line: No service between Brixton and Victoria due to a late finish of engineering work Tickets being accepted o"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - Inside Housing. News - London landlord acquires Key Worker Living Rent homes in de"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - theguardian.com. London tube strike causes huge disruption, with many services hit"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground strike action: March – June 2026 - UCL | University College London. London Underground strike action: March – June 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.048,
+        "source_item_count": 89,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.834
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-10T02:14:17.063Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-08-10T04:44:13.483Z",
+      "mood_score": 0.414,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 14,
         "review": 2,
@@ -106,6 +107,7 @@
         "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6, S7: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -138,36 +148,28 @@
           "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Kantine style eating Schöneberg. I am currently finishing my doctoral dissertation while in high pregnancy and I no longer have the capacity/time to cook. At the same time, I don't"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.008,
+        "source_item_count": 119,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-10T02:14:17.063Z",
+      "captured_at": "2026-08-10T04:44:13.483Z",
       "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -234,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-10T02:14:17.063Z",
+      "captured_at": "2026-08-10T04:44:13.483Z",
       "mood_score": 0.285,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -308,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.806
+        "freshness_score": 0.804
       }
     }
   ]
