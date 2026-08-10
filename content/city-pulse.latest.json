@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-10T08:43:57.440Z",
+    "capturedAt": "2026-08-10T10:22:54.400Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-10T08:43:57.440Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-08-10T10:22:54.400Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays No service between Hayes & Harlington and Heathrow Terminals and SEVERE DELAYS between Hayes & Harlington and Paddington"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Hayes & Harlington and Heathrow Airport due to a tunnel being closed for safety reasons. Please us"
         },
         {
           "source_family": "transport",
@@ -62,15 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Suspended No service between Hayes & Harlington and Heathrow Terminals and SEVERE DELAYS between Hayes & Harlington and Paddington"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to an earlier points failure at Brixton. London Underground tickets will be accepted on"
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier points failure at Brixton."
         },
         {
           "source_family": "public",
@@ -78,29 +78,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Londoner that moved to the middle east between 22 and 30 and then back to London. I'm middle eastern so I want to go back, it's easier for me because those are my people, I blend i"
+          "excerpt": "I found 2 charity shops which keep getting new stuff with tags from Nobody's Child, Fat Face and COS all the time and they're no more than £20 per dress, and I got most of my dress"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.06,
+        "source_item_count": 101,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-10T08:43:57.440Z",
-      "mood_score": 0.414,
+      "captured_at": "2026-08-10T10:22:54.400Z",
+      "mood_score": 0.417,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,23 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9, S3: Delays 4 trips delayed"
+          "excerpt": "Berlin transit S5: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I don't think that new rent for an apartment for family of 4 in Berlin will be that cheap."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "AFAIK it hasn't reopened after Covid. I mentioned those two as examples of canteens that don't exist any more. Was Rathaus Kreuzberg accessable for people without specific purpose "
+          "excerpt": "Stolen bike is parked back in its exact spot 2 days later and it's scary. The lock was picked, the thief left the lock in place and actually locked it as well. Now, the bike is bac"
         },
         {
           "source_family": "public",
@@ -154,11 +146,19 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Bengaluru to Germany Movement. Dear Friends, I am working in a product based company at Bengaluru and earning 38 LPA (with variable). I am getting an opportunity in Berlin for 85k."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.019,
+        "source_item_count": 118,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
@@ -169,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-10T08:43:57.440Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-08-10T10:22:54.400Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,11 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Is $120/person for electric reasonable? (2 adults + 2 kids). Hi, moving to SF, and we have 24 hours to accept some lease terms- hoping to get a local's input. Base rent for a 700sf"
+          "excerpt": "what are you talking about the buyout is to get me to move so the landlord can double the rent for the next renter"
         },
         {
           "source_family": "public",
@@ -201,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "You should read your sublease to see if they can increase the rent like that"
+          "excerpt": "Most police are unstable or have anger issues. (I believe it's the highest demographic of domestic violence) Its why they want to be cops in the 1st place."
         },
         {
           "source_family": "public",
@@ -209,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "In my experience, the tenants union has very limited drop in hours with long wait times, I found the Housing Rights Committee of SF was much more helpful because they have a phone "
+          "excerpt": "Leaving SF and wanted to have my friend move in after. Jacked my rent up from $2475 to $4875 to bring it to “market rates.” Insane."
         },
         {
           "source_family": "public",
@@ -217,32 +217,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I am assuming this would be really challenging close by the Bay Area just because of the extra noise and liability. Probably find a public park where you can get a permit for the c"
+          "excerpt": "Wow, the homes in San Francisco are as expensive as Vancouver Canada now where I live live. However, our median i income is pretty much half of those in San Francisco at 65K…"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Me too, it’s really loud this year. I’ve lived in this neighborhood over 15 years and used to go myself (but haven’t for a while). It usually never bothers me and I kind of like ha"
+          "excerpt": "Homes are just as expensive where I live in Vancouver Canada, however our medium income is half of San Francisco’s at only $64.5k a year"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.028,
+        "source_item_count": 123,
+        "average_valence": -0.039,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-10T08:43:57.440Z",
-      "mood_score": 0.282,
+      "captured_at": "2026-08-10T10:22:54.400Z",
+      "mood_score": 0.288,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -267,22 +267,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Met a ton of folks doing this in Barcelona, they would rent a car for 5EUR/day during the weekdays, decline the 30EUR/day insurance (great if your travel card provides benefits) an"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Lo que más me molesta a mí últimamente son las motos. Creo que en los últimos meses ha aumentado mucho el número de motos con motores potentes. En cada semáforo... es muy desagrada"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "One, 11 is already late if u wake early. Two, the main complain is the impunity of the terrazas not respecting the closing schedule. About the imam thing? Wtf are u talking? Did u "
         },
         {
@@ -300,17 +284,33 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "An imam wakes at 4 am for morning prayers so they need to go to bed around 10ish.. if you take that as an insult , it shows your lack of culture sunshine .... Dude its bustling cit"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Tarda de pluges torrencials que provoquen talls a Rodalies i afectacions a diverses carreteres. L'aigua ha envaït l'Eix Transversal a l'altura de Rajadell i diverses línies de Roda"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.052,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.819
       }
     }
   ]
