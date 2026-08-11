@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-11T02:20:25.565Z",
+    "capturedAt": "2026-08-11T04:24:56.716Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 257
+    "totalItems": 436
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-11T02:20:25.565Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-08-11T04:24:56.716Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Hayes & Harlington and Heathrow Airport due to a tunnel being closed for safety reasons. Please us"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Tuesday 11, Wednesday 12, Thursday 13 and Friday 14 August, until 0615, no service southbound from Willesd"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -62,49 +79,35 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Flip flops in the office?. Have noticed so many women this summer who are obviously going to the office/work wearing flip flops. Is this a new trend that has started because I don’"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "local_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "Sales of cool clothes and garden accessories soar as heat dominates spending. England’s progress to the semi finals of the World Cup helped drive a 3.8% increase in food sales, abo"
         }
       ],
       "metadata": {
-        "source_item_count": 49,
-        "average_valence": 0.009,
+        "source_item_count": 90,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "weather"
         ],
-        "freshness_score": 1.042
+        "freshness_score": 0.857
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-11T02:20:25.565Z",
+      "captured_at": "2026-08-11T04:24:56.716Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -112,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -143,39 +154,32 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Probably some admin problem keeping BSR guys from collecting it. So 100% solveable from your building admin. Reduce rent until problem is fixed, google how much and how exactly... "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
         }
       ],
       "metadata": {
-        "source_item_count": 70,
-        "average_valence": -0.031,
+        "source_item_count": 122,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
-          "routine",
-          "money"
+          "events",
+          "routine"
         ],
-        "freshness_score": 1.063
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-11T02:20:25.565Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-08-11T04:24:56.716Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 60,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -225,29 +229,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 76,
-        "average_valence": -0.067,
+        "source_item_count": 126,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-11T02:20:25.565Z",
+      "captured_at": "2026-08-11T04:24:56.716Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -299,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 62,
-        "average_valence": -0.01,
+        "source_item_count": 98,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 1.035
+        "freshness_score": 0.825
       }
     }
   ]
