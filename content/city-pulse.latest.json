@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-11T20:54:12.116Z",
+    "capturedAt": "2026-08-11T21:55:41.785Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-11T20:54:12.116Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-08-11T21:55:41.785Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -57,6 +57,14 @@
           "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction due to train cancellations."
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -71,33 +79,25 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.036,
+        "source_item_count": 85,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-11T20:54:12.116Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-08-11T21:55:41.785Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 13,
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,22 +146,30 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Flix Bus is slow and unreliable. Its more like cheap or maybe useful if one City doesn't have a good trainstation or an airport. I think you plan way to much (!) for a week. Hambur"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.007,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-11T20:54:12.116Z",
+      "captured_at": "2026-08-11T21:55:41.785Z",
       "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -241,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-11T20:54:12.116Z",
+      "captured_at": "2026-08-11T21:55:41.785Z",
       "mood_score": 0.294,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "transit",
           "weather"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.825
       }
     }
   ]
