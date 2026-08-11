@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-11T05:56:38.081Z",
+    "capturedAt": "2026-08-11T07:18:59.794Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-11T05:56:38.081Z",
-      "mood_score": 0.484,
+      "captured_at": "2026-08-11T07:18:59.794Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and West Ruislip / Ealing Broadway and between Leytonstone and Epping / H"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Hayes & Harlington and Heathrow Airport due to a tunnel being closed for safety reasons. Please us"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Rent the Airbnb for one night and squat on it, change the locks, go into malicious compliance mode."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "O2 Arena in a heatwave. Just wondering if anyone’s had experience in the O2 Arena during a heatwave. I’m going to the Joji concert on Thursday and it’s predicted to be 36 degrees. "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Flip flops in the office?. Have noticed so many women this summer who are obviously going to the office/work wearing flip flops. Is this a new trend that has started because I don’"
         }
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.048,
+        "average_valence": -0.069,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-11T05:56:38.081Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-08-11T07:18:59.794Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,22 +146,30 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.022,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-11T05:56:38.081Z",
+      "captured_at": "2026-08-11T07:18:59.794Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -236,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-11T05:56:38.081Z",
+      "captured_at": "2026-08-11T07:18:59.794Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.829
       }
     }
   ]
