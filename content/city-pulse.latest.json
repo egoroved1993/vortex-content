@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-12T11:52:44.418Z",
+    "capturedAt": "2026-08-12T13:22:34.802Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-12T11:52:44.418Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-08-12T13:22:34.802Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "Tenants need £75k income to rent in London – claim - Landlord Today. Tenants need £75k income to rent in London – claim"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,37 +62,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: No service between Willesden Green and Stanmore and MINOR DELAYS on the rest of the line while we respond"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I live in Belsize Park and the area is packed not only with celebs but also highly-regarded academics, writers, poets, dancers etc with lesser known media names. My neighbours alwa"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Part Suspended Jubilee Line: No service between Willesden Green and Stanmore and MINOR DELAYS on the rest of the line while we respond"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.073,
+        "source_item_count": 95,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-12T11:52:44.418Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-08-12T13:22:34.802Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,14 +121,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Stolen bike is parked back in its exact spot 2 days later and it's scary. The lock was picked, the thief left the lock in place and actually locked it as well. Now, the bike is bac"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "That‘s because you don’t understand economics or law that is. You want to pay damages to the companies, pay interest on the lump sum AS WELL AS all necessary investments/upkeep, th"
         },
         {
           "source_family": "public",
@@ -153,28 +145,36 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "As every other occasion for a milestone celebration in life, this one gets bigger quite naturally because those partys are status symbols. And its the first real chance for such a "
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.011,
+        "source_item_count": 115,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-12T11:52:44.418Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-08-12T13:22:34.802Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,27 +188,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "All of them are rent controlled but yeah the walk up is rough"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "He could have simply said \"I was against Prop K, but it won and so as Mayor I recognize that it's my job to carry out the will of the voters and build a kick-ass park. Let's go San"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Street closure for filming? what’s being filmed?. does anybody know why the area around golden gate park will be closed tomorrow for filming? apparently they don’t want any cars in"
+          "excerpt": "Sell of apartment building. Have any renters been through your landlord selling their apartment building? This is a 3 unit building. I read that under SF tenant laws they should no"
         },
         {
           "source_family": "public",
@@ -224,24 +208,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Sell of apartment building. Have any renters been through your landlord selling their apartment building? This is a 3 unit building. I read that under SF tenant laws they should no"
+          "excerpt": "Street closure for filming? what’s being filmed?. does anybody know why the area around golden gate park will be closed tomorrow for filming? apparently they don’t want any cars in"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "San Francisco animal medical center is pricey but Dr. Bechtel and Dr. Ybarra are really good with cats. My boys were born feral and they love Dr. Ybarra."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "What are good options for home internet in the marina other than Comcast?. Comcast is raising our bill by 50 bucks, for already not great service. I have my own router"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.014,
+        "source_item_count": 122,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-12T11:52:44.418Z",
-      "mood_score": 0.294,
+      "captured_at": "2026-08-12T13:22:34.802Z",
+      "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -269,22 +269,6 @@
           "excerpt": "Pues eso solo pasa con migrantes y con kilos chonis etc... He vivido en muchos sitios de Barcelona y también otras ciudades. El ruido solo viene cuando hay pantxos, killos o mozára"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Just broken. Nowadays heat makes it even worse You can press the button at the station, left to the front wheel, to mark it as broken. Whenever 2 persons do this Bicing labels it a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Shitty service, thats it. Im very dissapointed that they decided to work with current provider instead of ditching them and adopting Nextbike solution which already works quite goo"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -299,17 +283,33 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Tarda de pluges torrencials que provoquen talls a Rodalies i afectacions a diverses carreteres. L'aigua ha envaït l'Eix Transversal a l'altura de Rajadell i diverses línies de Roda"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "El Bicing, en xifres: més de 170.000 abonats i 7,8 usos per bicicleta al dia"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I really don't want to be an ass, because it looks amazingly well made, but you've built the state of Sagrada Familia 25 years ago. You are missing all the big towers!"
         }
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.017,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.822
       }
     }
   ]
