@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-12T02:25:36.376Z",
+    "capturedAt": "2026-08-12T04:52:59.764Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 409
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-12T02:25:36.376Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-08-12T04:52:59.764Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -48,6 +49,22 @@
           "excerpt": "Tenants need £75k income to rent in London – claim - Landlord Today. Tenants need £75k income to rent in London – claim"
         },
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading while we fix a signal system failure in the Ladbroke G"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Tuesday 11, Wednesday 12, Thursday 13 and Friday 14 August, until 0615, no service southbound from Willesd"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -56,45 +73,29 @@
           "excerpt": "Two heaped teaspoons of turmeric, 1 teaspoon of garlic powder, a very generous portion of onion salt , and a good few sprays of fry light. I also pour half a glass of water the tra"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK: July 2026 - Office for National Statistics. Private rent and house prices, UK: July 2026"
+          "valence": -0.433,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Wembley Park and Baker Street due to a late finish of engineering work. GOOD SER"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.025,
+        "source_item_count": 92,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-12T02:25:36.376Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-08-12T04:52:59.764Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -146,31 +147,31 @@
           "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.005,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-12T02:25:36.376Z",
+      "captured_at": "2026-08-12T04:52:59.764Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 45,
@@ -232,14 +233,14 @@
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-12T02:25:36.376Z",
+      "captured_at": "2026-08-12T04:52:59.764Z",
       "mood_score": 0.294,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
