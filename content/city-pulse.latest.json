@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-12T19:09:18.113Z",
+    "capturedAt": "2026-08-12T20:53:20.793Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 431
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-12T19:09:18.113Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-08-12T20:53:20.793Z",
+      "mood_score": 0.432,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.88,
+          "excerpt": "Tenants need £75k income to rent in London – claim - Landlord Today. Tenants need £75k income to rent in London – claim"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and Between Leytonstone and Epping / H"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between Leytonstone and Epping due to an earlier trespasser on the track at Leyton. MINOR DE"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between Leytonstone and Epping due to an earlier trespasser on the track at Leyton. MINOR DE"
         },
         {
           "source_family": "transport",
@@ -62,51 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Part Suspended District Line: No service between Turnham Green and Ealing Broadway while we fix a track fault at Northfields. GOOD SERV"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Run to the Maritime museum if you want solar glasses. I’ve been queuing up since 10 and I finally got my hands on the solar glasses. They mentioned they had around 5000 pairs this "
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Heathrow Terminals due to an earlier signal failure at Northfields."
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.041,
+        "source_item_count": 92,
+        "average_valence": -0.082,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-12T19:09:18.113Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-08-12T20:53:20.793Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,20 +116,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I waited for two hours. Total chaos once they moved the glass gifting area to behind the planetarium. Hoards of people cutting in line until it was no longer a line and just a mob "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Stolen bike is parked back in its exact spot 2 days later and it's scary. The lock was picked, the thief left the lock in place and actually locked it as well. Now, the bike is bac"
+          "excerpt": "So? Plenty of people in the Berlin club scene are in our 40s and 50s. Why on earth would you think late 30s is somehow too old? Have you actually been to a Berlin club?"
         },
         {
           "source_family": "public",
@@ -152,29 +153,29 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Just go to a random spot and ask the people if you can have a peek through theirs (It's not like everyone is constantly looking into the sun, even if you got glasses). Otherwise, i"
+          "excerpt": "I read their manifesto a few days ago and 1/3 is absolutely sensible stuff that I'd fully support, 2/3 sounds written by someone at a mental asylum. Silly example: legalizing fare "
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.013,
+        "source_item_count": 114,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-12T19:09:18.113Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-08-12T20:53:20.793Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 63,
+        "public": 74,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +193,23 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Meanwhile they've almost certainly been paying enough to cover the landlord's expenses plus a moderate profit the entire time. (And a higher rent than in 99% of the country.) Now t"
+          "excerpt": "It's also an incredibly interesting question of which is the correct financial decision. Lots of factors to take into account that are caused by both Prop 13 and rent control. You'"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "We had a good experience at VRAI on Hayes for sizing and trying on different metals, cuts, sizes. It helped me narrow down what I was interested in and was very low pressure and fu"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "One thing I will add as a queer person in the bay is that you may need to expand beyond Castro bars. The bay is very lgbt friendly and perhaps easier to make connections in other p"
         },
         {
           "source_family": "public",
@@ -208,45 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "My landlord gave me an offer verbally that I jumped on and said give me the paperwork asap. Then a month later he backed out. I was devastated. Now he’s got all sorts of reasons fo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "While I usually never side with landlords, it's insanely greedy of you to ask for money when you had the luxury of a rent controlled apartment for so long"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The rent on 1b not far from you has gone up 50% since I moved in around two years ago. Absolutely insane."
+          "excerpt": "have you ever met anyone who \"kept their rent controlled apartments and then sublet them for higher market rates\" because i certainly haven't"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.055,
+        "source_item_count": 139,
+        "average_valence": -0.052,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-12T19:09:18.113Z",
+      "captured_at": "2026-08-12T20:53:20.793Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 88,
+        "source_item_count": 86,
         "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 0.808
       }
     }
   ]
