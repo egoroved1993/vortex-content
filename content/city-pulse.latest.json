@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-12T00:01:24.612Z",
+    "capturedAt": "2026-08-12T02:25:36.376Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,23 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 245
+    "totalItems": 409
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-12T00:01:24.612Z",
-      "mood_score": 0.455,
+      "captured_at": "2026-08-12T02:25:36.376Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -41,12 +40,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Monday 10, Tuesday 11, Wednesday 12 and Thursday 13 August, after 2345 each evening, no westbound service"
+          "valence": -1,
+          "recency_weight": 1,
+          "excerpt": "Tenants need £75k income to rent in London – claim - Landlord Today. Tenants need £75k income to rent in London – claim"
         },
         {
           "source_family": "public",
@@ -54,7 +53,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Esteemed Londoners. My spouse and I will be in London for our 33rd Anniversary. I am looking for a restaurant for a nice, romantic dinner. We will be staying near the British Museu"
+          "excerpt": "Two heaped teaspoons of turmeric, 1 teaspoon of garlic powder, a very generous portion of onion salt , and a good few sprays of fry light. I also pour half a glass of water the tra"
         },
         {
           "source_family": "signals",
@@ -65,48 +64,48 @@
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Well, kinda, H&M was always low quality slop, I honestly prefer Primark, because at least the prices match the quality. I also found clothes from H&M tend to fall apart even quicke"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "There's a guy who does that between Watford and Euston. It always makes the train feel friendlier."
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Private rent and house prices, UK: July 2026 - Office for National Statistics. Private rent and house prices, UK: July 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 47,
-        "average_valence": -0.014,
+        "source_item_count": 87,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 1.045
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-12T00:01:24.612Z",
+      "captured_at": "2026-08-12T02:25:36.376Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, weather. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -148,36 +139,45 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Flix Bus is slow and unreliable. Its more like cheap or maybe useful if one City doesn't have a good trainstation or an airport. I think you plan way to much (!) for a week. Hambur"
+          "excerpt": "Good manners on elevators. Can we all agree that good manners re: elevators (like u bahn s bahn) would be having a look behind you before the doors close to see if somone else can "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 71,
+        "source_item_count": 120,
         "average_valence": -0.005,
         "dominant_themes": [
           "general",
-          "routine",
-          "weather"
+          "events",
+          "routine"
         ],
-        "freshness_score": 1.064
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-12T00:01:24.612Z",
-      "mood_score": 0.438,
+      "captured_at": "2026-08-12T02:25:36.376Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -199,7 +199,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Or just live in the Richmond lol I have 2 appts for rent rn."
+          "excerpt": "interesting, as a Los Altos resident we like going to downtown MV to get more options, and i don't find it overwhelming or crowded, and I hate crowds. You're right, not much cheape"
         },
         {
           "source_family": "public",
@@ -207,15 +207,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If you want to know the value of a buyout, one calculation done people use is roughly 3 or 4 years of the difference between your current rent and market rate. So if you are paying"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "it is apocalyptically expensive to land a place to live. do try and you will likely have a long commute, spread the word, complain, resist the notion that you g people coming here "
+          "excerpt": "To build any of this, developers would have to buy dozens of rent controlled apartment buildings shown in this location then relocate or buy out the tenants all of whom have right "
         },
         {
           "source_family": "public",
@@ -224,32 +216,40 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Street closure for filming? what’s being filmed?. does anybody know why the area around golden gate park will be closed tomorrow for filming? apparently they don’t want any cars in"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Storage facility that is actually secure ?. Just had my storage unit at the public storage on treat broken into through the ceiling. Could really use a recommendation for a facilit"
         }
       ],
       "metadata": {
-        "source_item_count": 70,
-        "average_valence": -0.036,
+        "source_item_count": 110,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-12T00:01:24.612Z",
-      "mood_score": 0.293,
+      "captured_at": "2026-08-12T02:25:36.376Z",
+      "mood_score": 0.294,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -301,14 +301,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.022,
+        "source_item_count": 92,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 1.029
+        "freshness_score": 0.819
       }
     }
   ]
