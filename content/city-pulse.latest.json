@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-13T04:57:11.585Z",
+    "capturedAt": "2026-08-13T06:22:31.354Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 412
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-13T04:57:11.585Z",
-      "mood_score": 0.393,
+      "captured_at": "2026-08-13T06:22:31.354Z",
+      "mood_score": 0.394,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: No service between Stratford and Stanmore westbound only due to a late finish of engineering work and NO S"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays following a late finish of engineering work and due to an earlier points failure at Stratfor"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate following a late finish of engineering work. Lon"
         },
         {
           "source_family": "news",
@@ -57,50 +65,42 @@
           "excerpt": "Tenants need £75k income to rent in London – claim - Landlord Today. Tenants need £75k income to rent in London – claim"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Part Suspended Jubilee Line: No service between Stratford and Stanmore westbound only due to a late finish of engineering work and NO S"
+          "valence": -1,
+          "recency_weight": 0.56,
+          "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - Inside Housing. News - London landlord acquires Key Worker Living Rent homes in de"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Wembley Park and Aldgate due to a late finish of engineering work. London Buses ar"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Tuesday 11, Wednesday 12, Thursday 13 and Friday 14 August, until 0615, no service southbound from Willesd"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.079,
+        "source_item_count": 92,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.857
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-13T04:57:11.585Z",
+      "captured_at": "2026-08-13T06:22:31.354Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -156,25 +156,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 115,
+        "source_item_count": 114,
         "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-13T04:57:11.585Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-08-13T06:22:31.354Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 47,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +186,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "It was lower Nob Hill in 1986-88, when I slept in the closet of a studio at 691 Post and paid $200 rent. Was rent controlled, total rent was $400. Managed to save enough to buy a h"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -208,15 +216,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "THAT IS A MASSIVE INCREASE. I am so sorry to your friend. And yes, I understand people have other bills to pay besides rent, but my friend is also a lawyer, but also a partner, so "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Whats with all the power outages?. All of park Merced is OUT and when I looked online, I saw news articles about another outage in SF two days ago, San Jose a few days ago, and eve"
+          "excerpt": "I didn't see a significant correction in 2009. I remember in order to get a nice place in lower Haight I had to be willing to give up two weeks of the free month of rent initially "
         },
         {
           "source_family": "public",
@@ -224,23 +224,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "As someone who's been here for the better part of 40 years, there have been big booms like this in the past. The difference this time is that the cost of living is up across the bo"
+          "excerpt": "Yeah that rule makes sense in areas where rent is $1500, and even then, run the numbers for your unique situation."
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.034,
+        "source_item_count": 120,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-13T04:57:11.585Z",
+      "captured_at": "2026-08-13T06:22:31.354Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
