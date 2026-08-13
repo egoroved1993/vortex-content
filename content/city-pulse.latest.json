@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-13T02:27:16.632Z",
+    "capturedAt": "2026-08-13T04:57:11.585Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,14 +16,14 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 405
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-13T02:27:16.632Z",
-      "mood_score": 0.405,
-      "mood_label": "mixed",
+      "captured_at": "2026-08-13T04:57:11.585Z",
+      "mood_score": 0.393,
+      "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -33,12 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: No service between Stratford and Stanmore westbound only due to a late finish of engineering work and NO S"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -48,52 +57,44 @@
           "excerpt": "Tenants need £75k income to rent in London – claim - Landlord Today. Tenants need £75k income to rent in London – claim"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - Inside Housing. News - London landlord acquires Key Worker Living Rent homes in de"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Part Suspended Jubilee Line: No service between Stratford and Stanmore westbound only due to a late finish of engineering work and NO S"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Part Suspended Metropolitan Line: No service between Wembley Park and Aldgate due to a late finish of engineering work. London Buses ar"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Tuesday 11, Wednesday 12, Thursday 13 and Friday 14 August, until 0615, no service southbound from Willesd"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.045,
+        "source_item_count": 100,
+        "average_valence": -0.079,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-13T02:27:16.632Z",
+      "captured_at": "2026-08-13T04:57:11.585Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -162,12 +163,12 @@
           "routine",
           "events"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-13T02:27:16.632Z",
+      "captured_at": "2026-08-13T04:57:11.585Z",
       "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -234,12 +235,12 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-13T02:27:16.632Z",
+      "captured_at": "2026-08-13T04:57:11.585Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -308,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.804
       }
     }
   ]
