@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-13T21:52:55.411Z",
+    "capturedAt": "2026-08-13T22:50:58.833Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-13T21:52:55.411Z",
-      "mood_score": 0.388,
+      "captured_at": "2026-08-13T22:50:58.833Z",
+      "mood_score": 0.383,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 26,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,17 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Camden Road and Willesden Junction westbound only due to engineering work. SEVERE DELAY"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between North Acton and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hain"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Haina"
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: No service between High Street Kensington and Edgware Road due to a points failure at Edgware Road. SEVER"
+          "excerpt": "London transit District: Minor Delays District Line: No service between High Street Kensington and Edgware Road due to a points failure at Edgware Road. MINOR"
         },
         {
           "source_family": "transport",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Elizabeth line: Severe Delays Severe delays due to an earlier customer incident and a faulty train at Hanwell. Tickets are being accepted on London Un"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to points failures at Stanmore and Wembley Park. Tickets will be accepted on London Buse"
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.095,
+        "source_item_count": 102,
+        "average_valence": -0.108,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
         "freshness_score": 0.878
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-13T21:52:55.411Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-08-13T22:50:58.833Z",
+      "mood_score": 0.462,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -129,7 +129,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9, S7, S5, U2: Delays 6 trips delayed"
+          "excerpt": "Berlin transit S9, S5: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,36 +140,36 @@
           "excerpt": "Dear Bretzel, I appreciate the effort, but unfortunately your response contains a fallacy: It is often called 'perfect solution fallacy', where you fail to acknowledge that improvi"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Exactly, that's why for proper Spaghettieis you need to avoid the albeit often very high quality modern fancy ice cream places. Instead you need find a traditional oldschool Eisdie"
         }
       ],
       "metadata": {
         "source_item_count": 117,
-        "average_valence": 0.01,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "routine",
           "belonging"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-13T21:52:55.411Z",
+      "captured_at": "2026-08-13T22:50:58.833Z",
       "mood_score": 0.442,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -236,12 +236,12 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-13T21:52:55.411Z",
+      "captured_at": "2026-08-13T22:50:58.833Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
