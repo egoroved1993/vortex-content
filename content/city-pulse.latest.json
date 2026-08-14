@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-14T06:19:07.949Z",
+    "capturedAt": "2026-08-14T08:20:49.252Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-14T06:19:07.949Z",
-      "mood_score": 0.359,
+      "captured_at": "2026-08-14T08:20:49.252Z",
+      "mood_score": 0.354,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping/Woodford via Hainault and between North Acton and Ealing Broad"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I usually manage 6.5 hours ish. I get up very early, and I go to bed a bit too late. I'm usually tired by then, so I'll read a bit and get to sleep pretty quickly unless I'm stress"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "It’s because London is top ten most expensive cities in the world to live in. It’s comparable to NYC, Tokyo, Paris. You can’t expect to have cheap housing in one of the most expens"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Its a weird one, and hard to explain. The fact that you are conscious, can think reason and plan. And that your whole meaty self is controlled and kept going by your brain, some we"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.061,
+        "source_item_count": 101,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-14T06:19:07.949Z",
-      "mood_score": 0.466,
+      "captured_at": "2026-08-14T08:20:49.252Z",
+      "mood_score": 0.465,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -136,15 +136,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - berliner-zeitung.de. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": 0.5,
-          "recency_weight": 0.56,
-          "excerpt": "Das Wetter in Berlin heute: Sommerlich warm mit viel Sonne - wetter.com. Das Wetter in Berlin heute: Sommerlich warm mit viel Sonne"
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "signals",
@@ -153,11 +145,19 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Because they neither understand intersectionality nor value community. It's the \"fuck you, I got mine mentality\" so many gay conservative men, especially (though not exclusively; s"
         }
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": 0.016,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "events",
@@ -168,8 +168,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-14T06:19:07.949Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-08-14T08:20:49.252Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 117,
-        "average_valence": -0.004,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-14T06:19:07.949Z",
+      "captured_at": "2026-08-14T08:20:49.252Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.801
+        "freshness_score": 0.802
       }
     }
   ]
