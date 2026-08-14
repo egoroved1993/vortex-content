@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-14T17:02:49.133Z",
+    "capturedAt": "2026-08-14T19:02:12.515Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 448
+    "totalItems": 453
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-14T17:02:49.133Z",
-      "mood_score": 0.349,
+      "captured_at": "2026-08-14T19:02:12.515Z",
+      "mood_score": 0.344,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,13 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while we"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Part Suspended Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone and MINOR DELAYS on the rest of the line while we"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays No service between Paddington and Heathrow Terminals / Reading and SEVERE DELAYS on the rest of the line while we fix a"
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Hayes & Harlington and Heathrow Airport and SEVERE DELAYS on the rest of the line due to an earlier p"
         },
         {
           "source_family": "transport",
@@ -62,42 +78,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Suspended No service between Paddington and Heathrow Terminals / Reading and SEVERE DELAYS on the rest of the line while we fix a"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier points failure at Stanmore. Tickets are being accepted on London Buses, DL"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Shepherd's Bush and Clapham Junction while we fix a track fault at Shepherds Bush. Lond"
+          "excerpt": "London transit Elizabeth line: Part Suspended No service between Hayes & Harlington and Heathrow Airport and SEVERE DELAYS on the rest of the line due to an earlier p"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.09,
+        "source_item_count": 112,
+        "average_valence": -0.107,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-14T17:02:49.133Z",
-      "mood_score": 0.461,
+      "captured_at": "2026-08-14T19:02:12.515Z",
+      "mood_score": 0.46,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 9,
@@ -107,7 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -129,7 +129,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4, U5, S5: Delays 7 trips delayed"
+          "excerpt": "Berlin transit U5, M4: Delays 6 trips delayed"
         },
         {
           "source_family": "public",
@@ -148,28 +148,28 @@
           "excerpt": "I think the reason was that Rave The Planet was considered a concert/performance but the Fuckparade was considered a demonstration because of the political messages and so differen"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": 0.003,
+        "source_item_count": 117,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "events",
-          "belonging"
+          "routine"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-14T17:02:49.133Z",
+      "captured_at": "2026-08-14T19:02:12.515Z",
       "mood_score": 0.507,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -242,7 +242,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-14T17:02:49.133Z",
+      "captured_at": "2026-08-14T19:02:12.515Z",
       "mood_score": 0.305,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
