@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-14T15:58:57.999Z",
+    "capturedAt": "2026-08-14T17:02:49.133Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 455
+    "totalItems": 448
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-14T15:58:57.999Z",
-      "mood_score": 0.339,
+      "captured_at": "2026-08-14T17:02:49.133Z",
+      "mood_score": 0.349,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 36,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 14,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I'm not complaining about the kids, I was responding to someone who said that kids are allowed to be in the pub. I'm agree kids are allowed to be in the pub but they're not allowed"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays while we fix a track fault at Stratford. Tickets are being accepted on London Buses, Chilter"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Paddington and Heathrow Terminals / Reading and SEVERE DELAYS on the rest of the line while we fix a"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays Between White City and Ealing Broadway and between Leytonstone and Hainault via Newbury Park"
+          "excerpt": "London transit Elizabeth line: Part Suspended No service between Paddington and Heathrow Terminals / Reading and SEVERE DELAYS on the rest of the line while we fix a"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays Between White City and Ealing Broadway and between Leytonstone and Hainault via Newbury Park"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier points failure at Stanmore. Tickets are being accepted on London Buses, DL"
         },
         {
           "source_family": "transport",
@@ -78,35 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations. Tickets are being accepted on London Buses, Thameslink and Elizab"
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Shepherd's Bush and Clapham Junction while we fix a track fault at Shepherds Bush. Lond"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.12,
+        "source_item_count": 108,
+        "average_valence": -0.09,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-14T15:58:57.999Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-08-14T17:02:49.133Z",
+      "mood_score": 0.461,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 15,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,6 +124,14 @@
           "excerpt": "„Ich bin konservativ und das ist auch gut so“. I read this on a election poster from Stefan Evers the other day. I am not surprised that AfD uses bad-taste slogans like “kein Auto "
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, U5, S5: Delays 7 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -136,15 +145,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I'm invited to a wedding next month and I just bought a few dresses to try on from Sellpy. It's an online thrift store and none of the dresses were more than 40€. If she wears pre "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I would recommend going to the police station closest to the address and asking if they could come with you to retrieve the phone if you can track it and make it play sound in fron"
+          "excerpt": "I think the reason was that Rave The Planet was considered a concert/performance but the Fuckparade was considered a demonstration because of the political messages and so differen"
         },
         {
           "source_family": "signals",
@@ -156,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.015,
+        "source_item_count": 116,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.905
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-14T15:58:57.999Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-08-14T17:02:49.133Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 54,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,27 +190,19 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "People conflate colds/flu so they forget how serious actual influenza is. Anyone who got swine flu back in the late 00s knows there’s a huge difference in a cold and a flu."
+          "excerpt": "Power outage in Forest Hill & West Portal. Happened 10 minutes ago. Not sure if MUNI stations are affected (no alerts yet, but this just happened 10 minutes ago). Heads up for anyo"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "People have high incomes in San Francisco, and market rate apartments go to the highest earning residents since rent control means nobody with middle incomes get to move in. Rent b"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "My coworkers have stories of the city in the 1970s-1990s and while they don’t love how expensive everything is now, I think it’s safe to say that none of our current issues are new"
+          "excerpt": "I do think you have a good selection of the city's Greatest Hits (minus Crissy Field, and adding in Palace of Fine Arts), given your time constraints and a sensible route."
         },
         {
           "source_family": "public",
@@ -225,29 +218,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "We helped a guy stumbling on the sidewalk. Not homeless, he was diabetic. He didn't have insurance and didn't want an ambulance. The 911 lady sent police to help assess what to do."
+          "excerpt": "From one Subaru owner to another Subaru owner: Choose wisely, I recently had to change transmission body valve on my car(it gave up at 106k miles, which is a known issue for my mod"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "First of all, there aren’t “millions of SFers”. The entire city is under 1 million population. Second of all, yes a majority of SFers don’t own a car. And even those that do often "
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.007,
+        "source_item_count": 120,
+        "average_valence": 0.019,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-14T15:58:57.999Z",
-      "mood_score": 0.302,
+      "captured_at": "2026-08-14T17:02:49.133Z",
+      "mood_score": 0.305,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 37,
+        "public": 38,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,6 +262,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "It’s exhausting how you do defend stuff for modernitos who are the first step to make any good traditional stuff good. For you the fancy dining experiences, the kebabs, the acai bo"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -292,25 +301,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "​Last-minute eclipse just outside Barcelona. ​I wasn't planning to watch the eclipse at all, but the hype finally got to me at the last minute. Just half an hour before it started,"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El Bicing, en xifres: més de 170.000 abonats i 7,8 usos per bicicleta al dia"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": 0.007,
+        "source_item_count": 104,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.835
       }
     }
   ]
