@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-14T11:50:25.610Z",
+    "capturedAt": "2026-08-14T13:31:33.198Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 448
+    "totalItems": 276
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-14T11:50:25.610Z",
-      "mood_score": 0.365,
+      "captured_at": "2026-08-14T13:31:33.198Z",
+      "mood_score": 0.355,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 31,
+        "public": 36,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "I'm not complaining about the kids, I was responding to someone who said that kids are allowed to be in the pub. I'm agree kids are allowed to be in the pub but they're not allowed"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations. Tickets are being accepted on London Buses, Thameslink and Elizab"
         },
         {
           "source_family": "transport",
@@ -62,51 +70,43 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Severe Delays Windrush Line: Severe delays between Highbury & Islington and Dalston Junction due to a track fault at Sydenham. Tickets"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading while we fix a power supply failure at Maidenhead. Tic"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Pubs for solo gals. Hello 😊 I am wondering what the best pubs in London are to meet people as a new, solo person in London going out on the weekends. I am near North Finchley so a"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - Inside Housing. News - London landlord acquires Key Worker Living Rent homes in de"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier points failure at Stanmore. Tickets are being accepted on London Buses, DL"
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.043,
+        "source_item_count": 72,
+        "average_valence": -0.073,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 1.048
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-14T11:50:25.610Z",
+      "captured_at": "2026-08-14T13:31:33.198Z",
       "mood_score": 0.468,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,27 +116,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Our plan is to have a sturdy one and a travel one. From what I see most of the parents get this kind of setup. I am just in-between if TRIV is sturdy one enough or not. I tested it"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 1,
           "recency_weight": 1.04,
           "excerpt": "„Ich bin konservativ und das ist auch gut so“. I read this on a election poster from Stefan Evers the other day. I am not surprised that AfD uses bad-taste slogans like “kein Auto "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I've been lving ground floor back yard in Neukölln (Hermannplatz) for 20 years and I'm fine with sleeping with open windows, I would probably not feel safe doing the same at Kotti."
         },
         {
           "source_family": "public",
@@ -152,33 +136,48 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I obviously don't know what kind of wedding you're going to and maybe a 500 € evening dress is going to be completely appropriate, but for most German weddings it's going to be ser"
+          "excerpt": "I'm invited to a wedding next month and I just bought a few dresses to try on from Sellpy. It's an online thrift store and none of the dresses were more than 40€. If she wears pre "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I would recommend going to the police station closest to the address and asking if they could come with you to retrieve the phone if you can track it and make it play sound in fron"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 131,
+        "source_item_count": 72,
         "average_valence": 0.022,
         "dominant_themes": [
           "general",
-          "belonging",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.912
+        "freshness_score": 1.063
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-14T11:50:25.610Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-08-14T13:31:33.198Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 56,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -193,7 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "we have rent control and this is the result. I hope we end rent control so everyone has to face this crises not just the unlucky."
+          "excerpt": "People conflate colds/flu so they forget how serious actual influenza is. Anyone who got swine flu back in the late 00s knows there’s a huge difference in a cold and a flu."
         },
         {
           "source_family": "public",
@@ -201,7 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I get that its easy to just blame landlords but that wont solve anything. There have always been, and will always be landlords. Landlords did not arbitrarily decide to jack everyon"
+          "excerpt": "People have high incomes in San Francisco, and market rate apartments go to the highest earning residents since rent control means nobody with middle incomes get to move in. Rent b"
         },
         {
           "source_family": "public",
@@ -209,7 +208,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Neighbour let it slip the other day that his rent with a parking space is sub $1k"
+          "excerpt": "My coworkers have stories of the city in the 1970s-1990s and while they don’t love how expensive everything is now, I think it’s safe to say that none of our current issues are new"
         },
         {
           "source_family": "public",
@@ -229,29 +228,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": 0.007,
+        "source_item_count": 65,
+        "average_valence": 0.015,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-14T11:50:25.610Z",
+      "captured_at": "2026-08-14T13:31:33.198Z",
       "mood_score": 0.303,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 37,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -267,15 +266,15 @@
           "language": "es",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Si la solución ya me la sé. El cabreo es por la gran estupidez de contar con \"requisitos\" imposibles de cumplir que te impoden hacer bien las cosas y obligan a is por libre y mient"
+          "excerpt": "Me pasó lo mismo pero hace unos años. Hace 1 año que solo uso t-mobilitat. Te quisiera decir que todo bien pero no. Cada tanto hay problemas"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "es",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Me pasó lo mismo pero hace unos años. Hace 1 año que solo uso t-mobilitat. Te quisiera decir que todo bien pero no. Cada tanto hay problemas"
+          "excerpt": "I get it. You wish it was still 2005, the city was mostly Catalan, coffee was burnt and cost €1, beer a tapa were dirt cheap, you couldn’t find empanadas or Greek yogurt or bubble "
         },
         {
           "source_family": "signals",
@@ -288,29 +287,29 @@
         {
           "source_family": "public",
           "source_origin": "reddit_post",
-          "language": "ca",
+          "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "El Bicing, en xifres: més de 170.000 abonats i 7,8 usos per bicicleta al dia"
+          "excerpt": "​Last-minute eclipse just outside Barcelona. ​I wasn't planning to watch the eclipse at all, but the hype finally got to me at the last minute. Just half an hour before it started,"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
-          "language": "en",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "3D printed the Sagrada Família.. took way longer than expected 😅. Been experimenting with detailed architectural prints and decided to try the Sagrada Família. The tiny towers and"
+          "excerpt": "El Bicing, en xifres: més de 170.000 abonats i 7,8 usos per bicicleta al dia"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": 0.008,
+        "source_item_count": 67,
+        "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 1.047
       }
     }
   ]
