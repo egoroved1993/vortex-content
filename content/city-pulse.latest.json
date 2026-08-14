@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-14T02:25:32.650Z",
+    "capturedAt": "2026-08-14T04:53:37.181Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-14T02:25:32.650Z",
-      "mood_score": 0.362,
+      "captured_at": "2026-08-14T04:53:37.181Z",
+      "mood_score": 0.359,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,12 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Tuesday 11, Wednesday 12, Thursday 13 and Friday 14 August, until 0615, no service southbound from Willesd"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -70,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Pubs for solo gals. Hello 😊 I am wondering what the best pubs in London are to meet people as a new, solo person in London going out on the weekends. I am near North Finchley so a"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - insidehousing.co.uk. News - London landlord acquires Key Worker Living Rent homes "
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.052,
+        "source_item_count": 95,
+        "average_valence": -0.062,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-14T02:25:32.650Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-08-14T04:53:37.181Z",
+      "mood_score": 0.463,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -106,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -122,6 +124,14 @@
           "excerpt": "„Ich bin konservativ und das ist auch gut so“. I read this on a election poster from Stefan Evers the other day. I am not surprised that AfD uses bad-taste slogans like “kein Auto "
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -135,28 +145,20 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - berliner-zeitung.de. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Because they neither understand intersectionality nor value community. It's the \"fuck you, I got mine mentality\" so many gay conservative men, especially (though not exclusively; s"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.56,
+          "excerpt": "Das Wetter in Berlin heute: Sommerlich warm mit viel Sonne - wetter.com. Das Wetter in Berlin heute: Sommerlich warm mit viel Sonne"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": 0.014,
+        "source_item_count": 120,
+        "average_valence": 0.009,
         "dominant_themes": [
           "general",
           "events",
@@ -167,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-14T02:25:32.650Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-08-14T04:53:37.181Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,18 +231,18 @@
       ],
       "metadata": {
         "source_item_count": 112,
-        "average_valence": -0.001,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-14T02:25:32.650Z",
+      "captured_at": "2026-08-14T04:53:37.181Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
