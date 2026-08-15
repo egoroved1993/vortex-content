@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-15T12:49:01.895Z",
+    "capturedAt": "2026-08-15T13:35:13.128Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 433
+    "totalItems": 437
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-15T12:49:01.895Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-08-15T13:35:13.128Z",
+      "mood_score": 0.466,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays while we fix a faulty train at Holborn and also due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations and an earlier faulty train at Holborn."
         },
         {
           "source_family": "transport",
@@ -62,6 +62,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate due to an earlier fire alert at Wembley Park. Ti"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Willesden Junction and Shepherd's Bush due to a track fault at Shepherd's Bush. SEVERE"
         },
         {
@@ -70,35 +78,27 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "2 hours in to a super strong edible I did not need that alert noise and message"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between King's Cross St. Pancras and Cockfosters and SEVERE DELAYS on the rest of the line w"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.076,
+        "source_item_count": 95,
+        "average_valence": -0.099,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-15T12:49:01.895Z",
-      "mood_score": 0.421,
+      "captured_at": "2026-08-15T13:35:13.128Z",
+      "mood_score": 0.419,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 12,
         "review": 2,
@@ -107,7 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -132,6 +132,14 @@
           "excerpt": "It depends if she’s from a Dorf or a big city. And it depends what kind of teenager she is. If she’s interested in influencer and all that fake stuff. Bring her to a nice aesthetic"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S7, S5, S3: Delays 3 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -146,31 +154,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Would this be safe?. I found an apartment in Kotti, everything is perfect, only one thing it was broken in to while it was empty (the tenants moved out) and some people try to brea"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "2HOT2PLAY, Acid Asian, Amber Broos, Hannah Laing, Johannes Schuster, Katy Rough at Straße des 17. Juni (Berlin) on 2026-08-15T00:00:00.000 [Techno]"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": 0.004,
+        "source_item_count": 120,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-15T12:49:01.895Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-08-15T13:35:13.128Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.018,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "events",
           "transit"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-15T12:49:01.895Z",
+      "captured_at": "2026-08-15T13:35:13.128Z",
       "mood_score": 0.302,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.835
       }
     }
   ]
