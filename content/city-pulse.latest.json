@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-16T08:36:37.230Z",
+    "capturedAt": "2026-08-16T09:33:02.484Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-16T08:36:37.230Z",
-      "mood_score": 0.428,
+      "captured_at": "2026-08-16T09:33:02.484Z",
+      "mood_score": 0.429,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 94,
-        "average_valence": -0.066,
+        "average_valence": -0.062,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.83
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-16T08:36:37.230Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-08-16T09:33:02.484Z",
+      "mood_score": 0.439,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S7: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -135,41 +144,33 @@
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Für so eine Miete kaufen andere einen Neuwagen - BZ Berlin. Für so eine Miete kaufen andere einen Neuwagen"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Hi, I know but indeed a guy you can tell what he can capable off( to be honest, when I enter the carriage I instantly looked at him and said in deep voice- damm! lovely muscles ha "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.017,
+        "source_item_count": 121,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-16T08:36:37.230Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-08-16T09:33:02.484Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -195,6 +196,14 @@
           "excerpt": "Bouldering as a Gen Z. I'd like to expand my social circle and make new friends. I've been interested in bouldering for a while and I've heard it's a great way to meet people. I'm "
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.56,
+          "excerpt": "BART says failure of aging router caused morning rush-hour chaos - San Francisco Chronicle. BART says failure of aging router caused morning rush-hour chaos"
+        },
+        {
           "source_family": "review",
           "source_origin": "maps_review",
           "language": "en",
@@ -208,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - cbsnews.com. BART equipment problem causes major delays system wide"
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         },
         {
           "source_family": "news",
@@ -216,31 +225,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "19th Avenue closure in San Francisco expected to snarl Sunset District traffic all weekend - cbsnews.com. 19th Avenue closure in San Francisco expected to snarl Sunset District tra"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "The fog clings to the Golden Gate, creating an ethereal haze that softens the skyline while a damp chill bites at exposed skin.. With the BART delays causing chaos, commuters huddl"
+          "excerpt": "19th Avenue closure in San Francisco expected to snarl Sunset District traffic all weekend - CBS News. 19th Avenue closure in San Francisco expected to snarl Sunset District traffi"
         }
       ],
       "metadata": {
         "source_item_count": 110,
-        "average_valence": -0.001,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-16T08:36:37.230Z",
+      "captured_at": "2026-08-16T09:33:02.484Z",
       "mood_score": 0.301,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.818
       }
     }
   ]
