@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-16T12:50:36.481Z",
+    "capturedAt": "2026-08-16T13:36:11.982Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 428
+    "totalItems": 429
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-16T12:50:36.481Z",
+      "captured_at": "2026-08-16T13:36:11.982Z",
       "mood_score": 0.477,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -89,13 +89,13 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.835
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-16T12:50:36.481Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-08-16T13:36:11.982Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, U2: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -146,30 +154,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Miete an? Das Land will Ihnen schreiben - Spiegel. Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Mie"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.028,
+        "source_item_count": 116,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-16T12:50:36.481Z",
+      "captured_at": "2026-08-16T13:36:11.982Z",
       "mood_score": 0.504,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -236,13 +236,13 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-16T12:50:36.481Z",
-      "mood_score": 0.301,
+      "captured_at": "2026-08-16T13:36:11.982Z",
+      "mood_score": 0.303,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -286,31 +286,31 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "​Last-minute eclipse just outside Barcelona. ​I wasn't planning to watch the eclipse at all, but the hype finally got to me at the last minute. Just half an hour before it started,"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Acaba la reurbanització del carrer de Balmes entre la plaça de Molina i la ronda del General Mitre"
         }
       ],
       "metadata": {
         "source_item_count": 97,
-        "average_valence": 0.004,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.816
       }
     }
   ]
