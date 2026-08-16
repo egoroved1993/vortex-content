@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-16T07:36:27.976Z",
+    "capturedAt": "2026-08-16T08:36:37.230Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 447
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-16T07:36:27.976Z",
+      "captured_at": "2026-08-16T08:36:37.230Z",
       "mood_score": 0.428,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 35,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -62,14 +62,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 16 August, until 0900, no service between West Drayton and Slough. Replacement bus service W1 ope"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 16 August, no service between Willesden Junction and Richmond. There will also be no DISTRICT LINE"
         },
         {
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 16 August, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Bat"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
+        "source_item_count": 94,
         "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.831
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-16T07:36:27.976Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-08-16T08:36:37.230Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -140,42 +131,50 @@
           "excerpt": "Would this be safe?. I found an apartment in Kotti, everything is perfect, only one thing it was broken in to while it was empty (the tenants moved out) and some people try to brea"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "German law does not differentiate between tentants and sub-tentants. Your landlord is your landlord, not the landlord of your landlord"
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.075,
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Trust me, it's different. I'm from the cologne area, and yes there's a kind of ceremony at the school, you dress up, people get invited, there's food. A friend of mine is planning "
+          "excerpt": "Hi, I know but indeed a guy you can tell what he can capable off( to be honest, when I enter the carriage I instantly looked at him and said in deep voice- damm! lovely muscles ha "
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.028,
+        "source_item_count": 120,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-16T07:36:27.976Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-08-16T08:36:37.230Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 44,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,22 +188,6 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "To me that's a newer building, and unfortunately the reason why you weren't under rent control. I'm so sorry!"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "This came up when people were talking about the Gen Z stare last year. Just because someone is at work in customer service, doesn't mean they should respond, speak, or acknowledge "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
@@ -212,36 +195,52 @@
           "excerpt": "Bouldering as a Gen Z. I'd like to expand my social circle and make new friends. I've been interested in bouldering for a while and I've heard it's a great way to meet people. I'm "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I believe it entirely. We see this kind of thing every time we drive 580 or 101 (which is quite rare). Been lucky to not see one in the city so far like that. Lots of hands off eye"
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "We have the BEST municipal water in the damn world. It’s amazing how good it is. We’re very lucky."
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - cbsnews.com. BART equipment problem causes major delays system wide"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "19th Avenue closure in San Francisco expected to snarl Sunset District traffic all weekend - cbsnews.com. 19th Avenue closure in San Francisco expected to snarl Sunset District tra"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "The fog clings to the Golden Gate, creating an ethereal haze that softens the skyline while a damp chill bites at exposed skin.. With the BART delays causing chaos, commuters huddl"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.019,
+        "source_item_count": 110,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-16T07:36:27.976Z",
+      "captured_at": "2026-08-16T08:36:37.230Z",
       "mood_score": 0.301,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.82
       }
     }
   ]
