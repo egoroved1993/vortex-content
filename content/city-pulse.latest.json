@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-15T23:26:10.586Z",
+    "capturedAt": "2026-08-16T01:43:31.184Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 434
+    "totalItems": 444
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-15T23:26:10.586Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-08-16T01:43:31.184Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier signal failure at Cockfosters. Tickets are being accepted on London Bus"
         },
         {
           "source_family": "transport",
@@ -62,52 +62,51 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays while we fix a signal failure at Manor House. Tickets are being accepted on London Buses,"
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 16 August, no service between Wandsworth Road and Clapham Junction. Trains will divert to/from Bat"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+          "recency_weight": 1.04,
+          "excerpt": "Almost 90.000 people packed the Wembley Stadium for the first night show of The Weeknd in London"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+          "recency_weight": 1.04,
+          "excerpt": "London at 37 degrees and LA aren’t comparable. London holds the heat in the narrow streets and and pavement, buildings generally have poor ventilation, the tube has no air con, and"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.071,
+        "source_item_count": 101,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-15T23:26:10.586Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-08-16T01:43:31.184Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,22 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "„Ich bin konservativ und das ist auch gut so“. I read this on a election poster from Stefan Evers the other day. I am not surprised that AfD uses bad-taste slogans like “kein Auto "
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -148,38 +131,54 @@
           "excerpt": "Would this be safe?. I found an apartment in Kotti, everything is perfect, only one thing it was broken in to while it was empty (the tenants moved out) and some people try to brea"
         },
         {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "2HOT2PLAY, Acid Asian, Amber Broos, Hannah Laing, Johannes Schuster, Katy Rough at Straße des 17. Juni (Berlin) on 2026-08-15T00:00:00.000 [Techno]"
+          "recency_weight": 1.04,
+          "excerpt": "German law does not differentiate between tentants and sub-tentants. Your landlord is your landlord, not the landlord of your landlord"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "There’s an unofficial iPhone app for Berlin’s public libraries. I thought this might be useful for some people here who use the VÖBB libraries regularly. There’s an unofficial iPho"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.016,
+        "source_item_count": 119,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-15T23:26:10.586Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-08-16T01:43:31.184Z",
+      "mood_score": 0.51,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 59,
+        "public": 60,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -191,25 +190,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "As a cop for 10 years id rather work an easier fully staffed area with less crime than take a pay raise and my coworkers with say the same. I could go and apply to San Fransisco to"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "We should expand SF style rent control to costco membership. If I get a membership today, I am doing so for today's price. Costco should not be allowed to increase food prices more"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Bus, bike, tram, subway, scooter, walking? You do know cars aren’t the only form of transportation right? And in fact, they are by far the most expensive form lol. Realistically fo"
+          "excerpt": "Probably over 30% is you getting older + if you're not financially doing better than you were 5-10 years ago add another 20% there, not good social and love life , add another 20% "
         },
         {
           "source_family": "public",
@@ -225,23 +208,39 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "You can leave whenever you want and you don't need to end up there by being kicked out of a camping spot in Berkeley. The idea is that Berkeley has a spot for homeless individuals,"
+          "excerpt": "We stained our deck 4 years after moving in, and then about 4 years later we replaced it with an engineered deck (plastic/wood material). It's nice but low on character. After 5 ye"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Right, the cops do have a big problem at self-reforming. That said, their so called \"work stoppages\" are better seen as a way to make life easier for themselves in communities wher"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Royal Enfield Key. Your key was in the ignition. It’s in the business right behind the bike. You need to describe your keychain. Good luck. 👍👍"
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": 0.021,
+        "source_item_count": 126,
+        "average_valence": 0.03,
         "dominant_themes": [
           "general",
-          "transit",
-          "events"
+          "events",
+          "transit"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-15T23:26:10.586Z",
+      "captured_at": "2026-08-16T01:43:31.184Z",
       "mood_score": 0.301,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -267,7 +266,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It’s exhausting how you do defend stuff for modernitos who are the first step to make any good traditional stuff good. For you the fancy dining experiences, the kebabs, the acai bo"
+          "excerpt": "I get it. You wish it was still 2005, the city was mostly Catalan, coffee was burnt and cost €1, beer a tapa were dirt cheap, you couldn’t find empanadas or Greek yogurt or bubble "
         },
         {
           "source_family": "public",
@@ -275,7 +274,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I get it. You wish it was still 2005, the city was mostly Catalan, coffee was burnt and cost €1, beer a tapa were dirt cheap, you couldn’t find empanadas or Greek yogurt or bubble "
+          "excerpt": "It’s exhausting how you do defend stuff for modernitos who are the first step to make any good traditional stuff good. For you the fancy dining experiences, the kebabs, the acai bo"
         },
         {
           "source_family": "signals",
@@ -291,7 +290,7 @@
           "language": "ca",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - barcelonasecreta.com. Huelga general del 15 de octubre per Pal"
+          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
         },
         {
           "source_family": "public",
@@ -310,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.818
       }
     }
   ]
