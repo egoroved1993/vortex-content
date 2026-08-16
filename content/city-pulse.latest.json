@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-16T15:27:37.807Z",
+    "capturedAt": "2026-08-16T16:32:18.252Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 431
+    "totalItems": 408
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-16T15:27:37.807Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-08-16T16:32:18.252Z",
+      "mood_score": 0.466,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -46,14 +46,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Sunday 16 August, no service between Turnham Green and Richmond. There will also be no MILDMAY LINE servi"
         },
         {
@@ -62,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate and MINOR DELAYS between Harrow-on-the-Hill and"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations"
         },
         {
           "source_family": "transport",
@@ -70,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Aldgate and MINOR DELAYS between Harrow-on-the-Hill and"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Aldgate and between Uxbridge and Harrow-on-the-Hill due t"
         },
         {
           "source_family": "transport",
@@ -79,28 +71,36 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 16 August, no service between Willesden Junction and Richmond. There will also be no DISTRICT LINE"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
         "source_item_count": 96,
-        "average_valence": -0.078,
+        "average_valence": -0.099,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-16T15:27:37.807Z",
-      "mood_score": 0.439,
+      "captured_at": "2026-08-16T16:32:18.252Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 300: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -148,34 +148,34 @@
           "excerpt": "Für so eine Miete kaufen andere einen Neuwagen - BZ Berlin. Für so eine Miete kaufen andere einen Neuwagen"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Miete an? Das Land will Ihnen schreiben - Spiegel. Berlin: Sie bieten eine Wohnung in der Hauptstadt mit zu hoher Mie"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.031,
+        "source_item_count": 117,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-16T15:27:37.807Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-08-16T16:32:18.252Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 56,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,65 +189,65 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Bouldering as a Gen Z. I'd like to expand my social circle and make new friends. I've been interested in bouldering for a while and I've heard it's a great way to meet people. I'm "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good on you! Great to hear. We need more of this. I cant tell you how many times I’ve told someone on the train to stop acting like an asshole for whatever reason and it was met by"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Not sure where you went but SF Animal Medical Center is amazing and helped my dog with immediate surgery. Money wise care credit which most vets have information on. And a gofundme"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
+          "recency_weight": 1.04,
+          "excerpt": "The social contract is very broken here. One of the things I realize when I leave SF. NYC has more decorum honestly even its chaos. More ppl should call out the bullshit though and"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "They say that whatever goes up must come down but not S F. rentals in my experience. The first rise in my lifetime happened in the late 70s when the financial institutions voiced a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The Bay Area is a big place. You can do it, but without roommates you’re going to be living on the outskirts where rent is more affordable."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I described exactly how the bus runs. Ive taken it 100s of times. But to you the streets are quiet but also packed with traffic."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "public transport is good, there is no need for a car. Look at staying in one of residential neighborhoods, not downtown. Not too many hotels but Air BnB or a home share type place "
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": 0.012,
+        "source_item_count": 124,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-16T15:27:37.807Z",
-      "mood_score": 0.301,
+      "captured_at": "2026-08-16T16:32:18.252Z",
+      "mood_score": 0.294,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 31,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -257,26 +257,9 @@
       },
       "languages": [
         "ca",
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I get it. You wish it was still 2005, the city was mostly Catalan, coffee was burnt and cost €1, beer a tapa were dirt cheap, you couldn’t find empanadas or Greek yogurt or bubble "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It’s exhausting how you do defend stuff for modernitos who are the first step to make any good traditional stuff good. For you the fancy dining experiences, the kebabs, the acai bo"
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -291,26 +274,42 @@
           "language": "ca",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - barcelonasecreta.com. Huelga general del 15 de octubre per Pal"
+          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
-          "language": "en",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "​Last-minute eclipse just outside Barcelona. ​I wasn't planning to watch the eclipse at all, but the hype finally got to me at the last minute. Just half an hour before it started,"
+          "excerpt": "La festa més gran de Barcelona escalfa motors: concerts, portes obertes i activitats per la Mercè 2026"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Botigues de vinils i CD de segona mà per Barcelona?. Bon dia, estic buscant alguna botiga de discos i/o CDs de segona mà barats per Barcelona (o, si teniu alguna recomanació a qual"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Masia/Casa Rural. Holaa! Estic organitzant la meva boda i busco recomanacions de masies o cases rurals perque vaig molt perduda😭🫶🏽. La idea seria celebrar-la a finals del 2027 o"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": 0.004,
+        "source_item_count": 71,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.74
       }
     }
   ]
