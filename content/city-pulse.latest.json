@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-17T22:30:21.441Z",
+    "capturedAt": "2026-08-17T23:28:15.391Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 401
+    "totalItems": 403
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-17T22:30:21.441Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-08-17T23:28:15.391Z",
+      "mood_score": 0.425,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -83,19 +83,19 @@
       ],
       "metadata": {
         "source_item_count": 76,
-        "average_valence": -0.075,
+        "average_valence": -0.074,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.818
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-17T22:30:21.441Z",
-      "mood_score": 0.346,
+      "captured_at": "2026-08-17T23:28:15.391Z",
+      "mood_score": 0.345,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,20 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "In German culture, punctuality is equated with respect, while tardiness is perceived as a sign of disrespect. The underlying logic is that if everyone else makes an effort to be on"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "signals",
@@ -156,19 +157,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.011,
+        "source_item_count": 116,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-17T22:30:21.441Z",
+      "captured_at": "2026-08-17T23:28:15.391Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-17T22:30:21.441Z",
+      "captured_at": "2026-08-17T23:28:15.391Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
