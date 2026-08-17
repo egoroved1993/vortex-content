@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-17T03:05:39.968Z",
+    "capturedAt": "2026-08-17T04:50:18.294Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 406
+    "totalItems": 402
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-17T03:05:39.968Z",
-      "mood_score": 0.438,
+      "captured_at": "2026-08-17T04:50:18.294Z",
+      "mood_score": 0.43,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,36 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: No service between Earls Court and Ealing Broadway / Richmond while we fix a signal failure at Acton Town"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays between Wembley Park and Stratford southbound only due to an earlier faulty train at Wembley"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I've been quite a big fan of Miller's Hair Studio in Peckham, Harvey has been cutting my hair for years; but if that's too far, look up Rocket Barbers, they have a bunch across Lon"
+          "excerpt": "My son was too wired from the party to go to bed at his usual bedtime so we let him stay up watching a movie on the sofa until he fell asleep around 9:30. Then we took him up to be"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I have one that I say that can get frowned upon , it's Don't be a Joey D Or Joey Deacon Blue Peter in all their goodness tried to introduce a man with severe cerebral palsy to us a"
         },
         {
           "source_family": "news",
@@ -54,59 +79,34 @@
           "valence": -1,
           "recency_weight": 0.56,
           "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - Inside Housing. News - London landlord acquires Key Worker Living Rent homes in de"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Why rent controls must be part of the answer to the housing crisis - Times Series. Why rent controls must be part of the answer to the housing crisis"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.035,
+        "source_item_count": 74,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.805
+        "freshness_score": 0.779
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-17T03:05:39.968Z",
-      "mood_score": 0.391,
+      "captured_at": "2026-08-17T04:50:18.294Z",
+      "mood_score": 0.396,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 3,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,20 +115,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5: Delays 1 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "Deutschlandkarte train ticket question. Hey y’all, I’ll be going to Berlin at the end of the month, but I’m land in Frankfurt and the ticket to get to Berlin is quite expensive by "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "As an Auslander I LOVE how many elder folks and people with disabilities I see in Germany, not just in Berlin I live in. My heart fills with joy seeing these people, mostly in grou"
+          "excerpt": "Honestly them putting at least some minor rules in place to temper the tedious vanity and self-importance of bored white people in scarves who think they're persecuted is one of th"
         },
         {
           "source_family": "news",
@@ -156,25 +156,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.025,
+        "source_item_count": 117,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-17T03:05:39.968Z",
-      "mood_score": 0.51,
+      "captured_at": "2026-08-17T04:50:18.294Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +192,31 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "My main concern with those types of places, and fwiw could be very wrong don’t know 100% specifics of these ones, are they get you in with a reasonable rate then will absolutely ja"
+          "excerpt": "This is your chance to move out. You won’t likely find cheaper with how things are moving. A rent controlled unit in Twin Peaks sounds like a solid next step. If not this, then wha"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "twin peaks is beautiful, with rent being what it’s been you might not find a deal like that anytime soon. I made a similar jump recently and no regrets, worth every penny to never "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Wait so you did not have housing security where you currently live (Wisconsin) and are now considering living in SF which is one of the most expensive cities in the USA to live? At"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Most of these “new luxury” buildings in SF are trash when it comes to soundproofing. I’m currently living in one, and our unhinged upstairs neighbors stomp around, run with their l"
         },
         {
           "source_family": "public",
@@ -200,53 +224,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It's honestly kind of ridiculous that there's even a debate. California has what? 30+ institutions in the UC and Cal State systems? Berkeley shouldn't be dealing with students who "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I find driving exhausting so for this kind thing I'm taking the \"short flight\" option. I would honestly just post up in an Airbnb with a pool & gym somewhere in Arizona or LA or Ve"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Wow, 20/year. That’s good perspective. It just feels like this whole free-childcare thing is marketing given the number of programs available... all that said, I’m glad they are mo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Was this year even busier than last year? I'm out of town so didn't go this year, but for the first 3 years each year was noticeably busier than the last. Even last year I felt it "
+          "excerpt": "The extra $1500 has to come out of something. Is it $1500 less savings/investment per month? Is it $1500 less eating out? $1500 less designer clothing? This is the critical piece o"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.03,
+        "source_item_count": 119,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-17T03:05:39.968Z",
-      "mood_score": 0.295,
+      "captured_at": "2026-08-17T04:50:18.294Z",
+      "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 27,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -260,14 +260,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Munich in October is basically Oktoberfest, so if you go early in the month the city will be packed and full of energy. After that it calms down but still plenty happening. Bavaria"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -299,17 +291,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Botigues de vinils i CD de segona mà per Barcelona?. Bon dia, estic buscant alguna botiga de discos i/o CDs de segona mà barats per Barcelona (o, si teniu alguna recomanació a qual"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Yes. Yes. The anella was demolished in 2014. There's been no changes to the traffic circulation around where the kiddy park is since about then as far as I know. Totally could have"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.015,
+        "source_item_count": 92,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.808
+        "freshness_score": 0.803
       }
     }
   ]
