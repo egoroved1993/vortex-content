@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-17T01:41:50.723Z",
+    "capturedAt": "2026-08-17T03:05:39.968Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 405
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-17T01:41:50.723Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-08-17T03:05:39.968Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -46,6 +46,14 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I've been quite a big fan of Miller's Hair Studio in Peckham, Harvey has been cutting my hair for years; but if that's too far, look up Rocket Barbers, they have a bunch across Lon"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.56,
+          "excerpt": "News - London landlord acquires Key Worker Living Rent homes in deal with its own joint venture - Inside Housing. News - London landlord acquires Key Worker Living Rent homes in de"
         },
         {
           "source_family": "signals",
@@ -70,31 +78,23 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London tube strike causes huge disruption, with many services hit - The Guardian. London tube strike causes huge disruption, with many services hit"
         }
       ],
       "metadata": {
         "source_item_count": 82,
-        "average_valence": -0.027,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.807
+        "freshness_score": 0.805
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-17T01:41:50.723Z",
-      "mood_score": 0.394,
+      "captured_at": "2026-08-17T03:05:39.968Z",
+      "mood_score": 0.391,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -106,7 +106,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U5: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +153,22 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Also found one in parking garage in Heillbron yesterday, my daughter and I carried it to a tree. Also, apparently NABU would like that you report your mantis sightings on their web"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.018,
+        "source_item_count": 111,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-17T01:41:50.723Z",
+      "captured_at": "2026-08-17T03:05:39.968Z",
       "mood_score": 0.51,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
@@ -235,13 +235,13 @@
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-17T01:41:50.723Z",
-      "mood_score": 0.294,
+      "captured_at": "2026-08-17T03:05:39.968Z",
+      "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -285,31 +285,31 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "​Last-minute eclipse just outside Barcelona. ​I wasn't planning to watch the eclipse at all, but the hype finally got to me at the last minute. Just half an hour before it started,"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Botigues de vinils i CD de segona mà per Barcelona?. Bon dia, estic buscant alguna botiga de discos i/o CDs de segona mà barats per Barcelona (o, si teniu alguna recomanació a qual"
         }
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.019,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.808
       }
     }
   ]
