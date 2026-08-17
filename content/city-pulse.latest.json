@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-17T14:34:26.147Z",
+    "capturedAt": "2026-08-17T15:30:54.332Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-17T14:34:26.147Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-08-17T15:30:54.332Z",
+      "mood_score": 0.48,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "It's certainly more expensive nowadays but not by as much as most people think: - 2026 £491k at 4.6% mortgage £2758pcm, 1/18th the salary. - 1990 £77k on 10.1% mortgage £705pcm, 1/"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "It was frustrating at the start, especially when he was in hospital. But now that he's at home and slowly fading I've come to accept that things are heading in a different directio"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.067,
+        "source_item_count": 92,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.837
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-17T14:34:26.147Z",
-      "mood_score": 0.4,
+      "captured_at": "2026-08-17T15:30:54.332Z",
+      "mood_score": 0.396,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5, 300, 200: Delays 3 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -131,44 +140,36 @@
           "excerpt": "That's also not a good thing. Here in Berlin every pole has stickers, sometimes 5 or 6 stickers on top of each others. What is the transported message here. Even worse, traffic lig"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah honestly I've lived here years and haven't had a single one of those run ins. Doesn't mean it's not out there, just means you got a weird sample size in two days."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Two days in and you already witnessed all that, wild luck honestly. Was the salute guy near Mauerpark on a Sunday, because that flea market crowd gets weird sometimes?"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.001,
+        "source_item_count": 123,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-17T14:34:26.147Z",
+      "captured_at": "2026-08-17T15:30:54.332Z",
       "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-17T14:34:26.147Z",
+      "captured_at": "2026-08-17T15:30:54.332Z",
       "mood_score": 0.3,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.805
       }
     }
   ]
