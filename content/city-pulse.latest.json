@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-18T05:35:01.457Z",
+    "capturedAt": "2026-08-18T06:53:25.766Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 409
+    "totalItems": 410
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-18T05:35:01.457Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-08-18T06:53:25.766Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 16,
@@ -33,13 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: No service between South Acton and Richmond and MINOR DELAYS on the rest of the line while we fix a signal"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between South Acton and Richmond and MINOR DELAYS on the rest of the line while we fix a signal"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,39 +78,23 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Richmond and South Acton while we fix a signal failure at Richmond. GOOD SERVICE on the"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "Why rent controls must be part of the answer to the housing crisis - Times Series. Why rent controls must be part of the answer to the housing crisis"
+          "excerpt": "London transit District: Part Suspended District Line: No service between Turnham Green and Richmond while we fix a signal failure at Richmond. GOOD SERVICE on"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.044,
+        "source_item_count": 86,
+        "average_valence": -0.063,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-18T05:35:01.457Z",
+      "captured_at": "2026-08-18T06:53:25.766Z",
       "mood_score": 0.343,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S7, S3: Delays 6 trips delayed"
         },
         {
           "source_family": "public",
@@ -164,12 +164,12 @@
           "events",
           "routine"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-18T05:35:01.457Z",
+      "captured_at": "2026-08-18T06:53:25.766Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -236,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-18T05:35:01.457Z",
+      "captured_at": "2026-08-18T06:53:25.766Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.811
       }
     }
   ]
