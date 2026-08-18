@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-18T14:39:27.756Z",
+    "capturedAt": "2026-08-18T15:37:27.514Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 405
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-18T14:39:27.756Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-08-18T15:37:27.514Z",
+      "mood_score": 0.474,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -54,14 +54,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to an earlier signal failure at Richmond."
         },
         {
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Weaver: Minor Delays Weaver Line: Minor delays between London Liverpool Street and Chingford due to an earlier points failure at Clapton. GOO"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "What is this on my wall, mould?. Hi renting in London and had lots of wall leaks because of a broken roof and then apparently it was fixed. So our walls dried up, but now months la"
         }
       ],
       "metadata": {
         "source_item_count": 92,
-        "average_valence": -0.086,
+        "average_valence": -0.076,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.853
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-18T14:39:27.756Z",
-      "mood_score": 0.35,
+      "captured_at": "2026-08-18T15:37:27.514Z",
+      "mood_score": 0.347,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, 100, U8: Delays 4 trips delayed"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -145,30 +154,22 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Vintage furniture store. Hey everyone, i recently moved to Berlin and want to decorate my place with vintage furniture (mainly MCM), i have been looking for vintage boutiques but a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Where to exchange small € banknotes to bigger ones?. hi guys! I’m flying out of Berlin soon to my next destination which is in SEA and I have bunch of smaller banknotes of 10 and 2"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": 0,
+        "source_item_count": 112,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-18T14:39:27.756Z",
+      "captured_at": "2026-08-18T15:37:27.514Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -235,15 +236,15 @@
           "money",
           "transit"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-18T14:39:27.756Z",
+      "captured_at": "2026-08-18T15:37:27.514Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 19,
@@ -307,7 +308,7 @@
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
         "freshness_score": 0.797
       }
