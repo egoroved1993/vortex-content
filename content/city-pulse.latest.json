@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-18T08:43:56.016Z",
+    "capturedAt": "2026-08-18T09:39:30.490Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 408
+    "totalItems": 405
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-18T08:43:56.016Z",
-      "mood_score": 0.469,
+      "captured_at": "2026-08-18T09:39:30.490Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,21 +33,13 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and West Ruislip/Ealing Broadway and between Leytonstone and Epping/Hainau"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Gunnersbury and Richmond and MINOR DELAYS on the rest of the line while we fix a signal"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 18, Wednesday 19 and Thursday 20 August, no service between Cockfosters and Uxbridge. Trains wi"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.092,
+        "source_item_count": 93,
+        "average_valence": -0.084,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-18T08:43:56.016Z",
-      "mood_score": 0.347,
+      "captured_at": "2026-08-18T09:39:30.490Z",
+      "mood_score": 0.35,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, M5: Delays 2 trips delayed"
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -154,22 +145,30 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Vintage furniture store. Hey everyone, i recently moved to Berlin and want to decorate my place with vintage furniture (mainly MCM), i have been looking for vintage boutiques but a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Where to exchange small € banknotes to bigger ones?. hi guys! I’m flying out of Berlin soon to my next destination which is in SEA and I have bunch of smaller banknotes of 10 and 2"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.008,
+        "source_item_count": 111,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-18T08:43:56.016Z",
+      "captured_at": "2026-08-18T09:39:30.490Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -241,7 +240,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-18T08:43:56.016Z",
+      "captured_at": "2026-08-18T09:39:30.490Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism.",
@@ -310,7 +309,7 @@
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.794
+        "freshness_score": 0.789
       }
     }
   ]
