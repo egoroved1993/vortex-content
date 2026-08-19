@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-19T12:57:57.222Z",
+    "capturedAt": "2026-08-19T13:51:08.636Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 430
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-19T12:57:57.222Z",
-      "mood_score": 0.418,
+      "captured_at": "2026-08-19T13:51:08.636Z",
+      "mood_score": 0.416,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -62,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to an earlier customer incident. Tickets are being accepted on London Buses, DLR, Eliza"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Upminster and Tower Hill due to an earlier customer incident. MINOR DELAYS on the r"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Upminster and Tower Hill due to an earlier customer incident. MINOR DELAYS on the r"
         },
         {
           "source_family": "transport",
@@ -71,19 +79,11 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier customer incident. Tickets are being accepted on London Buses"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 18, Wednesday 19 and Thursday 20 August, no service between Cockfosters and Uxbridge. Trains wi"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.093,
+        "source_item_count": 98,
+        "average_valence": -0.1,
         "dominant_themes": [
           "general",
           "events",
@@ -94,8 +94,8 @@
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-19T12:57:57.222Z",
-      "mood_score": 0.299,
+      "captured_at": "2026-08-19T13:51:08.636Z",
+      "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,30 +154,22 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Showers are a luxury. And honestly even private bathrooms are a luxury. Where is the community water closet in the hall that everyone had to share? Rip everyone’s bathrooms out to "
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.002,
+        "source_item_count": 118,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-19T12:57:57.222Z",
+      "captured_at": "2026-08-19T13:51:08.636Z",
       "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-19T12:57:57.222Z",
+      "captured_at": "2026-08-19T13:51:08.636Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
