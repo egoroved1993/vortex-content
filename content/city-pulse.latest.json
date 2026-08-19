@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-19T21:30:56.524Z",
+    "capturedAt": "2026-08-19T22:30:38.144Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,14 +16,14 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 427
+    "totalItems": 432
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-19T21:30:56.524Z",
-      "mood_score": 0.417,
-      "mood_label": "mixed",
+      "captured_at": "2026-08-19T22:30:38.144Z",
+      "mood_score": 0.397,
+      "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 15,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays while we fix a track fault in the Brondesbury area."
+          "excerpt": "London transit Circle: Severe Delays Circle Line: No service between Baker Street and Aldgate while we fix a faulty train at Baker Street. SEVERE DELAYS on t"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 18, Wednesday 19 and Thursday 20 August, no service between Cockfosters and Uxbridge. Trains wi"
+          "excerpt": "London transit Circle: Part Suspended Circle Line: No service between Baker Street and Aldgate while we fix a faulty train at Baker Street. SEVERE DELAYS on t"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Cockfosters and Uxbridge due to planned engineering work. SEVERE DELAYS between Heat"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Earl's Court and Ealing Broadway / Richmond due to an earlier customer incident at W"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Severe Delays Weaver Line: No service between Hackney Downs and Enfield Town / Cheshunt and SEVERE DELAYS on the rest of the line due"
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: No service between Baker Street and Aldgate East and SEVERE DELAYS between Baker Street and H"
         },
         {
           "source_family": "transport",
@@ -78,26 +78,26 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Part Suspended Weaver Line: No service between Hackney Downs and Enfield Town / Cheshunt and SEVERE DELAYS on the rest of the line due"
+          "excerpt": "London transit Hammersmith & City: Part Suspended Hammersmith and City Line: No service between Baker Street and Aldgate East and SEVERE DELAYS between Baker Street and H"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.097,
+        "source_item_count": 98,
+        "average_valence": -0.155,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-19T21:30:56.524Z",
-      "mood_score": 0.294,
+      "captured_at": "2026-08-19T22:30:38.144Z",
+      "mood_score": 0.245,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 12,
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,22 +145,30 @@
           "valence": -0.575,
           "recency_weight": 0.72,
           "excerpt": "Für so eine Miete kaufen andere einen Neuwagen - BZ Berlin. Für so eine Miete kaufen andere einen Neuwagen"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.019,
+        "source_item_count": 118,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "money"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-19T21:30:56.524Z",
+      "captured_at": "2026-08-19T22:30:38.144Z",
       "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -241,7 +240,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-19T21:30:56.524Z",
+      "captured_at": "2026-08-19T22:30:38.144Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -310,7 +309,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.809
+        "freshness_score": 0.804
       }
     }
   ]
