@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-19T06:54:05.225Z",
+    "capturedAt": "2026-08-19T07:44:16.353Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-19T06:54:05.225Z",
-      "mood_score": 0.425,
+      "captured_at": "2026-08-19T07:44:16.353Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to an earlier fire alert at Farringdon. Tickets are being accepted on London Buses, Eliza"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / H"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Earl's Court and Upminster while we respond to a fire alert at Upminster Bridge and"
+          "excerpt": "London transit District: Severe Delays District Line: No service between Earl's Court and Whitechapel while we help a casualty on the track. SEVERE DELAYS on t"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Part Suspended District Line: No service between Earl's Court and Whitechapel while we help a casualty on the track. SEVERE DELAYS on t"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: No service between Liverpool Street and Barking while we help a casualty on the track. SEVERE"
         },
         {
           "source_family": "transport",
@@ -63,41 +79,25 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to an earlier fire alert at Farringdon. Tickets are being accepted on accepted on L"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Gunnersbury and Richmond due to an earlier obstruction on the track at Chiswick Park"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 18, Wednesday 19 and Thursday 20 August, no service between Cockfosters and Uxbridge. Trains wi"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.075,
+        "source_item_count": 94,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-19T06:54:05.225Z",
-      "mood_score": 0.302,
+      "captured_at": "2026-08-19T07:44:16.353Z",
+      "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 12,
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U8: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -123,53 +132,45 @@
           "excerpt": "A good Schneider?. Hi all, I have a nice silk shirt that needs a bit of love. It’s got a couple of tears, and a button that needs reattaching. Do you know where could I take it for"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.72,
+          "excerpt": "Für so eine Miete kaufen andere einen Neuwagen - B.Z. Berlin. Für so eine Miete kaufen andere einen Neuwagen"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Spells 'tourist' wrong once → gets assigned a whole new ethnicity and backstory in Berlin. My Mongolian is also terrible, since we're randomly listing nations."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Follow your heart, I moved here 5 years ago, and while it's been tough for many reasons, its the best decision I ever made, and I love this fucked up city."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Insurance advice. Hello,i'm new in Germany. I have severe tooth pain and had an emergency treatment recently where my nerve was treated and a temporary filling was placed. Today, a"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.005,
+        "source_item_count": 120,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-19T06:54:05.225Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-08-19T07:44:16.353Z",
+      "mood_score": 0.506,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,7 +230,7 @@
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": 0.021,
+        "average_valence": 0.016,
         "dominant_themes": [
           "general",
           "transit",
@@ -240,7 +241,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-19T06:54:05.225Z",
+      "captured_at": "2026-08-19T07:44:16.353Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
