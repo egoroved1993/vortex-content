@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-19T09:39:47.206Z",
+    "capturedAt": "2026-08-19T10:46:34.254Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 436
+    "totalItems": 260
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-19T09:39:47.206Z",
-      "mood_score": 0.419,
+      "captured_at": "2026-08-19T10:46:34.254Z",
+      "mood_score": 0.424,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 8,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -54,23 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / H"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: No service between Earl's Court and Embankment while we help a casualty on the track. SEVERE DELAYS on th"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Part Suspended District Line: No service between Earl's Court and Embankment while we help a casualty on the track. SEVERE DELAYS on th"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to an earlier customer incident. Tickets are being accepted on London Buses, DLR, Eliza"
         },
         {
           "source_family": "transport",
@@ -79,35 +63,49 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays while we help a casualty on the track. Tickets are being accepted on London Bus"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 18, Wednesday 19 and Thursday 20 August, no service between Cockfosters and Uxbridge. Trains wi"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: No service between Surrey Quays and Clapham Junction / New Cross and between Sydenham and Crystal Palace"
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.092,
+        "source_item_count": 51,
+        "average_valence": -0.077,
         "dominant_themes": [
           "general",
-          "events",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 1.053
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-19T09:39:47.206Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-08-19T10:46:34.254Z",
+      "mood_score": 0.302,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S3, S7: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -148,38 +138,45 @@
           "excerpt": "A good Schneider?. Hi all, I have a nice silk shirt that needs a bit of love. It’s got a couple of tears, and a button that needs reattaching. Do you know where could I take it for"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
           "recency_weight": 0.72,
-          "excerpt": "Für so eine Miete kaufen andere einen Neuwagen - BZ Berlin. Für so eine Miete kaufen andere einen Neuwagen"
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Honestly from your posts it sounds like you are romanticizing Berlin quite a lot. If you really want to move here give it a few years to think over and in the meantime you can lear"
         }
       ],
       "metadata": {
-        "source_item_count": 129,
-        "average_valence": -0.009,
+        "source_item_count": 77,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 1.061
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-19T09:39:47.206Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-08-19T10:46:34.254Z",
+      "mood_score": 0.47,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 66,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -229,29 +226,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 132,
-        "average_valence": -0.078,
+        "source_item_count": 82,
+        "average_valence": -0.088,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 1.04
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-19T09:39:47.206Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-08-19T10:46:34.254Z",
+      "mood_score": 0.296,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, work. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -303,14 +300,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.009,
+        "source_item_count": 50,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "work"
         ],
-        "freshness_score": 0.8
+        "freshness_score": 1.049
       }
     }
   ]
