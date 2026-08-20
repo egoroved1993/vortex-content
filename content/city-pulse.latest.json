@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-20T05:36:38.244Z",
+    "capturedAt": "2026-08-20T06:55:33.504Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 401
+    "totalItems": 402
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-20T05:36:38.244Z",
-      "mood_score": 0.364,
+      "captured_at": "2026-08-20T06:55:33.504Z",
+      "mood_score": 0.371,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,15 +46,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays following a late finish of engineering work. Tickets are being accepted on London Buses."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Tower Hill and Upminster eastbound only following a late finish of engineering work."
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays following a late finish of engineering work."
         },
         {
           "source_family": "transport",
@@ -62,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays between Camden Town and Kennington via Bank southbound only while we fix a signal failure at"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to a points failure at White City."
         },
         {
           "source_family": "transport",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Severe Delays Windrush Line: No service between Surrey Quays and New Cross, and SEVERE DELAYS between Highbury & Islington and Crystal"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Surrey Quays and New Cross, and SEVERE DELAYS between Highbury & Islington and Crystal"
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.106,
+        "source_item_count": 83,
+        "average_valence": -0.085,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-20T05:36:38.244Z",
-      "mood_score": 0.249,
+      "captured_at": "2026-08-20T06:55:33.504Z",
+      "mood_score": 0.25,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -147,17 +147,17 @@
           "excerpt": "Für so eine Miete kaufen andere einen Neuwagen - BZ Berlin. Für so eine Miete kaufen andere einen Neuwagen"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": -0.003,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
@@ -168,7 +168,7 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-20T05:36:38.244Z",
+      "captured_at": "2026-08-20T06:55:33.504Z",
       "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -240,7 +240,7 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-20T05:36:38.244Z",
+      "captured_at": "2026-08-20T06:55:33.504Z",
       "mood_score": 0.297,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 0.814
       }
     }
   ]
