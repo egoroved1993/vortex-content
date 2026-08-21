@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-21T17:34:47.002Z",
+    "capturedAt": "2026-08-21T18:44:42.862Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 418
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-21T17:34:47.002Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-08-21T18:44:42.862Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -62,14 +62,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Abbey Wood and Heathrow Terminals due to an earlier trespasser on the track at Hayes & Harlington."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to train cancellations"
         },
         {
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to an earlier track fault at Vauxhall. Tickets are being accepted on London Buses, Weav"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Minor Delays Windrush Line: No service between Surrey Quays and New Cross, and MINOR DELAYS between Highbury & Islington and West Cro"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.079,
+        "source_item_count": 92,
+        "average_valence": -0.072,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-21T17:34:47.002Z",
-      "mood_score": 0.202,
+      "captured_at": "2026-08-21T18:44:42.862Z",
+      "mood_score": 0.201,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -139,36 +139,36 @@
           "excerpt": "Katy Rough at OST (Berlin) on 2026-08-21T00:00:00.000 [Techno]"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "If it would be my visitor I'd offer the 4 ticket and tell them to download citymapper. It even tells you what part of the train you should stay and what exit to take. It's a great "
         }
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": 0.005,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "events",
           "belonging"
         ],
-        "freshness_score": 0.887
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-21T17:34:47.002Z",
+      "captured_at": "2026-08-21T18:44:42.862Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -235,12 +235,12 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-21T17:34:47.002Z",
+      "captured_at": "2026-08-21T18:44:42.862Z",
       "mood_score": 0.396,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.817
       }
     }
   ]
