@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-22T15:27:34.136Z",
+    "capturedAt": "2026-08-22T16:31:16.088Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 452
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-22T15:27:34.136Z",
-      "mood_score": 0.449,
+      "captured_at": "2026-08-22T16:31:16.088Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 32,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 17,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays following a late finish of the engineering work. Tickets are being accepted on London Buses"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,36 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 22 August, from 1400, and all day Sunday 23 August, no service eastbound from Stamford Brook to"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.149,
+        "source_item_count": 100,
+        "average_valence": -0.145,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-22T15:27:34.136Z",
-      "mood_score": 0.199,
+      "captured_at": "2026-08-22T16:31:16.088Z",
+      "mood_score": 0.197,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -120,31 +120,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Berlin is not the second most expensive city in Germany. It's on third, after Munich and Frankfurt. But compared internationally, Berlin is way down there. I suggest to look at the"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I think it’s the people you meet, I loved Berlin, I was lucky to make lifelong friends with great people, who loved being active and visiting all the cool bars and clubs the city h"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Sorry this happens still. When i first moved to berlin, in 2009, these kind of comments came from all walks of society.. not just from the said group of people.. over the years, i "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Check out Kurpfalz Weinstuben, huuuge selection of German wines and really good German food. The owner, Vincenzo is a German Italian who gave all the dishes a little more flair."
+          "excerpt": "Yeah... I know it's tired to think this way and point this out, but it truly was a different city back in 2011 to 2019 or so... Those years... A golden world of cheap rent, hedonis"
         },
         {
           "source_family": "public",
@@ -153,28 +129,52 @@
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "I moved from Berlin to London. The thing about London is that prices aren’t by sq meter so you actually can get a huge renovated or new build flat for a similar price to what you’d"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "And yet I still REALLY miss Berlin! Had an amazing 18 months there a long time ago. I know people say it is not the same anymore but here I am, thinking about moving back."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I'm convinced 5-10% of the GDP is stuck at the various long-standing Baustellen on the roads. Fix that and people won't need to go sick to work to keep the economy growing, like ce"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.003,
+        "source_item_count": 120,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-22T15:27:34.136Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-08-22T16:31:16.088Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,27 +188,19 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I don’t see why you’d dislike her??? If she moved out the landlord will charge $3k/month rent for that unit. Someone else will move in and pay the 3k, just like you are. The city a"
+          "excerpt": "Red flag rental?. Unit I’m looking to rent doesn’t seem to exist. Called rental board to ask about property and they can’t find records. Owner’s agent plays dumb when I ask for APN"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Rent control punishes every single person who doesn’t live in a rent controlled apartment by making them more expensive and disincentivizing construction of new building. This is a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.612,
-          "recency_weight": 1.04,
-          "excerpt": "So a shitty landlord can force somoene else to pay WAY, WAY too much for a tiny studio? No, that's crazy. Rent control is awesome. Landlords charging so much is the problem. Also, "
+          "excerpt": "How’s dating in sf?. Asian woman in her late 20’s. Been trying but seems no luck in meeting the right person or people who wanted to commit, so wondering how’s it been for everyone"
         },
         {
           "source_family": "public",
@@ -216,37 +208,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "How can you actually live in an apartment with a dead guy and a dog for five days? Zero sympathy. He got below market rent for quite a while. The deal ended."
+          "excerpt": "She did answer eventually to 4 comments last night from around 10pm -3am and then disappeared. What a great politicians… Doesn’t communicate the time Communicated when called out D"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Gold club was stupid expensive and no nudity. I would say crazy horse is the only almost decent place in SF but you are better off at the Vietnamese coffee shops in San Jose althou"
+          "excerpt": "That's Cloudflare HQ on the left, one of the lava lamps erupted, they're controlling the lava flows. More seriously, that's Fire Department HQ on the right and there's a lot of fir"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Table tennis spots & friends in SF. Hi all, I used to play table tennis a lot as a kid, and took around 5 years of coaching in high school. I recently started having the urge to re"
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.045,
+        "source_item_count": 117,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
-          "events",
-          "money"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-22T15:27:34.136Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-08-22T16:31:16.088Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -294,22 +294,22 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
+          "source_origin": "reddit_post",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Yo diría que luego no cambia mucho. Soy investigador, trabajo en un centro internacional con un salario justo sobre la media de Barcelona, y no puedo encontrar vivienda. Con 35 año"
+          "excerpt": "Agent per ajudes a l'habitatge. Hola a tots! Fart de buscar i remenar a un web horrible per part de l'administració per trobar informació sobre les ajudes, he creat un bot a telegr"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
+        "source_item_count": 93,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.821
       }
     }
   ]
