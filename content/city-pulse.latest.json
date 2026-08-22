@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-22T11:26:09.497Z",
+    "capturedAt": "2026-08-22T13:02:27.097Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 446
+    "totalItems": 281
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-22T11:26:09.497Z",
-      "mood_score": 0.461,
+      "captured_at": "2026-08-22T13:02:27.097Z",
+      "mood_score": 0.439,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 14,
+        "transport": 18,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "local_rss",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainau"
+          "excerpt": "A summer of queues and chaos for UK-bound flights. Reporter Adriana Elgueta found herself stuck in an impassable queue in Copenhagen, missing her flight."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Part Closure CIRCLE LINE: Saturday 22 August, between 1030 and 1400, no service between Edgware Road and Tower Hill (via Victoria)"
+          "excerpt": "London transit Central: Minor Delays Central Line: No service between Northolt and West Ruislip and MINOR DELAYS on the rest of the line while emergency serv"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 22 August, between 1030 and 1400, no service between Edgware Road / Embankment and Ealing Broadw"
+          "excerpt": "London transit Central: Part Suspended Central Line: No service between Northolt and West Ruislip and MINOR DELAYS on the rest of the line while emergency serv"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Shenfield/Abbey Wood and Paddington and MINOR DELAYS on the rest of the line while we fix a faulty"
+          "excerpt": "London transit Circle: Part Closure CIRCLE LINE: Saturday 22 August, between 1030 and 1545, no service between Edgware Road and Tower Hill (via Victoria)"
         },
         {
           "source_family": "transport",
@@ -78,33 +78,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Shenfield/Abbey Wood and Paddington and MINOR DELAYS on the rest of the line while we fix a faulty"
+          "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 22 August, from 1400, and all day Sunday 23 August, no service eastbound from Stamford Brook to"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.116,
+        "source_item_count": 80,
+        "average_valence": -0.181,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.904
+        "freshness_score": 1.055
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-22T11:26:09.497Z",
-      "mood_score": 0.197,
+      "captured_at": "2026-08-22T13:02:27.097Z",
+      "mood_score": 0.199,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 13,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -136,6 +135,14 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
+          "excerpt": "Sorry this happens still. When i first moved to berlin, in 2009, these kind of comments came from all walks of society.. not just from the said group of people.. over the years, i "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
           "excerpt": "Check out Kurpfalz Weinstuben, huuuge selection of German wines and really good German food. The owner, Vincenzo is a German Italian who gave all the dishes a little more flair."
         },
         {
@@ -145,40 +152,31 @@
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "I moved from Berlin to London. The thing about London is that prices aren’t by sq meter so you actually can get a huge renovated or new build flat for a similar price to what you’d"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.009,
+        "source_item_count": 73,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 1.062
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-22T11:26:09.497Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-08-22T13:02:27.097Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 62,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -190,67 +188,67 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "I don’t see why you’d dislike her??? If she moved out the landlord will charge $3k/month rent for that unit. Someone else will move in and pay the 3k, just like you are. The city a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Rent control punishes every single person who doesn’t live in a rent controlled apartment by making them more expensive and disincentivizing construction of new building. This is a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.612,
+          "recency_weight": 1.04,
+          "excerpt": "So a shitty landlord can force somoene else to pay WAY, WAY too much for a tiny studio? No, that's crazy. Rent control is awesome. Landlords charging so much is the problem. Also, "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "How can you actually live in an apartment with a dead guy and a dog for five days? Zero sympathy. He got below market rent for quite a while. The deal ended."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Gold club was stupid expensive and no nudity. I would say crazy horse is the only almost decent place in SF but you are better off at the Vietnamese coffee shops in San Jose althou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Well unless the sub leasers turn them in for illegal shit they are doing then sue them for all the rent they paid."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How’s dating in sf?. Asian woman in her late 20’s. Been trying but seems no luck in meeting the right person or people who wanted to commit, so wondering how’s it been for everyone"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Red flag rental?. Unit I’m looking to rent doesn’t seem to exist. Called rental board to ask about property and they can’t find records. Owner’s agent plays dumb when I ask for APN"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "No, the reason this is the case is not due to rent control but due to strict eviction protections. You could argue that’s 2 parts of the same policy but one can have a rent control"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.026,
+        "source_item_count": 74,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
-          "transit",
-          "events"
+          "events",
+          "money"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-22T11:26:09.497Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-08-22T13:02:27.097Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -269,14 +267,6 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
@@ -286,30 +276,38 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "La UPC té residències que les habitacions més barates costen 750€. No em sorpren gens ni mica."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "El 72 % de les persones que viuen al carrer no tenen expectatives de deixar de viure al ras"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Sóc professor a la UPC. Aquesta universitat és una broma. Depenen del sector privat per a l'allotjament dels estudiants i per a la cafeteria, cosa que provoca preus inflats. Bàsica"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Yo diría que luego no cambia mucho. Soy investigador, trabajo en un centro internacional con un salario justo sobre la media de Barcelona, y no puedo encontrar vivienda. Con 35 año"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.012,
+        "source_item_count": 54,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 1.044
       }
     }
   ]
