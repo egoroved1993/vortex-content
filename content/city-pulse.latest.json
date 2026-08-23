@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-23T21:27:42.081Z",
+    "capturedAt": "2026-08-23T22:28:24.738Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 433
+    "totalItems": 435
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-23T21:27:42.081Z",
-      "mood_score": 0.479,
+      "captured_at": "2026-08-23T22:28:24.738Z",
+      "mood_score": 0.475,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -62,6 +62,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: No service between Fulham Broadway and Wimbledon, and Earl's Court and Kensington (Olympia) due to planne"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
@@ -71,34 +79,26 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 23 August, from 2215, no service between Camden Road and Stratford. There will also be no WINDRUSH"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.063,
+        "source_item_count": 101,
+        "average_valence": -0.073,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-23T21:27:42.081Z",
-      "mood_score": 0.196,
-      "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-08-23T22:28:24.738Z",
+      "mood_score": 0.496,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 10,
         "review": 2,
@@ -168,7 +168,7 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-23T21:27:42.081Z",
+      "captured_at": "2026-08-23T22:28:24.738Z",
       "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -240,10 +240,10 @@
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-23T21:27:42.081Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-08-23T22:28:24.738Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 32,
@@ -306,10 +306,10 @@
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
-          "transit",
-          "events"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.824
       }
     }
   ]
