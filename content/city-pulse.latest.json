@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-22T23:26:43.865Z",
+    "capturedAt": "2026-08-23T01:45:42.076Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,54 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 414
+    "totalItems": 419
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-22T23:26:43.865Z",
-      "mood_score": 0.464,
+      "captured_at": "2026-08-23T01:45:42.076Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 9,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I know a few that do. They're usually 90s classic cars or from the late 80s. They cost a bit to run, but are perfectly happy to do so on the odd occasion to drive them out of the c"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to an earlier customer incident."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -79,26 +55,50 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 22 August, from 1400, and all day Sunday 23 August, no service between Fulham Broadway and Wimbl"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Tottenham's expensive rebuild begins with familiar collapse - Reuters. Tottenham's expensive rebuild begins with familiar collapse"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "If the outcome is good enough then its quality will transcend the relevance of how it was made. I don't feel that way about visual arts so much .. but about fiction/movies/music al"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.107,
+        "source_item_count": 93,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-22T23:26:43.865Z",
-      "mood_score": 0.5,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-08-23T01:45:42.076Z",
+      "mood_score": 0.198,
+      "mood_label": "dark",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 7,
         "review": 2,
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -140,41 +148,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Social Isolation among University Students. I've been prepping to study medicine at a German university for a while now. However, I've been having some second thoughts due to heari"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Can I hire a really bad musician for my house party in Berlin? Best would be German Volksmusik and for 30-60 min"
+          "excerpt": "Between “I really like Berlin” and “I hate it” is just an individual amount of time living here. It took me about 30 years."
         }
       ],
       "metadata": {
         "source_item_count": 113,
-        "average_valence": -0.001,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-22T23:26:43.865Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-08-23T01:45:42.076Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 43,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,6 +188,30 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "You can definitely get in that price range and below if you rent a room. Sometimes they'll have private bathrooms."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Thanks I already have and attorneys. But I'm trying to prepare for the worse. A year ago my unit would be at market but now you could easily get 1k or more in rent for it. Bad part"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "God wonder who I pissed off to get a down vote for saying that healthcare workers should be paid more? Interesting right? Or was it the fact that I touched historical preservation?"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -196,57 +220,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How’s dating in sf?. Asian woman in her late 20’s. Been trying but seems no luck in meeting the right person or people who wanted to commit, so wondering how’s it been for everyone"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The person who bought Beeps Burgers had the same vision & the burgers are the best & that place is ALWAYS busy. Open late night too. They got rid of alot of stuff on the previous m"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "In my 20's and 30's afterwork HH was the best way to wind down after work and blow off steam. So many fun adventures start off with simple HH after work with a few coworkers. This "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Table tennis spots & friends in SF. Hi all, I used to play table tennis a lot as a kid, and took around 5 years of coaching in high school. I recently started having the urge to re"
+          "excerpt": "My landlord did this and I broke the camera from behind, whoops must have been weather related. I believe they need to give you a notice of any camera installations in and around y"
         }
       ],
       "metadata": {
-        "source_item_count": 109,
-        "average_valence": -0.001,
+        "source_item_count": 118,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.869
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-22T23:26:43.865Z",
+      "captured_at": "2026-08-23T01:45:42.076Z",
       "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -286,11 +286,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Sóc professor a la UPC. Aquesta universitat és una broma. Depenen del sector privat per a l'allotjament dels estudiants i per a la cafeteria, cosa que provoca preus inflats. Bàsica"
+          "excerpt": "Agent per ajudes a l'habitatge. Hola a tots! Fart de buscar i remenar a un web horrible per part de l'administració per trobar informació sobre les ajudes, he creat un bot a telegr"
         },
         {
           "source_family": "public",
@@ -298,18 +298,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Agent per ajudes a l'habitatge. Hola a tots! Fart de buscar i remenar a un web horrible per part de l'administració per trobar informació sobre les ajudes, he creat un bot a telegr"
+          "excerpt": "Botigues de vinils i CD de segona mà per Barcelona?. Bon dia, estic buscant alguna botiga de discos i/o CDs de segona mà barats per Barcelona (o, si teniu alguna recomanació a qual"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
+        "source_item_count": 95,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.825
       }
     }
   ]
