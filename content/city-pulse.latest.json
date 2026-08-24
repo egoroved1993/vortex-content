@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-24T04:52:24.821Z",
+    "capturedAt": "2026-08-24T05:54:49.378Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 442
+    "totalItems": 269
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-24T04:52:24.821Z",
-      "mood_score": 0.483,
+      "captured_at": "2026-08-24T05:54:49.378Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 8,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Wembley Park and Baker Street Southbound only following a late finish of engine"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to a late finish of engineering work. Tickets are being accepted on local bus services."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays following a late finish of engineering work."
         },
         {
           "source_family": "transport",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Cockfosters and Oakwood, westbound only, while we fix a signal failure at Cockfoster"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -70,41 +78,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Severe Delays Weaver Line: No service between Hackney Downs and Enfield Town / Cheshunt, and SEVERE DELAYS on the rest of the line whi"
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Cockfosters and Acton Town westbound only due to an earlier signal failure at Coc"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.051,
+        "source_item_count": 57,
+        "average_valence": -0.063,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 1.051
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-24T04:52:24.821Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-08-24T05:54:49.378Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -114,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -153,32 +144,39 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "I guess it's just about luck and the fact, that we are doing \"corridor modernisation\" at the moment. In the next few years WE are closing one \"high capacity corridor\" after another"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Can I hire a really bad musician for my house party in Berlin? Best would be German Volksmusik and for 30-60 min"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.004,
+        "source_item_count": 67,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 1.064
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-24T04:52:24.821Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-08-24T05:54:49.378Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 69,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -228,29 +226,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 135,
-        "average_valence": -0.019,
+        "source_item_count": 85,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 1.04
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-24T04:52:24.821Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-08-24T05:54:49.378Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -267,14 +265,6 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
         },
         {
           "source_family": "public",
@@ -299,17 +289,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Salamandra és un model d'intel·ligència artificial fet a Barcelona que et pots baixar i fer córrer al teu ordinador"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Les platges de Barcelona, refugi de nit per a persones sense llar i turistes que no volen pagar un hotel"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.011,
+        "source_item_count": 60,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.816
+        "freshness_score": 1.035
       }
     }
   ]
