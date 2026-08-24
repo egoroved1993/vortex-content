@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-24T07:09:27.473Z",
+    "capturedAt": "2026-08-24T08:55:19.689Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,46 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 442
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-24T07:09:27.473Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-08-24T08:55:19.689Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to a late finish of engineering work."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays following a late finish of engineering work."
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -78,29 +62,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: No service between Hackney Downs and Seven Sisters and SEVERE DELAYS on the rest of the line while we fix a"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Part Suspended Weaver Line: No service between Hackney Downs and Seven Sisters and SEVERE DELAYS on the rest of the line while we fix a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "If the goal is to move the maximum number of people, then giving priority to buses, taxis and certain commercial vehicles can make sense. A single bus stuck in traffic can mean del"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.065,
+        "source_item_count": 98,
+        "average_valence": -0.026,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-24T07:09:27.473Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-08-24T08:55:19.689Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U5: Delays 1 trips delayed"
+          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "That's weird. Most people I know never really used Sie with their in-laws at all. They might have started with Sie at their very first meeting, to make a good impression and then g"
         },
         {
           "source_family": "news",
@@ -129,7 +137,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -146,36 +154,28 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Cameras on EVERY monitor in the new U5 trains. This is excessive surveillance, I'm NOT Okay with this. Who do I need to contact?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Curious incident at Museumsinsel. This morning, a naked woman was walking around Museumsinsel with a film crew (a camera and 3–4 people), right in front of the cathedral. What was "
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.011,
+        "source_item_count": 119,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-24T07:09:27.473Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-08-24T08:55:19.689Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 69,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -199,9 +199,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Airbnb’s are crazy expensive all over the Bay! It honestly would be comparable to renting without the commitment"
+          "excerpt": "Tropisueño is solid but if youre flying solo id skip the wait and grab something from the tacqueria next door instead. Same kitchen basically and you can take it back to your room "
         },
         {
           "source_family": "public",
@@ -209,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Sf has the strictest tenant laws in the nation. My very close friend bought out their renter for 32k. Don't let this landlord bully you. Know your rights."
+          "excerpt": "I've been here for 20 years without a car or a bike. Mostly public transit, for the times I need a car, I rent a car for a day or two. It works great!"
         },
         {
           "source_family": "public",
@@ -217,7 +217,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "By your reasoning, the OP has nothing to lose in trying to compromise with the landlord. In other words, if bargaining with the landlord works, the landlord gets the 1-bdr back and"
+          "excerpt": "It sounds like landlord is asking. He hasn't threatened or anything. If he wants to move and save money can say yes and negotiate price. If he likes to stay till end of lease I a. "
         },
         {
           "source_family": "public",
@@ -225,29 +225,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I had a car in SF but I moved it to my parents garage outside SF where it still sits. I got tired of moving it every week for street cleaning"
+          "excerpt": "Yep in Fillmore. Crazy, I've never been affected by a power outage in the nearly 10 years I've lived here. I could hear a generator automatically turn on and some alarms going off "
         }
       ],
       "metadata": {
-        "source_item_count": 135,
-        "average_valence": -0.019,
+        "source_item_count": 121,
+        "average_valence": -0.056,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-24T07:09:27.473Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-08-24T08:55:19.689Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 30,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -270,14 +270,6 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "ca",
@@ -295,6 +287,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "\"No se podía saber\". El problema de l'habitatge ha de ser la prioritat número 1 dels governants. Ara són els examinadors per carnet de conduir, però a aquest ritme afectará a docen"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.011,
+        "source_item_count": 95,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.812
       }
     }
   ]
