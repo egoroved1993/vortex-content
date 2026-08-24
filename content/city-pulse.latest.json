@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-24T19:34:36.783Z",
+    "capturedAt": "2026-08-24T20:37:16.053Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-24T19:34:36.783Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-08-24T20:37:16.053Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "My boyfriend took me to J. Sheekey on our second date when he really wanted to pursue me, and I really liked that place! I had never been there before. It's really good quality wit"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Stratford and Willesden Junction, and SEVERE DELAYS on the rest of the line while we fi"
+          "excerpt": "London transit Lioness: Severe Delays Lioness Line: Severe delays due to an earlier fire alert at Watford Junction. London Underground are accepting tickets v"
         },
         {
           "source_family": "transport",
@@ -70,43 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Stratford and Willesden Junction, and SEVERE DELAYS on the rest of the line while we fi"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Used to work with a guy who never used any leave and would work no matter how sick he was. Also treated his job like the world would end if he didn't turn up and put in 100%. He wa"
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to an earlier fault with the overhead power lines at Camden Road. Tickets are being acce"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.043,
+        "source_item_count": 96,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-24T19:34:36.783Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-08-24T20:37:16.053Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U8, S3: Delays 2 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It builds neither ghettos nor anything, and where something was built it just makes the rent for the other half of the apartments unfairly high because landlords have to subsidise "
+          "excerpt": "I‘m 73 and still remember that my father used to generously round up the bill. For him this was a sign of good education. But he would have been shocked by a waiter asking for a ti"
         },
         {
           "source_family": "news",
@@ -145,36 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Cameras on EVERY monitor in the new U5 trains. This is excessive surveillance, I'm NOT Okay with this. Who do I need to contact?"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.005,
+        "source_item_count": 117,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-24T19:34:36.783Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-08-24T20:37:16.053Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 60,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -190,9 +191,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Last time I was searching for an apartment, I set a minimum rent in my search parameters to filter out scams."
+          "excerpt": "Thank you! I am a newb to the area so I may just be looking in all the wrong places… but I can tell you the equivalent sized studios in downtown Los Angeles are half the prices of "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "It is expensive AF. Apartments in your budget are exceedingly competitive with lineups for in person visits and tons of applications - your employment will be part of what a landlo"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "If you’re specifically looking for someone catholic then your best bet is going to events put on by Catholic Churches. Study groups, dinner groups, any kind of community event put "
         },
         {
           "source_family": "public",
@@ -200,53 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I wouldn’t agree to anything verbally yet. Get the full offer in writing first—including moving costs, the new rent and every fee—and then decide what amount would actually make mo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How do we ban all cyclists from the panhandle?. These ass\\\\\\\\ ruin the pedestrian experience of walking/running in the park. there is literally a bike lane next to the park that th"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "From my last three meals at Pacific Cafe before next weekend's closure. As much as I want to be there the final weekend, I had to go overseas today. If my final visit yesterday (8/"
+          "excerpt": "I own, not rent. But is this really the reality of rent in the city now? Very genuine question, I feel so OOT and am very sorry for everyone new to SF or renters not in rent contro"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Eh, the article spells it out pretty clearly. The materials and cost of the building the homes were less than or around the same as the cost of buying the land itself, which was th"
+          "excerpt": "Where did I say that? Rent control can be reduced, and slowly phased back to give people ample time to vote for politicians that will enable building, and time for those buildings "
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.009,
+        "source_item_count": 126,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-24T19:34:36.783Z",
+      "captured_at": "2026-08-24T20:37:16.053Z",
       "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 30,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -274,14 +275,6 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "La gent no és que no vulgui viure a Barcelona, no pot directament, t'expulsen. I així amb tots els sectors: professors, inferneres, policies, etc. Ja amb un sou no pots pagar ni un"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
           "excerpt": "\"No se podía saber\". El problema de l'habitatge ha de ser la prioritat número 1 dels governants. Ara són els examinadors per carnet de conduir, però a aquest ritme afectará a docen"
         },
         {
@@ -299,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Els examinadors que ja viuen a Barcelona i tenen vivenda pròpia son just els que s'estàn jubilant. Per a la resta, els joves o gent que ve de fora, el panorama es demanar de seguid"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Si estas opositant i cobres el mateix a Barcelona i a Lleida, tret d'algun cas especific, la majoria optaràn per viure en un lloc on tindràn millor nivell de vida. Això es exactame"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
+        "source_item_count": 95,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.811
+        "freshness_score": 0.81
       }
     }
   ]
