@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-24T03:09:46.554Z",
+    "capturedAt": "2026-08-24T04:52:24.821Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 418
+    "totalItems": 442
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-24T03:09:46.554Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-08-24T04:52:24.821Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -40,61 +41,61 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I love London Redditor’s so much. A few weeks ago I made a post about all points east and asked people if they had good spots to watch it from because I really wanted to see Defton"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Private dinner recommendations. We are planning a celebration - a private dinner - in London in the future. Can anyone recommend a good restaurant with a private dining room? 32 pe"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "St George’s Wharf development so unbelievably ugly. I’m not around Vauxhall area much but when I was walking along the opposite side of the river looking at the buildings along the"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Wembley Park and Baker Street Southbound only following a late finish of engine"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "What's The Average Rent In Each London Borough? - Londonist. What's The Average Rent In Each London Borough?"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: No service between Cockfosters and Oakwood, westbound only, while we fix a signal failure at Cockfoster"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Severe Delays Weaver Line: No service between Hackney Downs and Enfield Town / Cheshunt, and SEVERE DELAYS on the rest of the line whi"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": 0.002,
+        "source_item_count": 94,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-24T03:09:46.554Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-08-24T04:52:24.821Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -106,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -153,28 +145,36 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Curious incident at Museumsinsel. This morning, a naked woman was walking around Museumsinsel with a film crew (a camera and 3–4 people), right in front of the cathedral. What was "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I guess it's just about luck and the fact, that we are doing \"corridor modernisation\" at the moment. In the next few years WE are closing one \"high capacity corridor\" after another"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.011,
+        "source_item_count": 117,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-24T03:09:46.554Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-08-24T04:52:24.821Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 69,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -190,9 +190,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Pokemon Go helped me out for a little bit while I was unemployed. Its kind of a bad game, but a good excuse to get out and walk, especially if you go to community meetups."
+          "excerpt": "Also someone said it above, but it's worth its own comment - in SF your lease is most likely month to month after the first year. It doesn't expire in April and you don't have to m"
         },
         {
           "source_family": "public",
@@ -200,53 +200,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "To add onto this excellent post, the landlord can't do a owner move in mid-lease without your approval. So you are in the catbird seat. You can ask for more money than the statute "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How do we ban all cyclists from the panhandle?. These ass\\\\\\\\ ruin the pedestrian experience of walking/running in the park. there is literally a bike lane next to the park that th"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Table tennis spots & friends in SF. Hi all, I used to play table tennis a lot as a kid, and took around 5 years of coaching in high school. I recently started having the urge to re"
+          "excerpt": "Airbnb’s are crazy expensive all over the Bay! It honestly would be comparable to renting without the commitment"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I've made the NYC to SF move twice, really happy each time. I love that I lived in NYC twice in my 20s, it was in many ways the center of the universe. SF, by contrast, is a self-i"
+          "excerpt": "Sf has the strictest tenant laws in the nation. My very close friend bought out their renter for 32k. Don't let this landlord bully you. Know your rights."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "By your reasoning, the OP has nothing to lose in trying to compromise with the landlord. In other words, if bargaining with the landlord works, the landlord gets the 1-bdr back and"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I had a car in SF but I moved it to my parents garage outside SF where it still sits. I got tired of moving it every week for street cleaning"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.01,
+        "source_item_count": 135,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-24T03:09:46.554Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-08-24T04:52:24.821Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -269,28 +269,12 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Salamandra és un model d'intel·ligència artificial fet a Barcelona que et pots baixar i fer córrer al teu ordinador"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Agent per ajudes a l'habitatge. Hola a tots! Fart de buscar i remenar a un web horrible per part de l'administració per trobar informació sobre les ajudes, he creat un bot a telegr"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Si estas opositant i cobres el mateix a Barcelona i a Lleida, tret d'algun cas especific, la majoria optaràn per viure en un lloc on tindràn millor nivell de vida. Això es exactame"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Huelga general del 15 de octubre per Palestina: serveis mínims de metro i Rodalies, escoles i hospitals a Barcelona - Barcelona Secreta. Huelga general del 15 de octubre per Palest"
         },
         {
           "source_family": "public",
@@ -299,17 +283,33 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "És a dir que el fons del problema és l'habitatge. Els examinadors no volen viure a Barcelona. Clar, amb un sou igual jo també prefereixo Vic."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "La gent no és que no vulgui viure a Barcelona, no pot directament, t'expulsen. I així amb tots els sectors: professors, inferneres, policies, etc. Ja amb un sou no pots pagar ni un"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Salamandra és un model d'intel·ligència artificial fet a Barcelona que et pots baixar i fer córrer al teu ordinador"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.007,
+        "source_item_count": 96,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.815
+        "freshness_score": 0.816
       }
     }
   ]
