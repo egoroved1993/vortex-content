@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-24T13:01:27.427Z",
+    "capturedAt": "2026-08-24T14:49:17.347Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -21,8 +21,8 @@
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-24T13:01:27.427Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-08-24T14:49:17.347Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,21 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to a late running freight train."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,23 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: SEVERE DELAYS between Watford and Harrow-on-the-Hill Northbound only and MINOR DELAYS between Watford"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: SEVERE DELAYS between Watford and Harrow-on-the-Hill Northbound only and MINOR DELAYS between Watford"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Severe Delays Weaver Line: Severe delays due to an earlier fault with the signalling system."
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -79,23 +71,31 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "That's so kind of you! :´) I really appreciate that. I've only seen £18 tickets, how do I find the £5 ones? I've seen they only are for people aged 16–25. In any case, I’d love to "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Another vote for Bentley's. Pricey, but impeccable service. Good wine list, solid classic dishes. Head chef Corrigan is great. Avoid Fish! in Borough Market, I find it's a bit of a"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.023,
+        "source_item_count": 95,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-24T13:01:27.427Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-08-24T14:49:17.347Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 1.08,
+          "excerpt": "(S+) Immobilien: Warum es gut wäre, wenn die Mieten stärker steigen dürften - Spiegel. (S+) Immobilien: Warum es gut wäre, wenn die Mieten stärker steigen dürften"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -137,38 +154,22 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Cameras on EVERY monitor in the new U5 trains. This is excessive surveillance, I'm NOT Okay with this. Who do I need to contact?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Curious incident at Museumsinsel. This morning, a naked woman was walking around Museumsinsel with a film crew (a camera and 3–4 people), right in front of the cathedral. What was "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Can I hire a really bad musician for my house party in Berlin? Best would be German Volksmusik and for 30-60 min"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.004,
+        "source_item_count": 115,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-24T13:01:27.427Z",
+      "captured_at": "2026-08-24T14:49:17.347Z",
       "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-24T13:01:27.427Z",
+      "captured_at": "2026-08-24T14:49:17.347Z",
       "mood_score": 0.418,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.816
       }
     }
   ]
