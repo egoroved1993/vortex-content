@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-25T01:38:31.375Z",
+    "capturedAt": "2026-08-25T03:04:33.035Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,12 +16,12 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-25T01:38:31.375Z",
+      "captured_at": "2026-08-25T03:04:33.035Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -88,13 +88,13 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-25T01:38:31.375Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-08-25T03:04:33.035Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -106,6 +106,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +114,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U5, U2: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Wohnen in der Hauptstadt - Teuer und knapp: Berlin steckt in einer Wohnungskrise - Stil - SZ.de. Wohnen in der Hauptstadt - Teuer und knapp: Berlin steckt in einer Wohnungskrise - "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Wohnen in der Hauptstadt: Teuer und knapp: Berlin steckt in einer Wohnungskrise - Mitteldeutsche Zeitung. Wohnen in der Hauptstadt: Teuer und knapp: Berlin steckt in einer Wohnungs"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -128,46 +153,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "It must have been a mix or has a different name. The emphasis was on the spices, not on the Kruste. Sadly I haven't found fresh caraway bread (yet!) in northern Germany. Thank you "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "go to your closest 'Hofpfisterei' and buy their bread. It's the best. You can keep half a loaf easily for 4-5 days and it still tastes great!"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.001,
+        "source_item_count": 116,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-25T01:38:31.375Z",
+      "captured_at": "2026-08-25T03:04:33.035Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-25T01:38:31.375Z",
+      "captured_at": "2026-08-25T03:04:33.035Z",
       "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
