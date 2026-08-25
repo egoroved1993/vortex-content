@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-25T09:03:32.696Z",
+    "capturedAt": "2026-08-25T09:41:33.130Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 262
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-25T09:03:32.696Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-08-25T09:41:33.130Z",
+      "mood_score": 0.476,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -54,6 +54,22 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Upminster and Earl's Court westbound only while we fix a faulty train at Upton Park."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier trespasser on the track at Finchley Road. Tickets will be accepted on Lond"
         },
         {
@@ -62,51 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays due to an earlier trespasser on the track at Finchley Road."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 25, Wednesday 26 and Thursday 27 August, no service between Cockfosters and Uxbridge. Trains wi"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 61,
-        "average_valence": -0.066,
+        "source_item_count": 98,
+        "average_valence": -0.071,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 1.049
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-25T09:03:32.696Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-08-25T09:41:33.130Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,28 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S5, S75, S3: Delays 3 trips delayed"
+          "excerpt": "Wohnen in der Hauptstadt: Teuer und knapp: Berlin steckt in einer Wohnungskrise - Mitteldeutsche Zeitung. Wohnen in der Hauptstadt: Teuer und knapp: Berlin steckt in einer Wohnungs"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 1,
+          "excerpt": "(S+) Immobilien: Warum es gut wäre, wenn die Mieten stärker steigen dürften - Spiegel. (S+) Immobilien: Warum es gut wäre, wenn die Mieten stärker steigen dürften"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -137,47 +154,32 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Curious incident at Museumsinsel. This morning, a naked woman was walking around Museumsinsel with a film crew (a camera and 3–4 people), right in front of the cathedral. What was "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I am not an expert, but for Father's Day I sent my husband to the barista course at 19 gramms (another friend went also) and they both loved it."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Cameras on EVERY monitor in the new U5 trains. This is excessive surveillance, I'm NOT Okay with this. Who do I need to contact?"
         }
       ],
       "metadata": {
-        "source_item_count": 68,
-        "average_valence": -0.011,
+        "source_item_count": 117,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 1.065
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-25T09:03:32.696Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-08-25T09:41:33.130Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -227,29 +229,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 77,
-        "average_valence": -0.01,
+        "source_item_count": 127,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 1.041
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-25T09:03:32.696Z",
+      "captured_at": "2026-08-25T09:41:33.130Z",
       "mood_score": 0.46,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -301,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 56,
-        "average_valence": 0.001,
+        "source_item_count": 92,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
           "transit",
           "tourism"
         ],
-        "freshness_score": 1.046
+        "freshness_score": 0.801
       }
     }
   ]
