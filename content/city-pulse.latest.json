@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-25T18:47:57.677Z",
+    "capturedAt": "2026-08-25T19:37:02.159Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 424
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-25T18:47:57.677Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-08-25T19:37:02.159Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -65,12 +65,12 @@
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 25, Wednesday 26 and Thursday 27 August, no service between Cockfosters and Uxbridge. Trains wi"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "What was the 90s house/club scene like across the UK?. I'm 17 however am a big fan of the dance, rave and house music of the 90s. An album that I listen to a lot of the 3CD compila"
         },
         {
           "source_family": "public",
@@ -78,24 +78,24 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "What was the 90s house/club scene like across the UK?. I'm 17 however am a big fan of the dance, rave and house music of the 90s. An album that I listen to a lot of the 3CD compila"
+          "excerpt": "tattoo shop recs?. im from west london, ive been thinking of getting quite a large tattoo on my left arm (next to the inside of the elbow) and i have no idea where to start with lo"
         }
       ],
       "metadata": {
         "source_item_count": 97,
-        "average_valence": -0.028,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-25T18:47:57.677Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-08-25T19:37:02.159Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +154,22 @@
           "valence": 0.5,
           "recency_weight": 0.88,
           "excerpt": "(S+) Immobilien: Warum es gut wäre, wenn die Mieten stärker steigen dürften - Spiegel. (S+) Immobilien: Warum es gut wäre, wenn die Mieten stärker steigen dürften"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.006,
+        "source_item_count": 120,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-25T18:47:57.677Z",
+      "captured_at": "2026-08-25T19:37:02.159Z",
       "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "money",
           "transit"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-25T18:47:57.677Z",
+      "captured_at": "2026-08-25T19:37:02.159Z",
       "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
@@ -309,7 +310,7 @@
           "transit",
           "tourism"
         ],
-        "freshness_score": 0.779
+        "freshness_score": 0.784
       }
     }
   ]
