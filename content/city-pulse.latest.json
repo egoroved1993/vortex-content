@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-26T09:49:49.636Z",
+    "capturedAt": "2026-08-26T10:40:42.270Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 459
+    "totalItems": 458
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-08-26T09:49:49.636Z",
+      "captured_at": "2026-08-26T10:40:42.270Z",
       "mood_score": 0.446,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 39,
@@ -46,6 +46,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Whitechapel and Shenfield while we fix a track fault at Harold Wood. London Underground are accept"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
@@ -55,14 +63,6 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Tuesday 25, Wednesday 26 and Thursday 27 August, no service between Cockfosters and Uxbridge. Trains wi"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -87,14 +87,14 @@
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-08-26T09:49:49.636Z",
+      "captured_at": "2026-08-26T10:40:42.270Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -107,7 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+          "excerpt": "Berlin transit S7, S5: Delays 2 trips delayed"
         },
         {
           "source_family": "news",
@@ -157,19 +157,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
+        "source_item_count": 116,
         "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-26T09:49:49.636Z",
+      "captured_at": "2026-08-26T10:40:42.270Z",
       "mood_score": 0.463,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 142,
-        "average_valence": -0.108,
+        "average_valence": -0.107,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-08-26T09:49:49.636Z",
+      "captured_at": "2026-08-26T10:40:42.270Z",
       "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 26,
@@ -308,9 +308,9 @@
         "dominant_themes": [
           "general",
           "transit",
-          "tourism"
+          "routine"
         ],
-        "freshness_score": 0.798
+        "freshness_score": 0.803
       }
     }
   ]
