@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-08-29T01:38:22.651Z",
+    "capturedAt": "2026-08-29T08:52:04.051Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,194 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 331
   },
   "rows": [
     {
-      "city_id": "london",
-      "captured_at": "2026-08-29T01:38:22.651Z",
-      "mood_score": 0.286,
+      "city_id": "berlin",
+      "captured_at": "2026-08-29T08:52:04.051Z",
+      "mood_score": 0.497,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 3,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 50,
+        "nightlife": 40,
+        "trends": 8,
+        "transport": 1,
+        "weather": 1
+      },
+      "languages": [
+        "de",
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 1,
+          "excerpt": "„Ich bin konservativ. Und das ist auch gut so“: Evers soll CDU bei Berlin-Wahl retten mit Anti-Linken-Programm - Frankfurter Rundschau. „Ich bin konservativ. Und das ist auch gut s"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Wohnen in der Hauptstadt - Teuer und knapp: Berlin steckt in einer Wohnungskrise - Stil - SZ.de. Wohnen in der Hauptstadt - Teuer und knapp: Berlin steckt in einer Wohnungskrise - "
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        }
+      ],
+      "metadata": {
+        "source_item_count": 110,
+        "average_valence": -0.01,
+        "dominant_themes": [
+          "general",
+          "events",
+          "routine"
+        ],
+        "freshness_score": 0.875
+      }
+    },
+    {
+      "city_id": "barcelona",
+      "captured_at": "2026-08-29T08:52:04.051Z",
+      "mood_score": 0.292,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "weather": 1
+      },
+      "languages": [
+        "ca",
+        "en",
+        "es"
+      ],
+      "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The thing isn't about the price, it's about not providing income for companies that are monetizing housing without any ethics or caring for the city or its people. The normal thing"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "No dudo que esa pueda ser la situación en tu barrio, pero en Barcelona ciudad los pisos turisticos representan menos del 1% del total, y el precio medio del alquiler ha subido casi"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Don't go to colivings in Barcelona, they are always a trap and their sole purpose is to make money. 0 focus on community, just regular flats with higher prices. Instead, and if you"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Quina vergonya. Això fa 15 anys no passava. En canvi ara fotem masses diners en anglès i entre ghetos de \"expats\" com per atrevir-se a fer res. Com es pot reconèixer que no aplique"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 78,
+        "average_valence": -0.023,
+        "dominant_themes": [
+          "general",
+          "routine",
+          "money"
+        ],
+        "freshness_score": 0.762
+      }
+    },
+    {
+      "city_id": "london",
+      "captured_at": "2026-08-29T08:52:04.051Z",
+      "mood_score": 0.253,
+      "mood_label": "low",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
+      "source_counts": {
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 50,
+        "trends": 8,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,120 +226,28 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: Saturday 29 August, between 0130 and 0330, no service between Camden Town and High Barnet / Mill Hill Eas"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Is it me or is Southern Railway was worse than ever in 2026?. There was not a day passed without a delay due to a technical problem, staff being late, signalling problems etc. I co"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Same thing every year. Create a fake protest, so rentamob can come down and protest against the bad thing. If anyone genuinely believes the almost dead UKIP was planning to protest"
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Harrow-on-the-Hill and Aldgate and SEVERE DELAYS on the rest of the line while eme"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.041,
+        "source_item_count": 78,
+        "average_valence": -0.138,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.858
-      }
-    },
-    {
-      "city_id": "berlin",
-      "captured_at": "2026-08-29T01:38:22.651Z",
-      "mood_score": 0.399,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
-      "dominant_sentiment": "negative",
-      "source_counts": {
-        "public": 20,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 50,
-        "nightlife": 40,
-        "trends": 8,
-        "transport": 1,
-        "weather": 1
-      },
-      "languages": [
-        "de",
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Berlin doesn't have real rent control right now. Previous RRG government tried to introduce one and it was blocked on federal level so I don't know what you are talking about. I su"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Another Berlin or Hamburg post?. I found posts from years ago debating this. Consensus is that Berlin is more interesting and has more things to do while Hamburg is pretty and that"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Nope. I know people from Berlin who went there and loved it because kind of similar but still very different. So no first experience but I gonna trust my friends who went there. Yo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "People don't need to DO anything. And they always deserve to know that happened in their hood. I just know this is a white person writing these troll comments. A culture of indiffe"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "„Ich bin konservativ. Und das ist auch gut so“: Evers soll CDU bei Berlin-Wahl retten mit Anti-Linken-Programm - Frankfurter Rundschau. „Ich bin konservativ. Und das ist auch gut s"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.004,
-        "dominant_themes": [
-          "general",
-          "events",
-          "belonging"
-        ],
-        "freshness_score": 0.908
+        "freshness_score": 0.828
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-08-29T01:38:22.651Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-08-29T08:52:04.051Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 47,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,129 +260,55 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Landlord won't rent to young unmarried couple?. Don't want to add specifics but was recently turned down from an apartment with my partner because the owner stated verbally they di"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I don't know if they do partial straightening but you could try Hare Hair in the Sunset (Irving St). I have very densely packed hair as well and I've been getting haircuts there fo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Caltrain Southbound Around 8pm?. How crowded is Caltrain southbound from 22nd St around 8pm on weekdays? Is it usually easy to find a seat? I’ll be commuting to South bay for night"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "The CHUDs are out in force this evening. When does SFPD do anything?. The Safeway parking lot on 16th between Potrero and Bryant is taken over by sideshow goons. Yes, let’s sit in "
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I mean, I'll assume you're describing your real meaning in good faith, but the comment pretty strongly reads as agreeing with the specific assertion (i.e. that tax donations are ma"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.028,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "events"
-        ],
-        "freshness_score": 0.864
-      }
-    },
-    {
-      "city_id": "barcelona",
-      "captured_at": "2026-08-29T01:38:22.651Z",
-      "mood_score": 0.289,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
-      "source_counts": {
-        "public": 26,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 50,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "ca",
-        "en",
-        "es"
-      ],
-      "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "It might surprise you to discover that some of the biggest beneficiaries of Barcelona overtourism are Catalan and that many foreign born residents also suffer from overtourism. Per"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "No dudo que esa pueda ser la situación en tu barrio, pero en Barcelona ciudad los pisos turisticos representan menos del 1% del total, y el precio medio del alquiler ha subido casi"
+          "recency_weight": 0.56,
+          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Holiday S.F. power outage disrupts trains, leaves Waymos stalled on darkened streets - Los Angeles Times. Holiday S.F. power outage disrupts trains, leaves Waymos stalled on darken"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "L’Ajuntament de Barcelona admet que evita inspeccionar i sancionar comerços pel català"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Muni subway service restored after major delay snarled evening commute - San Francisco Chronicle. Muni subway service restored after major delay snarled evening commute"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Com heu viscut l'incendi d'avui?. A mitja tarda m'ha semblat veure una columna de fum. El panorama ha empitjorat en qüestió de minuts i he fet aquestes fotos. Sembla que ha sigut v"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "SF tenants in fire-damaged building told to pack up and leave. Their landlord never filed the permits - The San Francisco Standard. SF tenants in fire-damaged building told to pack"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
+        "source_item_count": 65,
         "average_valence": -0.032,
         "dominant_themes": [
           "general",
-          "tourism",
-          "routine"
+          "transit",
+          "weather"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 0.737
       }
     }
   ]
