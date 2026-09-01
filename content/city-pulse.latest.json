@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-01T07:37:16.554Z",
+    "capturedAt": "2026-09-01T13:23:12.898Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 404
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-01T07:37:16.554Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-09-01T13:23:12.898Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip, and between Leytonstone and Epping /"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier signal failure at Royal Oak."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier signal failure at Royal Oak. London Buses are accepting ticke"
         },
         {
           "source_family": "transport",
@@ -58,11 +66,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yeah I went this weekend both Sunday and Monday and had an absolutely fantastic time. Like just unbelievably good vibes all around. Everyone was really getting into the dancing spi"
+          "excerpt": "Large Space I Can Rent for a Week. I have inherent a fuckload of clothes. I need to triage them to see what I want to keep, sell or give away, and photograph them. I already hired "
         },
         {
           "source_family": "signals",
@@ -71,43 +79,35 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "Met Office predicts 'very warm spells' for London in September - London Evening Standard. Met Office predicts 'very warm spells' for London in September"
         }
       ],
       "metadata": {
-        "source_item_count": 78,
-        "average_valence": -0.032,
+        "source_item_count": 84,
+        "average_valence": -0.047,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.784
+        "freshness_score": 0.836
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-01T07:37:16.554Z",
-      "mood_score": 0.344,
+      "captured_at": "2026-09-01T13:23:12.898Z",
+      "mood_score": 0.346,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 5,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 248, 200, 300: Delays 3 trips delayed"
+          "excerpt": "Berlin transit 248: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -129,7 +129,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "FIBA Women’s World Cup Ticket exchange.. Hi community, I bought a group first weekend (late session) tickets to the FIBA women’s World Cup a few months ago (Before the release of t"
+          "excerpt": "love Germans as an introvert. Been in Berlin for 2 weeks and I love it, people always say tourists should expect cold states or just outright rudeness; The thing is the whole time "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Life would be so much easier for many people if there were an outer ring line in the city (brown line). Life would be so much easier for many people in the outer districts, especia"
         },
         {
           "source_family": "news",
@@ -146,40 +154,32 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "It would help a lot if DDR buildings weren’t considered as worth saving just because they are DDR buildings. Case in point: throughout Mitte stand so many prefabricated structures "
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.019,
+        "source_item_count": 116,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-01T07:37:16.554Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-09-01T13:23:12.898Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 50,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -191,9 +191,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "The bike lane closure is quite inconvenient, moreover they also close the Lyft Bike station, and there's no other station withing a 1 block walk. There's also no bike detour and 3r"
+          "excerpt": "If the rent hike is legal, then there isn’t much you can do. Maybe you can check if the house is actually exempt, but I wouldn’t spend too much money on it. Time goes by fast. The "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Thanks! Bit more research actually makes Berkeley look a pretty cool place. I was also considering the Giants/Dodgers game as an alternative - looks like some kind of exhibition ma"
         },
         {
           "source_family": "public",
@@ -201,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Mountain View is safe and nice for families. Nice farmers market, nice parks, nice kid activities like \"kidstock\". Most of the schools are good, with the ones in the Los Altos Scho"
+          "excerpt": "No, this is very common strategy for landlords. My financial situation changed and roi on the house is poor. Either sell or rent needs to be at least x. Just x in this case is 12k"
         },
         {
           "source_family": "public",
@@ -213,41 +221,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Housecleaner recs in SF?. Hi there! I'm urgently looking for a new housecleaner, ideally someone who's responsive and able to come sometime this week. I live in a 1bed/1bath with m"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Depends which crime is easier to solve. If they can solve 100 bike thefts in the same time as the 1 car theft, it would make sense to do the bikes."
+          "excerpt": "“some of us were barely able to afford the current rates” just move bro. you won’t be able to negotiate this down to a rate you guys can afford no matter what. A 50% rent increase "
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.001,
+        "source_item_count": 117,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.871
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-01T07:37:16.554Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-09-01T13:23:12.898Z",
+      "mood_score": 0.305,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 33,
+        "public": 31,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,6 +261,30 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I live in Barcelona, for work, and i come from Venice, a city with even more over tourism. We also hate tourists there, but not all the tourists, the problem are those coming think"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I'm sorry you had a bad experience, not all locals are the same. Most of them are kind and welcoming to tourists. Your attitude is a bit childish, don't put every citizen of Barcel"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Fine, a good chance to walk streets and go to coffee and restaurants you don’t normally go. The decoration were good in Gracia, in Sants they always go more on the lower budget sid"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -276,41 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "L'ús del català remunta una mica a bars i restaurants de Barcelona, segons l'Ajuntament"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Jofre Bardolet i Júlia Cervera Marsó, Directors de 'Cop de Rock', “En aquest país, a vegades, si no fas les coses a Barcelona sembla que no passin”"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "as someone who is pissed off that there's no cheap second-hand furniture brick store in Barcelona, and hates Wallapop for furniture, this would be great! Just one reservation I hav"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El Govern arrenca el curs amb la necessitat de resoldre el conflicte educatiu i millorar Rodalies"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.007,
+        "source_item_count": 97,
+        "average_valence": 0.015,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.828
       }
     }
   ]
