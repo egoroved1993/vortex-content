@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-01T17:46:03.331Z",
+    "capturedAt": "2026-09-01T20:53:57.300Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 414
+    "totalItems": 429
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-01T17:46:03.331Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-09-01T20:53:57.300Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 15,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading due to an earlier power supply failure at Paddington."
         },
         {
           "source_family": "public",
@@ -65,49 +65,49 @@
           "excerpt": "Large Space I Can Rent for a Week. I have inherent a fuckload of clothes. I need to triage them to see what I want to keep, sell or give away, and photograph them. I already hired "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1,
-          "excerpt": "Met Office predicts 'very warm spells' for London in September - London Evening Standard. Met Office predicts 'very warm spells' for London in September"
+          "recency_weight": 1.04,
+          "excerpt": "Recommendations Driving Around London. I am looking for recommendations of roads and places (villages/towns/venues) from Central London to between 90-120 minutes out. The only key "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Ive had good experiences in a small salon called Suedey. When I went on a weekday it was mostly empty. The stylist was a Japanese lady called Naoko. She was lovely. Good haircut, c"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.039,
+        "source_item_count": 90,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-01T17:46:03.331Z",
-      "mood_score": 0.347,
+      "captured_at": "2026-09-01T20:53:57.300Z",
+      "mood_score": 0.343,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 9,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,12 +116,20 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "And where do the people go during demolition and rebuilding of those GDR buildings that are mainly living spaces? And what about the increase in rent that would follow? Believe it "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "Buses are not fine, certainly not in a large city. They're more expensive to run at the same capacity as trams. You need more drivers, more vehicles, larger depots and more energy."
         },
         {
           "source_family": "public",
@@ -146,36 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Just live around DUS, Cologne or in the Pott. It generally an accepting heterogenic place because of the international history of guest workers. Fly to Poland or take a train when "
         }
       ],
       "metadata": {
         "source_item_count": 117,
-        "average_valence": -0.009,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-01T17:46:03.331Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-09-01T20:53:57.300Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 59,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,25 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "If the rent hike is legal, then there isn’t much you can do. Maybe you can check if the house is actually exempt, but I wouldn’t spend too much money on it. Time goes by fast. The "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Thanks! Bit more research actually makes Berkeley look a pretty cool place. I was also considering the Giants/Dodgers game as an alternative - looks like some kind of exhibition ma"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "No, this is very common strategy for landlords. My financial situation changed and roi on the house is poor. Either sell or rent needs to be at least x. Just x in this case is 12k"
+          "excerpt": "(1) Public transit literally is expanding. We just built another subway line! (2) People rent cars for the weekend when they want to go e.g., to Marin. People take Ubers or Waymos "
         },
         {
           "source_family": "public",
@@ -221,30 +205,46 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Nori Mori Japanese Restaurant Coming to One California. Fast-casual Japanese restaurant, Nori Mori, is coming to a previously vacant storefront at One California. The city is helpi"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "“some of us were barely able to afford the current rates” just move bro. you won’t be able to negotiate this down to a rate you guys can afford no matter what. A 50% rent increase "
+          "excerpt": "Yes, September thru October is our indian summer but it’s all relative: we typically see highs in the 70s with the marine layer coming in at night to cool things off. Having spent "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Dance Space Rentals?. I’m looking for cheap dance studio rentals here in the city for weekly solo dance practices. Open to private spaces for rent as well. I have my own speaker, j"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.029,
+        "source_item_count": 125,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-01T17:46:03.331Z",
-      "mood_score": 0.305,
+      "captured_at": "2026-09-01T20:53:57.300Z",
+      "mood_score": 0.302,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 31,
@@ -261,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Besides joining the next manifestation, how else can I support the librarians? I was very sad to return my books today and see the sign that the strike was ongoing but they have my"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -292,25 +300,17 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "L'ús del català remunta una mica a bars i restaurants de Barcelona, segons l'Ajuntament"
         }
       ],
       "metadata": {
         "source_item_count": 97,
-        "average_valence": 0.015,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "tourism",
-          "transit"
+          "routine"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.817
       }
     }
   ]
