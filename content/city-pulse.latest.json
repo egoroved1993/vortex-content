@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-01T23:12:49.337Z",
+    "capturedAt": "2026-09-02T03:59:20.445Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,46 +16,29 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 450
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-01T23:12:49.337Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-09-02T03:59:20.445Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 30,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 31 August, Tuesday 1, Wednesday 2 and Thursday 3 September, after 2245 each evening, no service betw"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -66,6 +49,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Probably pretty hectic, because I'm not there. Stuff to get done and I'm the only one who can do it. Unfortunately, the doctors have told me I'm on bed rest for a few days. This is"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
@@ -73,41 +64,48 @@
           "excerpt": "Recommendations Driving Around London. I am looking for recommendations of roads and places (villages/towns/venues) from Central London to between 90-120 minutes out. The only key "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "This is the kind of shit that if you want to fact check you can Google the sources, do the work yourself and then come back with the same/different number."
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "London bus drivers resume strike over heatwave working amid fears over air con deal - The Guardian. London bus drivers resume strike over heatwave working amid fears over air con d"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.016,
+        "source_item_count": 90,
+        "average_valence": -0.038,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.84
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-01T23:12:49.337Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-09-02T03:59:20.445Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,28 +114,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7, S5: Delays 3 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Buses are not fine, certainly not in a large city. They're more expensive to run at the same capacity as trams. You need more drivers, more vehicles, larger depots and more energy."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "IMO Berlin is one of the best option for your case but you really don't want Berlin... What's the reason you don't want Berlin? And how much you can pay for rent? If you want to av"
         },
         {
           "source_family": "public",
@@ -154,71 +136,70 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I don't think you have to believe that the current architecture is pretty to see that just another box-with-glass-facade will make it even worse"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin Sessions. Hi, I'm the creator of [ It's a platform to make finding and hosting jam sessions easier, right now focusing on the finding part. Sharing with you the latest relea"
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.016,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-01T23:12:49.337Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-09-02T03:59:20.445Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 75,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
       "languages": [
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "There is actually a really interesting common thread in your examples: Clipper 2.0, SFUSD payroll and the SF planning system are essentially collections of edge and corner cases th"
+          "excerpt": "It gets easier every day to distance your mind from the grittiness of 16th/Bart station. If it were for a good paying job you'd find a way to overlook it as just a thing that isn't"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "ride the Cable Car, even locals enjoy this legendary activity.....if you're looking for something to do down on the wharf rent the little yellow zip go carts and take the tour if t"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Lol geez. Let’s all get angry about it. I said it sucks a little bit. Great highway WAS a fantastically easy drive- ANYTHING else sucks a little bit by comparison- is that not a re"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I hear you, I used to take light rail to Caltrain to commute to work. Once every week or two, light rail would be late which would cause me to miss the connecting Caltrain or just "
+          "excerpt": "i spent sixteen dollars on cherries last week 😂 wasn’t in a hurry but wasn’t really paying attention either. they looked so good and i was determined to have some so i went with i"
         },
         {
           "source_family": "public",
@@ -226,29 +207,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Commuting from North Bay (Vallejo) to Redwood City. Anybody have experience with making the commute from the north bay to the peninsula? How bad is it? Any public transit options b"
+          "excerpt": "Nori Mori Japanese Restaurant Coming to One California. Fast-casual Japanese restaurant, Nori Mori, is coming to a previously vacant storefront at One California. The city is helpi"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Dance Space Rentals?. I’m looking for cheap dance studio rentals here in the city for weekly solo dance practices. Open to private spaces for rent as well. I have my own speaker, j"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I also shared a bathroom in college with 3 other people, but it was rough getting ready in the mornings at the same time"
         }
       ],
       "metadata": {
-        "source_item_count": 141,
-        "average_valence": -0.005,
+        "source_item_count": 127,
+        "average_valence": 0.022,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.906
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-01T23:12:49.337Z",
+      "captured_at": "2026-09-02T03:59:20.445Z",
       "mood_score": 0.305,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 31,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -304,14 +301,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 97,
+        "source_item_count": 96,
         "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.819
+        "freshness_score": 0.813
       }
     }
   ]
