@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-02T13:30:14.285Z",
+    "capturedAt": "2026-09-02T17:48:44.532Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 402
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-02T13:30:14.285Z",
-      "mood_score": 0.439,
+      "captured_at": "2026-09-02T17:48:44.532Z",
+      "mood_score": 0.422,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,25 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Severe Delays Windrush Line: No service between Clapham Junction and Surrey Quays due to a points failure at Peckham Rye. SEVERE DELAY"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier power fault at Earl's Court."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to an earlier points failure at Camden Town. Ticket being accepted on London Buses, Sou"
         },
         {
           "source_family": "transport",
@@ -57,50 +73,34 @@
           "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays while we fix a signal failure at Highbury & Islington. Tickets are being accepted on the We"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Large Space I Can Rent for a Week. I have inherent a fuckload of clothes. I need to triage them to see what I want to keep, sell or give away, and photograph them. I already hired "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Recommendations Driving Around London. I am looking for recommendations of roads and places (villages/towns/venues) from Central London to between 90-120 minutes out. The only key "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Suspended Windrush Line: No service between Clapham Junction and Surrey Quays due to a points failure at Peckham Rye. SEVERE DELAY"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.034,
+        "source_item_count": 84,
+        "average_valence": -0.083,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.822
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-02T13:30:14.285Z",
-      "mood_score": 0.498,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-09-02T17:48:44.532Z",
+      "mood_score": 0.298,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 9,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -148,39 +148,38 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Berlin Sessions. Hi, I'm the creator of [ It's a platform to make finding and hosting jam sessions easier, right now focusing on the finding part. Sharing with you the latest relea"
+          "excerpt": "I've lived in Berlin for 8 years. I don't go to flea markets because I desperately need to buy something. I go to flea markets to drink coffee and people-watch. I imagine I'm in th"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
+        "source_item_count": 111,
         "average_valence": -0.005,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-02T13:30:14.285Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-09-02T17:48:44.532Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 59,
+        "public": 51,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
         "en"
@@ -188,27 +187,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "The only block on S Van Ness I would avoid is between 16th and 17th, because of the SRO there. One of the churches between 20th and 22nd also seems to act as a shelter and you'll g"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Nori Mori Japanese Restaurant Coming to One California. Fast-casual Japanese restaurant, Nori Mori, is coming to a previously vacant storefront at One California. The city is helpi"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I’m almost scared to write this as i don’t want to jinx myself but im in a very nice apt for 3k. As a stand alone that would not seem like a great deal or would it be considered in"
         },
         {
           "source_family": "public",
@@ -220,33 +203,49 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Just so people know, the recent central subway line was the most expensive subway in the world at $1.15B per mile. Madrid’s subway by comparison $85M per mile. Let be clear this is"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Affordable groceries to Castro. Hi guys I recently started a petition for an affordable grocery store in Castro. Please sign if you agree. I’m tired of mollie stones prices and bel"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "So it sounds like they plan to gradually roll out the Mandarin program as kids graduate from the school. Which means that nobody would lose their community. Honestly, that actually"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.004,
+        "source_item_count": 116,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "work"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-02T13:30:14.285Z",
-      "mood_score": 0.303,
+      "captured_at": "2026-09-02T17:48:44.532Z",
+      "mood_score": 0.296,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 31,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -274,42 +273,42 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I live in Barcelona, for work, and i come from Venice, a city with even more over tourism. We also hate tourists there, but not all the tourists, the problem are those coming think"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I'm sorry you had a bad experience, not all locals are the same. Most of them are kind and welcoming to tourists. Your attitude is a bit childish, don't put every citizen of Barcel"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
           "excerpt": "My “low budget” comment was no on a bad way, I actually prefer the mood of the Sants one, and the concerts, both are good and different in their own way"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": 0.5,
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Fine, a good chance to walk streets and go to coffee and restaurants you don’t normally go. The decoration were good in Gracia, in Sants they always go more on the lower budget sid"
+          "excerpt": "L'ús del català remunta una mica a bars i restaurants de Barcelona, segons l'Ajuntament"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": 0.01,
+        "source_item_count": 91,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.813
       }
     }
   ]
