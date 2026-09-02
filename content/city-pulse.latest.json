@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-02T20:53:33.921Z",
+    "capturedAt": "2026-09-02T23:12:47.999Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 402
+    "totalItems": 407
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-02T20:53:33.921Z",
-      "mood_score": 0.432,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-09-02T23:12:47.999Z",
+      "mood_score": 0.378,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 13,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "I'm not even a concert goer just wrong time wrong place. Was coming back from central to Stratford and my overpaid cunt of a tube driver who stopped us in canary wharf just decided"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to faulty platform edge doors at Southwark. Tickets are being accepted on London Buses,"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,45 +78,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Severe Delays Windrush Line: No service between Clapham Junction and Surrey Quays and between Highbury & Islington and Dalston Junctio"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "London Underground potential strike days updated - King's College London. London Underground potential strike days updated"
+          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 31 August, Tuesday 1, Wednesday 2 and Thursday 3 September, after 2245 each evening, no service betw"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.053,
+        "source_item_count": 90,
+        "average_valence": -0.065,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-02T20:53:33.921Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-09-02T23:12:47.999Z",
+      "mood_score": 0.248,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 6,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -136,7 +136,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -148,33 +148,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "I've lived in Berlin for 8 years. I don't go to flea markets because I desperately need to buy something. I go to flea markets to drink coffee and people-watch. I imagine I'm in th"
+          "excerpt": "Berlin Sessions. Hi, I'm the creator of [ It's a platform to make finding and hosting jam sessions easier, right now focusing on the finding part. Sharing with you the latest relea"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
+        "source_item_count": 110,
         "average_valence": -0.005,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-02T20:53:33.921Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-09-02T23:12:47.999Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,11 +188,27 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Nori Mori Japanese Restaurant Coming to One California. Fast-casual Japanese restaurant, Nori Mori, is coming to a previously vacant storefront at One California. The city is helpi"
+          "excerpt": "Thank you! My bfs been there for 16 years!! We did accept the rent increases without knowing our rights so it did go up 244$ the last 2 years (once 200 and one $44.) still super ch"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The context of this convo is if the system is that renters all agree on a “maximum price” and then you have to figure out which renter who is willing to pay that max price gets the"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "It also makes the rent higher for everyone else. It’s all connected can you not see? Supply and demand"
         },
         {
           "source_family": "public",
@@ -208,45 +224,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Just so people know, the recent central subway line was the most expensive subway in the world at $1.15B per mile. Madrid’s subway by comparison $85M per mile. Let be clear this is"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Affordable groceries to Castro. Hi guys I recently started a petition for an affordable grocery store in Castro. Please sign if you agree. I’m tired of mollie stones prices and bel"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "So it sounds like they plan to gradually roll out the Mandarin program as kids graduate from the school. Which means that nobody would lose their community. Honestly, that actually"
+          "excerpt": "Dublin has the highest median income in California (50k+ population). Go figure! Oakland, try taking bart through Oakland and look out of the window. You’ll know why🤣 Some parts o"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.011,
+        "source_item_count": 114,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "money"
         ],
         "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-02T20:53:33.921Z",
+      "captured_at": "2026-09-02T23:12:47.999Z",
       "mood_score": 0.297,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 25,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,12 +302,12 @@
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.009,
+        "source_item_count": 93,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
-          "events",
-          "transit"
+          "transit",
+          "events"
         ],
         "freshness_score": 0.805
       }
