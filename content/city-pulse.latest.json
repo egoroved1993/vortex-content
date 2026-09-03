@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-03T20:51:06.467Z",
+    "capturedAt": "2026-09-03T23:10:02.143Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-03T20:51:06.467Z",
-      "mood_score": 0.487,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-09-03T23:10:02.143Z",
+      "mood_score": 0.331,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -54,59 +54,60 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Hayes & Harlington and Heathrow Terminal 5 while we fix a signal system failure at Heathrow Termin"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Hayes & Harlington and Heathrow Terminals while we fix a signal system failure at Heathrow Termina"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Why is bike theft so much worse in London than other cities?. Just come back from the cycling Mecca that is Amsterdam and there's lots of very expensive electric bikes (Vanmoof, Co"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Edgware and Camden Town southbound only, and SEVERE DELAYS between Camden Town and Edg"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Second hand fresh flowers for a cacao ceremony this Saturday. Hey all! I’m (36F) hosting a cacao ceremony this Sat (5th Sept) near Finsbury Park and want to put together a nice alt"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Suspended Northern Line: No service between Edgware and Camden Town southbound only, and SEVERE DELAYS between Camden Town and Edg"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "The neighbourhood concert london ovo arena. Long story short, i bought 2 tickets, one for myself and one for my ex before we broke up, i have vip lounge tickets for thenbhd concert"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 31 August, Tuesday 1, Wednesday 2 and Thursday 3 September, after 2245 each evening, no service betw"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.038,
+        "source_item_count": 89,
+        "average_valence": -0.056,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.85
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-03T20:51:06.467Z",
-      "mood_score": 0.243,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "captured_at": "2026-09-03T23:10:02.143Z",
+      "mood_score": 0.197,
+      "mood_label": "dark",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N2, S9: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -126,25 +135,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "thanks, the \"hiding by line\" feature is noted. youre right, the current lagging in a big network is caused by the instant recalculation. takt is still early access and the late gam"
+          "excerpt": "As someone earning minimum wage working at a disk where we have these card readers that first invites you to tip before paying - I will absolutely not be upset if you choose not to"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I urge you to google photos of a chain called KIEZ KAFFEE KRAFT. Yes, their weird name is ... KKK..... and their interior design looks like someone told ChatGPT to merge all the mo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I've got an internship in Berlin, where to look for rent?. Hi all, I've got a 6 months internship in Berlin with 1k eur net pay (I think I won't have to pay taxes on that 1k?) anyw"
+          "excerpt": "We landed at 9:45 pm and managed to collect the luggage after 30 minutes of waiting. It was pure chaos. The information on the TV stated our luggage was on carousel two while we go"
         },
         {
           "source_family": "news",
@@ -152,29 +153,29 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Berlin: Flugverkehr wegen Streik eingestellt, 445 Flüge fallen aus - de.euronews.com. Berlin: Flugverkehr wegen Streik eingestellt, 445 Flüge fallen aus"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.02,
+        "source_item_count": 127,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.912
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-03T20:51:06.467Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-09-03T23:10:02.143Z",
+      "mood_score": 0.435,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 46,
+        "public": 47,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,65 +189,65 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Dance Space Rentals?. I’m looking for cheap dance studio rentals here in the city for weekly solo dance practices. Open to private spaces for rent as well. I have my own speaker, j"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Anywhere near CCSF (Ocean Campus) where you can get a meal + drink for less than $10?. Some days I forget to bring lunch and McDonalds seems to be the only place where you can get "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "PS5 Hdmi Port. Had issues with it, kept putting it off for a while but wanna play it again and it needs to be replaced, anyone know any good shops in sf that can fix it?"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Cafe Dolci downtown, fuck cancer. Was saddened to see this. The owner has been running this hole in the wall for years, great banh mi, great person, super kind to the community. fu"
+          "excerpt": "Both places are rent controlled. We wouldn't consider them otherwise. That said, they're almost 50% more expensive than the previous year because of this current market, but that's"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Tbh, we got insanely lucky with timing. In Inner Sunset, we had a nice 2 bd 2 bath. I don't recall the sq footage at all, but it was honestly pretty big, and we would've been able "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "About a decade ago a close friend of mine rented an illegal ADU in the sunset for like 3 years. Around year 2, black mold started showing up and he got super sick. Long story short"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "First, read your lease and see what it says about mold and the expectations regarding tenant prevention. Leases should have a mold addendum and if you do report to your landlord re"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "We require event permits for good reasons. Safety and coordination with folks like SFFD and SFPD are a couple of those reasons. This guy apparently thinks he can skip the process t"
+          "excerpt": "A day plan?. So my friend and her grandparents are visiting. I will pick them up from SFO, and will head to SF directly. Was wondering if good lunch/ brunch spots. And an overall t"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": 0.013,
+        "source_item_count": 111,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.893
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-03T20:51:06.467Z",
-      "mood_score": 0.3,
+      "captured_at": "2026-09-03T23:10:02.143Z",
+      "mood_score": 0.296,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,20 +262,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Thanks for your reply. That’s a very good point. I just remember being in the immigration office in Barcelona and Mallorca, having every little thing scrutinised - so I wouldn’t pu"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
         },
         {
           "source_family": "public",
@@ -302,12 +303,12 @@
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": 0.001,
+        "source_item_count": 88,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "transit"
         ],
         "freshness_score": 0.797
       }
