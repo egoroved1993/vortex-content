@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-05T05:30:41.918Z",
+    "capturedAt": "2026-09-05T10:22:31.431Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 429
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-05T05:30:41.918Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-09-05T10:22:31.431Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -66,14 +74,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Lol yeah I was expecting this 😅 I genuinely can't remember the area, I wanna say near bank but I'm honestly not certain. It looked like a funeral procession or maybe a small coron"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
@@ -82,31 +82,32 @@
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.014,
+        "source_item_count": 97,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-05T05:30:41.918Z",
-      "mood_score": 0.496,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-09-05T10:22:31.431Z",
+      "mood_score": 0.196,
+      "mood_label": "dark",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 6,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Rent an XXL car. Hey guys, I need to rent an XXL car to move to my new house. I need it for 2 or 3 days. Do you have any cheap options in Berlin? Any tricks?"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -128,7 +129,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - berliner-zeitung.de. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -156,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 112,
+        "source_item_count": 114,
         "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-05T05:30:41.918Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-09-05T10:22:31.431Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 59,
+        "public": 65,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,6 +190,14 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "NIMBYs are the worst! The same people that complain about lack of housing and expensive rent do what they can to block new housing from being built."
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -1,
@@ -197,19 +206,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Pokemon TCG restock Discord?. This is probably a long shot, but there was a discord channel with people who posted about Pokemon TCG restocks. At some point it was closed because t"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "the clancy was a 4/10. i was in town for a conference and stayed at the clancy, in one of their king rooms. for such an expensive hotel, it was unimpressive, and the bathroom was d"
+          "excerpt": "I know we have a shortage. We've had some building and never once has the rent gone down. Twice in my lifetime in San Francisco did the rent go down. First time was after the 1989 "
         },
         {
           "source_family": "public",
@@ -217,37 +218,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Public shaming. Find the names of the people who own your building. Plaster their names and their faces all around the neighborhood. Out them on social media. Behind every insane r"
+          "excerpt": "I understand. I'm just saying, apparently you don't think this way and don't strategize your exits from buses. But other people do. If you know you're getting off in four or five s"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Where to stay?. My husband and I are planning to come October 15-19 for our 10-year anniversary and trying to figure out the best place to stay. We're in our early 40s and would li"
+          "excerpt": "Pokemon TCG restock Discord?. This is probably a long shot, but there was a discord channel with people who posted about Pokemon TCG restocks. At some point it was closed because t"
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.021,
+        "source_item_count": 130,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.908
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-05T05:30:41.918Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-09-05T10:22:31.431Z",
+      "mood_score": 0.296,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, language. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -268,6 +269,14 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
         },
         {
           "source_family": "public",
@@ -292,25 +301,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "The creep working at PerlAzul - Tapas & Grill Barceloneta. I am sorry, i used chatgpt to translate my text into catalan, gracias por tu atención La meva germana, la meva amiga i jo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "These small houses in Sweden were built to match what a 25-year-old can actually afford. This should be done for Barcelona. I think the situation would be very similar!"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.008,
+        "source_item_count": 88,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "language"
         ],
-        "freshness_score": 0.802
+        "freshness_score": 0.801
       }
     }
   ]
