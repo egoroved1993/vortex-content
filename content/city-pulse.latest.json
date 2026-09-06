@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-06T13:31:08.423Z",
+    "capturedAt": "2026-09-06T16:49:07.503Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 418
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-06T13:31:08.423Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-09-06T16:49:07.503Z",
+      "mood_score": 0.468,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 13,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -54,15 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: No service between North Greenwich and Stratford while we respond to a fire alert at Stratford. SEVERE DEL"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays between Willesden Junction and Clapham Junction / Richmond due to an earlier trespasser on th"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier fire alert at Stratford. Tickets are being accepted on London Buses, Londo"
         },
         {
           "source_family": "transport",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
         "source_item_count": 96,
-        "average_valence": -0.067,
+        "average_valence": -0.095,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-06T13:31:08.423Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-09-06T16:49:07.503Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5, 100: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,36 +154,28 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "The Hobrecht Plan (1862) — the development plan that shaped modern Berlin's street grid and housing form"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Hey 👋 thanks a lot for the help! I am actually departing on 10th this Thursday but yeah i will try to suggest them alternatives once i get someone to talk to, the problem is that "
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.002,
+        "source_item_count": 116,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-06T13:31:08.423Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-09-06T16:49:07.503Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 68,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Paying for a zipcar for 6 hours at around $12-16/hr is more convenient and more expensive than a Lyft from Marin to SF ($30-40 in my experience). Public transit is insanely slow to"
+          "excerpt": "I see them online for like $80-$100. A piece of copper plate is going to be potentially more expensive than that since it’ll likely have to be custom cut"
         },
         {
           "source_family": "public",
@@ -208,15 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Castro Valley is upper middle class at best. Knightsbridge is more a “I own an oil company and fly from London to SF in my private Bombardia Global jet. There’s nothing close in ex"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "A West Portal project doubled in size. It’s the latest in SF’s ‘F your feelings’ era. Good to see the project double in size but sad to see merchants not wanting more foot traffic."
+          "excerpt": "Paying for a zipcar for 6 hours at around $12-16/hr is more convenient and more expensive than a Lyft from Marin to SF ($30-40 in my experience). Public transit is insanely slow to"
         },
         {
           "source_family": "public",
@@ -224,29 +217,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I strong advise that you train up on how to use AI for research, because without it you're less likely to find a position. Even if you think you're familiar, Claude Academy is a go"
+          "excerpt": "that cooking range is genuinely impressive — bbq AND baking AND asian food is a rare combo, most people are strong in one lane honestly if i were in sf i'd take this deal in a hear"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Charge it if you can and leave it at some kind of public Lost and Found somewhere so they can use \"find my\" to retrieve it. They are less likely to retrieve it from a private resid"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": 0.004,
+        "source_item_count": 133,
+        "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-06T13:31:08.423Z",
-      "mood_score": 0.292,
+      "captured_at": "2026-09-06T16:49:07.503Z",
+      "mood_score": 0.295,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -259,14 +260,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "This year is certainly hotter than usual but I've been alive for over 4 decades and I've seen various levels of climate change. It's inevitable and expensive now that I think about"
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -298,17 +291,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "De supermercat a cinema i no al revés: els Verdi estrenen dues sales"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "The creep working at PerlAzul - Tapas & Grill Barceloneta. I am sorry, i used chatgpt to translate my text into catalan, gracias por tu atención La meva germana, la meva amiga i jo"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.024,
+        "source_item_count": 81,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.784
+        "freshness_score": 0.773
       }
     }
   ]
