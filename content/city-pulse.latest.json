@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-06T21:26:40.793Z",
+    "capturedAt": "2026-09-06T23:41:26.326Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 253
+    "totalItems": 408
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-06T21:26:40.793Z",
-      "mood_score": 0.481,
+      "captured_at": "2026-09-06T23:41:26.326Z",
+      "mood_score": 0.42,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Anyone else see SPAC Nxtion (South London evangelical sham \"church\") driving like assholes around central London today?. We encountered their \"car rally\" near Tower bridge earlier "
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,14 +70,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert at Stratford."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Suffragette: Part Closure SUFFRAGETTE LINE: Sunday 6 September, no service between Gospel Oak and Woodgrange Park. Use VICTORIA LINE connections b"
         },
         {
@@ -82,28 +82,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.055,
+        "source_item_count": 93,
+        "average_valence": -0.089,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 1.044
+        "freshness_score": 0.843
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-06T21:26:40.793Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-09-06T23:41:26.326Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 1,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -113,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -130,53 +139,46 @@
           "excerpt": "The Hobrecht Plan (1862) — the development plan that shaped modern Berlin's street grid and housing form"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "I have some bad news for you. Only one tram line in Berlin uses double-sets, and they're being replaced by the new longer Urbanliners."
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "review",
+          "source_origin": "city_guide_snippet",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Yeah but, in Berlin in general, when you decide to move into an apartment right above a bar or club or späti, you should expect some noise. Now ofcourse it's still not supposed to "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I'm so glad I got here before the mods, best read of the week. To those that missed: an idiot wanted to do a bike jump through a moving tram, film it, but somehow not die and not a"
+          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
         }
       ],
       "metadata": {
-        "source_item_count": 65,
-        "average_valence": -0.001,
+        "source_item_count": 107,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 1.065
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-06T21:26:40.793Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-09-06T23:41:26.326Z",
+      "mood_score": 0.508,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 69,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -184,14 +186,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Ellis Act is legal and I could put off my eviction if landlord didn't follow correct procedure exactly but it was just a matter of a few months and I did get evicted in the end."
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -206,49 +200,57 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "LOL i can tell you don’t even believe what you are saying I can’t believe people are wasting their time trying to scream at me and say HOA fees are high because plumbers have to pa"
+          "excerpt": "I’m just explaining to you how this works. Yes, in a healthy housing chain replacement market, it works. In SF, it’s broken because there’s effectively no way to build faster than "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I see them online for like $80-$100. A piece of copper plate is going to be potentially more expensive than that since it’ll likely have to be custom cut"
+          "excerpt": "The thing about the meat counter is the meat needs to be eaten within 2-3 days, sometimes less depending on what it is. We try to go twice a week to only get the amount of meat we "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "So you’re telling me that design trends in the most expensive real estate market on the planet are tending to reflect the preferences of the well to do? Go figure."
+          "excerpt": "I live on the north side and I go to the good life nearly daily. I go to safeway on mission when I need to get certain things and when I want to feel like I'm visiting a prison com"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I work at basically 3rd and Market, so I know this section very well. Basically from 4th to 2nd (and all the way to the Embarcadero really) is pretty much in good shape nowadays, I"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.025,
+        "source_item_count": 127,
+        "average_valence": 0.022,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 1.04
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-06T21:26:40.793Z",
-      "mood_score": 0.296,
+      "captured_at": "2026-09-06T23:41:26.326Z",
+      "mood_score": 0.295,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -264,6 +266,14 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
         },
         {
           "source_family": "public",
@@ -288,25 +298,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "The creep working at PerlAzul - Tapas & Grill Barceloneta. I am sorry, i used chatgpt to translate my text into catalan, gracias por tu atención La meva germana, la meva amiga i jo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El Qomic Boom 2026 marxa de Sant Cugat i se celebrarà a Barcelona els propers dies 5 i 6 de setembre"
         }
       ],
       "metadata": {
-        "source_item_count": 46,
-        "average_valence": -0.012,
+        "source_item_count": 81,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 1.045
+        "freshness_score": 0.778
       }
     }
   ]
