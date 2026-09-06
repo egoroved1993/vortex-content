@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-06T04:02:59.874Z",
+    "capturedAt": "2026-09-06T09:15:04.433Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 401
+    "totalItems": 411
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-06T04:02:59.874Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-09-06T09:15:04.433Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 17,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -47,14 +47,6 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure District Line: Saturday 5 and Sunday 6 September, no service between Edgware Road and Wimbledon. Rail Replacement bus se"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Closure ELIZABETH LINE: Sunday 6 September, until 0745, no service between Paddington and Ealing Broadway. In addition, the 2345"
         },
         {
           "source_family": "transport",
@@ -79,28 +71,36 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 6 September, until 1915, no service between Sydenham and West Croydon. Change at Crystal Palace fo"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Saturday 5, all day, and Sunday 6 September, until 1915, no service between Surrey Quays and Clapham Junc"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.08,
+        "source_item_count": 89,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.825
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-06T04:02:59.874Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-09-06T09:15:04.433Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Tbh I think the current structure with that level of autonomy in the Bezirke is what’s causing much of the friction and hence slow progress. But on the other hand it’s good to have"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -140,41 +148,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Ryanair's BER transfers. Booked a flight from Berlin this evening, and I noticed that Ryanair were selling transfers from BER airport to Alexanderplatz. Turns out to be some strang"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "I think berliners view it as a public service to help people find the way and gladly do it. However, that doesn't mean they like you. In fact, they more often than not don't."
+          "excerpt": "Hey 👋 thanks a lot for the help! I am actually departing on 10th this Thursday but yeah i will try to suggest them alternatives once i get someone to talk to, the problem is that "
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.004,
+        "source_item_count": 115,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.903
+        "freshness_score": 0.905
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-06T04:02:59.874Z",
-      "mood_score": 0.5,
+      "captured_at": "2026-09-06T09:15:04.433Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 50,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,6 +196,22 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Paying for a zipcar for 6 hours at around $12-16/hr is more convenient and more expensive than a Lyft from Marin to SF ($30-40 in my experience). Public transit is insanely slow to"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Castro Valley is upper middle class at best. Knightsbridge is more a “I own an oil company and fly from London to SF in my private Bombardia Global jet. There’s nothing close in ex"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
@@ -208,40 +224,24 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Namaste is decent but their kofta still leans a bit sweet for my taste. I had better luck at a place in Berkeley called Udupi Palace, their version has more of that creamy white gr"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "AMC Metreon the odyssey row F. Anyone have a good experience sitting here? I’m in the middle of the theater for 70mm imax but I hear that row F is kinda close"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "IMAX 70mm. I want to see the Odyssey in a group of 4 the only IMAX 70mm tickets are D10-13, E3-6, or F1-4. The general advice google is giving is that the row F seats will have qui"
+          "excerpt": "I strong advise that you train up on how to use AI for research, because without it you're less likely to find a position. Even if you think you're familiar, Claude Academy is a go"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": 0.001,
+        "source_item_count": 123,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-06T04:02:59.874Z",
-      "mood_score": 0.294,
+      "captured_at": "2026-09-06T09:15:04.433Z",
+      "mood_score": 0.292,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "negative",
@@ -276,6 +276,14 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
@@ -290,25 +298,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "De supermercat a cinema i no al revés: els Verdi estrenen dues sales"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "The creep working at PerlAzul - Tapas & Grill Barceloneta. I am sorry, i used chatgpt to translate my text into catalan, gracias por tu atención La meva germana, la meva amiga i jo"
         }
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.019,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.789
+        "freshness_score": 0.788
       }
     }
   ]
