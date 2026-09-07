@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-07T04:02:29.589Z",
+    "capturedAt": "2026-09-07T10:03:48.596Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 390
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-07T04:02:29.589Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-09-07T10:03:48.596Z",
+      "mood_score": 0.47,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -48,64 +49,65 @@
           "excerpt": "Anyone else see SPAC Nxtion (South London evangelical sham \"church\") driving like assholes around central London today?. We encountered their \"car rally\" near Tower bridge earlier "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Government rejects 11th hour bid to delay Mayor's pedestrianisation of Oxford Street - London Evening Standard. Government rejects 11th hour bid to delay Mayor's pedestrianisation "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays while we fix a signal failure at Liverpool Street. Tickets will be accepted on London Buses,"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Heathrow Terminals 2&3 and Heathrow Terminal 5 while we fix equipment damaged by vandalism in the"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK: August 2026 - Office for National Statistics. Private rent and house prices, UK: August 2026"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Uxbridge westbound only while we fix a signal failure at"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Uxbridge westbound only while we fix a signal failure at"
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.045,
+        "source_item_count": 91,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.849
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-07T04:02:29.589Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-09-07T10:03:48.596Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5, 300: Delays 2 trips delayed"
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -144,40 +154,32 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "The Hobrecht Plan (1862) — the development plan that shaped modern Berlin's street grid and housing form"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.011,
+        "source_item_count": 110,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-07T04:02:29.589Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-09-07T10:03:48.596Z",
+      "mood_score": 0.456,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 57,
+        "public": 56,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -199,7 +201,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Stick to older apartments in non-recently developed areas. The newer the area the whacker it is. You also lose out on rent control. I recommend coming in and doing temporary housin"
+          "excerpt": "You can live outside the city for much cheaper. Under 2000 a month rent but it will be on Bart and not in SF."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "waymo gave me a $5 credit for a ride I took recently because “it was more expensive than normal/average”. I suspect they’re trying to figure out they’re prices, or at least testing"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Probably 5k+ now a days. You may be able to find a place that’s cheaper on Zillow, but chances you get it are incredibly low because it gets dozens of applications within minutes a"
         },
         {
           "source_family": "public",
@@ -207,45 +225,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Good stretch of 3rd St in the Bayview that feels hood but don't know if data suggests it's dangerous or anything."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "AMC Metreon the odyssey row F. Anyone have a good experience sitting here? I’m in the middle of the theater for 70mm imax but I hear that row F is kinda close"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I’ve always wanted better food here. Most is bleh (Chinese, Mexican, cafes). A lot of foot traffic glue to Bart but if I was opening a good sandwich place maybe west Portal or Vale"
+          "excerpt": "I expected a boomer response, technically someone putting you as a kid in the back of a pickup truck would be your abuser, either unknowingly since they could have a kid doesn't me"
         }
       ],
       "metadata": {
         "source_item_count": 122,
-        "average_valence": 0.006,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "belonging"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-07T04:02:29.589Z",
+      "captured_at": "2026-09-07T10:03:48.596Z",
       "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -300,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 81,
+        "source_item_count": 83,
         "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.775
+        "freshness_score": 0.772
       }
     }
   ]
