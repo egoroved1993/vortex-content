@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-07T20:25:25.599Z",
+    "capturedAt": "2026-09-07T23:23:13.317Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 406
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-07T20:25:25.599Z",
-      "mood_score": 0.474,
+      "captured_at": "2026-09-07T23:23:13.317Z",
+      "mood_score": 0.439,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: No service between Hainault and Woodford via Grange Hill while we fix a faulty train at Hainault and MINOR"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier faulty train at Hainault Tickets are being accepted on London Buses."
         },
         {
           "source_family": "transport",
@@ -62,52 +62,51 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Heathrow Terminals 2&3 and Heathrow Terminal 5 while we fix equipment damaged by vandalism in the"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Monday 7, Tuesday 8, Wednesday 9 and Thursday 10 September, after 2215 each evening, no service between S"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Would be incredible if it was. I have \"four\" holes in my teeth from eight half teeth where they've corroded away because I can't afford treatment. Daily tooth pain and massive emba"
+          "excerpt": "You have to pay for the whole thing up front 😭😭😭 honestly I think I’d get what I need out of the first 1-2 classes. I have no grand ambitions with this it’s just something I wan"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Forecast says it's all rain tomorrow but I wanna go out! Suggest places. Hiyaaa I wanted to explore some London scenery tomorrow with a friend but we were bummed out because the we"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.075,
+        "source_item_count": 99,
+        "average_valence": -0.033,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-07T20:25:25.599Z",
-      "mood_score": 0.442,
+      "captured_at": "2026-09-07T23:23:13.317Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 6,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,22 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2, U5: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I care enough to know that there were no demonstrations regarding the topics I mentioned. And nobody cares about a 50 person protest in Berlin. My point was that you can easily mob"
-        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -148,34 +131,50 @@
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 1.04,
+          "excerpt": "I don't like the idea of no rent controls and going back to a landlords market where they have control of the price of a human need. If it weren't for the crazy good rental laws he"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Studio that does Mantis Piercings?. Hello! I've wanted to ask if anyone here has gotten a mantis/double front-facing nostril piercing done in Berlin or knows a studio here that doe"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.025,
+        "source_item_count": 112,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-07T20:25:25.599Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-09-07T23:23:13.317Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 61,
+        "public": 44,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,25 +190,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I knew a coworker living in the mission near 16th that paid $800 a month for a 2 bed 1 bath. This was 4 years ago. If the building of 3 units is under rent control and the landlord"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "It might be interesting to see what the Rent Board has to say, to have a consultation with a reputable landord attorney and even to see what articles from reputable sources might s"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Porque no los dos. Rent control just raises my hackles because it is moving in the wrong direction, worse than failing to tackle other reforms."
+          "excerpt": "Any economist ever could’ve told you rent control is terrible long term idea Are you insane? I could not more clearly be against it"
         },
         {
           "source_family": "public",
@@ -225,29 +208,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Rent control and affordable housing are like band aids on a gunshot wound. Better than nothing, but doesn't solve the underlying problem. I also think they directly lead to less ap"
+          "excerpt": "I’ve been to lazy bear 3 times and it’s typical SF tasting restaurant attire, which is dressy casual. Women usually wear an expensive looking sweater or long sleeve top and nice pa"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Hi!. I’m an Indian , in late 20s living in SF with my husband. We don’t have that many friends here in the city and we often get bored. We don’t drink or smoke, we love exploring n"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Good move. North Beach has some of the cheapest cocktail lounges, bars and dive bars in the whole City. And the most classic."
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.075,
+        "source_item_count": 110,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-07T20:25:25.599Z",
-      "mood_score": 0.295,
+      "captured_at": "2026-09-07T23:23:13.317Z",
+      "mood_score": 0.296,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -257,7 +256,8 @@
       },
       "languages": [
         "ca",
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
         {
@@ -274,7 +274,7 @@
           "language": "ca",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - elperiodico.com. CCOO y UGT convocan huelga parcial en Rodalies el 2"
         },
         {
           "source_family": "public",
@@ -302,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.014,
+        "source_item_count": 85,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.781
+        "freshness_score": 0.785
       }
     }
   ]
