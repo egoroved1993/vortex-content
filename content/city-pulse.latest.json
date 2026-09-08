@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-08T14:18:56.055Z",
+    "capturedAt": "2026-09-08T18:26:36.263Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 411
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-08T14:18:56.055Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-09-08T18:26:36.263Z",
+      "mood_score": 0.422,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 34,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between North Acton to Ealing Broadway due to an earlier signal failure at North Acton. MINO"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between North Acton to Ealing Broadway due to an earlier signal failure at North Acton. MINO"
         },
         {
           "source_family": "transport",
@@ -57,56 +65,49 @@
           "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "No, don’t think they do. The product is a copy of Muc-Off BAM (Bottled Air Magic) which is a lot more expensive but always available and works pretty well. It’s compressed CO2 and "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Hundreds of low-paid London NHS workers to strike - Unite the Union. Hundreds of low-paid London NHS workers to strike"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminal 4 due to vandalism to equipment in the Paddington area. MINOR DEL"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "That is the nature of online interactions. I've twice sold a race bib on Reddit and both times I had 10+ people message, ask details, sometimes set a date for exchange, etc and the"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Paddington and Heathrow Terminal 4 due to vandalism to equipment in the Paddington area. MINOR DEL"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.028,
+        "source_item_count": 95,
+        "average_valence": -0.081,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-08T14:18:56.055Z",
-      "mood_score": 0.457,
+      "captured_at": "2026-09-08T18:26:36.263Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 248, 200: Delays 3 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Learn that, please? Berlin doesn't have a mayor with authority over the RGB, but strict limitations due to tenancy law and (thankfully?) constitutional hurdles with regard to expro"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "The only time you will get severly \"injured\" by German inefficiency is whenever you need to \"change\" something. No matter what you do. Do not change. Do not change internet provide"
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -129,52 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "\\>Munich is cleaner than most citjes that's why you got that impression Actually I am much more thinking of the people, the way they dress and look. The city itself, people removed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Unpopular opinion: Today's Germans are just the descendants of the f\\\\\\*ers that spawned the Holocaust & 3rd Reich – I wouldn't be surprised if the whole country goes down the drai"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.01,
+        "source_item_count": 118,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-08T14:18:56.055Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-09-08T18:26:36.263Z",
+      "mood_score": 0.464,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,11 +189,19 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Not something I've done but a coworker had a \"photo booth crawl\" where they went to bars across the city with photo booths which I think is so fun! I tried to plan the same thing w"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Is Waymo getting crazy expensive in SF?. Just checked the exact same ride (\\~2 miles mid day weekend): Waymo: $24 Uber: $10 I like Waymo, but 2.4x is a pretty serious premium. Are "
+          "excerpt": "yea i had the same issue and i live in the central valley til i decided to buy because at least rent wont go up even tho i do pay a little more."
         },
         {
           "source_family": "public",
@@ -214,39 +223,31 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "70s is the perfect temp in southern California where the air is bone dry. Anywhere else the 60s would having me shivering. But here it feels like the 70s. So the 70s feel like the "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Not sure it’s $3 cheap but Clooney’s is a genuine local dive. It’s not always crowded but it’s fun to watch a Niners game there and there’s definitely a motley crew of regulars. Th"
+          "excerpt": "That cost $20 or more when its all said and done, and they are closed by 3:00. I am not anti GPC, I am a regular there, I am just saying we need a Super Duper open to 10. Or StarBi"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.03,
+        "source_item_count": 115,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-08T14:18:56.055Z",
-      "mood_score": 0.296,
+      "captured_at": "2026-09-08T18:26:36.263Z",
+      "mood_score": 0.295,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.013,
+        "source_item_count": 83,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.797
+        "freshness_score": 0.773
       }
     }
   ]
