@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-08T04:04:02.439Z",
+    "capturedAt": "2026-09-08T09:28:35.377Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-08T04:04:02.439Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-09-08T09:28:35.377Z",
+      "mood_score": 0.437,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 32,
+        "public": 34,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,66 +41,66 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I was skeptical when my hygienist recommended it to me. She gave me a sample tube (I wouldn't try it otherwise). To my own surprise, it actually is good for gums!"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and Edgware while we respond to a fire alert at Hendon Central. Tickets"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Forecast says it's all rain tomorrow but I wanna go out! Suggest places. Hiyaaa I wanted to explore some London scenery tomorrow with a friend but we were bummed out because the we"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This! Food being so cheap isn’t good on many levels (same with clothes). The issue is that the “dead hand of capital” is taking so much rent. And of course high rents affect the am"
+          "excerpt": "No, don’t think they do. The product is a copy of Muc-Off BAM (Bottled Air Magic) which is a lot more expensive but always available and works pretty well. It’s compressed CO2 and "
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Tube strike fears after RMT union sets deadline to London transport chiefs over four-day week row - London Evening Standard. Tube strike fears after RMT union sets deadline to Lond"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "recency_weight": 1.08,
+          "excerpt": "Hundreds of low-paid London NHS workers to strike - Unite the Union. Hundreds of low-paid London NHS workers to strike"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.001,
+        "source_item_count": 103,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-08T04:04:02.439Z",
-      "mood_score": 0.456,
+      "captured_at": "2026-09-08T09:28:35.377Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, M5: Delays 3 trips delayed"
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -131,14 +140,6 @@
           "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 1.04,
-          "excerpt": "I don't like the idea of no rent controls and going back to a landlords market where they have control of the price of a human need. If it weren't for the crazy good rental laws he"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -148,33 +149,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Studio that does Mantis Piercings?. Hello! I've wanted to ask if anyone here has gotten a mantis/double front-facing nostril piercing done in Berlin or knows a studio here that doe"
+          "excerpt": "\\>Munich is cleaner than most citjes that's why you got that impression Actually I am much more thinking of the people, the way they dress and look. The city itself, people removed"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.011,
+        "source_item_count": 116,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-08T04:04:02.439Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-09-08T09:28:35.377Z",
+      "mood_score": 0.45,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 59,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,27 +197,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yes. We travelled to SF October 2025 on vacation. I noticed waymo most of the time would be cheaper than Uber. We moved to SF in July 2026. I have opened the Waymo app maybe 20 tim"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "this rent situation is wild, especially with so many folks still stuck paying those low rents from the 70s. i saw a few people talking about platforms like rentriq and buildium com"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Expensive but at least tip is included. I have really long hair (halfway down my back) and see her twice a year for maintenance. Spouse's super short troll doll hair has been butch"
+          "excerpt": "Hi!. I’m an Indian , in late 20s living in SF with my husband. We don’t have that many friends here in the city and we often get bored. We don’t drink or smoke, we love exploring n"
         },
         {
           "source_family": "public",
@@ -225,28 +210,44 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Hi!. I’m an Indian , in late 20s living in SF with my husband. We don’t have that many friends here in the city and we often get bored. We don’t drink or smoke, we love exploring n"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "70s is the perfect temp in southern California where the air is bone dry. Anywhere else the 60s would having me shivering. But here it feels like the 70s. So the 70s feel like the "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Not sure it’s $3 cheap but Clooney’s is a genuine local dive. It’s not always crowded but it’s fun to watch a Niners game there and there’s definitely a motley crew of regulars. Th"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.026,
+        "source_item_count": 119,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-08T04:04:02.439Z",
+      "captured_at": "2026-09-08T09:28:35.377Z",
       "mood_score": 0.296,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 85,
+        "source_item_count": 87,
         "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.786
+        "freshness_score": 0.798
       }
     }
   ]
