@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-08T09:28:35.377Z",
+    "capturedAt": "2026-09-08T14:18:56.055Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-08T09:28:35.377Z",
-      "mood_score": 0.437,
+      "captured_at": "2026-09-08T14:18:56.055Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 34,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -54,15 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and Edgware while we respond to a fire alert at Hendon Central. Tickets"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -79,23 +71,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Hundreds of low-paid London NHS workers to strike - Unite the Union. Hundreds of low-paid London NHS workers to strike"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "That is the nature of online interactions. I've twice sold a race bib on Reddit and both times I had 10+ people message, ask details, sometimes set a date for exchange, etc and the"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.037,
+        "source_item_count": 102,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-08T09:28:35.377Z",
-      "mood_score": 0.454,
+      "captured_at": "2026-09-08T14:18:56.055Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4, M5: Delays 3 trips delayed"
-        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -154,11 +145,19 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "\\>Munich is cleaner than most citjes that's why you got that impression Actually I am much more thinking of the people, the way they dress and look. The city itself, people removed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Unpopular opinion: Today's Germans are just the descendants of the f\\\\\\*ers that spawned the Holocaust & 3rd Reich – I wouldn't be surprised if the whole country goes down the drai"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.017,
+        "source_item_count": 115,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "events",
@@ -169,7 +168,7 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-08T09:28:35.377Z",
+      "captured_at": "2026-09-08T14:18:56.055Z",
       "mood_score": 0.45,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -236,12 +235,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-08T09:28:35.377Z",
+      "captured_at": "2026-09-08T14:18:56.055Z",
       "mood_score": 0.296,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit.",
@@ -310,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.798
+        "freshness_score": 0.797
       }
     }
   ]
