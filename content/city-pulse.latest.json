@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-09T04:28:58.157Z",
+    "capturedAt": "2026-09-09T09:31:27.433Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 400
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-09T04:28:58.157Z",
-      "mood_score": 0.48,
+      "captured_at": "2026-09-09T09:31:27.433Z",
+      "mood_score": 0.469,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -41,28 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Our flight was cancelled at around 20:15 how it was announced to us by Jet2 was sort of Jaw-dropping: we were due to fly out and 16:15 but we're delayed until 18:45, then our gate "
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Wimbledon and Earl's Court eastbound only following a late finish of engineering wor"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/ West Ruislip and MINOIR DELAYS between Leytonstone a"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Apart from a house/apartment or a car, what is the most expensive thing you've ever bought?. For me: two personalized number plates, totalling about £7k (yes I'm a pretentious twit"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Nothing. They dumped us in the airport with our luggage and no info on anything. No bus to London. No hotel rooms. (There were none to be had anyway.) No information on if our flig"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Adding my update in here. Flew into Milan and arrived at 00:45 local time after a 6 hour delay at Luton. Got to Milan only to be told by the crew that none of our luggage has been "
+          "excerpt": "It's not too expensive when you compare against other global metropolis cities. Wages have not kept up and taxes are choking everyone so here we are."
         },
         {
           "source_family": "public",
@@ -82,31 +82,32 @@
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.06,
+        "source_item_count": 91,
+        "average_valence": -0.092,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-09T04:28:58.157Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-09-09T09:31:27.433Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 10,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Nice use of em dashes here — clean, purposeful, and used exactly where a comma or parenthesis would've felt weaker. The \"especially those from South Asia and the Middle East\" aside"
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -128,7 +145,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - berliner-kurier.de. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -137,27 +154,11 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Mauer Park flea market scammers. Hot tip: when buying items, count the change you’re given back to make sure it’s accurate. Every time I’ve (34 f) tried to buy something at the fle"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I don't understand what do you mean domestically? aren't municipal elections domestic enough? \"Palestinian demonstrations are happening in the streets of Berlin.\" You express it in"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.009,
+        "source_item_count": 120,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "events",
@@ -168,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-09T04:28:58.157Z",
-      "mood_score": 0.458,
+      "captured_at": "2026-09-09T09:31:27.433Z",
+      "mood_score": 0.412,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 41,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +187,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "idc if it doesn’t solve my problem. I have no real solution that I can carry out. Can’t afford to relocate or rent a private spot. I can’t get a different job. Therefore I complain"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Can’t afford it, I have lived here for a long time and am rent controlled. Until I progress in my career enough to relocate I am stuck here."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I have absolutely no idea, but if it is worth that much to you, you would rent a parking space."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -201,52 +226,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Hi!. I’m an Indian , in late 20s living in SF with my husband. We don’t have that many friends here in the city and we often get bored. We don’t drink or smoke, we love exploring n"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "BART evening commute snarled by fire causing Red Line outage - San Francisco Chronicle. BART evening commute snarled by fire causing Red Line outage"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Can anyone recommend a good mechanic for a 2021 Honda Civic hatchback sport. Hi my son is off to college over by SFSU. Can anyone recommend a mechanic for him who is in the area? O"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Well yes, people that work at Planned Parenthood are courageous people that believe in the social good they do. These people are worried we will accidentally shift to a better time"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.007,
+        "source_item_count": 118,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-09T04:28:58.157Z",
-      "mood_score": 0.445,
+      "captured_at": "2026-09-09T09:31:27.433Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 15,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -274,7 +275,7 @@
           "language": "ca",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - elperiodico.com. CCOO y UGT convocan huelga parcial en Rodalies el 2"
         },
         {
           "source_family": "public",
@@ -290,7 +291,7 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Em recomeneu llocs a Barcelona per a un menjar d'aniversari?. (Encara estic aprenent català, perdó per la meva gramàtica). Voldria anar amb la meva parella a un lloc maco i diverti"
+          "excerpt": "Escut de la Inquisició. En ple Barri Gòtic de Barcelona, al costat de la Catedral, encara es conserva aquest escut de la Inquisició. És al carrer dels Comtes, a l’edifici que va se"
         },
         {
           "source_family": "public",
@@ -298,18 +299,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Escut de la Inquisició. En ple Barri Gòtic de Barcelona, al costat de la Catedral, encara es conserva aquest escut de la Inquisició. És al carrer dels Comtes, a l’edifici que va se"
+          "excerpt": "De supermercat a cinema i no al revés: els Verdi estrenen dues sales"
         }
       ],
       "metadata": {
-        "source_item_count": 81,
-        "average_valence": -0.014,
+        "source_item_count": 88,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.765
+        "freshness_score": 0.787
       }
     }
   ]
