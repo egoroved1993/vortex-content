@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-09T18:26:41.841Z",
+    "capturedAt": "2026-09-09T21:35:53.071Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 428
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-09T18:26:41.841Z",
-      "mood_score": 0.477,
+      "captured_at": "2026-09-09T21:35:53.071Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays while we fix a signal failure at Embankment."
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / H"
+          "excerpt": "London transit District: Minor Delays District Line: No service between High Street Kensington and Edgware Road due to a points failure at High Street Kensing"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: No service clockwise and SEVERE DELAYS anticlockwise while emergency services deal with a casualty on the t"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: No service between Edgware and Camden Town southbound, SEVERE DELAYS between Edgware and Camden Town nort"
         },
         {
           "source_family": "transport",
@@ -70,32 +70,32 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Part Suspended Circle Line: No service clockwise and SEVERE DELAYS anticlockwise while emergency services deal with a casualty on the t"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Edgware and Camden Town southbound, SEVERE DELAYS between Edgware and Camden Town nort"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "So she said: \"Today in Walthamstow we held the 46th Milad Al Nabi march - it's a noisy annual celebration for our local Muslim community of the Prophet Mohammed's birthday. Food, s"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Part Suspended Northern Line: No service between Edgware and Camden Town southbound, SEVERE DELAYS between Edgware and Camden Town nort"
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.068,
+        "source_item_count": 102,
+        "average_valence": -0.086,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-09T18:26:41.841Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-09-09T21:35:53.071Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U2, M6: Delays 3 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +154,22 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Antony Szmierek at Rough Trade Berlin (Berlin) on 2026-09-09T00:00:00.000"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.005,
+        "source_item_count": 115,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-09T18:26:41.841Z",
+      "captured_at": "2026-09-09T21:35:53.071Z",
       "mood_score": 0.426,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -235,15 +236,15 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-09T18:26:41.841Z",
+      "captured_at": "2026-09-09T21:35:53.071Z",
       "mood_score": 0.446,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 25,
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.796
+        "freshness_score": 0.801
       }
     }
   ]
