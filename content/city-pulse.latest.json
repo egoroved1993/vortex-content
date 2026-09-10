@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-10T14:13:07.660Z",
+    "capturedAt": "2026-09-10T18:15:33.175Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 421
+    "totalItems": 445
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-10T14:13:07.660Z",
-      "mood_score": 0.412,
+      "captured_at": "2026-09-10T18:15:33.175Z",
+      "mood_score": 0.417,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 28,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I lived in Marylebone for 2.5 years because my landlord was old and the flat was falling apart. As soon as his grandson took over, he massively hiked up the rent without making any"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Severe Delays Circle Line: No service between Edgware Road and Euston Square and SEVERE DELAYS on the rest of the line while we fix a"
+          "excerpt": "London transit Circle: Severe Delays Circle Line: Severe delays due to a collapsed drain on the track at Baker Street. Tickets are being accepted on London B"
         },
         {
           "source_family": "transport",
@@ -70,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Part Suspended Circle Line: No service between Edgware Road and Euston Square and SEVERE DELAYS on the rest of the line while we fix a"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminal 4 and MINOR DELAYS between Hayes & Harlington and Reading due to"
         },
         {
           "source_family": "transport",
@@ -78,35 +70,44 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Paddington and Heathrow Terminal 4 due to vandalism to railway equipment in the Paddington area. GO"
+          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Paddington and Heathrow Terminal 4 and MINOR DELAYS between Hayes & Harlington and Reading due to"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to a collapsed drain on the track at Baker Street. Tickets are being accept"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.113,
+        "source_item_count": 97,
+        "average_valence": -0.097,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-10T14:13:07.660Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-09-10T18:15:33.175Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,11 +117,35 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Long wait times at BER airport today. If you ate traveling somewhere today from BER, be ready as there is a massive queue for security with wait times stretching to 45 mins on all "
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5, S3, 300, 248, M6: Delays 5 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "There is something to it: More competition for few apartments are certainly a factor, but did they mention the (well studied) adverse effect of rent controls? Investing in building"
+          "excerpt": "I paid ca. 1200 euros at the Frauenärzte am Potsdamer Platz clinic and definitely did not have to do that in cash. I would also find that quite weird. If you're looking for a good "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "yes, there is no legal obligation but they still are not freely tying tubes because somebody might regret it. Then this kind of regeret gets tied to the patient obviously getting i"
         },
         {
           "source_family": "public",
@@ -129,56 +154,32 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Lost Wallet on the U6. If you are an Aussie who lost your wallet on the U6 last night. I turned it into the police station at Platz der Luftbrucke. Everything was still inside the "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Mauer Park flea market scammers. Hot tip: when buying items, count the change you’re given back to make sure it’s accurate. Every time I’ve (34 f) tried to buy something at the fle"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.005,
+        "source_item_count": 133,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.917
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-10T14:13:07.660Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-09-10T18:15:33.175Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 46,
+        "public": 59,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -196,14 +197,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Which is closer? A lot of cancer treatments are DAILY. My partner just recently passed from six times of neck and throat cancer over 23 years (I was with her every step of the way)"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 1,
@@ -212,11 +205,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Street closure on Fell at Laguna?. im just really nosy. Fell was / is closed between Laguna and Buchanan as of 10pm tonight. Anyone know why? Cop cars blocking the street, lots of "
+          "excerpt": "I mean, the alternative seems to be SF only for legacy prop 13 owners, rent controlled units and the rest for tech/finance that are high up enough to survive the AI apocalypse. All"
         },
         {
           "source_family": "public",
@@ -224,29 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yes, but only one kills people on a regular basis (about 1 every 12 minutes in the USA). To say nothing of contaminating our air, causing nearly all the noise pollution, and puts u"
+          "excerpt": "I think we can and should do both. Obviously we need to build more. And, walking around everyday, I see a handful of SFHs and 2-4 unit buildings that have been totally abandoned an"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Thousands and thousands of empty units have zero impact? You people are absolutely delusional. Remind me again of how many units we've built each of the last few years? Also incent"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": 0.005,
+        "source_item_count": 124,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
-          "transit",
-          "weather"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-10T14:13:07.660Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-09-10T18:15:33.175Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -260,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Eixample is probably your best bet for central but quiet at night, it's residential enough that you won't get the bar noise but you're still walking distance from everything. Avoid"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -291,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Barcelona estrena el primer minibús de barri totalment elèctric, entre Canyelles i el Vall d’Hebron"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Escut de la Inquisició. En ple Barri Gòtic de Barcelona, al costat de la Catedral, encara es conserva aquest escut de la Inquisició. És al carrer dels Comtes, a l’edifici que va se"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.016,
+        "source_item_count": 91,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "routine",
           "tourism"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.815
       }
     }
   ]
