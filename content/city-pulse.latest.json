@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-12T10:28:30.438Z",
+    "capturedAt": "2026-09-12T14:09:40.750Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,46 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 246
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-12T10:28:30.438Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-09-12T14:09:40.750Z",
+      "mood_score": 0.458,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 12,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier fire alert at Piccadilly Circus. Tickets being accepted on London Buses a"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Haina"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -63,48 +79,31 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Minor Delays District Line: No service between Edgware Road and Tower Hill to Ealing Broadway / Kensington (Olympia) / Richmond / Wim"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays Hayes & Harlington and Reading due to vandalism to equipment in the Paddington area. MINOR DELAYS Paddingt"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Part Suspended Hammersmith and City Line: No service between Barking and Liverpool Street westbound only and SEVERE DELAYS on the rest"
         }
       ],
       "metadata": {
-        "source_item_count": 105,
-        "average_valence": -0.103,
+        "source_item_count": 71,
+        "average_valence": -0.122,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 1.052
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-12T10:28:30.438Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-09-12T14:09:40.750Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -121,14 +120,6 @@
           "valence": -1,
           "recency_weight": 1.04,
           "excerpt": "Long wait times at BER airport today. If you ate traveling somewhere today from BER, be ready as there is a massive queue for security with wait times stretching to 45 mins on all "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -153,32 +144,39 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Nobody wants to ban tipping. We want to ban the mandatory extra step where the card terminal stops and makes you select \"5%\", \"10%\", \"20%\" or \"no tip\" in the display before it proc"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Who here is affected by the cable internet blackout for the past week, in Schöneberg?. We haven't had internet at home since last Friday 4th of September. We have cable internet wi"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.016,
+        "source_item_count": 64,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 1.066
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-12T10:28:30.438Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-09-12T14:09:40.750Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 47,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -228,29 +226,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.042,
+        "source_item_count": 63,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.897
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-12T10:28:30.438Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-09-12T14:09:40.750Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
@@ -302,14 +300,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.018,
+        "source_item_count": 48,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "transit"
         ],
-        "freshness_score": 0.799
+        "freshness_score": 1.046
       }
     }
   ]
