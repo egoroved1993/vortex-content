@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-13T05:52:06.014Z",
+    "capturedAt": "2026-09-13T11:31:26.764Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,54 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-13T05:52:06.014Z",
-      "mood_score": 0.318,
+      "captured_at": "2026-09-13T11:31:26.764Z",
+      "mood_score": 0.315,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 25,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Woodf"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Woodf"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -55,59 +79,34 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 12 and Sunday 13 September, no service between Tower Hill / Edgware Road and Ealing Broadway / K"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Minor Delays Lioness Line: Minor delays due to a sewage leak on the track at Watford High Street."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 13 September, no service between Willesden Junction and Richmond. There is also no DISTRICT LINE se"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Planned Closure SUFFRAGETTE LINE: Sunday 13 September, no service throughout the whole line. Use VICTORIA LINE connections between Seven"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.093,
+        "source_item_count": 98,
+        "average_valence": -0.104,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-13T05:52:06.014Z",
-      "mood_score": 0.439,
+      "captured_at": "2026-09-13T11:31:26.764Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,30 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Long wait times at BER airport today. If you ate traveling somewhere today from BER, be ready as there is a massive queue for security with wait times stretching to 45 mins on all "
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "They really aren't, it's little more than marketing/branding. The M45 is exactly what the 145 used to be. The only difference is frequency and night service. In fact, just like the"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,28 +129,52 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "You'd need to print it in two parts then. We have the Prusia MK4S printers."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "There's really not much that could have been done to avoid it. The biggest problem is that this happened now, when CDU is focused on campaigning and not giving s damn about anythin"
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.033,
+        "source_item_count": 119,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-13T05:52:06.014Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-09-13T11:31:26.764Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 49,
+        "public": 59,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,22 +186,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Probably people who don’t understand that the down arrow doesn’t mean “no”. Mollie Stones is probably the most expensive grocery store. Think of it as gourmet 7-11 I guess, go if y"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I wish I knew about this when I first moved to SF and was making $36k a year. Didn’t learn about BMRs until I priced out. All that wasted rent money …"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -217,37 +200,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Document everything. Record the sounds using video so you can show what time it is and decibel level. Make notes of all the noises. Call SFPD non emergency. When they come out take"
+          "excerpt": "better bet is to go around to various smaller apartment buildings and check the windows -- you can usually tell if someone is living in a place by how the blinds are drawn (among o"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Mini truckin. Is there any kind of mini truck scene in the Bay Area? Mini truck clubs? Mini truck shows? Stuff from the 90’s is back in vogue right? Where’s my mini truckin homies "
+          "excerpt": "Hanbok Rental?. There is a wedding, and the groom's mother is looking for a Hanbok 한복 to rent or buy in the bay area for the wedding. She is the only Korean person at the wedding o"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Welcome neighbor! It's a nice neighborhood. I've lived in the neighborhood for 9 years. As a single woman, I have never felt unsafe here. I walk around all of the time, it is a ver"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "We are considering buying. We have a 3 bd 2 ba rental for $5K in the mission. Primarily looking to buy as we plan to have kids soon and have decided we want to stay in the city lon"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.043,
+        "source_item_count": 125,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-13T05:52:06.014Z",
-      "mood_score": 0.454,
+      "captured_at": "2026-09-13T11:31:26.764Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -278,6 +277,14 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - elperiodico.com. CCOO y UGT convocan huelga parcial en Rodalies el 2"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
@@ -291,26 +298,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Escut de la Inquisició. En ple Barri Gòtic de Barcelona, al costat de la Catedral, encara es conserva aquest escut de la Inquisició. És al carrer dels Comtes, a l’edifici que va se"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Dystopian looking morning - Sagrada Familia. Bon dia i bona hora a tot hom! Aquest matí a trenc d'alba, m'agrada el contrast dels edificis i li dóna un aspecte més humanitzat. Salu"
+          "excerpt": "Milers de persones omplen els carrers en les manifestacions de la Diada a Barcelona, Girona i Amposta"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.018,
+        "source_item_count": 83,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.803
+        "freshness_score": 0.797
       }
     }
   ]
