@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-13T11:31:26.764Z",
+    "capturedAt": "2026-09-13T16:00:35.315Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 448
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-13T11:31:26.764Z",
-      "mood_score": 0.315,
+      "captured_at": "2026-09-13T16:00:35.315Z",
+      "mood_score": 0.319,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 14,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Any real estate high above the city (read - high above and generally insulated from the chaos below) in almost any area commands much higher rent."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,36 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Circle: Part Closure CIRCLE LINE: Saturday 12 and Sunday 13 September, no service between Edgware Road and Aldgate (via Victoria)"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 12 and Sunday 13 September, no service between Tower Hill / Edgware Road and Ealing Broadway / K"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.104,
+        "source_item_count": 126,
+        "average_valence": -0.091,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-13T11:31:26.764Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-09-13T16:00:35.315Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 13,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -118,9 +118,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "And not multi-billion because it's only short, but the most expensive road ever built per metre at €225k per metre. So it only cost €721m for 3.2km of road. I'm sure there's loads "
+          "excerpt": "My opinion is based on my own personal experience, and asking around if people care about passwords and privacy, at different jobs, and personal life experience, and my outcome is "
         },
         {
           "source_family": "news",
@@ -128,7 +128,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -144,7 +144,7 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "You'd need to print it in two parts then. We have the Prusia MK4S printers."
+          "excerpt": "The M17, 27, and 37 all have in common that they're the eastern tangential lines along Treskowallee/Rhinstraße so I guess that's why they all have the 7. There is no M7 as well"
         },
         {
           "source_family": "public",
@@ -152,29 +152,29 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "There's really not much that could have been done to avoid it. The biggest problem is that this happened now, when CDU is focused on campaigning and not giving s damn about anythin"
+          "excerpt": "I have quite directly stated that the left wing politics we know has nothing to do with communism. if you can't even understand that then idk how to help you understand this."
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.01,
+        "source_item_count": 118,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-13T11:31:26.764Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-09-13T16:00:35.315Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 59,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +186,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yep. I'm in SF and people act as though it is illegal to acknowledge a stranger in passing. Not talking about addressing everyone you see on crowded street, just like when you are "
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -200,7 +208,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "better bet is to go around to various smaller apartment buildings and check the windows -- you can usually tell if someone is living in a place by how the blinds are drawn (among o"
+          "excerpt": "How about renters focus on paying rent and making sure they have sufficient funds to include a decent gratuity on said rent. I let two studios in the Mission at $3800 and $4200 a m"
         },
         {
           "source_family": "public",
@@ -214,39 +222,31 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Welcome neighbor! It's a nice neighborhood. I've lived in the neighborhood for 9 years. As a single woman, I have never felt unsafe here. I walk around all of the time, it is a ver"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "We are considering buying. We have a 3 bd 2 ba rental for $5K in the mission. Primarily looking to buy as we plan to have kids soon and have decided we want to stay in the city lon"
+          "excerpt": "I was already at work and leadership sent us home when the second tower fell. They were kind of flippant about it. They didn't think it was a big deal and compared it to the 89 ear"
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.03,
+        "source_item_count": 118,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-13T11:31:26.764Z",
-      "mood_score": 0.452,
+      "captured_at": "2026-09-13T16:00:35.315Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -277,12 +277,12 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - elperiodico.com. CCOO y UGT convocan huelga parcial en Rodalies el 2"
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.075,
+          "recency_weight": 1.04,
+          "excerpt": "Muy bien arreglamos la crisis de la vivienda, los pisos por cierto sentido común bajarán de precio, oh no los ciudadanos que eran propietarios ahora en las estadísticas se ven que "
         },
         {
           "source_family": "public",
@@ -302,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.024,
+        "source_item_count": 86,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.797
+        "freshness_score": 0.806
       }
     }
   ]
