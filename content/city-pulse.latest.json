@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-12T22:06:55.399Z",
+    "capturedAt": "2026-09-13T00:45:28.372Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 439
+    "totalItems": 440
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-12T22:06:55.399Z",
-      "mood_score": 0.491,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-09-13T00:45:28.372Z",
+      "mood_score": 0.335,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 29,
         "review": 2,
@@ -33,12 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Part Closure CIRCLE LINE: Saturday 12 and Sunday 13 September, no service between Edgware Road and Aldgate (via Victoria)"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 12 and Sunday 13 September, no service between Tower Hill / Edgware Road and Ealing Broadway / K"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -62,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Why have the trains in the East of England been such an absolute disgrace the last couple months?. I'm talking about Greater Northern and Greater Anglia being late and/or cancelled"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "\"Big City Stuff\" to show non English speaking parents coming from a small town. Asking for recommendations! Neither of them speak very good English and I want to show them somethin"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Haymarket - Please explain it. Every time I am in the West End it hits me how I just don't understand the Haymarket area. It's always quiet, it feels soulless and I just can't work"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.027,
+        "source_item_count": 97,
+        "average_valence": -0.044,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-12T22:06:55.399Z",
-      "mood_score": 0.443,
+      "captured_at": "2026-09-13T00:45:28.372Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -106,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -131,14 +131,6 @@
           "excerpt": "Long wait times at BER airport today. If you ate traveling somewhere today from BER, be ready as there is a massive queue for security with wait times stretching to 45 mins on all "
         },
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4, S9: Delays 2 trips delayed"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -153,23 +145,31 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "And not multi-billion because it's only short, but the most expensive road ever built per metre at €225k per metre. So it only cost €721m for 3.2km of road. I'm sure there's loads "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 128,
-        "average_valence": -0.022,
+        "source_item_count": 127,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.9
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-12T22:06:55.399Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-09-13T00:45:28.372Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,19 +229,19 @@
       ],
       "metadata": {
         "source_item_count": 130,
-        "average_valence": -0.028,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.903
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-12T22:06:55.399Z",
-      "mood_score": 0.454,
+      "captured_at": "2026-09-13T00:45:28.372Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -277,6 +277,14 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
@@ -291,19 +299,11 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Escut de la Inquisició. En ple Barri Gòtic de Barcelona, al costat de la Catedral, encara es conserva aquest escut de la Inquisició. És al carrer dels Comtes, a l’edifici que va se"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Dystopian looking morning - Sagrada Familia. Bon dia i bona hora a tot hom! Aquest matí a trenc d'alba, m'agrada el contrast dels edificis i li dóna un aspecte més humanitzat. Salu"
         }
       ],
       "metadata": {
         "source_item_count": 86,
-        "average_valence": -0.018,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "routine",
