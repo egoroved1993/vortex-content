@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-15T14:48:21.457Z",
+    "capturedAt": "2026-09-15T18:50:49.626Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 410
+    "totalItems": 411
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-15T14:48:21.457Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-09-15T18:50:49.626Z",
+      "mood_score": 0.467,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier signal failure at Turnpike Lane. Tickets are being accepted on the Eliz"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays while we fix a signal failure at Charing Cross and an earlier track fault at Harrow & Wealds"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays North Acton to West Ruislip / Ealing Broadway and Leytonstone to Epping / Hainault due to tra"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays due to an earlier faulty train at Oakwood. Tickets are being accepted on the Elizabeth li"
         },
         {
           "source_family": "public",
@@ -63,38 +79,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I ended up bagging a much higher paying job this way. Although I did have to move from up north down to London, so the extra money all went on rent and bills. Unfortunately the com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Tube strike warning after RMT passes new walkout mandate in four-day week row - London Evening Standard. Tube strike warning after RMT passes new walkout mandate in four-day week r"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.072,
+        "source_item_count": 91,
+        "average_valence": -0.098,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.86
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-15T14:48:21.457Z",
+      "captured_at": "2026-09-15T18:50:49.626Z",
       "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S3, 248: Delays 2 trips delayed"
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
         },
         {
           "source_family": "news",
@@ -129,7 +129,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - berliner-zeitung.de. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "signals",
@@ -164,15 +164,15 @@
           "routine",
           "events"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-15T14:48:21.457Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-09-15T18:50:49.626Z",
+      "mood_score": 0.505,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 50,
@@ -231,18 +231,18 @@
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": 0.01,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
         "freshness_score": 0.873
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-15T14:48:21.457Z",
+      "captured_at": "2026-09-15T18:50:49.626Z",
       "mood_score": 0.377,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -311,7 +311,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.825
+        "freshness_score": 0.827
       }
     }
   ]
