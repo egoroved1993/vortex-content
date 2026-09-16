@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-16T07:30:42.776Z",
+    "capturedAt": "2026-09-16T13:20:28.846Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 419
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-16T07:30:42.776Z",
-      "mood_score": 0.468,
+      "captured_at": "2026-09-16T13:20:28.846Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone due to train cancellations. MINOR DELAYS on th"
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Moor Park and Watford and MINOR DELAYS on the rest of the line while we fix a s"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Queen's Park and Harrow & Wealdstone due to train cancellations. MINOR DELAYS on th"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Moor Park and Watford and MINOR DELAYS on the rest of the line while we fix a s"
         },
         {
           "source_family": "transport",
@@ -62,51 +62,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays while we fix a signal failure at Neasden."
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays to an earlier customer incident. Tickets will be accepted on London Buses, Weaver/Suffraget"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+          "excerpt": "Annual house price growth slows but private rent increases accelerate - London Now. Annual house price growth slows but private rent increases accelerate"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays while we fix a signal failure at Neasden."
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Why am I being woken up at 4:45am by religious groups singing?. What is going on?! Apparently there’s a Hindu festival today. Is this kind of stuff allowed? Why do we have to put u"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.096,
+        "source_item_count": 92,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-16T07:30:42.776Z",
-      "mood_score": 0.449,
+      "captured_at": "2026-09-16T13:20:28.846Z",
+      "mood_score": 0.446,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5, 200, M4: Delays 5 trips delayed"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -136,45 +145,37 @@
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "I once met an elderly couple at my parent's BnB in the countryside. They loved Berlin but complained that \"Berlin is all grey\". Turned out they never left Mitte to see how green th"
+          "excerpt": "It's actually also keeping me from voting die Linke... Even if it was possible to expropriate Vonovia and pay compensation below market value, I really don't see how it would make "
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Glad you liked it. Come back (preferable in summer, Berlin winter is not for beginners. Don't ask about it, even talking about it might have bad influence) and find some less touri"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "So modern, but still so organic and fresh. And historically rich. Love it But as I see the mall, I wanna say... R.I.P Aqua Dom 17.12.2022 😥💔"
+          "excerpt": "How long did it take for you to get a UK standard visa. Dear expat friends of Berlin, as a non-EU citizen who I had to apply for a UK visa. I'm wondering how long it took for you t"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.004,
+        "source_item_count": 110,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-16T07:30:42.776Z",
-      "mood_score": 0.51,
+      "captured_at": "2026-09-16T13:20:28.846Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 58,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Just filled up at Costco and it was just under $6😳 it may be the most expensive I have ever seen it there"
+          "excerpt": "No one ever rented a U-Haul for $20. That’s a joke. I mean you might rent it for $20 but you’re going to pay $150 by the time you pay for insurance, mileage etc. gas will be extra."
         },
         {
           "source_family": "public",
@@ -208,7 +209,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Obstructing the fire escape will be a huge problem for your landlord -- make sure you clear it with them first and don't be surprised if the answer is no -- SF has regular fire ins"
+          "excerpt": "Fair push back. Major requirements are 2 bhk and in unit washer/dryer. I have realized just in short time here, centralized AC is not as important as I thought it would be consider"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Solano County. A job option is currently on the table in Solano county but I am completely unfamiliar with the area. However, rent is a big factor that will either make or break th"
         },
         {
           "source_family": "public",
@@ -216,37 +225,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "PSA: Homeowners, today is the last day to appeal your property tax for 2026. If you bought your house in San Francisco from 2020-2022 there's a good chance you are paying too much "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Spousal support attorney for divorced business owners in SF?. I own a small company that I've been running for 5+years and most of my income comes through this business even though"
+          "excerpt": "what's a good place to learn adult tennis in a group, and priced reasonably. hi, I'm learning tennis. i used to take classes at mountain view tennis, and moved to sf recently. so l"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.029,
+        "source_item_count": 124,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-16T07:30:42.776Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-09-16T13:20:28.846Z",
+      "mood_score": 0.45,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, language. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -260,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "A veure, per a mi que només hi han dues solucions. La més bonica però també la més idealista : Catalunya hauria pogut tenir armes y pot ser avui el país seria lliure de Alcanar fin"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -291,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Mig any amb Collserola tancat per la pesta porcina: veïns “cansats” i negocis amb l’aigua al coll"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Milers de persones omplen els carrers en les manifestacions de la Diada a Barcelona, Girona i Amposta"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.008,
+        "source_item_count": 90,
+        "average_valence": -0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "language"
+          "events"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.815
       }
     }
   ]
