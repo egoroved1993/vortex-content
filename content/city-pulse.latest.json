@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-17T16:42:13.545Z",
+    "capturedAt": "2026-09-17T20:07:35.283Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 427
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-17T16:42:13.545Z",
-      "mood_score": 0.434,
+      "captured_at": "2026-09-17T20:07:35.283Z",
+      "mood_score": 0.438,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays while we fix a signal failure at White City. Tickets being London Buses, Liberty Line, Eliza"
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "I think it's quite sweet (in a \"oh my sweet summer child\" kind of way) you're asking here, but you need to ask in whatever specialist forum/sub/dingy bar UK poets hang out in. I've"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier faulty train at Westminster. London Buses, Mildmay line, DLR, Elizabeth li"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to train cancellations. Tickets being London Buses, Liberty Line, Elizabeth Line, Chilte"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier faulty train at Westminster."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Tube sex attacker guilty of attempted rape on late night London Underground train - aol.co.uk. Tube sex attacker guilty of attempted rape on late night London Underground train"
         },
         {
           "source_family": "public",
@@ -63,48 +79,32 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Peppa Pig. I am trying to find Peppa Pig items for my grandson. I went to Battersea Power station but they closed the Peppa Pig store there. Where is a good place in London to find"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Private rent and house prices, UK: September 2026 - Office for National Statistics. Private rent and house prices, UK: September 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.046,
+        "source_item_count": 91,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-17T16:42:13.545Z",
+      "captured_at": "2026-09-17T20:07:35.283Z",
       "mood_score": 0.394,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,15 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200, M4, 248: Delays 7 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Because the free market is already scared as you stated. So you immigrant family students can't live here since we had the referendum. I see your point. If we don't open up to real"
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -140,46 +132,54 @@
           "excerpt": "Do you have issues with Stadt & Land for your wohnung?. We are a WG in Neukolln, our whole house was bought by Stadt & Land. Nothing has been done to renovate the house in 10-20yea"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Exactly! And at the same time, the cool places like RAW get destroyed too. So no new young people starting good stuff, and the existing stuff getting destroyed. It's like they are "
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "African-American groups/communities in Berlin?. Been living in Berlin for 8 years now as a black American. I have a lot of German friends, also Afro-German and African. But somethi"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.018,
+        "source_item_count": 118,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-17T16:42:13.545Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-09-17T20:07:35.283Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 41,
+        "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "trends": 8,
         "weather": 1
       },
@@ -187,22 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I would agree with if my neighbors on each side with the exact same house and builders were paying the same as me. The owners do not live in these homes and raised the rent on the "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "What is the point of noise ordinances when the city or police don't do anything. What are my other options to get a business to not make so much noise during quiet hours?"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -213,41 +197,57 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "San Francisco's most expensive private school ($75K a year) assigns kids to go viral on Twitter. Also FTA: On one of their first days on campus, freshmen at Alpha School are fitted"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This is likely part of the problem. Restrict the market, people stay in rent control for obvious reasons, the remaining rentals are for the likes of OP, bid up by slight excess dem"
+          "excerpt": "I suspect OPs point was that the closure of the great highway probably disproportionately affects folks north of the park (it's more time on Sunset or 19th, and going through the p"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Did anybody else on the 8am N-Judah see Scott Weiner catch verbal strays?. Spooked half the train when a woman started cussing and calling him a zionist. I get the anger and discou"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Birthday dinner. Hi, not sure if this is the correct group for this question. We are a Dutch couple doing a roadtrip and will arrive tomorrow to San Francisco. It’s my boyfriend’s "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Total beginner golfer looking for a buddy. I’m a very amateur golfer. 42M, have lived here for 20+ years, used to be in tech and am now semi-retired. I just bought a golf resident "
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.034,
+        "source_item_count": 113,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-17T16:42:13.545Z",
+      "captured_at": "2026-09-17T20:07:35.283Z",
       "mood_score": 0.398,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 39,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -303,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 105,
-        "average_valence": -0.006,
+        "source_item_count": 99,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.823
       }
     }
   ]
