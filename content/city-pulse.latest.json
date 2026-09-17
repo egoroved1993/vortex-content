@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-17T11:30:59.367Z",
+    "capturedAt": "2026-09-17T16:42:13.545Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-17T11:30:59.367Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-09-17T16:42:13.545Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays while we fix a points failure at Hainault and due to train cancellations."
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays while we fix a signal failure at White City. Tickets being London Buses, Liberty Line, Eliza"
         },
         {
           "source_family": "transport",
@@ -54,23 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: No service between Green Park and Waterloo, and SEVERE DELAYS on the rest of the line while we fix a fault"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Part Suspended Jubilee Line: No service between Green Park and Waterloo, and SEVERE DELAYS on the rest of the line while we fix a fault"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "What's your thought on the tube not having decent and continuous 5G?. I mean, London is one of the tech hubs of the world and yet signal in the tube is often times too slow to be u"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier faulty train at Westminster. London Buses, Mildmay line, DLR, Elizabeth li"
         },
         {
           "source_family": "public",
@@ -79,34 +63,51 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Peppa Pig. I am trying to find Peppa Pig items for my grandson. I went to Battersea Power station but they closed the Peppa Pig store there. Where is a good place in London to find"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.88,
+          "excerpt": "Private rent and house prices, UK: September 2026 - Office for National Statistics. Private rent and house prices, UK: September 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 88,
-        "average_valence": -0.062,
+        "source_item_count": 93,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "routine"
         ],
         "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-17T11:30:59.367Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-09-17T16:42:13.545Z",
+      "mood_score": 0.394,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 13,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,20 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, M4, 248: Delays 7 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Check your facts, dude. GDR achieved new built housing numbers the reunified Berlin can only dream of and has never matched ever since. The neglect of old houses in the Eastern par"
+          "excerpt": "Because the free market is already scared as you stated. So you immigrant family students can't live here since we had the referendum. I see your point. If we don't open up to real"
         },
         {
           "source_family": "public",
@@ -136,7 +145,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Absolutely. It willl increase the value ( admittedly only a little bit) for little money and no effort for your landlord. Tell him your friend ( a carpenter) will do the job and as"
+          "excerpt": "Exactly! And at the same time, the cool places like RAW get destroyed too. So no new young people starting good stuff, and the existing stuff getting destroyed. It's like they are "
         },
         {
           "source_family": "news",
@@ -144,41 +153,33 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.016,
+        "source_item_count": 122,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-17T11:30:59.367Z",
-      "mood_score": 0.435,
+      "captured_at": "2026-09-17T16:42:13.545Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 41,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -190,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 1,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "try calling Comcast at 800-777-9824, option 1. that’s the number specifically for network outages. when I had a similar issue, they responded pretty quickly after that. if all else"
+          "excerpt": "I would agree with if my neighbors on each side with the exact same house and builders were paying the same as me. The owners do not live in these homes and raised the rent on the "
         },
         {
           "source_family": "public",
@@ -212,41 +213,41 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "unfortunately my favorite sunglasses are jacque marie mage which is the most expensive ones you can buy around $1000"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "San Francisco's most expensive private school ($75K a year) assigns kids to go viral on Twitter. Also FTA: On one of their first days on campus, freshmen at Alpha School are fitted"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "This is likely part of the problem. Restrict the market, people stay in rent control for obvious reasons, the remaining rentals are for the likes of OP, bid up by slight excess dem"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.045,
+        "source_item_count": 107,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-17T11:30:59.367Z",
+      "captured_at": "2026-09-17T16:42:13.545Z",
       "mood_score": 0.398,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 34,
+        "public": 39,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -290,26 +291,26 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Milers de persones omplen els carrers en les manifestacions de la Diada a Barcelona, Girona i Amposta"
+          "excerpt": "Festes del Poblenou 2026: Programa de la festa major, concerts, correfoc, focs artificials i més"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Festes del Poblenou 2026: Programa de la festa major, concerts, correfoc, focs artificials i més"
+          "excerpt": "Doncs a mi no. Si ara jo me'n vaig a Asturias i faig una nova vida, també podré reivindicar els meus drets com a veï de la ciutat/comunitat on visc."
         }
       ],
       "metadata": {
-        "source_item_count": 100,
+        "source_item_count": 105,
         "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.835
       }
     }
   ]
