@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-19T20:23:59.309Z",
+    "capturedAt": "2026-09-19T22:49:58.831Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 445
+    "totalItems": 435
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-19T20:23:59.309Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-09-19T22:49:58.831Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 10,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "It's been horrendous. Piccadilly line was closed for a while, ditto overground, ditto numerous bus stops and diversions, ditto dlr and it goes on. I have learned to say nothing and"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -70,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip, and between Leytonstone and Epping /"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations and an earlier faulty train at Marble Arch."
         },
         {
           "source_family": "transport",
@@ -79,34 +71,43 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 19 and Sunday 20 September, no service between Earls Court and Ealing Broadway / Richmond. Use M"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.145,
+        "source_item_count": 96,
+        "average_valence": -0.136,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-19T20:23:59.309Z",
-      "mood_score": 0.302,
+      "captured_at": "2026-09-19T22:49:58.831Z",
+      "mood_score": 0.254,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 15,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -118,9 +119,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "What kind of psychopath voluntarily eats in a food court? Berlin has tons of good restaurants and snack spots where you can enjoy your time without feeling like you're eating in a "
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "No. In English, the effect is called filtering to lower-income groups over time. Trickle-down economics is the idea that giving tax cuts to and otherwise helping wealthy people wil"
+          "excerpt": "Sometimes I hate Berlin, but today I love it. Really stressfull week in life and work. Just came home from a 12h work day, hit the späti for Feierabendbier and put my three bottles"
         },
         {
           "source_family": "public",
@@ -128,7 +145,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Oh for sure, the renters that just sublet illegally are not the good ones. I got one in my house as well, dude moved to the countryside already and never gave up his apartment ."
+          "excerpt": "I've lived in Berlin for over a decade. The only time I've ever seen the CDU do something that helped anyone was the time Wegner was playing tennis and someone in a car was being i"
         },
         {
           "source_family": "news",
@@ -136,49 +153,33 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - berliner-zeitung.de. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 1.04,
-          "excerpt": "It’s not one or the other either. I have a friend who lives in an illegal sublet and pays double the rent that the people she rents from pay to the actual owner of the apartment, w"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.007,
+        "source_item_count": 115,
+        "average_valence": 0.013,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
         "freshness_score": 0.883
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-19T20:23:59.309Z",
+      "captured_at": "2026-09-19T22:49:58.831Z",
       "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 73,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "trends": 8,
         "weather": 1
       },
@@ -208,7 +209,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It's really only about $2/gallon. You are comparing the cheapest gas in Alabama with the expensive station in the middle of a city. The tax rate doesn't explain the difference. It'"
+          "excerpt": "It's going to become rougher in a few years. Security guards are barred from their company form using physical force for legal reason. Their primary legal role is to observe and re"
         },
         {
           "source_family": "public",
@@ -216,37 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Modern Animal is fantastic and very….modern! Unlike Ocean Ave Animal Hospital who just has a vet come in and guess what’s going on and then makes you buy expensive special diet foo"
+          "excerpt": "It’s funny when right wingers only talk about CA gas prices like bro Florida is paying for $5 gas the Midwest is paying $4.50 And that’s super expensive in the Midwest since minimu"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "And now everything is expensive because it must be trucked over from San Leandro and San Jose. The city government should have made better preparations to move businesses within th"
+          "excerpt": "San Francisco has some amazing people. I was taking a difficult phone call on the sidewalk and must have looked a little down. A kind gentleman actually pulled his car over just to"
         }
       ],
       "metadata": {
-        "source_item_count": 138,
+        "source_item_count": 137,
         "average_valence": 0.012,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "routine"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.897
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-19T20:23:59.309Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-09-19T22:49:58.831Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 20,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -260,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Yeah! We are not supper centered in Madrid or Barcelona, they are beautiful but we also want to get to know other places, Valencia, Bilbao o Zaragoza where on our list of possibili"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -291,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Una tromba d'aigua provoca inundacions i afectacions al metro i la ronda de Dalt"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Ancor Mesa Méndez on Instagram: \"El gran reemplazo en #Barcelona es que el descontrol de la indústria turística nos expulse de nuestras casas y del espacio público, nos precarice e"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.008,
+        "source_item_count": 87,
+        "average_valence": 0,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.792
+        "freshness_score": 0.797
       }
     }
   ]
