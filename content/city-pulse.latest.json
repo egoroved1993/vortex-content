@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-19T00:04:27.087Z",
+    "capturedAt": "2026-09-19T05:38:39.210Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 436
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-19T00:04:27.087Z",
-      "mood_score": 0.343,
+      "captured_at": "2026-09-19T05:38:39.210Z",
+      "mood_score": 0.328,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 25,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -41,73 +41,72 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "The Tube being relatively quiet on Fridays.. does it feel weird to anyone else?. They say Thursday is the new Friday. WFH is still a factor, I get it. But wow. Mid-evening tonight "
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to train cancellations. Tickets being accepted on London Buses, Mildmay lin"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Ticket giveaway - How The Other Half Loves @ Old Vic - tonight 7:30pm!. Hey, very last minute but I have a ticket to give away for How The Other Half Loves play at the Old Vic thea"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Are zebra crossings just not a thing in the UK?. So as someone from Portugal who’s now temporarily living in the UK I find it so confusing how you guys barely have any zebra crossi"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Tube strike warning after RMT passes new walkout mandate in four-day week row - London Evening Standard. Tube strike warning after RMT passes new walkout mandate in four-day week r"
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 19 and Sunday 20 September, no service between Earls Court and Ealing Broadway / Richmond. Use M"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 19 September, from 0130 and all day Sunday 20 September, including Night Tube, no service betw"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.022,
+        "source_item_count": 100,
+        "average_valence": -0.065,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-19T00:04:27.087Z",
-      "mood_score": 0.294,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-09-19T05:38:39.210Z",
+      "mood_score": 0.49,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 17,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit S9: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -132,50 +123,58 @@
           "excerpt": "Do you have issues with Stadt & Land for your wohnung?. We are a WG in Neukolln, our whole house was bought by Stadt & Land. Nothing has been done to renovate the house in 10-20yea"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Saw these idiots as well couple of weeks ago when went home from vacation in Amsterdam. All along the A2. People with flags and banners. No clue why they don't do something useful "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The reason people keep huge flats they don’t need is the massive increase in rent prices over the last 15 years. Of course you don’t need 5 rooms after your children moved out, but"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Racism? WTF? You are crazy. Why do you think people living in Berlin should vote against their own interests and for people who want to move here? I've seen so many people get pric"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Psychiatrie crises in Berlin. Can we have a discussion about the fact that it is not possible to find a psychiatrist in Berlin that accepts public health insurance. I am still wait"
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.016,
+        "source_item_count": 121,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.898
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-19T00:04:27.087Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-09-19T05:38:39.210Z",
+      "mood_score": 0.51,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 50,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,11 +188,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "Try NextDoor; may luck up on someone wanting to rent a garage. It’s done in my building. Three units (condos) are vacant but the owners rent garage space."
+          "excerpt": "Piner High SPARQ Planetarium and Digital Theatre or Chabot Space and Science Center for a Pink Floyd Film Experience?. Its some kind of visual show meant to be projected in a dome."
         },
         {
           "source_family": "public",
@@ -202,14 +201,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Oakland Museum vs Chabot Space Center. I'm going to be in Oakland for a conference in October and we have a free afternoon to go explore. I know some people from our group are goin"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Suggested parking for civic center. I’m serving on jury duty and am tired of the suggested parking garage. I know you can get it validated but they don’t make it convenient, and to"
         },
         {
           "source_family": "public",
@@ -226,22 +217,30 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Good car shops in the city?. I have a 2012 Lexus and the fuel pump needs to be replaced. I’m wondering if it’s worth paying the 1700 Lexus quoted me, or taking it to another shop. "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Anyone find similar noodels to Ha Nam Ninh's #25 dry?. What happened to the owners of Ha Nam Ninh in the TL in San Francisco? Photo of them, in case anyone knows them! I would tota"
         }
       ],
       "metadata": {
-        "source_item_count": 115,
-        "average_valence": -0.014,
+        "source_item_count": 122,
+        "average_valence": 0.031,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-19T00:04:27.087Z",
+      "captured_at": "2026-09-19T05:38:39.210Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.81
+        "freshness_score": 0.813
       }
     }
   ]
