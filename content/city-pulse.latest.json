@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-20T18:37:49.552Z",
+    "capturedAt": "2026-09-20T21:22:26.016Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-20T18:37:49.552Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-09-20T21:22:26.016Z",
+      "mood_score": 0.469,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to an earlier track fault at Oxford Circus."
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -55,6 +55,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit District: Part Closure DISTRICT LINE: Saturday 19 and Sunday 20 September, no service between Earls Court and Ealing Broadway / Richmond. Use M"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -71,30 +79,22 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.083,
+        "source_item_count": 101,
+        "average_valence": -0.091,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-20T18:37:49.552Z",
+      "captured_at": "2026-09-20T21:22:26.016Z",
       "mood_score": 0.251,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -128,7 +128,7 @@
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "excerpt": "Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin? - Berliner Kurier. Verhandlungen beendet: Kommt es zu Ostern zum Streik bei der BVG in Berlin?"
         },
         {
           "source_family": "signals",
@@ -163,15 +163,15 @@
           "events",
           "routine"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-20T18:37:49.552Z",
+      "captured_at": "2026-09-20T21:22:26.016Z",
       "mood_score": 0.484,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 48,
@@ -233,17 +233,17 @@
         "dominant_themes": [
           "general",
           "money",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.862
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-20T18:37:49.552Z",
+      "captured_at": "2026-09-20T21:22:26.016Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 24,
@@ -303,13 +303,13 @@
       ],
       "metadata": {
         "source_item_count": 90,
-        "average_valence": -0.008,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
-          "tourism",
-          "transit"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.795
+        "freshness_score": 0.819
       }
     }
   ]
