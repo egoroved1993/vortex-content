@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-23T16:36:43.009Z",
+    "capturedAt": "2026-09-23T20:06:17.739Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 430
+    "totalItems": 432
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-23T16:36:43.009Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-09-23T20:06:17.739Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor Delays between North Acton and Ealing Broadway / West Ruislip, and between Leytonstone and Epping /"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge while we dealing with a signalling problem at Ra"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: No service anticlockwise only while we fix a points failure at Tower Hill. MINOR DELAYS on the rest of the"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Part Suspended Circle Line: No service anticlockwise only while we fix a points failure at Tower Hill. MINOR DELAYS on the rest of the"
         },
         {
           "source_family": "public",
@@ -71,31 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I have found success with Master Bastaphaya in Shepherd’s Bush Market. He helped me with some spell problems and I am now free of the curse I accidentally put on myself, originally"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "It's generally a good thing and expected Most inner Londoners don't have driveways so lampposts mean you can trickle charge overnight outside your door, without councils having to "
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.008,
+        "source_item_count": 94,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.846
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-23T16:36:43.009Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-09-23T20:06:17.739Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -135,8 +144,8 @@
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Berlin: Kann die Linke Wohnungen vergesellschaften? - SZ.de. Berlin: Kann die Linke Wohnungen vergesellschaften? Kann der Bund Vergesellschaftungen in Berlin verbieten? ZDFheute En"
+          "recency_weight": 1,
+          "excerpt": "Vergesellschaftung von Wohnungsunternehmen: Kommt jetzt wirklich die Enteignung in Berlin? - DIE ZEIT. Vergesellschaftung von Wohnungsunternehmen: Kommt jetzt wirklich die Enteignu"
         },
         {
           "source_family": "news",
@@ -145,30 +154,22 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": 0.003,
+        "source_item_count": 112,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-23T16:36:43.009Z",
+      "captured_at": "2026-09-23T20:06:17.739Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "work"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-23T16:36:43.009Z",
+      "captured_at": "2026-09-23T20:06:17.739Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.824
+        "freshness_score": 0.828
       }
     }
   ]
