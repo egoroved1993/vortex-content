@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-23T23:31:56.780Z",
+    "capturedAt": "2026-09-24T04:14:24.996Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,23 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 427
+    "totalItems": 420
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-23T23:31:56.780Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-09-24T04:14:24.996Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -41,72 +40,73 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to to train cancellations."
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier points failure at Tower Hill."
+          "valence": 0.5,
+          "recency_weight": 1,
+          "excerpt": "Another warm September day as London set for sunny spells and mid 20s forecast - London Now. Another warm September day as London set for sunny spells and mid 20s forecast"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to an earlier points failure at Tower Hill. London Buses are accepting tickets via any"
+          "recency_weight": 0.56,
+          "excerpt": "Tube strike fears as RMT sets deadline to London transport chiefs on 4-day week row - London Evening Standard. Tube strike fears as RMT sets deadline to London transport chiefs on "
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to an earlier points failure at Tower Hill."
+          "recency_weight": 0.56,
+          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "£260 a month rent overlooking Vicky Park. The big Topshop on Oxford Circus. Soho being a cesspit of sleazy clip joints and sex shops still. The intrepid fox, clubs in central Londo"
+          "recency_weight": 0.56,
+          "excerpt": "Private rent and house prices, UK: September 2026 - Office for National Statistics. Private rent and house prices, UK: September 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 92,
-        "average_valence": -0.065,
+        "source_item_count": 86,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-23T23:31:56.780Z",
+      "captured_at": "2026-09-24T04:14:24.996Z",
       "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -131,50 +139,42 @@
           "excerpt": "Trouble with ALBA - anyone else sitting on a month of paper rubbish. We live in Steglitz and our paper recycling hasn't been picked up in 4 weeks. Their customer service claim ever"
         },
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Thank you for being a kind human being!! <3 And OP, there’s an app you can find patisseries etc that give away excessive food. I just don’t remember the name. Maybe someone here ca"
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Both are antisemitic, but one was said about 30 years ago by an 18 year old, while the other is relevant right now. Can you see the difference?"
         }
       ],
       "metadata": {
         "source_item_count": 112,
-        "average_valence": -0.005,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-23T23:31:56.780Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-09-24T04:14:24.996Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 63,
+        "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +186,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "i can't believe it's still in such a state. used to walk/bike through to/from work everyday from like 2014-2019. so much gross stuff. shitting, pissing, puke, injecting drugs, smok"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "lol, rail systems are extremely expensive to run 🤷They are extremely efficient though. And BART is a literal marvel of Space Age engineering. It has particularly low operating cos"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -200,15 +216,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I would do a free class at a couple and try to catch the vibe. Tons of good options but all a bit different. Ralph Gracie in SOMA for gi. Magalit for no gi. El Nino for MMA, and ma"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "The restaurant is loud and plays upbeat loud music and that’s a good thing. I will never understand diners that go out to a busy upbeat restaurant and expect, even demand it be qui"
+          "excerpt": "Petaluma is a bit out in the sticks for the metropolis, but it's actually less expensive, and a really beautiful part of the wine country, and there is a decent amount of activity "
         },
         {
           "source_family": "public",
@@ -217,36 +225,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Restaurants for group of 11. Hi! My family is visiting in a couple weeks and I would really appreciate help/guidance on restaurants that are good for groups. We have 11, 2 of which"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.56,
-          "excerpt": "Waymos blocked roads and caused chaos during San Francisco power outage - NBC Bay Area. Waymos blocked roads and caused chaos during San Francisco power outage"
         }
       ],
       "metadata": {
-        "source_item_count": 129,
-        "average_valence": -0.015,
+        "source_item_count": 127,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
         "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-23T23:31:56.780Z",
+      "captured_at": "2026-09-24T04:14:24.996Z",
       "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +302,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 94,
+        "source_item_count": 95,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.839
       }
     }
   ]
