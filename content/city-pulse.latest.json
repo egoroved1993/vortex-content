@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-24T04:14:24.996Z",
+    "capturedAt": "2026-09-24T09:49:27.054Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 416
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-24T04:14:24.996Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-09-24T09:49:27.054Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -33,6 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -40,66 +41,66 @@
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier signal failure at Leytonstone. Tickets will be accepted on London Buses, L"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier faulty train at Pimlico."
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Debt Talk responds as East London rent arrears near £22 million - London Now. Debt Talk responds as East London rent arrears near £22 million"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
-          "recency_weight": 1,
-          "excerpt": "Another warm September day as London set for sunny spells and mid 20s forecast - London Now. Another warm September day as London set for sunny spells and mid 20s forecast"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Tube strike fears as RMT sets deadline to London transport chiefs on 4-day week row - London Evening Standard. Tube strike fears as RMT sets deadline to London transport chiefs on "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK: September 2026 - Office for National Statistics. Private rent and house prices, UK: September 2026"
+          "recency_weight": 1.04,
+          "excerpt": "My wife and I earn an on paper decent amount, nothing crazy but still good ish for London. We almost certainly won't be able to afford a house that we want to live in when we have "
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.019,
+        "source_item_count": 90,
+        "average_valence": -0.064,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-24T04:14:24.996Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-09-24T09:49:27.054Z",
+      "mood_score": 0.451,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -115,22 +116,6 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Our Gelbetonne in Neukölln wasn’t picked up for 2.5 months during the winter. So many calls. So many broken promises."
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -139,42 +124,58 @@
           "excerpt": "Trouble with ALBA - anyone else sitting on a month of paper rubbish. We live in Steglitz and our paper recycling hasn't been picked up in 4 weeks. Their customer service claim ever"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Thank you for being a kind human being!! <3 And OP, there’s an app you can find patisseries etc that give away excessive food. I just don’t remember the name. Maybe someone here ca"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Yea, They lost the keys to our house (trash is in the backyard) twice, so they just didn't come anymore. After complaints they started to ring the doorbells of all 10 appartments i"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Create 1000 Giant cardboard cranes in the hope of a happy future for all our bins"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.006,
+        "source_item_count": 111,
+        "average_valence": 0.002,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.891
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-24T04:14:24.996Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-09-24T09:49:27.054Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 61,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,22 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "i can't believe it's still in such a state. used to walk/bike through to/from work everyday from like 2014-2019. so much gross stuff. shitting, pissing, puke, injecting drugs, smok"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "lol, rail systems are extremely expensive to run 🤷They are extremely efficient though. And BART is a literal marvel of Space Age engineering. It has particularly low operating cos"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -216,7 +201,15 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Petaluma is a bit out in the sticks for the metropolis, but it's actually less expensive, and a really beautiful part of the wine country, and there is a decent amount of activity "
+          "excerpt": "My experience is that people who can't find community here just have something wrong with them. I moved from across the world and found it pretty easy. Even met someone and married"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I live in an older Victorian that is totally remodeled & nice but have had German roaches pop up twice in 3 years, never full blown infestation and was dealt with quickly. I’m also"
         },
         {
           "source_family": "public",
@@ -225,28 +218,36 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Restaurants for group of 11. Hi! My family is visiting in a couple weeks and I would really appreciate help/guidance on restaurants that are good for groups. We have 11, 2 of which"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "PLEASE HELP- DOG STOLEN, Marina district 9/23, 6-6:20pm. Hi All, Our neighbor’s sweet dog, Easton, was stolen today (9/23) between 6- 6:20pm from Lombard & Webster near the Tesla c"
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.024,
+        "source_item_count": 119,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "routine"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-24T04:14:24.996Z",
+      "captured_at": "2026-09-24T09:49:27.054Z",
       "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -286,30 +287,30 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Sorpresa i recel dels comerços de barri davant l’anunci de supermercats públics a Barcelona"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Ha estat terrible. Jo per sort m’he pogut saltar la cua però a l'interior només eren cues: lavabos, workshops, cafeteria. Cua rera cua"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Sorpresa i recel dels comerços de barri davant l’anunci de supermercats públics a Barcelona"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
+        "source_item_count": 96,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.839
+        "freshness_score": 0.835
       }
     }
   ]
