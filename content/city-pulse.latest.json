@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-24T09:49:27.054Z",
+    "capturedAt": "2026-09-24T14:49:14.922Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-24T09:49:27.054Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-09-24T14:49:14.922Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 20,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier signal failure at Leytonstone. Tickets will be accepted on London Buses, L"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainau"
         },
         {
           "source_family": "transport",
@@ -54,15 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to an earlier faulty train at Pimlico."
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. (The next train from Amersham"
         },
         {
           "source_family": "news",
@@ -71,6 +63,14 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Debt Talk responds as East London rent arrears near £22 million - London Now. Debt Talk responds as East London rent arrears near £22 million"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London set for 28C as Met Office forecasts ‘exceptionally warm’ late September day - London Now. London set for 28C as Met Office forecasts ‘exceptionally warm’ late September day"
         },
         {
           "source_family": "public",
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.064,
+        "source_item_count": 88,
+        "average_valence": -0.057,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.842
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-24T09:49:27.054Z",
-      "mood_score": 0.451,
+      "captured_at": "2026-09-24T14:49:14.922Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -122,14 +121,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Trouble with ALBA - anyone else sitting on a month of paper rubbish. We live in Steglitz and our paper recycling hasn't been picked up in 4 weeks. Their customer service claim ever"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "signals",
@@ -154,22 +145,30 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Create 1000 Giant cardboard cranes in the hope of a happy future for all our bins"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "This sub and berlin_public are the most pro Zionist subs I have ever seen on this platform. Not the original definition of Zionism but the one Nethanayu established over his time. "
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": 0.002,
+        "source_item_count": 110,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.891
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-24T09:49:27.054Z",
+      "captured_at": "2026-09-24T14:49:14.922Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -230,18 +229,18 @@
       ],
       "metadata": {
         "source_item_count": 119,
-        "average_valence": -0.005,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-24T09:49:27.054Z",
+      "captured_at": "2026-09-24T14:49:14.922Z",
       "mood_score": 0.458,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +309,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.828
       }
     }
   ]
