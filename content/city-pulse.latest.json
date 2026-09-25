@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-25T13:31:43.051Z",
+    "capturedAt": "2026-09-25T18:25:11.112Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-25T13:31:43.051Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-09-25T18:25:11.112Z",
+      "mood_score": 0.477,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip, and between Leytonstone and Epping/Haina"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. (Next Metropolitan line train"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading while we deal with a trespasser on the track in the Sl"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to a person taken ill on a train earlier at Baker Street."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays between Victoria and Brixton while we fix a track fault at Brixton."
         },
         {
           "source_family": "public",
@@ -63,39 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Is there something in the air this week?. The amount of dangerous driving is off the scale . A car just barely missed me pulling out of a side road into me on my bike. I’ve had sev"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "In general I think it’s a good idea that the buses are run by TfL directly as it’s a monopoly. But on the point of costs, I have a feeling this is more about vibes than saving mone"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "A 20 minute walk is making you are thinking about getting a car? You may want to think about a bicycle or e-bike with cargo capacity for a child seat. You will be surprised by the "
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.044,
+        "source_item_count": 88,
+        "average_valence": -0.069,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.841
+        "freshness_score": 0.839
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-25T13:31:43.051Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-09-25T18:25:11.112Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +154,22 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I don't agree. Politico is a great news organisation and its journalists are doing high quality work and thrive for high factuality. As a journalist you're not responsible for the "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Hello lovely Berliners, ill be visiting Berlin and i need some suggestions (advice). Il be visiting Berlin on a weekend and ill be staying in Mitte and want some suggestions for so"
         }
       ],
       "metadata": {
         "source_item_count": 124,
-        "average_valence": -0.021,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "events",
           "money"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-25T13:31:43.051Z",
+      "captured_at": "2026-09-25T18:25:11.112Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "money"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-25T13:31:43.051Z",
+      "captured_at": "2026-09-25T18:25:11.112Z",
       "mood_score": 0.463,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.839
       }
     }
   ]
