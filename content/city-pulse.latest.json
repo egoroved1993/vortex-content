@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-09-30T06:31:40.310Z",
+    "capturedAt": "2026-09-30T13:31:55.723Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 406
+    "totalItems": 409
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-09-30T06:31:40.310Z",
-      "mood_score": 0.39,
+      "captured_at": "2026-09-30T13:31:55.723Z",
+      "mood_score": 0.38,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 20,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to infrastructure damage at Brixton."
+          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Abbey Wood and Heathrow Airport / Reading due to an earlier safety inspection of the track at Paddi"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to an earlier fire alert at Kilburn. Tickets are being accepted on London Buses, DLR, C2"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Brixton. Tickets will be accepted on, London Buses, Weaver Line, Su"
         },
         {
           "source_family": "public",
@@ -63,39 +79,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "I’ve had good meals in Indian Lounge, never tried the other two. It’s a different business now but round the corner in Pentonville Road (in the same building as the Scala) was anot"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.08,
-          "excerpt": "London weather forecast: Warm and sunny day expected with high of 25°C and 40% chance of rain - The Times of India. London weather forecast: Warm and sunny day expected with high o"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.03,
+        "source_item_count": 89,
+        "average_valence": -0.059,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.85
+        "freshness_score": 0.852
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-09-30T06:31:40.310Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-09-30T13:31:55.723Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, 200, 100, U5: Delays 6 trips delayed"
         },
         {
           "source_family": "signals",
@@ -156,20 +157,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 109,
-        "average_valence": -0.004,
+        "source_item_count": 110,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-09-30T06:31:40.310Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-09-30T13:31:55.723Z",
+      "mood_score": 0.457,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -229,22 +230,22 @@
       ],
       "metadata": {
         "source_item_count": 118,
-        "average_valence": -0.005,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-09-30T06:31:40.310Z",
-      "mood_score": 0.397,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-09-30T13:31:55.723Z",
+      "mood_score": 0.497,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 26,
         "review": 2,
@@ -309,7 +310,7 @@
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.841
       }
     }
   ]
