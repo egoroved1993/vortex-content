@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-01T05:19:14.605Z",
+    "capturedAt": "2026-10-01T12:53:15.365Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 412
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-01T05:19:14.605Z",
-      "mood_score": 0.34,
+      "captured_at": "2026-10-01T12:53:15.365Z",
+      "mood_score": 0.342,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 23,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to infrastructure damage at Brixton."
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to an earlier faulty train at Neasden. Tickets are being accepted on London Buses,"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Brixton. Tickets are being accepted on London Buses, Weaver Line, S"
         },
         {
           "source_family": "public",
@@ -71,42 +79,35 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Bizarre Korean youtube comment on why British music is good. [ I was watching this video of a korean translation of the scientist by coldplay and translating the comments into engl"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.029,
+        "source_item_count": 91,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-01T05:19:14.605Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-10-01T12:53:15.365Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, M6: Delays 3 trips delayed"
         },
         {
           "source_family": "signals",
@@ -157,21 +158,21 @@
       ],
       "metadata": {
         "source_item_count": 111,
-        "average_valence": -0.004,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.905
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-01T05:19:14.605Z",
+      "captured_at": "2026-10-01T12:53:15.365Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 43,
@@ -233,18 +234,18 @@
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-01T05:19:14.605Z",
-      "mood_score": 0.332,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-10-01T12:53:15.365Z",
+      "mood_score": 0.482,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 35,
         "review": 2,
@@ -309,7 +310,7 @@
           "money",
           "transit"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.855
       }
     }
   ]
