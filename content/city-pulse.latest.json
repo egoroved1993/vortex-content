@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-03T17:52:15.985Z",
+    "capturedAt": "2026-10-03T20:53:35.944Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 428
+    "totalItems": 448
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-03T17:52:15.985Z",
-      "mood_score": 0.429,
+      "captured_at": "2026-10-03T20:53:35.944Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays between Willesden Junction and Stratford due to an earlier trespasser at Dalston Kingsland. G"
+          "excerpt": "London transit Victoria: Part Closure VICTORIA LINE: From 1930 Saturday 3 until 1000 Sunday 4 October, no service between Victoria and Brixton. Please use Lon"
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to a track fault at Brixton and a earlier faulty train at Oxford Circus. Tickets are be"
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: No service between Victoria and Brixton due to a track fault at Brixton. SEVERE DELAYS on the rest of the"
         },
         {
           "source_family": "transport",
@@ -71,40 +79,32 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Minor Delays Windrush Line: No service between Surrey Quays and Clapham Junction, and MINOR DELAYS between Surrey Quays and New cross"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
+        "source_item_count": 95,
         "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.872
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-03T17:52:15.985Z",
+      "captured_at": "2026-10-03T20:53:35.944Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S3, M4, 300, S9: Delays 6 trips delayed"
+          "excerpt": "Berlin transit 200, S9: Delays 2 trips delayed"
         },
         {
           "source_family": "nightlife",
@@ -149,33 +149,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Lola fährt ÖPNV. Hey guys, I've built a small game inspired by the famous Lola Rennt Film - Lola fährt ÖPNV. You get a starting point and a destination where your companion Manni i"
+          "excerpt": "Pretty standard yes. I've also noticed that people will take a seat next to you if it's a S-Bahn or Bus in the morning but as soon as it's 10am people rather stand."
         }
       ],
       "metadata": {
-        "source_item_count": 116,
+        "source_item_count": 117,
         "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "transit"
         ],
         "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-03T17:52:15.985Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-10-03T20:53:35.944Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 44,
+        "public": 66,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "I know a woman named Reina who is a bit older maybe in her late 40s / early 50s. If you don’t mind me asking, what ethnicity was your Reina? It could be the same one… she’s the swe"
+          "excerpt": "Any studio listed for $1.5k in the city proper is a scam. Rent has exploded in the last year or so and it's more expensive than NYC now. The particularly tough part is low vacancy "
         },
         {
           "source_family": "public",
@@ -201,23 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "where subleasing is permitted, you (a tenant, never a landlord) can get your sublettor to waive certain rent control rights and agree to a firm move-out date. You can’t charge more"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "What is up with the T Muni Line?. Seriously it happened TWICE. In the afternoon, I was running late to work and had to spend $10 on Uber bc a Waymo got stuck on the tracks. Then wh"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Renting with 5 cats... Hi all.. I have 5 cats + 2 birds and I currently own a home elsewhere. Was curious about a move to SF, but doubtful of any places that would rent to me 😊. G"
+          "excerpt": "I can't believe I'm saying that as someone moving from Boston to NYC soon, SF is sooo much more expensive than NYC, NYC even in Manhattan has spots cheaper than the cheapest SF ren"
         },
         {
           "source_family": "public",
@@ -225,24 +209,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "if your rent jumped 26% you might willingly pay it too lest you not be on the street and have to pay moving costs and have to pay closing costs on a new place and the myriad of oth"
+          "excerpt": "Are we really saying anything different? The people that would work/go to late night spots can’t/don’t live in the city anymore."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "5500 a month for rent on a 1 bedroom is absolutely insane. My mortgage is 1600 a month for a 3 bed 2 bath house. I can drive to Hayes valley in 50 mins. How much they paying you te"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Rent control, dilapidated borderline illegal apartments sometimes, and living with roommates. And of course, a lot just don't live in the city"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.037,
+        "source_item_count": 132,
+        "average_valence": -0.049,
         "dominant_themes": [
           "general",
-          "transit",
+          "money",
           "events"
         ],
-        "freshness_score": 0.866
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-03T17:52:15.985Z",
-      "mood_score": 0.395,
+      "captured_at": "2026-10-03T20:53:35.944Z",
+      "mood_score": 0.398,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -271,14 +271,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "In 30 years, yes. But that's irrelevant to my situation now. I cannot afford to rent out my apartment and pay rent somewhere else. I have 2 economically viable options: sell or off"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
@@ -295,22 +287,30 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.075,
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "The quality now is beyond terrible - literally never any bikes and when there are, the conditions are bordering on dangerous - sometimes barely any breaks. I've used it for years a"
+          "excerpt": "Suspenen-circulacio-trens-alta-velocitat-regionals- Avui de 9 a 11. Rodalies no, perque ja és suspendrà sol com sempre."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Bicing is so frustrating. Cycled from Born to W hotel area and there’s overflow bikes everywhere, decided to cycle back and there’s 7 stations without space. I basically paid for a"
         }
       ],
       "metadata": {
         "source_item_count": 104,
-        "average_valence": -0.016,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.845
       }
     }
   ]
