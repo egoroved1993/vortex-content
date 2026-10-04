@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-04T12:07:56.200Z",
+    "capturedAt": "2026-10-04T17:24:40.904Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,30 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 431
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-04T12:07:56.200Z",
-      "mood_score": 0.471,
+      "captured_at": "2026-10-04T17:24:40.904Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 34,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays following a late running freight train. London Underground are accepting tickets via any rea"
-        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -70,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Watford /Uxbridge/ Aldgate and MINOR DELAYS between Moor"
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Amersham due to train cancellations. The next southbound train wil"
         },
         {
           "source_family": "transport",
@@ -78,36 +70,43 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays between Harrow-on-the-Hill and Watford /Uxbridge/ Aldgate and MINOR DELAYS between Moor"
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 4 October, no service between Surrey Quays and Clapham Junction / Battersea Park. Replacement bus"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.085,
+        "source_item_count": 106,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-04T12:07:56.200Z",
+      "captured_at": "2026-10-04T17:24:40.904Z",
       "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 10,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -116,12 +115,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "bvg",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4, S3, 100: Delays 3 trips delayed"
+          "recency_weight": 1.04,
+          "excerpt": "A lot of the time actually renters don’t know who the landlord is. It’s very common for the hausvewaltung and landlords to use a network of trusts and companies which obscure the m"
         },
         {
           "source_family": "nightlife",
@@ -157,29 +156,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.03,
+        "source_item_count": 116,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-04T12:07:56.200Z",
-      "mood_score": 0.41,
+      "captured_at": "2026-10-04T17:24:40.904Z",
+      "mood_score": 0.406,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 39,
+        "public": 43,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -189,11 +188,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "It sounds like your landlord is an individual owner, so yes they are exempt from AB 1482. A 15% increase is probably pretty generous on their part. Our friends recently got their r"
+          "excerpt": "Accidentally booked a vacation during Fleet Week.. Planned a trip for my wife and I a few weeks back and we will be in SF during fleet week. We honestly have no clue about it. I wa"
         },
         {
           "source_family": "public",
@@ -201,7 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Re the horrible trespassing, I would raise hell to the HOA and the landlord about (in writing to both, with clarity to them that I'd be calling the police and getting a restraining"
+          "excerpt": "lol hush a capitalist will hear you 😹 auto union is scheduled to strike in 28 so maybe we'll start a labor movement or at least a discussion 😭 the fact we aren't revolting pmo"
         },
         {
           "source_family": "public",
@@ -209,45 +208,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The landlord has the reasonsibility to uphold the requirements of the lease as well as obey the laws of San francisco and California. The right to quiet enjoyment and to live peace"
+          "excerpt": "Fences wouldnt be an issie if there was crowd control. At some point they need to stop letting people in. It was difficult to enjoy yesterday. It felt like being corralled. It's be"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "40 [F4M] Oakland. Posting for my best friend, single no kids lives in Oakland, 5’10, blonde Loves music, art. outdoors, water, goofball. Looking to meet guy with good sense of humo"
+          "excerpt": "Sorry, maybe I wasn't being clear. The sidewalk would be so crowded that I was riding at the same speed as people walking. It wasn't like rubbing shoulder to shoulder, but still cr"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Fleet week 2026. Hello everyone! I’ve never been to the air show here in SF, and I’m looking for the best spots for photography of the jets. I have a 200–600mm lens and was looking"
+          "excerpt": "lol !! No one commutes by walking across the BK bridge. 1st off that would take way too much time. You think anyone commutes walking across the Golden Gate Bridge ? No one rides th"
         }
       ],
       "metadata": {
-        "source_item_count": 104,
-        "average_valence": -0.028,
+        "source_item_count": 109,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-04T12:07:56.200Z",
-      "mood_score": 0.35,
+      "captured_at": "2026-10-04T17:24:40.904Z",
+      "mood_score": 0.341,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 38,
+        "public": 34,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -263,11 +262,19 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Free Outdoor Group Fitness Meetup. Yo everyone! For a couple months now I've been hosting a weekly group fitness class in Parc de Carles I. I'm not charging anything for it, it's j"
+          "excerpt": "Renting is not some evil thing. Plenty of people want to rent and not own for plenty of reasons."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Thoughts: Property holders are very risk averse. Risk of renting is too high for landlords. Rent controls and strong eviction protection pulls units off market in a very elastic wa"
         },
         {
           "source_family": "signals",
@@ -278,39 +285,31 @@
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "Housing prices would drop massively in this case. Rent caps are a decent middle ground where you can earn some money, so rent stock still exists, but it's no longer as good as an i"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Espero que gani \"Torrent de la Guineu\", té més relació amb el barri i a més es un nom bonic i entranyable"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Suspenen-circulacio-trens-alta-velocitat-regionals- Avui de 9 a 11. Rodalies no, perque ja és suspendrà sol com sempre."
         }
       ],
       "metadata": {
-        "source_item_count": 104,
-        "average_valence": -0.001,
+        "source_item_count": 100,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "transit",
-          "routine"
+          "routine",
+          "tourism"
         ],
-        "freshness_score": 0.843
+        "freshness_score": 0.836
       }
     }
   ]
