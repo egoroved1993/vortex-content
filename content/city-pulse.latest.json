@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-06T02:50:14.952Z",
+    "capturedAt": "2026-10-06T10:00:21.826Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-06T02:50:14.952Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-10-06T10:00:21.826Z",
+      "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,12 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Abbey Wood and Paddington and SEVERE DELAYS on the rest of the line while we fix a faulty train at Pa"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Part Suspended No service between Abbey Wood and Paddington and SEVERE DELAYS on the rest of the line while we fix a faulty train at Pa"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -59,41 +76,25 @@
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "London borough declares 'private renting crisis' and calls for rent controls - London Evening Standard. London borough declares 'private renting crisis' and calls for rent controls"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
           "valence": 0.5,
           "recency_weight": 1,
           "excerpt": "London to enjoy two more warm days before temperatures plunge by 7C - London Now. London to enjoy two more warm days before temperatures plunge by 7C"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "North London borough declares 'private rent crisis' and calls for powers to cap costs - My London. North London borough declares 'private rent crisis' and calls for powers to cap c"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.024,
+        "source_item_count": 86,
+        "average_valence": -0.037,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.818
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-06T02:50:14.952Z",
+      "captured_at": "2026-10-06T10:00:21.826Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
@@ -106,7 +107,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -156,19 +156,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
+        "source_item_count": 116,
         "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-06T02:50:14.952Z",
+      "captured_at": "2026-10-06T10:00:21.826Z",
       "mood_score": 0.487,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
@@ -230,19 +230,19 @@
       ],
       "metadata": {
         "source_item_count": 135,
-        "average_valence": -0.039,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "money",
           "transit"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-06T02:50:14.952Z",
-      "mood_score": 0.24,
+      "captured_at": "2026-10-06T10:00:21.826Z",
+      "mood_score": 0.242,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -304,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 96,
-        "average_valence": -0.029,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.823
+        "freshness_score": 0.833
       }
     }
   ]
