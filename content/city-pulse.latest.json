@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-08T08:42:43.306Z",
+    "capturedAt": "2026-10-08T16:18:00.958Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 413
+    "totalItems": 456
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-08T08:42:43.306Z",
-      "mood_score": 0.385,
+      "captured_at": "2026-10-08T16:18:00.958Z",
+      "mood_score": 0.388,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe Delays between Paddington and Heathrow Airport / Reading while we fix a signal failure in the Paddington area. Ti"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,53 +54,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to an earlier signal failure at Stockwell. Tickets are being accepted on London Buses,"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 0.88,
-          "excerpt": "London weather: Rain to soak rush hour commuters as warm spell ends - AOL.co.uk. London weather: Rain to soak rush hour commuters as warm spell ends"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Uxbridge / Heathrow Terminals due to an earlier signal failure at A"
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.72,
-          "excerpt": "London borough declares 'private renting crisis' and calls for rent controls - London Evening Standard. London borough declares 'private renting crisis' and calls for rent controls"
+          "recency_weight": 1.08,
+          "excerpt": "London borough's parliament protest over £102m budget crisis amid council tax fears - London Evening Standard. London borough's parliament protest over £102m budget crisis amid cou"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I feel this too. I live in central in a major city and I like the convenience of shops, bars, transport etc but I also long for some greenery and emptiness. I know both is possible"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.045,
+        "source_item_count": 97,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.828
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-08T08:42:43.306Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-10-08T16:18:00.958Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Had to file a police complaint. The landlord followed/insulted/threatened me after a disagreement about the flat being listed as fuenished and i am looking for witnesses 🙃"
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -140,41 +148,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "I love that. I travel someplace different each weekend using the regio. I'm going to use this. Thank you for maintaining this."
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Abfuhrtermine BSR Berlin?. Restmüll: Verpackungkarton, Cardboard boxes that's bit too much for our tiny Green bin Okay so I have a few questions about how Abfuhrtermine works in Be"
+          "excerpt": "Enjoy the price of a doner in Galway Ireland. Was in Ireland last week, appalled by the price. Also this is from a sub par place that is only frequented by drunk people after a nig"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.01,
+        "source_item_count": 118,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-08T08:42:43.306Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-10-08T16:18:00.958Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 69,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,15 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "same. i'm an admin in the tech industry...making six figures, but having 2 kids, a husband, dog...in the bay area...everything expensive as shit, gas prices, taxes that take a shit"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Should be fine on 10k monthly for two people, especially if no car. You can rent something now and then move to UCSF housing in July if you are staying for an additional year."
+          "excerpt": "You don't seem to understand how the housing market works. Developers don't build \"$10,000 a month studio apartments\" they just build studio apartments and the rent is set as high "
         },
         {
           "source_family": "public",
@@ -216,7 +208,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Vape shops with CA legal unflavored products?. All my spots keep either getting busted or decide that I don't \"look cool enough\" half the times I visit and refuse to sell me the sa"
+          "excerpt": "It's Been Silly Hot (in here). My landlord repainted the uninsulated house in which I reside a dark color, and the south-facing wall of my LR behind my desk has been running 97F du"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Giant mosaic staircase in SF and it's kinda sick. This staircase in the Sunset that is covered in 163,000 tiles I had never heard of the 16th Avenue Tiled Steps. It started as a ne"
         },
         {
           "source_family": "public",
@@ -224,29 +224,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Couple years ago I spent $3.9K in 3 days at regular and emergency vets. They sent home saying we don’t know what’s wrong maybe she’s constipated. ER is very expensive here but also"
+          "excerpt": "It sucks to get priced out of the city i was born and raised in. Rent prices are ridiculous. I used to pay $2800 for a 3bed 2bath, 1100 sq ft in Castro. The price of rent on a lot "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.001,
+        "source_item_count": 135,
+        "average_valence": 0.01,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.905
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-08T08:42:43.306Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-10-08T16:18:00.958Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 40,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,30 +261,6 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Had the sweetest experience today in Gótico. Went out today with my girlfriend after having a few rough weeks. Sitting at a bar In Gótico and we get surprised with a drawing that a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Lo de siempre: cuando el debate es sobre los pisos, disuelven las cortes y a otra cosa. Mientras tanto mi casera me sube el alquiler un 8% cada año sin despeinarse, pero eso no se "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yo lo veo más claro de lo que parece: cuando el alquiler se te come media paga, la única palanca que queda es no pagar. En la vaga de lloguers del 21 ya consiguieron bajar rentas e"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -298,18 +274,42 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Avís vermell per pluja intensa a Barcelona i moltes afectacions a la mobilitat"
+          "excerpt": "TMB rectifica la parada de bus que deixava els veïns a la intempèrie i els turistes a cobert"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Menjadors, gimnasos i patis inundats en algunes escoles de Barcelona per les pluges torrencials"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "\"Los propietarios están preocupados por los nuevos decretos\" titula hoy La Vanguardia. La manipulación es total para los que tienen menos de 5 propiedades."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "This post was removed for breaking the rule: 'Keep content related to Barcelona' --- Aquesta publicació s'ha eliminat per infringir la regla: 'Mantenir el contingut relacionat amb "
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.03,
+        "source_item_count": 106,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.875
       }
     }
   ]
