@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-08T16:18:00.958Z",
+    "capturedAt": "2026-10-08T21:56:19.615Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 456
+    "totalItems": 454
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-08T16:18:00.958Z",
+      "captured_at": "2026-10-08T21:56:19.615Z",
       "mood_score": 0.388,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 26,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -57,14 +57,6 @@
           "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to an earlier signal failure at Stockwell. Tickets are being accepted on London Buses,"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Piccadilly: Minor Delays Piccadilly Line: Minor delays between Acton Town and Uxbridge / Heathrow Terminals due to an earlier signal failure at A"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
@@ -74,39 +66,48 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Online dating in London. Controversial opinion: men in London generally find it easier to secure quality dates online compared to women, due to different levels of competition and "
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I feel this too. I live in central in a major city and I like the convenience of shops, bars, transport etc but I also long for some greenery and emptiness. I know both is possible"
+          "excerpt": "Your post resonates with me . Kinda in the same boat at 38, my mum lives with me as well. The loneliness is starting to get me pretty bad , started therapy 11 months ago , it has h"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.036,
+        "source_item_count": 102,
+        "average_valence": -0.034,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-08T16:18:00.958Z",
+      "captured_at": "2026-10-08T21:56:19.615Z",
       "mood_score": 0.444,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Had to file a police complaint. The landlord followed/insulted/threatened me after a disagreement about the flat being listed as fuenished and i am looking for witnesses 🙃"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4: Delays 1 trips delayed"
         },
         {
           "source_family": "nightlife",
@@ -156,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.016,
+        "source_item_count": 114,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-08T16:18:00.958Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-10-08T21:56:19.615Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 69,
+        "public": 65,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,14 +197,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "You don't seem to understand how the housing market works. Developers don't build \"$10,000 a month studio apartments\" they just build studio apartments and the rent is set as high "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -212,41 +205,49 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Giant mosaic staircase in SF and it's kinda sick. This staircase in the Sunset that is covered in 163,000 tiles I had never heard of the 16th Avenue Tiled Steps. It started as a ne"
+          "excerpt": "Most people i know here set up a policy after their 1st surprise bill like this. new injuries, anything from cuts to broken bones, are standard in the fetch and nationwide plans, s"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "If I Can Only Visit One Bakery.... Much to my chagrin, I don't quite think I'll be able to hit as many bakeries as I'd like to since I'm only there for two days. This sub/the inter"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "It sucks to get priced out of the city i was born and raised in. Rent prices are ridiculous. I used to pay $2800 for a 3bed 2bath, 1100 sq ft in Castro. The price of rent on a lot "
+          "excerpt": "Good point. I've been using them for 3+ years. They moved with me from a 1 bedroom to a 3 bedroom and the length of time didn't change. At this point it's been almost 2 years in th"
         }
       ],
       "metadata": {
-        "source_item_count": 135,
-        "average_valence": 0.01,
+        "source_item_count": 131,
+        "average_valence": 0.02,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.905
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-08T16:18:00.958Z",
-      "mood_score": 0.448,
+      "captured_at": "2026-10-08T21:56:19.615Z",
+      "mood_score": 0.443,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 40,
+        "public": 41,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,6 +262,22 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Laws exist for vehicles that exceed noise ordinances; they're just not enforced enough. You probably already know some motorcycles are modified after inspections to be louder as we"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Como alguien que vive con las ventanas abiertas y molestado por motos grandes delante del Hospital Clinic, dueño de una moto eléctrico Slience: - a favor del primero. La policía de"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -274,7 +291,7 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "TMB rectifica la parada de bus que deixava els veïns a la intempèrie i els turistes a cobert"
+          "excerpt": "Els Bonus Consum per gastar 10 € a mercats i botigues de barri es podran demanar ja el 13 d’octubre"
         },
         {
           "source_family": "public",
@@ -282,34 +299,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Menjadors, gimnasos i patis inundats en algunes escoles de Barcelona per les pluges torrencials"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "\"Los propietarios están preocupados por los nuevos decretos\" titula hoy La Vanguardia. La manipulación es total para los que tienen menos de 5 propiedades."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "This post was removed for breaking the rule: 'Keep content related to Barcelona' --- Aquesta publicació s'ha eliminat per infringir la regla: 'Mantenir el contingut relacionat amb "
+          "excerpt": "TMB rectifica la parada de bus que deixava els veïns a la intempèrie i els turistes a cobert"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.006,
+        "source_item_count": 107,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.878
       }
     }
   ]
