@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-08T01:42:02.057Z",
+    "capturedAt": "2026-10-08T08:42:43.306Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 331
+    "totalItems": 413
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-08T01:42:02.057Z",
-      "mood_score": 0.392,
+      "captured_at": "2026-10-08T08:42:43.306Z",
+      "mood_score": 0.385,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,20 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I would do these things in this order: 1. Rapidly get up from my seat 2. roar like an angry caveman 3. grab the bar and begin to swing like a silverback gorilla 4. primitively bite"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe Delays between Paddington and Heathrow Airport / Reading while we fix a signal failure in the Paddington area. Ti"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "A mate of mine got me a 1969 edition “The Esquire Guide to Good Grooming for Men” and it’s fucking brilliant. I love old stuff like that. I used to have an early 70s men’s fashion "
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "signals",
@@ -81,29 +82,29 @@
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.023,
+        "source_item_count": 83,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.831
+        "freshness_score": 0.828
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-08T01:42:02.057Z",
-      "mood_score": 0.449,
+      "captured_at": "2026-10-08T08:42:43.306Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 5,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -113,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Thx. We once went to Berlin for a long weekend, about 15 years ago. We rented bikes and cycled through a large part of the city. People were very nice and the atmosphere was good t"
-        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -147,6 +140,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "I love that. I travel someplace different each weekend using the regio. I'm going to use this. Thank you for maintaining this."
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
@@ -155,25 +156,97 @@
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.004,
+        "source_item_count": 113,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.877
+      }
+    },
+    {
+      "city_id": "sf",
+      "captured_at": "2026-10-08T08:42:43.306Z",
+      "mood_score": 0.501,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 54,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 50,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "Why does nobody smile back?. Or is it just that I am not good looking enough? Just moved 2 weeks ago and have been trying to get out more. And I mean I want to make new friends and"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "same. i'm an admin in the tech industry...making six figures, but having 2 kids, a husband, dog...in the bay area...everything expensive as shit, gas prices, taxes that take a shit"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Should be fine on 10k monthly for two people, especially if no car. You can rent something now and then move to UCSF housing in July if you are staying for an additional year."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Vape shops with CA legal unflavored products?. All my spots keep either getting busted or decide that I don't \"look cool enough\" half the times I visit and refuse to sell me the sa"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Couple years ago I spent $3.9K in 3 days at regular and emergency vets. They sent home saying we don’t know what’s wrong maybe she’s constipated. ER is very expensive here but also"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 120,
+        "average_valence": 0.001,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "money"
+        ],
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-08T01:42:02.057Z",
-      "mood_score": 0.447,
+      "captured_at": "2026-10-08T08:42:43.306Z",
+      "mood_score": 0.44,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 31,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -183,9 +256,34 @@
       },
       "languages": [
         "ca",
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Had the sweetest experience today in Gótico. Went out today with my girlfriend after having a few rough weeks. Sitting at a bar In Gótico and we get surprised with a drawing that a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Lo de siempre: cuando el debate es sobre los pisos, disuelven las cortes y a otra cosa. Mientras tanto mi casera me sube el alquiler un 8% cada año sin despeinarse, pero eso no se "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yo lo veo más claro de lo que parece: cuando el alquiler se te come media paga, la única palanca que queda es no pagar. En la vaga de lloguers del 21 ya consiguieron bajar rentas e"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -196,117 +294,22 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Suposo que et refereixes a la immigracio. No sé, visc a un lloc on hi ha molta més immigració que a Barcelona. Bé, jo mateix sóc un immigrant, clar. I t'asseguro que no hi ha aques"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "És una ximpleria. El context del Brasil és molt diferent. Necessitariem crear una crisi a Espanya per fer quelcom similar. Per exemple. Una invasió marroquina i la princesa Leonor "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Sobreturisme a Barcelona. Hola a tothom! 👋 Estic fent la meva tesi de màster sobre la vida a Barcelona i m'interessa molt la visió dels veïns i veïnes: Què significa exactament pe"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El que va fer amb el Tanatori de Sants no té perdó. El Barri no oblida!"
+          "excerpt": "Avís vermell per pluja intensa a Barcelona i moltes afectacions a la mobilitat"
         }
       ],
       "metadata": {
-        "source_item_count": 73,
-        "average_valence": -0.01,
+        "source_item_count": 97,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.817
-      }
-    },
-    {
-      "city_id": "sf",
-      "captured_at": "2026-10-08T01:42:02.057Z",
-      "mood_score": 0.487,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 50,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART reports major delays due to equipment problem in San Francisco - NBC Bay Area. BART reports major delays due to equipment problem in San Francisco"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "BART equipment problem causes major delays system wide - CBS News. BART equipment problem causes major delays system wide"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "San Francisco Mayor Daniel Lurie declares rent emergency amid rising costs - ABC7 San Francisco. San Francisco Mayor Daniel Lurie declares rent emergency amid rising costs"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "San Francisco Mayor Declares Rent Emergency Amid A.I. Housing Frenzy - The New York Times. San Francisco Mayor Declares Rent Emergency Amid A.I. Housing Frenzy"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 66,
-        "average_valence": -0.037,
-        "dominant_themes": [
-          "general",
-          "transit",
-          "weather"
-        ],
-        "freshness_score": 0.75
+        "freshness_score": 0.863
       }
     }
   ]
