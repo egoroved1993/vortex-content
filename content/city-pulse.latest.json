@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-09T16:02:03.178Z",
+    "capturedAt": "2026-10-09T21:32:25.775Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 421
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-09T16:02:03.178Z",
-      "mood_score": 0.336,
+      "captured_at": "2026-10-09T21:32:25.775Z",
+      "mood_score": 0.334,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 2,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Wimbledon due to an earlier customer incident. MINOR DELAYS on the"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Earl's Court and Wimbledon due to an earlier customer incident. MINOR DELAYS on the"
         },
         {
           "source_family": "public",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Which affordable commuter towns near London with decent rail links ?. I'm mooking into relocation option for a friend starting a new job in central London with a tigh monthly rent "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good London Print Services which have pickup. My usual go-to print service (DoxDirect) have gone down the toilet in terms of printing and delivering when they say they will. This m"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.042,
+        "source_item_count": 92,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.838
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-09T16:02:03.178Z",
-      "mood_score": 0.396,
+      "captured_at": "2026-10-09T21:32:25.775Z",
+      "mood_score": 0.399,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -115,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100, 248: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -154,25 +146,33 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Enjoy the price of a doner in Galway Ireland. Was in Ireland last week, appalled by the price. Also this is from a sub par place that is only frequented by drunk people after a nig"
         }
       ],
       "metadata": {
         "source_item_count": 116,
-        "average_valence": -0.011,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.88
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-09T16:02:03.178Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-10-09T21:32:25.775Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 48,
@@ -230,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.008,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-09T16:02:03.178Z",
+      "captured_at": "2026-10-09T21:32:25.775Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -310,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.859
       }
     }
   ]
