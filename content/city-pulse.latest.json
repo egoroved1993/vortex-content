@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-09T01:55:30.294Z",
+    "capturedAt": "2026-10-09T08:47:48.548Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 450
+    "totalItems": 396
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-09T01:55:30.294Z",
-      "mood_score": 0.346,
+      "captured_at": "2026-10-09T08:47:48.548Z",
+      "mood_score": 0.338,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 33,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,36 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays due to an earlier customer incident at Earl's Court. Tickets will be accepted on London Bus"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to train cancellations. Tickets are being accepted on London Buses, Weaver line, Suffra"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Online dating in London. Controversial opinion: men in London generally find it easier to secure quality dates online compared to women, due to different levels of competition and "
+          "excerpt": "Thank you for the Underground Help. Hi all! Just wanted to send a quick note of thanks to the folks that helped me, and my gynormous suitcase while traveling on the Underground tod"
         },
         {
           "source_family": "public",
@@ -53,59 +78,36 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Your post resonates with me . Kinda in the same boat at 38, my mum lives with me as well. The loneliness is starting to get me pretty bad , started therapy 11 months ago , it has h"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Tube strike fears as RMT sets deadline to London transport chiefs on 4-day week row - London Evening Standard. Tube strike fears as RMT sets deadline to London transport chiefs on "
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
+          "excerpt": "I’m glad nothing bad happened with her considering the possible scenarios in the light of recent events such as cornel 7. Hopeful to know that really good decent men exist and can "
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.011,
+        "source_item_count": 89,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-09T01:55:30.294Z",
-      "mood_score": 0.397,
+      "captured_at": "2026-10-09T08:47:48.548Z",
+      "mood_score": 0.394,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 7,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -113,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 100, M4: Delays 3 trips delayed"
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -139,41 +149,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Enjoy the price of a doner in Galway Ireland. Was in Ireland last week, appalled by the price. Also this is from a sub par place that is only frequented by drunk people after a nig"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Abfuhrtermine BSR Berlin?. Restmüll: Verpackungkarton, Cardboard boxes that's bit too much for our tiny Green bin Okay so I have a few questions about how Abfuhrtermine works in Be"
+          "excerpt": "Just stayed cool about it (pun intended). I mean, wasn't comfortable for sure but in the end it were just a few days of heat. Stayed inside, mostly - of course, as a German, withou"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.01,
+        "source_item_count": 111,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-09T01:55:30.294Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-10-09T08:47:48.548Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 65,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -187,27 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "Why does nobody smile back?. Or is it just that I am not good looking enough? Just moved 2 weeks ago and have been trying to get out more. And I mean I want to make new friends and"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "It's Been Silly Hot (in here). My landlord repainted the uninsulated house in which I reside a dark color, and the south-facing wall of my LR behind my desk has been running 97F du"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Most people i know here set up a policy after their 1st surprise bill like this. new injuries, anything from cuts to broken bones, are standard in the fetch and nationwide plans, s"
+          "excerpt": "$200 million economic impact for SF, charities donated to, city is packed with people for it"
         },
         {
           "source_family": "public",
@@ -215,37 +201,53 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "If I Can Only Visit One Bakery.... Much to my chagrin, I don't quite think I'll be able to hit as many bakeries as I'd like to since I'm only there for two days. This sub/the inter"
+          "excerpt": "A short letter to the marketing teams of Ai and gambling companies. The planes you hire in order to fly your banners day in and day out, are not quirky and fun. They are obnoxious "
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "review",
+          "source_origin": "maps_review",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Good point. I've been using them for 3+ years. They moved with me from a 1 bedroom to a 3 bedroom and the length of time didn't change. At this point it's been almost 2 years in th"
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 0.72,
+          "excerpt": "S.F.’s microclimates bring relief as heat grips much of the Bay Area - San Francisco Chronicle. S.F.’s microclimates bring relief as heat grips much of the Bay Area"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "BART reports major delays due to equipment problem in San Francisco - NBC Bay Area. BART reports major delays due to equipment problem in San Francisco"
         }
       ],
       "metadata": {
-        "source_item_count": 131,
-        "average_valence": 0.016,
+        "source_item_count": 88,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.825
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-09T01:55:30.294Z",
+      "captured_at": "2026-10-09T08:47:48.548Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 41,
+        "public": 42,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -262,18 +264,18 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Laws exist for vehicles that exceed noise ordinances; they're just not enforced enough. You probably already know some motorcycles are modified after inspections to be louder as we"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
           "language": "es",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Como alguien que vive con las ventanas abiertas y molestado por motos grandes delante del Hospital Clinic, dueño de una moto eléctrico Slience: - a favor del primero. La policía de"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Laws exist for vehicles that exceed noise ordinances; they're just not enforced enough. You probably already know some motorcycles are modified after inspections to be louder as we"
         },
         {
           "source_family": "signals",
@@ -289,7 +291,7 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Els Bonus Consum per gastar 10 € a mercats i botigues de barri es podran demanar ja el 13 d’octubre"
+          "excerpt": "La nova norma fixa que l’edat mínima per als conductors de patinets elèctrics i altres vehicles de mobilitat és de 15 anys."
         },
         {
           "source_family": "public",
@@ -297,18 +299,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "TMB rectifica la parada de bus que deixava els veïns a la intempèrie i els turistes a cobert"
+          "excerpt": "Els Bonus Consum per gastar 10 € a mercats i botigues de barri es podran demanar ja el 13 d’octubre"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
+        "source_item_count": 108,
         "average_valence": -0.02,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.872
       }
     }
   ]
