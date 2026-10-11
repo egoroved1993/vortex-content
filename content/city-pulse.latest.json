@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-11T17:57:53.572Z",
+    "capturedAt": "2026-10-11T21:47:42.809Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 404
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-11T17:57:53.572Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-10-11T21:47:42.809Z",
+      "mood_score": 0.466,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to an earlier customer incident. Tickets are being accepted on London Buses."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,45 +70,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Lioness: Minor Delays Lioness Line: Minor delays due to an earlier customer incident at Willesden Junction."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Suffragette: Part Closure SUFFRAGETTE LINE: Sunday 11 October, between 0845 and 2300, no service between Barking and Barking Riverside, please use"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Windrush: Part Closure WINDRUSH LINE: Sunday 11 October, no service between Wandsworth Road and Clapham Junction. Trains are diverted to/from B"
         }
       ],
       "metadata": {
-        "source_item_count": 86,
-        "average_valence": -0.081,
+        "source_item_count": 84,
+        "average_valence": -0.099,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.821
+        "freshness_score": 0.816
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-11T17:57:53.572Z",
-      "mood_score": 0.298,
+      "captured_at": "2026-10-11T21:47:42.809Z",
+      "mood_score": 0.301,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 7,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Anyone else making extra income outside teaching in Berlin. Six years in and my salary barely covers rent and basics anymore. I started looking for small side projects that could f"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -153,28 +145,36 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "An Inconvenient Truth. In this opinion piece for the Tablet magazine released on the 19th of March 2024, disgraced ex-spy Chief of the BND, August Hanning, who earlier this week wa"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Once my easyJet flight arrived in Berlin just before midnight and got parked away from the terminal. We had to wait for 45 mn on the plane before stairs and buses got sent to us. A"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": -0.005,
+        "source_item_count": 109,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.861
+        "freshness_score": 0.853
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-11T17:57:53.572Z",
+      "captured_at": "2026-10-11T21:47:42.809Z",
       "mood_score": 0.505,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 48,
+        "public": 42,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +186,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "If you’re not making enough to rent a studio or 1br, then you’ll probably need to live with roommates. That being said, if you limit your expenses, you can live well on a sub $100k"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -200,7 +208,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I went there once before I could really appreciate a damn good burger. Went as a kid and ordered well-done, he kinda judged me for it lol. Anyways, Beep's is great, Whiz was good w"
+          "excerpt": "I saw and heard fleet week from the 30s avenues and Taraval, there’s a good chance you will see and hear fleet week a mile west at Ocean Beach."
         },
         {
           "source_family": "public",
@@ -217,31 +225,23 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "clubs that have music i want to dance to. hello… after scrolling this question on google, reddit, instagram and tiktok… can someone please tell me where i should go based off of th"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I rode my bike from Castro valley to San Leandro marina!. I was wondering what would be another good hike route for videos and just to adventure out in the BayArea!! I’m documentin"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
+        "source_item_count": 108,
         "average_valence": 0.015,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.853
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-11T17:57:53.572Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-10-11T21:47:42.809Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -277,39 +277,39 @@
           "excerpt": "I mean, it is quite natural that a rent should be cheaper than a mortgage, as a mortgage is for a very long term investment"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "ca",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "És la 4rta persona que escriure amb els budells plens d'odi. Necessita més calma i pau en el seu cor. I potser entendrà el problema que viuen les persones. Li recomnao molt \\^\\^."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "No se piden pisos en eixample gratis. Se piden precios razonables en los barrios. Yo tuve que irme del barrio donde viví 28 años hace 7, a otra ciudad a 400km, dejando detrás a ami"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "La pressió turística força veïns dels barris més massificats a modificar els horaris i rutines"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Podeu ajudar per l'acampada pel dret de l'habitatge. Bon dia a tothom, L'acampada pel dret de l'habitatge porta dies manifestant-se a Plaça Catalunya i fent una crida a què la vida"
         }
       ],
       "metadata": {
         "source_item_count": 103,
-        "average_valence": -0.008,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.841
       }
     }
   ]
