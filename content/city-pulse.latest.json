@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-13T09:12:14.047Z",
+    "capturedAt": "2026-10-13T17:28:48.519Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 399
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-13T09:12:14.047Z",
-      "mood_score": 0.373,
+      "captured_at": "2026-10-13T17:28:48.519Z",
+      "mood_score": 0.377,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 4,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Haina"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Severe delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Haina"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier trespasser on the track at Snaresbrook. Tickets are being accepted on Lond"
         },
         {
           "source_family": "transport",
@@ -62,45 +62,120 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe Delays while we fix a signal failure at Canary Wharf. Tickets will be accepted on London Buses, Lon"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Tube strike fears as RMT sets deadline to London transport chiefs on 4-day week row - London Evening Standard. Tube strike fears as RMT sets deadline to London transport chiefs on "
+          "recency_weight": 1.04,
+          "excerpt": "It's pretty clear. 9am to 9pm you can park for 15 min. 9pm to 9am parking is for loading only. Loading bays are reserved for the active, continuous loading or unloading of heavy or"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I think your biggest stumbling block might be the 11am start, most pubs in central seem to open at 12pm? The Miller on Snowsfield lets you book their room (not gothic, but you can "
         }
       ],
       "metadata": {
-        "source_item_count": 73,
-        "average_valence": -0.08,
+        "source_item_count": 87,
+        "average_valence": -0.069,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.773
+        "freshness_score": 0.833
+      }
+    },
+    {
+      "city_id": "berlin",
+      "captured_at": "2026-10-13T17:28:48.519Z",
+      "mood_score": 0.446,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "public": 8,
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 50,
+        "nightlife": 40,
+        "trends": 8,
+        "transport": 2,
+        "weather": 1
+      },
+      "languages": [
+        "de",
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S3, 100: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Loud noise heard near Naturkunde museum UBahn stop. is it just me or did anybody else hear this loud explosion-like noise in the area near Naturkunde museum UBahn stop? then the si"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Heisenmieter - Pilot Episode. It was easier to make this video (with AI) than it is to find a flat here. If you have an old contract available, if possible in fhain, please, reach "
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        }
+      ],
+      "metadata": {
+        "source_item_count": 116,
+        "average_valence": -0.012,
+        "dominant_themes": [
+          "general",
+          "routine",
+          "events"
+        ],
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-13T09:12:14.047Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-10-13T17:28:48.519Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 46,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -116,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "Again, it's difficult to move on a fully crowded bus or train and the dog may actually be in the way. There isn't always an easy way out."
+          "excerpt": "Everybody will tell you Groups and Activities. Go find meetup groups or discord groups that do what you like. Making new friends in general is kind of tricky past the age of 30 bec"
         },
         {
           "source_family": "public",
@@ -127,6 +202,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "What can SF learn from NYC on housing?. It seems like both cities have limited housing, rent control laws, high rents. But I don't hear as much about NYC housing as SF. Is there so"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "If you’ve lived there for 6 months when the master tenant vacates you can become the master tenant without any rent increase. Can you get on the lease as a roommate?"
         },
         {
           "source_family": "public",
@@ -143,36 +226,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Stop bringing the most aggressive dog breeds on a fully crowded bus or train!. Especially the small ones. You know it's only a matter of time until someone will step on them by acc"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I was mauled by a stranger’s off leash pit bull in SF and sent to the hospital. I HATE being trapped with them in a small space like the muni. I was on a crowded bus not too long a"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.031,
+        "source_item_count": 112,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-13T09:12:14.047Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-10-13T17:28:48.519Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 35,
+        "public": 33,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -195,22 +270,6 @@
           "excerpt": "Bills are cheaper in Spain unlike the UK. My ex landlady pays something like €120 per month all bills. It doesn’t justify €4000 rent"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Si no te puedes permitir vivir ahí tendrás que hacer como todo el puto mundo ha hecho siempre, irte donde te lo puedas pagar y con el tiempo suficiente irás progresando y acercándo"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Acercando... Como?? Si vivo en un sitio en el culo del mundo y trabajo en Barcelona, el año que viene los pisos de alquiler subieron 10% y mi salario 5% o 0%. Como demonios debo po"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -224,91 +283,34 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "La pressió turística força veïns dels barris més massificats a modificar els horaris i rutines"
+          "excerpt": "Sense finançament ni català a Europa i amb dubtes sobre Rodalies: els impactes per a Catalunya d'avançar les eleccions"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Els ciutadans dels EUA representen l'1,76 % de tots els estrangers que viuen a la ciutat. Estadísticament, no és gaire rellevant per queixar-se'n."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Més Madrid proposa que Ada Colau sigui la candidata del nou Front Ampli a les eleccions del 29-N, com a cap de llista per Barcelona"
         }
       ],
       "metadata": {
-        "source_item_count": 101,
-        "average_valence": -0.03,
+        "source_item_count": 99,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.832
-      }
-    },
-    {
-      "city_id": "berlin",
-      "captured_at": "2026-10-13T09:12:14.047Z",
-      "mood_score": 0.449,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 50,
-        "nightlife": 40,
-        "trends": 8,
-        "weather": 1
-      },
-      "languages": [
-        "de",
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "review",
-          "source_origin": "maps_review",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
-        },
-        {
-          "source_family": "review",
-          "source_origin": "city_guide_snippet",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
-        },
-        {
-          "source_family": "forum",
-          "source_origin": "local_forum",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "When you knew you were actually living here. Neukölln. When I saw a guy selling handmade strudel out of a bicycle cart on Karl-Marx-Straße at 2 AM, I thought, 'Yep, this is home.'"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.004,
-        "dominant_themes": [
-          "general",
-          "routine",
-          "events"
-        ],
-        "freshness_score": 0.85
+        "freshness_score": 0.829
       }
     }
   ]
