@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-12T18:54:21.851Z",
+    "capturedAt": "2026-10-13T01:12:39.451Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 416
+    "totalItems": 414
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-12T18:54:21.851Z",
-      "mood_score": 0.43,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-10-13T01:12:39.451Z",
+      "mood_score": 0.382,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 18,
         "review": 2,
@@ -33,21 +33,12 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/West Ruislip and between Leyton and Epping/Hainault v"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -63,6 +54,14 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "‘First let's address the phenomenally expensive elephant in the room. Vinyl has risen in price dramatically in recent years, with Discogs' Marketplace analysis finding that the ave"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "local_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Court system under massive strain, warns Met chief. Court delays are leaving victims waiting years for justice and suspects on bail, says Sir Mark Rowley."
         },
         {
           "source_family": "public",
@@ -82,20 +81,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 85,
-        "average_valence": -0.058,
+        "source_item_count": 84,
+        "average_valence": -0.052,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.81
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-12T18:54:21.851Z",
-      "mood_score": 0.502,
+      "captured_at": "2026-10-13T01:12:39.451Z",
+      "mood_score": 0.455,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +106,6 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +113,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 100, M4: Delays 2 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -154,22 +144,30 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.007,
+        "source_item_count": 117,
+        "average_valence": 0.014,
         "dominant_themes": [
           "general",
           "routine",
           "belonging"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.866
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-12T18:54:21.851Z",
+      "captured_at": "2026-10-13T01:12:39.451Z",
       "mood_score": 0.504,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -196,14 +194,6 @@
           "excerpt": "Yeah that’s fine! It’s a bit crowded and chaotic but overall safe. Super close to public transit so you can move around the city quite easily with minimal hassle."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Lurie wants to solve SF's rent crisis. It could be impossible. - SFGATE. Lurie wants to solve SF's rent crisis. It could be impossible."
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
@@ -226,6 +216,14 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "clubs that have music i want to dance to. hello… after scrolling this question on google, reddit, instagram and tiktok… can someone please tell me where i should go based off of th"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "or you can just have a good time at a bar making friends and not make sexual advances or signaling outside your marriage? fuck is wrong with you"
         }
       ],
       "metadata": {
@@ -236,13 +234,13 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-12T18:54:21.851Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-10-13T01:12:39.451Z",
+      "mood_score": 0.488,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -310,7 +308,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.838
       }
     }
   ]
