@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-15T18:10:33.072Z",
+    "capturedAt": "2026-10-15T22:05:23.529Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 442
+    "totalItems": 446
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-15T18:10:33.072Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-10-15T22:05:23.529Z",
+      "mood_score": 0.477,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Hammersmith & City: Severe Delays Hammersmith and City Line: Severe delays due to train cancellations. Tickets being accepted by London Buses, DLR, Elizab"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: Severe delays due to earlier points failures at North Greenwich and Canary Wharf. Tickets will be accepted"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier points failure at Camden Town. All southbound trains from High Barnet will"
         },
         {
           "source_family": "transport",
@@ -65,37 +73,29 @@
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "And you said your comments weren't being removed by moderators, which they clearly are. If I had to guess why it's, it's probably because you're inappropriately abusing the report "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "What do you mean. Do I remove nike logo from my shoes? Or I ask kfc to be packed in a general brown bag. You cannot runaway from this madness, everything is an ad. Not just crap a "
+          "recency_weight": 1.08,
+          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 12, Tuesday 13, Wednesday 14 and Thursday 15 October, after 2245 each evening, no service between Ha"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.045,
+        "source_item_count": 96,
+        "average_valence": -0.068,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-15T18:10:33.072Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-10-15T22:05:23.529Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,6 +107,7 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, S9: Delays 2 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,19 +154,11 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "In case you wanted to visit every single Döner place in Berlin. I saw this post on all pizza places in Italy I though I would do the same for Berlin! 856 döner shops, 576 km, 14 ho"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.017,
+        "source_item_count": 119,
+        "average_valence": -0.024,
         "dominant_themes": [
           "general",
           "routine",
@@ -168,8 +169,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-15T18:10:33.072Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-10-15T22:05:23.529Z",
+      "mood_score": 0.454,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -178,7 +179,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -228,19 +229,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.021,
+        "source_item_count": 126,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-15T18:10:33.072Z",
+      "captured_at": "2026-10-15T22:05:23.529Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 105,
-        "average_valence": -0.014,
+        "average_valence": -0.013,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.854
       }
     }
   ]
