@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-16T12:16:36.542Z",
+    "capturedAt": "2026-10-16T17:16:43.753Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 431
+    "totalItems": 433
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-16T12:16:36.542Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-10-16T17:16:43.753Z",
+      "mood_score": 0.428,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 20,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping/Hainault via Newbury Park and MINOR DELAYS between White City"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays clockwise only while we fix a faulty train at Farringdon."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Minor delays between Whitechapel and Shenfield due to an earlier trespasser on the track in the Chadwell Heath area. GOO"
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays eastbound only while we fix a faulty train at Farringdon."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to an earlier fault with the overhead power lines at Hackney Central."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to an earlier fire alert at King's Cross St. Pancras. Tickets are being accepted on Lon"
         },
         {
           "source_family": "public",
@@ -62,51 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "An even more expensive tier than the current max tier... and not for SIM only. Really leaves a bad taste in my mouth."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Well, duh. I work in London Bridge and mostly have full bars but good luck getting anything through. UK is very very behind on this front."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Jerk in the UK is REALLY bad At best you’ll get barbecued chicken with jerk sauce at worst it doesn’t resemble jerk whatsoever. And don’t get me started on how it’s nearly impossib"
+          "excerpt": "Kids are dicks on the bus and the driver is tired of dealing with them. The fact they had to announce they had a way to pay this time shows they regularly don’t."
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.027,
+        "source_item_count": 93,
+        "average_valence": -0.066,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-16T12:16:36.542Z",
+      "captured_at": "2026-10-16T17:16:43.753Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Loud noise heard near Naturkunde museum UBahn stop. is it just me or did anybody else hear this loud explosion-like noise in the area near Naturkunde museum UBahn stop? then the si"
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200, 100, U8, S3, 248: Delays 12 trips delayed"
         },
         {
           "source_family": "public",
@@ -148,37 +149,37 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Old A I train on the U4 on sunday!. On sunday, october 18th there will be rides with a historic A I train on the U4 between 12 and 16:00. The train stops at every station on the wa"
+          "excerpt": "A taxi also has some obligations what makes the \"public transportation\" in my opinion. For example they have to transport every customer like a bus (if it is safe of course). An Ub"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
+        "source_item_count": 116,
         "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "transit"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-16T12:16:36.542Z",
-      "mood_score": 0.411,
+      "captured_at": "2026-10-16T17:16:43.753Z",
+      "mood_score": 0.412,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 55,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -204,14 +205,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Honestly I used to visit SF every year, but the last two years I haven’t been able to come because hotels are too expensive. Expensive hotels pretty much wipe out the budget for ev"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -224,29 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "They want to add hours to traffic just to \"save\" $7 a month. Gas will be much more expensive than that. Plus having to lose time in the mornings and afternoon sitting in extra traf"
+          "excerpt": "I work in ICU too. Step 8 and I can’t still afford to rent in SF. If it eats 30% of my payslip, it’s a no and I do not think it’s financially responsible to pay more than that. I a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The back room at El Farolito on Mission around 10pm on a Tuesday is surprisingly quiet, weirdly so. The tiles are old and somehow they eat the noise instead of bounce it Weekends t"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.026,
+        "source_item_count": 123,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "money"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-16T12:16:36.542Z",
+      "captured_at": "2026-10-16T17:16:43.753Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 34,
+        "public": 35,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,7 +303,7 @@
         }
       ],
       "metadata": {
-        "source_item_count": 100,
+        "source_item_count": 101,
         "average_valence": -0.014,
         "dominant_themes": [
           "general",
