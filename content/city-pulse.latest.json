@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-17T16:17:38.695Z",
+    "capturedAt": "2026-10-17T19:10:56.861Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 440
+    "totalItems": 449
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-17T16:17:38.695Z",
-      "mood_score": 0.368,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-10-17T19:10:56.861Z",
+      "mood_score": 0.465,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 19,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -71,36 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 17, from 0100, and all day Sunday 18 October, including Friday and Saturday Night Tube, no ser"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to train cancellations. Tickets will be accepted on London Buses, Weaver line, Suffrage"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.093,
+        "source_item_count": 94,
+        "average_valence": -0.102,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-17T16:17:38.695Z",
+      "captured_at": "2026-10-17T19:10:56.861Z",
       "mood_score": 0.453,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 16,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -156,25 +156,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 122,
+        "source_item_count": 123,
         "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.881
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-17T16:17:38.695Z",
-      "mood_score": 0.384,
+      "captured_at": "2026-10-17T19:10:56.861Z",
+      "mood_score": 0.381,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 53,
+        "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,9 +198,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If you can get your girlfriend to ride BART with you at 6:00 in the morning, you've got a good one."
+          "excerpt": "It’s probably the late hour but your line, “I wear my cute clothes under my homeless clothes…” And I burst out laughing! Thanks for that. PS Wait until you’re over 50, you’ll be in"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "$200 is gonna be rough. Keep in mind you’re not just paying for the time they’re helping, you’re paying for the time and gas it takes to get to you. Most people taking you up on yo"
         },
         {
           "source_family": "public",
@@ -208,7 +216,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Why are people attached to cities it's just land. Most studies show that people are happy with like five good friends and that's it. I think it's status Symbol, I live in SF and I "
+          "excerpt": "obviously it's good to gauge if u think they will be violent or aggressive after this but my favorite move is to point and yell this man is harassing me. 1. it alerts other women a"
         },
         {
           "source_family": "public",
@@ -216,37 +224,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "If you vote no on D, don’t complain about how long our ballot is. Re: efficiency and comp, I always think of Boston as a good comp rather than NYC. In geographic and population siz"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Housing help. moving from nyc to sf. thought housing would be easier then new york but boy was i wrong!! 😅😅 question for the residents…what streets are considered to no longer be"
+          "excerpt": "They do, but not as much as BART is spending on their overall budget. Most of their money is going to waste and abuse rather than maintaining the system and contributing to making "
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": 0.011,
+        "source_item_count": 127,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-17T16:17:38.695Z",
+      "captured_at": "2026-10-17T19:10:56.861Z",
       "mood_score": 0.45,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 40,
+        "public": 39,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,7 +302,7 @@
         }
       ],
       "metadata": {
-        "source_item_count": 106,
+        "source_item_count": 105,
         "average_valence": 0,
         "dominant_themes": [
           "general",
