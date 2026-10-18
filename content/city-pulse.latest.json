@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-18T00:48:43.484Z",
+    "capturedAt": "2026-10-18T05:39:37.631Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 449
+    "totalItems": 439
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-18T00:48:43.484Z",
-      "mood_score": 0.434,
+      "captured_at": "2026-10-18T05:39:37.631Z",
+      "mood_score": 0.418,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 29,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -54,6 +54,14 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 18 October, until 1115, no service between Gospel Oak and Stratford. Replacement bus service S oper"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Piccadilly: Part Closure PICCADILLY LINE: Saturday 17, from 0100, and all day Sunday 18 October, including Friday and Saturday Night Tube, no ser"
         },
         {
@@ -62,52 +70,43 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Saturday 17 and Sunday 18 October, no service between Edmonton Green and Cheshunt. Replacement bus service"
+          "excerpt": "London transit Suffragette: Part Closure SUFFRAGETTE LINE: Sunday 18 October, no service between Barking and Barking Riverside, please use local London Buses ser"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "It was cool when it first opened. But back then you actually did have to work in media/creative industries so was a bit different? And genuinely useful as you could actually get se"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What kind of places do you mean? The reason I ask is because I haven’t encountered this at any of the 4 different ones I’ve been to in the past couple weeks."
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.046,
+        "source_item_count": 97,
+        "average_valence": -0.095,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.858
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-18T00:48:43.484Z",
-      "mood_score": 0.396,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-10-18T05:39:37.631Z",
+      "mood_score": 0.499,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 7,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -154,28 +145,36 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Reichstag dome is underrated attraction. Most tourists who visit Berlin miss this but I feel Reichstag building has one of best views for city and sunset. And it's free!"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "In 2024 24 pedestrians died from road accidents. Whether or not you think that is a lot is your own opinion. I would assume you would say it’s not as you sound like a bit of a dick"
         }
       ],
       "metadata": {
         "source_item_count": 114,
-        "average_valence": -0.012,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.876
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-18T00:48:43.484Z",
-      "mood_score": 0.378,
+      "captured_at": "2026-10-18T05:39:37.631Z",
+      "mood_score": 0.39,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 64,
+        "public": 54,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -199,55 +198,55 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "You realize \"rent free in your head\" is only applicable if someone is obsessed with something that doesn't actually impact them in any meaningful way, right? Like, if a bully were "
+          "excerpt": "I moved to SF in the early 90s and my priorities were record stores, really good cheap food, indie and punk shows, cheap rent, and living without a car. Pretty much none of that st"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Stressing new 'resident'. Hi there san fran reddit community, my younger sister (18) just temporarily relocated to your wonderful area for some schooling. She's not used to big are"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Report it and if they raise your rent on renewal or refuse to renew, report them to the rent regulator agencies. That’s retaliation"
+          "excerpt": "Good question. While I can write a novel about this, the cost is insane and only tech and old money can exist with a decent life. It’s insane that the older generations haven’t pre"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Will always take BART if flight is late enough in the morning. Sucks that BART doesn’t have super early trains to catch 6am flights. Don’t know why it took me so long to figure out"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "In a crowded cafe if you see an empty seat at a table you ask the other people sitting at the table if you can use the seat. At least that used to be part of San Francisco cafe cul"
+          "excerpt": "There is a big difference between people who moved here 3-10 years ago, and people trying to move here today. The housing market is not the same. Rentals will be hard to find, and "
         }
       ],
       "metadata": {
-        "source_item_count": 130,
-        "average_valence": -0.005,
+        "source_item_count": 120,
+        "average_valence": 0.03,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-18T00:48:43.484Z",
+      "captured_at": "2026-10-18T05:39:37.631Z",
       "mood_score": 0.4,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 41,
+        "public": 42,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -291,26 +290,26 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Joan Teixidó, 81 anys, sobre compartir pis amb cinc persones més: \"Aquí tinc la meva habitació, la meva independència i sempre hi ha algú amb qui parlar\""
+          "excerpt": "Les persones de l'acampada de Plaça Catalunya són bona gent i les podem ajudar.. Bon dia a tothom, Avui he anat un parell de vegades. He preguntat que necessitaven i m'han dit aigu"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Has llegit l'article? No s'oposen al projecte sense raons. Es queixen que el projecte original dedicava més m2 a equipaments públics i menys a oficines privades, que la versió actu"
+          "excerpt": "Joan Teixidó, 81 anys, sobre compartir pis amb cinc persones més: \"Aquí tinc la meva habitació, la meva independència i sempre hi ha algú amb qui parlar\""
         }
       ],
       "metadata": {
-        "source_item_count": 107,
+        "source_item_count": 108,
         "average_valence": 0,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.847
       }
     }
   ]
