@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-18T05:39:37.631Z",
+    "capturedAt": "2026-10-18T10:47:05.650Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 439
+    "totalItems": 456
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-18T05:39:37.631Z",
-      "mood_score": 0.418,
+      "captured_at": "2026-10-18T10:47:05.650Z",
+      "mood_score": 0.422,
       "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to train cancellations. Tickets will be accepted on London Buses, Lioness Line, London"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -54,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 18 October, until 1115, no service between Gospel Oak and Stratford. Replacement bus service S oper"
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -71,36 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Suffragette: Part Closure SUFFRAGETTE LINE: Sunday 18 October, no service between Barking and Barking Riverside, please use local London Buses ser"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.095,
+        "source_item_count": 95,
+        "average_valence": -0.083,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-18T05:39:37.631Z",
-      "mood_score": 0.499,
+      "captured_at": "2026-10-18T10:47:05.650Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 8,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -114,6 +114,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Next time you're in this situation contact your landlord if you're renting a place and let them solve this. To ask for a service in Germany is super expensive during weekends and I"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -145,36 +153,28 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Reichstag dome is underrated attraction. Most tourists who visit Berlin miss this but I feel Reichstag building has one of best views for city and sunset. And it's free!"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "In 2024 24 pedestrians died from road accidents. Whether or not you think that is a lot is your own opinion. I would assume you would say it’s not as you sound like a bit of a dick"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": -0.004,
+        "source_item_count": 123,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-18T05:39:37.631Z",
-      "mood_score": 0.39,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-10-18T10:47:05.650Z",
+      "mood_score": 0.499,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 64,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,9 +198,25 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Not sure, but I remember seeing Sbarro in every shopping center when I was growing up in the Bay Area in the late 90s to early 2010s."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "SFO -> Singapore It's about 16 hours I think.... Then about an hour and a half or so to Jakarta from there. The best way to do it is to leave SFO late at night...10pm to midnight i"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I moved to SF in the early 90s and my priorities were record stores, really good cheap food, indie and punk shows, cheap rent, and living without a car. Pretty much none of that st"
+          "excerpt": "I’m actively saving up for a business class flight overseas, it’s gonna take me a couple years to bank that kind of money, but it’ll be worth it for the reasons the other comment s"
         },
         {
           "source_family": "public",
@@ -209,41 +225,25 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Stressing new 'resident'. Hi there san fran reddit community, my younger sister (18) just temporarily relocated to your wonderful area for some schooling. She's not used to big are"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good question. While I can write a novel about this, the cost is insane and only tech and old money can exist with a decent life. It’s insane that the older generations haven’t pre"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "There is a big difference between people who moved here 3-10 years ago, and people trying to move here today. The housing market is not the same. Rentals will be hard to find, and "
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.03,
+        "source_item_count": 130,
+        "average_valence": -0.002,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-18T05:39:37.631Z",
-      "mood_score": 0.4,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "captured_at": "2026-10-18T10:47:05.650Z",
+      "mood_score": 0.39,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 42,
@@ -263,51 +263,51 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I agree with what you say, but I think you still have to consider the consequences of increasing the risk for landlords What happens if the risk in an investment goes up? It pays m"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I don't think he alluded to Squatters. The main problem is people who don't pay rent, can take up to 3 years or more to be evicted. This is not uncommon and is unsustainable for a "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "La gente que lo celebra, no entiende que sólo servirá para que aumenten ligeramente los precios del alquiler turístico y que el ayuntamiento recaude aún más dinero que utilizará co"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I am not talking about squatters. I mean people who fail to pay rent and if the owners want to evict them it should be the owners right. They should negotiate a time and find somew"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "es",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Es algo complicado de explicar. Tienes que ir y tomar un buen café por tu cuenta Mi pareja siempre tomaba el típico café con leche y azúcar en casa. Probamos varios cafés hasta ver"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "El Ple dona llum verda a l'IBI més alt de la història per als pisos turístics"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Les persones de l'acampada de Plaça Catalunya són bona gent i les podem ajudar.. Bon dia a tothom, Avui he anat un parell de vegades. He preguntat que necessitaven i m'han dit aigu"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Joan Teixidó, 81 anys, sobre compartir pis amb cinc persones més: \"Aquí tinc la meva habitació, la meva independència i sempre hi ha algú amb qui parlar\""
+          "excerpt": "El momento que empiezas a beber mejor café y bien hecho ya empezarás a saber cuando sale mal. El problema es q la gente no ha probado algo más que un café quemado a 1.50€"
         }
       ],
       "metadata": {
         "source_item_count": 108,
-        "average_valence": 0,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "money"
         ],
         "freshness_score": 0.847
       }
