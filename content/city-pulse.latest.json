@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-19T01:02:12.686Z",
+    "capturedAt": "2026-10-19T06:09:23.638Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 447
+    "totalItems": 435
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-19T01:02:12.686Z",
-      "mood_score": 0.389,
+      "captured_at": "2026-10-19T06:09:23.638Z",
+      "mood_score": 0.39,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -40,12 +41,36 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Barking and Upminster eastbound only due to an earlier faulty train at Mile End. GO"
+        },
+        {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Just got paid but got a lot of expenses this month, so just trying to work out how much fun I can have on my week off this week. I wanted to go to London, it's only two hours from "
+          "excerpt": "Which cities in the UK are best for alternative/geek culture and affordable rent prices?. Hello all, what are the best vibrant cities to live in UK if you like alternative and scen"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Those problems get reported at all these cinemas (especially the Odeon Luxes and the BFI IMAX). But yeah I go to the cinema 100+ times a year and very very rarely get any kind of d"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Plenty of men get treated like creeps for saying hello to women that they don’t know. It mostly boils down to physical attraction. If they’re attractive to a woman = manly. Not att"
         },
         {
           "source_family": "signals",
@@ -54,47 +79,23 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "East London NHS trust workers balloted over strike action - Healthcare Management Magazine. East London NHS trust workers balloted over strike action"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Hundreds of low-paid London NHS workers to strike - Unite the Union. Hundreds of low-paid London NHS workers to strike"
         }
       ],
       "metadata": {
-        "source_item_count": 83,
-        "average_valence": -0.033,
+        "source_item_count": 88,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.813
+        "freshness_score": 0.828
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-19T01:02:12.686Z",
-      "mood_score": 0.496,
+      "captured_at": "2026-10-19T06:09:23.638Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -114,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -148,33 +141,41 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Why not? Imo just judging by this picture the guy on the opposite side sits 100% appropriately. I see space people can pass through still, train isn't crowned. Seats have an absolu"
+          "excerpt": "I don't have 6k in my bank account. Did anyone successfully manage to get a job seeker visa without a 6k balance in Munich? I have submitted all of my documents and am currently an"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Non-tourist tips for Berlin. I have been to Berlin a few times. Done the usual stuff, but also a nuclear bunker tour and a bmw factory tour. Any other tips to explore Berlin? Weird"
         }
       ],
       "metadata": {
         "source_item_count": 115,
-        "average_valence": -0.011,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-19T01:02:12.686Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-10-19T06:09:23.638Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 75,
+        "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +193,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "While Pandora is the usual go-to for most folks (it's not bad in my opinion), my favorite spot is actually right next to Dimple, called Pagoda. Always a fun experience, but it does"
+          "excerpt": "Fisherman’s wharf is like a San Francisco movie set. It can be fun to explore for a little bit, but no one from the city actually lives there or goes there. The “sketchy” areas of "
         },
         {
           "source_family": "public",
@@ -200,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I moved to SF with 20k in the bank and no job. I had 3 roommates, and low rent ($1500/mo). The first week, I walked into restaurants around the city with my resume and asked who wa"
+          "excerpt": "If you look at the numbers, between PG&E emerging from bankruptcy in 2004 and emerging again in 2020, investors made an annual loss of around 2.8% annually for the duration of that"
         },
         {
           "source_family": "public",
@@ -216,37 +217,37 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Stressing new 'resident'. Hi there san fran reddit community, my younger sister (18) just temporarily relocated to your wonderful area for some schooling. She's not used to big are"
+          "excerpt": "SF surprised me. Day 2 of a 3 day visit. We’re from a small town in NC, and I had more than a little concern about visiting SF. Good news about big cities anywhere is hard to find,"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "There aren't really any places with patio or outdoor dancing at all here, like berlin im the summer. And the city makes it hard to have parties in the park or the beach (opposite o"
+          "excerpt": "soil, planters and pots?. got a good deal on some plant cuttings and bought 3, theyre in a rudimentary pot and some soil. But how do i get/buy more soil for them, planters and pots"
         }
       ],
       "metadata": {
-        "source_item_count": 141,
-        "average_valence": 0.021,
+        "source_item_count": 118,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
-          "belonging",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-19T01:02:12.686Z",
-      "mood_score": 0.338,
+      "captured_at": "2026-10-19T06:09:23.638Z",
+      "mood_score": 0.341,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 42,
+        "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -271,14 +272,6 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Expropien pisos buitres para que nadie quiera construir. Y dejar el alquiler a 200 para que nadie quiera alquilar. La izquierda, como siempre, tan inteligente"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
@@ -299,17 +292,25 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Ivan Giesen, de 69 anys, amenaçat de desnonament al pis de Barcelona on viu des de fa 27 anys: ''Continuo treballant i el lloguer s'endú més del 50% dels meus ingressos''"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.034,
+        "source_item_count": 114,
+        "average_valence": -0.025,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.849
+        "freshness_score": 0.858
       }
     }
   ]
