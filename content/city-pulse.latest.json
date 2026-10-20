@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-19T20:31:27.492Z",
+    "capturedAt": "2026-10-20T00:16:49.862Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,23 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 440
+    "totalItems": 437
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-19T20:31:27.492Z",
-      "mood_score": 0.382,
+      "captured_at": "2026-10-20T00:16:49.862Z",
+      "mood_score": 0.329,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -40,20 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "A few weeks start to finish for my two. And that’s because of delays getting confirmation from the landlord they were fine with it. After the telephone interview it was a couple of"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Does Greggs and Wetherspoons serve decaf coffee?. Seriously, it seems like zero kick at all from their coffee. Costa is best for me, Nero too. Starbucks and McDonalds are OK. But W"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Highbury & Islington and Stratford due to a faulty freight train at Hackney Central. Lo"
         },
         {
           "source_family": "news",
@@ -81,100 +82,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.054,
+        "source_item_count": 94,
+        "average_valence": -0.061,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.856
-      }
-    },
-    {
-      "city_id": "berlin",
-      "captured_at": "2026-10-19T20:31:27.492Z",
-      "mood_score": 0.496,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
-      "source_counts": {
-        "public": 9,
-        "review": 2,
-        "forum": 4,
-        "signals": 1,
-        "news": 50,
-        "nightlife": 40,
-        "trends": 8,
-        "transport": 1,
-        "weather": 1
-      },
-      "languages": [
-        "de",
-        "en"
-      ],
-      "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "You know that thing was/is called the \"Weltballon\" - as in \"Die Welt\" newspaper. It's always been an ad. DVAG is still garbage though (like die Welt)."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Reichstag dome is underrated attraction. Most tourists who visit Berlin miss this but I feel Reichstag building has one of best views for city and sunset. And it's free!"
-        }
-      ],
-      "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.011,
-        "dominant_themes": [
-          "general",
-          "routine",
-          "events"
-        ],
-        "freshness_score": 0.868
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-19T20:31:27.492Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-10-20T00:16:49.862Z",
+      "mood_score": 0.501,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 50,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +118,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I grew up in NYC in the 70s and my mom taught be to walk facing traffic in the street (next to parked cars, for a visual) late at night, holding my keys pointed out of my knuckles."
+          "excerpt": "Not sure about SF but in Daly City there is sometimes garage space people rent out, check on Nextdoor also maybe. The small unit thing works but they still do the price hike after "
         },
         {
           "source_family": "public",
@@ -200,7 +126,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "i’m not gonna lie, gas prices have basically made me stop eating out. i am an artist living and working in the bay area and have a tight budget. with grocery and gas prices going u"
+          "excerpt": "Eh. The London Underground, Tokyo Metro, Hong Kong MTR, Singapore SMRT, among others are actually profitable transit systems and in some cases, wildly so, so it's not like it isn't"
         },
         {
           "source_family": "public",
@@ -208,7 +134,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Most cafes close late afternoon/early evening. SF cafe culture was devastated by our favorite virus. Gotta wonder about the devastation Black Death and successive plague outbreaks "
+          "excerpt": "uhh this doesn't touch on what I said. I said rich people just spend significantly more money on more expensive things than poor people. if you're buying $20k watches and handbags "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "\\> She remembered her dad dealing with shoplifters by giving them the food for free, telling them in his broken English, “When you have money, you give it back.” These are wonderfu"
         },
         {
           "source_family": "public",
@@ -216,37 +150,29 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "haunted stuff. I'm looking for haunted house/neighborhood tours, the kind that are showcasing history blended with ghost stories, alleging real ghosts. They should be located anywh"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Car kind of feels like a posh jail cell. I know I’ve seen articles about how child development improves when they aren’t in a car and actually get to interact with the world, vs ba"
+          "excerpt": "Valencia is a masterclass in designing something to please everyone. And as a result, it’s kind of ass for everyone. \\- sucks to drive. Insane traffic. One person being selfish and"
         }
       ],
       "metadata": {
-        "source_item_count": 116,
-        "average_valence": -0.007,
+        "source_item_count": 121,
+        "average_valence": 0.003,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "belonging",
+          "money"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-19T20:31:27.492Z",
-      "mood_score": 0.346,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-10-20T00:16:49.862Z",
+      "mood_score": 0.494,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -266,7 +192,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "You should buy a property then rent it for €200, see if you can cover any maintenance and expenses like that. I suspect you will cheerfully declare that this is not an issue for yo"
+          "excerpt": "Generous of you to rent for four months with an option for you to move back in 20 years from now."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Yo tengo un piso en alquiler en Barcelona y el mes que viene se me marcha el inquilino, por lo que tengo que buscar otro ahora. Lo tengo alquilado a un 40% menos del precio de merc"
         },
         {
           "source_family": "signals",
@@ -286,30 +220,95 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "El Ple dona llum verda a l'IBI més alt de la història per als pisos turístics"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Les persones de l'acampada de Plaça Catalunya són bona gent i les podem ajudar.. Bon dia a tothom, Avui he anat un parell de vegades. He preguntat que necessitaven i m'han dit aigu"
+          "excerpt": "T'estàs arriscant molt al meu parer volen llogar el pis on vius. Només per 4 mesos de lloguer no penso que et valgui la pena tot el que podria passar en el pitjor dels casos."
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.011,
+        "source_item_count": 116,
+        "average_valence": -0.018,
+        "dominant_themes": [
+          "general",
+          "transit",
+          "money"
+        ],
+        "freshness_score": 0.866
+      }
+    },
+    {
+      "city_id": "berlin",
+      "captured_at": "2026-10-20T00:16:49.862Z",
+      "mood_score": 0.499,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
+      "source_counts": {
+        "review": 2,
+        "forum": 4,
+        "signals": 1,
+        "news": 50,
+        "nightlife": 40,
+        "trends": 8,
+        "weather": 1
+      },
+      "languages": [
+        "de",
+        "en"
+      ],
+      "drivers": [
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "spati. Neukolln. Guy behind the counter clocked that I was having a terrible day and handed me the cold bottle from the back fridge without asking. More emotional intelligence than"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "city_guide_snippet",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "bakery. Prenzlauer Berg. Every table is babies, oat flat whites, and one man correcting someone's German. Efficient way to remember you are either under-rested or overinvested in t"
+        },
+        {
+          "source_family": "forum",
+          "source_origin": "local_forum",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "When you knew you were actually living here. Neukölln. When I saw a guy selling handmade strudel out of a bicycle cart on Karl-Marx-Straße at 2 AM, I thought, 'Yep, this is home.'"
+        }
+      ],
+      "metadata": {
+        "source_item_count": 106,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "events"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.851
       }
     }
   ]
