@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-21T15:07:30.347Z",
+    "capturedAt": "2026-10-21T20:01:48.844Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 450
+    "totalItems": 439
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-21T15:07:30.347Z",
-      "mood_score": 0.273,
+      "captured_at": "2026-10-21T20:01:48.844Z",
+      "mood_score": 0.27,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Harrow & Wealdstone and Stonebridge Park due to an earlier track fault at Kenton. G"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between High Street Kensington and Edgware Road due to an earlier points failure at High S"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to train cancellations. Tickets will be accepted on London Buses, liberty line, Elizabet"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier fire alert in the London Bridge area."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to an earlier faulty train at Highbury & Islington."
         },
         {
           "source_family": "transport",
@@ -63,51 +79,34 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Well, limebike turn a profit and the technology is magically available when it comes to being able to charge people for stuff. I just don’t understand how technology is too expensi"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "No that’s monetary policy funding fiscal policy and spurs hyperinflation. Along with getting us kicked out of the group of high trust high importance central banks. And would absol"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.078,
+        "source_item_count": 89,
+        "average_valence": -0.087,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-21T15:07:30.347Z",
-      "mood_score": 0.399,
-      "mood_label": "low",
+      "captured_at": "2026-10-21T20:01:48.844Z",
+      "mood_score": 0.402,
+      "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 3,
+        "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -141,41 +132,49 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Non-tourist tips for Berlin. I have been to Berlin a few times. Done the usual stuff, but also a nuclear bunker tour and a bmw factory tour. Any other tips to explore Berlin? Weird"
+          "excerpt": "True. I was mainly thinking of regional and long distance trains. Although I think at the S-Bahn in Hamburg (the S-Bahn I've used the most) you have to press a button"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "could the a/c have been working on the U7 today?. Granted a chill & wet day in Neukolln, but this does not fully explain the cold chill on the U7. Was there / is there air-conditio"
+          "excerpt": "Then you are lucky don't know many. I am 60 years in Berlin and know 100s of Currywurst stands since childhood."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Just read the list in the article linked above. After 60 years in Germany, I can tell you that estimated one of two wurst stands charge for extra portion of ketchup or mayonnaise a"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.002,
+        "source_item_count": 113,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.856
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-21T15:07:30.347Z",
-      "mood_score": 0.44,
+      "captured_at": "2026-10-21T20:01:48.844Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 61,
+        "public": 55,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,14 +190,6 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Berkeley is the other side of the bridge, it's still in the same metro area. It's not moving to Cleveland, let alone leaving the country. Until your kid hits elementary school, it'"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Hot take: my gf and I each own our places and could move in together and rent one out. Might be worth trying for a year or something right? Neither of us will do that because of th"
@@ -209,45 +200,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Do you have a friend in the city? They can apply for a visitor permit I’m pretty sure. My landlord got me one when I first moved to the city while I was waiting for my permanent pe"
+          "excerpt": "Real estate in San Francisco began to diverge from the national average around 1960. With the miracle that is the Bay Area in general, it will be very expensive to live in San Fran"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Monthly scheduled water shutdowns. How common is this?. I rent in a large condo complex in San Francisco (100+ units) built in the early 2000s and management shuts down the water f"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Thunder, lightning may accompany first big post-summer storm - The Mercury News. Thunder, lightning may accompany first big post-summer storm Bay Area could see its most rain since"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "not sure; they had a sign about this before they closed but it said it would be about 3 moths iirc. Definitely not this long. We saw the front door open back in August; some constr"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "As a counter point, I had a different experience with Mabrie over the years. Overfilled me, was constantly late to my appointment time. He is not the type to look at your face and "
+          "excerpt": "Oh 100%. I fucking hate SFPD, sitting on their butts all day collecting overtime and doing nothing for the community. Sucks for the rare few good cops I've had the pleasure of inte"
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": -0.03,
+        "source_item_count": 121,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "belonging"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-21T15:07:30.347Z",
-      "mood_score": 0.49,
+      "captured_at": "2026-10-21T20:01:48.844Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, tourism. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,22 +260,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Generous of you to rent for four months with an option for you to move back in 20 years from now."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Yo tengo un piso en alquiler en Barcelona y el mes que viene se me marcha el inquilino, por lo que tengo que buscar otro ahora. Lo tengo alquilado a un 40% menos del precio de merc"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -300,17 +283,33 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "CCOO y UGT convocan huelga parcial en Rodalies el 27 de mayo y el 5 de junio, días de los paros de profesores - El Periódico. CCOO y UGT convocan huelga parcial en Rodalies el 27 d"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Ivan Giesen, de 69 anys, amenaçat de desnonament al pis de Barcelona on viu des de fa 27 anys: ''Continuo treballant i el lloguer s'endú més del 50% dels meus ingressos''"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.03,
+        "source_item_count": 116,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
-          "money",
-          "tourism"
+          "tourism",
+          "transit"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.869
       }
     }
   ]
