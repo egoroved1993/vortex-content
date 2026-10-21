@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-21T04:14:09.670Z",
+    "capturedAt": "2026-10-21T09:58:25.100Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,29 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 434
+    "totalItems": 446
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-21T04:14:09.670Z",
-      "mood_score": 0.282,
+      "captured_at": "2026-10-21T09:58:25.100Z",
+      "mood_score": 0.281,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 16,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -56,57 +65,49 @@
           "excerpt": "No that’s monetary policy funding fiscal policy and spurs hyperinflation. Along with getting us kicked out of the group of high trust high importance central banks. And would absol"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London hospital workers strike over ‘poverty-level’ wages - London Evening Standard. London hospital workers strike over ‘poverty-level’ wages"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "YouTube used to throw endless videos of this at me and I decided it was not good for my mental health and started blocking all the channels. I think it’s a worrying obsession to ha"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "London hospital workers strike over ‘poverty-level’ wages - London Evening Standard. London hospital workers strike over ‘poverty-level’ wages"
+          "excerpt": "Thats a pretty good review! Maybe I'll wait for some bug fixes and give it a go. I played 1 for maybe 20 hours or so only. I think I got overwhelmed ha!"
         }
       ],
       "metadata": {
-        "source_item_count": 82,
-        "average_valence": -0.052,
+        "source_item_count": 91,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.853
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-21T04:14:09.670Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-10-21T09:58:25.100Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 49,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -120,15 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit S7, S5: Delays 2 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "My kids attend a public primary school in Berlin and they both learnt cursive (SAS Schulausgangsschrift) in 2nd grade. I'm super puzzled that nearly everyone in this thread says th"
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -153,28 +146,36 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Non-tourist tips for Berlin. I have been to Berlin a few times. Done the usual stuff, but also a nuclear bunker tour and a bmw factory tour. Any other tips to explore Berlin? Weird"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": 0.001,
+        "source_item_count": 109,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.859
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-21T04:14:09.670Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-10-21T09:58:25.100Z",
+      "mood_score": 0.436,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 57,
+        "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,6 +187,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Berkeley is the other side of the bridge, it's still in the same metro area. It's not moving to Cleveland, let alone leaving the country. Until your kid hits elementary school, it'"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Hot take: my gf and I each own our places and could move in together and rent one out. Might be worth trying for a year or something right? Neither of us will do that because of th"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -209,44 +226,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "As a counter point, I had a different experience with Mabrie over the years. Overfilled me, was constantly late to my appointment time. He is not the type to look at your face and "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Monthly scheduled water shutdowns. How common is this?. I rent in a large condo complex in San Francisco (100+ units) built in the early 2000s and management shuts down the water f"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I couldn't find anything more recent. I gave a more detailed explanation below. Cars are not a good where people optimise for the absolute cheapness, we could make 1970s quality ca"
         }
       ],
       "metadata": {
-        "source_item_count": 123,
-        "average_valence": -0.02,
+        "source_item_count": 127,
+        "average_valence": -0.04,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "money"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-21T04:14:09.670Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-10-21T09:58:25.100Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 51,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.034,
+        "source_item_count": 119,
+        "average_valence": -0.03,
         "dominant_themes": [
           "general",
           "money",
           "tourism"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 0.873
       }
     }
   ]
