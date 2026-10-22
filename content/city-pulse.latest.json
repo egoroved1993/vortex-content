@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-22T09:58:47.667Z",
+    "capturedAt": "2026-10-22T15:07:21.658Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 436
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-22T09:58:47.667Z",
-      "mood_score": 0.236,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-10-22T15:07:21.658Z",
+      "mood_score": 0.483,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 26,
         "review": 2,
@@ -33,13 +33,28 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
-        "weather": 1
+        "transport": 2
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Harrow and Wealdstone and Queen's Park due to an earlier customer incident at Maida"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: SEVERE DELAYS while we fix a signal failure at Leicester Square. Tickets are being accepted on London B"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -47,14 +62,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "It's a pain and very expensive going from either Hither Green or Blackheath to Wandsworth daily. Either via Waterloo or changing twice visa Denmark hill and Clapham junction. The c"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Angry Michael Carrick ready ‘to deal with what’s next’ as pressure mounts - London Now. Angry Michael Carrick ready ‘to deal with what’s next’ as pressure mounts"
         },
         {
           "source_family": "public",
@@ -71,31 +78,23 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Private rent and house prices, UK: October 2026 - Office for National Statistics. Private rent and house prices, UK: October 2026"
         }
       ],
       "metadata": {
         "source_item_count": 93,
-        "average_valence": -0.041,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.86
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-22T09:58:47.667Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-10-22T15:07:21.658Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,13 +106,21 @@
         "news": 50,
         "nightlife": 40,
         "trends": 8,
-        "weather": 1
+        "transport": 1
       },
       "languages": [
         "de",
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, 100, M6, S9: Delays 10 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -129,14 +136,6 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Bulky waste collection is actually free already! Got a dysfunctional fridge, a broken table, or a pissed-on mattress? Just leave it in front of your door with a “Zu verschenken” si"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "signals",
@@ -157,30 +156,29 @@
       ],
       "metadata": {
         "source_item_count": 113,
-        "average_valence": -0.019,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-22T09:58:47.667Z",
-      "mood_score": 0.381,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-10-22T15:07:21.658Z",
+      "mood_score": 0.483,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 52,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
         "en"
@@ -228,19 +226,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.056,
+        "source_item_count": 117,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-22T09:58:47.667Z",
+      "captured_at": "2026-10-22T15:07:21.658Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, tourism, routine. The signal still feels live today.",
@@ -251,8 +249,7 @@
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
         "ca",
@@ -302,14 +299,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.019,
+        "source_item_count": 111,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
           "tourism",
           "routine"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.845
       }
     }
   ]
