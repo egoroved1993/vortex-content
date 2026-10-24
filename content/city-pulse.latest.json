@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-24T07:06:41.412Z",
+    "capturedAt": "2026-10-24T12:38:53.045Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,30 +16,38 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 432
+    "totalItems": 444
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-24T07:06:41.412Z",
-      "mood_score": 0.165,
+      "captured_at": "2026-10-24T12:38:53.045Z",
+      "mood_score": 0.166,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 21,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to train cancellations. Tickets are being accepted on London Buses, Liberty Line, Elizab"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,14 +70,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge and between Moor Park and Watford due to train c"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: No service between Barking Riverside and Barking due to an operational incident. MINOR DELAYS on the r"
         },
         {
@@ -82,20 +82,20 @@
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.102,
+        "source_item_count": 95,
+        "average_valence": -0.099,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.856
+        "freshness_score": 0.846
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-24T07:06:41.412Z",
-      "mood_score": 0.35,
+      "captured_at": "2026-10-24T12:38:53.045Z",
+      "mood_score": 0.345,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6, M5: Delays 2 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Yeah, no kidding. I moved only a couple of years after the rent control was lifted on neubauten. I genuinely think that did more damage to berlin than any other individual politica"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Miete in Königs Wusterhausen: Wie hoch waren die Preise vor zwanzig Jahren? - MOZ.de. Miete in Königs Wusterhausen: Wie hoch waren die Preise vor zwanzig Jahren?"
         },
         {
           "source_family": "public",
@@ -137,44 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Website showing pharmacies that offer a flu shot?. As per above, looking to find something that will point me to pharmacies that offer a flu shot on premises. I asked my local phar"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "ALG1 benefits. I'm hoping someone can help solve this. I am supposed to receive unemployment benefits from 1st November. I am however out of Germany and will return on 24th Novembe"
         }
       ],
       "metadata": {
-        "source_item_count": 109,
-        "average_valence": -0.001,
+        "source_item_count": 114,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-24T07:06:41.412Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-10-24T12:38:53.045Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 58,
+        "public": 62,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,11 +189,19 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Where is the Most Expensive Coffee in SF?. I just paid $9 for a cup of coffee. Curious if anyone can point to a more expensive cafe than this? To be fair, this is in the center of "
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "leases have illegal terms all the time and no those illegal terms are not grounds for eviction. Welcome to SF. All the terms for rent controlled apartments are from law not from le"
+          "excerpt": "Taste wise yeah I’m not a fan of the coffee. I’m not sure why the growth in Yemeni coffee places here at all. But better than an empty lot. I do like Haraz that it’s opened late"
         },
         {
           "source_family": "public",
@@ -208,45 +217,37 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Thank you for sharing your perspective and offering to chat! I just sent you a message with a little more context. I’m trying to get a lawyer to review the actual lease and notice "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Where is the Most Expensive Coffee in SF?. I just paid $9 for a cup of coffee. Curious if anyone can point to a more expensive cafe than this? To be fair, this is in the center of "
+          "excerpt": "rents don't reset when the building is sold. rent is whatever on your lease agreement. And if it is not rent controlled, the new owner can reset the rents to whatever within the la"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I thought it was….fine. Went a few years ago now though so maybe it’s improved? The ambience was also kind of weird - they played 90’s R&B music the whole night."
+          "excerpt": "It’s not the case that a building can only be withdrawn from the market (aka Ellised) once. The purpose of the Ellis Act is not make a slave out of the landlord and let them leave "
         }
       ],
       "metadata": {
-        "source_item_count": 124,
-        "average_valence": -0.021,
+        "source_item_count": 128,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
-          "transit",
-          "events"
+          "money",
+          "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-24T07:06:41.412Z",
+      "captured_at": "2026-10-24T12:38:53.045Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 40,
+        "public": 41,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -302,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 106,
+        "source_item_count": 107,
         "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.851
+        "freshness_score": 0.857
       }
     }
   ]
