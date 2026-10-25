@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-25T11:10:58.614Z",
+    "capturedAt": "2026-10-25T15:55:36.396Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 455
+    "totalItems": 459
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-25T11:10:58.614Z",
-      "mood_score": 0.172,
+      "captured_at": "2026-10-25T15:55:36.396Z",
+      "mood_score": 0.167,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 18,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -40,6 +40,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's Park and Stonebridge Park while we fix a signal failure at Kensal Green. GOO"
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: From 1930 Saturday 24 until 1200 Sunday 25 October, no service between Willesden Junction and Shepherds Bu"
+          "excerpt": "London transit Jubilee: Severe Delays Jubilee Line: No service between Wembley Park and Stanmore, and SEVERE DELAYS on the rest of the line while we remove an"
         },
         {
           "source_family": "transport",
@@ -70,41 +78,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Gunnersbury and Richmond, and SEVERE DELAYS between Gunnersbury and Stratford while we"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Gunnersbury and Richmond, and SEVERE DELAYS between Gunnersbury and Stratford while we"
+          "excerpt": "London transit Jubilee: Part Suspended Jubilee Line: No service between Wembley Park and Stanmore, and SEVERE DELAYS on the rest of the line while we remove an"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.083,
+        "source_item_count": 93,
+        "average_valence": -0.096,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.837
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-25T11:10:58.614Z",
-      "mood_score": 0.203,
+      "captured_at": "2026-10-25T15:55:36.396Z",
+      "mood_score": 0.202,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 48,
+        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "weather": 1
@@ -147,34 +147,34 @@
           "excerpt": "People in finance get rich because they are good at making finance decisions. What you hate is competency. You can get quite wealthy as a working-class person if you make good fina"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 127,
-        "average_valence": 0.009,
+        "source_item_count": 130,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-25T11:10:58.614Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-10-25T15:55:36.396Z",
+      "mood_score": 0.484,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 69,
+        "public": 68,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -196,6 +196,14 @@
         },
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "If you send an email to your landlord saying it could rent out for more you are an idiot"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -212,41 +220,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Have you looked into ZipCar? If you really do barely use your own car, it could save you a LOT of money to rent a car by the hour or day when you need one than to pay to own one."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I think the tenants are having issues with the landlord which is part of the reason for the tenant turnover. I heard it’s an ongoing plumbing issue in that location"
+          "excerpt": "Moving from NC to SJ area. Considering a move from Raleigh NC to the Bay Area for a couple of years to work in person at my Silicon Valley job. Wondering if anyone here has also ma"
         }
       ],
       "metadata": {
-        "source_item_count": 135,
-        "average_valence": -0.039,
+        "source_item_count": 134,
+        "average_valence": -0.046,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-25T11:10:58.614Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-10-25T15:55:36.396Z",
+      "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 36,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -277,14 +277,6 @@
           "excerpt": "¿A quien te refieres? Si es Intersindical, convocaron una huelga general en 2019 y otra en 2025 Igual convocaron más, ni idea."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "CeleBreak is super expensive now. Really like the idea. But it’s clear they are taking some liberty now - used to be €5-6 per game, and while it’s rare but possible to still find t"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -299,17 +291,25 @@
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "I'm an early retiree female from the Netherlands and in my late 30s. Planning to retire in Barcelona! Is it a bad or a good idea?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Els propietaris amb 1 habitatge entenen lo dur que es viure i poder pagar un lloguer o hipoteca. Els \"inversors\" amb multipropietats han comprat diversos habitatge com a inversió p"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.033,
+        "source_item_count": 102,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.82
+        "freshness_score": 0.832
       }
     }
   ]
