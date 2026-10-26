@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-26T10:56:15.282Z",
+    "capturedAt": "2026-10-26T17:15:50.170Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 462
+    "totalItems": 463
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-26T10:56:15.282Z",
-      "mood_score": 0.182,
+      "captured_at": "2026-10-26T17:15:50.170Z",
+      "mood_score": 0.179,
       "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 30,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: No service between South Tottenham and Barking Riverside, and MINOR DELAYS on the rest of the line due"
+          "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: No service between South Tottenham and Barking Riverside due to a operational incident. MINOR DELAYS o"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Part Suspended Suffragette Line: No service between South Tottenham and Barking Riverside, and MINOR DELAYS on the rest of the line due"
+          "excerpt": "London transit Suffragette: Part Suspended Suffragette Line: No service between South Tottenham and Barking Riverside due to a operational incident. MINOR DELAYS o"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "public",
@@ -71,31 +79,23 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "I think you might be projecting a bit. Oxford Street is packed every day. The high end shops are packed. It's full of tourists. You might be struggling, so might I, but the people "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I'll explain it for you Oxford Street gets very very busy. There's loads of big name shops about and flagships. It's also a trunk road for buses and some taxi services. It's the A4"
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.053,
+        "source_item_count": 101,
+        "average_valence": -0.063,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.847
+        "freshness_score": 0.861
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-26T10:56:15.282Z",
-      "mood_score": 0.507,
+      "captured_at": "2026-10-26T17:15:50.170Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U8: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -146,31 +154,23 @@
           "valence": 0.5,
           "recency_weight": 1,
           "excerpt": "Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind - Berliner Morgenpost. Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
         "source_item_count": 120,
-        "average_valence": 0.022,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-26T10:56:15.282Z",
-      "mood_score": 0.491,
+      "captured_at": "2026-10-26T17:15:50.170Z",
+      "mood_score": 0.49,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -230,21 +230,21 @@
       ],
       "metadata": {
         "source_item_count": 136,
-        "average_valence": -0.027,
+        "average_valence": -0.029,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.885
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-26T10:56:15.282Z",
+      "captured_at": "2026-10-26T17:15:50.170Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 40,
@@ -307,10 +307,10 @@
         "average_valence": -0.009,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.84
       }
     }
   ]
