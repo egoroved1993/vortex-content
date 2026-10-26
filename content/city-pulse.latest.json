@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-26T04:37:13.128Z",
+    "capturedAt": "2026-10-26T10:56:15.282Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,18 +16,18 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 460
+    "totalItems": 462
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-26T04:37:13.128Z",
+      "captured_at": "2026-10-26T10:56:15.282Z",
       "mood_score": 0.182,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 20,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: No service between Embankment and Ealing Broadway / Edgware Road / Kensington (Olympia) / Richmond / Wimb"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -65,48 +65,49 @@
           "excerpt": "London transit Suffragette: Part Suspended Suffragette Line: No service between South Tottenham and Barking Riverside, and MINOR DELAYS on the rest of the line due"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "'Difficult' day for passengers due to Tube strike - BBC. 'Difficult' day for passengers due to Tube strike"
+          "recency_weight": 1.04,
+          "excerpt": "I think you might be projecting a bit. Oxford Street is packed every day. The high end shops are packed. It's full of tourists. You might be struggling, so might I, but the people "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I'll explain it for you Oxford Street gets very very busy. There's loads of big name shops about and flagships. It's also a trunk road for buses and some taxi services. It's the A4"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
+        "source_item_count": 100,
         "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.847
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-26T04:37:13.128Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-10-26T10:56:15.282Z",
+      "mood_score": 0.507,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,14 +115,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "You call anyone with a different viewpoint \"brainless bots\"? If you're uncomfortable with change doesn't mean everyone needs to be. Do you also protest against avocado farms and al"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -153,28 +146,36 @@
           "valence": 0.5,
           "recency_weight": 1,
           "excerpt": "Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind - Berliner Morgenpost. Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.016,
+        "source_item_count": 120,
+        "average_valence": 0.022,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.878
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-26T04:37:13.128Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-10-26T10:56:15.282Z",
+      "mood_score": 0.491,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 78,
+        "public": 70,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -186,22 +187,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Even places in Inner Richmond and Inner Sunset would be feasible too with roommates. I moved to the city in 2022 and only paid $1000 for a room in a 4b/2b right near Clement St in "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "yes I guess I've been out of it and I can see it being a tired debate, I was taken a back a few years ago when I tried to drive from Ft. Funston to the Beach Chalet as I last remem"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -225,28 +210,44 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Unpermitted roof replacement questions. My 3 story rental building shares a yard with a 2 story over-garage ADU that was built pre-1900. Workers are replacing the ADU roof. Apparen"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Moving from NC to SJ area. Considering a move from Raleigh NC to the Bay Area for a couple of years to work in person at my Silicon Valley job. Wondering if anyone here has also ma"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Question to Open ai employees. Where exactly you stay in bay area to commute to office? What is the rent like in ur area for a 2 bed apartment. Asking for a friend who recently got"
         }
       ],
       "metadata": {
-        "source_item_count": 144,
-        "average_valence": -0.065,
+        "source_item_count": 136,
+        "average_valence": -0.027,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.895
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-26T04:37:13.128Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-10-26T10:56:15.282Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 42,
+        "public": 40,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -271,14 +272,6 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "No puede echarlo si no es con fraude de ley, lo que dices no es cierto. Y el alquiler no cumple función de nada excepto de extraer las rentas a los trabajadores y redistribuirlas a"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
@@ -299,17 +292,25 @@
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "I'm an early retiree female from the Netherlands and in my late 30s. Planning to retire in Barcelona! Is it a bad or a good idea?"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.075,
+          "recency_weight": 1.04,
+          "excerpt": "Lleva un mes sin dormir teniendo 30 casas alquiladas... 💁🏻‍♀️ Imaginate las personas que no sabemos si nos renovaran el contrato de alquiler, que estudiamos y trabajamos des de b"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.016,
+        "source_item_count": 106,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.84
+        "freshness_score": 0.829
       }
     }
   ]
