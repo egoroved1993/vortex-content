@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-27T14:18:15.188Z",
+    "capturedAt": "2026-10-27T20:00:26.568Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-27T14:18:15.188Z",
-      "mood_score": 0.167,
+      "captured_at": "2026-10-27T20:00:26.568Z",
+      "mood_score": 0.159,
       "mood_label": "dark",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays while we fix signal failure at Oxford Circus. Tickets will be accepted on London Buses and"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations and an earlier signal failure at North Acton."
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier faulty train at Monument."
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to an earlier signal failure at Balham."
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Tower Hill and Ealing Broadway/Richmond/ Wimbledon due to an earlier faulty train a"
         },
         {
           "source_family": "transport",
@@ -78,24 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: No service between South Tottenham and Barking Riverside due to a operational incident. MINOR DELAYS o"
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Hayes & Harlington and Reading due to an earlier trespasser at Acton Main Line. SEVERE DELAYS on the"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.098,
+        "source_item_count": 95,
+        "average_valence": -0.121,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.858
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-27T14:18:15.188Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-10-27T20:00:26.568Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 46,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit S5: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -135,7 +144,7 @@
           "source_origin": "google_news_rss",
           "language": "de",
           "valence": 0.5,
-          "recency_weight": 0.88,
+          "recency_weight": 0.72,
           "excerpt": "Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind - Berliner Morgenpost. Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind"
         },
         {
@@ -145,33 +154,25 @@
           "valence": -0.075,
           "recency_weight": 1.04,
           "excerpt": "Don’t forget that parts of Berlin were socialist and had good relations to their communist Brüderstaaten. I’d suggest to hit a strange vintage store in the East or to search Kleina"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": 0.016,
+        "source_item_count": 109,
+        "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.876
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-27T14:18:15.188Z",
+      "captured_at": "2026-10-27T20:00:26.568Z",
       "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 58,
@@ -229,18 +230,18 @@
       ],
       "metadata": {
         "source_item_count": 124,
-        "average_valence": -0.018,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.879
+        "freshness_score": 0.895
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-27T14:18:15.188Z",
+      "captured_at": "2026-10-27T20:00:26.568Z",
       "mood_score": 0.492,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -303,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 97,
-        "average_valence": -0.024,
+        "average_valence": -0.023,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.817
+        "freshness_score": 0.82
       }
     }
   ]
