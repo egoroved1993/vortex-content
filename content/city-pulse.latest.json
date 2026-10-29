@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-29T05:19:12.496Z",
+    "capturedAt": "2026-10-29T12:43:37.856Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-29T05:19:12.496Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-10-29T12:43:37.856Z",
+      "mood_score": 0.486,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -47,14 +47,6 @@
           "valence": -1,
           "recency_weight": 1.08,
           "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside due to a operational incident. MINOR DELAYS o"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays following a later finish of engineering work and due to an earlier faulty train at Wembley Pa"
         },
         {
           "source_family": "transport",
@@ -79,32 +71,40 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "If you know that bread isn’t good for them maybe you could have spent an extra 10 seconds telling us what’s actually good for them"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.045,
+        "source_item_count": 95,
+        "average_valence": -0.042,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-29T05:19:12.496Z",
-      "mood_score": 0.402,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "captured_at": "2026-10-29T12:43:37.856Z",
+      "mood_score": 0.399,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 44,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U8: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -146,30 +154,22 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Autumn hikes. Trees are pretty, let's go see them. What are your good spots? I'll share mine first: 1. Markische Schweiz: It has hills! Gorgeous trees. However, it's very far, and "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Help needed to find Halloween costume. So I was invited to a party for Halloween and the theme is communism. The problem is I have no idea how I'm gonna get a good costume by then."
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": 0.006,
+        "source_item_count": 126,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "transit"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.896
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-29T05:19:12.496Z",
+      "captured_at": "2026-10-29T12:43:37.856Z",
       "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -236,15 +236,15 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.888
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-29T05:19:12.496Z",
+      "captured_at": "2026-10-29T12:43:37.856Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 17,
@@ -307,10 +307,10 @@
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.791
+        "freshness_score": 0.793
       }
     }
   ]
