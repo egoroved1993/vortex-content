@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-29T18:59:44.693Z",
+    "capturedAt": "2026-10-29T23:17:27.584Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 444
+    "totalItems": 437
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-29T18:59:44.693Z",
-      "mood_score": 0.456,
+      "captured_at": "2026-10-29T23:17:27.584Z",
+      "mood_score": 0.463,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 23,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -49,22 +49,6 @@
           "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside due to a operational incident. MINOR DELAYS o"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "I like Camden Town unironically, I don’t care if you find it touristy or gentrified. It’s been the way it is for as long as I can remember. It’s charming and distinct and its own u"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to an earlier fire alert at Embankment."
-        },
-        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
@@ -78,29 +62,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Barking and Upminster and between Turnham Green and Richmond due to train cancellati"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: Severe delays due to an earlier signal failure at Harrow-on-the Hill. Tickets are being accepted on L"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Wednesday 28 and Thursday 29 October, after 2300 each evening, no eastbound service from Willesden Junctio"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.129,
+        "source_item_count": 101,
+        "average_valence": -0.11,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.868
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-29T18:59:44.693Z",
-      "mood_score": 0.406,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "captured_at": "2026-10-29T23:17:27.584Z",
+      "mood_score": 0.357,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -139,42 +139,42 @@
           "excerpt": "Deciding which Germany city to live. Hi all through my work I have the option of moving to Germany, I can choose any city. I’ll have roughly 100-120 eur salary and will have my wif"
         },
         {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.56,
+          "excerpt": "Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind - Berliner Morgenpost. Jobs trotz schwacher Wirtschaft und KI? Wo die Chancen derzeit gut sind"
+        },
+        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "[OC] How long it takes for all of Berlin to arrive at HBF by ÖPNV.. Sources & method Timetable: VBB GTFS timetable data, VBB Verkehrsverbund Berlin-Brandenburg (CC BY 4.0 2021, Sen"
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": 0.017,
+        "source_item_count": 118,
+        "average_valence": 0.02,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.888
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-29T18:59:44.693Z",
-      "mood_score": 0.498,
+      "captured_at": "2026-10-29T23:17:27.584Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 80,
+        "public": 70,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,7 +192,7 @@
           "language": "en",
           "valence": 1,
           "recency_weight": 1.04,
-          "excerpt": "If your dad’s looking for guys dressed up as cowboys, I think the best we can do in the Bay Area is head to cow towns, like Livermore. You can find regular ranchers dressed up in c"
+          "excerpt": "Sorry I don't follow everything you comment. But i think you are kind of arguing against yourself. You want Bart to be paid for because you don't have enough money to pay for Bart."
         },
         {
           "source_family": "public",
@@ -220,33 +220,33 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "People do live in the East Bay without a car, but it's less common. You mentioned 50% of your take home pay, but keep in mind that a lot of landlords want to see 3x your total inco"
+          "excerpt": "Property manager charged us $160 to prepare our rent increase notice. Is this normal?. We've rented a duplex unit in Sunnyvale month-to-month for about 4.5 years. The owner recentl"
         }
       ],
       "metadata": {
-        "source_item_count": 146,
-        "average_valence": -0.006,
+        "source_item_count": 136,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
-          "events",
+          "transit",
           "money"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.903
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-29T18:59:44.693Z",
+      "captured_at": "2026-10-29T23:17:27.584Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, tourism. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 18,
+        "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -256,8 +256,7 @@
       },
       "languages": [
         "ca",
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
@@ -298,18 +297,18 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "No barregem els fets vandàlics del dissabte dia 24 i l'acampada de Plaça Catalunya."
+          "excerpt": "Incidents al centre de Barcelona amb foc al carrer i intervenció dels Mossos"
         }
       ],
       "metadata": {
-        "source_item_count": 84,
+        "source_item_count": 82,
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
-          "transit"
+          "tourism"
         ],
-        "freshness_score": 0.797
+        "freshness_score": 0.8
       }
     }
   ]
