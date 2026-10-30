@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-30T18:32:25.069Z",
+    "capturedAt": "2026-10-30T22:55:22.334Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 439
+    "totalItems": 444
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-30T18:32:25.069Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-10-30T22:55:22.334Z",
+      "mood_score": 0.483,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays while we fix a signal failure at Bond Street. Please board the first train and change at Ley"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier signal failure at Bond Street. Please board the first train and change at"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays while we fix a points a failure at Shepherd's Bush. London Underground are accepting tickets"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Baker Street and Aldgate due to an earlier trespasser on the track at Northwood"
         },
         {
           "source_family": "transport",
@@ -71,43 +79,35 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Victoria: Minor Delays Victoria Line: Minor delays due to train cancellations."
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.066,
+        "source_item_count": 105,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.874
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-30T18:32:25.069Z",
+      "captured_at": "2026-10-30T22:55:22.334Z",
       "mood_score": 0.352,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 17,
+        "public": 18,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 44,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4: Delays 2 trips delayed"
+          "excerpt": "Berlin transit S9, S7, S3, 3, U2: Delays 10 trips delayed"
         },
         {
           "source_family": "public",
@@ -157,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 121,
+        "source_item_count": 120,
         "average_valence": 0.007,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-30T18:32:25.069Z",
-      "mood_score": 0.475,
+      "captured_at": "2026-10-30T22:55:22.334Z",
+      "mood_score": 0.481,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 73,
+        "public": 75,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -189,14 +189,6 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Thin walls in a late-70s apartment building in Pac Heights?. Considering moving into a late 1970s apartment building in Pac Heights. I’m noise sensitive. It’s a top floor unit and "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -1,
@@ -207,9 +199,25 @@
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Property manager charged us $160 to prepare our rent increase notice. Is this normal?. We've rented a duplex unit in Sunnyvale month-to-month for about 4.5 years. The owner recentl"
+          "excerpt": "Thin walls in a late-70s apartment building in Pac Heights?. Considering moving into a late 1970s apartment building in Pac Heights. I’m noise sensitive. It’s a top floor unit and "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Zillow apartments, price on request. I noticed that some apartment listings on Zillow have \"contact for price\". These are for both large buildings (50+ units) and single units. Is "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "I found myself on my back porch with a pound of raw meat and a large butcher knife one night at 3:00 am when my next door neighbor’s dog was left alone for the weekend and barked t"
         },
         {
           "source_family": "public",
@@ -218,36 +226,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Moving to SF from NJ. Is it as hard as people say to get an apartment quickly?. Hello, Moving to SF from NJ in January for an internal move. I only get 30 days of corporate housing"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "In high school our 24 hour spots or late night spots were Donut Wheel in Cupertino, or In N Out or Denny’s in other parts of the Bay. Pinecrest Diner in SF still is listed as 24 ho"
         }
       ],
       "metadata": {
-        "source_item_count": 139,
-        "average_valence": -0.072,
+        "source_item_count": 141,
+        "average_valence": -0.055,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.914
+        "freshness_score": 0.913
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-30T18:32:25.069Z",
+      "captured_at": "2026-10-30T22:55:22.334Z",
       "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 14,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -275,14 +275,6 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "L'expert en xarxes que ja va advertir dels aldarulls a Barcelona fa dies: \"Jo sé qui ho ha mogut, és una noia que va atraure joves d'instituts de Granollers\""
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
           "excerpt": "60 identificats i quatre detinguts en un control a la plaça d'Espanya per una convocatòria de Blocus"
         },
         {
@@ -300,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "L'Eixample de Barcelona acollirà la prova pilot per unificar en una sola oficina l'atenció ciutadana de la Generalitat i l'Estat"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Estudiants d'instituts de Barcelona aturen les classes per reclamar colònies i sortides escolars"
         }
       ],
       "metadata": {
-        "source_item_count": 80,
+        "source_item_count": 78,
         "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.806
+        "freshness_score": 0.786
       }
     }
   ]
