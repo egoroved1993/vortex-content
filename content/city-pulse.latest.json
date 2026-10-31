@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-10-31T09:33:44.737Z",
+    "capturedAt": "2026-10-31T15:54:02.490Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 434
+    "totalItems": 252
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-10-31T09:33:44.737Z",
-      "mood_score": 0.473,
+      "captured_at": "2026-10-31T15:54:02.490Z",
+      "mood_score": 0.455,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 32,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
-        "transport": 8,
+        "transport": 10,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Kensington Olympia and MINOR DELAYS on the rest of the line due"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: No service between Elephant & Castle and Lambeth North while we fix a points failure at Elephant & Castle"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Earl's Court and Kensington Olympia and MINOR DELAYS on the rest of the line due"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Kensington Olympia due to train cancellations. MINOR DELAYS on t"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to an earlier customer incident at Willesden Green."
+          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Earl's Court and Kensington Olympia due to train cancellations. MINOR DELAYS on t"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due to train cancellations. Tickets will be accepted on London Buses, London trams, Southea"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -82,29 +82,28 @@
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.078,
+        "source_item_count": 64,
+        "average_valence": -0.132,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.869
+        "freshness_score": 1.045
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-10-31T09:33:44.737Z",
-      "mood_score": 0.303,
+      "captured_at": "2026-10-31T15:54:02.490Z",
+      "mood_score": 0.302,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal is very current.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 12,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "nightlife": 40,
         "trends": 8,
         "transport": 2,
@@ -121,7 +120,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 300, S5, S3, S9: Delays 8 trips delayed"
         },
         {
           "source_family": "public",
@@ -130,14 +129,6 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Autumn hikes. Trees are pretty, let's go see them. What are your good spots? I'll share mine first: 1. Markische Schweiz: It has hills! Gorgeous trees. However, it's very far, and "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Help needed to find Halloween costume. So I was invited to a party for Halloween and the theme is communism. The problem is I have no idea how I'm gonna get a good costume by then."
         },
         {
           "source_family": "public",
@@ -154,32 +145,39 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "[OC] How long it takes for all of Berlin to arrive at HBF by ÖPNV.. Sources & method Timetable: VBB GTFS timetable data, VBB Verkehrsverbund Berlin-Brandenburg (CC BY 4.0 2021, Sen"
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": 0.009,
+        "source_item_count": 70,
+        "average_valence": 0.006,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.884
+        "freshness_score": 1.065
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-10-31T09:33:44.737Z",
-      "mood_score": 0.434,
+      "captured_at": "2026-10-31T15:54:02.490Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, belonging. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 65,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -202,7 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Moving to SF from NJ. Is it as hard as people say to get an apartment quickly?. Hello, Moving to SF from NJ in January for an internal move. I only get 30 days of corporate housing"
+          "excerpt": "Bay Area Drive for Ambience From Within The Car. Hi Are there any nice scenic places around Bay Area that you can get a nice view from the comfort of our heated car seat? I’ve been"
         },
         {
           "source_family": "public",
@@ -210,7 +208,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I’ve tried looking into Daly City (or anywhere down south near Bart) but the asking price for apartments is unreasonable. I can’t seem to find anything under $2.3k that is above 50"
+          "excerpt": "just do polk street it's basically a crawl for free if you go early enough to skip covers the ticket thing is such a scam, spent $45 on a \"crawl\" in the marina last year and every "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "You live in a busy city... there's always going to be noise even at off hours. Not much you can really do other than moving to the suburbs."
         },
         {
           "source_family": "public",
@@ -219,48 +225,49 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Bar crawl sf. I’m going to the bar crawl is sf tomorrow but heard it can get really crowded and we should go early. Will the bars be open before the 6 pm start time? Any recommenda"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Some dude got him a hotel room in the middle of Ohio then wouldn’t leave. Got naked and all that, getting your Jordan’s boosted from a Safeway cart in the Fillmore isn’t that sketc"
         }
       ],
       "metadata": {
-        "source_item_count": 131,
-        "average_valence": -0.048,
+        "source_item_count": 73,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
-          "transit",
-          "events"
+          "events",
+          "belonging"
         ],
-        "freshness_score": 0.907
+        "freshness_score": 1.041
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-10-31T09:33:44.737Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-10-31T15:54:02.490Z",
+      "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 14,
         "trends": 8,
         "weather": 1
       },
       "languages": [
         "ca",
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "in the end the question is, do you want people using bicycles or you want them to use something else? Because what you say can be all the logical you want but in the real world you"
+        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -292,25 +299,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "L'Eixample de Barcelona acollirà la prova pilot per unificar en una sola oficina l'atenció ciutadana de la Generalitat i l'Estat"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Estudiants d'instituts de Barcelona aturen les classes per reclamar colònies i sortides escolars"
         }
       ],
       "metadata": {
-        "source_item_count": 75,
-        "average_valence": -0.01,
+        "source_item_count": 45,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "tourism"
         ],
-        "freshness_score": 0.771
+        "freshness_score": 1.042
       }
     }
   ]
