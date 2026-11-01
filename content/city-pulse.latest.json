@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-01T18:29:35.369Z",
+    "capturedAt": "2026-11-01T22:45:28.024Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 424
+    "totalItems": 446
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-01T18:29:35.369Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-11-01T22:45:28.024Z",
+      "mood_score": 0.456,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11,
+        "transport": 12,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "Focussing on a single lease over Sports Direct to pretend city-wide venue displacement isn't happening is property investor logic at its finest 😂. Nobody thinks Brixton was frozen"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone and SEVERE DELAYS on the rest of the line due to"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to a points failure at Elephant & Castle. If you are travelling beyond Queen's Park, ta"
+          "excerpt": "London transit Bakerloo: Part Suspended Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone and SEVERE DELAYS on the rest of the line due to"
         },
         {
           "source_family": "transport",
@@ -82,31 +82,32 @@
         }
       ],
       "metadata": {
-        "source_item_count": 99,
-        "average_valence": -0.146,
+        "source_item_count": 101,
+        "average_valence": -0.131,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-01T18:29:35.369Z",
-      "mood_score": 0.253,
+      "captured_at": "2026-11-01T22:45:28.024Z",
+      "mood_score": 0.248,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, language. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 16,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,12 +116,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6, S9: Delays 2 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Funniest stuff (in a deeply depressing way). Is asking rent vs existing rent. I am sure the Enteignungen will help fix that 🤡"
+          "excerpt": "You are Irish,you speak English and except English also German? The rent is higher in Frankfurt,Munich,Berlin.I would suggest Cologne because is very English"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I've got a rough idea of what the Bundesländer are like, Dublin has around 1.5m (you could argue for 2m but 1.5 is more accurate) so that's my baseline, I don't want to go much sma"
         },
         {
           "source_family": "public",
@@ -128,15 +145,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "2nd one asking for Potsdam, I'll look into what data is available for the little brother The biggest obstacle simply will be data availability and that I've been to Potsdam three t"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Fair, Maps is great if you already know what you're looking for. This is for when you don't: 1) An optimal route through places that are definitely worth visiting 2) Interesting fa"
+          "excerpt": "Well, they decide to switch to döners themselves, i don't think there's any pressure there. Some shops just tell kids \"sorry, we've run out of candy\", and i've never seen anyone be"
         },
         {
           "source_family": "public",
@@ -145,36 +154,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Taekwondo In Berlin?. Hello! I am struggling to find a proper taekwondo dojo in Berlin that has some serious credentials. I am in my early 30s I have experience with other martial "
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.01,
+        "source_item_count": 120,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
-          "money"
+          "language"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-01T18:29:35.369Z",
-      "mood_score": 0.441,
+      "captured_at": "2026-11-01T22:45:28.024Z",
+      "mood_score": 0.445,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 72,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -200,7 +201,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Valkeries final WNBA Championship game tonight at Chase center-5pm. Free viewing outside and I'm sure lots of peeps in costume. Combination of the Final game + Halloween will proba"
+          "excerpt": "I left SF a year ago, but worked in startups for many years before (10 in SF, 20 total). The actual bootstrapped (to maybe eventual investment) startup ecosystem died long ago. SF "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Isn't going to work, it's getting tired (we've all seen plenty of those films, heard those stories though I will say I loved ARTIFICIAL but that's more about the director Luca Guad"
         },
         {
           "source_family": "public",
@@ -212,38 +221,30 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Porch band free show today (upper 24th Street). Above Bernie’s Coffee, 3966 24th Street. This band is good (and so is the coffee shop). Noe Valley is stepping up with more speciali"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "What's with MUNI tonight. The major lines (K, L, M) have had line 20 min headways all night. Right now at Castro Station and it's mayhem with the number of people here. It's pretty"
+          "excerpt": "This. Last night the Castro was packed and overflowing. There was a street fair so a lot of parking was temporarily gone while visitors were pouring in. Not to mention that the adj"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": -0.026,
+        "source_item_count": 138,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "belonging"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-01T18:29:35.369Z",
+      "captured_at": "2026-11-01T22:45:28.024Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 21,
@@ -307,9 +308,9 @@
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "tourism"
         ],
-        "freshness_score": 0.8
+        "freshness_score": 0.794
       }
     }
   ]
