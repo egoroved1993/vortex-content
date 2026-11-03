@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-03T10:45:47.922Z",
+    "capturedAt": "2026-11-03T18:21:43.163Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 460
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-03T10:45:47.922Z",
-      "mood_score": 0.37,
+      "captured_at": "2026-11-03T18:21:43.163Z",
+      "mood_score": 0.38,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway/ West Ruislip and between Leytonstone and Epping / Ha"
+          "excerpt": "London transit Central: Severe Delays Central Line: Severe delays due to an earlier faulty train at Bond Street. Tickets are being accepted on London Buses, G"
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Wimbledon while we fix a faulty train at Parsons Green. MINOR DELA"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays between Tower Hill and Upminster eastbound only, and between Turnham Green and Richmond due"
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Earl's Court and Wimbledon while we fix a faulty train at Parsons Green. MINOR DELA"
+          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminal 4 / Reading while we fix a track fault at Hayes and Harlington. T"
         },
         {
           "source_family": "transport",
@@ -70,43 +70,44 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Minor Delays Severe delays between Paddington and Heathrow Terminals / Reading and MINOR DELAYS between Abbey Wood and Whitechapel wh"
+          "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays Severe delays between Paddington and Heathrow Terminals / Reading and MINOR DELAYS between Abbey Wood and Whitechapel wh"
+          "recency_weight": 1.04,
+          "excerpt": "What are you satisfying mini-wins today Londoners?. I’ll go first - severe delays on Lizzy line this morning, train on platform as I arrived - I managed to sprint and jump in, Indi"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.089,
+        "source_item_count": 94,
+        "average_valence": -0.058,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-03T10:45:47.922Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-11-03T18:21:43.163Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 22,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 48,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, M6, 200, U8, 300: Delays 28 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -126,17 +135,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "if this is your only chance to see berlin, wait for late spring or summer tbh. it becomes a completely different city when everyone is out by the canals and parks."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If you are sensible to cold and rain, then yes, chances are you won’t enjoy the city much. Berlin is also very windy compared to cities in the south IMHO and thus it feels often co"
+          "excerpt": "Also, it's easier to use road vehicles as weapons or hide weapons and explosives in them than with public transport ... a passenger on public transport is no more dangerous than an"
         },
         {
           "source_family": "public",
@@ -147,34 +148,34 @@
           "excerpt": "Good question. Tbh LAP is probably the closest thing Berlin has to an Italian coffee bar, just fancier, heavily branded and rather soulless. My frustration isn’t really about taste"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.014,
+        "source_item_count": 122,
+        "average_valence": -0.003,
         "dominant_themes": [
           "general",
           "routine",
           "money"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-03T10:45:47.922Z",
-      "mood_score": 0.443,
+      "captured_at": "2026-11-03T18:21:43.163Z",
+      "mood_score": 0.449,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 80,
+        "public": 50,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -183,8 +184,7 @@
         "weather": 1
       },
       "languages": [
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
@@ -197,57 +197,57 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "what are you talking about? I've always had to pay income tax on stock grants. whether it's restricted stock (fair market value when I got the grant), or stock options (current mar"
+          "excerpt": "Planned PGE outage 20th and Irving. I own a business on Irving between 20th & 21st. PGE has been sending notices that there will be a planned outage to begin tonight 8pm and run un"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Who is that guy? The guy that sits outside the corner store? Security family whatever.. Your corner store, you know; it’s got a little bit of grocery. It’s got a lot of liquor, sna"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Positive Muni experience. Thought I’d drop a positive note of Muni here on the sub. More often that not, I’ve experienced people being so polite and courtesy. This morning there wa"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Yes, but these are unrealized gains on exercise. You aren't buying something either for $5, you have a strike price, and a FMV that's is evaluated yearly. You pay AMT on the delta "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If they can't afford the car registration, they can ride a bike. They don't need a big car for 2 people. If they can't afford the tax on their GPU, they can sell and buy a gaming c"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Show them utility bills cable etc at that address it’s not vacant and move on no need to give too much information to have an inspection and go through some costly conversion. City"
+          "excerpt": "It's okay, I think generally people say that if you don't have complex medical issues, Kaiser is good enough but if so look at UCSF, Sutter, others. Our family doesn't use Kaiser m"
         }
       ],
       "metadata": {
-        "source_item_count": 146,
-        "average_valence": -0.02,
+        "source_item_count": 116,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
-          "transit",
-          "belonging"
+          "belonging",
+          "transit"
         ],
-        "freshness_score": 0.908
+        "freshness_score": 0.872
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-03T10:45:47.922Z",
-      "mood_score": 0.45,
+      "captured_at": "2026-11-03T18:21:43.163Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,6 +261,14 @@
         "es"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Toma de ChatGPT, luego buscas tu la info, y seguís mintiéndoos con las medidas, que los más las sufren son los que menos dinero tienen, peor que la patronal sois. Desde que entró e"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -292,25 +300,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Soy el primero que detesta la falta de empatía de guiris y de los negocios que casi exclusivamente se dirigen a ellos, pero para que esto realmente se sienta como una medida para l"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Competència demana mantenir l'oferta de bicicleta compartida que l'Ajuntament vol eliminar el 2027"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": 0,
+        "source_item_count": 95,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.815
+        "freshness_score": 0.851
       }
     }
   ]
