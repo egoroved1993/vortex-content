@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-05T02:08:53.914Z",
+    "capturedAt": "2026-11-05T10:40:02.383Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 433
+    "totalItems": 434
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-05T02:08:53.914Z",
-      "mood_score": 0.486,
+      "captured_at": "2026-11-05T10:40:02.383Z",
+      "mood_score": 0.479,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,13 +33,29 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 3,
         "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to a signal failure at Oxford Circus."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+        },
         {
           "source_family": "transport",
           "source_origin": "tfl",
@@ -57,44 +73,28 @@
           "excerpt": "To those who work 50+ hour weeks regularly all year round, how do you effectively manage and balance a work life balance and recovery?. Literally the title. I especially also would"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Volunteering at Christmas. So, due to a series of life choices which brought me to this point looks like I have finally have a Christmas Day to myself - had already planned on walk"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Rent rises of up to 88% still passing in England despite Renters’ Rights Act - The Guardian. Rent rises of up to 88% still passing in England despite Renters’ Rights Act"
+          "recency_weight": 1.08,
+          "excerpt": "London’s only artist-run centre risks closure due to stagnant funding and rising costs of living - CBC. London’s only artist-run centre risks closure due to stagnant funding and ri"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.04,
+        "source_item_count": 105,
+        "average_valence": -0.06,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.882
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-05T02:08:53.914Z",
+      "captured_at": "2026-11-05T10:40:02.383Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 44,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -123,6 +124,14 @@
           "excerpt": "Chaos Techno.Berlin, NIKO INCRAVALLE at Der Weiße Hase (Berlin) on 2026-11-05T00:00:00.000 [Techno]"
         },
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5, M6: Delays 2 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
@@ -131,44 +140,36 @@
           "excerpt": "Which city in Germany should I study in - Berlin or Cologne, if I am 24 and gay?. I'm trying to decide where to do my degree in and I am sick of hiding in my homophobic country so "
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.88,
+          "excerpt": "Kriminalität: Vier Überfälle in gut 35 Minuten? Polizei stellt 25-Jährigen - STERN.de. Kriminalität: Vier Überfälle in gut 35 Minuten? Polizei stellt 25-Jährigen"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Nikolai Quarter (with Town Hall and Nikolai Church) then vs now - of the 1,500 buildings that once stood in the Old Town, only about 85 remain today"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Well, tbh, I have to admit that during my first 3 years in Germany, I mean when Döner was still below 4 euro, I didn't really socialize with the locals other than going out for dri"
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": 0.5,
+          "recency_weight": 0.56,
+          "excerpt": "Das Wetter in Berlin heute: Freundlich, ruhig und kühl - wetter.com. Das Wetter in Berlin heute: Freundlich, ruhig und kühl"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
+        "source_item_count": 107,
         "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-05T02:08:53.914Z",
+      "captured_at": "2026-11-05T10:40:02.383Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "belonging",
           "transit"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-05T02:08:53.914Z",
+      "captured_at": "2026-11-05T10:40:02.383Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
