@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-06T06:32:49.503Z",
+    "capturedAt": "2026-11-06T14:56:05.197Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 420
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-06T06:32:49.503Z",
-      "mood_score": 0.43,
+      "captured_at": "2026-11-06T14:56:05.197Z",
+      "mood_score": 0.423,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 28,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 3,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,28 @@
       ],
       "drivers": [
         {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 1.04,
+          "excerpt": "Do you remember a disco nightclub group, I think called Carwash, in the 90s/2000s?. In the late 90s/early 2000s I very vaguely remember going to a nightclub near London. It was pac"
+        },
+        {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainau"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays between Clapham Junction and Willesden Junction while we fix a faulty train at Clapham Juncti"
         },
         {
           "source_family": "transport",
@@ -58,55 +74,40 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Why sausage rolls and veterinary fees vary in price across London. Just as two examples in the headline, but I've wondered this for a while with cinema tickets and varying prices f"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "This is a valid point. I'd also add to this, particularly when it comes to Indian food, that the sheer amount of time and effort required to make a couple of different curries, wit"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "London’s only artist-run centre risks closure due to stagnant funding and rising costs of living - CBC. London’s only artist-run centre risks closure due to stagnant funding and ri"
+          "recency_weight": 1.04,
+          "excerpt": "Still 15p per traffic light racks up the cost. I expect most of the poor riding is by PAYG riders. I have a Santander sub so I only need to use lime or forest when out if the zone "
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.057,
+        "source_item_count": 98,
+        "average_valence": -0.078,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-06T06:32:49.503Z",
-      "mood_score": 0.501,
+      "captured_at": "2026-11-06T14:56:05.197Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, language. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 12,
+        "public": 8,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 45,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, 100, M6: Delays 3 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -129,14 +138,6 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Tempestfeather, Sauvage at TBA (Berlin) on 2026-11-06T00:00:00.000 [Bass, Broken Beat]"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": 0.5,
-          "recency_weight": 0.72,
-          "excerpt": "Kriminalität: Vier Überfälle in gut 35 Minuten? Polizei stellt 25-Jährigen - STERN.de. Kriminalität: Vier Überfälle in gut 35 Minuten? Polizei stellt 25-Jährigen"
         },
         {
           "source_family": "signals",
@@ -156,25 +157,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": 0.003,
+        "source_item_count": 111,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "routine",
-          "language"
+          "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.887
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-06T06:32:49.503Z",
-      "mood_score": 0.487,
+      "captured_at": "2026-11-06T14:56:05.197Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 45,
+        "public": 49,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,65 +189,65 @@
       "drivers": [
         {
           "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "But the master tenant would have to agree to evict people, so they’d have to sign something with the landlord saying they would evict people who didn’t keep up the cleanliness stan"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "This opens up the next dimension of this topic: if the master tenant needs to agree to evict, I wonder if it would be unlawful for landlord and master tenant to have a strategic pa"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "I believe both landlords and tenants should play everything by the books in this city and be fully versed in the laws. Could a prospective landlord buy the tenants’ union book to b"
+        },
+        {
+          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -1,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "First rent increase notice data point. My rent in lower haight has been $2000. I received noticed that my landlord is using 3 banked rent increases and will be $2100. Ironically wh"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "You don't get Paratransit as a parent with a stroller or a small kid. I doubt you're on the 49 or the 38 or the trains. Where the drivers reject strollers and wheelchairs bc \"too f"
+          "excerpt": "San Francisco Sunset folks what is up with cones being used to reserve a parking space next to your house?. I'm started to notice more people reserving parking spaces in the Sunset"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Who is that guy? The guy that sits outside the corner store? Security family whatever.. Your corner store, you know; it’s got a little bit of grocery. It’s got a lot of liquor, sna"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "If you don't build more housing to match demand, by requiring too many permits or outright making upzoning illegal, the few units left will be bought by the richest. SF has failed "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Trump and Biden both put huge tariffs on solar panels, which has really held back the green transition. It’s too expensive to build a solar plant in some cases. The other issue is "
+          "excerpt": "Thanksgiving in SF 2026. I am staying in Oakland/SF for Thanksgiving this year and I need all the MUSTs. I am staying Wedn-Sunday. Romatic vibes, good eats, pretty view, bars, club"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.037,
+        "source_item_count": 115,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.871
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-06T06:32:49.503Z",
+      "captured_at": "2026-11-06T14:56:05.197Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 32,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -274,23 +275,15 @@
           "language": "es",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "La mejor parte es cuando hay 2 eléctricas, llegas a la estación y están reservadas 😍 me encanta que muestre como disponible bicis que no lo están 🙌🏻🙌🏻"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0,
-          "recency_weight": 1.04,
           "excerpt": "Lo fundamental para mí está relacionado con la seguridad: frenos que funcionen al 100%, neumáticos que no resbalen en superficies mojadas y cadenas y rodamientos lubricados regular"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Estava per publicar un anàlisi de com s'ha degradat el servei en una estona analitzant les dades d'opendata. Es veu clar i mira que aquestes coses no queden plasmades a les dades.."
+          "excerpt": "Per què a Barcelona se l'anomena la rosa de foc? La història de les revoltes a la capital catalana. Una història sobre la que no es parla gaire sovint. Durant, i amb posterioritat,"
         },
         {
           "source_family": "public",
@@ -299,17 +292,25 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "88.500 alumnes esperen per començar les pràctiques del carnet. A Catalunya hi ha 88.500 persones que han aprovat la teòrica i encara esperen per començar les classes pràctiques de "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "For how much it costs is better to buy a personal one. Honestly any ok non electric bici is way smoother and faster than this dinosaur. Hopefully they elect a new system in 2027 th"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
+        "source_item_count": 96,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.827
+        "freshness_score": 0.823
       }
     }
   ]
