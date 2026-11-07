@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-07T06:58:56.733Z",
+    "capturedAt": "2026-11-07T13:55:02.684Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 429
+    "totalItems": 435
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-07T06:58:56.733Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-11-07T13:55:02.684Z",
+      "mood_score": 0.471,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 11,
         "weather": 1
       },
       "languages": [
@@ -45,7 +45,7 @@
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -1,
-          "recency_weight": 1,
+          "recency_weight": 0.88,
           "excerpt": "London Underground drivers to stage new strikes in coming months - BBC. London Underground drivers to stage new strikes in coming months Commuters and shoppers face disruption from"
         },
         {
@@ -54,51 +54,51 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays between Harrow & Wealdstone and Queen's Park due to infrastructure damage at Harlesden. Tic"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Severe delays between Harrow & Wealdstone and Queen's Park due to infrastructure damage at Harlesden. Tic"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier faulty train at Tower Hill."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Saturday 7 and Sunday 8 November, no service between Willesden Junction and Clapham Junction. There will a"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays due to earlier faulty communications equipment. NO SERVICE between Willesden Junction and Cl"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 94,
-        "average_valence": -0.066,
+        "source_item_count": 99,
+        "average_valence": -0.085,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-07T06:58:56.733Z",
-      "mood_score": 0.504,
+      "captured_at": "2026-11-07T13:55:02.684Z",
+      "mood_score": 0.401,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 12,
         "review": 2,
@@ -107,6 +107,7 @@
         "news": 46,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 200: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -145,30 +154,22 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Nikolai Quarter (with Town Hall and Nikolai Church) then vs now - of the 1,500 buildings that once stood in the Old Town, only about 85 remain today"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Is there a name for them?. I have the joy of travelling via Ryanair from berlin often and keep seeing groups of these German guys on weekends. Often wearing the same outfit. Skinny"
         }
       ],
       "metadata": {
-        "source_item_count": 114,
-        "average_valence": 0.012,
+        "source_item_count": 115,
+        "average_valence": 0.004,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.899
+        "freshness_score": 0.901
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-07T06:58:56.733Z",
+      "captured_at": "2026-11-07T13:55:02.684Z",
       "mood_score": 0.501,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
@@ -235,12 +236,12 @@
           "transit",
           "events"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.886
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-07T06:58:56.733Z",
+      "captured_at": "2026-11-07T13:55:02.684Z",
       "mood_score": 0.5,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.814
+        "freshness_score": 0.82
       }
     }
   ]
