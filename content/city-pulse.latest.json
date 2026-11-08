@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-08T10:05:48.241Z",
+    "capturedAt": "2026-11-08T17:04:16.181Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,38 +16,37 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 411
+    "totalItems": 420
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-08T10:05:48.241Z",
+      "captured_at": "2026-11-08T17:04:16.181Z",
       "mood_score": 0.418,
       "mood_label": "mixed",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 24,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 7,
+        "transport": 9,
         "weather": 1
       },
       "languages": [
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "London Underground drivers to stage new strikes in coming months - BBC. London Underground drivers to stage new strikes in coming months Commuters and shoppers face disruption from"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: Severe delays due to earlier infrastructure damage at Harlesden and while we fix a points failure at Elep"
         },
         {
           "source_family": "transport",
@@ -55,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Bakerloo: Severe Delays Bakerloo Line: No service between Queen's Park and Harrow & Wealdstone due to infrastructure damage at Harlesden and SEV"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -63,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Lioness: Part Closure LIONESS LINE: Sunday 8 November, until approx. 1300, no service between Willesden Junction and Watford Junction."
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -72,36 +79,28 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Saturday 7 and Sunday 8 November, no service between Willesden Junction and Clapham Junction. There will a"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
+        "source_item_count": 100,
         "average_valence": -0.095,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.885
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-08T10:05:48.241Z",
-      "mood_score": 0.354,
+      "captured_at": "2026-11-08T17:04:16.181Z",
+      "mood_score": 0.344,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, language. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 11,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -117,12 +116,28 @@
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
+        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "They can always only issue one for max 3 days at a time. And getting one retroactively is possible in some cases but not all. Usually if you provide some explanation like \"it was a"
+          "excerpt": "Thematic Cluster Strategy: In late 19th and early 20th-century Berlin urban planning, it was standard practice to name streets within a newly developed residential area after a coh"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Berlin has quite a few neighborhoods with streets named after different parts of the world. In Prenzlauer Berg, you've got Scandinavian names, in Treptow-Köpenick Mediterranean one"
         },
         {
           "source_family": "public",
@@ -139,44 +154,28 @@
           "valence": -0.075,
           "recency_weight": 0.72,
           "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "You can get a sicknote for much longer than three days, three days is just the backdating period. EDIT: Ah, by \"They can only issue one for max 3 days at a time\" you mean because i"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "My regular Hausartz, I can't provide the name. The doctor likely won't backdate it for the 2nd, but you should be able to get the 3rd without problems if you can find one still ope"
         }
       ],
       "metadata": {
-        "source_item_count": 113,
-        "average_valence": 0.012,
+        "source_item_count": 111,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
-          "events"
+          "language"
         ],
-        "freshness_score": 0.901
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-08T10:05:48.241Z",
-      "mood_score": 0.506,
+      "captured_at": "2026-11-08T17:04:16.181Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 37,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -198,14 +197,6 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "First, thanks for your support for the transgender community all these years. Second, please do not vote for Hakeem Jeffries, he's interested in the same old status quo that made v"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": -0.575,
@@ -214,36 +205,44 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Two Bansky exhibits in the area - The Banksy Art Exhibit (Oakland) and Banksy Limitless (SF) - any info?. It seems odd there'd be two different exhibits of the same artist. In the "
+          "excerpt": "I stood in the same line to buy a burrito at midnight next to this guy. I really miss that taqueria. It was on 18th and Collingwood. I hope Wiener does his sincere best to make law"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Good haircut in SF (M). To all my fellow guys with long-ish hair, where do you go? I started growing my hair out a few years back and every single haircut I had since was more of l"
+          "excerpt": "if you can afford to live in the castro you’re either lucky enough to have heavily controlled rent or you have enough money to not be concerned with handing our country over to a f"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Wishing you a speedy recovery OP. My tire also got stuck on Ocean near the muni station. I was knocked unconscious, grade 3 concussion, broken collarbone and the gnarliest road ras"
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": 0.018,
+        "source_item_count": 110,
+        "average_valence": -0.014,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.857
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-08T10:05:48.241Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-11-08T17:04:16.181Z",
+      "mood_score": 0.502,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -311,7 +310,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.841
       }
     }
   ]
