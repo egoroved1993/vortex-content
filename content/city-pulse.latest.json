@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-09T09:32:42.849Z",
+    "capturedAt": "2026-11-09T20:36:40.203Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 408
+    "totalItems": 427
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-09T09:32:42.849Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-11-09T20:36:40.203Z",
+      "mood_score": 0.478,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 23,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,9 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to a late finish of engineering work at Camden Town."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,23 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and West Ruislip westbound only due to an earlier fire near the track at"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Severe Delays Metropolitan Line: No service between Baker Street and Uxbridge/Watford/Chesham/Amersham while emergency services deal w"
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and Battersea Power Station via Charing Cross due to an earlier signal"
         },
         {
           "source_family": "transport",
@@ -79,32 +63,48 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Legit some comments on Instagram were like \"what if someone's disabled and in a wheelchair and they have to get the expensive tube now that they can't get the cheaper bus to get to"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "Fury grows at RMT for 'holding London to ransom' with eight Tube strike days - London Evening Standard. Fury grows at RMT for 'holding London to ransom' with eight Tube strike days"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.104,
+        "source_item_count": 100,
+        "average_valence": -0.063,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "events"
         ],
-        "freshness_score": 0.859
+        "freshness_score": 0.87
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-09T09:32:42.849Z",
-      "mood_score": 0.297,
+      "captured_at": "2026-11-09T20:36:40.203Z",
+      "mood_score": 0.296,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 6,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6: Delays 5 trips delayed"
+          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         },
         {
           "source_family": "signals",
@@ -133,49 +141,41 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "How can someone do this to a little girl? Im without words at how sick people can be. Devastating for the girl and for her parents, i can't imagine the agony they are experiencing "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Oh Lord, no. What an absolute nightmare., not only for Lisa, but also for her parents. I'm a mother myself, I start sweating and almost can't breathe when only thinking about what "
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "In einem unbewohnten Haus: Leiche von 13-jähriger Lisa Tạ aus Marzahn in Brandenburg gefunden. Feeling so sorry for her parents and family. Posting here as an update to the previou"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "In hamburg, \"oz\" is a very popular Tag, in Berlin its \"1up\" Oz is not considered a writer though in the writer scene from what i know"
         }
       ],
       "metadata": {
         "source_item_count": 108,
-        "average_valence": -0.008,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.903
+        "freshness_score": 0.911
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-09T09:32:42.849Z",
-      "mood_score": 0.468,
+      "captured_at": "2026-11-09T20:36:40.203Z",
+      "mood_score": 0.485,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 47,
+        "public": 57,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,23 +193,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "She can only raise your rent per rent control guidelines. She cannot give you a rent control increase from before you moved in. She is not THE landlord but she is your landlord and"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "It's a great apartment and I am tired of moving around. I thought I finally found a spot for the next two years. But I don't think she can enforce a rent hike or kick me out becaus"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 1.04,
-          "excerpt": "This is not accurate to San Francisco rent control laws. A master tenant must follow the same laws for rent increases as a landlord. The master tenant can only raise the rent when "
+          "excerpt": "But if your roommates wanted to pay the landlord they could. OP cannot because it would establish her as a tenant of the landlord. That’s why she HAS TO pay her rent to her roommat"
         },
         {
           "source_family": "public",
@@ -217,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Join the San Francisco Tenants Union..!!! They have a counseling service. Sometimes it's a tenants lawyer doing the counseling.. She needs to show you/give you a copy the rental ag"
+          "excerpt": "Because we have a laws to protect tenants and you don't have to like it but being a landlord isn't just a free for all."
         },
         {
           "source_family": "public",
@@ -225,29 +209,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yeah i agree, If she can't legally evict, the only way she gets the house empty is to pay yall enough to leave voluntarily. You can price your ask by what moving actually costs. Fo"
+          "excerpt": "I will say— I pay rent for all my roommates who are named on the lease, does not make me a master tenant. Just because it’s my check and they Venmo me that we have different rights"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Stop putting in labor for the cats. Let her deal with her cats. Bottom line is you need to think about removing yourself from this unreasonable roommate. You can let her know the s"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "At this location? With waterfront property, views, and basically the most in-demand neighborhood for young people, AND a new build with new amenities (rare in SF)? I think this can"
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": -0.094,
+        "source_item_count": 122,
+        "average_valence": -0.045,
         "dominant_themes": [
           "general",
           "money",
-          "events"
+          "transit"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-09T09:32:42.849Z",
+      "captured_at": "2026-11-09T20:36:40.203Z",
       "mood_score": 0.453,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 31,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -287,30 +287,30 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "L'Amagat cafè al Carrer Mascaró El porta una parella maquíssima i fan molt bon cafè, esmorzars i un pastís del dia que està per morir-se!"
+          "excerpt": "Per què a Barcelona se l'anomena la rosa de foc? La història de les revoltes a la capital catalana. Una història sobre la que no es parla gaire sovint. Durant, i amb posterioritat,"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "En aquest sentit barcelona és poc original ja que és extremadament dificil trobar llocs original o amb caracter. La veritat és que també m'agradaria trobar llocs així"
+          "excerpt": "88.500 alumnes esperen per començar les pràctiques del carnet. A Catalunya hi ha 88.500 persones que han aprovat la teòrica i encara esperen per començar les classes pràctiques de "
         }
       ],
       "metadata": {
-        "source_item_count": 91,
+        "source_item_count": 97,
         "average_valence": 0.008,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.835
       }
     }
   ]
