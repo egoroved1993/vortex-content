@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-10T12:28:11.043Z",
+    "capturedAt": "2026-11-10T20:28:31.026Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,16 +16,16 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 426
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-10T12:28:11.043Z",
-      "mood_score": 0.427,
+      "captured_at": "2026-11-10T20:28:31.026Z",
+      "mood_score": 0.414,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 32,
         "review": 2,
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction while we fix a signal failure at Shepherd's"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due an earlier customer incident. Tickets will be accepted on London buses, Thameslink and"
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -62,40 +62,40 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
+          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due train cancellations."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Commuting cost the same as the rent you would save. £1000 pcm for a room in zone 2. If you move too greater London or further out it you can find a room for £800 pcm but the it wil"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction due to a signal failure at Shepherd's Bush."
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "I think you’re overestimating the cost of rent outside of London. In Bedfordshire, for example, you can easily get a 1 bed flat for £800 pcm, train into St Pancras is about £30 for"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction due to a signal failure at Shepherd's Bush."
         }
       ],
       "metadata": {
-        "source_item_count": 102,
-        "average_valence": -0.067,
+        "source_item_count": 106,
+        "average_valence": -0.105,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.865
+        "freshness_score": 0.857
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-10T12:28:11.043Z",
-      "mood_score": 0.244,
+      "captured_at": "2026-11-10T20:28:31.026Z",
+      "mood_score": 0.246,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -107,7 +107,6 @@
         "news": 46,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 4 trips delayed"
-        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -154,23 +145,31 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "In einem unbewohnten Haus: Leiche von 13-jähriger Lisa Tạ aus Marzahn in Brandenburg gefunden. Feeling so sorry for her parents and family. Posting here as an update to the previou"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Germany may be smaller than the US on a map. That does not mean you can \"do Germany\" in a week. Munich-Cologne is not a day trip. Neither is Munich-Berlin. I can't understand US pe"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.018,
+        "source_item_count": 106,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.914
+        "freshness_score": 0.908
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-10T12:28:11.043Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-11-10T20:28:31.026Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -179,7 +178,7 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 50,
         "trends": 8,
         "weather": 1
       },
@@ -230,19 +229,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": -0.016,
+        "source_item_count": 119,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "transit",
           "money"
         ],
-        "freshness_score": 0.875
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-10T12:28:11.043Z",
+      "captured_at": "2026-11-10T20:28:31.026Z",
       "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
@@ -271,20 +270,20 @@
           "excerpt": "Espera, que ahora resulta que es mi culpa que chapen. Y no de que le suban el alquiler 10x para especular."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "La huelga de Renfe deja un 60% de trenes cancelados en Rodalies - El Liberal.cat. La huelga de Renfe deja un 60% de trenes cancelados en Rodalies"
-        },
-        {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "es",
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "La avaricia rompe el saco,tal vez sea la hora de expropiar ,ojalá que si por el bien de Barcelona y sus ciudadanos."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "La huelga de Renfe deja un 60% de trenes cancelados en Rodalies - El Liberal.cat. La huelga de Renfe deja un 60% de trenes cancelados en Rodalies"
         },
         {
           "source_family": "signals",
@@ -305,13 +304,13 @@
       ],
       "metadata": {
         "source_item_count": 95,
-        "average_valence": -0.016,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.842
+        "freshness_score": 0.832
       }
     }
   ]
