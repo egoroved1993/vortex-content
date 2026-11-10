@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-10T03:26:10.142Z",
+    "capturedAt": "2026-11-10T12:28:11.043Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 423
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-10T03:26:10.142Z",
-      "mood_score": 0.433,
+      "captured_at": "2026-11-10T12:28:11.043Z",
+      "mood_score": 0.427,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 24,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 1,
+        "transport": 4,
         "weather": 1
       },
       "languages": [
@@ -41,12 +41,20 @@
       ],
       "drivers": [
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.88,
-          "excerpt": "Fog to bring further travel chaos after warning extended - The Telegraph. Fog to bring further travel chaos after warning extended"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction while we fix a signal failure at Shepherd's"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays due an earlier customer incident. Tickets will be accepted on London buses, Thameslink and"
         },
         {
           "source_family": "transport",
@@ -62,49 +70,41 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I think that’s a bit simplistic. I was 4 in 1986 and my parents were worried sick about loads of things. Affording having two young kids, me being repeatedly unwell, mortgage payme"
+          "excerpt": "Commuting cost the same as the rent you would save. £1000 pcm for a room in zone 2. If you move too greater London or further out it you can find a room for £800 pcm but the it wil"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Over 51k that day. You can definitively manage 10k a day, go for it! I average around 10K a day and always try to walk before work, puts you in a good mood."
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Fury grows at RMT for 'holding London to ransom' with eight Tube strike days - London Evening Standard. Fury grows at RMT for 'holding London to ransom' with eight Tube strike days"
+          "recency_weight": 1.04,
+          "excerpt": "I think you’re overestimating the cost of rent outside of London. In Bedfordshire, for example, you can easily get a 1 bed flat for £800 pcm, train into St Pancras is about £30 for"
         }
       ],
       "metadata": {
-        "source_item_count": 91,
-        "average_valence": -0.051,
+        "source_item_count": 102,
+        "average_valence": -0.067,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "money"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-10T03:26:10.142Z",
+      "captured_at": "2026-11-10T12:28:11.043Z",
       "mood_score": 0.244,
       "mood_label": "low",
       "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 5,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 47,
+        "news": 46,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
+          "excerpt": "Berlin transit M5: Delays 4 trips delayed"
         },
         {
           "source_family": "nightlife",
@@ -157,7 +157,7 @@
         }
       ],
       "metadata": {
-        "source_item_count": 109,
+        "source_item_count": 107,
         "average_valence": -0.018,
         "dominant_themes": [
           "general",
@@ -169,13 +169,13 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-10T03:26:10.142Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-11-10T12:28:11.043Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 61,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -192,9 +192,17 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Ah same! First couple years I got by without a car and after a while it just become more expensive with more trips. Not to mention the convenience and not having to deal with the b"
+          "excerpt": "If you are willing to leave in the near term, ask for a bunch of money for you to leave quietly. Landlords do this, voluntarily or sometimes not, regularly. And you can take as muc"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 1,
+          "recency_weight": 1.04,
+          "excerpt": "I’d already been diagnosed and prescribed it for 8 years. I just kind of laughed. They wanted letters from my parents as well. This was during Covid, maybe I just got an intense pe"
         },
         {
           "source_family": "public",
@@ -202,7 +210,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "That's rough, thanks for the heads up. SFMTA's own page says once the sweeper has swept your curb you can park there, even before the posted hours end: [ If your ticket is less tha"
+          "excerpt": "You can rent a parking spot alone for $450-$650/month in central neighborhoods, and $250/month in outer neighborhoods. I double checked those prices with a Craigslist search."
         },
         {
           "source_family": "public",
@@ -210,7 +218,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "The people that have moved here for the tech industry seem disinclined to going without a motor vehicle. Rent a really nice car when you need one, use feet, bicycles and Muni for a"
+          "excerpt": "I was in my late 30s and they wanted elementary report cards and any feedback from those teachers, even better if they could write letters. I laughed."
         },
         {
           "source_family": "public",
@@ -219,36 +227,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Just paid $11 for an hour of street parking in SF - wtf is this even!?. Why TF is street parking so expensive here? I come over from the east bay for an appointment at UCSF and am "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Our neighborhood playground (Douglass & 24th St in Noe Valley) is very tired - like the rubbery ground cover is cracked and gone in patches. And it needs more tree shade."
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": -0.02,
+        "source_item_count": 118,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.89
+        "freshness_score": 0.875
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-10T03:26:10.142Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-11-10T12:28:11.043Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 29,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -265,10 +265,18 @@
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
+          "language": "es",
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If i go to nepali restaurant its to see and taste only food from Nepal, if you have a extended card with different types like \"paella, rices, tapas\", you lost your persolity and yo"
+          "excerpt": "Espera, que ahora resulta que es mi culpa que chapen. Y no de que le suban el alquiler 10x para especular."
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "ca",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "La huelga de Renfe deja un 60% de trenes cancelados en Rodalies - El Liberal.cat. La huelga de Renfe deja un 60% de trenes cancelados en Rodalies"
         },
         {
           "source_family": "public",
@@ -276,7 +284,7 @@
           "language": "es",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "No es cafeteria pero si quieres comer MUY bien recomiendo El Corralet que está en Sants!"
+          "excerpt": "La avaricia rompe el saco,tal vez sea la hora de expropiar ,ojalá que si por el bien de Barcelona y sus ciudadanos."
         },
         {
           "source_family": "signals",
@@ -293,25 +301,17 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "La Llibreria Rodés –fundada l'any 1920– tancarà en els pròxims mesos. \"El preu del lloguer de la botiga s'ha multiplicat per deu o per quinze, però els sous dels meus clients i els"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Per què a Barcelona se l'anomena la rosa de foc? La història de les revoltes a la capital catalana. Una història sobre la que no es parla gaire sovint. Durant, i amb posterioritat,"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": 0.008,
+        "source_item_count": 95,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "routine",
           "transit"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.842
       }
     }
   ]
