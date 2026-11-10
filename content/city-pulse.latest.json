@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-09T20:36:40.203Z",
+    "capturedAt": "2026-11-10T03:26:10.142Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 427
+    "totalItems": 423
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-09T20:36:40.203Z",
-      "mood_score": 0.478,
+      "captured_at": "2026-11-10T03:26:10.142Z",
+      "mood_score": 0.433,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 30,
+        "public": 24,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -41,20 +41,12 @@
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: Severe delays between Camden Town and Battersea Power Station via Charing Cross due to an earlier signal"
+          "valence": -1,
+          "recency_weight": 0.88,
+          "excerpt": "Fog to bring further travel chaos after warning extended - The Telegraph. Fog to bring further travel chaos after warning extended"
         },
         {
           "source_family": "transport",
@@ -70,7 +62,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Legit some comments on Instagram were like \"what if someone's disabled and in a wheelchair and they have to get the expensive tube now that they can't get the cheaper bus to get to"
+          "excerpt": "I think that’s a bit simplistic. I was 4 in 1986 and my parents were worried sick about loads of things. Affording having two young kids, me being repeatedly unwell, mortgage payme"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Over 51k that day. You can definitively manage 10k a day, go for it! I average around 10K a day and always try to walk before work, puts you in a good mood."
         },
         {
           "source_family": "news",
@@ -82,25 +82,25 @@
         }
       ],
       "metadata": {
-        "source_item_count": 100,
-        "average_valence": -0.063,
+        "source_item_count": 91,
+        "average_valence": -0.051,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "weather"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.854
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-09T20:36:40.203Z",
-      "mood_score": 0.296,
+      "captured_at": "2026-11-10T03:26:10.142Z",
+      "mood_score": 0.244,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 4,
+        "public": 5,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -121,7 +121,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M6: Delays 1 trips delayed"
+          "excerpt": "Berlin transit N40: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Al Pagoda at Muting The Noise (Berlin) on 2026-11-11T00:00:00.000 [Pop, New Wave]"
         },
         {
           "source_family": "news",
@@ -146,36 +154,28 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "In einem unbewohnten Haus: Leiche von 13-jähriger Lisa Tạ aus Marzahn in Brandenburg gefunden. Feeling so sorry for her parents and family. Posting here as an update to the previou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "In hamburg, \"oz\" is a very popular Tag, in Berlin its \"1up\" Oz is not considered a writer though in the writer scene from what i know"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.012,
+        "source_item_count": 109,
+        "average_valence": -0.018,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.911
+        "freshness_score": 0.914
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-09T20:36:40.203Z",
-      "mood_score": 0.485,
+      "captured_at": "2026-11-10T03:26:10.142Z",
+      "mood_score": 0.493,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 57,
+        "public": 61,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -184,16 +184,17 @@
         "weather": 1
       },
       "languages": [
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "But if your roommates wanted to pay the landlord they could. OP cannot because it would establish her as a tenant of the landlord. That’s why she HAS TO pay her rent to her roommat"
+          "excerpt": "Ah same! First couple years I got by without a car and after a while it just become more expensive with more trips. Not to mention the convenience and not having to deal with the b"
         },
         {
           "source_family": "public",
@@ -201,7 +202,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Because we have a laws to protect tenants and you don't have to like it but being a landlord isn't just a free for all."
+          "excerpt": "That's rough, thanks for the heads up. SFMTA's own page says once the sweeper has swept your curb you can park there, even before the posted hours end: [ If your ticket is less tha"
         },
         {
           "source_family": "public",
@@ -209,7 +210,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I will say— I pay rent for all my roommates who are named on the lease, does not make me a master tenant. Just because it’s my check and they Venmo me that we have different rights"
+          "excerpt": "The people that have moved here for the tech industry seem disinclined to going without a motor vehicle. Rent a really nice car when you need one, use feet, bicycles and Muni for a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Just paid $11 for an hour of street parking in SF - wtf is this even!?. Why TF is street parking so expensive here? I come over from the east bay for an appointment at UCSF and am "
         },
         {
           "source_family": "public",
@@ -217,32 +226,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Stop putting in labor for the cats. Let her deal with her cats. Bottom line is you need to think about removing yourself from this unreasonable roommate. You can let her know the s"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "At this location? With waterfront property, views, and basically the most in-demand neighborhood for young people, AND a new build with new amenities (rare in SF)? I think this can"
+          "excerpt": "Our neighborhood playground (Douglass & 24th St in Noe Valley) is very tired - like the rubbery ground cover is cracked and gone in patches. And it needs more tree shade."
         }
       ],
       "metadata": {
-        "source_item_count": 122,
-        "average_valence": -0.045,
+        "source_item_count": 126,
+        "average_valence": -0.02,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.877
+        "freshness_score": 0.89
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-09T20:36:40.203Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-11-10T03:26:10.142Z",
+      "mood_score": 0.503,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -291,7 +292,7 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Per què a Barcelona se l'anomena la rosa de foc? La història de les revoltes a la capital catalana. Una història sobre la que no es parla gaire sovint. Durant, i amb posterioritat,"
+          "excerpt": "La Llibreria Rodés –fundada l'any 1920– tancarà en els pròxims mesos. \"El preu del lloguer de la botiga s'ha multiplicat per deu o per quinze, però els sous dels meus clients i els"
         },
         {
           "source_family": "public",
@@ -299,7 +300,7 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "88.500 alumnes esperen per començar les pràctiques del carnet. A Catalunya hi ha 88.500 persones que han aprovat la teòrica i encara esperen per començar les classes pràctiques de "
+          "excerpt": "Per què a Barcelona se l'anomena la rosa de foc? La història de les revoltes a la capital catalana. Una història sobre la que no es parla gaire sovint. Durant, i amb posterioritat,"
         }
       ],
       "metadata": {
@@ -310,7 +311,7 @@
           "routine",
           "transit"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.832
       }
     }
   ]
