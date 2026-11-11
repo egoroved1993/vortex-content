@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-10T20:28:31.026Z",
+    "capturedAt": "2026-11-11T01:14:17.037Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 426
+    "totalItems": 407
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-10T20:28:31.026Z",
-      "mood_score": 0.414,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "captured_at": "2026-11-11T01:14:17.037Z",
+      "mood_score": 0.377,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 32,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Jubilee: Minor Delays Jubilee Line: Minor delays due train cancellations."
+          "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
         },
         {
           "source_family": "transport",
@@ -70,43 +70,44 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction due to a signal failure at Shepherd's Bush."
+          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 9, Tuesday 10, Wednesday 11 and Thursday 12 November, after 2245 each evening, no service between Ha"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Severe delays between Willesden Junction and Clapham Junction due to a signal failure at Shepherd's Bush."
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "Fog to bring further travel chaos after warning extended - The Telegraph. Fog to bring further travel chaos after warning extended"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.105,
+        "source_item_count": 93,
+        "average_valence": -0.068,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "weather"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.835
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-10T20:28:31.026Z",
-      "mood_score": 0.246,
-      "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-11-11T01:14:17.037Z",
+      "mood_score": 0.498,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, language, routine. The signal is very current.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 4,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 46,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,30 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "I mean... We watch a good bit of streaming TV / movies and hubs and I both have the odd Zoom meeting, but even when we had cable it was definitely not \"constant high speed\" 🙃. I w"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Chile vs Germany. Hello all, I am a young researcher, recently got my PhD, and currently a postdoc in Germany Berlin... It's feeling good till now however my position is temporary "
+        },
         {
           "source_family": "nightlife",
           "source_origin": "resident_advisor",
@@ -129,52 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "In einem unbewohnten Haus: Leiche von 13-jähriger Lisa Tạ aus Marzahn in Brandenburg gefunden. Feeling so sorry for her parents and family. Posting here as an update to the previou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "Germany may be smaller than the US on a map. That does not mean you can \"do Germany\" in a week. Munich-Cologne is not a day trip. Neither is Munich-Berlin. I can't understand US pe"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.01,
+        "source_item_count": 117,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
-          "routine",
-          "events"
+          "language",
+          "routine"
         ],
-        "freshness_score": 0.908
+        "freshness_score": 0.92
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-10T20:28:31.026Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-11-11T01:14:17.037Z",
+      "mood_score": 0.497,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 53,
+        "public": 44,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -183,25 +184,16 @@
         "weather": 1
       },
       "languages": [
-        "en",
-        "es"
+        "en"
       ],
       "drivers": [
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If you are willing to leave in the near term, ask for a bunch of money for you to leave quietly. Landlords do this, voluntarily or sometimes not, regularly. And you can take as muc"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "I’d already been diagnosed and prescribed it for 8 years. I just kind of laughed. They wanted letters from my parents as well. This was during Covid, maybe I just got an intense pe"
+          "excerpt": "Late 20s. I volunteer with the California Academy of Sciences as a docent and at the Roxie (free shows if you ticket-take/clean up after). I’ve previously enjoyed days on Alemany F"
         },
         {
           "source_family": "public",
@@ -209,45 +201,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "You can rent a parking spot alone for $450-$650/month in central neighborhoods, and $250/month in outer neighborhoods. I double checked those prices with a Craigslist search."
+          "excerpt": "Yeah, they suck. I got one for my tires not being graded the right way $48. You can protest online though."
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I was in my late 30s and they wanted elementary report cards and any feedback from those teachers, even better if they could write letters. I laughed."
+          "excerpt": "This would just cripple BART and Muni while encouraging Caltrain, ACE and SMART that use public sector Unions. It would not necessarily encourage lower labor prices because the UTU"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Just paid $11 for an hour of street parking in SF - wtf is this even!?. Why TF is street parking so expensive here? I come over from the east bay for an appointment at UCSF and am "
+          "excerpt": "I do not enjoy direct democracy. The prop system is stupid and a huge mistake. Prop 13 is a perfect example, and we live with the ramifications of this today. I’m all good with a r"
+        },
+        {
+          "source_family": "review",
+          "source_origin": "maps_review",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.019,
+        "source_item_count": 110,
+        "average_valence": -0.01,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "events"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-10T20:28:31.026Z",
-      "mood_score": 0.495,
+      "captured_at": "2026-11-11T01:14:17.037Z",
+      "mood_score": 0.444,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 29,
+        "public": 21,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -295,22 +295,22 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
+          "source_origin": "reddit_comment",
+          "language": "es",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "La Llibreria Rodés –fundada l'any 1920– tancarà en els pròxims mesos. \"El preu del lloguer de la botiga s'ha multiplicat per deu o per quinze, però els sous dels meus clients i els"
+          "excerpt": "Nosotros vivimos algo muy parecido en un bus a reventar. Yo soy de aquí y mi marido de la India. Detesto que esta sea la Barcelona de hoy en día. No es la ciudad en la que crecí. M"
         }
       ],
       "metadata": {
-        "source_item_count": 95,
-        "average_valence": -0.015,
+        "source_item_count": 87,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
-          "routine",
-          "transit"
+          "transit",
+          "routine"
         ],
-        "freshness_score": 0.832
+        "freshness_score": 0.812
       }
     }
   ]
