@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-11T09:13:06.110Z",
+    "capturedAt": "2026-11-11T17:50:16.434Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 422
+    "totalItems": 402
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-11T09:13:06.110Z",
-      "mood_score": 0.366,
+      "captured_at": "2026-11-11T17:50:16.434Z",
+      "mood_score": 0.368,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 23,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 8,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,9 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: Minor delays due an earlier late finish of engineering work."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping / Hainault via Newbury Park and between North Acton and Ealing"
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays anticlockwise due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Turnham Green and Ealing Broadway / Richmond due to train cancellations. MINOR DELA"
         },
         {
           "source_family": "transport",
@@ -70,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Severe Delays No service between Paddington and Reading / Heathrow Terminals due to an earlier customer incident. SEVERE DELAYS betwee"
+          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Turnham Green and Ealing Broadway / Richmond due to train cancellations. MINOR DELA"
         },
         {
           "source_family": "transport",
@@ -78,36 +78,36 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Elizabeth line: Part Suspended No service between Paddington and Reading / Heathrow Terminals due to an earlier customer incident. SEVERE DELAYS betwee"
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays between Camden Town and Kennington (via Charing Cross) southbound only while we fix a points"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.1,
+        "source_item_count": 98,
+        "average_valence": -0.094,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "events"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-11T09:13:06.110Z",
-      "mood_score": 0.196,
-      "mood_label": "dark",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-11-11T17:50:16.434Z",
+      "mood_score": 0.498,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 1,
+        "public": 13,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 45,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -121,7 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4: Delays 1 trips delayed"
+          "excerpt": "Berlin transit 100, M4, 200, 248: Delays 10 trips delayed"
         },
         {
           "source_family": "public",
@@ -130,6 +130,14 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Chile vs Germany. Hello all, I am a young researcher, recently got my PhD, and currently a postdoc in Germany Berlin... It's feeling good till now however my position is temporary "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Not a long term solution, but some shops and logistics centers are looking for \" Weihnachtsaushilfen\" currently. Things like Christmas markets are very seasonal but might be lookin"
         },
         {
           "source_family": "nightlife",
@@ -146,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.012,
+        "source_item_count": 116,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.91
+        "freshness_score": 0.918
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-11T09:13:06.110Z",
+      "captured_at": "2026-11-11T17:50:16.434Z",
       "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 64,
+        "public": 37,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -1,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "You don’t have to live in SF. Rent is much less expensive in the east bay, and it’s still great. If you did move, it would open the doors to more opportunities in the area later. I"
+          "excerpt": "My wife had to relocate to SF to fulfill a return to office requirement in late 2025. She makes \\~125k/yr and I make a significant additional contribution to a super small one bedr"
         },
         {
           "source_family": "public",
@@ -201,7 +201,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I make a lot less than that and live here 🤷‍♀️ you could get a rent controlled room with roommates or live in Oakland or Daly City."
+          "excerpt": "Late last year I got a room for $1700 but in the Marina. I found it via Craigslist. It took me a few months of looking as though it was a part time job. When I first moved to the c"
         },
         {
           "source_family": "public",
@@ -209,45 +209,45 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I turned down a job for $90k in SF and decided to stay in LA on a slightly lower salary. Looking at rent and cost of living there vs here it was a no brainer - and this is LA! I’m "
+          "excerpt": "Is it a public accounting job or an industry job? Because it is 10000x not worth to uproot your life if it’s PA, you’ll work long hours with shit pay and have to deal with roommate"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "I live in San Francisco and truly love it. That said, 100k isn’t that much here. Obviously, rent is going to be difficult. Tip - if the place you end up renting could be rent contr"
+          "excerpt": "Ya, there’s a ton of listings for decent rooms under $2k. Facebook groups are honestly my best resource. If you want to live alone, then living in SF gets batshit insane no matter "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "You’re 23: at the front end of your life and career. If you’re going to explore and take risks this is the time to do it. Context: I moved from OK / KS at about the same age in the"
+          "excerpt": "Hey man I'm also moving to san jose and looking up places if you find something good and under 2k let me know. Edit: i just realised that youre a female so if you find some places "
         }
       ],
       "metadata": {
-        "source_item_count": 130,
-        "average_valence": -0.011,
+        "source_item_count": 103,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "transit",
-          "money"
+          "work"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.851
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-11T09:13:06.110Z",
+      "captured_at": "2026-11-11T17:50:16.434Z",
       "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 19,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -261,22 +261,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Espera, que ahora resulta que es mi culpa que chapen. Y no de que le suban el alquiler 10x para especular."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "La avaricia rompe el saco,tal vez sea la hora de expropiar ,ojalá que si por el bien de Barcelona y sus ciudadanos."
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -295,22 +279,38 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Nosotros vivimos algo muy parecido en un bus a reventar. Yo soy de aquí y mi marido de la India. Detesto que esta sea la Barcelona de hoy en día. No es la ciudad en la que crecí. M"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Per què a Barcelona se l'anomena la rosa de foc? La història de les revoltes a la capital catalana. Una història sobre la que no es parla gaire sovint. Durant, i amb posterioritat,"
+          "excerpt": "Plats bruts es de finals dels 90, en aquella època encara eren relativament assequibles, almenys fora de BCN Tot i que aquest comentari sobra igualment, com si a aquest carallot li"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Ojalá les caigan todos los 8 años, y me parece genial que al otro le caiga lo mismo por omisión, que se levante la voz contra estas cosas aunque sea por miedo."
         }
       ],
       "metadata": {
-        "source_item_count": 92,
+        "source_item_count": 85,
         "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.826
+        "freshness_score": 0.814
       }
     }
   ]
