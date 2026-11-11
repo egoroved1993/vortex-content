@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-11T01:14:17.037Z",
+    "capturedAt": "2026-11-11T09:13:06.110Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 407
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-11T01:14:17.037Z",
-      "mood_score": 0.377,
+      "captured_at": "2026-11-11T09:13:06.110Z",
+      "mood_score": 0.366,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 23,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 5,
+        "transport": 8,
         "weather": 1
       },
       "languages": [
@@ -44,9 +44,17 @@
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
+          "valence": -1,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Suffragette: Minor Delays Suffragette Line: Minor delays due an earlier late finish of engineering work."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between Leytonstone and Epping / Hainault via Newbury Park and between North Acton and Ealing"
         },
         {
           "source_family": "transport",
@@ -62,7 +70,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Part Closure Suffragette Line: No service between South Tottenham and Barking Riverside, until the end of service on Tuesday 10 Novem"
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Paddington and Reading / Heathrow Terminals due to an earlier customer incident. SEVERE DELAYS betwee"
         },
         {
           "source_family": "transport",
@@ -70,41 +78,33 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Weaver: Part Closure WEAVER LINE: Monday 9, Tuesday 10, Wednesday 11 and Thursday 12 November, after 2245 each evening, no service between Ha"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "Fog to bring further travel chaos after warning extended - The Telegraph. Fog to bring further travel chaos after warning extended"
+          "excerpt": "London transit Elizabeth line: Part Suspended No service between Paddington and Reading / Heathrow Terminals due to an earlier customer incident. SEVERE DELAYS betwee"
         }
       ],
       "metadata": {
-        "source_item_count": 93,
-        "average_valence": -0.068,
+        "source_item_count": 97,
+        "average_valence": -0.1,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "routine"
         ],
-        "freshness_score": 0.835
+        "freshness_score": 0.833
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-11T01:14:17.037Z",
-      "mood_score": 0.498,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, language, routine. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-11-11T09:13:06.110Z",
+      "mood_score": 0.196,
+      "mood_label": "dark",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 14,
+        "public": 1,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 46,
+        "news": 45,
         "nightlife": 40,
         "trends": 8,
         "transport": 1,
@@ -121,15 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5: Delays 1 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "I mean... We watch a good bit of streaming TV / movies and hubs and I both have the odd Zoom meeting, but even when we had cable it was definitely not \"constant high speed\" 🙃. I w"
+          "excerpt": "Berlin transit M4: Delays 1 trips delayed"
         },
         {
           "source_family": "public",
@@ -154,28 +146,36 @@
           "valence": -0.575,
           "recency_weight": 0.56,
           "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         }
       ],
       "metadata": {
-        "source_item_count": 117,
-        "average_valence": -0.005,
+        "source_item_count": 103,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
-          "language",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.92
+        "freshness_score": 0.91
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-11T01:14:17.037Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-11-11T09:13:06.110Z",
+      "mood_score": 0.496,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 44,
+        "public": 64,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -191,9 +191,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Late 20s. I volunteer with the California Academy of Sciences as a docent and at the Roxie (free shows if you ticket-take/clean up after). I’ve previously enjoyed days on Alemany F"
+          "excerpt": "You don’t have to live in SF. Rent is much less expensive in the east bay, and it’s still great. If you did move, it would open the doors to more opportunities in the area later. I"
         },
         {
           "source_family": "public",
@@ -201,53 +201,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Yeah, they suck. I got one for my tires not being graded the right way $48. You can protest online though."
+          "excerpt": "I make a lot less than that and live here 🤷‍♀️ you could get a rent controlled room with roommates or live in Oakland or Daly City."
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "This would just cripple BART and Muni while encouraging Caltrain, ACE and SMART that use public sector Unions. It would not necessarily encourage lower labor prices because the UTU"
+          "excerpt": "I turned down a job for $90k in SF and decided to stay in LA on a slightly lower salary. Looking at rent and cost of living there vs here it was a no brainer - and this is LA! I’m "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I do not enjoy direct democracy. The prop system is stupid and a huge mistake. Prop 13 is a perfect example, and we live with the ramifications of this today. I’m all good with a r"
+          "excerpt": "I live in San Francisco and truly love it. That said, 100k isn’t that much here. Obviously, rent is going to be difficult. Tip - if the place you end up renting could be rent contr"
         },
         {
-          "source_family": "review",
-          "source_origin": "maps_review",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "taqueria. Mission. The line looks like a small housing crisis but moves fast. Best move is to go when the fog is still deciding what kind of day it is."
+          "excerpt": "You’re 23: at the front end of your life and career. If you’re going to explore and take risks this is the time to do it. Context: I moved from OK / KS at about the same age in the"
         }
       ],
       "metadata": {
-        "source_item_count": 110,
-        "average_valence": -0.01,
+        "source_item_count": 130,
+        "average_valence": -0.011,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "money"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-11T01:14:17.037Z",
-      "mood_score": 0.444,
+      "captured_at": "2026-11-11T09:13:06.110Z",
+      "mood_score": 0.447,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 26,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -278,14 +278,6 @@
           "excerpt": "La avaricia rompe el saco,tal vez sea la hora de expropiar ,ojalá que si por el bien de Barcelona y sus ciudadanos."
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "ca",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "La huelga de Renfe deja un 60% de trenes cancelados en Rodalies - El Liberal.cat. La huelga de Renfe deja un 60% de trenes cancelados en Rodalies"
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
@@ -295,22 +287,30 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
+          "source_origin": "reddit_post",
+          "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Nosotros vivimos algo muy parecido en un bus a reventar. Yo soy de aquí y mi marido de la India. Detesto que esta sea la Barcelona de hoy en día. No es la ciudad en la que crecí. M"
+          "excerpt": "La Llibreria Rodés –fundada l'any 1920– tancarà en els pròxims mesos. \"El preu del lloguer de la botiga s'ha multiplicat per deu o per quinze, però els sous dels meus clients i els"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Per què a Barcelona se l'anomena la rosa de foc? La història de les revoltes a la capital catalana. Una història sobre la que no es parla gaire sovint. Durant, i amb posterioritat,"
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.017,
+        "source_item_count": 92,
+        "average_valence": -0.008,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.812
+        "freshness_score": 0.826
       }
     }
   ]
