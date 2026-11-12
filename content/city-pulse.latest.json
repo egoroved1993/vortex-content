@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-12T17:29:36.544Z",
+    "capturedAt": "2026-11-12T23:31:15.843Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,13 +16,13 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 394
+    "totalItems": 396
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-12T17:29:36.544Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-11-12T23:31:15.843Z",
+      "mood_score": 0.482,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -33,7 +33,7 @@
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 7,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays between Queen's park and Harrow & Wealdstone due to an earlier signal fault at South Kenton."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to an earlier faulty train at Whitechapel and train cancellations."
         },
         {
           "source_family": "transport",
@@ -62,40 +78,24 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Severe Delays Northern Line: No service between Camden Town and Charing Cross and NO SERVICE between Golders Green and Camden Town sou"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Since the start of October, I’ve had what felt like a cold (so, up in my nose mostly). It then flared up my asthma as I developed this painful dry cough. It seems like it was on it"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Yeah you're right, the reports would have to be looked into and approved/declined by some kind of regulatory body, otherwise people would just report a 20 as a 60 to remove the lim"
+          "excerpt": "London transit Mildmay: Minor Delays Mildmay Line: Minor delays due to an earlier signal failure in the Stratford area. London Underground are accepting vali"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.019,
+        "source_item_count": 106,
+        "average_valence": -0.053,
         "dominant_themes": [
           "general",
           "transit",
           "events"
         ],
-        "freshness_score": 0.882
+        "freshness_score": 0.877
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-12T17:29:36.544Z",
-      "mood_score": 0.446,
+      "captured_at": "2026-11-12T23:31:15.843Z",
+      "mood_score": 0.499,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
@@ -107,7 +107,6 @@
         "news": 44,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -115,14 +114,6 @@
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit M5, 200, U2: Delays 7 trips delayed"
-        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -154,11 +145,19 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "I grew up in the midlands region of England, which from my observations is a lot like Nordrhein-Westfalen in terms of urban development patterns. I've lived in Berlin for 6 years a"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "How can I get a ticket for Korn at Uber arena on the 14th?. I'm from the US and not sure how resale works in Germany. Is there a legit site? Can I show up at the venue and find som"
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.012,
+        "source_item_count": 105,
+        "average_valence": -0.004,
         "dominant_themes": [
           "general",
           "routine",
@@ -169,8 +168,8 @@
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-12T17:29:36.544Z",
-      "mood_score": 0.456,
+      "captured_at": "2026-11-12T23:31:15.843Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather.",
       "dominant_sentiment": "neutral",
@@ -230,22 +229,22 @@
       ],
       "metadata": {
         "source_item_count": 76,
-        "average_valence": 0.017,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "transit",
           "weather"
         ],
-        "freshness_score": 0.778
+        "freshness_score": 0.774
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-12T17:29:36.544Z",
-      "mood_score": 0.39,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-11-12T23:31:15.843Z",
+      "mood_score": 0.49,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 43,
         "review": 2,
@@ -308,9 +307,9 @@
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "money"
         ],
-        "freshness_score": 0.852
+        "freshness_score": 0.858
       }
     }
   ]
