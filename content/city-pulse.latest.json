@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-13T15:16:10.799Z",
+    "capturedAt": "2026-11-13T21:57:43.483Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 420
+    "totalItems": 430
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-13T15:16:10.799Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-11-13T21:57:43.483Z",
+      "mood_score": 0.469,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 6,
+        "transport": 13,
         "weather": 1
       },
       "languages": [
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Clapham Junction and Shepherd's Bush and SEVERE DELAYS between Willesden Junction and"
+          "excerpt": "London transit District: Minor Delays District Line: No service between Turnham Green and Richmond while we fix a faulty train at Kew Gardens. MINOR DELAYS on"
         },
         {
           "source_family": "transport",
@@ -62,52 +62,52 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Clapham Junction and Shepherd's Bush and SEVERE DELAYS between Willesden Junction and"
+          "excerpt": "London transit District: Part Suspended District Line: No service between Turnham Green and Richmond while we fix a faulty train at Kew Gardens. MINOR DELAYS on"
         },
         {
           "source_family": "transport",
           "source_origin": "tfl",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Part Suspended Suffragette Line: No service between Barking and Barking Riverside while we fix a points failure at Barking. GOOD SERVIC"
+          "excerpt": "London transit Elizabeth line: Severe Delays No service between Hayes & Harlington and Reading and SEVERE DELAYS on the rest of the line while we deal with a trespas"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Tube strike expected to cause severe disruption on the Piccadilly line - ianVisits. Tube strike expected to cause severe disruption on the Piccadilly line"
+          "excerpt": "London transit Elizabeth line: Part Suspended No service between Hayes & Harlington and Reading and SEVERE DELAYS on the rest of the line while we deal with a trespas"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.017,
+        "source_item_count": 109,
+        "average_valence": -0.091,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.867
+        "freshness_score": 0.874
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-13T15:16:10.799Z",
-      "mood_score": 0.398,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-11-13T21:57:43.483Z",
+      "mood_score": 0.496,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 6,
+        "public": 4,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 44,
+        "news": 45,
         "nightlife": 40,
         "trends": 8,
-        "transport": 2,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -121,15 +121,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M4, 100, 300, U2, M5: Delays 11 trips delayed"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good morning from Chicago! I am visiting Berlin for the first time on Dec. 11th for one night only. I will be on a business trip with two colleagues. We will arrive in the mid-late"
+          "excerpt": "Berlin transit 300, 200: Delays 4 trips delayed"
         },
         {
           "source_family": "news",
@@ -154,28 +146,36 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Is no registration for a short term rental a deal breaker?. I don't have many options for sublets before I leave Berlin early February and the ones I have starting December 1are no"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "How can I get a ticket for Korn at Uber arena on the 14th?. I'm from the US and not sure how resale works in Germany. Is there a legit site? Can I show up at the venue and find som"
         }
       ],
       "metadata": {
-        "source_item_count": 108,
-        "average_valence": -0.006,
+        "source_item_count": 106,
+        "average_valence": -0.012,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.902
+        "freshness_score": 0.893
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-13T15:16:10.799Z",
-      "mood_score": 0.455,
+      "captured_at": "2026-11-13T21:57:43.483Z",
+      "mood_score": 0.452,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 45,
+        "public": 48,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -193,7 +193,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Landlord will not provide one and I live in Berkeley where there is no law requiring them to"
+          "excerpt": "The people who argue for rent control are also the ones who want Prop 13 overturned. Funny how we can control the cost of housing for renters, but god forbid you buy a house, then "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "That lot does not look very buildable. Certainly not at a price that would support affordable homes. It would be cheaper to just buy an existing building on the market and redesign"
         },
         {
           "source_family": "public",
@@ -201,7 +209,7 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "SF ranks best for public transit in the US.. Could it be better? Could there be more subway lines? Of course. But it’s pretty darn good and as someone who grew up here and has used"
+          "excerpt": "Good restaurants for unagi or anago don?. I'm trying to find a restaurant in the city that serves unagi or anago don with big slabs of the stuff, not a layer of the finger length p"
         },
         {
           "source_family": "public",
@@ -218,36 +226,28 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "did anyone else see the \"white student Union\" of Lowell High school\" post and on account on Instagram?. I emailed administration as soon as my kids showed it to me Tuesday night an"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Did anyone see the White Student Union of Lowell Highschool instragram account and its Post this week?. I emailed administration as soon as my kids showed it to me Tuesday night an"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": 0.015,
+        "source_item_count": 114,
+        "average_valence": 0.005,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.855
+        "freshness_score": 0.865
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-13T15:16:10.799Z",
-      "mood_score": 0.489,
+      "captured_at": "2026-11-13T21:57:43.483Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 32,
+        "public": 35,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -267,23 +267,7 @@
           "language": "es",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Primera Huelga en la historia y en el mundo contra la oposición con un gobierno que lleva 8 años sin hacer nada. Así nos va y así nos luce el pelo. Id eligiendo de que color queréi"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
           "excerpt": "Y para que te manifiestas o haces huelga si estás tan contento con el actual gobierno?? Es que no lo entiendo? 0 sentido común"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Exacto de eso va la huelga. Por los que no hacen nada ahora ni hicieron nada antes. El punto del desastre es 2011. De ahí viene lo que vemos hoy. Y hoy tampoco se esta haciendo suf"
         },
         {
           "source_family": "public",
@@ -300,17 +284,33 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Me encanta ver a los fachuzos soltando bilis y odio que bien se les da. Ahora que han visto que la clase obrera ha respondido echándose a la calle a luchar por los derechos básicos"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "La Llibreria Rodés –fundada l'any 1920– tancarà en els pròxims mesos. \"El preu del lloguer de la botiga s'ha multiplicat per deu o per quinze, però els sous dels meus clients i els"
         }
       ],
       "metadata": {
-        "source_item_count": 98,
-        "average_valence": -0.032,
+        "source_item_count": 101,
+        "average_valence": -0.015,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.836
       }
     }
   ]
