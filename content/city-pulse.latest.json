@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-13T06:04:40.259Z",
+    "capturedAt": "2026-11-13T15:16:10.799Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 395
+    "totalItems": 420
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-13T06:04:40.259Z",
-      "mood_score": 0.492,
+      "captured_at": "2026-11-13T15:16:10.799Z",
+      "mood_score": 0.494,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 26,
+        "public": 31,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 6,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Ealing Broadway/Richmond/Wimbledon, and MINOR DELAYS between Upmin"
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Severe delays between Earl's Court and Ealing Broadway/Richmond/Wimbledon, and MINOR DELAYS between Upmin"
+          "excerpt": "London transit Mildmay: Severe Delays Mildmay Line: No service between Clapham Junction and Shepherd's Bush and SEVERE DELAYS between Willesden Junction and"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Mildmay: Part Suspended Mildmay Line: No service between Clapham Junction and Shepherd's Bush and SEVERE DELAYS between Willesden Junction and"
         },
         {
           "source_family": "transport",
@@ -62,43 +70,35 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.08,
-          "excerpt": "London transit Suffragette: Part Suspended Suffragette Line: No service between Barking and Barking Riverside while we fix a points failure at Barking area. GOOD S"
+          "excerpt": "London transit Suffragette: Part Suspended Suffragette Line: No service between Barking and Barking Riverside while we fix a points failure at Barking. GOOD SERVIC"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "You are not so many, you are only yourself. Plan your escape! Use the success you've had in your current position to set up the next phase of your life. That income buys you some f"
-        },
-        {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Tube strike expected to cause severe disruption on the Piccadilly line - ianVisits. Tube strike expected to cause severe disruption on the Piccadilly line"
         }
       ],
       "metadata": {
-        "source_item_count": 96,
-        "average_valence": -0.023,
+        "source_item_count": 103,
+        "average_valence": -0.017,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "routine"
         ],
-        "freshness_score": 0.854
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-13T06:04:40.259Z",
-      "mood_score": 0.499,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-11-13T15:16:10.799Z",
+      "mood_score": 0.398,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
         "public": 6,
         "review": 2,
@@ -107,6 +107,7 @@
         "news": 44,
         "nightlife": 40,
         "trends": 8,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,22 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M4, 100, 300, U2, M5: Delays 11 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Good morning from Chicago! I am visiting Berlin for the first time on Dec. 11th for one night only. I will be on a business trip with two colleagues. We will arrive in the mid-late"
+        },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
@@ -137,44 +154,28 @@
           "valence": 0,
           "recency_weight": 1.04,
           "excerpt": "Is no registration for a short term rental a deal breaker?. I don't have many options for sublets before I leave Berlin early February and the ones I have starting December 1are no"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "How can I get a ticket for Korn at Uber arena on the 14th?. I'm from the US and not sure how resale works in Germany. Is there a legit site? Can I show up at the venue and find som"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "O2 Homespot experiences?. Our only option at home for internet is a WiFi / mobile router, and it looks like O2 offers the best deal, as well as the option to keep our old landline "
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": -0.004,
+        "source_item_count": 108,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "events",
           "routine"
         ],
-        "freshness_score": 0.9
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-13T06:04:40.259Z",
-      "mood_score": 0.465,
+      "captured_at": "2026-11-13T15:16:10.799Z",
+      "mood_score": 0.455,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 52,
+        "public": 45,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -188,27 +189,11 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 1,
-          "recency_weight": 1.04,
-          "excerpt": "To the good Subaru Fozzy Samaritan that helped me get unstuck on the hill at 22nd and Church today. Many thanks!. Made it home safely. I still need to correct the issue and hope to"
-        },
-        {
-          "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "My landlord has this dumb puddle of water in the atrium that attracts mosquitos maybe restaurants nearby too funny enough I live by GGP by the conservatory. Bug screens help forsur"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "A good one last night... No wind, 70 degrees and magical. Didn’t make it in time for the sunset but the afterglow was worth it."
+          "excerpt": "Landlord will not provide one and I live in Berkeley where there is no law requiring them to"
         },
         {
           "source_family": "public",
@@ -224,29 +209,45 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
+          "excerpt": "Eiji Sushi on Sanchez. I'm one of the many saddened customers of Eiji, and have big hopes for the new sushi place going in now. Does anyone recall what the name of the sushi place "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "did anyone else see the \"white student Union\" of Lowell High school\" post and on account on Instagram?. I emailed administration as soon as my kids showed it to me Tuesday night an"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
           "excerpt": "Did anyone see the White Student Union of Lowell Highschool instragram account and its Post this week?. I emailed administration as soon as my kids showed it to me Tuesday night an"
         }
       ],
       "metadata": {
-        "source_item_count": 118,
-        "average_valence": 0.044,
+        "source_item_count": 111,
+        "average_valence": 0.015,
         "dominant_themes": [
           "general",
           "transit",
           "belonging"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.855
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-13T06:04:40.259Z",
-      "mood_score": 0.497,
+      "captured_at": "2026-11-13T15:16:10.799Z",
+      "mood_score": 0.489,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -256,59 +257,60 @@
       },
       "languages": [
         "ca",
-        "en"
+        "en",
+        "es"
       ],
       "drivers": [
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "The sun is glaring down, casting sharp shadows off the stone facades, while a slight breeze carries the salty scent of the Mediterranean.. Chaos reigns at the Sants station as comm"
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Primera Huelga en la historia y en el mundo contra la oposición con un gobierno que lleva 8 años sin hacer nada. Así nos va y así nos luce el pelo. Id eligiendo de que color queréi"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "He fet un joc diari gratuït d'un minut sobre la història de Barcelona. Cada dia has d'endevinar un monument, un personatge o un esdeveniment a partir d'una foto difuminada, i les t"
+          "excerpt": "Y para que te manifiestas o haces huelga si estás tan contento con el actual gobierno?? Es que no lo entiendo? 0 sentido común"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "NO PARLEM TELECOM. Què.........!? Com va amb No-Parlem al tren i al metro? M'estic arrepentint cada dia d'haver canviat a una empresa de telecomunicacions catalana i m'emprenya MOL"
+          "excerpt": "Exacto de eso va la huelga. Por los que no hacen nada ahora ni hicieron nada antes. El punto del desastre es 2011. De ahí viene lo que vemos hoy. Y hoy tampoco se esta haciendo suf"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "He creat un mapa (mitjançant MyMaps) de tots els ferrocarrils Catalans (Renfe i FGC). Espero fer la resta de les comunitats autònomes en un futur."
+          "excerpt": "Menuda pedrada ideológica llevas. Si estás a favor de la huelga general y de los objetivos que se proclaman, por qué ibas a votar al mismo gobierno que lleva casi 9 años en el pode"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "ca",
-          "valence": 0,
+          "source_origin": "reddit_comment",
+          "language": "es",
+          "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Vaga de l'11N, com salvar el xat a l'OBS i sorpresa a Santa Maria del Mar. ⛪1224 #UnHome9: Directe matinal d'actualitat i humor des de Barcelona amb en Jau Fibla. Avui vivim un mat"
+          "excerpt": "Me encanta ver a los fachuzos soltando bilis y odio que bien se les da. Ahora que han visto que la clase obrera ha respondido echándose a la calle a luchar por los derechos básicos"
         }
       ],
       "metadata": {
-        "source_item_count": 75,
-        "average_valence": -0.01,
+        "source_item_count": 98,
+        "average_valence": -0.032,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.772
+        "freshness_score": 0.833
       }
     }
   ]
