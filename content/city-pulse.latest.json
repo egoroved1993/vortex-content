@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-14T21:20:16.971Z",
+    "capturedAt": "2026-11-15T01:41:23.876Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,25 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 395
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-14T21:20:16.971Z",
-      "mood_score": 0.472,
+      "captured_at": "2026-11-15T01:41:23.876Z",
+      "mood_score": 0.434,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 27,
+        "public": 3,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 11
+        "transport": 1,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -45,58 +46,58 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From 0130 until 0530 Sunday 15 November, no Saturday Night Tube service between East Finchley / Golders G"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: No service between High Street Kensington and Edgware Road while we deal with a trespasser on the track."
+          "recency_weight": 1,
+          "excerpt": "Tube strike expected to cause severe disruption on the Piccadilly line - ianVisits. Tube strike expected to cause severe disruption on the Piccadilly line"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
           "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: No service between Baker Street and Aldgate while we deal with a trespasser on the track at Paddingto"
+          "valence": -1,
+          "recency_weight": 0.72,
+          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From 0130 Saturday 14 until 0130 Sunday 15 November, no service between Euston (Bank Branch) / Charing Cr"
+          "recency_weight": 0.56,
+          "excerpt": "Tube drivers to take eight days of strike action over attacks on working conditions - RMT. Tube drivers to take eight days of strike action over attacks on working conditions"
         },
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
+          "recency_weight": 0.56,
+          "excerpt": "Private rent and house prices, UK: October 2026 - Office for National Statistics. Private rent and house prices, UK: October 2026"
         }
       ],
       "metadata": {
-        "source_item_count": 103,
-        "average_valence": -0.083,
+        "source_item_count": 70,
+        "average_valence": -0.048,
         "dominant_themes": [
           "general",
           "transit",
-          "events"
+          "routine"
         ],
-        "freshness_score": 0.862
+        "freshness_score": 0.775
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-14T21:20:16.971Z",
-      "mood_score": 0.505,
+      "captured_at": "2026-11-15T01:41:23.876Z",
+      "mood_score": 0.45,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 7,
@@ -105,7 +106,9 @@
         "signals": 1,
         "news": 44,
         "nightlife": 40,
-        "trends": 8
+        "trends": 8,
+        "transport": 1,
+        "weather": 1
       },
       "languages": [
         "de",
@@ -113,12 +116,12 @@
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_family": "transport",
+          "source_origin": "bvg",
           "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Usually knitting needles aren't really listed on prohibted item lists (atleast in the EU) - you should be good to go. I am not sure if the different airlines habdle it differently,"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit N40, M5: Delays 2 trips delayed"
         },
         {
           "source_family": "public",
@@ -154,30 +157,31 @@
         }
       ],
       "metadata": {
-        "source_item_count": 106,
-        "average_valence": 0.016,
+        "source_item_count": 108,
+        "average_valence": 0.001,
         "dominant_themes": [
           "general",
-          "events",
-          "routine"
+          "routine",
+          "events"
         ],
-        "freshness_score": 0.88
+        "freshness_score": 0.884
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-14T21:20:16.971Z",
-      "mood_score": 0.505,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, money. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-11-15T01:41:23.876Z",
+      "mood_score": 0.38,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, money, belonging. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 47,
+        "public": 53,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -185,70 +189,71 @@
       "drivers": [
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Operational disaster. Muni T line stands for “tomorrow, maybe…”. Stood around with a bunch of elderly folks waiting for a train that never seemed to be coming. Many were concerned "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good restaurants for unagi or anago don?. I'm trying to find a restaurant in the city that serves unagi or anago don with big slabs of the stuff, not a layer of the finger length p"
+          "excerpt": "Sadly, I don’t think OP will be able to fight it if the landlord has already filed for the Ellis Act process. It’s the nuclear option for landlords. If they decide they just don’t "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Chicago is awesome! I lived there for many years. If you’re not put off by the weather it’s totally the place to be. Walkable, good food, nice people. Unfortunately I WAS put off b"
+          "excerpt": "The tenants have the right to the rent controlled rate. They have protections against eviction. And they have the right to turn down a buyout offer and force the landlord to go thr"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Doesn’t that mean that more money is being spent on services and per child which is a good thing? I would want the state to spend money on this public service for California youth."
+          "excerpt": "$40k could be less than the net present value of a rent controlled lease. It would be for mine. I don’t know OP’s situation, but it could easily make sense as being a “down” number"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "My advice would be to carry pepper spray and pay attention everywhere you go. Especially on the hikes. SF is a very sleepy city, and the streets empty out almost completely by 7pm."
+          "excerpt": "Yes, but tight. After taxes you will take home about $11k to $12.5k per month, so $4,500 rent is roughly 36 to 41 percent of take home. Palo Alto and Menlo single family homes usua"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "By sending them an Ellis Act Eviction, the landlord is being very clear they aren’t interested in negotiating further. They could be not clearer on that."
         }
       ],
       "metadata": {
-        "source_item_count": 112,
-        "average_valence": 0.016,
+        "source_item_count": 119,
+        "average_valence": -0.06,
         "dominant_themes": [
           "general",
-          "transit",
-          "money"
+          "money",
+          "belonging"
         ],
-        "freshness_score": 0.857
+        "freshness_score": 0.867
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-14T21:20:16.971Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-11-15T01:41:23.876Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -298,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 96,
+        "source_item_count": 98,
         "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.822
+        "freshness_score": 0.826
       }
     }
   ]
