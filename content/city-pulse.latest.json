@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-15T17:07:28.532Z",
+    "capturedAt": "2026-11-15T21:37:20.484Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,25 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 245
+    "totalItems": 425
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-15T17:07:28.532Z",
-      "mood_score": 0.476,
+      "captured_at": "2026-11-15T21:37:20.484Z",
+      "mood_score": 0.423,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 21,
+        "public": 22,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
+        "news": 50,
         "trends": 8,
-        "transport": 9
+        "transport": 9,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -53,22 +54,6 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Part Closure HAMMERSMITH & CITY LINE: Sunday 15 November, between 1000 and 1800, no service between Plaistow and Barking. Please use"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Harrow-on-the-Hill and Uxbridge / Watford / Chesham / Amersham due to train canc"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
           "excerpt": "London transit Mildmay: Part Closure MILDMAY LINE: Sunday 15 November, no service between Willesden Junction and Clapham Junction. There will also be no SOUT"
         },
         {
@@ -78,39 +63,66 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "London transit Northern: Part Closure NORTHERN LINE: From 0530 Sunday 15 November, no service between Euston (Bank Branch) / Charing Cross and Morden / Batter"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Victoria: Severe Delays Victoria Line: Severe delays due to an earlier fire alert at Seven Sisters and an earlier points failure at Brixton. Tic"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Waterloo & City: Planned Closure Waterloo & City line: service operates 06:00 until 00:30, Monday to Friday only. There is no service on Saturdays, Sunda"
         }
       ],
       "metadata": {
-        "source_item_count": 59,
-        "average_valence": -0.071,
+        "source_item_count": 97,
+        "average_valence": -0.08,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 1.044
+        "freshness_score": 0.864
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-15T17:07:28.532Z",
-      "mood_score": 0.503,
+      "captured_at": "2026-11-15T21:37:20.484Z",
+      "mood_score": 0.448,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, belonging. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
         "public": 7,
         "review": 2,
         "forum": 4,
         "signals": 1,
+        "news": 44,
         "nightlife": 40,
-        "trends": 8
+        "trends": 8,
+        "transport": 1,
+        "weather": 1
       },
       "languages": [
         "de",
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit 300: Delays 1 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -121,11 +133,11 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_comment",
+          "source_origin": "reddit_post",
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "Exact same thing happened to my package and it’s very similar dates. I’m in Berlin. The DHL system also wasn’t able to track any packages for a good 12 hours, so honestly I think s"
+          "excerpt": "Help: Any Gasag customers here?. Long shot: I need to place a big order of chocolates from Sawade for Christimas and I found out that Gasag customers get 25% off 😄 . Any kind soul"
         },
         {
           "source_family": "public",
@@ -136,51 +148,61 @@
           "excerpt": "Could anyone recommend a good lawyer?. I'm currently looking for a lawyer to take legal action against my neighbours, who have been actively harassing me and have insulted and thre"
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
-          "language": "en",
-          "valence": -0.075,
-          "recency_weight": 0.72,
-          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "The U-Bahn needs only 10 minutes to Charlottenburg and 30 minutes to Kreuzberg, but you'd need like 10-20 minutes walking to get to the station. With a bike you'd make it in 5 and "
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 62,
-        "average_valence": 0.007,
+        "source_item_count": 108,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "routine",
-          "belonging"
+          "events"
         ],
-        "freshness_score": 1.066
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-15T17:07:28.532Z",
-      "mood_score": 0.51,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal is very current.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-11-15T21:37:20.484Z",
+      "mood_score": 0.348,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 52,
+        "public": 56,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "trends": 8
+        "news": 50,
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "About 100 years ago, New York City was facing a housing crisis, but no one wanted to build because it wasn’t profitable. The solution city officials found was to exempt buildings f"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "AIPAC is living rent free in some people’s minds but it’s not a top 100 thing in 99.9% of American minds. You wrote AIPAC 5 times in this post. Maybe try the circle jerk in r/polit"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -204,49 +226,34 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "There is a museum at Lands End that has all this kind of stuff but honestly, any tourist destination you can buy this. Chinatown, the shops on Powell along the cable car route in U"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Good restaurants for unagi or anago don?. I'm trying to find a restaurant in the city that serves unagi or anago don with big slabs of the stuff, not a layer of the finger length p"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "If everyone is in the fast lane; it doesn't make it fast (dashcam). I swear the bridges are the worst for this. Our area might be one of the worst I've seen for this behavior of ge"
         }
       ],
       "metadata": {
-        "source_item_count": 67,
-        "average_valence": 0.03,
+        "source_item_count": 122,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "belonging",
           "transit"
         ],
-        "freshness_score": 1.04
+        "freshness_score": 0.868
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-15T17:07:28.532Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-11-15T21:37:20.484Z",
+      "mood_score": 0.495,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, tourism. The signal is very current.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 28,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 14,
-        "trends": 8
+        "news": 50,
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -296,14 +303,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 57,
-        "average_valence": -0.022,
+        "source_item_count": 98,
+        "average_valence": -0.016,
         "dominant_themes": [
           "general",
           "transit",
-          "tourism"
+          "routine"
         ],
-        "freshness_score": 1.036
+        "freshness_score": 0.815
       }
     }
   ]
