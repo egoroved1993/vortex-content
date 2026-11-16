@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-16T01:45:24.578Z",
+    "capturedAt": "2026-11-16T09:21:11.394Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,35 +16,61 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 412
+    "totalItems": 417
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-16T01:45:24.578Z",
-      "mood_score": 0.491,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-11-16T09:21:11.394Z",
+      "mood_score": 0.382,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 22,
+        "public": 15,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "transport": 3,
+        "weather": 1
       },
       "languages": [
         "en"
       ],
       "drivers": [
         {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainau"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to train cancellations."
+        },
+        {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "London commuters face more train strike misery as union announces walkouts - London Evening Standard. London commuters face more train strike misery as union announces walkouts"
+          "recency_weight": 1.08,
+          "excerpt": "Broadmead Road Bridge: How a broken crossing has split a community - BBC. Broadmead Road Bridge: How a broken crossing has split a community"
         },
         {
           "source_family": "signals",
@@ -53,73 +79,41 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.88,
-          "excerpt": "Tube strike expected to cause severe disruption on the Piccadilly line - ianVisits. Tube strike expected to cause severe disruption on the Piccadilly line"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Private rent and house prices, UK: October 2026 - Office for National Statistics. Private rent and house prices, UK: October 2026"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0,
-          "recency_weight": 1.04,
-          "excerpt": "12 cats of Christmas. Hi all, I'm looking to do a pub crawl to meet cats this Christmas. Definitely need to meet lilibet, the cat in the ruff, and the South London pub garden pig. "
         }
       ],
       "metadata": {
-        "source_item_count": 87,
-        "average_valence": -0.027,
+        "source_item_count": 84,
+        "average_valence": -0.054,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.836
+        "freshness_score": 0.837
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-16T01:45:24.578Z",
-      "mood_score": 0.496,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-11-16T09:21:11.394Z",
+      "mood_score": 0.398,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 7,
+        "public": 11,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 44,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1
+        "weather": 1
       },
       "languages": [
         "de",
         "en"
       ],
       "drivers": [
-        {
-          "source_family": "transport",
-          "source_origin": "bvg",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Berlin transit N2: Delays 1 trips delayed"
-        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -151,33 +145,42 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Chloé, Flexonaut at Rough Trade Berlin (Berlin) on 2026-11-18T00:00:00.000"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.013,
+        "source_item_count": 111,
+        "average_valence": -0.005,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.886
+        "freshness_score": 0.894
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-16T01:45:24.578Z",
-      "mood_score": 0.498,
-      "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, belonging, transit. The signal still feels live today.",
-      "dominant_sentiment": "neutral",
+      "captured_at": "2026-11-16T09:21:11.394Z",
+      "mood_score": 0.304,
+      "mood_label": "low",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 56,
+        "public": 60,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "en"
@@ -189,7 +192,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "About 100 years ago, New York City was facing a housing crisis, but no one wanted to build because it wasn’t profitable. The solution city officials found was to exempt buildings f"
+          "excerpt": "Rick and Roxy’s let us rent out the back of their venue for free and everyone paid for their own drinks. It wasn’t a restricted area or anything but nice to gather people"
         },
         {
           "source_family": "public",
@@ -197,23 +200,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "AIPAC is living rent free in some people’s minds but it’s not a top 100 thing in 99.9% of American minds. You wrote AIPAC 5 times in this post. Maybe try the circle jerk in r/polit"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "How do you check earthquake retrofit on a rental. Recent landlord is one of those who strongly prefers a \"handyman\" so I've got approximately zero faith in this having been checked"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Took our kids to Fort Point. It’s free and the views and access are amazing. Not very crowded either. You might also like Alcatraz. Boat ride is 10 minutes to the rock."
+          "excerpt": "Anecdotally, I feel like people settle down much earlier in SF than in NYC so the dating pool feels smaller, especially as you get older (and especially if you are a woman and can’"
         },
         {
           "source_family": "public",
@@ -221,34 +208,51 @@
           "language": "en",
           "valence": 0.5,
           "recency_weight": 1.04,
-          "excerpt": "There is a museum at Lands End that has all this kind of stuff but honestly, any tourist destination you can buy this. Chinatown, the shops on Powell along the cable car route in U"
+          "excerpt": "If you are making $150k/yr + $50k for each additional person in the family (i.e. $200k for 2 people, $250k for 3 etc.), the Bay Area is a good place to live."
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Good restaurants for unagi or anago don?. I'm trying to find a restaurant in the city that serves unagi or anago don with big slabs of the stuff, not a layer of the finger length p"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "If everyone is in the fast lane; it doesn't make it fast (dashcam). I swear the bridges are the worst for this. Our area might be one of the worst I've seen for this behavior of ge"
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": -0.007,
+        "source_item_count": 126,
+        "average_valence": 0.012,
         "dominant_themes": [
           "general",
-          "belonging",
-          "transit"
+          "events",
+          "routine"
         ],
-        "freshness_score": 0.864
+        "freshness_score": 0.873
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-16T01:45:24.578Z",
-      "mood_score": 0.494,
+      "captured_at": "2026-11-16T09:21:11.394Z",
+      "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 32,
+        "public": 30,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "weather": 1
       },
       "languages": [
         "ca",
@@ -256,30 +260,6 @@
         "es"
       ],
       "drivers": [
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Y para que te manifiestas o haces huelga si estás tan contento con el actual gobierno?? Es que no lo entiendo? 0 sentido común"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Menuda pedrada ideológica llevas. Si estás a favor de la huelga general y de los objetivos que se proclaman, por qué ibas a votar al mismo gobierno que lleva casi 9 años en el pode"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "es",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Me encanta ver a los fachuzos soltando bilis y odio que bien se les da. Ahora que han visto que la clase obrera ha respondido echándose a la calle a luchar por los derechos básicos"
-        },
         {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
@@ -294,18 +274,42 @@
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "La Llibreria Rodés –fundada l'any 1920– tancarà en els pròxims mesos. \"El preu del lloguer de la botiga s'ha multiplicat per deu o per quinze, però els sous dels meus clients i els"
+          "excerpt": "Milers de manifestants col·lapsen Barcelona en la vaga general per l’habitatge i millors salaris"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Menjar gratis: unes 30 racions de càtering, Vila Olímpica, avui fins a les 21:00. Estem fent una game jam per a adolescents a Epitech (c/ Joan Miró 21) i hem demanat massa menjar. "
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Barcelona es quedarà amb les discoteques del Front Marítim i El Centre de la Vila per 97 M€"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "ca",
+          "valence": 0,
+          "recency_weight": 1.04,
+          "excerpt": "Som Barri reclama repensar la rambla verda de Vallcarca i evitar l'enderroc d'edificis"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.016,
+        "source_item_count": 96,
+        "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.818
+        "freshness_score": 0.802
       }
     }
   ]
