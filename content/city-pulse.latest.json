@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-16T09:21:11.394Z",
+    "capturedAt": "2026-11-16T20:12:55.644Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,15 +16,15 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 417
+    "totalItems": 408
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-16T09:21:11.394Z",
-      "mood_score": 0.382,
+      "captured_at": "2026-11-16T20:12:55.644Z",
+      "mood_score": 0.388,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 15,
@@ -46,31 +46,23 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between White City and Ealing Broadway/West Ruislip and between Leytonstone and Epping/Hainau"
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to train cancellations."
-        },
-        {
-          "source_family": "transport",
-          "source_origin": "tfl",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays due to train cancellations."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "news",
           "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
+          "recency_weight": 1,
           "excerpt": "Broadmead Road Bridge: How a broken crossing has split a community - BBC. Broadmead Road Bridge: How a broken crossing has split a community"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "local_rss",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1,
+          "excerpt": "How a broken London bridge has split a community. Redbridge Council says Broadmead Road Bridge cannot be fixed without government help."
         },
         {
           "source_family": "signals",
@@ -79,23 +71,31 @@
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.283,
+          "recency_weight": 1.04,
+          "excerpt": "You sound like a genuinely kind and lovely person . And yes ,I do think people can hide their pain well , until it’s too late - it’s called “smiling depression “. I’m really sorry "
         }
       ],
       "metadata": {
         "source_item_count": 84,
-        "average_valence": -0.054,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "transit",
-          "weather"
+          "belonging"
         ],
-        "freshness_score": 0.837
+        "freshness_score": 0.863
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-16T09:21:11.394Z",
-      "mood_score": 0.398,
+      "captured_at": "2026-11-16T20:12:55.644Z",
+      "mood_score": 0.397,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
@@ -104,9 +104,10 @@
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 44,
+        "news": 39,
         "nightlife": 40,
         "trends": 8,
+        "transport": 1,
         "weather": 1
       },
       "languages": [
@@ -114,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit U2: Delays 6 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
@@ -145,40 +154,32 @@
           "valence": -0.575,
           "recency_weight": 1.08,
           "excerpt": "Chloé, Flexonaut at Rough Trade Berlin (Berlin) on 2026-11-18T00:00:00.000"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 0.56,
-          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
         }
       ],
       "metadata": {
-        "source_item_count": 111,
-        "average_valence": -0.005,
+        "source_item_count": 107,
+        "average_valence": -0.009,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.894
+        "freshness_score": 0.907
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-16T09:21:11.394Z",
+      "captured_at": "2026-11-16T20:12:55.644Z",
       "mood_score": 0.304,
       "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, routine. The signal still feels live today.",
+      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
         "public": 60,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 50,
+        "news": 45,
         "trends": 8,
         "weather": 1
       },
@@ -228,19 +229,19 @@
         }
       ],
       "metadata": {
-        "source_item_count": 126,
-        "average_valence": 0.012,
+        "source_item_count": 121,
+        "average_valence": 0.011,
         "dominant_themes": [
           "general",
           "events",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.873
+        "freshness_score": 0.883
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-16T09:21:11.394Z",
+      "captured_at": "2026-11-16T20:12:55.644Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
@@ -309,7 +310,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.802
+        "freshness_score": 0.829
       }
     }
   ]
