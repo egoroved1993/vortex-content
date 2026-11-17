@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-17T03:37:13.135Z",
+    "capturedAt": "2026-11-17T13:00:42.547Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,93 +16,94 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 415
+    "totalItems": 422
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-17T03:37:13.135Z",
-      "mood_score": 0.493,
+      "captured_at": "2026-11-17T13:00:42.547Z",
+      "mood_score": 0.472,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 25,
+        "public": 17,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8
+        "trends": 8,
+        "transport": 5
       },
       "languages": [
         "en"
       ],
       "drivers": [
         {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Buskers all sound the same and/or too loud. I quietly and politely hate the lot of them, except the very rare good ones who actually try. I'm not even talking about talent or skill"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "For me its completely understandable. The only reason i settled down was because i wanted kids and i couldnt do that swapping partners every 3 months. But if i was 35, had no inter"
-        },
-        {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "All the London Underground strike dates coming up as first walkout approaches - London Evening Standard. All the London Underground strike dates coming up as first walkout approach"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip and between Leytonstone and Epping / H"
         },
         {
-          "source_family": "news",
-          "source_origin": "google_news_rss",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "Broadmead Road Bridge: How a broken crossing has split a community - BBC. Broadmead Road Bridge: How a broken crossing has split a community"
+          "recency_weight": 1.08,
+          "excerpt": "London transit District: Minor Delays District Line: Minor delays due to an earlier person ill on a train and an earlier faulty train at Sloane Square."
         },
         {
-          "source_family": "signals",
-          "source_origin": "auto_city_snapshot",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
-          "valence": -1,
-          "recency_weight": 0.72,
-          "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to train cancellations."
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Northern: Minor Delays Northern Line: Minor delays between Camden Town and Kennington via Charing Cross while we fix a points failure at Kennin"
+        },
+        {
+          "source_family": "transport",
+          "source_origin": "tfl",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "London transit Piccadilly: Severe Delays Piccadilly Line: Severe delays between Arnos Grove and Acton Town westbound only due to an earlier signal failure at Man"
         }
       ],
       "metadata": {
-        "source_item_count": 90,
-        "average_valence": -0.022,
+        "source_item_count": 87,
+        "average_valence": -0.083,
         "dominant_themes": [
           "general",
           "transit",
-          "work"
+          "weather"
         ],
-        "freshness_score": 0.848
+        "freshness_score": 0.881
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-17T03:37:13.135Z",
+      "captured_at": "2026-11-17T13:00:42.547Z",
       "mood_score": 0.493,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 9,
+        "public": 2,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 39,
+        "news": 47,
         "nightlife": 40,
         "trends": 8,
         "transport": 1
@@ -118,65 +119,65 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit M2: Delays 1 trips delayed"
+          "excerpt": "Berlin transit M4, 100: Delays 2 trips delayed"
+        },
+        {
+          "source_family": "nightlife",
+          "source_origin": "resident_advisor",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Chloé, Flexonaut at Rough Trade Berlin (Berlin) on 2026-11-18T00:00:00.000"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
+          "language": "de",
+          "valence": -0.575,
+          "recency_weight": 0.56,
+          "excerpt": "Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still - Berliner Zeitung. Montag Streik im Nahverkehr: Auch die BVG in Berlin steht 24 Stunden still"
+        },
+        {
+          "source_family": "signals",
+          "source_origin": "auto_city_snapshot",
+          "language": "en",
+          "valence": -0.075,
+          "recency_weight": 0.72,
+          "excerpt": "The sky is a brooding gray, with a chill wind whipping through the streets, hinting at a downpour that could strike any moment.. The mood at the U-Bahn stations is a mix of relief "
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "The inner city rent there is about 22-25 EUR per square meter. You are likely comparing the pricing in Berlin party districts to the Vienna outer areas with social housing."
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Halske Gärten Siemensstadt. Hey guys, I've been hunting for flats and came across a few in the new development \"Halske Gärten\" in Siemensstadt. I've got a few questions and hoping "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Help: Any Gasag customers here?. Long shot: I need to place a big order of chocolates from Sawade for Christimas and I found out that Gasag customers get 25% off 😄 . Any kind soul"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Could anyone recommend a good lawyer?. I'm currently looking for a lawyer to take legal action against my neighbours, who have been actively harassing me and have insulted and thre"
+          "excerpt": "Hey, Happy Birthday. If I weren't a half days travel away, I'd offer to take you out for coffee and cake in the afternoon and bring a couple friends too. Maybe one day, if I make i"
         }
       ],
       "metadata": {
-        "source_item_count": 104,
-        "average_valence": -0.021,
+        "source_item_count": 105,
+        "average_valence": -0.019,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.892
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-17T03:37:13.135Z",
-      "mood_score": 0.488,
+      "captured_at": "2026-11-17T13:00:42.547Z",
+      "mood_score": 0.504,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, events. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 65,
+        "public": 68,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 45,
+        "news": 50,
         "trends": 8
       },
       "languages": [
@@ -190,7 +191,7 @@
           "language": "en",
           "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Agree to disagree I guess. This post seems genuine and I think any landlord would do competitive analysis, post what they think will rent, and adjust if it doen't rent. Apartments "
+          "excerpt": "Is the nob hill one rent controlled? I’d be terrified of a sudden hike. You have to ask yourself if you care more about location or the apartment itself. Sounds like the apartment "
         },
         {
           "source_family": "public",
@@ -198,7 +199,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Which is decent, until the non rent controlled place raises your rent by that much the next year..."
+          "excerpt": "Just wondering how long you've been in the Castro? \"It's always been majority straight\"??? I don't remember it being like that in the late 70's, all 80's, and half of the 90's. Str"
         },
         {
           "source_family": "public",
@@ -206,7 +207,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Rent control in Alamo Square is quite nice. I grew up in SF, moved a lot, and would take that option."
+          "excerpt": "Rofl, people will do anything to live in the city, like they cant just find a room for cheaper and safer in the suburbs especially with a child. 300 sf is basically a converted gar"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_post",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "Most expensive place in U.S. to buy a home is in this Bay Area city. With country’s first ever eight-figure median sale price of $10.73 million, Atherton reclaimed the #1 spot on P"
         },
         {
           "source_family": "public",
@@ -214,37 +223,29 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "I have lived in lower Nob for 15 years and I honestly love how walkable it is. Also met our friends at Huntington park (with kids) and we walk to the Embarcadero / Polk street and "
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "That area was still entirely industrial in 98-01. Mission bay wasn’t really significantly developed until the late 2000s."
+          "excerpt": "Dont not move to Westlake Apartments!! Shitty management. Parking is not included to your rent and its $170/month if you get a spot. Tow trucks comes around every 30 mins to check "
         }
       ],
       "metadata": {
-        "source_item_count": 125,
-        "average_valence": -0.035,
+        "source_item_count": 133,
+        "average_valence": 0.012,
         "dominant_themes": [
           "general",
-          "money",
-          "transit"
+          "transit",
+          "events"
         ],
-        "freshness_score": 0.889
+        "freshness_score": 0.879
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-17T03:37:13.135Z",
+      "captured_at": "2026-11-17T13:00:42.547Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 32,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -299,14 +300,14 @@
         }
       ],
       "metadata": {
-        "source_item_count": 96,
+        "source_item_count": 97,
         "average_valence": -0.007,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.833
+        "freshness_score": 0.832
       }
     }
   ]
