@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-16T20:12:55.644Z",
+    "capturedAt": "2026-11-17T03:37:13.135Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,37 +16,51 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 408
+    "totalItems": 415
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-16T20:12:55.644Z",
-      "mood_score": 0.388,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, transit, belonging. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-11-17T03:37:13.135Z",
+      "mood_score": 0.493,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, work. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 15,
+        "public": 25,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
-        "transport": 3,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
         "en"
       ],
       "drivers": [
         {
-          "source_family": "transport",
-          "source_origin": "tfl",
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "Buskers all sound the same and/or too loud. I quietly and politely hate the lot of them, except the very rare good ones who actually try. I'm not even talking about talent or skill"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": 0.5,
+          "recency_weight": 1.04,
+          "excerpt": "For me its completely understandable. The only reason i settled down was because i wanted kids and i couldnt do that swapping partners every 3 months. But if i was 35, had no inter"
+        },
+        {
+          "source_family": "news",
+          "source_origin": "google_news_rss",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
+          "recency_weight": 1,
+          "excerpt": "All the London Underground strike dates coming up as first walkout approaches - London Evening Standard. All the London Underground strike dates coming up as first walkout approach"
         },
         {
           "source_family": "news",
@@ -57,58 +71,41 @@
           "excerpt": "Broadmead Road Bridge: How a broken crossing has split a community - BBC. Broadmead Road Bridge: How a broken crossing has split a community"
         },
         {
-          "source_family": "news",
-          "source_origin": "local_rss",
-          "language": "en",
-          "valence": -0.575,
-          "recency_weight": 1,
-          "excerpt": "How a broken London bridge has split a community. Redbridge Council says Broadmead Road Bridge cannot be fixed without government help."
-        },
-        {
           "source_family": "signals",
           "source_origin": "auto_city_snapshot",
           "language": "en",
           "valence": -1,
           "recency_weight": 0.72,
           "excerpt": "A thick blanket of clouds hangs low, with a damp chill in the air as sporadic rain drizzles down intermittently.. The Tube strike has left the streets congested with frustrated com"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_comment",
-          "language": "en",
-          "valence": 0.283,
-          "recency_weight": 1.04,
-          "excerpt": "You sound like a genuinely kind and lovely person . And yes ,I do think people can hide their pain well , until it’s too late - it’s called “smiling depression “. I’m really sorry "
         }
       ],
       "metadata": {
-        "source_item_count": 84,
-        "average_valence": -0.036,
+        "source_item_count": 90,
+        "average_valence": -0.022,
         "dominant_themes": [
           "general",
           "transit",
-          "belonging"
+          "work"
         ],
-        "freshness_score": 0.863
+        "freshness_score": 0.848
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-16T20:12:55.644Z",
-      "mood_score": 0.397,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-11-17T03:37:13.135Z",
+      "mood_score": 0.493,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 11,
+        "public": 9,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 39,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
-        "weather": 1
+        "transport": 1
       },
       "languages": [
         "de",
@@ -121,7 +118,15 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "Berlin transit U2: Delays 6 trips delayed"
+          "excerpt": "Berlin transit M2: Delays 1 trips delayed"
+        },
+        {
+          "source_family": "public",
+          "source_origin": "reddit_comment",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.04,
+          "excerpt": "The inner city rent there is about 22-25 EUR per square meter. You are likely comparing the pricing in Berlin party districts to the Vienna outer areas with social housing."
         },
         {
           "source_family": "public",
@@ -146,44 +151,36 @@
           "valence": 0.5,
           "recency_weight": 1.04,
           "excerpt": "Could anyone recommend a good lawyer?. I'm currently looking for a lawyer to take legal action against my neighbours, who have been actively harassing me and have insulted and thre"
-        },
-        {
-          "source_family": "nightlife",
-          "source_origin": "resident_advisor",
-          "language": "de",
-          "valence": -0.575,
-          "recency_weight": 1.08,
-          "excerpt": "Chloé, Flexonaut at Rough Trade Berlin (Berlin) on 2026-11-18T00:00:00.000"
         }
       ],
       "metadata": {
-        "source_item_count": 107,
-        "average_valence": -0.009,
+        "source_item_count": 104,
+        "average_valence": -0.021,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.907
+        "freshness_score": 0.892
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-16T20:12:55.644Z",
-      "mood_score": 0.304,
-      "mood_label": "low",
-      "mood_summary": "The city feels strained. Right now the pressure is mostly around general, events, weather. The signal still feels live today.",
-      "dominant_sentiment": "negative",
+      "captured_at": "2026-11-17T03:37:13.135Z",
+      "mood_score": 0.488,
+      "mood_label": "mixed",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, money, transit. The signal still feels live today.",
+      "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 60,
+        "public": 65,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 45,
-        "trends": 8,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
+        "ca",
         "en"
       ],
       "drivers": [
@@ -191,9 +188,9 @@
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": -0.575,
+          "valence": -1,
           "recency_weight": 1.04,
-          "excerpt": "Rick and Roxy’s let us rent out the back of their venue for free and everyone paid for their own drinks. It wasn’t a restricted area or anything but nice to gather people"
+          "excerpt": "Agree to disagree I guess. This post seems genuine and I think any landlord would do competitive analysis, post what they think will rent, and adjust if it doen't rent. Apartments "
         },
         {
           "source_family": "public",
@@ -201,59 +198,58 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Anecdotally, I feel like people settle down much earlier in SF than in NYC so the dating pool feels smaller, especially as you get older (and especially if you are a woman and can’"
+          "excerpt": "Which is decent, until the non rent controlled place raises your rent by that much the next year..."
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If you are making $150k/yr + $50k for each additional person in the family (i.e. $200k for 2 people, $250k for 3 etc.), the Bay Area is a good place to live."
+          "excerpt": "Rent control in Alamo Square is quite nice. I grew up in SF, moved a lot, and would take that option."
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Good restaurants for unagi or anago don?. I'm trying to find a restaurant in the city that serves unagi or anago don with big slabs of the stuff, not a layer of the finger length p"
+          "excerpt": "I have lived in lower Nob for 15 years and I honestly love how walkable it is. Also met our friends at Huntington park (with kids) and we walk to the Embarcadero / Polk street and "
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "If everyone is in the fast lane; it doesn't make it fast (dashcam). I swear the bridges are the worst for this. Our area might be one of the worst I've seen for this behavior of ge"
+          "excerpt": "That area was still entirely industrial in 98-01. Mission bay wasn’t really significantly developed until the late 2000s."
         }
       ],
       "metadata": {
-        "source_item_count": 121,
-        "average_valence": 0.011,
+        "source_item_count": 125,
+        "average_valence": -0.035,
         "dominant_themes": [
           "general",
-          "events",
-          "weather"
+          "money",
+          "transit"
         ],
-        "freshness_score": 0.883
+        "freshness_score": 0.889
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-16T20:12:55.644Z",
+      "captured_at": "2026-11-17T03:37:13.135Z",
       "mood_score": 0.498,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 30,
+        "public": 31,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
-        "trends": 8,
-        "weather": 1
+        "trends": 8
       },
       "languages": [
         "ca",
@@ -310,7 +306,7 @@
           "transit",
           "routine"
         ],
-        "freshness_score": 0.829
+        "freshness_score": 0.833
       }
     }
   ]
