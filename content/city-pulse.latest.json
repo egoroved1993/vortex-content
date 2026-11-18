@@ -1,6 +1,6 @@
 {
   "meta": {
-    "capturedAt": "2026-11-18T12:53:38.488Z",
+    "capturedAt": "2026-11-18T21:17:01.649Z",
     "sourceFiles": {
       "public": "/home/runner/work/vortex-content/vortex-content/content/public-human-comments.json",
       "review": "/home/runner/work/vortex-content/vortex-content/content/place-review-snippets.json",
@@ -16,24 +16,24 @@
       "weather": "/home/runner/work/vortex-content/vortex-content/content/weather-signals.json",
       "sports": "/home/runner/work/vortex-content/vortex-content/content/sports-signals.json"
     },
-    "totalItems": 425
+    "totalItems": 453
   },
   "rows": [
     {
       "city_id": "london",
-      "captured_at": "2026-11-18T12:53:38.488Z",
-      "mood_score": 0.268,
+      "captured_at": "2026-11-18T21:17:01.649Z",
+      "mood_score": 0.277,
       "mood_label": "low",
-      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
+      "mood_summary": "The city feels bruised. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 19,
+        "public": 27,
         "review": 2,
         "forum": 4,
         "signals": 1,
         "news": 50,
         "trends": 8,
-        "transport": 4,
+        "transport": 5,
         "weather": 1
       },
       "languages": [
@@ -46,7 +46,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays between North Acton and Ealing Broadway / West Ruislip, and between Leytonstone and Hainault"
+          "excerpt": "London transit Bakerloo: Minor Delays Bakerloo Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -54,7 +54,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier animal on the track."
+          "excerpt": "London transit Central: Minor Delays Central Line: Minor delays due to train cancellations."
         },
         {
           "source_family": "transport",
@@ -62,7 +62,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to an earlier animal on the track."
+          "excerpt": "London transit Circle: Minor Delays Circle Line: Minor delays due to an earlier faulty train at Cannon Street."
         },
         {
           "source_family": "transport",
@@ -70,44 +70,44 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.08,
-          "excerpt": "London transit Metropolitan: Minor Delays Metropolitan Line: Minor delays between Moor Park and Chesham due to train cancellations. The next southbound train will"
+          "excerpt": "London transit District: Severe Delays District Line: Severe delays between Earl's Court and Ealing Broadway due to an earlier faulty train at Cannon Street. G"
         },
         {
-          "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_family": "transport",
+          "source_origin": "tfl",
           "language": "en",
           "valence": -0.575,
-          "recency_weight": 1.04,
-          "excerpt": "Piccadilly / District Lines to be affected by strike Friday 20 and Saturday 21 November. There will also be no service on the District line between Earl's Court and Richmond/Ealing"
+          "recency_weight": 1.08,
+          "excerpt": "London transit Hammersmith & City: Minor Delays Hammersmith and City Line: Minor delays due to an earlier faulty train at Cannon Street."
         }
       ],
       "metadata": {
-        "source_item_count": 89,
-        "average_valence": -0.094,
+        "source_item_count": 98,
+        "average_valence": -0.067,
         "dominant_themes": [
           "general",
           "transit",
-          "routine"
+          "weather"
         ],
-        "freshness_score": 0.87
+        "freshness_score": 0.898
       }
     },
     {
       "city_id": "berlin",
-      "captured_at": "2026-11-18T12:53:38.488Z",
-      "mood_score": 0.292,
+      "captured_at": "2026-11-18T21:17:01.649Z",
+      "mood_score": 0.288,
       "mood_label": "low",
       "mood_summary": "The city feels strained. Right now the pressure is mostly around general, routine, events. The signal still feels live today.",
       "dominant_sentiment": "negative",
       "source_counts": {
-        "public": 13,
+        "public": 14,
         "review": 2,
         "forum": 4,
         "signals": 1,
-        "news": 49,
+        "news": 48,
         "nightlife": 40,
         "trends": 8,
-        "transport": 1,
+        "transport": 2,
         "weather": 1
       },
       "languages": [
@@ -115,6 +115,14 @@
         "en"
       ],
       "drivers": [
+        {
+          "source_family": "transport",
+          "source_origin": "bvg",
+          "language": "en",
+          "valence": -0.575,
+          "recency_weight": 1.08,
+          "excerpt": "Berlin transit M5, M6, S7: Delays 3 trips delayed"
+        },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
@@ -129,7 +137,7 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Housinganywhere is exactly what I was describing, they offer overpriced temporary apartments to people who want to move there and have no other option due to the housing market and"
+          "excerpt": "It's not negligent. They are actually fixing it and public transport works generally well. It's not like things are broken and they remain like that forever."
         },
         {
           "source_family": "public",
@@ -146,36 +154,28 @@
           "valence": -0.575,
           "recency_weight": 1.04,
           "excerpt": "Apartment budget ??. Hey so me and 2 of my friends are starting our exchange semester in berlin next February and we wanted to know approximately how much we would be spending mont"
-        },
-        {
-          "source_family": "public",
-          "source_origin": "reddit_post",
-          "language": "en",
-          "valence": 0.5,
-          "recency_weight": 1.04,
-          "excerpt": "Help: Any Gasag customers here?. Long shot: I need to place a big order of chocolates from Sawade for Christimas and I found out that Gasag customers get 25% off 😄 . Any kind soul"
         }
       ],
       "metadata": {
-        "source_item_count": 119,
-        "average_valence": -0.024,
+        "source_item_count": 120,
+        "average_valence": -0.036,
         "dominant_themes": [
           "general",
           "routine",
           "events"
         ],
-        "freshness_score": 0.896
+        "freshness_score": 0.902
       }
     },
     {
       "city_id": "sf",
-      "captured_at": "2026-11-18T12:53:38.488Z",
-      "mood_score": 0.453,
+      "captured_at": "2026-11-18T21:17:01.649Z",
+      "mood_score": 0.441,
       "mood_label": "mixed",
-      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, events, transit. The signal still feels live today.",
+      "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, weather. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 54,
+        "public": 65,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -201,53 +201,53 @@
           "language": "en",
           "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Don’t store Lyft bike in your garage so no one else can use it.. This morning trying to rent a Lyft bike. Walked a few blocks. Didn’t see the bike anywhere. Started playing the sou"
+          "excerpt": "Power outage in Haight-Ashbury?. Anyone else having a power outage right now? PG&E didn’t have record of it happening when I reported it about 2 minutes after it began. No building"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_post",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Did anyone see the hit & run at Divis & Grove?. As the title says. At around 7:20 today (11/17) I got rear ended. I pulled aside to exchange insurance and the person sped off. I’m "
+          "excerpt": "Don’t store Lyft bike in your garage so no one else can use it.. This morning trying to rent a Lyft bike. Walked a few blocks. Didn’t see the bike anywhere. Started playing the sou"
         },
         {
           "source_family": "public",
           "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "It really depends on whether you care who you live with. I know that sounds odd, but some people treat roommates as just that… Roommates. They don’t interact much. They have totall"
+          "excerpt": "Amen, San Franciscans aren’t angry enough about the fact that we live in a “tech capital” yet have horrible infrastructure where streets flooding and 3 day power outages are common"
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "en",
-          "valence": 0.5,
+          "valence": -0.575,
           "recency_weight": 1.04,
-          "excerpt": "Toddler haircut. Can anyone recommend a place preferably in the mission that is good for kids cuts? My son has curly hair so for the cut nothing fancy just want some length taken o"
+          "excerpt": "The best slice of chocolate cake is at Toy Boat on Clement. Wander at Green Apple Books, buy yourself some some great books there, cute stores all up and down then get a slice of t"
         }
       ],
       "metadata": {
-        "source_item_count": 120,
-        "average_valence": 0.009,
+        "source_item_count": 131,
+        "average_valence": -0.028,
         "dominant_themes": [
           "general",
-          "events",
-          "transit"
+          "transit",
+          "weather"
         ],
-        "freshness_score": 0.878
+        "freshness_score": 0.899
       }
     },
     {
       "city_id": "barcelona",
-      "captured_at": "2026-11-18T12:53:38.488Z",
+      "captured_at": "2026-11-18T21:17:01.649Z",
       "mood_score": 0.448,
       "mood_label": "mixed",
       "mood_summary": "The city feels mixed. Right now the pressure is mostly around general, transit, routine. The signal still feels live today.",
       "dominant_sentiment": "neutral",
       "source_counts": {
-        "public": 31,
+        "public": 38,
         "review": 2,
         "forum": 4,
         "signals": 1,
@@ -295,22 +295,22 @@
         },
         {
           "source_family": "public",
-          "source_origin": "reddit_post",
+          "source_origin": "reddit_comment",
           "language": "ca",
           "valence": 0,
           "recency_weight": 1.04,
-          "excerpt": "Som Barri reclama repensar la rambla verda de Vallcarca i evitar l'enderroc d'edificis"
+          "excerpt": "I com penses superar aquest desnivell? i sota terra ni més ni menys. Ens costaria una fortuna si és que és possible físicament. total per a una zona que només visiten turistes. Rea"
         }
       ],
       "metadata": {
-        "source_item_count": 97,
-        "average_valence": -0.007,
+        "source_item_count": 104,
+        "average_valence": -0.006,
         "dominant_themes": [
           "general",
           "transit",
           "routine"
         ],
-        "freshness_score": 0.83
+        "freshness_score": 0.837
       }
     }
   ]
